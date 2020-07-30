@@ -179,4 +179,30 @@
 			"candidate_name": "Donald Trump",
 			"candidate_party": "Republican",
 			"pct": "48"
+		},
+{
+			"cycle": "2020",
+			"state": "Approval",
+			"pollster": "YouGov",
+			"office_type": "U.S. President",
+            "date": "JUL 28-30, 2020",
+			"url": "https://today.yougov.com/_pubapis/v5/us/trackers/donald-trump-approval-daily/download/",
+			"stage": "general",
+			"answer": "Trump",
+			"candidate_name": "Donald Trump",
+			"candidate_party": "Republican",
+			"pct": "42"
+		},
+{
+			"cycle": "2020",
+			"state": "Disapproval",
+			"pollster": "YouGov",
+			"office_type": "U.S. President",
+            "date": "JUL 28-30, 2020",
+			"url": "https://today.yougov.com/_pubapis/v5/us/trackers/donald-trump-approval-daily/download/",
+			"stage": "general",
+			"answer": "Trump",
+			"candidate_name": "Donald Trump",
+			"candidate_party": "Republican",
+			"pct": "53"
 		},]
