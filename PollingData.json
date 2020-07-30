@@ -23,4 +23,30 @@
 			"candidate_name": "Donald Trump",
 			"candidate_party": "Republican",
 			"pct": "40"
+		},
+{
+			"cycle": "2020",
+			"state": "Arizona",
+			"pollster": "Redfield & Wilton Strategies",
+			"office_type": "U.S. President",
+            "date": "JUL 19-23, 2020",
+			"url": "https://redfieldandwiltonstrategies.com/latest-usa-swing-state-voting-intention-19-to-24-july/",
+			"stage": "general",
+			"answer": "Biden",
+			"candidate_name": "Joseph R. Biden Jr.",
+			"candidate_party": "Democratic",
+			"pct": "46"
+		},
+{
+			"cycle": "2020",
+			"state": "Arizona",
+			"pollster": "Redfield & Wilton Strategies",
+			"office_type": "U.S. President",
+            "date": "JUL 19-23, 2020",
+			"url": "https://redfieldandwiltonstrategies.com/latest-usa-swing-state-voting-intention-19-to-24-july/",
+			"stage": "general",
+			"answer": "Trump",
+			"candidate_name": "Donald Trump",
+			"candidate_party": "Republican",
+			"pct": "38"
 		}]
