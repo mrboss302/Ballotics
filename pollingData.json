@@ -1,0 +1,471 @@
+[{
+            "state": "National",
+			"pollster": "USC Dornsife",
+			"officeType": "President",
+			"dates": "SEP 11–17, 2020",
+			"url": "https://election.usc.edu",
+			"DEM": "50",
+            "GOP": "43",
+            "IND": "0"
+		},
+        {      
+            "state": "Alabama",
+			"pollster": "Morning Consult",
+			"officeType": "President",
+			"dates": "JULY 24–AUG 2, 2020",
+			"url": "https://morningconsult.com/2020/08/04/senate-presidential-polling-alabama-kentucky-sc-texas/",
+			"DEM": "36",
+            "GOP": "58",
+            "IND": "0"
+		},
+        {      
+            "state": "Alaska",
+			"pollster": "Public Policy Polling",
+			"officeType": "President",
+			"dates": "JULY 23–24, 2020",
+			"url": "https://www.afscme.org/press/reports/polling/AlaskaResults.pdf",
+			"DEM": "44",
+            "GOP": "50",
+            "IND": "0"
+		},
+         {      
+            "state": "Arizona",
+			"pollster": "Siena College/The New York Times Upshot",
+			"officeType": "President",
+			"dates": "SEP 10–15, 2020",
+			"url": "https://int.nyt.com/data/documenttools/az-me-nc-0920-crosstabs/72d074246b272695/full.pdf",
+			"DEM": "49",
+            "GOP": "40",
+            "IND": "4"
+		},
+        {      
+            "state": "Arkansas",
+			"pollster": "Hendrix College",
+			"officeType": "President",
+			"dates": "JUN 9–10, 2020",
+			"url": "https://talkbusiness.net/2020/06/poll-independents-dissatisfied-with-trump-cotton-biden-competitive-in-arkansas/",
+			"DEM": "45",
+            "GOP": "47",
+            "IND": "0"
+		},
+         {      
+            "state": "California",
+			"pollster": "Public Policy Institute of California",
+			"officeType": "President",
+			"dates": "SEP 4–13, 2020",
+			"url": "https://www.ppic.org/wp-content/uploads/ppic-statewide-survey-californians-and-their-government-september-2020.pdf",
+			"DEM": "60",
+            "GOP": "31",
+            "IND": "5"
+		},
+        {      
+            "state": "Colorado",
+			"pollster": "Global Strategy Group*",
+			"officeType": "President",
+			"dates": "AUG 28–SEP 1, 2020",
+			"url": "https://www.globalstrategygroup.com/wp-content/uploads/2020/09/CO-Mountaineer-Q3-Survey-Topline-F09.03.20.pdf",
+			"DEM": "53",
+            "GOP": "41",
+            "IND": "0"
+		},
+         {      
+            "state": "Connecticut",
+			"pollster": "SurveyUSA",
+			"officeType": "President",
+			"dates": "MAY 19–24, 2020",
+			"url": "http://www.surveyusa.com/client/PollReport.aspx?g=26d8f355-a447-4bc3-bae6-d4c5e07b148f",
+			"DEM": "53",
+            "GOP": "32",
+            "IND": "0"
+		},
+        {      
+            "state": "Delaware",
+			"pollster": "Public Policy Polling",
+			"officeType": "President",
+			"dates": "AUG 21–22, 2020",
+			"url": "https://www.publicpolicypolling.com/wp-content/uploads/2020/08/DelawareAugust2020Results.pdf",
+			"DEM": "58",
+            "GOP": "37",
+            "IND": "0"
+		},
+         {      
+            "state": "Florida",
+			"pollster": "Redfield & Wilton Strategies",
+			"officeType": "President",
+			"dates": "SEP 12–14, 2020",
+			"url": "https://redfieldandwiltonstrategies.com/latest-us-swing-states-voting-intention-12-16-september/",
+			"DEM": "47",
+            "GOP": "44",
+            "IND": "2"
+		},
+        {      
+            "state": "Georgia",
+			"pollster": "HarrisX",
+			"officeType": "President",
+			"dates": "AUG 20–30, 2020",
+			"url": "https://projects.fivethirtyeight.com/polls/20200915_GA_Lieberman.xlsx",
+			"DEM": "52",
+            "GOP": "46",
+            "IND": "0"
+		},
+         {      
+            "state": "Hawaii",
+			"pollster": "MRG Research",
+			"officeType": "President",
+			"dates": "JULY 27–30, 2020",
+			"url": "https://assets.documentcloud.org/documents/7014362/Civil-Beat-July-2020-President.pdf",
+			"DEM": "56",
+            "GOP": "29",
+            "IND": "0"
+		},
+        {      
+            "state": "Idaho",
+			"pollster": "Spry Strategies",
+			"officeType": "President",
+			"dates": "AUG 29–SEP 1, 2020",
+			"url": "http://womensliberationfront.org/wp-content/uploads/2020/09/Statewide_Idaho_8.25.20-Tables_Only-Tables_Only.pdf",
+			"DEM": "34",
+            "GOP": "60",
+            "IND": "0"
+		},
+         {      
+            "state": "Indiana",
+			"pollster": "Change Research",
+			"officeType": "President",
+			"dates": "SEP 4–13, 2020",
+			"url": "http://indypolitics.org/polling-positions-part-one/",
+			"DEM": "39",
+            "GOP": "53",
+            "IND": "5"
+		},
+        {      
+            "state": "Iowa",
+			"pollster": "Fabrizio Ward/Hart Research Associates",
+			"officeType": "President",
+			"dates": "AUG 30–SEP 5, 2020",
+			"url": "https://www.aarp.org/content/dam/aarp/research/surveys_statistics/politics/2020/2020-election-battleground-states-senate-iowa-annotated-questionnaire.doi.10.26419-2Fres.00401.018.pdf",
+			"DEM": "45",
+            "GOP": "47",
+            "IND": "0"
+		},
+         {      
+            "state": "Kansas",
+			"pollster": "SurveyUSA",
+			"officeType": "President",
+			"dates": "AUG 5–9, 2020",
+			"url": "http://www.surveyusa.com/client/PollReport.aspx?g=b7efcf1a-9519-4b36-95f6-5a05b8cc7f6d",
+			"DEM": "41",
+            "GOP": "48",
+            "IND": "0"
+		},
+        {      
+            "state": "Kentucky",
+			"pollster": "Quinnipiac University",
+			"officeType": "President",
+			"dates": "SEP 10–14, 2020",
+			"url": "https://poll.qu.edu/kentucky/release-detail?ReleaseID=3673",
+			"DEM": "38",
+            "GOP": "58",
+            "IND": "0"
+		},
+         {      
+            "state": "Louisiana",
+			"pollster": "Trafalgar Group",
+			"officeType": "President",
+			"dates": "AUG 13–17, 2020",
+			"url": "https://drive.google.com/file/d/164gVYKr6-mtugTVXqbuzBdkbxxVGTZTn/view",
+			"DEM": "38",
+            "GOP": "54",
+            "IND": "3"
+		},
+        {      
+            "state": "Maine",
+			"pollster": "Siena College/The New York Times Upshot",
+			"officeType": "President",
+			"dates": "SEP 11–16, 2020",
+			"url": "https://int.nyt.com/data/documenttools/az-me-nc-0920-crosstabs/72d074246b272695/full.pdf",
+			"DEM": "55",
+            "GOP": "38",
+            "IND": "0"
+		},
+         {      
+            "state": "Maryland",
+			"pollster": "Gonzales Research & Marketing Strategies Inc.",
+			"officeType": "President",
+			"dates": "MAY 19–23, 2020",
+			"url": "http://projects.fivethirtyeight.com/polls/20200526_MD.pdf",
+			"DEM": "59",
+            "GOP": "35",
+            "IND": "0"
+		},
+        {      
+            "state": "Massachusetts",
+			"pollster": "Emerson College",
+			"officeType": "President",
+			"dates": "AUG 25–27, 2020",
+			"url": "https://emersonpolling.reportablenews.com/pr/massachusetts-2020-senator-markey-takes-lead-in-senate-primary-over-congressman-kennedy",
+			"DEM": "69",
+            "GOP": "31",
+            "IND": "0"
+		},
+         {      
+            "state": "Michigan",
+			"pollster": "Civiqs",
+			"officeType": "President",
+			"dates": "SEP 11–15, 2020",
+			"url": "https://drive.google.com/file/d/1MnN8_rRNinle5U0mqlkF4Gs2XOhROk_w/view",
+			"DEM": "53",
+            "GOP": "42",
+            "IND": "0"
+		},
+        {      
+            "state": "Minnesota",
+			"pollster": "ABC News/The Washington Post",
+			"officeType": "President",
+			"dates": "SEP 8-13, 2020",
+			"url": "https://www.washingtonpost.com/context/sept-8-13-2020-washington-post-abc-news-poll-of-minnesota-and-wisconsin/8e5dbd4b-4746-4e45-821e-eb8c8645d5c1/",
+			"DEM": "57",
+            "GOP": "41",
+            "IND": "0"
+		},
+         {      
+            "state": "Mississippi",
+			"pollster": "B/C Garin-Hart-Yang Research Group",
+			"officeType": "President",
+			"dates": "JUL 30–AUG 9, 2020",
+			"url": "https://projects.fivethirtyeight.com/polls/20200813_MS.pdf",
+			"DEM": "43",
+            "GOP": "53",
+            "IND": "0"
+		},
+        {      
+            "state": "Missouri",
+			"pollster": "We Ask America",
+			"officeType": "President",
+			"dates": "SEP 1–3, 2020",
+			"url": "http://www.weaskamerica.com/surveys/missouri-statewide-general-election-survey-results-el9mz",
+			"DEM": "44",
+            "GOP": "49",
+            "IND": "0"
+		},
+         {      
+            "state": "Montana",
+			"pollster": "Fabrizio Ward/Hart Research Associates",
+			"officeType": "President",
+			"dates": "AUG 30-SEP 5, 2020",
+			"url": "https://www.aarp.org/content/dam/aarp/research/surveys_statistics/politics/2020/2020-election-battleground-states-senate-montana-annotated-questionnaire.doi.10.26419-2Fres.00401.022.pdf",
+			"DEM": "43",
+            "GOP": "50",
+            "IND": "0"
+		},
+        {      
+            "state": "Nebraska",
+			"pollster": "Strategies 360",
+			"officeType": "President",
+			"dates": "JUL 16-22, 2020",
+			"url": "https://nebraskademocrats.org/blog/polling-shows-trump-and-biden-in-a-dead-heat-bolz-within-striking-distance-of-fortenberry/",
+			"DEM": "46",
+            "GOP": "48",
+            "IND": "0"
+		},
+         {      
+            "state": "Hawaii",
+			"pollster": "MRG Research",
+			"officeType": "President",
+			"dates": "JULY 27–30, 2020",
+			"url": "https://assets.documentcloud.org/documents/7014362/Civil-Beat-July-2020-President.pdf",
+			"DEM": "56",
+            "GOP": "29",
+            "IND": "0"
+		},
+        {      
+            "state": "Nevada",
+			"pollster": "Siena College/The New York Times Upshot",
+			"officeType": "President",
+			"dates": "SEP 8-10, 2020",
+			"url": "https://int.nyt.com/data/documenttools/crosstabs-mn-nh-nv-wi/aefa3a3ec36370e9/full.pdf",
+			"DEM": "46",
+            "GOP": "42",
+            "IND": "3"
+		},
+         {      
+            "state": "New Hampshire",
+			"pollster": "Siena College/The New York Times Upshot",
+			"officeType": "President",
+			"dates": "SEP 8-11, 2020",
+			"url": "https://int.nyt.com/data/documenttools/crosstabs-mn-nh-nv-wi/aefa3a3ec36370e9/full.pdf",
+			"DEM": "45",
+            "GOP": "42",
+            "IND": "4"
+		},
+        {      
+            "state": "New Jersey",
+			"pollster": "Emerson College",
+			"officeType": "President",
+			"dates": "SEP 4-7, 2020",
+			"url": "https://www.abqjournal.com/1493758/biden-holds-sizable-lead-over-trump-in-nm-journal-poll-finds.html",
+			"DEM": "58",
+            "GOP": "40",
+            "IND": "0"
+		},
+         {      
+            "state": "New Mexico",
+			"pollster": "Research & Polling Inc.",
+			"officeType": "President",
+			"dates": "AUG 26-SEP 2, 2020",
+			"url": "https://www.abqjournal.com/1493758/biden-holds-sizable-lead-over-trump-in-nm-journal-poll-finds.html",
+			"DEM": "54",
+            "GOP": "39",
+            "IND": "0"
+		},
+        {      
+            "state": "New York",
+			"pollster": "Public Policy Polling",
+			"officeType": "President",
+			"dates": "AUG 21-22, 2020",
+			"url": "https://www.publicpolicypolling.com/wp-content/uploads/2020/08/NewYorkAugust2020Results.pdf",
+			"DEM": "63",
+            "GOP": "32",
+            "IND": "0"
+		},
+         {      
+            "state": "North Carolina",
+			"pollster": "Siena College/The New York Times Upshot",
+			"officeType": "President",
+			"dates": "SEP 11-16, 2020",
+			"url": "https://int.nyt.com/data/documenttools/az-me-nc-0920-crosstabs/72d074246b272695/full.pdf",
+			"DEM": "45",
+            "GOP": "44",
+            "IND": "3"
+		},
+        {      
+            "state": "North Dakota",
+			"pollster": "DFM Research",
+			"officeType": "President",
+			"dates": "MAR 3-5, 2020",
+			"url": "https://www.inforum.com/opinion/4982684-Port-Poll-shows-Biden-more-competitive-against-Trump-than-Sanders-in-North-Dakota-as-Democrats-prepare-to-vote",
+			"DEM": "38",
+            "GOP": "55",
+            "IND": "0"
+		},
+         {      
+            "state": "Ohio",
+			"pollster": "Civiqs",
+			"officeType": "President",
+			"dates": "SEP 11–15, 2020",
+			"url": "https://drive.google.com/file/d/1TYPFg4nrZYMUwC3cFX8-hMGWESa72wMh/view",
+			"DEM": "45",
+            "GOP": "48",
+            "IND": "0"
+		},
+        {      
+            "state": "Oklahoma",
+			"pollster": "SoonerPoll",
+			"officeType": "President",
+			"dates": "SEP 2-8, 2020",
+			"url": "https://d3nbrdofkhtiou.cloudfront.net/kwtv/production/2020/September/10/news-9--news-on-6-general-election-poll.1599771666459.pdf",
+			"DEM": "35",
+            "GOP": "60",
+            "IND": "1"
+		},
+         {      
+            "state": "Oregon",
+			"pollster": "DFM Research",
+			"officeType": "President",
+			"dates": "SEP 3–8, 2020",
+			"url": "https://www.dhmresearch.com/joe-biden-leads-by-12-points-among-oregon-voters-worry-about-covid-19-spread-remains-high/",
+			"DEM": "51",
+            "GOP": "39",
+            "IND": "0"
+		},
+        {      
+            "state": "Pennsylvania",
+			"pollster": "Civiqs",
+			"officeType": "President",
+			"dates": "SEP 11-15, 2020",
+			"url": "https://drive.google.com/file/d/1-sIWzRRaoTXBYsilhoKQwy0GjrBhtPi4/view",
+			"DEM": "52",
+            "GOP": "45",
+            "IND": "0"
+		},
+         {      
+            "state": "South Carolina",
+			"pollster": "Quinnipiac University",
+			"officeType": "President",
+			"dates": "SEP 10-14, 2020",
+			"url": "https://poll.qu.edu/kentucky/release-detail?ReleaseID=3673",
+			"DEM": "45",
+            "GOP": "51",
+            "IND": "0"
+		},
+        {      
+            "state": "Tennessee",
+			"pollster": "SSRS",
+			"officeType": "President",
+			"dates": "MAY 5-22, 2020",
+			"url": "https://www.vanderbilt.edu/csdi/2020_Spring_topline.pdf",
+			"DEM": "42",
+            "GOP": "51",
+            "IND": "0"
+		},
+         {      
+            "state": "Texas",
+			"pollster": "Morning Consult",
+			"officeType": "President",
+			"dates": "AUG 29-SEP 7, 2020",
+			"url": "https://morningconsult.com/2020/09/09/trump-biden-race-tightens-2020-polling/",
+			"DEM": "46",
+            "GOP": "46",
+            "IND": "0"
+		},
+        {      
+            "state": "Utah",
+			"pollster": "RMG Research",
+			"officeType": "President",
+			"dates": "SEP 7-12, 2020",
+			"url": "https://www.deseret.com/utah/2020/9/16/21439705/poll-are-you-better-off-than-you-were-4-years-ago-what-about-the-country-trump-biden-race",
+			"DEM": "35",
+            "GOP": "53",
+            "IND": "5"
+		},
+         {      
+            "state": "Virginia",
+			"pollster": "Virginia Commonwealth University",
+			"officeType": "President",
+			"dates": "AUG 28-SEP 7, 2020",
+			"url": "https://oppo.vcu.edu/media/oppo/September2020Release1final.pdf",
+			"DEM": "53",
+            "GOP": "39",
+            "IND": "0"
+		},
+        {      
+            "state": "Washington",
+			"pollster": "SurveyUSA",
+			"officeType": "President",
+			"dates": "JUL 22-27, 2020",
+			"url": "http://www.surveyusa.com/client/PollReport.aspx?g=e1e5b213-5bff-45d9-8c44-33b8a8a42e13",
+			"DEM": "62",
+            "GOP": "28",
+            "IND": "0"
+		},
+         {      
+            "state": "West Virginia",
+			"pollster": "WPA Intelligence",
+			"officeType": "President",
+			"dates": "JAN 7-9, 2020",
+			"url": "https://www.clubforgrowth.org/wp-content/uploads/2020/01/CFG_WV_Impeachment_Poll_Memo_2001122.pdf",
+			"DEM": "31",
+            "GOP": "66",
+            "IND": "0"
+		},
+        {      
+            "state": "Wisconsin",
+			"pollster": "Redfield & Wilton Strategies",
+			"officeType": "President",
+			"dates": "SEP 12-16, 2020",
+			"url": "https://redfieldandwiltonstrategies.com/latest-us-swing-states-voting-intention-12-16-september/",
+			"DEM": "47",
+            "GOP": "41",
+            "IND": "2"
+		}
+]
