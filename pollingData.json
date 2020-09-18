@@ -1,0 +1,91 @@
+[{
+            "state": "National",
+			"pollster": "USC Dornsife",
+			"officeType": "President",
+			"dates": "SEP 11–17, 2020",
+			"url": "https://election.usc.edu",
+			"DEM": "50",
+            "GOP": "43",
+            "IND": "0"
+		},
+        {      
+            "state": "Alabama",
+			"pollster": "Morning Consult",
+			"officeType": "President",
+			"dates": "JULY 24–AUG 2, 2020",
+			"url": "https://morningconsult.com/2020/08/04/senate-presidential-polling-alabama-kentucky-sc-texas/",
+			"DEM": "36",
+            "GOP": "58",
+            "IND": "0"
+		},
+        {      
+            "state": "Alaska",
+			"pollster": "Public Policy Polling",
+			"officeType": "President",
+			"dates": "JULY 23–24, 2020",
+			"url": "https://www.afscme.org/press/reports/polling/AlaskaResults.pdf",
+			"DEM": "44",
+            "GOP": "50",
+            "IND": "0"
+		},
+         {      
+            "state": "Arizona",
+			"pollster": "Siena College/The New York Times Upshot",
+			"officeType": "President",
+			"dates": "SEP 10–15, 2020",
+			"url": "https://int.nyt.com/data/documenttools/az-me-nc-0920-crosstabs/72d074246b272695/full.pdf",
+			"DEM": "49",
+            "GOP": "40",
+            "IND": "4"
+		},
+        {      
+            "state": "Arkansas",
+			"pollster": "Hendrix College",
+			"officeType": "President",
+			"dates": "JUN 9–10, 2020",
+			"url": "https://talkbusiness.net/2020/06/poll-independents-dissatisfied-with-trump-cotton-biden-competitive-in-arkansas/",
+			"DEM": "45",
+            "GOP": "47",
+            "IND": "0"
+		},
+         {      
+            "state": "California",
+			"pollster": "Public Policy Institute of California",
+			"officeType": "President",
+			"dates": "SEP 4–13, 2020",
+			"url": "https://www.ppic.org/wp-content/uploads/ppic-statewide-survey-californians-and-their-government-september-2020.pdf",
+			"DEM": "60",
+            "GOP": "31",
+            "IND": "5"
+		},
+        {      
+            "state": "Colorado",
+			"pollster": "Global Strategy Group*",
+			"officeType": "President",
+			"dates": "AUG 28–SEP 1, 2020",
+			"url": "https://www.globalstrategygroup.com/wp-content/uploads/2020/09/CO-Mountaineer-Q3-Survey-Topline-F09.03.20.pdf",
+			"DEM": "53",
+            "GOP": "41",
+            "IND": "0"
+		},
+         {      
+            "state": "Connecticut",
+			"pollster": "SurveyUSA",
+			"officeType": "President",
+			"dates": "MAY 19–24, 2020",
+			"url": "http://www.surveyusa.com/client/PollReport.aspx?g=26d8f355-a447-4bc3-bae6-d4c5e07b148f",
+			"DEM": "53",
+            "GOP": "32",
+            "IND": "0"
+		},
+        {      
+            "state": "Delaware",
+			"pollster": "Public Policy Polling",
+			"officeType": "President",
+			"dates": "AUG 21–22, 2020",
+			"url": "https://www.publicpolicypolling.com/wp-content/uploads/2020/08/DelawareAugust2020Results.pdf",
+			"DEM": "58",
+            "GOP": "37",
+            "IND": "0"
+		},
+]
