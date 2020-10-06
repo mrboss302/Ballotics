@@ -2,7 +2,7 @@
             "state": "National",
 			"pollster": "USC Dornsife",
 			"officeType": "President",
-			"dates": "SEP 21-OCT 4, 2020",
+			"dates": "SEP 21-OCT 5, 2020",
 			"url": "https://election.usc.edu/",
 			"DEM": 53,
             "GOP": 42,
@@ -10,12 +10,12 @@
 		},
         {      
             "state": "Alabama",
-			"pollster": "SurveyMonkey",
+			"pollster": "Auburn University at Montgomery",
 			"officeType": "President",
-			"dates": "SEP 1-30, 2020",
-			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-			"DEM": 42,
-            "GOP": 55,
+			"dates": "SEP 30-OCT 3, 2020",
+			"url": "https://www.aum.edu/aum-poll-tommy-tuberville-leads-doug-jones-by-12-points-in-closing-weeks-of-alabama-senate-race/",
+			"DEM": 37,
+            "GOP": 57,
             "IND": 0
 		},
         {      
@@ -30,13 +30,13 @@
 		},
          {      
             "state": "Arizona",
-			"pollster": "Suffolk University",
+			"pollster": "Siena College/The New York Times Upshot",
 			"officeType": "President",
-			"dates": "SEP 26-30, 2020",
+			"dates": "OCT 1-3, 2020",
 			"url": "https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/other-states/2020/10_2_2020_tables_pdftxt.pdf?la=en&hash=092D976850EB75E3AD343E1F122E02FA8C57CEFCf",
-			"DEM": 50,
-            "GOP": 46,
-            "IND": 1
+			"DEM": 49,
+            "GOP": 41,
+            "IND": 3
 		},
         {      
             "state": "Arkansas",
@@ -80,13 +80,13 @@
 		},
         {      
             "state": "Delaware",
-			"pollster": "SurveyMonkey",
+			"pollster": "University of Delaware",
 			"officeType": "President",
-			"dates": "SEP 1-30, 2020",
-			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-			"DEM": 61,
-            "GOP": 37,
-            "IND": 0
+			"dates": "SEP 21-27, 2020",
+			"url": "https://www.udel.edu/udaily/2020/october/poll--democrats-lead-by-big-margins-in-delaware/",
+			"DEM": 54,
+            "GOP": 33,
+            "IND": 3
 		},
          {      
             "state": "District of Columbia",
@@ -100,13 +100,13 @@
 		},
          {      
             "state": "Florida",
-			"pollster": "Siena College/The New York Times Upshot",
+			"pollster": "University of North Florida",
 			"officeType": "President",
-			"dates": "SEP 30-OCT 1, 2020",
-			"url": "https://int.nyt.com/data/documenttools/flpa-0930-crosstabs/16c21b7ab34ed4d1/full.pdf",
-			"DEM": 47,
-            "GOP": 42,
-            "IND": 3
+			"dates": "OCT 1-4, 2020",
+			"url": "https://www.unf.edu/uploadedFiles/aa/coas/porl/UNF%20PORL%20Statewide%20October%20Press%20Release.pdf",
+			"DEM": 51,
+            "GOP": 45,
+            "IND": 0
 		},
         {      
             "state": "Georgia",
@@ -230,13 +230,13 @@
 		},
          {      
             "state": "Michigan",
-			"pollster": "Public Policy Polling",
+			"pollster": "Glengariff Group",
 			"officeType": "President",
-			"dates": "SEP 30-OCT 1, 2020",
-			"url": "https://progressmichigan.org/wp-content/uploads/2020/10/MichiganResults-October.pdf",
-			"DEM": 50,
-            "GOP": 44,
-            "IND": 3
+			"dates": "SEP 30-OCT 3, 2020",
+			"url": "https://www.clickondetroit.com/decision-2020/2020/10/06/poll-biden-bolsters-lead-over-trump-in-michigan-after-first-debate/",
+			"DEM": 48,
+            "GOP": 39,
+            "IND": 0
 		},
         {      
             "state": "Minnesota",
@@ -320,13 +320,13 @@
 		},
          {      
             "state": "New Mexico",
-			"pollster": "Research & Polling Inc.",
+			"pollster": "Public Policy Polling",
 			"officeType": "President",
-			"dates": "AUG 26-SEP 2, 2020",
-			"url": "https://www.abqjournal.com/1493758/biden-holds-sizable-lead-over-trump-in-nm-journal-poll-finds.html",
-			"DEM": 54,
+			"dates": "SEP 30-OCT 1, 2020",
+			"url": "https://nmpoliticalreport.com/2020/10/06/biden-with-leads-trump-by-14-points-in-nm/",
+			"DEM": 53,
             "GOP": 39,
-            "IND": 0
+            "IND": 2
 		},
         {      
             "state": "New York",
@@ -340,22 +340,22 @@
 		},
          {      
             "state": "North Carolina",
-			"pollster": "Hart Research Associates",
+			"pollster": "Public Policy Polling",
 			"officeType": "President",
-			"dates": "SEP 24-27, 2020",
-			"url": "https://hrc-prod-requests.s3-us-west-2.amazonaws.com/ME-13067-HRC-Issues-10-State-1.pdf?mtime=20201002132812&focal=none",
-			"DEM": 49,
-            "GOP": 47,
+			"dates": "OCT 4-5, 2020",
+			"url": "https://www.publicpolicypolling.com/wp-content/uploads/2020/10/NorthCarolinaResultsOctober2020.pdf",
+			"DEM": 50,
+            "GOP": 46,
             "IND": 0
 		},
         {      
             "state": "North Dakota",
 			"pollster": "DFM Research",
 			"officeType": "President",
-			"dates": "SEP 12-16, 2020",
-			"url": "https://www.scribd.com/document/478042318/ND-Poll-DFM-Research",
+			"dates": "SEP 26-29, 2020",
+			"url": "https://www.northdakotavotersfirst.org/body/NDVF-Poll-2-Report-Website.pdf",
 			"DEM": 37,
-            "GOP": 56,
+            "GOP": 51,
             "IND": 0
 		},
          {      
@@ -390,13 +390,13 @@
 		},
         {      
             "state": "Pennsylvania",
-			"pollster": "Siena College/The New York Times Upshot",
+			"pollster": "Ipsos",
 			"officeType": "President",
-			"dates": "SEP 30-OCT 2, 2020",
-			"url": "https://int.nyt.com/data/documenttools/flpa-0930-crosstabs/16c21b7ab34ed4d1/full.pdf",
-			"DEM": 49,
-            "GOP": 42,
-            "IND": 3
+			"dates": "SEP 29-OCT 5, 2020",
+			"url": "https://www.reuters.com/article/us-usa-election-battlegrounds-poll/reuters-ipsos-poll-shows-biden-leading-in-pennsylvania-wisconsin-idUSKBN26Q2ZT",
+			"DEM": 50,
+            "GOP": 45,
+            "IND": 0
 		},
          {      
             "state": "Rhode Island",
@@ -450,12 +450,12 @@
 		},
         {      
             "state": "Utah",
-			"pollster": "SurveyMonkey",
+			"pollster": "Y2 Analytics",
 			"officeType": "President",
-			"dates": "SEP 1-30, 2020",
-			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-			"DEM": 43,
-            "GOP": 56,
+			"dates": "SEP 26-OCT 4, 2020",
+			"url": "https://www.sltrib.com/news/politics/2020/10/05/new-utah-poll-has-trump/",
+			"DEM": 40,
+            "GOP": 50,
             "IND": 0
 		},
          {      
@@ -500,13 +500,13 @@
 		},
         {      
             "state": "Wisconsin",
-			"pollster": "Redfield & Wilton Strategies",
+			"pollster": "Ipsos",
 			"officeType": "President",
-			"dates": "SEP 23-27, 2020",
-			"url": "https://redfieldandwiltonstrategies.com/latest-us-swing-states-voting-intention-23-27-september/",
-			"DEM": 48,
-            "GOP": 43,
-            "IND": 2
+			"dates": "SEP 29-OCT 5, 2020",
+			"url": "https://www.reuters.com/article/us-usa-election-battlegrounds-poll/reuters-ipsos-poll-shows-biden-leading-in-pennsylvania-wisconsin-idUSKBN26Q2ZT",
+			"DEM": 50,
+            "GOP": 44,
+            "IND": 0
 		},
           {      
             "state": "Wyoming",
