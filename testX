@@ -8,6 +8,7 @@
             "GOP": 42,
             "IND": 0
 		},
+ {
             "state": "National",
 			"pollster": "YouGov",
 			"officeType": "President",
@@ -17,6 +18,7 @@
             "GOP": 38,
             "IND": 0
 		},
+  {
             "state": "National",
 			"pollster": "Rasmussen Reports/Pulse Opinion Research",
 			"officeType": "President",
@@ -26,6 +28,7 @@
             "GOP": 40,
             "IND": 0
 		},
+  {
             "state": "National",
 			"pollster": "USC Dornsife",
 			"officeType": "President",
@@ -35,6 +38,7 @@
             "GOP": 42,
             "IND": 0
 		},
+  {
             "state": "National",
 			"pollster": "USC Dornsife",
 			"officeType": "President",
@@ -44,6 +48,7 @@
             "GOP": 42,
             "IND": 0
 		},
+  {
             "state": "National",
 			"pollster": "USC Dornsife",
 			"officeType": "President",
@@ -53,6 +58,7 @@
             "GOP": 42,
             "IND": 0
 		},
+  {
             "state": "National",
 			"pollster": "Qriously",
 			"officeType": "President",
@@ -62,6 +68,7 @@
             "GOP": 38,
             "IND": 1
 		},
+  {
             "state": "National",
 			"pollster": "Saint Leo University",
 			"officeType": "President",
@@ -70,5 +77,5 @@
 			"DEM": 52,
             "GOP": 38,
             "IND": 0
-		}
+		},
 ]
