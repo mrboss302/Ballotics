@@ -1,10 +1,10 @@
 [{
             "state": "National",
-			"pollster": "USC Dornsife",
+			"pollster": "YouGov",
 			"officeType": "President",
-			"dates": "SEP 21-OCT 5, 2020",
-			"url": "https://election.usc.edu/",
-			"DEM": 53,
+			"dates": "OCT 4-6, 2020",
+			"url": "https://docs.cdn.yougov.com/1qb5j6pdqd/econTabReport.pdf",
+			"DEM": 51,
             "GOP": 42,
             "IND": 0
 		},
@@ -20,22 +20,22 @@
 		},
         {      
             "state": "Alaska",
-			"pollster": "SurveyMonkey",
+			"pollster": "Alaska Survey Research",
 			"officeType": "President",
-			"dates": "SEP 1-30, 2020",
-			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+			"dates": "SEP 25-OCT 4, 2020",
+			"url": "https://twitter.com/IvanMoore1/status/1313648391750971393?s=20",
 			"DEM": 43,
             "GOP": 54,
             "IND": 0
 		},
          {      
             "state": "Arizona",
-			"pollster": "Siena College/The New York Times Upshot",
+			"pollster": "Data Orbital",
 			"officeType": "President",
-			"dates": "OCT 1-3, 2020",
-			"url": "https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/other-states/2020/10_2_2020_tables_pdftxt.pdf?la=en&hash=092D976850EB75E3AD343E1F122E02FA8C57CEFCf",
-			"DEM": 49,
-            "GOP": 41,
+			"dates": "OCT 3-5, 2020",
+			"url": "https://www.dataorbital.com/the-blog/breaking-in-az-us-senate-race-tightens-and-president-trump-down-45",
+			"DEM": 48,
+            "GOP": 43,
             "IND": 3
 		},
         {      
@@ -100,12 +100,12 @@
 		},
          {      
             "state": "Florida",
-			"pollster": "University of North Florida",
+			"pollster": "Quinnipiac University",
 			"officeType": "President",
-			"dates": "OCT 1-4, 2020",
-			"url": "https://www.unf.edu/uploadedFiles/aa/coas/porl/UNF%20PORL%20Statewide%20October%20Press%20Release.pdf",
+			"dates": "OCT 1-5, 2020",
+			"url": "https://poll.qu.edu/florida/release-detail?ReleaseID=3678",
 			"DEM": 51,
-            "GOP": 45,
+            "GOP": 40,
             "IND": 0
 		},
         {      
@@ -160,12 +160,12 @@
 		},
         {      
             "state": "Iowa",
-			"pollster": "Hart Research Associates",
+			"pollster": "Quinnipiac University",
 			"officeType": "President",
-			"dates": "SEP 24-27, 2020",
-			"url": "https://hrc-prod-requests.s3-us-west-2.amazonaws.com/ME-13067-HRC-Issues-10-State-1.pdf?mtime=20201002132812&focal=none",
-			"DEM": 47,
-            "GOP": 49,
+			"dates": "OCT 1-5, 2020",
+			"url": "https://poll.qu.edu/florida/release-detail?ReleaseID=3678",
+			"DEM": 50,
+            "GOP": 45,
             "IND": 0
 		},
          {      
@@ -210,12 +210,12 @@
 		},
          {      
             "state": "Maryland",
-			"pollster": "OpinionWorks",
+			"pollster": "Change Research",
 			"officeType": "President",
-			"dates": "SEP 4-11, 2020",
-			"url": "https://docs.google.com/viewer?a=v&pid=sites&srcid=b3BpbmlvbndvcmtzLmNvbXxjb21wMXxneDoxMjc5ZWQzMzNlZWQ5NmU3",
+			"dates": "SEP 29-OCT 1, 2020",
+			"url": "https://www.marylandmatters.org/2020/10/07/forget-the-2020-election-here-are-some-early-poll-results-on-2022/",
 			"DEM": 61,
-            "GOP": 29,
+            "GOP": 32,
             "IND": 0
 		},
         {      
@@ -230,12 +230,12 @@
 		},
          {      
             "state": "Michigan",
-			"pollster": "Glengariff Group",
+			"pollster": "Ipsos",
 			"officeType": "President",
-			"dates": "SEP 30-OCT 3, 2020",
-			"url": "https://www.clickondetroit.com/decision-2020/2020/10/06/poll-biden-bolsters-lead-over-trump-in-michigan-after-first-debate/",
-			"DEM": 48,
-            "GOP": 39,
+			"dates": "SEP 29-OCT 6, 2020",
+			"url": "https://www.devdiscourse.com/article/politics/1241692-poll-reutersipsos-poll-shows-biden-widening-lead-over-trump-in-michigan-tied-in-north-carolina",
+			"DEM": 51,
+            "GOP": 43,
             "IND": 0
 		},
         {      
@@ -260,10 +260,10 @@
 		},
         {      
             "state": "Missouri",
-			"pollster": "Remington Research Group",
+			"pollster": "Garin-Hart-Yang Research Group*",
 			"officeType": "President",
-			"dates": "SEP 30-OCT 1, 2020",
-			"url": "https://moscout.com/s/MOSCOUT-Statewide-General-Election-Survey-Deck-100220.pptx",
+			"dates": "SEP 28-OCT 2, 2020",
+			"url": "https://static1.squarespace.com/static/59015f4b37c581b2ce01e5b3/t/5f7da30aae0dc50f899426db/1602069258463/Garin+Hart+Yang+Recent+MO+statewide+survey+Memo_FINAL.pdf",
 			"DEM": 46,
             "GOP": 51,
             "IND": 0
@@ -290,23 +290,23 @@
 		},
         {      
             "state": "Nevada",
-			"pollster": "University of Nevada Las Vegas Lee Business School",
+			"pollster": "Siena College/The New York Times Upshot",
 			"officeType": "President",
-			"dates": "SEP 10-25, 2020",
-			"url": "https://busr.ag/polls",
-			"DEM": 46,
-            "GOP": 41,
-            "IND": 0
+			"dates": "OCT 2-6, 2020",
+			"url": "https://int.nyt.com/data/documenttools/oh-nv-crosstabs/d91c22da8b8953eb/full.pdf",
+			"DEM": 48,
+            "GOP": 42,
+            "IND": 3
 		},
          {      
             "state": "New Hampshire",
-			"pollster": "Emerson College",
+			"pollster": "American Research Group",
 			"officeType": "President",
-			"dates": "SEP 30-OCT 1, 2020",
-			"url": "https://emersonpolling.reportablenews.com/pr/new-hampshire-2020-biden-leads-trump-independents-splitting-their-ticket",
+			"dates": "SEP 25-28, 2020",
+			"url": "https://americanresearchgroup.com/nhpoll/pres20/",
 			"DEM": 53,
-            "GOP": 45,
-            "IND": 0
+            "GOP": 44,
+            "IND": 1
 		},
         {      
             "state": "New Jersey",
@@ -340,12 +340,12 @@
 		},
          {      
             "state": "North Carolina",
-			"pollster": "Public Policy Polling",
+			"pollster": "Ipsos",
 			"officeType": "President",
-			"dates": "OCT 4-5, 2020",
-			"url": "https://www.publicpolicypolling.com/wp-content/uploads/2020/10/NorthCarolinaResultsOctober2020.pdf",
-			"DEM": 50,
-            "GOP": 46,
+			"dates": "SEP 29-OCT 6, 2020",
+			"url": "https://www.devdiscourse.com/article/politics/1241692-poll-reutersipsos-poll-shows-biden-widening-lead-over-trump-in-michigan-tied-in-north-carolina",
+			"DEM": 47,
+            "GOP": 47,
             "IND": 0
 		},
         {      
@@ -360,13 +360,13 @@
 		},
          {      
             "state": "Ohio",
-			"pollster": "YouGov",
+			"pollster": "Siena College/The New York Times Upshot ",
 			"officeType": "President",
-			"dates": "SEP 30-OCT 2, 2020",
-			"url": "https://drive.google.com/file/d/1zlfkGVj_8gdcyNPvQ5hTCDtpZXkJDyxB/view",
-			"DEM": 47,
-            "GOP": 47,
-            "IND": 0
+			"dates": "OCT 2-6, 2020",
+			"url": "https://int.nyt.com/data/documenttools/oh-nv-crosstabs/d91c22da8b8953eb/full.pdf",
+			"DEM": 45,
+            "GOP": 44,
+            "IND": 3
 		},
         {      
             "state": "Oklahoma",
@@ -390,12 +390,12 @@
 		},
         {      
             "state": "Pennsylvania",
-			"pollster": "Ipsos",
+			"pollster": "Quinnipiac University",
 			"officeType": "President",
-			"dates": "SEP 29-OCT 5, 2020",
-			"url": "https://www.reuters.com/article/us-usa-election-battlegrounds-poll/reuters-ipsos-poll-shows-biden-leading-in-pennsylvania-wisconsin-idUSKBN26Q2ZT",
-			"DEM": 50,
-            "GOP": 45,
+			"dates": "OCT 1-5, 2020",
+			"url": "https://poll.qu.edu/florida/release-detail?ReleaseID=3678",
+			"DEM": 54,
+            "GOP": 41,
             "IND": 0
 		},
          {      
@@ -440,12 +440,12 @@
 		},
          {      
             "state": "Texas",
-			"pollster": "Hart Research Associates",
+			"pollster": "Civiqs",
 			"officeType": "President",
-			"dates": "SEP 24-27, 2020",
-			"url": "https://hrc-prod-requests.s3-us-west-2.amazonaws.com/ME-13067-HRC-Issues-10-State-1.pdf?mtime=20201002132812&focal=none",
-			"DEM": 47,
-            "GOP": 49,
+			"dates": "OCT 3-6, 2020",
+			"url": "https://civiqs.com/documents/Civiqs_DailyKos_TX_banner_book_2020_10_cm5k3s.pdf",
+			"DEM": 48,
+            "GOP": 48,
             "IND": 0
 		},
         {      
@@ -490,23 +490,23 @@
 		},
          {      
             "state": "West Virginia",
-			"pollster": "SurveyMonkey",
+			"pollster": "Triton Polling & Research",
 			"officeType": "President",
-			"dates": "SEP 1-30, 2020",
-			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-			"DEM": 36,
-            "GOP": 62,
+			"dates": "SEP 29-30, 2020",
+			"url": "https://www.wowktv.com/news/elections/poll-shows-incumbents-leading-races-for-surveyed-wv-voters/",
+			"DEM": 38,
+            "GOP": 56,
             "IND": 0
 		},
         {      
             "state": "Wisconsin",
-			"pollster": "Ipsos",
+			"pollster": "Marquette Law School",
 			"officeType": "President",
-			"dates": "SEP 29-OCT 5, 2020",
-			"url": "https://www.reuters.com/article/us-usa-election-battlegrounds-poll/reuters-ipsos-poll-shows-biden-leading-in-pennsylvania-wisconsin-idUSKBN26Q2ZT",
-			"DEM": 50,
-            "GOP": 44,
-            "IND": 0
+			"dates": "SEP 29-OCT 4, 2020",
+			"url": "https://law.marquette.edu/poll/wp-content/uploads/2020/10/MLSP64ToplinesRV.html#q20a:_biden_vs_trump_vs_jorgensen,_lean",
+			"DEM": 46,
+            "GOP": 41,
+            "IND": 5
 		},
           {      
             "state": "Wyoming",
