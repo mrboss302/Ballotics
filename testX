@@ -77,5 +77,15 @@
 		"DEM": 52,
 		"GOP": 38,
 		"IND": 0
-	}
+	},
+	{      
+            "state": "Alabama",
+			"pollster": "Auburn University at Montgomery",
+			"officeType": "President",
+			"dates": "SEP 30-OCT 3, 2020",
+			"url": "https://www.aum.edu/aum-poll-tommy-tuberville-leads-doug-jones-by-12-points-in-closing-weeks-of-alabama-senate-race/",
+			"DEM": 37,
+            "GOP": 57,
+            "IND": 0
+		}
 ]
