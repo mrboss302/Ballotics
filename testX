@@ -20,26 +20,6 @@
 	},
 	{
 		"state": "National",
-		"pollster": "YouGov",
-		"officeType": "President",
-		"dates": "OCT 4-6, 2020",
-		"url": "https://docs.cdn.yougov.com/1qb5j6pdqd/econTabReport.pdf",
-		"DEM": 51,
-		"GOP": 42,
-		"IND": 0
-	},
-	{
-		"state": "National",
-		"pollster": "YouGov",
-		"officeType": "President",
-		"dates": "OCT 4-6, 2020",
-		"url": "https://docs.cdn.yougov.com/1qb5j6pdqd/econTabReport.pdf",
-		"DEM": 46,
-		"GOP": 38,
-		"IND": 0
-	},
-	{
-		"state": "National",
 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
 		"officeType": "President",
 		"dates": "SEP 30-OCT 6, 2020",
