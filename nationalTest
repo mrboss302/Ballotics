@@ -1,0 +1,36 @@
+[
+  {
+    "cycle": "2020",
+    "state": "National",
+    "pollster": "Change Research",
+    "office_type": "U.S. President",
+    "start_date": "9/29/20",
+    "end_date": "9/30/20",
+    "election_date": "11/3/20",
+    "created_at": "10/1/20 12:17",
+    "url": "https://www.cnbc.com/2020/10/01/biden-leads-polls-voters-say-he-beat-trump-in-first-debate.html",
+    "stage": "general",
+    "answer": "Biden",
+    "id": "13256",
+    "name": "Joseph R. Biden Jr.",
+    "party": "DEM",
+    "pct": "54.0"
+  },
+  {
+    "cycle": "2020",
+    "state": "National",
+    "pollster": "Change Research",
+    "office_type": "U.S. President",
+    "start_date": "9/29/20",
+    "end_date": "9/30/20",
+    "election_date": "11/3/20",
+    "created_at": "10/1/20 12:17",
+    "url": "https://www.cnbc.com/2020/10/01/biden-leads-polls-voters-say-he-beat-trump-in-first-debate.html",
+    "stage": "general",
+    "answer": "Trump",
+    "id": "13254",
+    "name": "Donald Trump",
+    "party": "REP",
+    "pct": "41.0"
+  }
+  ]
