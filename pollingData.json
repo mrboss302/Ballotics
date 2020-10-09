@@ -1,11 +1,11 @@
 [{
             "state": "National",
-			"pollster": "YouGov",
+			"pollster": "Morning Consult",
 			"officeType": "President",
-			"dates": "OCT 4-6, 2020",
-			"url": "https://docs.cdn.yougov.com/1qb5j6pdqd/econTabReport.pdf",
-			"DEM": 51,
-            "GOP": 42,
+			"dates": "OCT 5-7, 2020",
+			"url": "https://morningconsult.com/2020-presidential-election-tracker/",
+			"DEM": 52,
+            "GOP": 43,
             "IND": 0
 		},
         {      
@@ -24,19 +24,19 @@
 			"officeType": "President",
 			"dates": "SEP 25-OCT 4, 2020",
 			"url": "https://twitter.com/IvanMoore1/status/1313648391750971393?s=20",
-			"DEM": 46,
-            "GOP": 50,
+			"DEM": 43,
+            "GOP": 54,
             "IND": 0
 		},
          {      
             "state": "Arizona",
-			"pollster": "Data Orbital",
+			"pollster": "Latino Decisions*",
 			"officeType": "President",
-			"dates": "OCT 3-5, 2020",
-			"url": "https://www.dataorbital.com/the-blog/breaking-in-az-us-senate-race-tightens-and-president-trump-down-45",
+			"dates": "SEP 28-OCT 6, 2020",
+			"url": "Latino Decisions*",
 			"DEM": 48,
-            "GOP": 43,
-            "IND": 3
+            "GOP": 45,
+            "IND": 0
 		},
         {      
             "state": "Arkansas",
@@ -60,12 +60,12 @@
 		},
         {      
             "state": "Colorado",
-			"pollster": "SurveyMonkey",
+			"pollster": "SurveyUSA",
 			"officeType": "President",
-			"dates": "SEP 1-30, 2020",
-			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-			"DEM": 57,
-            "GOP": 41,
+			"dates": "OCT 1-6, 2020",
+			"url": "SurveyUSA",
+			"DEM": 50,
+            "GOP": 40,
             "IND": 0
 		},
          {      
@@ -100,13 +100,13 @@
 		},
          {      
             "state": "Florida",
-			"pollster": "Quinnipiac University",
+			"pollster": "InsiderAdvantage",
 			"officeType": "President",
-			"dates": "OCT 1-5, 2020",
-			"url": "https://poll.qu.edu/florida/release-detail?ReleaseID=3678",
-			"DEM": 51,
-            "GOP": 40,
-            "IND": 0
+			"dates": "OCT 6-7, 2020",
+			"url": "https://hannity.com/media-room/hannity-exclusive-pollster-who-predicted-trumps-2016-win-shows-president-up-3-points-in-florida/?utm_source=socialflow",
+			"DEM": 43,
+            "GOP": 46,
+            "IND": 1
 		},
         {      
             "state": "Georgia",
@@ -200,23 +200,23 @@
 		},
         {      
             "state": "Maine",
-			"pollster": "Data for Progress",
+			"pollster": "Critical Insights",
 			"officeType": "President",
-			"dates": "SEP 23-28, 2020",
-			"url": "https://filesforprogress.org/memos/2020-senate-project/week-2/dfp_psp_ME_Senate_Week2.pdf",
-			"DEM": 55,
-            "GOP": 41,
-            "IND": 0
+			"dates": "SEP 25-OCT 4, 2020",
+			"url": "https://drive.google.com/file/d/1rgOpdiCIcbEBjnt2pVvQO7ztkbfsNB90/view",
+			"DEM": 51,
+            "GOP": 40,
+            "IND": 4
 		},
          {      
             "state": "Maryland",
-			"pollster": "Change Research",
+			"pollster": "Goucher College",
 			"officeType": "President",
-			"dates": "SEP 29-OCT 1, 2020",
-			"url": "https://www.marylandmatters.org/2020/10/07/forget-the-2020-election-here-are-some-early-poll-results-on-2022/",
+			"dates": "SEP 30-OCT 4, 2020",
+			"url": "https://www.goucher.edu/hughes-center/documents/Goucher-College-Poll-Oct-2020-Part-1.pdf",
 			"DEM": 61,
-            "GOP": 32,
-            "IND": 0
+            "GOP": 30,
+            "IND": 4
 		},
         {      
             "state": "Massachusetts",
@@ -230,22 +230,22 @@
 		},
          {      
             "state": "Michigan",
-			"pollster": "Ipsos",
+			"pollster": "Emerson College",
 			"officeType": "President",
-			"dates": "SEP 29-OCT 6, 2020",
-			"url": "https://www.devdiscourse.com/article/politics/1241692-poll-reutersipsos-poll-shows-biden-widening-lead-over-trump-in-michigan-tied-in-north-carolina",
-			"DEM": 51,
+			"dates": "OCT 6-7, 2020",
+			"url": "https://emersonpolling.reportablenews.com/pr/michigan-2020-democrats-hold-10-point-leads-in-presidential-and-us-senate-races",
+			"DEM": 54,
             "GOP": 43,
             "IND": 0
 		},
         {      
             "state": "Minnesota",
-			"pollster": "Mason-Dixon Polling & Strategy",
+			"pollster": "SurveyUSA",
 			"officeType": "President",
-			"dates": "SEP 21-23, 2020",
-			"url": "https://www.mprnews.org/story/2020/09/26/minnesota-poll-biden-holds-on-to-lead-over-trump",
-			"DEM": 48,
-            "GOP": 42,
+			"dates": "OCT 1-6, 2020",
+			"url": "https://www.kaaltv.com/minnesota-news/minnesota-survey-usa-poll-elections-biden-up-7-points/5886995/",
+			"DEM": 47,
+            "GOP": 40,
             "IND": 0
 		},
          {      
@@ -270,13 +270,13 @@
 		},
          {      
             "state": "Montana",
-			"pollster": "Siena College/The New York Times Upshot",
+			"pollster": "Emerson College",
 			"officeType": "President",
-			"dates": "SEP 14-16, 2020",
-			"url": "https://int.nyt.com/data/documenttools/mt-crosstabs/4da3e297acefb561/full.pdf",
-			"DEM": 42,
-            "GOP": 49,
-            "IND": 3
+			"dates": "OCT 5-7, 2020",
+			"url": "https://emersonpolling.reportablenews.com/pr/montana-2020-republicans-hold-advantages-in-presidential-us-senate-and-governor-races",
+			"DEM": 44,
+            "GOP": 56,
+            "IND": 0
 		},
         {      
             "state": "Nebraska",
@@ -300,13 +300,13 @@
 		},
          {      
             "state": "New Hampshire",
-			"pollster": "American Research Group",
+			"pollster": "Saint Anselm College",
 			"officeType": "President",
-			"dates": "SEP 25-28, 2020",
-			"url": "https://americanresearchgroup.com/nhpoll/pres20/",
+			"dates": "OCT 1-4, 2020",
+			"url": "https://www.anselm.edu/sites/default/files/Documents/NHIOP/Polls/October%202020%20FullResults.pdf",
 			"DEM": 53,
-            "GOP": 44,
-            "IND": 1
+            "GOP": 41,
+            "IND": 0
 		},
         {      
             "state": "New Jersey",
@@ -410,12 +410,12 @@
 		},
          {      
             "state": "South Carolina",
-			"pollster": "Data for Progress",
+			"pollster": "GBAO*",
 			"officeType": "President",
-			"dates": "SEP 23-28, 2020",
-			"url": "https://filesforprogress.org/memos/2020-senate-project/week-2/dfp_psp_SC_Senate_week2.pdf",
-			"DEM": 45,
-            "GOP": 50,
+			"dates": "SEP 24-28, 2020",
+			"url": "https://twitter.com/MadelainePisani/status/1314190645880328194?s=20",
+			"DEM": 44,
+            "GOP": 49,
             "IND": 0
 		},
          {      
@@ -440,12 +440,12 @@
 		},
          {      
             "state": "Texas",
-			"pollster": "Civiqs",
+			"pollster": "Public Policy Polling*",
 			"officeType": "President",
-			"dates": "OCT 3-6, 2020",
-			"url": "https://civiqs.com/documents/Civiqs_DailyKos_TX_banner_book_2020_10_cm5k3s.pdf",
-			"DEM": 48,
-            "GOP": 48,
+			"dates": "OCT 7-8, 2020",
+			"url": "https://www.texasdemocrats.org/wp-content/uploads/2020/09/TexasResults-2.pdf",
+			"DEM": 50,
+            "GOP": 49,
             "IND": 0
 		},
         {      
