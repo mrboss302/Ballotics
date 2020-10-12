@@ -1,11 +1,11 @@
 [{
             "state": "National",
-			"pollster": "Ipsos",
+			"pollster": "IBD/TIPP",
 			"officeType": "President",
-			"dates": "OCT 6-8, 2020",
-			"url": "https://infogram.com/reutersipsos-poll-oct-8-1hdw2jnmxjqd4l0",
+			"dates": "OCT 7-11, 2020",
+			"url": "https://www.investors.com/news/joe-biden-leads-donald-trump-ibd-tipp-2020-election-tracking-poll-oct-12/",
 			"DEM": 53,
-            "GOP": 41,
+            "GOP": 42,
             "IND": 0
 		},
         {      
@@ -110,13 +110,13 @@
 		},
         {      
             "state": "Georgia",
-			"pollster": "Landmark Communications",
+			"pollster": "Public Policy Polling",
 			"officeType": "President",
-			"dates": "OCT 7, 2020",
-			"url": "https://assets.documentcloud.org/documents/7224570/WSB-Landmark-Senate-Poll-10-9-20.pdf",
+			"dates": "OCT 8-9, 2020",
+			"url": "https://www.publicpolicypolling.com/polls/georgia-senate-races-look-runoff-bound/",
 			"DEM": 47,
-            "GOP": 49,
-            "IND": 1
+            "GOP": 46,
+            "IND": 0
 		},
          {      
             "state": "Hawaii",
@@ -160,12 +160,12 @@
 		},
         {      
             "state": "Iowa",
-			"pollster": "Quinnipiac University",
+			"pollster": "YouGov",
 			"officeType": "President",
-			"dates": "OCT 1-5, 2020",
-			"url": "https://poll.qu.edu/florida/release-detail?ReleaseID=3678",
-			"DEM": 50,
-            "GOP": 45,
+			"dates": "OCT 6-9, 2020",
+			"url": "https://drive.google.com/file/d/1j1ecxNthrVLwbSmV5eSUGdeuEilTgKkd/view",
+			"DEM": 49,
+            "GOP": 49,
             "IND": 0
 		},
          {      
@@ -230,13 +230,13 @@
 		},
          {      
             "state": "Michigan",
-			"pollster": "Emerson College",
+			"pollster": "Siena College/The New York Times Upshot",
 			"officeType": "President",
-			"dates": "OCT 6-7, 2020",
-			"url": "https://emersonpolling.reportablenews.com/pr/michigan-2020-democrats-hold-10-point-leads-in-presidential-and-us-senate-races",
-			"DEM": 54,
-            "GOP": 43,
-            "IND": 0
+			"dates": "OCT 6-11, 2020",
+			"url": "https://int.nyt.com/data/documenttools/miwi1020-crosstabs/b0a09cd1cd0048df/full.pdf",
+			"DEM": 48,
+            "GOP": 40,
+            "IND": 2
 		},
         {      
             "state": "Minnesota",
@@ -270,12 +270,12 @@
 		},
          {      
             "state": "Montana",
-			"pollster": "Emerson College",
+			"pollster": "Public Policy Polling",
 			"officeType": "President",
-			"dates": "OCT 5-7, 2020",
-			"url": "https://emersonpolling.reportablenews.com/pr/montana-2020-republicans-hold-advantages-in-presidential-us-senate-and-governor-races",
-			"DEM": 44,
-            "GOP": 56,
+			"dates": "OCT 9-10, 2020",
+			"url": "https://www.publicpolicypolling.com/wp-content/uploads/2020/10/MontanaOctober2020Poll.pdf",
+			"DEM": 46,
+            "GOP": 52,
             "IND": 0
 		},
         {      
@@ -290,13 +290,13 @@
 		},
         {      
             "state": "Nevada",
-			"pollster": "Siena College/The New York Times Upshot",
+			"pollster": "YouGov",
 			"officeType": "President",
-			"dates": "OCT 2-6, 2020",
-			"url": "https://int.nyt.com/data/documenttools/oh-nv-crosstabs/d91c22da8b8953eb/full.pdf",
-			"DEM": 48,
-            "GOP": 42,
-            "IND": 3
+			"dates": "OCT 6-9, 2020",
+			"url": "https://drive.google.com/file/d/1YShdAgKUTTx0fqhTfEuDJ-zwnd7YgkpD/view",
+			"DEM": 52,
+            "GOP": 46,
+            "IND": 0
 		},
          {      
             "state": "New Hampshire",
