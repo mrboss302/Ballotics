@@ -1,21 +1,32 @@
-[{     
+[
+        {      
+            "state": "Alabama",
+			"pollster": "SurveyMonkey",
+			"officeType": "President",
+			"dates": "SEP 18-OCT 15, 2020",
+			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+			"DEM": 39,
+            "GOP": 59,
+            "IND": 0
+		},
+        {      
+            "state": "Alabama",
+			"pollster": "SurveyMonkey",
+			"officeType": "President",
+			"dates": "SEP 15-OCT 12, 2020",
+			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+			"DEM": 39,
+            "GOP": 59,
+            "IND": 0
+		},
+        {      
             "state": "Alabama",
 			"pollster": "Auburn University at Montgomery",
 			"officeType": "President",
 			"dates": "SEP 30-OCT 3, 2020",
-			"url": "https://www.aum.edu/aum-poll-tommy-tuberville-leads-doug-jones-by-12-points-in-closing-weeks-of-alabama-senate-race/",
+			"url": "https://www.aum.edu/wp-content/uploads/2020/10/aum_poll_10042020_alabama1.pdf",
 			"DEM": 37,
             "GOP": 57,
-            "IND": 0
-		},
-    {      
-            "state": "Alabama",
-			"pollster": "SurveyMonkey",
-			"officeType": "President",
-			"dates": "SEP 1-30, 2020",
-			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-			"DEM": 42,
-            "GOP": 55,
             "IND": 0
 		}
 ]
