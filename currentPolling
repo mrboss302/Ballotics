@@ -210,36 +210,96 @@
 		"GOP": 36,
 		"IND": 0
 	},
-        {      
-            "state": "California",
-             "pollster": "SurveyMonkey",
-			"officeType": "President",
-			"dates": "SEP 21-OCT 18, 2020",
-			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-			"DEM": 63,
-            "GOP": 36,
-            "IND": 0
-		},
-        {      
-            "state": "California",
-             "pollster": "SurveyMonkey",
-			"officeType": "President",
-			"dates": "SEP 21-OCT 18, 2020",
-			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-			"DEM": 63,
-            "GOP": 35,
-            "IND": 0
-		},
-        {      
-            "state": "California",
-             "pollster": "SurveyUSA",
-			"officeType": "President",
-			"dates": "SEP 26–28, 2020",
-			"url": "http://www.surveyusa.com/client/PollReport.aspx?g=d15fdb0d-701d-495c-a67f-e17bfcc3bf92",
-			"DEM": 59,
-            "GOP": 32,
-            "IND": 0
-		},
+	{
+		"state": "California",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 21-OCT 18, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 63,
+		"GOP": 36,
+		"IND": 0
+	},
+	{
+		"state": "California",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 21-OCT 18, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 63,
+		"GOP": 35,
+		"IND": 0
+	},
+	{
+		"state": "California",
+		"pollster": "SurveyUSA",
+		"officeType": "President",
+		"dates": "SEP 26–28, 2020",
+		"url": "http://www.surveyusa.com/client/PollReport.aspx?g=d15fdb0d-701d-495c-a67f-e17bfcc3bf92",
+		"DEM": 59,
+		"GOP": 32,
+		"IND": 0
+	},
+	{
+		"state": "Colorado",
+		"pollster": "RMG Research",
+		"officeType": "President",
+		"dates": "OCT 9-15, 2020",
+		"url": "http://politicaliq.com/2020/10/20/co-biden-51-trump-43/",
+		"DEM": 51,
+		"GOP": 43,
+		"IND": 3
+	},
+	{
+		"state": "Colorado",
+		"pollster": "RBI Strategies & Research",
+		"officeType": "President",
+		"dates": "OCT 12-16, 2020",
+		"url": "http://www.rbistrategies.com/wp-content/uploads/2020/10/Statewide-Polling-Memo-October-2020.pdf",
+		"DEM": 55,
+		"GOP": 38,
+		"IND": 6
+	},
+	{
+		"state": "Colorado",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 5-9, 2020",
+		"url": "https://www.colorado.edu/lab/aprl/sites/default/files/attached-files/2020_colorado_political_climate_report_election_topline_10-19-20_.pdf",
+		"DEM": 47,
+		"GOP": 38,
+		"IND": 0
+	},
+	{
+		"state": "Colorado",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 20-OCT 18, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 58,
+		"GOP": 41,
+		"IND": 0
+	},
+	{
+		"state": "Colorado",
+		"pollster": "Civiqs",
+		"officeType": "President",
+		"dates": "OCT 11–14, 2020",
+		"url": "https://civiqs.com/documents/Civiqs_DailyKos_CO_banner_book_2020_10_mk0d15.pdf",
+		"DEM": 54,
+		"GOP": 42,
+		"IND": 0
+	},
+	{
+		"state": "Colorado",
+		"pollster": "Keating Research/OnSight Public Affairs/Melanson",
+		"officeType": "President",
+		"dates": "OCT 8–13, 2020",
+		"url": "http://onsightpublicaffairs.com/web/wp-content/uploads/2020/10/KOM20Colorado20Poll20-20October20202020-20Topline20Results20-20For20Release20-2010-15-2020.pdf",
+		"DEM": 54,
+		"GOP": 39,
+		"IND": 0
+	},
 	{
 		"state": "Connecticut",
 		"pollster": "SurveyUSA",
