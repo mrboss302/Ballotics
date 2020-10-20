@@ -110,6 +110,37 @@
             "IND": 0
 		},
          {      
+    {      
+            "state": "Arizona",
+			"pollster": "Data Orbital",
+			"officeType": "President",
+			"dates": "OCT 16-18, 2020",
+			"url": "https://www.dataorbital.com/the-blog/breaking-in-arizona-presidential-and-us-races-still-tight-two-weeks-out-from-election-day",
+			"DEM": 47,
+            "GOP": 42,
+            "IND": 3
+		},
+    {      
+            "state": "Arizona",
+			"pollster": "SurveyMonkey",
+			"officeType": "President",
+			"dates": "SEP 21-OCT 18, 2020",
+			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+			"DEM": 53,
+            "GOP": 45,
+            "IND": 0
+		},
+    {      
+            "state": "Arizona",
+			"pollster": "YouGov",
+			"officeType": "President",
+			"dates": "OCT 13-16, 2020",
+			"url": "https://drive.google.com/file/d/1j9uJnxfT1x8spYhW2QmAq6OkSMd06wJG/view",
+			"DEM": 50,
+            "GOP": 47,
+            "IND": 0
+		},
+        {      
             "state": "Arizona",
 			"pollster": "Monmouth University",
 			"officeType": "President",
@@ -117,6 +148,26 @@
 			"url": "https://www.monmouth.edu/polling-institute/documents/monmouthpoll_az_101520.pdf/",
 			"DEM": 49,
             "GOP": 47,
+            "IND": 0
+		},
+            {      
+            "state": "Arizona",
+			"pollster": "OH Predictive Insights",
+			"officeType": "President",
+			"dates": "OCT 4-8, 2020",
+			"url": "https://f.hubspotusercontent40.net/hubfs/7453540/201005_AZPOP/PR_Arizona%20Public%20Opinion%20Pulse%20Toplines%20and%20Crosstabs%20(1).pdf?utm_medium=email&_hsmi=97443604&_hsenc=p2ANqtz-8YKdQGdcjhrShEJfsBc7JTFdlklT1RodoeG-nMmCGHWRDUFwNlhUCpC0Qyjh4DQGGGyPyUZaS7ikUHptXoT6cVk8q7kfO-4hRg1rAyzImJPZbVBeA&utm_content=97443604&utm_source=hs_email",
+			"DEM": 50,
+            "GOP": 47,
+            "IND": 0
+		},
+        {      
+            "state": "Arizona",
+			"pollster": "Ipsos",
+			"officeType": "President",
+			"dates": "OCT 7-14, 2020",
+			"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-10/topline_reuters_arizona_state_poll_w3_10_14_2020_1.pdf",
+			"DEM": 50,
+            "GOP": 46,
             "IND": 0
 		},
         {      
