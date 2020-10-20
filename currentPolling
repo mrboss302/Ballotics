@@ -210,16 +210,36 @@
 		"GOP": 36,
 		"IND": 0
 	},
-	{
-		"state": "Colorado",
-		"pollster": "Civiqs",
-		"officeType": "President",
-		"dates": "OCT 11-14, 2020",
-		"url": "https://civiqs.com/documents/Civiqs_DailyKos_CO_banner_book_2020_10_mk0d15.pdf",
-		"DEM": 54,
-		"GOP": 42,
-		"IND": 0
-	},
+        {      
+            "state": "California",
+             "pollster": "SurveyMonkey",
+			"officeType": "President",
+			"dates": "SEP 21-OCT 18, 2020",
+			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+			"DEM": 63,
+            "GOP": 36,
+            "IND": 0
+		},
+        {      
+            "state": "California",
+             "pollster": "SurveyMonkey",
+			"officeType": "President",
+			"dates": "SEP 21-OCT 18, 2020",
+			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+			"DEM": 63,
+            "GOP": 35,
+            "IND": 0
+		},
+        {      
+            "state": "California",
+             "pollster": "SurveyUSA",
+			"officeType": "President",
+			"dates": "SEP 26–28, 2020",
+			"url": "http://www.surveyusa.com/client/PollReport.aspx?g=d15fdb0d-701d-495c-a67f-e17bfcc3bf92",
+			"DEM": 59,
+            "GOP": 32,
+            "IND": 0
+		},
 	{
 		"state": "Connecticut",
 		"pollster": "SurveyUSA",
