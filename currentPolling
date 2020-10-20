@@ -1,4 +1,15 @@
-[{
+[
+{
+		"state": "National",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 3-16, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 54,
+		"GOP": 42,
+		"IND": 0
+	},
+	{
 		"state": "National",
 		"pollster": "USC Dornsife",
 		"officeType": "President",
