@@ -69,7 +69,7 @@
             "GOP": 57,
             "IND": 0
 		},
-		    {      
+    {      
             "state": "Alaska",
 			"pollster": "Siena College/The New York Times Upshot",
 			"officeType": "President",
@@ -78,6 +78,36 @@
 			"DEM": 39,
             "GOP": 45,
             "IND": 8
+		},
+        {      
+            "state": "Alaska",
+			"pollster": "Patinkin Research Strategies",
+			"officeType": "President",
+			"dates": "SEP 30-OCT 4, 2020",
+			"url": "https://twitter.com/Nat_Herz/status/1317942531120898048?s=20",
+			"DEM": 46,
+            "GOP": 49,
+            "IND": 0
+		},
+        {      
+            "state": "Alaska",
+			"pollster": "SurveyMonkey",
+			"officeType": "President",
+			"dates": "SEP 20-OCT 18, 2020",
+			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+			"DEM": 45,
+            "GOP": 52,
+            "IND": 0
+		},
+            {      
+            "state": "Alaska",
+			"pollster": "Alaska Survey Research",
+			"officeType": "President",
+			"dates": "SEP 25-OCT 4, 2020",
+			"url": "https://twitter.com/IvanMoore1/status/1313648391750971393?s=20",
+			"DEM": 46,
+            "GOP": 50,
+            "IND": 0
 		},
          {      
             "state": "Arizona",
