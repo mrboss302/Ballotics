@@ -29,24 +29,34 @@
             "GOP": 38,
             "IND": 5
 		},
-		{      
+	{      
             "state": "Alabama",
 			"pollster": "SurveyMonkey",
 			"officeType": "President",
 			"dates": "SEP 18-OCT 15, 2020",
 			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-			"DEM": 39,
-            "GOP": 59,
+			"DEM": 38,
+            "GOP": 60,
             "IND": 0
 		},
-        {      
+    {      
             "state": "Alabama",
 			"pollster": "SurveyMonkey",
 			"officeType": "President",
-			"dates": "SEP 15-OCT 12, 2020",
+			"dates": "SEP 18-OCT 15, 2020",
 			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-			"DEM": 39,
-            "GOP": 59,
+			"DEM": 41,
+            "GOP": 56,
+            "IND": 0
+		},
+    {      
+            "state": "Alabama",
+			"pollster": "Moore Information*",
+			"officeType": "President",
+			"dates": "OCT 11-14, 2020",
+			"url": "https://www.al.com/news/2020/10/tuberville-campaign-tells-potential-donors-hes-fallen-behind-jones.html",
+			"DEM": 38,
+            "GOP": 55,
             "IND": 0
 		},
         {      
