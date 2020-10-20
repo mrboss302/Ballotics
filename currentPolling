@@ -2,9 +2,29 @@
 
 	{
 		"state": "National",
+		"pollster": "IBD/TIPP",
+		"officeType": "President",
+		"dates": "OCT 15-19, 2020",
+		"url": "https://www.investors.com/news/trump-vs-biden-poll-race-tightens-like-2016-ibd-tipp-2020-presidential-poll/",
+		"DEM": 49,
+		"GOP": 46,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "IBD/TIPP",
+		"officeType": "President",
+		"dates": "OCT 15-19, 2020",
+		"url": "https://www.investors.com/news/trump-vs-biden-poll-race-tightens-like-2016-ibd-tipp-2020-presidential-poll/",
+		"DEM": 49,
+		"GOP": 46,
+		"IND": 4
+	},
+	{
+		"state": "National",
 		"pollster": "USC Dornsife",
 		"officeType": "President",
-		"dates": "OCT 3-16, 2020",
+		"dates": "OCT 6-19, 2020",
 		"url": "https://election.usc.edu/",
 		"DEM": 54,
 		"GOP": 42,
@@ -12,14 +32,185 @@
 	},
 	{
 		"state": "National",
-		"pollster": "IBD/TIPP",
+		"pollster": "USC Dornsife",
 		"officeType": "President",
-		"dates": "OCT 12-16, 2020",
-		"url": "https://www.investors.com/news/2020-election-poll-joe-biden-vs-trump-two-key-groups-ibd-tipp-presidential-poll/",
+		"dates": "OCT 6-19, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 54,
+		"GOP": 41,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 6-19, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 53,
+		"GOP": 41,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Redfield & Wilton Strategies",
+		"officeType": "President",
+		"dates": "OCT 17-18, 2020",
+		"url": "https://redfieldandwiltonstrategies.com/us-national-voting-intention-october-17-18/",
+		"DEM": 51,
+		"GOP": 40,
+		"IND": 2
+	},
+	{
+		"state": "National",
+		"pollster": "Redfield & Wilton Strategies",
+		"officeType": "President",
+		"dates": "OCT 17-18, 2020",
+		"url": "https://redfieldandwiltonstrategies.com/us-national-voting-intention-october-17-18/",
+		"DEM": 46,
+		"GOP": 36,
+		"IND": 3
+	},
+	{
+		"state": "National",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 16-18, 2020",
+		"url": "https://docs.cdn.yougov.com/77ukszgou2/20201019_yahoo_tabs.pdf",
+		"DEM": 48,
+		"GOP": 37,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Siena College/The New York Times Upshot",
+		"officeType": "President",
+		"dates": "OCT 15-18, 2020",
+		"url": "https://int.nyt.com/data/documenttools/us101520-crosstabs1/016bc5d8ae03038c/full.pdf",
 		"DEM": 50,
+		"GOP": 41,
+		"IND": 2
+	},
+	{
+		"state": "National",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 16-18, 2020",
+		"url": "https://docs.cdn.yougov.com/77ukszgou2/20201019_yahoo_tabs.pdf",
+		"DEM": 51,
+		"GOP": 40,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "OCT 16-18, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 53,
+		"GOP": 46,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "OCT 16-18, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 53,
+		"GOP": 45,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Morning Consult",
+		"officeType": "President",
+		"dates": "OCT 16-18, 2020",
+		"url": "https://morningconsult.com/2020-presidential-election-tracker/",
+		"DEM": 52,
 		"GOP": 43,
 		"IND": 0
 	},
+	{
+		"state": "National",
+		"pollster": "RMG Research",
+		"officeType": "President",
+		"dates": "OCT 15-17, 2020",
+		"url": "https://justthenews.com/politics-policy/polling/biden-continues-8-point-lead-stable-nationwide-polls",
+		"DEM": 51,
+		"GOP": 43,
+		"IND": 3
+	},
+	{
+		"state": "National",
+		"pollster": "Morning Consult",
+		"officeType": "President",
+		"dates": "OCT 13-15, 2020",
+		"url": "https://morningconsult.com/2020-presidential-election-tracker/",
+		"DEM": 52,
+		"GOP": 43,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Public Religion Research Institute",
+		"officeType": "President",
+		"dates": "OCT 9-12, 2020",
+		"url": "https://www.prri.org/press-release/ahead-of-2020-election-and-amid-multiple-crises-trump-and-biden-supporters-see-different-realities-and-futures-for-the-nation/",
+		"DEM": 56,
+		"GOP": 38,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Public Religion Research Institute",
+		"officeType": "President",
+		"dates": "OCT 9-12, 2020",
+		"url": "https://www.prri.org/press-release/ahead-of-2020-election-and-amid-multiple-crises-trump-and-biden-supporters-see-different-realities-and-futures-for-the-nation/",
+		"DEM": 54,
+		"GOP": 40,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Public Religion Research Institute",
+		"officeType": "President",
+		"dates": "OCT 9-12, 2020",
+		"url": "https://www.prri.org/press-release/ahead-of-2020-election-and-amid-multiple-crises-trump-and-biden-supporters-see-different-realities-and-futures-for-the-nation/",
+		"DEM": 56,
+		"GOP": 42,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Public Religion Research Institute",
+		"officeType": "President",
+		"dates": "OCT 9-12, 2020",
+		"url": "https://www.prri.org/press-release/ahead-of-2020-election-and-amid-multiple-crises-trump-and-biden-supporters-see-different-realities-and-futures-for-the-nation/",
+		"DEM": 57,
+		"GOP": 42,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Public Religion Research Institute",
+		"officeType": "President",
+		"dates": "OCT 9-12, 2020",
+		"url": "https://www.prri.org/press-release/ahead-of-2020-election-and-amid-multiple-crises-trump-and-biden-supporters-see-different-realities-and-futures-for-the-nation/",
+		"DEM": 55,
+		"GOP": 44,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Public Religion Research Institute",
+		"officeType": "President",
+		"dates": "OCT 9-12, 2020",
+		"url": "https://www.prri.org/press-release/ahead-of-2020-election-and-amid-multiple-crises-trump-and-biden-supporters-see-different-realities-and-futures-for-the-nation/",
+		"DEM": 57,
+		"GOP": 42,
+		"IND": 0
+	},
+
 	{
 		"state": "National",
 		"pollster": "Ipsos",
@@ -29,6 +220,47 @@
 		"DEM": 48,
 		"GOP": 38,
 		"IND": 5
+	},
+	{
+		"state": "National",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 13-15, 2020",
+		"url": "https://infogram.com/reutersipsos-poll-oct-16-1h7j4dqeg3em6nr",
+		"DEM": 44,
+		"GOP": 37,
+		"IND": 5
+	},
+
+	{
+		"state": "National",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 13-15, 2020",
+		"url": "https://infogram.com/reutersipsos-poll-oct-16-1h7j4dqeg3em6nr",
+		"DEM": 51,
+		"GOP": 41,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 13-15, 2020",
+		"url": "https://infogram.com/reutersipsos-poll-oct-16-1h7j4dqeg3em6nr",
+		"DEM": 49,
+		"GOP": 38,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 13-15, 2020",
+		"url": "https://infogram.com/reutersipsos-poll-oct-16-1h7j4dqeg3em6nr",
+		"DEM": 45,
+		"GOP": 36,
+		"IND": 0
 	},
 	{
 		"state": "Alabama",
