@@ -2,6 +2,56 @@
 
 	{
 		"state": "National",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 18-20, 2020",
+		"url": "https://docs.cdn.yougov.com/hxop5lpnlj/econTabReport.pdf",
+		"DEM": 52,
+		"GOP": 43,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 18-20, 2020",
+		"url": "https://docs.cdn.yougov.com/hxop5lpnlj/econTabReport.pdf",
+		"DEM": 47,
+		"GOP": 40,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "IBD/TIPP",
+		"officeType": "President",
+		"dates": "OCT 16-20, 2020",
+		"url": "https://www.investors.com/news/biden-vs-trump-poll-donald-trump-new-high-in-tight-race-ibd-tipp-presidential-poll/",
+		"DEM": 49,
+		"GOP": 47,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "IBD/TIPP",
+		"officeType": "President",
+		"dates": "OCT 16-20, 2020",
+		"url": "https://www.investors.com/news/biden-vs-trump-poll-donald-trump-new-high-in-tight-race-ibd-tipp-presidential-poll/",
+		"DEM": 49,
+		"GOP": 46,
+		"IND": 4
+	},
+	{
+		"state": "National",
+		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+		"officeType": "President",
+		"dates": "OCT 14-20, 2020",
+		"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct21",
+		"DEM": 49,
+		"GOP": 46,
+		"IND": 0
+	},
+	{
+		"state": "National",
 		"pollster": "USC Dornsife",
 		"officeType": "President",
 		"dates": "OCT 7-20, 2020",
