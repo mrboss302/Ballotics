@@ -2,6 +2,56 @@
 
 	{
 		"state": "National",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 7-20, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 53,
+		"GOP": 42,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 7-20, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 54,
+		"GOP": 41,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 7-20, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 52,
+		"GOP": 41,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 7-20, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 53,
+		"GOP": 43,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "SurveyUSA",
+		"officeType": "President",
+		"dates": "OCT 7-20, 2020",
+		"url": "http://www.surveyusa.com/client/PollReport.aspx?g=d92742eb-77f8-468c-815a-6823765a2ed8",
+		"DEM": 53,
+		"GOP": 42,
+		"IND": 0
+	},
+	{
+		"state": "National",
 		"pollster": "IBD/TIPP",
 		"officeType": "President",
 		"dates": "OCT 15-19, 2020",
@@ -600,6 +650,26 @@
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
 		"DEM": 86,
 		"GOP": 11,
+		"IND": 0
+	},
+	{
+		"state": "Florida",
+		"pollster": "Civiqs",
+		"officeType": "President",
+		"dates": "OCT 17-20, 2020",
+		"url": "https://civiqs.com/documents/Civiqs_DailyKos_FL_banner_book_2020_10_6s25ck.pdf",
+		"DEM": 51,
+		"GOP": 47,
+		"IND": 0
+	},
+	{
+		"state": "Florida",
+		"pollster": "Change Research",
+		"officeType": "President",
+		"dates": "OCT 16-19, 2020",
+		"url": "https://www.cnbc.com/2020/10/20/voters-want-senate-to-choose-coronavirus-stimulus-over-supreme-court.html",
+		"DEM": 50,
+		"GOP": 45,
 		"IND": 0
 	},
 	{
@@ -1204,6 +1274,16 @@
 	},
 	{
 		"state": "Minnesota",
+		"pollster": "Civiqs",
+		"officeType": "President",
+		"dates": "OCT 17-20, 2020",
+		"url": "https://civiqs.com/documents/Civiqs_DailyKos_MN_banner_book_2020_10_d859f5.pdf",
+		"DEM": 53,
+		"GOP": 43,
+		"IND": 0
+	},
+	{
+		"state": "Minnesota",
 		"pollster": "Change Research",
 		"officeType": "President",
 		"dates": "OCT 12-15, 2020",
@@ -1360,6 +1440,16 @@
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
 		"DEM": 47,
 		"GOP": 51,
+		"IND": 0
+	},
+	{
+		"state": "Nevada",
+		"pollster": "Civiqs",
+		"officeType": "President",
+		"dates": "OCT 17-20, 2020",
+		"url": "https://civiqs.com/documents/Civiqs_DailyKos_NV_banner_book_2020_10_r8597h.pdf",
+		"DEM": 52,
+		"GOP": 43,
 		"IND": 0
 	},
 	{
@@ -1791,6 +1881,16 @@
 		"DEM": 56,
 		"GOP": 39,
 		"IND": 0
+	},
+	{
+		"state": "Pennsylvania",
+		"pollster": "Suffolk University",
+		"officeType": "President",
+		"dates": "OCT 15-19, 2020",
+		"url": "https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/other-states/2020/10_21_2020_marginals_pdftxt.pdf?la=en&hash=F421FFD9FF52E261617E7EE0A253E6943EF64314",
+		"DEM": 49,
+		"GOP": 42,
+		"IND": 1
 	},
 	{
 		"state": "Pennsylvania",
