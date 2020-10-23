@@ -1,5 +1,55 @@
 [{
 		"state": "National",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 9-22, 2020",
+		"url": "https://e.infogram.com/7803c640-a1aa-406a-a7c4-bf9efee425d3?parent_url=https%3A%2F%2Fwww.mitchellrepublic.com%2Fnews%2Fgovernment-and-politics%2F6731229-Oct.-20-22-polling-shows-Biden-gains-in-most-areas&src=embed#async_embed",
+		"DEM": 51,
+		"GOP": 43,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 9-22, 2020",
+		"url": "https://e.infogram.com/7803c640-a1aa-406a-a7c4-bf9efee425d3?parent_url=https%3A%2F%2Fwww.mitchellrepublic.com%2Fnews%2Fgovernment-and-politics%2F6731229-Oct.-20-22-polling-shows-Biden-gains-in-most-areas&src=embed#async_embed",
+		"DEM": 50,
+		"GOP": 40,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 9-22, 2020",
+		"url": "https://e.infogram.com/7803c640-a1aa-406a-a7c4-bf9efee425d3?parent_url=https%3A%2F%2Fwww.mitchellrepublic.com%2Fnews%2Fgovernment-and-politics%2F6731229-Oct.-20-22-polling-shows-Biden-gains-in-most-areas&src=embed#async_embed",
+		"DEM": 45,
+		"GOP": 38,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 9-22, 2020",
+		"url": "https://e.infogram.com/7803c640-a1aa-406a-a7c4-bf9efee425d3?parent_url=https%3A%2F%2Fwww.mitchellrepublic.com%2Fnews%2Fgovernment-and-politics%2F6731229-Oct.-20-22-polling-shows-Biden-gains-in-most-areas&src=embed#async_embed",
+		"DEM": 45,
+		"GOP": 38,
+		"IND": 4
+	},
+	{
+		"state": "National",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 9-22, 2020",
+		"url": "https://e.infogram.com/7803c640-a1aa-406a-a7c4-bf9efee425d3?parent_url=https%3A%2F%2Fwww.mitchellrepublic.com%2Fnews%2Fgovernment-and-politics%2F6731229-Oct.-20-22-polling-shows-Biden-gains-in-most-areas&src=embed#async_embed",
+		"DEM": 49,
+		"GOP": 39,
+		"IND": 5
+	},
+	{
+		"state": "National",
 		"pollster": "USC Dornsife",
 		"officeType": "President",
 		"dates": "OCT 9-22, 2020",
@@ -42,7 +92,7 @@
 		"state": "National",
 		"pollster": "IBD/TIPP",
 		"officeType": "President",
-		"dates": "OCT 17-21, 2020",
+		"dates": "OCT 18-22, 2020",
 		"url": "https://www.investors.com/news/presidential-poll-joe-biden-lead-bounces-ibd-tipp-biden-vs-trump-poll/",
 		"DEM": 50,
 		"GOP": 46,
@@ -52,7 +102,7 @@
 		"state": "National",
 		"pollster": "IBD/TIPP",
 		"officeType": "President",
-		"dates": "OCT 17-21, 2020",
+		"dates": "OCT 18-22, 2020",
 		"url": "https://www.investors.com/news/presidential-poll-joe-biden-lead-bounces-ibd-tipp-biden-vs-trump-poll/",
 		"DEM": 50,
 		"GOP": 45,
@@ -264,9 +314,9 @@
 		"state": "National",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
-		"dates": "OCT 16-18, 2020",
+		"dates": "OCT 20-22, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 53,
+		"DEM": 52,
 		"GOP": 46,
 		"IND": 0
 	},
@@ -274,10 +324,10 @@
 		"state": "National",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
-		"dates": "OCT 16-18, 2020",
+		"dates": "OCT 20-22, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
 		"DEM": 53,
-		"GOP": 45,
+		"GOP": 44,
 		"IND": 0
 	},
 	{
@@ -457,7 +507,8 @@
 		"DEM": 45,
 		"GOP": 52,
 		"IND": 0
-	}, {
+	},
+	{
 		"state": "Alaska",
 		"pollster": "Alaska Survey Research",
 		"officeType": "President",
@@ -466,7 +517,48 @@
 		"DEM": 46,
 		"GOP": 50,
 		"IND": 0
-	}, {
+	},
+	{
+		"state": "Arizona",
+		"pollster": "Susquehanna Polling & Research Inc.",
+		"officeType": "President",
+		"dates": "OCT 19-22, 2020",
+		"url": "https://overland.amgreatness.com/app/uploads/2020/10/Toplines-ArizonaStatewide-CFAG-Oct2020.pdf",
+		"DEM": 46,
+		"GOP": 47,
+		"IND": 4
+	},
+	{
+		"state": "Arizona",
+		"pollster": "Basswood Research*",
+		"officeType": "President",
+		"dates": "OCT 19-22, 2020",
+		"url": "https://www.americanactionforum.org/insight/arizona-policy-priorities-and-the-election-october-update/",
+		"DEM": 48,
+		"GOP": 48,
+		"IND": 2
+	},
+	{
+		"state": "Arizona",
+		"pollster": "Basswood Research*",
+		"officeType": "President",
+		"dates": "OCT 19-22, 2020",
+		"url": "https://www.americanactionforum.org/insight/arizona-policy-priorities-and-the-election-october-update/",
+		"DEM": 48,
+		"GOP": 49,
+		"IND": 0
+	},
+	{
+		"state": "Arizona",
+		"pollster": "Basswood Research*",
+		"officeType": "President",
+		"dates": "OCT 19-22, 2020",
+		"url": "https://www.americanactionforum.org/insight/arizona-policy-priorities-and-the-election-october-update/",
+		"DEM": 47,
+		"GOP": 48,
+		"IND": 3
+	},
+	{
 		"state": "Arizona",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -475,7 +567,8 @@
 		"DEM": 47,
 		"GOP": 48,
 		"IND": 0
-	}, {
+	},
+	{
 		"state": "Arizona",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -799,7 +892,18 @@
 		"DEM": 49,
 		"GOP": 47,
 		"IND": 0
-	}, {
+	},
+	{
+		"state": "Florida",
+		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+		"officeType": "President",
+		"dates": "OCT 20-21, 2020",
+		"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/florida_trump_49_biden_46",
+		"DEM": 46,
+		"GOP": 50,
+		"IND": 0
+	},
+	{
 		"state": "Florida",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -808,7 +912,8 @@
 		"DEM": 52,
 		"GOP": 45,
 		"IND": 0
-	}, {
+	},
+	{
 		"state": "Florida",
 		"pollster": "Civiqs",
 		"officeType": "President",
@@ -943,7 +1048,38 @@
 		"DEM": 48,
 		"GOP": 46,
 		"IND": 2
-	}, {
+	},
+	{
+		"state": "Georgia",
+		"pollster": "Landmark Communications",
+		"officeType": "President",
+		"dates": "OCT 21, 2020",
+		"url": "https://www.wsbtv.com/news/local/atlanta/president-trump-widens-lead-over-joe-biden-latest-exclusive-channel-2-poll/7R643PFTRVDFHGNWHJFBVHKUCY/",
+		"DEM": 45,
+		"GOP": 49,
+		"IND": 0
+	},
+	{
+		"state": "Georgia",
+		"pollster": "Opinion Insight*",
+		"officeType": "President",
+		"dates": "OCT 12-15, 2020",
+		"url": "https://www.americanactionforum.org/insight/georgia-policy-priorities-and-the-election-october-update/",
+		"DEM": 49,
+		"GOP": 45,
+		"IND": 0
+	},
+	{
+		"state": "Georgia",
+		"pollster": "Opinion Insight*",
+		"officeType": "President",
+		"dates": "OCT 12-15, 2020",
+		"url": "https://www.americanactionforum.org/insight/georgia-policy-priorities-and-the-election-october-update/",
+		"DEM": 46,
+		"GOP": 46,
+		"IND": 0
+	},
+	{
 		"state": "Georgia",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -952,7 +1088,8 @@
 		"DEM": 48,
 		"GOP": 48,
 		"IND": 0
-	}, {
+	},
+	{
 		"state": "Georgia",
 		"pollster": "Garin-Hart-Yang Research Group*",
 		"officeType": "President",
@@ -1123,7 +1260,28 @@
 		"DEM": 42,
 		"GOP": 49,
 		"IND": 0
-	}, {
+	},
+	{
+		"state": "Iowa",
+		"pollster": "Opinion Insight*",
+		"officeType": "President",
+		"dates": "OCT 15-21, 2020",
+		"url": "https://www.americanactionforum.org/insight/iowa-policy-priorities-and-the-election-october-update/",
+		"DEM": 43,
+		"GOP": 50,
+		"IND": 5
+	},
+	{
+		"state": "Iowa",
+		"pollster": "Opinion Insight*",
+		"officeType": "President",
+		"dates": "OCT 15-21, 2020",
+		"url": "https://www.americanactionforum.org/insight/iowa-policy-priorities-and-the-election-october-update/",
+		"DEM": 47,
+		"GOP": 45,
+		"IND": 1
+	},
+	{
 		"state": "Iowa",
 		"pollster": "RMG Research",
 		"officeType": "President",
@@ -1132,7 +1290,8 @@
 		"DEM": 47,
 		"GOP": 47,
 		"IND": 0
-	}, {
+	},
+	{
 		"state": "Iowa",
 		"pollster": "Emerson College",
 		"officeType": "President",
@@ -1735,7 +1894,18 @@
 		"DEM": 45,
 		"GOP": 51,
 		"IND": 2
-	}, {
+	},
+	{
+		"state": "Montana",
+		"pollster": "Siena College/The New York Times Upshot",
+		"officeType": "President",
+		"dates": "OCT 18-20, 2020",
+		"url": "https://int.nyt.com/data/documenttools/mt101820-crosstabs/1bf52689f78606b4/full.pdf",
+		"DEM": 43,
+		"GOP": 49,
+		"IND": 3
+	},
+	{
 		"state": "Montana",
 		"pollster": "Strategies 360",
 		"officeType": "President",
@@ -1744,7 +1914,8 @@
 		"DEM": 43,
 		"GOP": 51,
 		"IND": 3
-	}, {
+	},
+	{
 		"state": "Montana",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2023,7 +2194,28 @@
 		"DEM": 61,
 		"GOP": 29,
 		"IND": 0
-	}, {
+	},
+	{
+		"state": "North Carolina",
+		"pollster": "Meredith College",
+		"officeType": "President",
+		"dates": "OCT 16-19, 2020",
+		"url": "https://www.meredith.edu/assets/images/content/Meredith_College_Poll_Report_October_2020.pdf",
+		"DEM": 48,
+		"GOP": 44,
+		"IND": 2
+	},
+	{
+		"state": "North Carolina",
+		"pollster": "Data for Progress*",
+		"officeType": "President",
+		"dates": "OCT 15-18, 2020",
+		"url": "https://filesforprogress.org/memos/2020%20Senate%20project/Week%205/Toplines/dfp_psp_nc_10.23.pdf",
+		"DEM": 48,
+		"GOP": 44,
+		"IND": 2
+	},
+	{
 		"state": "North Carolina",
 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
 		"officeType": "President",
@@ -2032,7 +2224,8 @@
 		"DEM": 48,
 		"GOP": 49,
 		"IND": 0
-	}, {
+	},
+	{
 		"state": "North Carolina",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -2771,7 +2964,18 @@
 		"DEM": 55,
 		"GOP": 34,
 		"IND": 0
-	}, {
+	},
+	{
+		"state": "West Virginia",
+		"pollster": "Triton Polling & Research",
+		"officeType": "President",
+		"dates": "OCT 19-20, 2020",
+		"url": "https://assets.documentcloud.org/documents/20398833/201021-triton-west-virgina-survey-topline-results.pdf",
+		"DEM": 38,
+		"GOP": 58,
+		"IND": 0
+	},
+	{
 		"state": "West Virginia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2780,7 +2984,8 @@
 		"DEM": 33,
 		"GOP": 67,
 		"IND": 0
-	}, {
+	},
+	{
 		"state": "West Virginia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
