@@ -1,5 +1,55 @@
 [{
 		"state": "National",
+		"pollster": "IBD/TIPP",
+		"officeType": "President",
+		"dates": "OCT 19-23, 2020",
+		"url": "https://www.investors.com/news/trump-vs-biden-poll-favors-democrat-after-debate-ibd-tipp-presidential-poll/",
+		"DEM": 51,
+		"GOP": 45,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "IBD/TIPP",
+		"officeType": "President",
+		"dates": "OCT 19-23, 2020",
+		"url": "https://www.investors.com/news/trump-vs-biden-poll-favors-democrat-after-debate-ibd-tipp-presidential-poll/",
+		"DEM": 51,
+		"GOP": 44,
+		"IND": 3
+	},
+	{
+		"state": "National",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 10-23, 2020",
+		"url": "https://www.investors.com/news/trump-vs-biden-poll-favors-democrat-after-debate-ibd-tipp-presidential-poll/",
+		"DEM": 53,
+		"GOP": 42,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 10-23, 2020",
+		"url": "https://www.investors.com/news/trump-vs-biden-poll-favors-democrat-after-debate-ibd-tipp-presidential-poll/",
+		"DEM": 54,
+		"GOP": 42,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 10-23, 2020",
+		"url": "https://www.investors.com/news/trump-vs-biden-poll-favors-democrat-after-debate-ibd-tipp-presidential-poll/",
+		"DEM": 52,
+		"GOP": 42,
+		"IND": 0
+	},
+	{
+		"state": "National",
 		"pollster": "Ipsos",
 		"officeType": "President",
 		"dates": "OCT 9-22, 2020",
@@ -47,36 +97,6 @@
 		"DEM": 49,
 		"GOP": 39,
 		"IND": 5
-	},
-	{
-		"state": "National",
-		"pollster": "USC Dornsife",
-		"officeType": "President",
-		"dates": "OCT 9-22, 2020",
-		"url": "https://election.usc.edu/",
-		"DEM": 54,
-		"GOP": 42,
-		"IND": 0
-	},
-	{
-		"state": "National",
-		"pollster": "USC Dornsife",
-		"officeType": "President",
-		"dates": "OCT 9-22, 2020",
-		"url": "https://election.usc.edu/",
-		"DEM": 54,
-		"GOP": 42,
-		"IND": 0
-	},
-	{
-		"state": "National",
-		"pollster": "USC Dornsife",
-		"officeType": "President",
-		"dates": "OCT 9-22, 2020",
-		"url": "https://election.usc.edu/",
-		"DEM": 54,
-		"GOP": 42,
-		"IND": 0
 	},
 	{
 		"state": "National",
