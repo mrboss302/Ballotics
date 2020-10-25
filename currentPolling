@@ -541,6 +541,16 @@
 	},
     {
 		"state": "Arizona",
+		"pollster": "Trafalgar Group",
+		"officeType": "President",
+		"dates": "OCT 24, 2020",
+		"url": "https://drive.google.com/file/d/1yydRu7bsuh8gdVPHqYdwtoIqVohoVpaz/view",
+		"DEM": 47,
+		"GOP": 50,
+		"IND": 2
+	},
+    {
+		"state": "Arizona",
 		"pollster": "Susquehanna Polling & Research Inc.",
 		"officeType": "President",
 		"dates": "OCT 19-22, 2020",
@@ -886,7 +896,8 @@
 		"DEM": 54,
 		"GOP": 33,
 		"IND": 3
-	}, {
+	}, 
+    {
 		"state": "District of Columbia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -895,7 +906,8 @@
 		"DEM": 88,
 		"GOP": 10,
 		"IND": 0
-	}, {
+	}, 
+    {
 		"state": "District of Columbia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -904,7 +916,18 @@
 		"DEM": 86,
 		"GOP": 11,
 		"IND": 0
-	}, {
+	}, 
+    {
+		"state": "Florida",
+		"pollster": "Trafalgar Group",
+		"officeType": "President",
+		"dates": "OCT 24, 2020",
+		"url": "https://drive.google.com/file/d/15JN1pOklxLobpaH075CUTzSlrCN5Vyf4/view",
+		"DEM": 47,
+		"GOP": 49,
+		"IND": 2
+	}, 
+    {
 		"state": "Florida",
 		"pollster": "St. Pete Polls",
 		"officeType": "President",
@@ -914,7 +937,7 @@
 		"GOP": 47,
 		"IND": 0
 	}, 
-        {
+    {
 		"state": "Florida",
 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
 		"officeType": "President",
@@ -1591,7 +1614,8 @@
 		"DEM": 61,
 		"GOP": 30,
 		"IND": 4
-	}, {
+	}, 
+    {
 		"state": "Massachusetts",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1600,7 +1624,8 @@
 		"DEM": 70,
 		"GOP": 28,
 		"IND": 0
-	}, {
+	}, 
+    {
 		"state": "Massachusetts",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1609,7 +1634,48 @@
 		"DEM": 69,
 		"GOP": 28,
 		"IND": 0
-	}, {
+	}, 
+    {
+		"state": "Michigan",
+		"pollster": "Trafalgar Group",
+		"officeType": "President",
+		"dates": "OCT 24, 2020",
+		"url": "https://drive.google.com/file/d/18MUIRqbzKFcDf2n3q1SmpEd-Kz3m7cXd/view",
+		"DEM": 47,
+		"GOP": 49,
+		"IND": 2
+	},
+    {
+		"state": "Michigan",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 11-24, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 53,
+		"GOP": 43,
+		"IND": 0
+	},
+    {
+		"state": "Michigan",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 11-24, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 54,
+		"GOP": 42,
+		"IND": 0
+	}, 
+    {
+		"state": "Michigan",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 11-24, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 52,
+		"GOP": 42,
+		"IND": 0
+	}, 
+    {
 		"state": "Michigan",
 		"pollster": "EPIC-MRA",
 		"officeType": "President",
@@ -1618,7 +1684,8 @@
 		"DEM": 48,
 		"GOP": 39,
 		"IND": 0
-	}, {
+	}, 
+    {
 		"state": "Michigan",
 		"pollster": "Public Policy Polling*",
 		"officeType": "President",
@@ -2517,7 +2584,18 @@
 		"DEM": 56,
 		"GOP": 39,
 		"IND": 0
-	}, {
+	}, 
+    {
+		"state": "Pennsylvania",
+		"pollster": "Gravis Marketing",
+		"officeType": "President",
+		"dates": "OCT 23, 2020",
+		"url": "https://gravismarketing.com/2020-pa-poll-results/",
+		"DEM": 51,
+		"GOP": 44,
+		"IND": 0
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "Muhlenberg College",
 		"officeType": "President",
@@ -2526,7 +2604,8 @@
 		"DEM": 51,
 		"GOP": 44,
 		"IND": 0
-	}, {
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "Public Policy Polling*",
 		"officeType": "President",
@@ -2781,7 +2860,18 @@
 		"DEM": 42,
 		"GOP": 54,
 		"IND": 0
-	}, {
+	},
+    {
+		"state": "South Dakota",
+		"pollster": "Mason-Dixon Polling & Strategy",
+		"officeType": "President",
+		"dates": "OCT 19-21, 2020",
+		"url": "https://www.argusleader.com/story/news/politics/elections/2020/10/25/argus-leader-kelo-poll-president-trump-joe-biden-south-dakota/6013387002/",
+		"DEM": 40,
+		"GOP": 51,
+		"IND": 0
+	}, 
+    {
 		"state": "South Dakota",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2790,7 +2880,8 @@
 		"DEM": 45,
 		"GOP": 53,
 		"IND": 0
-	}, {
+	}, 
+    {
 		"state": "South Dakota",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2817,7 +2908,28 @@
 		"DEM": 43,
 		"GOP": 55,
 		"IND": 0
-	}, {
+	},
+    {
+		"state": "Texas",
+		"pollster": "University of Texas at Tyler",
+		"officeType": "President",
+		"dates": "OCT 13-20, 2020",
+		"url": "https://www.uttyler.edu/politicalscience/files/oct2020-lv-codebook-dmn-uttyler-poll.pdf",
+		"DEM": 48,
+		"GOP": 45,
+		"IND": 3
+	}, 
+    {
+		"state": "Texas",
+		"pollster": "University of Texas at Tyler",
+		"officeType": "President",
+		"dates": "OCT 13-20, 2020",
+		"url": "https://www.uttyler.edu/politicalscience/files/oct2020-rv-codebook-dmn-uttyler-poll.pdf",
+		"DEM": 46,
+		"GOP": 44,
+		"IND": 3
+	}, 
+    {
 		"state": "Texas",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -2826,7 +2938,8 @@
 		"DEM": 48,
 		"GOP": 47,
 		"IND": 0
-	}, {
+	}, 
+    {
 		"state": "Texas",
 		"pollster": "Quinnipiac University",
 		"officeType": "President",
@@ -3046,7 +3159,18 @@
 		"DEM": 39,
 		"GOP": 53,
 		"IND": 5
-	}, {
+	},
+    {
+		"state": "Wisconsin",
+		"pollster": "Gravis Marketing",
+		"officeType": "President",
+		"dates": "OCT 23, 2020",
+		"url": "https://gravismarketing.com/wp-content/uploads/2020/10/Wisconsin-October-23-2020.pdf",
+		"DEM": 54,
+		"GOP": 43,
+		"IND": 0
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "RMG Research",
 		"officeType": "President",
@@ -3055,7 +3179,8 @@
 		"DEM": 50,
 		"GOP": 44,
 		"IND": 0
-	}, {
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Morning Consult",
 		"officeType": "President",
