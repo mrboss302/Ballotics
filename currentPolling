@@ -1,54 +1,105 @@
-[{
-		"state": "National",
-		"pollster": "IBD/TIPP",
-		"officeType": "President",
-		"dates": "OCT 20-24, 2020",
-		"url": "https://www.investors.com/news/trump-vs-biden-poll-joe-biden-stretches-lead-no-debate-shift-ibd-tipp-presidential-poll/",
-		"DEM": 51,
-		"GOP": 45,
-		"IND": 0
-	},
-	{
-		"state": "National",
-		"pollster": "IBD/TIPP",
-		"officeType": "President",
-		"dates": "OCT 20-24, 2020",
-		"url": "https://www.investors.com/news/trump-vs-biden-poll-joe-biden-stretches-lead-no-debate-shift-ibd-tipp-presidential-poll/",
-		"DEM": 52,
-		"GOP": 44,
-		"IND": 3
-	},
-	{
-		"state": "National",
-		"pollster": "USC Dornsife",
-		"officeType": "President",
-		"dates": "OCT 11-24, 2020",
-		"url": "https://election.usc.edu/",
-		"DEM": 53,
-		"GOP": 43,
-		"IND": 0
-	},
-	{
-		"state": "National",
-		"pollster": "USC Dornsife",
-		"officeType": "President",
-		"dates": "OCT 11-24, 2020",
-		"url": "https://election.usc.edu/",
-		"DEM": 54,
-		"GOP": 42,
-		"IND": 0
-	},
-	{
-		"state": "National",
-		"pollster": "USC Dornsife",
-		"officeType": "President",
-		"dates": "OCT 11-24, 2020",
-		"url": "https://election.usc.edu/",
-		"DEM": 52,
-		"GOP": 42,
-		"IND": 0
-	},
-	{
+[
+        {      
+            "state": "National",
+			"pollster": "Morning Consult",
+			"officeType": "President",
+			"dates": "OCT 23-25, 2020",
+			"url": "https://morningconsult.com/2020-presidential-election-tracker/",
+			"DEM": 52,
+            "GOP": 43,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "Rasmussen Reports/Pulse Opinion Research",
+			"officeType": "President",
+			"dates": "OCT 21-25, 2020",
+			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct26",
+			"DEM": 47,
+            "GOP": 48,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "IBD/TIPP",
+			"officeType": "President",
+			"dates": "OCT 21-25, 2020",
+			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct26",
+			"DEM": 52,
+            "GOP": 45,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "IBD/TIPP",
+			"officeType": "President",
+			"dates": "OCT 21-25, 2020",
+			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct26",
+			"DEM": 52,
+            "GOP": 45,
+            "IND": 2
+		},
+        {      
+            "state": "National",
+			"pollster": "USC Dornsife",
+			"officeType": "President",
+			"dates": "OCT 21-25, 2020",
+			"url": "https://election.usc.edu/",
+			"DEM": 54,
+            "GOP": 42,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "USC Dornsife",
+			"officeType": "President",
+			"dates": "OCT 21-25, 2020",
+			"url": "https://election.usc.edu/",
+			"DEM": 54,
+            "GOP": 42,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "USC Dornsife",
+			"officeType": "President",
+			"dates": "OCT 21-25, 2020",
+			"url": "https://election.usc.edu/",
+			"DEM": 53,
+            "GOP": 42,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "Morning Consult",
+			"officeType": "President",
+			"dates": "OCT 20-22, 2020",
+			"url": "https://morningconsult.com/2020-presidential-election-tracker/",
+			"DEM": 52,
+            "GOP": 43,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "Public First",
+			"officeType": "President",
+			"dates": "OCT 6-12, 2020",
+			"url": "http://www.publicfirst.co.uk/wp-content/uploads/2020/10/Public-First-US-Foreign-Policy-Poll.pdf",
+			"DEM": 47,
+            "GOP": 34,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "Public First",
+			"officeType": "President",
+			"dates": "OCT 5-8, 2020",
+			"url": "https://drive.google.com/file/d/11vvcdbX9PfqFhVKxX3eLJAhVr71Y4QFX/view",
+			"DEM": 55,
+            "GOP": 41,
+            "IND": 0
+		},
+    {
 		"state": "National",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -68,7 +119,7 @@
 		"GOP": 45,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -78,7 +129,7 @@
 		"GOP": 43,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -88,7 +139,7 @@
 		"GOP": 40,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -98,7 +149,7 @@
 		"GOP": 38,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -108,7 +159,7 @@
 		"GOP": 38,
 		"IND": 4
 	},
-	{
+        {
 		"state": "National",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -118,7 +169,7 @@
 		"GOP": 39,
 		"IND": 5
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Data for Progress",
 		"officeType": "President",
@@ -128,7 +179,7 @@
 		"GOP": 44,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Data for Progress",
 		"officeType": "President",
@@ -138,7 +189,7 @@
 		"GOP": 43,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Data for Progress",
 		"officeType": "President",
@@ -148,7 +199,7 @@
 		"GOP": 44,
 		"IND": 0
 	},
-	{
+        {
 		"state": "National",
 		"pollster": "Echelon Insights",
 		"officeType": "President",
@@ -158,7 +209,7 @@
 		"GOP": 44,
 		"IND": 2
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Echelon Insights",
 		"officeType": "President",
@@ -218,7 +269,7 @@
 		"GOP": 40,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -318,7 +369,7 @@
 		"GOP": 42,
 		"IND": 0
 	},
-	{
+        {
 		"state": "National",
 		"pollster": "IBD/TIPP",
 		"officeType": "President",
@@ -328,7 +379,7 @@
 		"GOP": 46,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "IBD/TIPP",
 		"officeType": "President",
@@ -458,7 +509,7 @@
 		"GOP": 40,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -468,7 +519,7 @@
 		"GOP": 45,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -528,7 +579,7 @@
 		"GOP": 36,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Global Strategy Group/GBAO",
 		"officeType": "President",
@@ -538,7 +589,7 @@
 		"GOP": 43,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "AP-NORC",
 		"officeType": "President",
@@ -548,7 +599,7 @@
 		"GOP": 36,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Kaiser Family Foundation",
 		"officeType": "President",
@@ -558,7 +609,7 @@
 		"GOP": 38,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Kaiser Family Foundation",
 		"officeType": "President",
@@ -568,7 +619,7 @@
 		"GOP": 38,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -588,7 +639,7 @@
 		"GOP": 44,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -598,7 +649,7 @@
 		"GOP": 43,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "IBD/TIPP",
 		"officeType": "President",
@@ -608,7 +659,7 @@
 		"GOP": 42,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "IBD/TIPP",
 		"officeType": "President",
@@ -618,7 +669,7 @@
 		"GOP": 42,
 		"IND": 3
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Whitman Insight Strategies",
 		"officeType": "President",
@@ -628,7 +679,7 @@
 		"GOP": 42,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Marist College",
 		"officeType": "President",
@@ -638,7 +689,7 @@
 		"GOP": 42,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "Marist College",
 		"officeType": "President",
@@ -648,7 +699,7 @@
 		"GOP": 43,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "University of Massachusetts Lowell",
 		"officeType": "President",
@@ -658,7 +709,7 @@
 		"GOP": 41,
 		"IND": 0
 	},
-	{
+    {
 		"state": "National",
 		"pollster": "University of Massachusetts Lowell",
 		"officeType": "President",
@@ -668,7 +719,7 @@
 		"GOP": 43,
 		"IND": 2
 	},
-	{
+    {
 		"state": "Alabama",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -728,7 +779,7 @@
 		"GOP": 57,
 		"IND": 0
 	},
-	{
+    	{
 		"state": "Alaska",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -776,8 +827,8 @@
 		"DEM": 46,
 		"GOP": 49,
 		"IND": 0
-	},
-	{
+	},  
+    {
 		"state": "Alaska",
 		"pollster": "Alaska Survey Research",
 		"officeType": "President",
@@ -787,7 +838,7 @@
 		"GOP": 50,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Arizona",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -796,8 +847,8 @@
 		"DEM": 53,
 		"GOP": 45,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Arizona",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -807,7 +858,7 @@
 		"GOP": 44,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Arizona",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -816,8 +867,8 @@
 		"DEM": 53,
 		"GOP": 46,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Arizona",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -826,8 +877,8 @@
 		"DEM": 54,
 		"GOP": 44,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Arizona",
 		"pollster": "Susquehanna Polling & Research Inc.",
 		"officeType": "President",
@@ -836,8 +887,8 @@
 		"DEM": 46,
 		"GOP": 47,
 		"IND": 4
-	},
-	{
+	}, 
+    {
 		"state": "Arizona",
 		"pollster": "Basswood Research*",
 		"officeType": "President",
@@ -847,7 +898,7 @@
 		"GOP": 48,
 		"IND": 2
 	},
-	{
+    {
 		"state": "Arizona",
 		"pollster": "Basswood Research*",
 		"officeType": "President",
@@ -857,7 +908,7 @@
 		"GOP": 49,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Arizona",
 		"pollster": "Basswood Research*",
 		"officeType": "President",
@@ -867,7 +918,7 @@
 		"GOP": 48,
 		"IND": 3
 	},
-	{
+    {
 		"state": "Arizona",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -876,8 +927,8 @@
 		"DEM": 47,
 		"GOP": 48,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Arizona",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -985,8 +1036,8 @@
 		"DEM": 50,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Arizona",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -995,8 +1046,8 @@
 		"DEM": 50,
 		"GOP": 46,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Arkansas",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1005,8 +1056,8 @@
 		"DEM": 39,
 		"GOP": 59,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Arkansas",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1015,8 +1066,8 @@
 		"DEM": 41,
 		"GOP": 57,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Arkansas",
 		"pollster": "Hendrix College",
 		"officeType": "President",
@@ -1178,8 +1229,8 @@
 		"DEM": 54,
 		"GOP": 33,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "District of Columbia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1188,8 +1239,8 @@
 		"DEM": 89,
 		"GOP": 10,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "District of Columbia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1199,7 +1250,17 @@
 		"GOP": 11,
 		"IND": 0
 	},
-	{
+    {
+		"state": "Florida",
+		"pollster": "RMG Research",
+		"officeType": "President",
+		"dates": "OCT 20-22, 2020",
+		"url": "http://politicaliq.com/2020/10/26/florida-biden-50-trump-48/?utm_source=rss&utm_medium=rss&utm_campaign=florida-biden-50-trump-48",
+		"DEM": 50,
+		"GOP": 48,
+		"IND": 0
+	},
+    {
 		"state": "Florida",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1208,8 +1269,8 @@
 		"DEM": 48,
 		"GOP": 49,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Florida",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1219,7 +1280,7 @@
 		"GOP": 48,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Florida",
 		"pollster": "YouGov",
 		"officeType": "President",
@@ -1228,8 +1289,8 @@
 		"DEM": 50,
 		"GOP": 48,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Florida",
 		"pollster": "St. Pete Polls",
 		"officeType": "President",
@@ -1238,8 +1299,8 @@
 		"DEM": 49,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Florida",
 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
 		"officeType": "President",
@@ -1248,8 +1309,8 @@
 		"DEM": 46,
 		"GOP": 50,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Florida",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -1258,8 +1319,8 @@
 		"DEM": 52,
 		"GOP": 45,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Florida",
 		"pollster": "Civiqs",
 		"officeType": "President",
@@ -1385,8 +1446,8 @@
 		"DEM": 46,
 		"GOP": 48,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "Florida",
 		"pollster": "RMG Research",
 		"officeType": "President",
@@ -1396,7 +1457,17 @@
 		"GOP": 46,
 		"IND": 2
 	},
-	{
+    {
+		"state": "Georgia",
+		"pollster": "University of Georgia",
+		"officeType": "President",
+		"dates": "OCT 14-23, 2020",
+		"url": "https://www.ajc.com/politics/ajc-poll-shows-deadlocked-races-for-president-senate-seats-in-georgia/4MTSM6V3CFALJFQCYWF3X2TAHA/",
+		"DEM": 47,
+		"GOP": 46,
+		"IND": 3
+	},
+    {
 		"state": "Georgia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1406,7 +1477,7 @@
 		"GOP": 49,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Georgia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1416,7 +1487,7 @@
 		"GOP": 46,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Georgia",
 		"pollster": "YouGov",
 		"officeType": "President",
@@ -1426,7 +1497,7 @@
 		"GOP": 49,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Georgia",
 		"pollster": "Landmark Communications",
 		"officeType": "President",
@@ -1436,7 +1507,7 @@
 		"GOP": 49,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Georgia",
 		"pollster": "Opinion Insight*",
 		"officeType": "President",
@@ -1446,7 +1517,7 @@
 		"GOP": 45,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Georgia",
 		"pollster": "Opinion Insight*",
 		"officeType": "President",
@@ -1456,7 +1527,7 @@
 		"GOP": 46,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Georgia",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -1465,8 +1536,8 @@
 		"DEM": 48,
 		"GOP": 48,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Georgia",
 		"pollster": "Garin-Hart-Yang Research Group*",
 		"officeType": "President",
@@ -1610,8 +1681,8 @@
 		"DEM": 58,
 		"GOP": 39,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Indiana",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1620,8 +1691,8 @@
 		"DEM": 43,
 		"GOP": 54,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Indiana",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1630,8 +1701,8 @@
 		"DEM": 44,
 		"GOP": 53,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Indiana",
 		"pollster": "SurveyUSA",
 		"officeType": "President",
@@ -1641,7 +1712,7 @@
 		"GOP": 49,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Iowa",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1650,8 +1721,8 @@
 		"DEM": 49,
 		"GOP": 49,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Iowa",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1661,7 +1732,7 @@
 		"GOP": 48,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Iowa",
 		"pollster": "Opinion Insight*",
 		"officeType": "President",
@@ -1670,8 +1741,8 @@
 		"DEM": 43,
 		"GOP": 50,
 		"IND": 5
-	},
-	{
+	}, 
+    {
 		"state": "Iowa",
 		"pollster": "Opinion Insight*",
 		"officeType": "President",
@@ -1681,7 +1752,7 @@
 		"GOP": 45,
 		"IND": 1
 	},
-	{
+    {
 		"state": "Iowa",
 		"pollster": "RMG Research",
 		"officeType": "President",
@@ -1690,8 +1761,8 @@
 		"DEM": 47,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Iowa",
 		"pollster": "Emerson College",
 		"officeType": "President",
@@ -1799,8 +1870,8 @@
 		"DEM": 48,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Iowa",
 		"pollster": "Quinnipiac University",
 		"officeType": "President",
@@ -1809,8 +1880,8 @@
 		"DEM": 50,
 		"GOP": 45,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Kansas",
 		"pollster": "Siena College/The New York Times Upshot",
 		"officeType": "President",
@@ -1819,8 +1890,8 @@
 		"DEM": 41,
 		"GOP": 48,
 		"IND": 4
-	},
-	{
+	}, 
+    {
 		"state": "Kansas",
 		"pollster": "Public Policy Polling*",
 		"officeType": "President",
@@ -1829,8 +1900,8 @@
 		"DEM": 42,
 		"GOP": 54,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Kansas",
 		"pollster": "co/efficient*",
 		"officeType": "President",
@@ -1839,8 +1910,8 @@
 		"DEM": 39,
 		"GOP": 56,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "Kansas",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1849,8 +1920,8 @@
 		"DEM": 47,
 		"GOP": 52,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Kansas",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1859,8 +1930,8 @@
 		"DEM": 47,
 		"GOP": 51,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Kansas",
 		"pollster": "Civiqs",
 		"officeType": "President",
@@ -1869,8 +1940,8 @@
 		"DEM": 42,
 		"GOP": 52,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Kentucky",
 		"pollster": "Mason-Dixon Polling & Strategy",
 		"officeType": "President",
@@ -1879,8 +1950,8 @@
 		"DEM": 39,
 		"GOP": 56,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Kentucky",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1889,8 +1960,8 @@
 		"DEM": 42,
 		"GOP": 57,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Kentucky",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1917,8 +1988,8 @@
 		"DEM": 42,
 		"GOP": 55,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Louisiana",
 		"pollster": "Trafalgar Group",
 		"officeType": "President",
@@ -1927,8 +1998,8 @@
 		"DEM": 36,
 		"GOP": 54,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "Maine",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1937,8 +2008,8 @@
 		"DEM": 56,
 		"GOP": 42,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Maine",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1947,8 +2018,8 @@
 		"DEM": 56,
 		"GOP": 43,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Maine",
 		"pollster": "Pan Atlantic Research",
 		"officeType": "President",
@@ -1957,8 +2028,8 @@
 		"DEM": 50,
 		"GOP": 40,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Maryland",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1985,8 +2056,8 @@
 		"DEM": 61,
 		"GOP": 30,
 		"IND": 4
-	},
-	{
+	}, 
+    {
 		"state": "Massachusetts",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -1995,8 +2066,8 @@
 		"DEM": 70,
 		"GOP": 28,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Massachusetts",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2005,8 +2076,28 @@
 		"DEM": 69,
 		"GOP": 28,
 		"IND": 0
+	}, 
+    {
+		"state": "Michigan",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 13-21, 2020",
+		"url": "https://drive.google.com/file/d/1h5XfJ3zzvxhi4jpT3ndy1IjpKbgC8Lws/view",
+		"DEM": 51,
+		"GOP": 42,
+		"IND": 0
 	},
-	{
+    {
+		"state": "Michigan",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 13-21, 2020",
+		"url": "https://drive.google.com/file/d/1h5XfJ3zzvxhi4jpT3ndy1IjpKbgC8Lws/view",
+		"DEM": 52,
+		"GOP": 42,
+		"IND": 0
+	},
+    {
 		"state": "Michigan",
 		"pollster": "Gravis Marketing",
 		"officeType": "President",
@@ -2016,7 +2107,7 @@
 		"GOP": 42,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Michigan",
 		"pollster": "USC Dornsife",
 		"officeType": "President",
@@ -2026,7 +2117,7 @@
 		"GOP": 43,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Michigan",
 		"pollster": "EPIC-MRA",
 		"officeType": "President",
@@ -2036,7 +2127,7 @@
 		"GOP": 39,
 		"IND": 0
 	},
-	{
+    {
 		"state": "Michigan",
 		"pollster": "Zia Poll",
 		"officeType": "President",
@@ -2045,8 +2136,8 @@
 		"DEM": 45,
 		"GOP": 49,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Michigan",
 		"pollster": "Opinion Insight*",
 		"officeType": "President",
@@ -2055,8 +2146,8 @@
 		"DEM": 51,
 		"GOP": 42,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Michigan",
 		"pollster": "Public Policy Polling*",
 		"officeType": "President",
@@ -2290,8 +2381,8 @@
 		"DEM": 55,
 		"GOP": 43,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Minnesota",
 		"pollster": "David Binder Research*",
 		"officeType": "President",
@@ -2300,8 +2391,8 @@
 		"DEM": 52,
 		"GOP": 41,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Minnesota",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -2310,8 +2401,8 @@
 		"DEM": 50,
 		"GOP": 44,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Mississippi",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2320,8 +2411,8 @@
 		"DEM": 37,
 		"GOP": 62,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Mississippi",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2330,8 +2421,8 @@
 		"DEM": 43,
 		"GOP": 55,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Missouri",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2340,8 +2431,8 @@
 		"DEM": 45,
 		"GOP": 53,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Missouri",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2350,8 +2441,8 @@
 		"DEM": 46,
 		"GOP": 52,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Missouri",
 		"pollster": "Remington Research Group",
 		"officeType": "President",
@@ -2360,8 +2451,8 @@
 		"DEM": 45,
 		"GOP": 51,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "Montana",
 		"pollster": "RMG Research",
 		"officeType": "President",
@@ -2370,8 +2461,8 @@
 		"DEM": 46,
 		"GOP": 50,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Montana",
 		"pollster": "Siena College/The New York Times Upshot",
 		"officeType": "President",
@@ -2380,8 +2471,8 @@
 		"DEM": 43,
 		"GOP": 49,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "Montana",
 		"pollster": "Strategies 360",
 		"officeType": "President",
@@ -2390,8 +2481,8 @@
 		"DEM": 43,
 		"GOP": 51,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "Montana",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2400,8 +2491,8 @@
 		"DEM": 46,
 		"GOP": 52,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Montana",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2410,8 +2501,8 @@
 		"DEM": 46,
 		"GOP": 51,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Montana",
 		"pollster": "Montana State University Bozeman",
 		"officeType": "President",
@@ -2420,8 +2511,8 @@
 		"DEM": 44,
 		"GOP": 51,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Montana",
 		"pollster": "Public Policy Polling",
 		"officeType": "President",
@@ -2430,8 +2521,8 @@
 		"DEM": 46,
 		"GOP": 52,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Montana",
 		"pollster": "Emerson College",
 		"officeType": "President",
@@ -2440,8 +2531,8 @@
 		"DEM": 44,
 		"GOP": 56,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Nebraska",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2450,8 +2541,8 @@
 		"DEM": 46,
 		"GOP": 52,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Nebraska",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2460,8 +2551,8 @@
 		"DEM": 46,
 		"GOP": 51,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Nevada",
 		"pollster": "Civiqs",
 		"officeType": "President",
@@ -2470,8 +2561,8 @@
 		"DEM": 52,
 		"GOP": 43,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Nevada",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2480,8 +2571,8 @@
 		"DEM": 50,
 		"GOP": 49,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Nevada",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2499,8 +2590,8 @@
 		"DEM": 44,
 		"GOP": 42,
 		"IND": 4
-	},
-	{
+	}, 
+    {
 		"state": "Nevada",
 		"pollster": "YouGov",
 		"officeType": "President",
@@ -2509,8 +2600,8 @@
 		"DEM": 52,
 		"GOP": 46,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Nevada",
 		"pollster": "Siena College/The New York Times Upshot",
 		"officeType": "President",
@@ -2519,8 +2610,8 @@
 		"DEM": 48,
 		"GOP": 42,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "New Hampshire",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2529,8 +2620,8 @@
 		"DEM": 55,
 		"GOP": 43,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New Hampshire",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2539,8 +2630,8 @@
 		"DEM": 56,
 		"GOP": 43,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New Hampshire",
 		"pollster": "Suffolk University",
 		"officeType": "President",
@@ -2549,8 +2640,8 @@
 		"DEM": 51,
 		"GOP": 41,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "New Hampshire",
 		"pollster": "University of New Hampshire",
 		"officeType": "President",
@@ -2559,8 +2650,8 @@
 		"DEM": 55,
 		"GOP": 43,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New Hampshire",
 		"pollster": "Saint Anselm College",
 		"officeType": "President",
@@ -2569,8 +2660,8 @@
 		"DEM": 53,
 		"GOP": 41,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New Jersey",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2579,8 +2670,8 @@
 		"DEM": 60,
 		"GOP": 37,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New Jersey",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2589,8 +2680,8 @@
 		"DEM": 60,
 		"GOP": 36,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New Jersey",
 		"pollster": "DKC Analytics",
 		"officeType": "President",
@@ -2599,8 +2690,8 @@
 		"DEM": 56,
 		"GOP": 34,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New Jersey",
 		"pollster": "Stockton University",
 		"officeType": "President",
@@ -2618,8 +2709,8 @@
 		"DEM": 52,
 		"GOP": 35,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New Jersey",
 		"pollster": "Fairleigh Dickinson University (PublicMind)",
 		"officeType": "President",
@@ -2628,8 +2719,8 @@
 		"DEM": 53,
 		"GOP": 38,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New Mexico",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2638,8 +2729,8 @@
 		"DEM": 53,
 		"GOP": 45,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New Mexico",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2648,8 +2739,8 @@
 		"DEM": 53,
 		"GOP": 45,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New Mexico",
 		"pollster": "GBAO*",
 		"officeType": "President",
@@ -2658,8 +2749,8 @@
 		"DEM": 54,
 		"GOP": 41,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New Mexico",
 		"pollster": "Public Policy Polling",
 		"officeType": "President",
@@ -2668,8 +2759,8 @@
 		"DEM": 53,
 		"GOP": 39,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "New York",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2678,8 +2769,8 @@
 		"DEM": 64,
 		"GOP": 33,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New York",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2688,8 +2779,8 @@
 		"DEM": 64,
 		"GOP": 33,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "New York",
 		"pollster": "Siena College",
 		"officeType": "President",
@@ -2699,7 +2790,7 @@
 		"GOP": 29,
 		"IND": 0
 	},
-	{
+    {
 		"state": "North Carolina",
 		"pollster": "YouGov",
 		"officeType": "President",
@@ -2709,7 +2800,7 @@
 		"GOP": 47,
 		"IND": 0
 	},
-	{
+    {
 		"state": "North Carolina",
 		"pollster": "Trafalgar Group",
 		"officeType": "President",
@@ -2718,8 +2809,8 @@
 		"DEM": 46,
 		"GOP": 49,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "Meredith College",
 		"officeType": "President",
@@ -2728,8 +2819,8 @@
 		"DEM": 48,
 		"GOP": 44,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "Data for Progress*",
 		"officeType": "President",
@@ -2738,8 +2829,8 @@
 		"DEM": 48,
 		"GOP": 44,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
 		"officeType": "President",
@@ -2748,8 +2839,8 @@
 		"DEM": 48,
 		"GOP": 49,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -2758,8 +2849,8 @@
 		"DEM": 50,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -2768,8 +2859,8 @@
 		"DEM": 49,
 		"GOP": 47,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -2778,8 +2869,8 @@
 		"DEM": 49,
 		"GOP": 46,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "Change Research",
 		"officeType": "President",
@@ -2788,8 +2879,8 @@
 		"DEM": 50,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "East Carolina University",
 		"officeType": "President",
@@ -2798,8 +2889,8 @@
 		"DEM": 51,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "ABC News/The Washington Post",
 		"officeType": "President",
@@ -2808,8 +2899,8 @@
 		"DEM": 50,
 		"GOP": 48,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "ABC News/The Washington Post",
 		"officeType": "President",
@@ -2818,8 +2909,8 @@
 		"DEM": 50,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "ABC News/The Washington Post",
 		"officeType": "President",
@@ -2828,8 +2919,8 @@
 		"DEM": 49,
 		"GOP": 48,
 		"IND": 1
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "ABC News/The Washington Post",
 		"officeType": "President",
@@ -2838,8 +2929,8 @@
 		"DEM": 48,
 		"GOP": 46,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2848,8 +2939,8 @@
 		"DEM": 52,
 		"GOP": 46,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "North Carolina",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2858,8 +2949,8 @@
 		"DEM": 53,
 		"GOP": 45,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "North Dakota",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2868,8 +2959,8 @@
 		"DEM": 40,
 		"GOP": 59,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "North Dakota",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2878,8 +2969,8 @@
 		"DEM": 40,
 		"GOP": 58,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "North Dakota",
 		"pollster": "DFM Research",
 		"officeType": "President",
@@ -2888,8 +2979,8 @@
 		"DEM": 37,
 		"GOP": 51,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Ohio",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -2898,8 +2989,8 @@
 		"DEM": 47,
 		"GOP": 49,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Ohio",
 		"pollster": "Fox News",
 		"officeType": "President",
@@ -2908,8 +2999,8 @@
 		"DEM": 44,
 		"GOP": 46,
 		"IND": 4
-	},
-	{
+	}, 
+    {
 		"state": "Ohio",
 		"pollster": "Fox News",
 		"officeType": "President",
@@ -2918,8 +3009,8 @@
 		"DEM": 45,
 		"GOP": 48,
 		"IND": 4
-	},
-	{
+	}, 
+    {
 		"state": "Ohio",
 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
 		"officeType": "President",
@@ -2928,8 +3019,8 @@
 		"DEM": 48,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Ohio",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2938,8 +3029,8 @@
 		"DEM": 48,
 		"GOP": 51,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Ohio",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2948,8 +3039,8 @@
 		"DEM": 48,
 		"GOP": 49,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Ohio",
 		"pollster": "Civiqs*",
 		"officeType": "President",
@@ -2958,8 +3049,8 @@
 		"DEM": 47,
 		"GOP": 50,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Ohio",
 		"pollster": "Quinnipiac University",
 		"officeType": "President",
@@ -2968,8 +3059,8 @@
 		"DEM": 48,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Ohio",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -2978,8 +3069,8 @@
 		"DEM": 46,
 		"GOP": 49,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Oklahoma",
 		"pollster": "SoonerPoll",
 		"officeType": "President",
@@ -2988,8 +3079,8 @@
 		"DEM": 37,
 		"GOP": 59,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "Oklahoma",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2998,8 +3089,8 @@
 		"DEM": 40,
 		"GOP": 59,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Oklahoma",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3008,8 +3099,8 @@
 		"DEM": 41,
 		"GOP": 57,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Oregon",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3018,8 +3109,8 @@
 		"DEM": 61,
 		"GOP": 37,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Oregon",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3028,8 +3119,8 @@
 		"DEM": 60,
 		"GOP": 38,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Oregon",
 		"pollster": "Civiqs",
 		"officeType": "President",
@@ -3039,7 +3130,37 @@
 		"GOP": 39,
 		"IND": 0
 	},
-	{
+    {
+		"state": "Pennsylvania",
+		"pollster": "InsiderAdvantage",
+		"officeType": "President",
+		"dates": "OCT 25, 2020",
+		"url": "https://amgreatness.com/2020/10/26/trump-takes-the-lead-in-pennsylvania-3-per-new-poll/",
+		"DEM": 46,
+		"GOP": 48,
+		"IND": 3
+	},
+    {
+		"state": "Pennsylvania",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 13-21, 2020",
+		"url": "https://drive.google.com/file/d/1h5XfJ3zzvxhi4jpT3ndy1IjpKbgC8Lws/view",
+		"DEM": 51,
+		"GOP": 44,
+		"IND": 0
+	},
+    {
+		"state": "Pennsylvania",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 13-21, 2020",
+		"url": "https://drive.google.com/file/d/1h5XfJ3zzvxhi4jpT3ndy1IjpKbgC8Lws/view",
+		"DEM": 52,
+		"GOP": 44,
+		"IND": 0
+	},
+    {
 		"state": "Pennsylvania",
 		"pollster": "Gravis Marketing",
 		"officeType": "President",
@@ -3048,8 +3169,8 @@
 		"DEM": 51,
 		"GOP": 44,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "Muhlenberg College",
 		"officeType": "President",
@@ -3058,8 +3179,8 @@
 		"DEM": 51,
 		"GOP": 44,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "Public Policy Polling*",
 		"officeType": "President",
@@ -3068,8 +3189,8 @@
 		"DEM": 51,
 		"GOP": 46,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "Civiqs",
 		"officeType": "President",
@@ -3078,8 +3199,8 @@
 		"DEM": 52,
 		"GOP": 46,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -3133,8 +3254,8 @@
 		"DEM": 51,
 		"GOP": 43,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "Suffolk University",
 		"officeType": "President",
@@ -3143,8 +3264,8 @@
 		"DEM": 49,
 		"GOP": 42,
 		"IND": 1
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
 		"officeType": "President",
@@ -3153,8 +3274,8 @@
 		"DEM": 50,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -3163,8 +3284,8 @@
 		"DEM": 49,
 		"GOP": 45,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -3173,8 +3294,8 @@
 		"DEM": 49,
 		"GOP": 45,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3183,8 +3304,8 @@
 		"DEM": 52,
 		"GOP": 46,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3193,8 +3314,8 @@
 		"DEM": 53,
 		"GOP": 45,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "Trafalgar Group*",
 		"officeType": "President",
@@ -3203,8 +3324,8 @@
 		"DEM": 48,
 		"GOP": 46,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "HarrisX",
 		"officeType": "President",
@@ -3213,8 +3334,8 @@
 		"DEM": 51,
 		"GOP": 46,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "InsiderAdvantage",
 		"officeType": "President",
@@ -3223,8 +3344,8 @@
 		"DEM": 46,
 		"GOP": 43,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "Civiqs*",
 		"officeType": "President",
@@ -3233,8 +3354,8 @@
 		"DEM": 52,
 		"GOP": 45,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Pennsylvania",
 		"pollster": "RMG Research",
 		"officeType": "President",
@@ -3243,8 +3364,8 @@
 		"DEM": 49,
 		"GOP": 43,
 		"IND": 1
-	},
-	{
+	}, 
+    {
 		"state": "Rhode Island",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3253,8 +3374,8 @@
 		"DEM": 68,
 		"GOP": 31,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Rhode Island",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3263,8 +3384,8 @@
 		"DEM": 68,
 		"GOP": 30,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "South Carolina",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -3273,8 +3394,8 @@
 		"DEM": 45,
 		"GOP": 51,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "South Carolina",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3283,8 +3404,8 @@
 		"DEM": 45,
 		"GOP": 53,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "South Carolina",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3293,8 +3414,8 @@
 		"DEM": 46,
 		"GOP": 51,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "South Carolina",
 		"pollster": "Siena College/The New York Times Upshot",
 		"officeType": "President",
@@ -3303,8 +3424,8 @@
 		"DEM": 41,
 		"GOP": 49,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "South Carolina",
 		"pollster": "Data for Progress*",
 		"officeType": "President",
@@ -3313,8 +3434,8 @@
 		"DEM": 43,
 		"GOP": 52,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "South Carolina",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -3324,7 +3445,7 @@
 		"GOP": 54,
 		"IND": 0
 	},
-	{
+    {
 		"state": "South Dakota",
 		"pollster": "Mason-Dixon Polling & Strategy",
 		"officeType": "President",
@@ -3333,8 +3454,8 @@
 		"DEM": 40,
 		"GOP": 51,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "South Dakota",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3343,8 +3464,8 @@
 		"DEM": 43,
 		"GOP": 55,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "South Dakota",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3353,8 +3474,8 @@
 		"DEM": 43,
 		"GOP": 54,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Tennessee",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3363,8 +3484,8 @@
 		"DEM": 42,
 		"GOP": 56,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Tennessee",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3374,7 +3495,37 @@
 		"GOP": 54,
 		"IND": 0
 	},
-	{
+    {
+		"state": "Texas",
+		"pollster": "Data for Progress*",
+		"officeType": "President",
+		"dates": "OCT 22-25, 2020",
+		"url": "https://filesforprogress.org/memos/2020-senate-project/week-6/dfp_psp_tx_10.26.pdf",
+		"DEM": 49,
+		"GOP": 48,
+		"IND": 1
+	},
+    {
+		"state": "Texas",
+		"pollster": "Siena College/The New York Times Upshot",
+		"officeType": "President",
+		"dates": "OCT 20-25, 2020",
+		"url": "https://int.nyt.com/data/documenttools/tx102020-crosstabs-1/a1e2440aa9de6f2e/full.pdf",
+		"DEM": 43,
+		"GOP": 47,
+		"IND": 3
+	},
+    {
+		"state": "Texas",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 13-20, 2020",
+		"url": "https://uh.edu/hobby/election2020/texas2020.pdf",
+		"DEM": 45,
+		"GOP": 50,
+		"IND": 2
+	},
+    {
 		"state": "Texas",
 		"pollster": "University of Texas at Tyler",
 		"officeType": "President",
@@ -3383,8 +3534,8 @@
 		"DEM": 48,
 		"GOP": 45,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "Texas",
 		"pollster": "University of Texas at Tyler",
 		"officeType": "President",
@@ -3393,8 +3544,8 @@
 		"DEM": 46,
 		"GOP": 44,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "Texas",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -3403,8 +3554,8 @@
 		"DEM": 48,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Texas",
 		"pollster": "Quinnipiac University",
 		"officeType": "President",
@@ -3413,8 +3564,8 @@
 		"DEM": 47,
 		"GOP": 47,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Texas",
 		"pollster": "Data for Progress",
 		"officeType": "President",
@@ -3423,8 +3574,8 @@
 		"DEM": 47,
 		"GOP": 46,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "Texas",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3433,8 +3584,8 @@
 		"DEM": 48,
 		"GOP": 51,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Texas",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3443,8 +3594,8 @@
 		"DEM": 49,
 		"GOP": 48,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Texas",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -3453,8 +3604,8 @@
 		"DEM": 47,
 		"GOP": 49,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Utah",
 		"pollster": "RMG Research",
 		"officeType": "President",
@@ -3463,8 +3614,8 @@
 		"DEM": 38,
 		"GOP": 50,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "Utah",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3473,8 +3624,8 @@
 		"DEM": 45,
 		"GOP": 52,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Utah",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3483,8 +3634,8 @@
 		"DEM": 45,
 		"GOP": 52,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Vermont",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3493,8 +3644,8 @@
 		"DEM": 67,
 		"GOP": 30,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Vermont",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3503,8 +3654,8 @@
 		"DEM": 66,
 		"GOP": 31,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Virginia",
 		"pollster": "The Washington Post/George Mason University",
 		"officeType": "President",
@@ -3513,8 +3664,8 @@
 		"DEM": 52,
 		"GOP": 41,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "Virginia",
 		"pollster": "Cygnal*",
 		"officeType": "President",
@@ -3523,8 +3674,8 @@
 		"DEM": 51,
 		"GOP": 42,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Virginia",
 		"pollster": "Civiqs",
 		"officeType": "President",
@@ -3533,8 +3684,8 @@
 		"DEM": 55,
 		"GOP": 42,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Virginia",
 		"pollster": "Reconnect Research/Roanoke College",
 		"officeType": "President",
@@ -3543,8 +3694,8 @@
 		"DEM": 53,
 		"GOP": 38,
 		"IND": 4
-	},
-	{
+	}, 
+    {
 		"state": "Virginia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3553,8 +3704,8 @@
 		"DEM": 55,
 		"GOP": 43,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Virginia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3563,8 +3714,8 @@
 		"DEM": 56,
 		"GOP": 41,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Washington",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3573,8 +3724,8 @@
 		"DEM": 61,
 		"GOP": 37,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Washington",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3583,8 +3734,8 @@
 		"DEM": 61,
 		"GOP": 37,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Washington",
 		"pollster": "Public Policy Polling",
 		"officeType": "President",
@@ -3593,8 +3744,8 @@
 		"DEM": 60,
 		"GOP": 37,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Washington",
 		"pollster": "SurveyUSA",
 		"officeType": "President",
@@ -3603,8 +3754,8 @@
 		"DEM": 55,
 		"GOP": 34,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "West Virginia",
 		"pollster": "Triton Polling & Research",
 		"officeType": "President",
@@ -3613,8 +3764,8 @@
 		"DEM": 38,
 		"GOP": 58,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "West Virginia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3623,8 +3774,8 @@
 		"DEM": 33,
 		"GOP": 66,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "West Virginia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3633,8 +3784,8 @@
 		"DEM": 32,
 		"GOP": 66,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "West Virginia",
 		"pollster": "Research America Inc.",
 		"officeType": "President",
@@ -3644,7 +3795,27 @@
 		"GOP": 53,
 		"IND": 5
 	},
-	{
+    {
+		"state": "Wisconsin",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 13-21, 2020",
+		"url": "https://drive.google.com/file/d/1h5XfJ3zzvxhi4jpT3ndy1IjpKbgC8Lws/view",
+		"DEM": 51,
+		"GOP": 43,
+		"IND": 0
+	},
+    {
+		"state": "Wisconsin",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 13-21, 2020",
+		"url": "https://drive.google.com/file/d/1h5XfJ3zzvxhi4jpT3ndy1IjpKbgC8Lws/view",
+		"DEM": 53,
+		"GOP": 44,
+		"IND": 0
+	},
+    {
 		"state": "Wisconsin",
 		"pollster": "Gravis Marketing",
 		"officeType": "President",
@@ -3653,8 +3824,8 @@
 		"DEM": 54,
 		"GOP": 43,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "RMG Research",
 		"officeType": "President",
@@ -3663,8 +3834,8 @@
 		"DEM": 50,
 		"GOP": 44,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -3673,8 +3844,8 @@
 		"DEM": 54,
 		"GOP": 42,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Fox News",
 		"officeType": "President",
@@ -3683,8 +3854,8 @@
 		"DEM": 48,
 		"GOP": 44,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Fox News",
 		"officeType": "President",
@@ -3693,8 +3864,8 @@
 		"DEM": 49,
 		"GOP": 44,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Susquehanna Polling & Research Inc.",
 		"officeType": "President",
@@ -3703,8 +3874,8 @@
 		"DEM": 45,
 		"GOP": 45,
 		"IND": 5
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Latino Decisions*",
 		"officeType": "President",
@@ -3713,8 +3884,8 @@
 		"DEM": 50,
 		"GOP": 45,
 		"IND": 5
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Change Research",
 		"officeType": "President",
@@ -3723,8 +3894,8 @@
 		"DEM": 52,
 		"GOP": 44,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -3733,8 +3904,8 @@
 		"DEM": 51,
 		"GOP": 45,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -3743,8 +3914,8 @@
 		"DEM": 51,
 		"GOP": 43,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "YouGov",
 		"officeType": "President",
@@ -3753,8 +3924,8 @@
 		"DEM": 51,
 		"GOP": 46,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Trafalgar Group",
 		"officeType": "President",
@@ -3763,8 +3934,8 @@
 		"DEM": 48,
 		"GOP": 46,
 		"IND": 2
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Trafalgar Group",
 		"officeType": "President",
@@ -3773,8 +3944,8 @@
 		"DEM": 47,
 		"GOP": 45,
 		"IND": 3
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Civiqs*",
 		"officeType": "President",
@@ -3783,8 +3954,8 @@
 		"DEM": 53,
 		"GOP": 45,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "David Binder Research*",
 		"officeType": "President",
@@ -3793,8 +3964,8 @@
 		"DEM": 53,
 		"GOP": 43,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "Morning Consult",
 		"officeType": "President",
@@ -3803,8 +3974,8 @@
 		"DEM": 51,
 		"GOP": 44,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3813,8 +3984,8 @@
 		"DEM": 55,
 		"GOP": 43,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Wisconsin",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3823,8 +3994,8 @@
 		"DEM": 55,
 		"GOP": 42,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Wyoming",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3833,8 +4004,8 @@
 		"DEM": 31,
 		"GOP": 67,
 		"IND": 0
-	},
-	{
+	}, 
+    {
 		"state": "Wyoming",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
