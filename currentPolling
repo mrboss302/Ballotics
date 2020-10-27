@@ -1,5 +1,15 @@
 [
-        {      
+          {      
+            "state": "National",
+			"pollster": "Rasmussen Reports/Pulse Opinion Research",
+			"officeType": "President",
+			"dates": "OCT 22-26, 2020",
+			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct27",
+			"DEM": 49,
+            "GOP": 47,
+            "IND": 0
+		},    
+    {      
             "state": "National",
 			"pollster": "Morning Consult",
 			"officeType": "President",
@@ -11,62 +21,92 @@
 		},
         {      
             "state": "National",
-			"pollster": "Rasmussen Reports/Pulse Opinion Research",
+			"pollster": "IBD/TIPP",
 			"officeType": "President",
-			"dates": "OCT 21-25, 2020",
-			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct26",
-			"DEM": 47,
-            "GOP": 48,
+			"dates": "OCT 22-26, 2020",
+			"url": "https://www.investors.com/news/biden-vs-trump-poll-joe-biden-lead-shrinks-donald-trump-tops-2016-vote-share-ibd-tipp-presidential-poll/",
+			"DEM": 50,
+            "GOP": 46,
             "IND": 0
 		},
         {      
             "state": "National",
 			"pollster": "IBD/TIPP",
 			"officeType": "President",
-			"dates": "OCT 21-25, 2020",
-			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct26",
-			"DEM": 52,
-            "GOP": 45,
-            "IND": 0
-		},
-        {      
-            "state": "National",
-			"pollster": "IBD/TIPP",
-			"officeType": "President",
-			"dates": "OCT 21-25, 2020",
-			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct26",
-			"DEM": 52,
-            "GOP": 45,
+			"dates": "OCT 22-26, 2020",
+			"url": "https://www.investors.com/news/biden-vs-trump-poll-joe-biden-lead-shrinks-donald-trump-tops-2016-vote-share-ibd-tipp-presidential-poll/",
+			"DEM": 51,
+            "GOP": 46,
             "IND": 2
 		},
         {      
             "state": "National",
 			"pollster": "USC Dornsife",
 			"officeType": "President",
-			"dates": "OCT 21-25, 2020",
-			"url": "https://election.usc.edu/",
-			"DEM": 54,
-            "GOP": 42,
-            "IND": 0
-		},
-        {      
-            "state": "National",
-			"pollster": "USC Dornsife",
-			"officeType": "President",
-			"dates": "OCT 21-25, 2020",
-			"url": "https://election.usc.edu/",
-			"DEM": 54,
-            "GOP": 42,
-            "IND": 0
-		},
-        {      
-            "state": "National",
-			"pollster": "USC Dornsife",
-			"officeType": "President",
-			"dates": "OCT 21-25, 2020",
+			"dates": "OCT 13-26, 2020",
 			"url": "https://election.usc.edu/",
 			"DEM": 53,
+            "GOP": 43,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "USC Dornsife",
+			"officeType": "President",
+			"dates": "OCT 13-26, 2020",
+			"url": "https://election.usc.edu/",
+			"DEM": 54,
             "GOP": 42,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "USC Dornsife",
+			"officeType": "President",
+			"dates": "OCT 13-26, 2020",
+			"url": "https://election.usc.edu/",
+			"DEM": 52,
+            "GOP": 42,
+            "IND": 0
+		},
+            {      
+            "state": "National",
+			"pollster": "Léger",
+			"officeType": "President",
+			"dates": "OCT 23-25, 2020",
+			"url": "https://election.usc.edu/",
+			"DEM": 49,
+            "GOP": 41,
+            "IND": 6
+		},
+        {      
+            "state": "National",
+			"pollster": "CNBC/Hart Research/Public Opinion Strategies",
+			"officeType": "President",
+			"dates": "OCT 21-24, 2020",
+			"url": "https://election.usc.edu/",
+			"DEM": 51,
+            "GOP": 40,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "YouGov",
+			"officeType": "President",
+			"dates": "OCT 23-25, 2020",
+			"url": "https://docs.cdn.yougov.com/fsf95uprtd/20201026_yahoo_coronavirus_tabs.pdf",
+			"DEM": 54,
+            "GOP": 42,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "YouGov",
+			"officeType": "President",
+			"dates": "OCT 23-25, 2020",
+			"url": "https://docs.cdn.yougov.com/fsf95uprtd/20201026_yahoo_coronavirus_tabs.pdf",
+			"DEM": 51,
+            "GOP": 39,
             "IND": 0
 		},
         {      
@@ -91,7 +131,7 @@
 		},
         {      
             "state": "National",
-			"pollster": "Public First",
+			"pollster": "Public Opinion Strategies*",
 			"officeType": "President",
 			"dates": "OCT 5-8, 2020",
 			"url": "https://drive.google.com/file/d/11vvcdbX9PfqFhVKxX3eLJAhVr71Y4QFX/view",
