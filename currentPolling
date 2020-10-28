@@ -1,59 +1,80 @@
 [
-          {      
+    {      
+            "state": "National",
+			"pollster": "YouGov",
+			"officeType": "President",
+			"dates": "OCT 25-27, 2020",
+			"url": "https://docs.cdn.yougov.com/nzc8dt85gn/econTabReport.pdf",
+			"DEM": 54,
+            "GOP": 43,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "YouGov",
+			"officeType": "President",
+			"dates": "OCT 25-27, 2020",
+			"url": "https://docs.cdn.yougov.com/nzc8dt85gn/econTabReport.pdf",
+			"DEM": 51,
+            "GOP": 40,
+            "IND": 0
+		}, 
+    
+        {      
+            "state": "National",
+			"pollster": "SurveyMonkey",
+			"officeType": "President",
+			"dates": "OCT 25-27, 2020",
+			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+			"DEM": 51,
+            "GOP": 47,
+            "IND": 0
+		}, 
+        {      
+            "state": "National",
+			"pollster": "SurveyMonkey",
+			"officeType": "President",
+			"dates": "OCT 25-27, 2020",
+			"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+			"DEM": 52,
+            "GOP": 45,
+            "IND": 0
+		},       
+    {      
             "state": "National",
 			"pollster": "Rasmussen Reports/Pulse Opinion Research",
 			"officeType": "President",
-			"dates": "OCT 22-26, 2020",
-			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct27",
-			"DEM": 49,
-            "GOP": 47,
+			"dates": "OCT 25-27, 2020",
+			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct28",
+			"DEM": 47,
+            "GOP": 48,
             "IND": 0
-		},    
-    {      
-            "state": "National",
-			"pollster": "Morning Consult",
-			"officeType": "President",
-			"dates": "OCT 23-25, 2020",
-			"url": "https://morningconsult.com/2020-presidential-election-tracker/",
-			"DEM": 52,
-            "GOP": 43,
-            "IND": 0
-		},
-        {      
+		},  
+            {      
             "state": "National",
 			"pollster": "IBD/TIPP",
 			"officeType": "President",
-			"dates": "OCT 22-26, 2020",
-			"url": "https://www.investors.com/news/biden-vs-trump-poll-joe-biden-lead-shrinks-donald-trump-tops-2016-vote-share-ibd-tipp-presidential-poll/",
+			"dates": "OCT 23-27, 2020",
+			"url": "https://www.investors.com/news/trump-vs-biden-poll-race-stays-close-ibd-tipp-presidential-poll/",
 			"DEM": 50,
-            "GOP": 46,
+            "GOP": 45,
             "IND": 0
 		},
         {      
             "state": "National",
 			"pollster": "IBD/TIPP",
 			"officeType": "President",
-			"dates": "OCT 22-26, 2020",
-			"url": "https://www.investors.com/news/biden-vs-trump-poll-joe-biden-lead-shrinks-donald-trump-tops-2016-vote-share-ibd-tipp-presidential-poll/",
-			"DEM": 51,
-            "GOP": 46,
-            "IND": 2
+			"dates": "OCT 23-27, 2020",
+			"url": "https://www.investors.com/news/trump-vs-biden-poll-race-stays-close-ibd-tipp-presidential-poll/",
+			"DEM": 50,
+            "GOP": 45,
+            "IND": 3
 		},
-        {      
+            {      
             "state": "National",
 			"pollster": "USC Dornsife",
 			"officeType": "President",
-			"dates": "OCT 13-26, 2020",
-			"url": "https://election.usc.edu/",
-			"DEM": 53,
-            "GOP": 43,
-            "IND": 0
-		},
-        {      
-            "state": "National",
-			"pollster": "USC Dornsife",
-			"officeType": "President",
-			"dates": "OCT 13-26, 2020",
+			"dates": "OCT 14-27, 2020",
 			"url": "https://election.usc.edu/",
 			"DEM": 54,
             "GOP": 42,
@@ -63,12 +84,55 @@
             "state": "National",
 			"pollster": "USC Dornsife",
 			"officeType": "President",
-			"dates": "OCT 13-26, 2020",
+			"dates": "OCT 14-27, 2020",
 			"url": "https://election.usc.edu/",
-			"DEM": 52,
+			"DEM": 54,
             "GOP": 42,
             "IND": 0
 		},
+        {      
+            "state": "National",
+			"pollster": "USC Dornsife",
+			"officeType": "President",
+			"dates": "OCT 14-27, 2020",
+			"url": "https://election.usc.edu/",
+			"DEM": 53,
+            "GOP": 42,
+            "IND": 0
+		},
+            {      
+            "state": "National",
+			"pollster": "Change Research",
+			"officeType": "President",
+			"dates": "OCT 23-24, 2020",
+			"url": "https://changeresearch.com/post/pollercoaster-2020-news-election-season-stories/?utm_source=rss&utm_medium=rss&utm_campaign=pollercoaster-2020-news-election-season-stories",
+			"DEM": 51,
+            "GOP": 43,
+            "IND": 0
+		},
+                {      
+            "state": "National",
+			"pollster": "Spry Strategies",
+			"officeType": "President",
+			"dates": "OCT 20-23, 2020",
+			"url": "https://www.womensliberationfront.org/news/national-poll-support-for-womens-spaces",
+			"DEM": 48,
+            "GOP": 46,
+            "IND": 0
+		},
+                    {      
+            "state": "National",
+			"pollster": "Emerson College",
+			"officeType": "President",
+			"dates": "OCT 25-26, 2020",
+			"url": "https://emersonpolling.reportablenews.com/pr/october-national-poll-biden-with-five-point-lead-one-week-out",
+			"DEM": 51,
+            "GOP": 47,
+            "IND": 0
+		},
+
+
+
             {      
             "state": "National",
 			"pollster": "Léger",
@@ -108,6 +172,26 @@
 			"DEM": 51,
             "GOP": 39,
             "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "Morning Consult",
+			"officeType": "President",
+			"dates": "OCT 23-25, 2020",
+			"url": "https://morningconsult.com/2020-presidential-election-tracker/",
+			"DEM": 52,
+            "GOP": 43,
+            "IND": 0
+		},
+        {      
+            "state": "National",
+			"pollster": "RMG Research",
+			"officeType": "President",
+			"dates": "OCT 23-24, 2020",
+			"url": "https://justthenews.com/politics-policy/polling/race-narrows-slightly-stable-nationwide-polls-following-final-presidential",
+			"DEM": 51,
+            "GOP": 44,
+            "IND": 1
 		},
         {      
             "state": "National",
