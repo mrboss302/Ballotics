@@ -3355,6 +3355,86 @@
 		"GOP": 29,
 		"IND": 0
 	},
+                {
+		"state": "North Carolina",
+		"pollster": "Gravis Marketing",
+		"officeType": "President",
+		"dates": "OCT 26-27, 2020",
+		"url": "https://gravismarketing.com/nc-2020-poll-results/",
+		"DEM": 49,
+		"GOP": 46,
+		"IND": 0
+	}, 
+            {
+		"state": "North Carolina",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 51,
+		"GOP": 47,
+		"IND": 0
+	}, 
+    {
+		"state": "North Carolina",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 52,
+		"GOP": 45,
+		"IND": 0
+	},
+    {
+		"state": "North Carolina",
+		"pollster": "Harper Polling",
+		"officeType": "President",
+		"dates": "OCT 22-25, 2020",
+		"url": "https://www.nccivitas.org/polling/biden-razor-thin-lead-trump/",
+		"DEM": 47,
+		"GOP": 46,
+		"IND": 1
+	},
+                        {
+		"state": "North Carolina",
+		"pollster": "Public Policy Polling*",
+		"officeType": "President",
+		"dates": "OCT 26-27, 2020",
+		"url": "https://www.protectourcare.org/wp-content/uploads/2020/10/Protect-Our-CarePPP-North-Carolina-Poll.pdf",
+		"DEM": 51,
+		"GOP": 47,
+		"IND": 0
+	},
+                    {
+		"state": "North Carolina",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 21-27, 2020",
+		"url": "http://politicaliq.com/2020/10/27/north-carolina-biden-48-trump-47/",
+		"DEM": 49,
+		"GOP": 48,
+		"IND": 2
+	},
+                {
+		"state": "North Carolina",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 21-27, 2020",
+		"url": "http://politicaliq.com/2020/10/27/north-carolina-biden-48-trump-47/",
+		"DEM": 49,
+		"GOP": 48,
+		"IND": 0
+	},
+            {
+		"state": "North Carolina",
+		"pollster": "RMG Research",
+		"officeType": "President",
+		"dates": "OCT 24-26, 2020",
+		"url": "http://politicaliq.com/2020/10/27/north-carolina-biden-48-trump-47/",
+		"DEM": 48,
+		"GOP": 47,
+		"IND": 0
+	},
         {
 		"state": "North Carolina",
 		"pollster": "SurveyUSA",
@@ -3365,6 +3445,7 @@
 		"GOP": 48,
 		"IND": 0
 	},
+ 
     {
 		"state": "North Carolina",
 		"pollster": "YouGov",
@@ -3505,24 +3586,15 @@
 		"GOP": 46,
 		"IND": 3
 	}, 
+
     {
-		"state": "North Carolina",
+		"state": "North Dakota",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
 		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 52,
-		"GOP": 46,
-		"IND": 0
-	}, 
-    {
-		"state": "North Carolina",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 30-OCT 27, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 53,
-		"GOP": 45,
+		"DEM": 41,
+		"GOP": 58,
 		"IND": 0
 	}, 
     {
@@ -3531,17 +3603,7 @@
 		"officeType": "President",
 		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 40,
-		"GOP": 59,
-		"IND": 0
-	}, 
-    {
-		"state": "North Dakota",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 30-OCT 27, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 40,
+		"DEM": 41,
 		"GOP": 58,
 		"IND": 0
 	}, 
@@ -3553,6 +3615,26 @@
 		"url": "https://www.northdakotavotersfirst.org/body/NDVF-Poll-2-Report-Website.pdf",
 		"DEM": 37,
 		"GOP": 51,
+		"IND": 0
+	}, 
+        {
+		"state": "Ohio",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 47,
+		"GOP": 51,
+		"IND": 0
+	}, 
+    {
+		"state": "Ohio",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 48,
+		"GOP": 50,
 		"IND": 0
 	}, 
     {
@@ -3597,26 +3679,6 @@
 	}, 
     {
 		"state": "Ohio",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 30-OCT 27, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 48,
-		"GOP": 51,
-		"IND": 0
-	}, 
-    {
-		"state": "Ohio",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 30-OCT 27, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 48,
-		"GOP": 49,
-		"IND": 0
-	}, 
-    {
-		"state": "Ohio",
 		"pollster": "Civiqs*",
 		"officeType": "President",
 		"dates": "OCT 8-11, 2020",
@@ -3644,18 +3706,8 @@
 		"DEM": 46,
 		"GOP": 49,
 		"IND": 0
-	}, 
-    {
-		"state": "Oklahoma",
-		"pollster": "SoonerPoll",
-		"officeType": "President",
-		"dates": "OCT 15-20, 2020",
-		"url": "https://www.news9.com/story/5f90b311788f4939f00759e5/news-9news-on-6-exclusive-poll:-inhofe-leads-broyles-by-20-points-in-us-senate-race",
-		"DEM": 37,
-		"GOP": 59,
-		"IND": 2
-	}, 
-    {
+	},
+        {
 		"state": "Oklahoma",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3674,7 +3726,17 @@
 		"DEM": 41,
 		"GOP": 57,
 		"IND": 0
-	}, 
+	},
+    {
+		"state": "Oklahoma",
+		"pollster": "SoonerPoll",
+		"officeType": "President",
+		"dates": "OCT 15-20, 2020",
+		"url": "https://www.news9.com/story/5f90b311788f4939f00759e5/news-9news-on-6-exclusive-poll:-inhofe-leads-broyles-by-20-points-in-us-senate-race",
+		"DEM": 37,
+		"GOP": 59,
+		"IND": 2
+	},  
     {
 		"state": "Oregon",
 		"pollster": "SurveyMonkey",
@@ -3682,7 +3744,7 @@
 		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
 		"DEM": 61,
-		"GOP": 37,
+		"GOP": 38,
 		"IND": 0
 	}, 
     {
@@ -3703,6 +3765,66 @@
 		"url": "https://civiqs.com/documents/Civiqs_DailyKos_OR_banner_book_2020_09_7b4xvh.pdf",
 		"DEM": 56,
 		"GOP": 39,
+		"IND": 0
+	},
+        {
+		"state": "Pennsylvania",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 52,
+		"GOP": 46,
+		"IND": 0
+	}, 
+    {
+		"state": "Pennsylvania",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 53,
+		"GOP": 45,
+		"IND": 0
+	}, 
+        {
+		"state": "Pennsylvania",
+		"pollster": "Univision/University of Houston/Latino Decisions/North Star Opinion Research",
+		"officeType": "President",
+		"dates": "OCT 17-25, 2020",
+		"url": "https://st1.uvnimg.com/33/8f/ed1016da4a5fb16ec7e34cd5568a/univision-crosstabs-october-final.pdf",
+		"DEM": 50,
+		"GOP": 45,
+		"IND": 0
+	}, 
+    {
+		"state": "Pennsylvania",
+		"pollster": "Civiqs",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://civiqs.com/documents/Civiqs_DailyKos_PA_banner_book_2020_10_3x5e25.pdf",
+		"DEM": 52,
+		"GOP": 45,
+		"IND": 0
+	},
+    {
+		"state": "Pennsylvania",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 20-26, 2020",
+		"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-10/topline_reuters_pennsylvania_state_poll_w5_10_26_2020.pdf",
+		"DEM": 51,
+		"GOP": 44,
+		"IND": 0
+	},
+    {
+		"state": "Pennsylvania",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 20-26, 2020",
+		"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-10/topline_reuters_pennsylvania_state_poll_w5_10_26_2020.pdf",
+		"DEM": 50,
+		"GOP": 45,
 		"IND": 0
 	},
     {
@@ -3870,26 +3992,7 @@
 		"GOP": 45,
 		"IND": 0
 	}, 
-    {
-		"state": "Pennsylvania",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 30-OCT 27, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 52,
-		"GOP": 46,
-		"IND": 0
-	}, 
-    {
-		"state": "Pennsylvania",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 30-OCT 27, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 53,
-		"GOP": 45,
-		"IND": 0
-	}, 
+
     {
 		"state": "Pennsylvania",
 		"pollster": "Trafalgar Group*",
@@ -3946,7 +4049,7 @@
 		"officeType": "President",
 		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 68,
+		"DEM": 67,
 		"GOP": 31,
 		"IND": 0
 	}, 
@@ -3956,10 +4059,60 @@
 		"officeType": "President",
 		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 68,
+		"DEM": 67,
 		"GOP": 30,
 		"IND": 0
 	}, 
+        {
+		"state": "South Carolina",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 44,
+		"GOP": 54,
+		"IND": 0
+	}, 
+    {
+		"state": "South Carolina",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 45,
+		"GOP": 51,
+		"IND": 0
+	},
+        {
+		"state": "South Carolina",
+		"pollster": "East Carolina University",
+		"officeType": "President",
+		"dates": "OCT 24-25, 2020",
+		"url": "https://surveyresearch-ecu.reportablenews.com/pr/ecu-poll-of-south-carolina-graham-with-a-narrow-lead-over-harrison-among-likely-voters-trump-ahead-of-biden-as-election-day-nears",
+		"DEM": 44,
+		"GOP": 52,
+		"IND": 0
+	}, 
+    {
+		"state": "South Carolina",
+		"pollster": "Data for Progress*",
+		"officeType": "President",
+		"dates": "OCT 22-27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 44,
+		"GOP": 50,
+		"IND": 1
+	},
+        {
+		"state": "South Carolina",
+		"pollster": "Starboard Communications",
+		"officeType": "President",
+		"dates": "OCT 26, 2020",
+		"url": "https://twitter.com/walter_whetsell/status/1320870398410530817",
+		"DEM": 44,
+		"GOP": 51,
+		"IND": 0
+	},
     {
 		"state": "South Carolina",
 		"pollster": "Morning Consult",
@@ -3970,26 +4123,7 @@
 		"GOP": 51,
 		"IND": 0
 	}, 
-    {
-		"state": "South Carolina",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 30-OCT 27, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 45,
-		"GOP": 53,
-		"IND": 0
-	}, 
-    {
-		"state": "South Carolina",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 30-OCT 27, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 46,
-		"GOP": 51,
-		"IND": 0
-	}, 
+ 
     {
 		"state": "South Carolina",
 		"pollster": "Siena College/The New York Times Upshot",
@@ -4036,8 +4170,8 @@
 		"officeType": "President",
 		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 43,
-		"GOP": 55,
+		"DEM": 42,
+		"GOP": 56,
 		"IND": 0
 	}, 
     {
@@ -4046,8 +4180,8 @@
 		"officeType": "President",
 		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 43,
-		"GOP": 54,
+		"DEM": 42,
+		"GOP": 55,
 		"IND": 0
 	}, 
     {
@@ -4070,6 +4204,36 @@
 		"GOP": 54,
 		"IND": 0
 	},
+        {
+		"state": "Texas",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 47,
+		"GOP": 51,
+		"IND": 0
+	}, 
+    {
+		"state": "Texas",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 49,
+		"GOP": 48,
+		"IND": 0
+	},
+        {
+		"state": "Texas",
+		"pollster": "Univision/University of Houston/Latino Decisions/North Star Opinion Research",
+		"officeType": "President",
+		"dates": "OCT 17-25, 2020",
+		"url": "https://st1.uvnimg.com/33/8f/ed1016da4a5fb16ec7e34cd5568a/univision-crosstabs-october-final.pdf",
+		"DEM": 46,
+		"GOP": 49,
+		"IND": 0
+	}, 
     {
 		"state": "Texas",
 		"pollster": "Data for Progress*",
@@ -4150,26 +4314,7 @@
 		"GOP": 46,
 		"IND": 3
 	}, 
-    {
-		"state": "Texas",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 30-OCT 27, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 48,
-		"GOP": 51,
-		"IND": 0
-	}, 
-    {
-		"state": "Texas",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 30-OCT 27, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 49,
-		"GOP": 48,
-		"IND": 0
-	}, 
+
     {
 		"state": "Texas",
 		"pollster": "Morning Consult",
@@ -4196,8 +4341,8 @@
 		"officeType": "President",
 		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 45,
-		"GOP": 52,
+		"DEM": 43,
+		"GOP": 54,
 		"IND": 0
 	}, 
     {
@@ -4206,8 +4351,18 @@
 		"officeType": "President",
 		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 45,
-		"GOP": 52,
+		"DEM": 43,
+		"GOP": 54,
+		"IND": 0
+	}, 
+    {
+		"state": "Vermont",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 68,
+		"GOP": 30,
 		"IND": 0
 	}, 
     {
@@ -4219,17 +4374,37 @@
 		"DEM": 67,
 		"GOP": 30,
 		"IND": 0
+	},
+            {
+		"state": "Virginia",
+		"pollster": "Christopher Newport University",
+		"officeType": "President",
+		"dates": "OCT 15-27, 2020",
+		"url": "https://cnu.edu/wasoncenter/surveys/archive/2020-10-28.html",
+		"DEM": 53,
+		"GOP": 41,
+		"IND": 0
 	}, 
-    {
-		"state": "Vermont",
+        {
+		"state": "Virginia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
 		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 66,
-		"GOP": 31,
+		"DEM": 55,
+		"GOP": 42,
 		"IND": 0
 	}, 
+    {
+		"state": "Virginia",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 56,
+		"GOP": 41,
+		"IND": 0
+	},
     {
 		"state": "Virginia",
 		"pollster": "The Washington Post/George Mason University",
@@ -4270,31 +4445,12 @@
 		"GOP": 38,
 		"IND": 4
 	}, 
-    {
-		"state": "Virginia",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 26-OCT 24, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 55,
-		"GOP": 43,
-		"IND": 0
-	}, 
-    {
-		"state": "Virginia",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 26-OCT 24, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 56,
-		"GOP": 41,
-		"IND": 0
-	}, 
+ 
     {
 		"state": "Washington",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
-		"dates": "SEP 26-OCT 24, 2020",
+		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
 		"DEM": 61,
 		"GOP": 37,
@@ -4304,7 +4460,7 @@
 		"state": "Washington",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
-		"dates": "SEP 26-OCT 24, 2020",
+		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
 		"DEM": 61,
 		"GOP": 37,
@@ -4369,6 +4525,86 @@
 		"DEM": 39,
 		"GOP": 53,
 		"IND": 5
+	},
+        {
+		"state": "Wisconsin",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 55,
+		"GOP": 43,
+		"IND": 0
+	}, 
+    {
+		"state": "Wisconsin",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 27, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 55,
+		"GOP": 42,
+		"IND": 0
+	},
+        {
+		"state": "Wisconsin",
+		"pollster": "Marquette Law School",
+		"officeType": "President",
+		"dates": "OCT 21-25, 2020",
+		"url": "https://law.marquette.edu/poll/wp-content/uploads/2020/10/MLSP65ToplinesRV.html#q23:_biden_vs_trump_vs_jorgensen",
+		"DEM": 47,
+		"GOP": 43,
+		"IND": 2
+	},
+            {
+		"state": "Wisconsin",
+		"pollster": "Marquette Law School",
+		"officeType": "President",
+		"dates": "OCT 21-25, 2020",
+		"url": "https://law.marquette.edu/poll/wp-content/uploads/2020/10/MLSP65ToplinesRV.html#q23:_biden_vs_trump_vs_jorgensen",
+		"DEM": 48,
+		"GOP": 43,
+		"IND": 2
+	},
+            {
+		"state": "Wisconsin",
+		"pollster": "ABC News/The Washington Post",
+		"officeType": "President",
+		"dates": "OCT 20-25, 2020",
+		"url": "https://www.langerresearch.com/wp-content/uploads/1216a52020StateBattlegrounds-MIWI.pdf",
+		"DEM": 57,
+		"GOP": 40,
+		"IND": 2
+	},
+                {
+		"state": "Wisconsin",
+		"pollster": "ABC News/The Washington Post",
+		"officeType": "President",
+		"dates": "OCT 20-25, 2020",
+		"url": "https://www.langerresearch.com/wp-content/uploads/1216a52020StateBattlegrounds-MIWI.pdf",
+		"DEM": 56,
+		"GOP": 39,
+		"IND": 3
+	},
+        {
+		"state": "Wisconsin",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 20-26, 2020",
+		"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-10/topline_reuters_wisconsin_state_poll_w5_10_26_2020.pdf",
+		"DEM": 53,
+		"GOP": 44,
+		"IND": 3
+	},
+    {
+		"state": "Wisconsin",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 20-26, 2020",
+		"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-10/topline_reuters_wisconsin_state_poll_w5_10_26_2020.pdf",
+		"DEM": 53,
+		"GOP": 44,
+		"IND": 0
 	},
     {
 		"state": "Wisconsin",
@@ -4550,44 +4786,25 @@
 		"GOP": 44,
 		"IND": 0
 	}, 
+
     {
-		"state": "Wisconsin",
+		"state": "Wyoming",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
-		"dates": "SEP 26-OCT 24, 2020",
+		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 55,
-		"GOP": 43,
-		"IND": 0
-	}, 
-    {
-		"state": "Wisconsin",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 26-OCT 24, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 55,
-		"GOP": 42,
+		"DEM": 32,
+		"GOP": 66,
 		"IND": 0
 	}, 
     {
 		"state": "Wyoming",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
-		"dates": "SEP 26-OCT 24, 2020",
+		"dates": "SEP 30-OCT 27, 2020",
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 31,
-		"GOP": 67,
-		"IND": 0
-	}, 
-    {
-		"state": "Wyoming",
-		"pollster": "SurveyMonkey",
-		"officeType": "President",
-		"dates": "SEP 26-OCT 24, 2020",
-		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
-		"DEM": 31,
-		"GOP": 67,
+		"DEM": 32,
+		"GOP": 66,
 		"IND": 0
 	}
 ]
