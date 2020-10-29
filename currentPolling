@@ -1,5 +1,108 @@
 [
-        {      
+          {      
+            "state": "National",
+			"pollster": "Rasmussen Reports/Pulse Opinion Research",
+			"officeType": "President",
+			"dates": "OCT 26-28, 2020",
+			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct29",
+			"DEM": 48,
+            "GOP": 47,
+            "IND": 0
+		},
+                {      
+            "state": "National",
+			"pollster": "IBD/TIPP",
+			"officeType": "President",
+			"dates": "OCT 24-28, 2020",
+			"url": "https://www.investors.com/news/trump-vs-biden-poll-race-close-4-groups-key-joe-biden-lead-ibd-tipp-presidential-poll/",
+			"DEM": 50,
+            "GOP": 45,
+            "IND": 0
+		},
+                    {      
+            "state": "National",
+			"pollster": "IBD/TIPP",
+			"officeType": "President",
+			"dates": "OCT 24-28, 2020",
+			"url": "https://www.investors.com/news/trump-vs-biden-poll-race-close-4-groups-key-joe-biden-lead-ibd-tipp-presidential-poll/",
+			"DEM": 50,
+            "GOP": 45,
+            "IND": 3
+		},
+    
+    
+                        {      
+            "state": "National",
+			"pollster": "USC Dornsife",
+			"officeType": "President",
+			"dates": "OCT 15-28, 2020",
+			"url": "https://election.usc.edu/",
+			"DEM": 54,
+            "GOP": 42,
+            "IND": 0
+		},
+                            {      
+            "state": "National",
+			"pollster": "USC Dornsife",
+			"officeType": "President",
+			"dates": "OCT 15-28, 2020",
+			"url": "https://election.usc.edu/",
+			"DEM": 54,
+            "GOP": 42,
+            "IND": 0
+		},
+                            {      
+            "state": "National",
+			"pollster": "USC Dornsife",
+			"officeType": "President",
+			"dates": "OCT 15-28, 2020",
+			"url": "https://election.usc.edu/",
+			"DEM": 54,
+            "GOP": 42,
+            "IND": 0
+		},
+    
+                                {      
+            "state": "National",
+			"pollster": "Suffolk University",
+			"officeType": "President",
+			"dates": "OCT 23-27, 2020",
+			"url": "https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/national/2020/10_29_2020_marginals_pdftxt.pdf?la=en&hash=7BE590FE9C03C3188A29E97C1108D5CB75C70362",
+			"DEM": 52,
+            "GOP": 44,
+            "IND": 0
+		},
+                                    {      
+            "state": "National",
+			"pollster": "Suffolk University",
+			"officeType": "President",
+			"dates": "OCT 23-27, 2020",
+			"url": "https://www.suffolk.edu/-/media/suffolk/documents/academics/research-at-suffolk/suprc/polls/national/2020/10_29_2020_marginals_pdftxt.pdf?la=en&hash=7BE590FE9C03C3188A29E97C1108D5CB75C70362",
+			"DEM": 50,
+            "GOP": 43,
+            "IND": 2
+		},
+                                        {      
+            "state": "National",
+			"pollster": "Cometrends",
+			"officeType": "President",
+			"dates": "OCT 13-26, 2020",
+			"url": "https://www.vox.com/21538653/poll-biden-trump-texas-university-dallas",
+			"DEM": 56,
+            "GOP": 44,
+            "IND": 0
+		},
+                                            {      
+            "state": "National",
+			"pollster": "Tufts",
+			"officeType": "President",
+			"dates": "OCT 25, 2020",
+			"url": "https://tischcollege.tufts.edu/tufts-students-poll-2020-election",
+			"DEM": 52,
+            "GOP": 45,
+            "IND": 0
+		},    
+    {      
             "state": "National",
 			"pollster": "J.L. Partners",
 			"officeType": "President",
@@ -49,67 +152,18 @@
 			"DEM": 52,
             "GOP": 45,
             "IND": 0
-		},       
-    {      
-            "state": "National",
-			"pollster": "Rasmussen Reports/Pulse Opinion Research",
-			"officeType": "President",
-			"dates": "OCT 25-27, 2020",
-			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct28",
-			"DEM": 47,
-            "GOP": 48,
-            "IND": 0
 		},  
-            {      
+         {      
             "state": "National",
-			"pollster": "IBD/TIPP",
+			"pollster": "Global Marketing Research Services",
 			"officeType": "President",
 			"dates": "OCT 23-27, 2020",
-			"url": "https://www.investors.com/news/trump-vs-biden-poll-race-stays-close-ibd-tipp-presidential-poll/",
-			"DEM": 50,
-            "GOP": 45,
-            "IND": 0
-		},
-        {      
-            "state": "National",
-			"pollster": "IBD/TIPP",
-			"officeType": "President",
-			"dates": "OCT 23-27, 2020",
-			"url": "https://www.investors.com/news/trump-vs-biden-poll-race-stays-close-ibd-tipp-presidential-poll/",
-			"DEM": 50,
-            "GOP": 45,
-            "IND": 3
-		},
-            {      
-            "state": "National",
-			"pollster": "USC Dornsife",
-			"officeType": "President",
-			"dates": "OCT 14-27, 2020",
-			"url": "https://election.usc.edu/",
-			"DEM": 54,
-            "GOP": 42,
-            "IND": 0
-		},
-        {      
-            "state": "National",
-			"pollster": "USC Dornsife",
-			"officeType": "President",
-			"dates": "OCT 14-27, 2020",
-			"url": "https://election.usc.edu/",
-			"DEM": 54,
-            "GOP": 42,
-            "IND": 0
-		},
-        {      
-            "state": "National",
-			"pollster": "USC Dornsife",
-			"officeType": "President",
-			"dates": "OCT 14-27, 2020",
-			"url": "https://election.usc.edu/",
+			"url": "https://www.franklinpierce.edu/institutes/mfcc/10-28-20_Polling-Data/FPU-Herald-Poll-1023-1027-2020-Set-3.pdf",
 			"DEM": 53,
-            "GOP": 42,
+            "GOP": 39,
             "IND": 0
 		},
+    
      {      
             "state": "National",
 			"pollster": "Redfield & Wilton Strategies",
