@@ -1480,7 +1480,7 @@
 		"GOP": 46,
 		"IND": 2
 	},
-                                      {
+    {
 		"state": "Georgia",
 		"pollster": "Swayable",
 		"officeType": "President",
@@ -1490,7 +1490,7 @@
 		"GOP": 48,
 		"IND": 1
 	}, 
-                               {
+    {
 		"state": "Georgia",
 		"pollster": "Public Policy Polling",
 		"officeType": "President",
@@ -1500,7 +1500,7 @@
 		"GOP": 46,
 		"IND": 0
 	}, 
-                           {
+    {
 		"state": "Georgia",
 		"pollster": "Citizen Data",
 		"officeType": "President",
@@ -1520,7 +1520,7 @@
 		"GOP": 46,
 		"IND": 0
 	},
-          {
+    {
 		"state": "Georgia",
 		"pollster": "Monmouth University",
 		"officeType": "President",
@@ -1800,7 +1800,7 @@
 		"GOP": 39,
 		"IND": 0
 	},
-                                      {
+    {
 		"state": "Illinois",
 		"pollster": "Swayable",
 		"officeType": "President",
@@ -3022,7 +3022,7 @@
 		"GOP": 42,
 		"IND": 3
 	},
-                    {
+    {
 		"state": "New Hampshire",
 		"pollster": "American Research Group",
 		"officeType": "President",
@@ -3032,7 +3032,7 @@
 		"GOP": 39,
 		"IND": 1
 	}, 
-                {
+    {
 		"state": "New Hampshire",
 		"pollster": "University of New Hampshire",
 		"officeType": "President",
@@ -3042,7 +3042,7 @@
 		"GOP": 45,
 		"IND": 1
 	}, 
-            {
+    {
 		"state": "New Hampshire",
 		"pollster": "Saint Anselm College",
 		"officeType": "President",
@@ -3112,7 +3112,7 @@
 		"GOP": 41,
 		"IND": 0
 	}, 
-                                      {
+    {
 		"state": "New Jersey",
 		"pollster": "Swayable",
 		"officeType": "President",
@@ -3241,7 +3241,7 @@
 		"GOP": 39,
 		"IND": 2
 	}, 
-                                      {
+     {
 		"state": "New York",
 		"pollster": "Swayable",
 		"officeType": "President",
@@ -3281,7 +3281,7 @@
 		"GOP": 29,
 		"IND": 0
 	},
-                                           {
+     {
 		"state": "North Carolina",
 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
 		"officeType": "President",
@@ -3291,7 +3291,7 @@
 		"GOP": 48,
 		"IND": 0
 	}, 
-                                       {
+    {
 		"state": "North Carolina",
 		"pollster": "Cardinal Point Analytics (CardinalGPS)",
 		"officeType": "President",
@@ -3301,7 +3301,7 @@
 		"GOP": 48,
 		"IND": 4
 	}, 
-                                   {
+     {
 		"state": "North Carolina",
 		"pollster": "Swayable",
 		"officeType": "President",
@@ -3311,7 +3311,7 @@
 		"GOP": 48,
 		"IND": 2
 	}, 
-                               {
+   {
 		"state": "North Carolina",
 		"pollster": "Harris Poll",
 		"officeType": "President",
@@ -3322,7 +3322,7 @@
 		"IND": 0
 	}, 
          
-                           {
+    {
 		"state": "North Carolina",
 		"pollster": "Siena College/The New York Times Upshot",
 		"officeType": "President",
@@ -3332,7 +3332,7 @@
 		"GOP": 45,
 		"IND": 3
 	}, 
-                       {
+    {
 		"state": "North Carolina",
 		"pollster": "University of Massachusetts Lowell",
 		"officeType": "President",
@@ -3342,7 +3342,7 @@
 		"GOP": 48,
 		"IND": 1
 	}, 
-                   {
+    {
 		"state": "North Carolina",
 		"pollster": "Citizen Data",
 		"officeType": "President",
@@ -3352,7 +3352,7 @@
 		"GOP": 44,
 		"IND": 0
 	}, 
-                {
+    {
 		"state": "North Carolina",
 		"pollster": "Gravis Marketing",
 		"officeType": "President",
@@ -3362,7 +3362,7 @@
 		"GOP": 46,
 		"IND": 0
 	}, 
-            {
+    {
 		"state": "North Carolina",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3392,7 +3392,7 @@
 		"GOP": 46,
 		"IND": 1
 	},
-                        {
+     {
 		"state": "North Carolina",
 		"pollster": "Public Policy Polling*",
 		"officeType": "President",
@@ -3402,7 +3402,7 @@
 		"GOP": 47,
 		"IND": 0
 	},
-                    {
+    {
 		"state": "North Carolina",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -3412,7 +3412,7 @@
 		"GOP": 48,
 		"IND": 2
 	},
-                {
+    {
 		"state": "North Carolina",
 		"pollster": "Ipsos",
 		"officeType": "President",
@@ -3422,7 +3422,7 @@
 		"GOP": 48,
 		"IND": 0
 	},
-            {
+     {
 		"state": "North Carolina",
 		"pollster": "RMG Research",
 		"officeType": "President",
@@ -3432,7 +3432,7 @@
 		"GOP": 47,
 		"IND": 0
 	},
-        {
+    {
 		"state": "North Carolina",
 		"pollster": "SurveyUSA",
 		"officeType": "President",
@@ -3614,7 +3614,7 @@
 		"GOP": 51,
 		"IND": 0
 	}, 
-                                      {
+     {
 		"state": "Ohio",
 		"pollster": "Swayable",
 		"officeType": "President",
@@ -3624,7 +3624,7 @@
 		"GOP": 55,
 		"IND": 1
 	}, 
-                        {
+     {
 		"state": "Ohio",
 		"pollster": "Quinnipiac University",
 		"officeType": "President",
@@ -3634,7 +3634,7 @@
 		"GOP": 43,
 		"IND": 0
 	},
-                    {
+     {
 		"state": "Ohio",
 		"pollster": "Citizen Data",
 		"officeType": "President",
@@ -3644,7 +3644,7 @@
 		"GOP": 44,
 		"IND": 3
 	},
-            {
+     {
 		"state": "Ohio",
 		"pollster": "Gravis Marketing",
 		"officeType": "President",
@@ -3654,7 +3654,7 @@
 		"GOP": 49,
 		"IND": 0
 	}, 
-        {
+    {
 		"state": "Ohio",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -3804,7 +3804,7 @@
 		"GOP": 39,
 		"IND": 0
 	},
-                                {
+     {
 		"state": "Pennsylvania",
 		"pollster": "Public Policy Polling*",
 		"officeType": "President",
@@ -3814,7 +3814,7 @@
 		"GOP": 45,
 		"IND": 0
 	},
-                            {
+    {
 		"state": "Pennsylvania",
 		"pollster": "Swayable",
 		"officeType": "President",
@@ -3823,7 +3823,7 @@
 		"DEM": 52,
 		"IND": 2
 	},
-                        {
+     {
 		"state": "Pennsylvania",
 		"pollster": "Harris Poll",
 		"officeType": "President",
@@ -3833,7 +3833,7 @@
 		"GOP": 46,
 		"IND": 0
 	},
-                    {
+   {
 		"state": "Pennsylvania",
 		"pollster": "Quinnipiac University",
 		"officeType": "President",
@@ -3843,7 +3843,7 @@
 		"GOP": 44,
 		"IND": 0
 	},
-                {
+    {
 		"state": "Pennsylvania",
 		"pollster": "Citizen Data",
 		"officeType": "President",
@@ -3873,7 +3873,7 @@
 		"GOP": 45,
 		"IND": 0
 	}, 
-                {
+    {
 		"state": "Pennsylvania",
 		"pollster": "RMG Research",
 		"officeType": "President",
@@ -3883,7 +3883,7 @@
 		"GOP": 45,
 		"IND": 0
 	}, 
-            {
+    {
 		"state": "Pennsylvania",
 		"pollster": "Franklin & Marshall College",
 		"officeType": "President",
@@ -4310,7 +4310,7 @@
 		"GOP": 54,
 		"IND": 0
 	},
-                                      {
+    {
 		"state": "Texas",
 		"pollster": "Swayable",
 		"officeType": "President",
@@ -4532,7 +4532,7 @@
 		"GOP": 32,
 		"IND": 0
 	},
-                                   {
+     {
 		"state": "Virginia",
 		"pollster": "Swayable",
 		"officeType": "President",
@@ -4542,7 +4542,7 @@
 		"GOP": 44,
 		"IND": 1
 	}, 
-                {
+    {
 		"state": "Virginia",
 		"pollster": "Virginia Commonwealth University",
 		"officeType": "President",
@@ -4552,7 +4552,7 @@
 		"GOP": 39,
 		"IND": 0
 	}, 
-            {
+    {
 		"state": "Virginia",
 		"pollster": "Christopher Newport University",
 		"officeType": "President",
@@ -4562,7 +4562,7 @@
 		"GOP": 41,
 		"IND": 0
 	}, 
-        {
+    {
 		"state": "Virginia",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -4703,7 +4703,7 @@
 		"GOP": 53,
 		"IND": 5
 	},
-                               {
+     {
 		"state": "Wisconsin",
 		"pollster": "Swayable",
 		"officeType": "President",
@@ -4713,7 +4713,7 @@
 		"GOP": 45,
 		"IND": 1
 	}, 
-        {
+    {
 		"state": "Wisconsin",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -4743,7 +4743,7 @@
 		"GOP": 43,
 		"IND": 2
 	},
-            {
+    {
 		"state": "Wisconsin",
 		"pollster": "Marquette Law School",
 		"officeType": "President",
@@ -4753,7 +4753,7 @@
 		"GOP": 43,
 		"IND": 2
 	},
-            {
+    {
 		"state": "Wisconsin",
 		"pollster": "ABC News/The Washington Post",
 		"officeType": "President",
@@ -4763,7 +4763,7 @@
 		"GOP": 40,
 		"IND": 2
 	},
-                {
+    {
 		"state": "Wisconsin",
 		"pollster": "ABC News/The Washington Post",
 		"officeType": "President",
