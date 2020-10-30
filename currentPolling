@@ -1,5 +1,126 @@
 [{
 		"state": "National",
+		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+		"officeType": "President",
+		"dates": "OCT 27-29, 2020",
+		"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_oct30",
+		"DEM": 49,
+		"GOP": 46,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Opinium",
+		"officeType": "President",
+		"dates": "OCT 26-29, 2020",
+		"url": "https://www.opinium.com/resource-center/us-presidential-polling-biden-leads-by-14-points-in-final-poll/",
+		"DEM": 53,
+		"GOP": 41,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Opinium",
+		"officeType": "President",
+		"dates": "OCT 26-29, 2020",
+		"url": "https://www.opinium.com/resource-center/us-presidential-polling-biden-leads-by-14-points-in-final-poll/",
+		"DEM": 55,
+		"GOP": 41,
+		"IND": 0
+	},
+
+	{
+		"state": "National",
+		"pollster": "IBD/TIPP",
+		"officeType": "President",
+		"dates": "OCT 25-29, 2020",
+		"url": "https://www.investors.com/news/trump-vs-biden-poll-joe-biden-lead-grows-swing-states-tight-ibd-tipp-presidential-poll/",
+		"DEM": 51,
+		"GOP": 44,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "IBD/TIPP",
+		"officeType": "President",
+		"dates": "OCT 25-29, 2020",
+		"url": "https://www.investors.com/news/trump-vs-biden-poll-joe-biden-lead-grows-swing-states-tight-ibd-tipp-presidential-poll/",
+		"DEM": 51,
+		"GOP": 45,
+		"IND": 1
+	},
+	{
+		"state": "National",
+		"pollster": "IBD/TIPP",
+		"officeType": "President",
+		"dates": "OCT 25-29, 2020",
+		"url": "https://www.investors.com/news/trump-vs-biden-poll-joe-biden-lead-grows-swing-states-tight-ibd-tipp-presidential-poll/",
+		"DEM": 51,
+		"GOP": 45,
+		"IND": 1
+	},
+	{
+		"state": "National",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 16-29, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 54,
+		"GOP": 42,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 16-29, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 54,
+		"GOP": 42,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "USC Dornsife",
+		"officeType": "President",
+		"dates": "OCT 16-29, 2020",
+		"url": "https://election.usc.edu/",
+		"DEM": 53,
+		"GOP": 42,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Long Island University",
+		"officeType": "President",
+		"dates": "OCT 26-27, 2020",
+		"url": "https://www.prnewswire.com/news-releases/long-island-university-hornstein-center-national-poll-what-america-thinks-about-the-2020-presidential-election-301163295.html",
+		"DEM": 47,
+		"GOP": 36,
+		"IND": 0
+	},
+	{
+		"state": "National",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 51,
+		"GOP": 46,
+		"IND": 3
+	},
+	{
+		"state": "National",
+		"pollster": "Hofstra University",
+		"officeType": "President",
+		"dates": "OCT 19-26, 2020",
+		"url": "https://www.hofstra.edu/pdf/academics/colleges/hclas/gov-policy-international/kalikow-poll-1020.pdf",
+		"DEM": 54,
+		"GOP": 43,
+		"IND": 0
+	},
+	{
+		"state": "National",
 		"pollster": "Harris Poll",
 		"officeType": "President",
 		"dates": "OCT 27-28, 2020",
@@ -59,58 +180,7 @@
 		"GOP": 47,
 		"IND": 0
 	},
-	{
-		"state": "National",
-		"pollster": "IBD/TIPP",
-		"officeType": "President",
-		"dates": "OCT 24-28, 2020",
-		"url": "https://www.investors.com/news/trump-vs-biden-poll-race-close-4-groups-key-joe-biden-lead-ibd-tipp-presidential-poll/",
-		"DEM": 50,
-		"GOP": 45,
-		"IND": 0
-	},
-	{
-		"state": "National",
-		"pollster": "IBD/TIPP",
-		"officeType": "President",
-		"dates": "OCT 24-28, 2020",
-		"url": "https://www.investors.com/news/trump-vs-biden-poll-race-close-4-groups-key-joe-biden-lead-ibd-tipp-presidential-poll/",
-		"DEM": 50,
-		"GOP": 45,
-		"IND": 3
-	},
 
-
-	{
-		"state": "National",
-		"pollster": "USC Dornsife",
-		"officeType": "President",
-		"dates": "OCT 15-28, 2020",
-		"url": "https://election.usc.edu/",
-		"DEM": 54,
-		"GOP": 42,
-		"IND": 0
-	},
-	{
-		"state": "National",
-		"pollster": "USC Dornsife",
-		"officeType": "President",
-		"dates": "OCT 15-28, 2020",
-		"url": "https://election.usc.edu/",
-		"DEM": 54,
-		"GOP": 42,
-		"IND": 0
-	},
-	{
-		"state": "National",
-		"pollster": "USC Dornsife",
-		"officeType": "President",
-		"dates": "OCT 15-28, 2020",
-		"url": "https://election.usc.edu/",
-		"DEM": 54,
-		"GOP": 42,
-		"IND": 0
-	},
 
 	{
 		"state": "National",
@@ -1070,6 +1140,16 @@
 	},
 	{
 		"state": "Alabama",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 37,
+		"GOP": 56,
+		"IND": 7
+	},
+	{
+		"state": "Alabama",
 		"pollster": "Auburn University at Montgomery",
 		"officeType": "President",
 		"dates": "OCT 23-28, 2020",
@@ -1206,6 +1286,16 @@
 		"DEM": 46,
 		"GOP": 50,
 		"IND": 0
+	},
+	{
+		"state": "Arizona",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 52,
+		"GOP": 44,
+		"IND": 4
 	},
 	{
 		"state": "Arizona",
@@ -1508,6 +1598,16 @@
 	},
 	{
 		"state": "California",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 62,
+		"GOP": 35,
+		"IND": 3
+	},
+	{
+		"state": "California",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
 		"dates": "SEP 30-OCT 28, 2020",
@@ -1638,6 +1738,16 @@
 	},
 	{
 		"state": "Connecticut",
+		"pollster": "Sacred Heart University",
+		"officeType": "President",
+		"dates": "OCT 8-21, 2020",
+		"url": "https://www.sacredheart.edu/media/shu-media/institute-for-public-policy/GreatBlue--Sacred-Heart-University-Pioneer-Poll-Q3-Report-October-2020.pdf",
+		"DEM": 51,
+		"GOP": 26,
+		"IND": 0
+	},
+	{
+		"state": "Connecticut",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
 		"dates": "OCT 1-28, 2020",
@@ -1703,6 +1813,36 @@
 		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
 		"DEM": 87,
 		"GOP": 10,
+		"IND": 0
+	},
+	{
+		"state": "Florida",
+		"pollster": "Public Policy Polling*",
+		"officeType": "President",
+		"dates": "OCT 28-29, 2020",
+		"url": "https://www.climatepower2020.org/wp-content/uploads/sites/23/2020/10/Florida-Results.pdf",
+		"DEM": 52,
+		"GOP": 45,
+		"IND": 0
+	},
+	{
+		"state": "Florida",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 46,
+		"GOP": 51,
+		"IND": 3
+	},
+	{
+		"state": "Florida",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 16-26, 2020",
+		"url": "https://projects.fivethirtyeight.com/polls/20201030_FL_FSU.pdf",
+		"DEM": 48,
+		"GOP": 46,
 		"IND": 0
 	},
 	{
@@ -2054,6 +2194,16 @@
 	},
 	{
 		"state": "Georgia",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 51,
+		"GOP": 48,
+		"IND": 1
+	},
+	{
+		"state": "Georgia",
 		"pollster": "Public Policy Polling",
 		"officeType": "President",
 		"dates": "OCT 27-28, 2020",
@@ -2332,7 +2482,18 @@
 		"DEM": 40,
 		"GOP": 57,
 		"IND": 0
-	}, {
+	},
+	{
+		"state": "Illinois",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 54,
+		"GOP": 43,
+		"IND": 3
+	},
+	{
 		"state": "Illinois",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
@@ -2350,6 +2511,16 @@
 		"DEM": 58,
 		"GOP": 39,
 		"IND": 0
+	},
+	{
+		"state": "Illinois",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 42,
+		"GOP": 53,
+		"IND": 5
 	},
 	{
 		"state": "Indiana",
@@ -2840,6 +3011,26 @@
 		"DEM": 64,
 		"GOP": 29,
 		"IND": 0
+	},
+	{
+		"state": "Michigan",
+		"pollster": "Kiaer Research",
+		"officeType": "President",
+		"dates": "OCT 21-28, 2020",
+		"url": "https://kiaerresearch.com/oct-2020-poll",
+		"DEM": 54,
+		"GOP": 41,
+		"IND": 0
+	},
+	{
+		"state": "Michigan",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 59,
+		"GOP": 40,
+		"IND": 2
 	},
 	{
 		"state": "Michigan",
@@ -3635,6 +3826,16 @@
 	},
 	{
 		"state": "New Jersey",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 62,
+		"GOP": 38,
+		"IND": 0
+	},
+	{
+		"state": "New Jersey",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
 		"dates": "OCT 1-28, 2020",
@@ -3754,6 +3955,16 @@
 	},
 	{
 		"state": "New York",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 65,
+		"GOP": 33,
+		"IND": 2
+	},
+	{
+		"state": "New York",
 		"pollster": "SurveyMonkey",
 		"officeType": "President",
 		"dates": "OCT 1-28, 2020",
@@ -3781,6 +3992,36 @@
 		"DEM": 61,
 		"GOP": 29,
 		"IND": 0
+	},
+	{
+		"state": "North Carolina",
+		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+		"officeType": "President",
+		"dates": "OCT 28-29, 2020",
+		"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/north_carolina_trump_48_biden_462",
+		"DEM": 47,
+		"GOP": 48,
+		"IND": 0
+	},
+	{
+		"state": "North Carolina",
+		"pollster": "Cardinal Point Analytics (CardinalGPS)",
+		"officeType": "President",
+		"dates": "OCT 27-28, 2020",
+		"url": "https://nsjonline.com/wp-content/uploads/2020/10/NSJ-CPA-2020-10-29-POLL_Results.pdf",
+		"DEM": 46,
+		"GOP": 48,
+		"IND": 4
+	},
+	{
+		"state": "North Carolina",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 50,
+		"GOP": 48,
+		"IND": 2
 	},
 	{
 		"state": "North Carolina",
@@ -4087,6 +4328,16 @@
 	},
 	{
 		"state": "Ohio",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 44,
+		"GOP": 55,
+		"IND": 1
+	},
+	{
+		"state": "Ohio",
 		"pollster": "Quinnipiac University",
 		"officeType": "President",
 		"dates": "OCT 23-27, 2020",
@@ -4264,6 +4515,25 @@
 		"DEM": 56,
 		"GOP": 39,
 		"IND": 0
+	},
+	{
+		"state": "Pennsylvania",
+		"pollster": "Public Policy Polling*",
+		"officeType": "President",
+		"dates": "OCT 28-29, 2020",
+		"url": "https://www.climatepower2020.org/wp-content/uploads/sites/23/2020/10/Pennsylvania-Results.pdf",
+		"DEM": 52,
+		"GOP": 45,
+		"IND": 0
+	},
+	{
+		"state": "Pennsylvania",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 52,
+		"IND": 2
 	},
 	{
 		"state": "Pennsylvania",
@@ -4754,6 +5024,17 @@
 	},
 	{
 		"state": "Texas",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 48,
+		"GOP": 49,
+		"IND": 4
+	},
+
+	{
+		"state": "Texas",
 		"pollster": "RMG Research",
 		"officeType": "President",
 		"dates": "OCT 27-28, 2020",
@@ -4965,6 +5246,16 @@
 	},
 	{
 		"state": "Virginia",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 55,
+		"GOP": 44,
+		"IND": 1
+	},
+	{
+		"state": "Virginia",
 		"pollster": "Virginia Commonwealth University",
 		"officeType": "President",
 		"dates": "OCT 13-22, 2020",
@@ -5123,6 +5414,16 @@
 		"DEM": 39,
 		"GOP": 53,
 		"IND": 5
+	},
+	{
+		"state": "Wisconsin",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 54,
+		"GOP": 45,
+		"IND": 1
 	},
 	{
 		"state": "Wisconsin",
