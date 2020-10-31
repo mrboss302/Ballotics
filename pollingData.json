@@ -818,5 +818,534 @@
 		"DEM": 51,
 		"GOP": 40,
 		"IND": 2
+	},
+	 {
+		"state": "Alabama",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 37,
+		"GOP": 56,
+		"IND": 7
+	}, 
+        {
+		"state": "Alabama",
+		"pollster": "Auburn University at Montgomery",
+		"officeType": "President",
+		"dates": "OCT 23-28, 2020",
+		"url": "https://www.aum.edu/wp-content/uploads/2020/10/10.29.2020-AUM-Poll-Topline-Results.pdf",
+		"DEM": 39,
+		"GOP": 58,
+		"IND": 0
+	},
+    {
+		"state": "Alabama",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "OCT 1-28, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 38,
+		"GOP": 61,
+		"IND": 0
+	},
+	{
+		"state": "Alabama",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "OCT 1-28, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 41,
+		"GOP": 57,
+		"IND": 0
+	},
+	{
+		"state": "Alabama",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 26-OCT 23, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 38,
+		"GOP": 61,
+		"IND": 0
+	},
+	{
+		"state": "Alabama",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 26-OCT 23, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 41,
+		"GOP": 57,
+		"IND": 0
+	},
+	{
+		"state": "Alabama",
+		"pollster": "Moore Information*",
+		"officeType": "President",
+		"dates": "OCT 11-14, 2020",
+		"url": "https://www.al.com/news/2020/10/tuberville-campaign-tells-potential-donors-hes-fallen-behind-jones.html",
+		"DEM": 38,
+		"GOP": 55,
+		"IND": 0
+	},
+	{
+		"state": "Alabama",
+		"pollster": "Auburn University at Montgomery",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 3, 2020",
+		"url": "https://www.aum.edu/wp-content/uploads/2020/10/aum_poll_10042020_alabama1.pdf",
+		"DEM": 37,
+		"GOP": 57,
+		"IND": 0
+	},
+        	{
+		"state": "Alaska",
+		"pollster": "Gravis Marketing",
+		"officeType": "President",
+		"dates": "OCT 26-28, 2020",
+		"url": "https://www.scribd.com/document/482078454/Alaska-October-28-2020#from_embed",
+		"DEM": 43,
+		"GOP": 52,
+		"IND": 0
+	},
+    	{
+		"state": "Alaska",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "OCT 1-28, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 44,
+		"GOP": 54,
+		"IND": 0
+	},
+	{
+		"state": "Alaska",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "OCT 1-28, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 44,
+		"GOP": 53,
+		"IND": 0
+	},
+	{
+		"state": "Alaska",
+		"pollster": "Public Policy Polling*",
+		"officeType": "President",
+		"dates": "OCT 19-20, 2020",
+		"url": "https://www.protectourcare.org/wp-content/uploads/2020/10/Health-Care-Could-Be-Deciding-Factor-in-Close-Alaska-Senate-Race.pdf",
+		"DEM": 45,
+		"GOP": 50,
+		"IND": 0
+	},
+	{
+		"state": "Alaska",
+		"pollster": "Siena College/The New York Times Upshot",
+		"officeType": "President",
+		"dates": "OCT 9-14, 2020",
+		"url": "https://int.nyt.com/data/documenttools/ak100920-crosstabs1/722c27f1f660cf21/full.pdf",
+		"DEM": 39,
+		"GOP": 45,
+		"IND": 8
+	}, {
+		"state": "Alaska",
+		"pollster": "Patinkin Research Strategies",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 4, 2020",
+		"url": "https://twitter.com/Nat_Herz/status/1317942531120898048?s=20",
+		"DEM": 46,
+		"GOP": 49,
+		"IND": 0
+	},  
+    {
+		"state": "Alaska",
+		"pollster": "Alaska Survey Research",
+		"officeType": "President",
+		"dates": "SEP 25-OCT 4, 2020",
+		"url": "https://twitter.com/IvanMoore1/status/1313648391750971393?s=20",
+		"DEM": 46,
+		"GOP": 50,
+		"IND": 0
+	},
+                                              {
+		"state": "Arizona",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 52,
+		"GOP": 44,
+		"IND": 4
+	},
+        {
+		"state": "Arizona",
+		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+		"officeType": "President",
+		"dates": "OCT 27-29, 2020",
+		"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/arizona_trump_48_biden_45",
+		"DEM": 45,
+		"GOP": 49,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "Gravis Marketing",
+		"officeType": "President",
+		"dates": "OCT 26-28, 2020",
+		"url": "https://gravismarketing.com/2020-arizona-poll-results/",
+		"DEM": 48,
+		"GOP": 44,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "OCT 1-28, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 52,
+		"GOP": 46,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "OCT 1-28, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 53,
+		"GOP": 45,
+		"IND": 0
+	},
+        {
+		"state": "Arizona",
+		"pollster": "The Justice Collaborative Institute",
+		"officeType": "President",
+		"dates": "OCT 22-25, 2020",
+		"url": "https://tjcinstitute.com/wp-content/uploads/2020/10/From-President-and-Senate-to-County-Attorney-and-Sheriff-Democrats-Lead-Up-and-Down-the-Ballot-in-Arizona-1.pdf",
+		"DEM": 49,
+		"GOP": 43,
+		"IND": 0
+	},
+            {
+		"state": "Arizona",
+		"pollster": "Univision/University of Houston/Latino Decisions/North Star Opinion Research",
+		"officeType": "President",
+		"dates": "OCT 17-25, 2020",
+		"url": "https://st1.uvnimg.com/33/8f/ed1016da4a5fb16ec7e34cd5568a/univision-crosstabs-october-final.pdf",
+		"DEM": 50,
+		"GOP": 45,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "OH Predictive Insights",
+		"officeType": "President",
+		"dates": "OCT 22-25, 2020",
+		"url": "https://ohpredictive.com/press-releases/poll-biden-maintains-small-lead-in-arizona/",
+		"DEM": 49,
+		"GOP": 46,
+		"IND": 3
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "Patinkin Research Strategies*",
+		"officeType": "President",
+		"dates": "OCT 21-24, 2020",
+		"url": "https://projects.fivethirtyeight.com/polls/20201027_AZ_Patinkin.pdf",
+		"DEM": 52,
+		"GOP": 45,
+		"IND": 0
+	}, 
+        {
+		"state": "Arizona",
+		"pollster": "Patinkin Research Strategies*",
+		"officeType": "President",
+		"dates": "OCT 1-3, 2020",
+		"url": "https://projects.fivethirtyeight.com/polls/20201027_AZ_Patinkin.pdf",
+		"DEM": 50,
+		"GOP": 46,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "Susquehanna Polling & Research Inc.",
+		"officeType": "President",
+		"dates": "OCT 19-22, 2020",
+		"url": "https://overland.amgreatness.com/app/uploads/2020/10/Toplines-ArizonaStatewide-CFAG-Oct2020.pdf",
+		"DEM": 46,
+		"GOP": 47,
+		"IND": 4
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "Basswood Research*",
+		"officeType": "President",
+		"dates": "OCT 19-22, 2020",
+		"url": "https://www.americanactionforum.org/insight/arizona-policy-priorities-and-the-election-october-update/",
+		"DEM": 48,
+		"GOP": 48,
+		"IND": 2
+	},
+    {
+		"state": "Arizona",
+		"pollster": "Basswood Research*",
+		"officeType": "President",
+		"dates": "OCT 19-22, 2020",
+		"url": "https://www.americanactionforum.org/insight/arizona-policy-priorities-and-the-election-october-update/",
+		"DEM": 48,
+		"GOP": 49,
+		"IND": 0
+	},
+    {
+		"state": "Arizona",
+		"pollster": "Basswood Research*",
+		"officeType": "President",
+		"dates": "OCT 19-22, 2020",
+		"url": "https://www.americanactionforum.org/insight/arizona-policy-priorities-and-the-election-october-update/",
+		"DEM": 47,
+		"GOP": 48,
+		"IND": 3
+	},
+    {
+		"state": "Arizona",
+		"pollster": "Morning Consult",
+		"officeType": "President",
+		"dates": "OCT 11-20, 2020",
+		"url": "https://morningconsult.com/form/2020-u-s-election-tracker/",
+		"DEM": 47,
+		"GOP": 48,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 14-21, 2020",
+		"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-10/topline_reuters_arizona_state_poll_w4_10_21_2020.pdf",
+		"DEM": 50,
+		"GOP": 46,
+		"IND": 1
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 14-21, 2020",
+		"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-10/topline_reuters_arizona_state_poll_w4_10_21_2020.pdf",
+		"DEM": 49,
+		"GOP": 46,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 22-OCT 20, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 53,
+		"GOP": 45,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 22-OCT 20, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 54,
+		"GOP": 44,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+		"officeType": "President",
+		"dates": "OCT 18-19, 2020",
+		"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/arizona_biden_48_trump_46",
+		"DEM": 48,
+		"GOP": 46,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "Change Research",
+		"officeType": "President",
+		"dates": "OCT 16-19, 2020",
+		"url": "https://www.cnbc.com/2020/10/20/voters-want-senate-to-choose-coronavirus-stimulus-over-supreme-court.html",
+		"DEM": 51,
+		"GOP": 45,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "RMG Research",
+		"officeType": "President",
+		"dates": "OCT 14-19, 2020",
+		"url": "http://politicaliq.com/2020/10/20/az-biden-47-trump-46/",
+		"DEM": 47,
+		"GOP": 46,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "Data Orbital",
+		"officeType": "President",
+		"dates": "OCT 16-18, 2020",
+		"url": "https://www.dataorbital.com/the-blog/breaking-in-arizona-presidential-and-us-races-still-tight-two-weeks-out-from-election-day",
+		"DEM": 47,
+		"GOP": 42,
+		"IND": 3
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 21-OCT 18, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 53,
+		"GOP": 45,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "YouGov",
+		"officeType": "President",
+		"dates": "OCT 13-16, 2020",
+		"url": "https://drive.google.com/file/d/1j9uJnxfT1x8spYhW2QmAq6OkSMd06wJG/view",
+		"DEM": 50,
+		"GOP": 47,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "Monmouth University",
+		"officeType": "President",
+		"dates": "OCT 9-13, 2020",
+		"url": "https://www.monmouth.edu/polling-institute/documents/monmouthpoll_az_101520.pdf/",
+		"DEM": 49,
+		"GOP": 47,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "OH Predictive Insights",
+		"officeType": "President",
+		"dates": "OCT 4-8, 2020",
+		"url": "https://f.hubspotusercontent40.net/hubfs/7453540/201005_AZPOP/PR_Arizona%20Public%20Opinion%20Pulse%20Toplines%20and%20Crosstabs%20(1).pdf?utm_medium=email&_hsmi=97443604&_hsenc=p2ANqtz-8YKdQGdcjhrShEJfsBc7JTFdlklT1RodoeG-nMmCGHWRDUFwNlhUCpC0Qyjh4DQGGGyPyUZaS7ikUHptXoT6cVk8q7kfO-4hRg1rAyzImJPZbVBeA&utm_content=97443604&utm_source=hs_email",
+		"DEM": 50,
+		"GOP": 47,
+		"IND": 0
+	}, 
+    {
+		"state": "Arizona",
+		"pollster": "Ipsos",
+		"officeType": "President",
+		"dates": "OCT 7-14, 2020",
+		"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-10/topline_reuters_arizona_state_poll_w3_10_14_2020_1.pdf",
+		"DEM": 50,
+		"GOP": 46,
+		"IND": 0
+	}, 
+    {
+		"state": "Arkansas",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "OCT 1-28, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 39,
+		"GOP": 60,
+		"IND": 0
+	}, 
+    {
+		"state": "Arkansas",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "OCT 1-28, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 40,
+		"GOP": 58,
+		"IND": 0
+	}, 
+    {
+		"state": "Arkansas",
+		"pollster": "University of Arkansas",
+		"officeType": "President",
+		"dates": "OCT 9-21, 2020",
+		"url": "https://fulbright.uark.edu/departments/political-science/partners/arkpoll/2020-summary-report.pdf",
+		"DEM": 32,
+		"GOP": 65,
+		"IND": 0
+	}, 
+    {
+		"state": "Arkansas",
+		"pollster": "Hendrix College",
+		"officeType": "President",
+		"dates": "OCT 11-13, 2020",
+		"url": "https://talkbusiness.net/2020/10/trump-cotton-on-cruise-control-for-re-election/",
+		"DEM": 34,
+		"GOP": 58,
+		"IND": 3
+	}, 
+    {
+		"state": "California",
+		"pollster": "Swayable",
+		"officeType": "President",
+		"dates": "OCT 23-26, 2020",
+		"url": "https://www.swayable.com/polls/2020-10-28.html",
+		"DEM": 62,
+		"GOP": 35,
+		"IND": 3
+	}, 
+    {
+		"state": "California",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 28, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 61,
+		"GOP": 37,
+		"IND": 0
+	}, 
+    {
+		"state": "California",
+		"pollster": "SurveyMonkey",
+		"officeType": "President",
+		"dates": "SEP 30-OCT 28, 2020",
+		"url": "https://www.tableau.com/data-insights/us-election-2020/candidate-preference",
+		"DEM": 61,
+		"GOP": 36,
+		"IND": 0
+	},
+    {
+		"state": "California",
+		"pollster": "University of California, Berkeley",
+		"officeType": "President",
+		"dates": "OCT 16-21, 2020",
+		"url": "https://www.latimes.com/politics/story/2020-10-27/biden-headed-for-historic-margin-in-california-poll-shows",
+		"DEM": 65,
+		"GOP": 29,
+		"IND": 0
+	},
+    {
+		"state": "California",
+		"pollster": "Public Policy Institute of California",
+		"officeType": "President",
+		"dates": "OCT 9-18, 2020",
+		"url": "https://www.ppic.org/wp-content/uploads/crosstabs-likely-voters-1020.pdf",
+		"DEM": 58,
+		"GOP": 32,
+		"IND": 5
+	}, 
+    {
+		"state": "California",
+		"pollster": "SurveyUSA",
+		"officeType": "President",
+		"dates": "SEP 26–28, 2020",
+		"url": "http://www.surveyusa.com/client/PollReport.aspx?g=d15fdb0d-701d-495c-a67f-e17bfcc3bf92",
+		"DEM": 59,
+		"GOP": 32,
+		"IND": 0
 	}
 	]
