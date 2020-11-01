@@ -34,6 +34,13 @@
         "DEM": 0,
         "GOP": 0
 		
+	},
+        {
+		"state": "Colorado",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
 	}, 
     {
 		"state": "Connecticut",
