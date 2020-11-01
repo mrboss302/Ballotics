@@ -2,8 +2,353 @@
     
     {
 		"state": "Alabama",
-		"color": "dGrey"
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
 		
 	}, 
+    {
+		"state": "Alaska",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Arizona",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Arkansas",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "California",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Connecticut",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Delaware",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Florida",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Georgia",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Hawaii",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Idaho",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Illinois",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Indiana",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Iowa",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Kansas",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Kentucky",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Louisiana",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Maine",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Maryland",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Massachusetts",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	},
+        {
+		"state": "Michigan",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Minnesota",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Mississippi",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Missouri",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Montana",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Nebraska",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Nevada",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "New Hampshire",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "New Jersey",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "New Mexico",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "New York",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "North Carolina",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "North Dakota",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Ohio",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Oklahoma",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Oregon",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Pennsylvania",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Rhode Island",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "South Carolina",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "South Dakota",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	},
+      {
+		"state": "Tennessee",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Texas",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Utah",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Vermont",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Virginia",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Washington",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "West Virginia",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+        {
+		"state": "Wisconsin",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}, 
+    {
+		"state": "Wyoming",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	},
+        {
+		"state": "Washington, D.C.",
+		"color": "dGrey",
+        "DEM": 0,
+        "GOP": 0
+		
+	}
     
 ]
