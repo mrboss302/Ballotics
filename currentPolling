@@ -1,5 +1,25 @@
 	[{
 			"state": "National",
+			"pollster": "Research Co.",
+			"officeType": "President",
+			"dates": "OCT 31-NOV 2, 2020",
+			"url": "https://researchco.ca/2020/11/02/trump-vs-biden-6/",
+			"DEM": 50,
+			"GOP": 42,
+			"IND": 2
+		},
+		{
+			"state": "National",
+			"pollster": "John Zogby Strategies/EMI Research Solutions",
+			"officeType": "President",
+			"dates": "NOV 1, 2020",
+			"url": "https://johnzogbystrategies.com/wp-content/uploads/2020/11/X1-Weighted-110120.pdf",
+			"DEM": 48,
+			"GOP": 42,
+			"IND": 6
+		},
+		{
+			"state": "National",
 			"pollster": "YouGov",
 			"officeType": "President",
 			"dates": "OCT 30-NOV 1, 2020",
@@ -7,7 +27,78 @@
 			"DEM": 53,
 			"GOP": 43,
 			"IND": 0
-		}, {
+		},
+		{
+			"state": "National",
+			"pollster": "YouGov",
+			"officeType": "President",
+			"dates": "OCT 30-NOV 1, 2020",
+			"url": "https://news.yahoo.com/yougov-poll-xr-pretap-nov1-031758221.html",
+			"DEM": 53,
+			"GOP": 43,
+			"IND": 0
+		},
+		{
+			"state": "National",
+			"pollster": "Quinnipiac University",
+			"officeType": "President",
+			"dates": "OCT 28-NOV 1, 2020",
+			"url": "https://poll.qu.edu/florida/release-detail?ReleaseID=3683",
+			"DEM": 50,
+			"GOP": 39,
+			"IND": 0
+		},
+		{
+			"state": "National",
+			"pollster": "Redfield & Wilton Strategies",
+			"officeType": "President",
+			"dates": "OCT 30-NOV 1, 2020",
+			"url": "https://redfieldandwiltonstrategies.com/us-voting-intention-30-october-2020-1-november-2020/",
+			"DEM": 53,
+			"GOP": 41,
+			"IND": 2
+		},
+		{
+			"state": "National",
+			"pollster": "Qriously",
+			"officeType": "President",
+			"dates": "OCT 29-NOV 1, 2020",
+			"url": "https://www.brandwatch.com/email/us-election-bulletin-010/?mkt_tok=eyJpIjoiTW1Rd05EVXdPVEpqTXpGbCIsInQiOiJhc3BneXpUREpzbzIyREswWTlTNWdPREtuWWZIa05nMnRGaEVjZ0hEK3p4T2J5Tk9IYldsc2VZUEVCYXZ4Y0l1Nk5JNlJETVBmS2loZWlRQzMxSjVaalNOV2xTaGgwSXNyaTBBS1RxRHlxdVI5aGVoNXM2TEJrUDh5MHVWQWZWRSJ9",
+			"DEM": 52,
+			"GOP": 41,
+			"IND": 3
+		},
+		{
+			"state": "National",
+			"pollster": "Rasmussen Reports/Pulse Opinion Research",
+			"officeType": "President",
+			"dates": "OCT 28-NOV 1, 2020",
+			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/white_house_watch_nov02",
+			"DEM": 48,
+			"GOP": 47,
+			"IND": 0
+		},
+		{
+			"state": "National",
+			"pollster": "IBD/TIPP",
+			"officeType": "President",
+			"dates": "OCT 28-NOV 1, 2020",
+			"url": "https://www.investors.com/news/trump-vs-biden-poll-race-tight-ibd-tipp-presidential-poll/",
+			"DEM": 50,
+			"GOP": 45,
+			"IND": 0
+		},
+		{
+			"state": "National",
+			"pollster": "IBD/TIPP",
+			"officeType": "President",
+			"dates": "OCT 28-NOV 1, 2020",
+			"url": "https://www.investors.com/news/trump-vs-biden-poll-race-tight-ibd-tipp-presidential-poll/",
+			"DEM": 49,
+			"GOP": 46,
+			"IND": 3
+		},
+		{
 			"state": "National",
 			"pollster": "USC Dornsife",
 			"officeType": "President",
@@ -25,7 +116,8 @@
 			"DEM": 54,
 			"GOP": 42,
 			"IND": 0
-		}, {
+		},
+		{
 			"state": "National",
 			"pollster": "USC Dornsife",
 			"officeType": "President",
@@ -34,7 +126,38 @@
 			"DEM": 52,
 			"GOP": 43,
 			"IND": 0
-		}, {
+		},
+		{
+			"state": "National",
+			"pollster": "AYTM",
+			"officeType": "President",
+			"dates": "OCT 30-31, 2020",
+			"url": "https://blog.aspiration.com/divided-over-the-election-but-ready-to-move-to-clean-money/",
+			"DEM": 48,
+			"GOP": 39,
+			"IND": 0
+		},
+		{
+			"state": "National",
+			"pollster": "SurveyUSA",
+			"officeType": "President",
+			"dates": "OCT 29-31, 2020",
+			"url": "https://twitter.com/meganpratz/status/1323319881765441547",
+			"DEM": 52,
+			"GOP": 44,
+			"IND": 0
+		},
+		{
+			"state": "National",
+			"pollster": "RMG Research",
+			"officeType": "President",
+			"dates": "OCT 29-31, 2020",
+			"url": "https://justthenews.com/politics-policy/polling/one-day-election-biden-still-leads-trump-national-poll",
+			"DEM": 51,
+			"GOP": 44,
+			"IND": 2
+		},
+		{
 			"state": "National",
 			"pollster": "Morning Consult",
 			"officeType": "President",
@@ -88,25 +211,8 @@
 			"DEM": 51,
 			"GOP": 41,
 			"IND": 0
-		}, {
-			"state": "National",
-			"pollster": "IBD/TIPP",
-			"officeType": "President",
-			"dates": "OCT 27-31, 2020",
-			"url": "https://www.investors.com/news/trump-vs-biden-poll-donald-trump-last-hopes-joe-biden-strength-ibd-tipp-presidential-poll/",
-			"DEM": 50,
-			"GOP": 44,
-			"IND": 0
-		}, {
-			"state": "National",
-			"pollster": "IBD/TIPP",
-			"officeType": "President",
-			"dates": "OCT 27-31, 2020",
-			"url": "https://www.investors.com/news/trump-vs-biden-poll-donald-trump-last-hopes-joe-biden-strength-ibd-tipp-presidential-poll/",
-			"DEM": 49,
-			"GOP": 44,
-			"IND": 4
-		}, {
+		},
+		{
 			"state": "National",
 			"pollster": "Angus Reid Global",
 			"officeType": "President",
@@ -1261,7 +1367,58 @@
 			"DEM": 46,
 			"GOP": 50,
 			"IND": 0
-		}, {
+		},
+		{
+			"state": "Arizona",
+			"pollster": "Ipsos",
+			"officeType": "President",
+			"dates": "OCT 27-NOV 2, 2020",
+			"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-11/topline_reuters_arizona_state_poll_w6_11_2_2020.pdf",
+			"DEM": 50,
+			"GOP": 47,
+			"IND": 2
+		},
+		{
+			"state": "Arizona",
+			"pollster": "Ipsos",
+			"officeType": "President",
+			"dates": "OCT 27-NOV 2, 2020",
+			"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-11/topline_reuters_arizona_state_poll_w6_11_2_2020.pdf",
+			"DEM": 50,
+			"GOP": 48,
+			"IND": 0
+		},
+		{
+			"state": "Arizona",
+			"pollster": "Marist College",
+			"officeType": "President",
+			"dates": "OCT 29-NOV 1, 2020",
+			"url": "http://maristpoll.marist.edu/wp-content/uploads/2020/11/NBC-News_Marist-Poll_AZ-Likely-Voters_NOS-and-Tables_202011012357.pdf#page=3",
+			"DEM": 48,
+			"GOP": 47,
+			"IND": 0
+		},
+		{
+			"state": "Arizona",
+			"pollster": "Marist College",
+			"officeType": "President",
+			"dates": "OCT 29-NOV 1, 2020",
+			"url": "http://maristpoll.marist.edu/wp-content/uploads/2020/11/NBC-News_Marist-Poll_AZ-Likely-Voters_NOS-and-Tables_202011012357.pdf#page=3",
+			"DEM": 48,
+			"GOP": 48,
+			"IND": 0
+		},
+		{
+			"state": "Arizona",
+			"pollster": "Data Orbital",
+			"officeType": "President",
+			"dates": "OCT 28-30, 2020",
+			"url": "https://www.dataorbital.com/the-blog/breaking-in-arizona-presidential-and-us-senate-races-shift-one-day-before-election-day",
+			"DEM": 46,
+			"GOP": 45,
+			"IND": 3
+		},
+		{
 			"state": "Arizona",
 			"pollster": "Morning Consult",
 			"officeType": "President",
@@ -1270,7 +1427,8 @@
 			"DEM": 48,
 			"GOP": 46,
 			"IND": 0
-		}, {
+		},
+		{
 			"state": "Arizona",
 			"pollster": "Data for Progress",
 			"officeType": "President",
@@ -1603,7 +1761,18 @@
 			"DEM": 34,
 			"GOP": 58,
 			"IND": 3
-		}, {
+		},
+		{
+			"state": "California",
+			"pollster": "David Binder Research",
+			"officeType": "President",
+			"dates": "OCT 28-NOV 1, 2020",
+			"url": "https://twitter.com/davidbinder/status/1323333935133302785?s=20",
+			"DEM": 62,
+			"GOP": 31,
+			"IND": 0
+		},
+		{
 			"state": "California",
 			"pollster": "Swayable",
 			"officeType": "President",
@@ -1612,7 +1781,8 @@
 			"DEM": 62,
 			"GOP": 35,
 			"IND": 3
-		}, {
+		},
+		{
 			"state": "California",
 			"pollster": "SurveyMonkey",
 			"officeType": "President",
@@ -1864,7 +2034,58 @@
 			"DEM": 87,
 			"GOP": 10,
 			"IND": 0
-		}, {
+		},
+		{
+			"state": "Florida",
+			"pollster": "AYTM",
+			"officeType": "President",
+			"dates": "OCT 30-NOV 1, 2020",
+			"url": "https://blog.aspiration.com/divided-over-the-election-but-ready-to-move-to-clean-money/",
+			"DEM": 45,
+			"GOP": 43,
+			"IND": 0
+		},
+		{
+			"state": "Florida",
+			"pollster": "Quinnipiac University",
+			"officeType": "President",
+			"dates": "OCT 28-NOV 1, 2020",
+			"url": "https://poll.qu.edu/florida/release-detail?ReleaseID=3683",
+			"DEM": 47,
+			"GOP": 42,
+			"IND": 0
+		},
+		{
+			"state": "Florida",
+			"pollster": "Ipsos",
+			"officeType": "President",
+			"dates": "OCT 27-NOV 1, 2020",
+			"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-11/topline_reuters_florida_state_poll_w6_11_02_2020_.pdf",
+			"DEM": 50,
+			"GOP": 46,
+			"IND": 2
+		},
+		{
+			"state": "Florida",
+			"pollster": "Ipsos",
+			"officeType": "President",
+			"dates": "OCT 27-NOV 1, 2020",
+			"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-11/topline_reuters_florida_state_poll_w6_11_02_2020_.pdf",
+			"DEM": 51,
+			"GOP": 47,
+			"IND": 0
+		},
+		{
+			"state": "Florida",
+			"pollster": "Frederick Polls",
+			"officeType": "President",
+			"dates": "OCT 30-31, 2020",
+			"url": "https://competeeverywhere.com/2020/11/fresh-polling-shows-biden-poised-for-victory/",
+			"DEM": 51,
+			"GOP": 49,
+			"IND": 0
+		},
+		{
 			"state": "Florida",
 			"pollster": "Morning Consult",
 			"officeType": "President",
@@ -1873,7 +2094,8 @@
 			"DEM": 52,
 			"GOP": 45,
 			"IND": 0
-		}, {
+		},
+		{
 			"state": "Florida",
 			"pollster": "Susquehanna Polling & Research Inc.",
 			"officeType": "President",
@@ -2314,7 +2536,28 @@
 			"DEM": 48,
 			"GOP": 46,
 			"IND": 2
-		}, {
+		},
+		{
+			"state": "Georgia",
+			"pollster": "Landmark Communications",
+			"officeType": "President",
+			"dates": "NOV 1, 2020",
+			"url": "https://www.realclearpolitics.com/docs/2020/FINAL_WSBTV_Landmark_Poll_Georgia_PresSenate_Nov_1_2020.pdf",
+			"DEM": 46,
+			"GOP": 50,
+			"IND": 3
+		},
+		{
+			"state": "Georgia",
+			"pollster": "AYTM",
+			"officeType": "President",
+			"dates": "OCT 30-NOV 1, 2020",
+			"url": "https://blog.aspiration.com/divided-over-the-election-but-ready-to-move-to-clean-money/",
+			"DEM": 52,
+			"GOP": 48,
+			"IND": 0
+		},
+		{
 			"state": "Georgia",
 			"pollster": "Morning Consult",
 			"officeType": "President",
@@ -2323,7 +2566,8 @@
 			"DEM": 49,
 			"GOP": 46,
 			"IND": 0
-		}, {
+		},
+		{
 			"state": "Georgia",
 			"pollster": "InsiderAdvantage",
 			"officeType": "President",
@@ -2665,7 +2909,28 @@
 			"DEM": 39,
 			"GOP": 58,
 			"IND": 0
-		}, {
+		},
+		{
+			"state": "Illinois",
+			"pollster": "Research Co.",
+			"officeType": "President",
+			"dates": "OCT 31-NOV 1, 2020",
+			"url": "https://researchco.ca/2020/11/02/us2020-eight-states-uspoli/",
+			"DEM": 55,
+			"GOP": 38,
+			"IND": 0
+		},
+		{
+			"state": "Illinois",
+			"pollster": "Victory Research",
+			"officeType": "President",
+			"dates": "OCT 26-NOV 1, 2020",
+			"url": "https://projects.fivethirtyeight.com/polls/20201102_IL_victoryresearch.pdf",
+			"DEM": 54,
+			"GOP": 38,
+			"IND": 0
+		},
+		{
 			"state": "Illinois",
 			"pollster": "Swayable",
 			"officeType": "President",
@@ -2674,7 +2939,8 @@
 			"DEM": 54,
 			"GOP": 43,
 			"IND": 3
-		}, {
+		},
+		{
 			"state": "Illinois",
 			"pollster": "SurveyMonkey",
 			"officeType": "President",
@@ -3205,7 +3471,18 @@
 			"DEM": 61,
 			"GOP": 30,
 			"IND": 4
-		}, {
+		},
+		{
+			"state": "Massachusetts",
+			"pollster": "MassINC Polling Group",
+			"officeType": "President",
+			"dates": "OCT 23-30, 2020",
+			"url": "https://static1.squarespace.com/static/5eb9fa2f8ac4df11937f6a49/t/5fa088d3ed792d738727353a/1604356307884/Crosstabs+2020+11+MA+Statewide.pdf",
+			"DEM": 62,
+			"GOP": 28,
+			"IND": 0
+		},
+		{
 			"state": "Massachusetts",
 			"pollster": "SurveyMonkey",
 			"officeType": "President",
@@ -3214,7 +3491,8 @@
 			"DEM": 68,
 			"GOP": 29,
 			"IND": 0
-		}, {
+		},
+		{
 			"state": "Massachusetts",
 			"pollster": "SurveyMonkey",
 			"officeType": "President",
@@ -3223,7 +3501,8 @@
 			"DEM": 68,
 			"GOP": 29,
 			"IND": 0
-		}, {
+		},
+		{
 			"state": "Massachusetts",
 			"pollster": "YouGov",
 			"officeType": "President",
@@ -4357,7 +4636,28 @@
 			"DEM": 61,
 			"GOP": 29,
 			"IND": 0
-		}, {
+		},
+		{
+			"state": "North Carolina",
+			"pollster": "Ipsos",
+			"officeType": "President",
+			"dates": "OCT 27-NOV 1, 2020",
+			"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-11/topline_reuters_north_carolina_state_poll_w6_11_02_2020_.pdf",
+			"DEM": 49,
+			"GOP": 48,
+			"IND": 3
+		},
+		{
+			"state": "North Carolina",
+			"pollster": "Ipsos",
+			"officeType": "President",
+			"dates": "OCT 27-NOV 1, 2020",
+			"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2020-11/topline_reuters_north_carolina_state_poll_w6_11_02_2020_.pdf",
+			"DEM": 50,
+			"GOP": 48,
+			"IND": 0
+		},
+		{
 			"state": "North Carolina",
 			"pollster": "Frederick Polls",
 			"officeType": "President",
@@ -4366,7 +4666,8 @@
 			"DEM": 51,
 			"GOP": 49,
 			"IND": 0
-		}, {
+		},
+		{
 			"state": "North Carolina",
 			"pollster": "Morning Consult",
 			"officeType": "President",
@@ -4798,7 +5099,8 @@
 			"DEM": 37,
 			"GOP": 51,
 			"IND": 0
-		}, {
+		},
+		{
 			"state": "Ohio",
 			"pollster": "Research Co.",
 			"officeType": "President",
@@ -4807,7 +5109,38 @@
 			"DEM": 47,
 			"GOP": 47,
 			"IND": 0
-		}, {
+		},
+		{
+			"state": "Ohio",
+			"pollster": "Rasmussen Reports/Pulse Opinion Research",
+			"officeType": "President",
+			"dates": "OCT 31-NOV 1, 2020",
+			"url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2020/ohio_trump_48_biden_45",
+			"DEM": 45,
+			"GOP": 49,
+			"IND": 0
+		},
+		{
+			"state": "Ohio",
+			"pollster": "Quinnipiac University",
+			"officeType": "President",
+			"dates": "OCT 28-NOV 1, 2020",
+			"url": "https://poll.qu.edu/florida/release-detail?ReleaseID=3683",
+			"DEM": 47,
+			"GOP": 43,
+			"IND": 0
+		},
+		{
+			"state": "Ohio",
+			"pollster": "AtlasIntel",
+			"officeType": "President",
+			"dates": "OCT 29-30, 2020",
+			"url": "https://projects.fivethirtyeight.com/polls/20201102_OH_AtlasIntel.pdf",
+			"DEM": 47,
+			"GOP": 50,
+			"IND": 0
+		},
+		{
 			"state": "Ohio",
 			"pollster": "Trafalgar Group*",
 			"officeType": "President",
@@ -5032,7 +5365,18 @@
 			"DEM": 56,
 			"GOP": 39,
 			"IND": 0
-		}, {
+		},
+		{
+			"state": "Pennsylvania",
+			"pollster": "Susquehanna Polling & Research Inc.",
+			"officeType": "President",
+			"dates": "NOV 1-2, 2020",
+			"url": "https://www.realclearpolitics.com/docs/2020/SusquehannaPolling-PAStatewidePoll-Oct2020.pdf",
+			"DEM": 48,
+			"GOP": 49,
+			"IND": 1
+		},
+		{
 			"state": "Pennsylvania",
 			"pollster": "Research Co.",
 			"officeType": "President",
@@ -5041,7 +5385,8 @@
 			"DEM": 50,
 			"GOP": 44,
 			"IND": 0
-		}, {
+		},
+		{
 			"state": "Pennsylvania",
 			"pollster": "AYTM",
 			"officeType": "President",
@@ -5050,7 +5395,28 @@
 			"DEM": 51,
 			"GOP": 49,
 			"IND": 0
-		}, {
+		},
+		{
+			"state": "Pennsylvania",
+			"pollster": "Marist College",
+			"officeType": "President",
+			"dates": "OCT 29-NOV 1, 2020",
+			"url": "http://maristpoll.marist.edu/wp-content/uploads/2020/11/NBC-News_Marist-Poll_PA-Adults-and-Registered-Voters_NOS-and-Tables_20211012452.pdf#page=3",
+			"DEM": 50,
+			"GOP": 46,
+			"IND": 0
+		},
+		{
+			"state": "Pennsylvania",
+			"pollster": "Marist College",
+			"officeType": "President",
+			"dates": "OCT 29-NOV 1, 2020",
+			"url": "http://maristpoll.marist.edu/wp-content/uploads/2020/11/NBC-News_Marist-Poll_PA-Adults-and-Registered-Voters_NOS-and-Tables_20211012452.pdf#page=3",
+			"DEM": 51,
+			"GOP": 46,
+			"IND": 0
+		},
+		{
 			"state": "Pennsylvania",
 			"pollster": "Monmouth University",
 			"officeType": "President",
