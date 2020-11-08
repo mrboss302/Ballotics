@@ -3,358 +3,307 @@
     {
 		"state": "Alabama",
 		"color": "Republican",
-        "DEM": 0,
-        "GOP": 0
+      
 		
 	}, 
     {
 		"state": "Alaska",
-		"color": "Republican",
-        "DEM": 0,
-        "GOP": 0
+		"color": "dGrey",
+      
 		
 	}, 
         {
 		"state": "Arizona",
-		"color": "Republican",
-        "DEM": 0,
-        "GOP": 0
+		"color": "dGrey",
+      
 		
 	}, 
     {
 		"state": "Arkansas",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
         {
 		"state": "California",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	},
         {
 		"state": "Colorado",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
     {
 		"state": "Connecticut",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
         {
 		"state": "Delaware",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
     {
 		"state": "Florida",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
         {
 		"state": "Georgia",
 		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+      
 		
 	}, 
     {
 		"state": "Hawaii",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
         {
 		"state": "Idaho",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
     {
 		"state": "Illinois",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
         {
 		"state": "Indiana",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
     {
 		"state": "Iowa",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
         {
 		"state": "Kansas",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
     {
 		"state": "Kentucky",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
         {
 		"state": "Louisiana",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
     {
 		"state": "Maine",
 		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+      
 		
 	}, 
         {
 		"state": "Maryland",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
     {
 		"state": "Massachusetts",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	},
         {
 		"state": "Michigan",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
     {
 		"state": "Minnesota",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
         {
 		"state": "Mississippi",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
     {
 		"state": "Missouri",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
         {
 		"state": "Montana",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
     {
 		"state": "Nebraska",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
         {
 		"state": "Nevada",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
     {
 		"state": "New Hampshire",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
         {
 		"state": "New Jersey",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
     {
 		"state": "New Mexico",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
         {
 		"state": "New York",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
     {
 		"state": "North Carolina",
 		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+      
 		
 	}, 
         {
 		"state": "North Dakota",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
     {
 		"state": "Ohio",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
         {
 		"state": "Oklahoma",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
     {
 		"state": "Oregon",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
         {
 		"state": "Pennsylvania",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
     {
 		"state": "Rhode Island",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
         {
 		"state": "South Carolina",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
     {
 		"state": "South Dakota",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	},
       {
 		"state": "Tennessee",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
         {
 		"state": "Texas",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
     {
 		"state": "Utah",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
         {
 		"state": "Vermont",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
     {
 		"state": "Virginia",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
         {
 		"state": "Washington",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
     {
 		"state": "West Virginia",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	}, 
         {
 		"state": "Wisconsin",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Democratic",
+      
 		
 	}, 
     {
 		"state": "Wyoming",
-		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+		"color": "Republican",
+      
 		
 	},
         {
 		"state": "Washington, D.C.",
 		"color": "dGrey",
-        "DEM": 0,
-        "GOP": 0
+      
 		
 	}
     
