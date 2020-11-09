@@ -110,7 +110,13 @@
 	}, 
     {
 		"state": "Maine",
-		"color": "dGrey",
+		"color": "Democratic",
+      
+		
+	}, 
+	    {
+		"state": "Maine-2",
+		"color": "Republican",
       
 		
 	}, 
@@ -159,6 +165,12 @@
     {
 		"state": "Nebraska",
 		"color": "Republican",
+      
+		
+	}, 
+	    {
+		"state": "Nebraska-2",
+		"color": "Democratic",
       
 		
 	}, 
