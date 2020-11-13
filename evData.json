@@ -8,13 +8,13 @@
 	}, 
     {
 		"state": "Alaska",
-		"color": "dGrey",
+		"color": "Republican",
       
 		
 	}, 
         {
 		"state": "Arizona",
-		"color": "dGrey",
+		"color": "Democratic",
       
 		
 	}, 
@@ -56,7 +56,7 @@
 	}, 
         {
 		"state": "Georgia",
-		"color": "dGrey",
+		"color": "Democratic",
       
 		
 	}, 
@@ -206,7 +206,7 @@
 	}, 
     {
 		"state": "North Carolina",
-		"color": "dGrey",
+		"color": "Republican",
       
 		
 	}, 
