@@ -1,0 +1,9 @@
+[
+{"year": 2000,"state": "Alabama","county": "Autauga","office": "President","candidate": "Al Gore","party": "democrat","candidatevotes": 4942,"totalvotes": 17208,"version": 20191203
+},
+{"year": 2000,"state": "Alabama","county": "Autauga","office": "President","candidate": "George W. Bush","party": "republican","candidatevotes": 11993,"totalvotes": 17208,"version": 20191203
+},
+{"year": 2000,"state": "Alabama","county": "Autauga","office": "President","candidate": "Ralph Nader","party": "green","candidatevotes": 160,"totalvotes": 17208,"version": 20191203
+},
+{"year": 2000,"state": "Alabama","county": "Autauga","office": "President","candidate": "Other","party": "NA","candidatevotes": 113,"totalvotes": 17208,"version": 20191203
+}]
