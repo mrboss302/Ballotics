@@ -1,0 +1,55 @@
+   [ {
+			"state": "Georgia",
+			"pollster": "Emerson College",
+			"officeType": "Senate-1",
+			"dates": "DEC. 14-16, 2020",
+			"url": "https://emersonpolling.reportablenews.com/pr/georgia-2020-incumbent-republicans-with-slight-advantages-in-senate-run-offs",
+			"Perdue": 51,
+			"Ossoff": 49
+		},
+        {
+			"state": "Georgia",
+			"pollster": "Wick Research",
+			"officeType": "Senate-1",
+			"dates": "DEC. 10-14, 2020",
+			"url": "https://medium.com/wick-research/ga-senate-runoff-poll-results-a6635c8cd3cf",
+			"Perdue": 51,
+			"Ossoff": 47
+		},
+        {
+			"state": "Georgia",
+			"pollster": "InsiderAdvantage",
+			"officeType": "Senate-1",
+			"dates": "DEC. 14, 2020",
+			"url": "https://insideradvantage.com/wp-content/uploads/2020/12/Runoff-Poll-Crosstabs.pdf",
+			"Perdue": 49,
+			"Ossoff": 48
+		},
+        {
+			"state": "Georgia",
+			"pollster": "Trafalgar Group",
+			"officeType": "Senate-1",
+			"dates": "DEC. 8-10, 2020",
+			"url": "https://www.thetrafalgargroup.org/news/ga-sen-1211/",
+			"Perdue": 49,
+			"Ossoff": 49
+		},
+        {
+			"state": "Georgia",
+			"pollster": "Fabrizio Ward/Hart Research Associates",
+			"officeType": "Senate-1",
+			"dates": "NOV. 30-DEC. 4, 2020",
+			"url": "https://www.aarp.org/content/dam/aarp/research/surveys_statistics/politics/2020/2020-election-battleground-states-senate-georgia-runoff-election.doi.10.26419-2Fres.00401.029.pdf",
+			"Perdue": 46,
+			"Ossoff": 48
+		},
+        {
+			"state": "Georgia",
+			"pollster": "Trafalgar Group",
+			"officeType": "Senate-1",
+			"dates": "DEC. 1-3, 2020",
+			"url": "https://www.thetrafalgargroup.org/news/gasen-dec04/",
+			"Perdue": 47,
+			"Ossoff": 48
+		}
+]
