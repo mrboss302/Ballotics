@@ -1,4 +1,14 @@
-   [ {
+   [ 
+        {
+			"state": "Georgia",
+			"pollster": "Trafalgar Group",
+			"officeType": "Senate-1",
+			"dates": "DEC. 14-16, 2020",
+			"url": "https://www.thetrafalgargroup.org/news/ga-sen-dec-18/",
+			"Loeffler": 50,
+			"Warnock": 48
+		}, 
+       {
 			"state": "Georgia",
 			"pollster": "Emerson College",
 			"officeType": "Senate-1",
