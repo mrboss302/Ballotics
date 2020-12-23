@@ -5,7 +5,7 @@
 			"officeType": "Senate-2",
 			"dates": "DEC. 16-20, 2020",
 			"url": "http://www.surveyusa.com/client/PollReport.aspx?g=bbb4e7fb-04c1-4b0f-b0b4-dbdb743cae4e",
-				"Perdue": 46,
+			"Perdue": 46,
 			"Ossoff": 51
 		},   
     {
@@ -14,7 +14,7 @@
 			"officeType": "Senate-2",
 			"dates": "DEC. 14-16, 2020",
 			"url": "https://aitogether.org/wp-content/uploads/2020/12/GA-Poll-Memo-v2.pdf",
-				"Perdue": 51,
+			"Perdue": 51,
 			"Ossoff": 48
 		},
         {
@@ -23,7 +23,7 @@
 			"officeType": "Senate-1",
 			"dates": "DEC. 14-16, 2020",
 			"url": "https://www.thetrafalgargroup.org/news/ga-sen-dec-18/",
-					"Perdue": 50,
+			"Perdue": 50,
 			"Ossoff": 49
 		}, 
        {
