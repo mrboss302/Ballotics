@@ -1,5 +1,22 @@
 [
-
+            {
+			"state": "Georgia",
+			"pollster": "SurveyUSA",
+			"officeType": "Senate-2",
+			"dates": "DEC. 16-20, 2020",
+			"url": "http://www.surveyusa.com/client/PollReport.aspx?g=bbb4e7fb-04c1-4b0f-b0b4-dbdb743cae4e",
+			"Loeffler": 45,
+			"Warnock": 52
+		},   
+    {
+			"state": "Georgia",
+			"pollster": "Lake Research Partners/Emerson College Polling Society",
+			"officeType": "Senate-2",
+			"dates": "DEC. 14-16, 2020",
+			"url": "https://aitogether.org/wp-content/uploads/2020/12/GA-Poll-Memo-v2.pdf",
+			"Loeffler": 51,
+			"Warnock": 48
+		},
         {
 			"state": "Georgia",
 			"pollster": "Trafalgar Group",
