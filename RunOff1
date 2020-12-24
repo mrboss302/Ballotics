@@ -1,4 +1,13 @@
    [ 
+                           {
+			"state": "Georgia",
+			"pollster": "Reconnect Research/Probolsky Research",
+			"officeType": "Senate-1",
+			"dates": "DEC. 14-22, 2020",
+			"url": "https://www.probolskyresearch.com/2020/12/23/perdue-and-warnock-lead-by-the-slimmest-of-margins-in-georgia-senate-runoff-election/",
+			 "Perdue": 43,
+			"Ossoff": 42
+		},  
                        {
 			"state": "Georgia",
 			"pollster": "InsiderAdvantage",
