@@ -1,22 +1,22 @@
 [
-                    {
+                           {
 			"state": "Georgia",
 			"pollster": "Reconnect Research/Probolsky Research",
 			"officeType": "Senate-2",
 			"dates": "DEC. 14-22, 2020",
 			"url": "https://www.probolskyresearch.com/2020/12/23/perdue-and-warnock-lead-by-the-slimmest-of-margins-in-georgia-senate-runoff-election/",
-			"Loeffler": 42,
+				"Loeffler": 42,
 			"Warnock": 43
-		},   
-                {
+		},  
+                       {
 			"state": "Georgia",
 			"pollster": "InsiderAdvantage",
 			"officeType": "Senate-2",
 			"dates": "DEC. 21-22, 2020",
 			"url": "https://insideradvantage.com/2020/12/23/poll-perdue-up-over-ossoff-loeffler-falls-behind-warnock/",
-			"Loeffler": 47,
+          	"Loeffler": 47,
 			"Warnock": 49
-		},   
+		}, 
             {
 			"state": "Georgia",
 			"pollster": "SurveyUSA",
@@ -26,15 +26,6 @@
 			"Loeffler": 45,
 			"Warnock": 52
 		},   
-    {
-			"state": "Georgia",
-			"pollster": "Lake Research Partners/Emerson College Polling Society",
-			"officeType": "Senate-2",
-			"dates": "DEC. 14-16, 2020",
-			"url": "https://aitogether.org/wp-content/uploads/2020/12/GA-Poll-Memo-v2.pdf",
-			"Loeffler": 51,
-			"Warnock": 48
-		},
         {
 			"state": "Georgia",
 			"pollster": "Trafalgar Group",
@@ -51,6 +42,15 @@
 			"dates": "DEC. 14-16, 2020",
 			"url": "https://emersonpolling.reportablenews.com/pr/georgia-2020-incumbent-republicans-with-slight-advantages-in-senate-run-offs",
 			"Loeffler": 51,
+			"Warnock": 49
+		},
+                  {
+			"state": "Georgia",
+			"pollster": "RMG Research",
+			"officeType": "Senate-2",
+			"dates": "DEC. 8-14, 2020",
+			"url": "https://politicaliq.com/2020/12/21/georgia-senate-races-nobodys-at-50-yet/",
+					"Loeffler": 51,
 			"Warnock": 49
 		},
         {
