@@ -26,15 +26,6 @@
             "Perdue": 46,
 			"Ossoff": 51
 		},   
-    {
-			"state": "Georgia",
-			"pollster": "Lake Research Partners/Emerson College Polling Society",
-			"officeType": "Senate-1",
-			"dates": "DEC. 14-16, 2020",
-			"url": "https://aitogether.org/wp-content/uploads/2020/12/GA-Poll-Memo-v2.pdf",
-            "Perdue": 51,
-			"Ossoff": 48
-		},
         {
 			"state": "Georgia",
 			"pollster": "Trafalgar Group",
@@ -51,6 +42,15 @@
 			"dates": "DEC. 14-16, 2020",
 			"url": "https://emersonpolling.reportablenews.com/pr/georgia-2020-incumbent-republicans-with-slight-advantages-in-senate-run-offs",
 			"Perdue": 51,
+			"Ossoff": 49
+		},
+              {
+			"state": "Georgia",
+			"pollster": "RMG Research",
+			"officeType": "Senate-1",
+			"dates": "DEC. 8-14, 2020",
+			"url": "https://politicaliq.com/2020/12/21/georgia-senate-races-nobodys-at-50-yet/",
+			"Perdue": 47,
 			"Ossoff": 49
 		},
         {
