@@ -1,4 +1,22 @@
 [
+            {
+			"state": "Georgia",
+			"pollster": "Trafalgar Group",
+			"officeType": "Senate-2",
+			"dates": "DEC. 23-27, 2020",
+			"url": "https://www.thetrafalgargroup.org/news/ga-sen-122/",
+			"Loeffler": 49,
+			"Warnock": 50
+		},
+                               {
+			"state": "Georgia",
+			"pollster": "Open Model Project",
+			"officeType": "Senate-2",
+			"dates": "DEC. 21-27, 2020",
+			"url": "https://www.openmodelproject.org/ga-poll-runoff-method/",
+				"Loeffler": 50,
+			"Warnock": 46
+		},  
                            {
 			"state": "Georgia",
 			"pollster": "Reconnect Research/Probolsky Research",
