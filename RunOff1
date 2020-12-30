@@ -1,4 +1,13 @@
    [ 
+                       {
+			"state": "Georgia",
+			"pollster": "JMC Analytics",
+			"officeType": "Senate-1",
+			"dates": "DEC. 28-29, 2020",
+			"url": "https://winwithjmc.com/wp-content/uploads/2020/12/Georgia-Senate-Runoff-Executive-Summary.pdf",
+					 "Perdue": 45,
+			"Ossoff": 53
+		},
                    {
 			"state": "Georgia",
 			"pollster": "Trafalgar Group",
