@@ -1,4 +1,13 @@
    [ 
+                           {
+			"state": "Georgia",
+			"pollster": "Gravis Marketing",
+			"officeType": "Senate-1",
+			"dates": "DEC. 29-30, 2020",
+			"url": "https://gravismarketing.com/wp-content/uploads/2021/01/Georgia-January-1-2021.pdf",
+						 "Perdue": 47,
+			"Ossoff": 50
+		},
                        {
 			"state": "Georgia",
 			"pollster": "JMC Analytics",
@@ -25,6 +34,15 @@
 			"url": "https://www.openmodelproject.org/ga-poll-runoff-method/",
 				 "Perdue": 50,
 			"Ossoff": 46
+		},  
+                                          {
+			"state": "Georgia",
+			"pollster": "Mellman Group",
+			"officeType": "Senate-1",
+			"dates": "DEC. 18-22, 2020",
+			"url": "https://projects.fivethirtyeight.com/polls/20201231_GA_Mellman.pdf",
+				 "Perdue": 47,
+			"Ossoff": 50
 		},  
                            {
 			"state": "Georgia",
