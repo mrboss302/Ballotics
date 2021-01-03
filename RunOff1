@@ -1,4 +1,13 @@
    [ 
+                               {
+			"state": "Georgia",
+			"pollster": "AtlasIntel",
+			"officeType": "Senate-1",
+			"dates": "DEC. 25, 2020 -JAN. 1, 2021",
+			"url": "https://projects.fivethirtyeight.com/polls/20210103_GA_AtlasIntel.pdf",
+			"Perdue": 47,
+			"Ossoff": 51
+		},
                            {
 			"state": "Georgia",
 			"pollster": "Gravis Marketing",
