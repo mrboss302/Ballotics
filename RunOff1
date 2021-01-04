@@ -1,4 +1,22 @@
    [ 
+                                           {
+			"state": "Georgia",
+			"pollster": "Targoz Market Research",
+			"officeType": "Senate-1",
+			"dates": "DEC. 30, 2020 -JAN. 3, 2021",
+			"url": "https://www.pollsmartmr.com/latest-polls-1/poll-the-georgia-runoffs-are-a-dead-heat",
+			"Perdue": 50,
+			"Ossoff": 50
+		},
+                                    {
+			"state": "Georgia",
+			"pollster": "University of Nevada Las Vegas Lee Business School",
+			"officeType": "Senate-1",
+			"dates": "DEC. 30, 2020 -JAN. 3, 2021",
+			"url": "https://busr.ag/georgia-senate-poll",
+			"Perdue": 49,
+			"Ossoff": 48
+		},
                                {
 			"state": "Georgia",
 			"pollster": "AtlasIntel",
