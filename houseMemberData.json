@@ -4698,7 +4698,7 @@
     "state": "LA",
     "stateFullname": "Louisiana",
     "suffix": "",
-    "swornDate": "",
+    "swornDate": 0,
     "swornDateFull": "",
     "townName": "",
     "predecessorVacateDate": 20201229,
