@@ -1,5 +1,23 @@
 [
-                        {
+                                                    {
+			"state": "Georgia",
+			"pollster": "Targoz Market Research",
+			"officeType": "Senate-2",
+			"dates": "DEC. 30, 2020 -JAN. 3, 2021",
+			"url": "https://www.pollsmartmr.com/latest-polls-1/poll-the-georgia-runoffs-are-a-dead-heat",
+			"Loeffler": 49,
+			"Warnock": 51
+		},
+                                    {
+			"state": "Georgia",
+			"pollster": "University of Nevada Las Vegas Lee Business School",
+			"officeType": "Senate-2",
+			"dates": "DEC. 30, 2020 -JAN. 3, 2021",
+			"url": "https://busr.ag/georgia-senate-poll",
+			"Loeffler": 49,
+			"Warnock": 48
+		},         
+    {
 			"state": "Georgia",
 			"pollster": "AtlasIntel",
 			"officeType": "Senate-2",
