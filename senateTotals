@@ -1,12 +1,12 @@
 [
 
 	{
-		"demSenate": 48,
+		"demSenate": 48*,
 		"gopSenate": 50,
 		"indSenate": 2,
 		"vacantSenate": 0,	
     		"vp": "Democratic",
-		"caption": "50 plus the Vice President for a majority"
+		"caption": "*48 plus 2 Independents and the Vice President for a majority"
 	}
 
 
