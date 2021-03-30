@@ -1,6 +1,7 @@
 [
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/9/2021",
     "enddate": "3/11/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -10,24 +11,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
-    "startdate": "3/9/2021",
-    "enddate": "3/10/2021",
-    "pollster": "YouGov",
-    "approve": 60,
-    "disapprove": 40,
-    "url": "https://drive.google.com/file/d/1BFqjJlHsQvM1C9d_2oygm8rF9IL4BU6E/view"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
-    "startdate": "3/9/2021",
-    "enddate": "3/15/2021",
-    "pollster": "Morning Consult",
-    "approve": 55,
-    "disapprove": 36,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/9/2021",
     "enddate": "3/10/2021",
     "pollster": "YouGov",
@@ -37,6 +21,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/9/2021",
     "enddate": "3/15/2021",
     "pollster": "Morning Consult",
@@ -46,6 +31,27 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "3/9/2021",
+    "enddate": "3/10/2021",
+    "pollster": "YouGov",
+    "approve": 60,
+    "disapprove": 40,
+    "url": "https://drive.google.com/file/d/1BFqjJlHsQvM1C9d_2oygm8rF9IL4BU6E/view"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "3/9/2021",
+    "enddate": "3/15/2021",
+    "pollster": "Morning Consult",
+    "approve": 55,
+    "disapprove": 36,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/9/2021",
     "enddate": "3/11/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -55,6 +61,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/8/2021",
     "enddate": "3/10/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -64,6 +71,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/8/2021",
     "enddate": "3/14/2021",
     "pollster": "Morning Consult",
@@ -73,6 +81,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/8/2021",
     "enddate": "3/14/2021",
     "pollster": "Morning Consult",
@@ -82,6 +91,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/8/2021",
     "enddate": "3/10/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -91,6 +101,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/7/2021",
     "enddate": "3/9/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -100,6 +111,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/7/2021",
     "enddate": "3/13/2021",
     "pollster": "Morning Consult",
@@ -109,6 +121,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/7/2021",
     "enddate": "3/13/2021",
     "pollster": "Morning Consult",
@@ -118,6 +131,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/7/2021",
     "enddate": "3/9/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -127,6 +141,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/6/2021",
     "enddate": "3/8/2021",
     "pollster": "Morning Consult",
@@ -136,6 +151,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/6/2021",
     "enddate": "3/9/2021",
     "pollster": "YouGov",
@@ -145,6 +161,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/6/2021",
     "enddate": "3/12/2021",
     "pollster": "Morning Consult",
@@ -154,6 +171,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/6/2021",
     "enddate": "3/9/2021",
     "pollster": "YouGov",
@@ -163,6 +181,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/6/2021",
     "enddate": "3/12/2021",
     "pollster": "Morning Consult",
@@ -172,6 +191,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/6/2021",
     "enddate": "3/8/2021",
     "pollster": "Morning Consult",
@@ -181,6 +201,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/6/2021",
     "enddate": "3/9/2021",
     "pollster": "YouGov",
@@ -190,6 +211,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/5/2021",
     "enddate": "3/8/2021",
     "pollster": "HarrisX",
@@ -199,6 +221,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/5/2021",
     "enddate": "3/11/2021",
     "pollster": "Morning Consult",
@@ -208,6 +231,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/5/2021",
     "enddate": "3/11/2021",
     "pollster": "Morning Consult",
@@ -217,6 +241,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/5/2021",
     "enddate": "3/8/2021",
     "pollster": "HarrisX",
@@ -226,6 +251,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/4/2021",
     "enddate": "3/6/2021",
     "pollster": "RMG Research",
@@ -235,6 +261,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/4/2021",
     "enddate": "3/8/2021",
     "pollster": "Morning Consult",
@@ -244,6 +271,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/4/2021",
     "enddate": "3/8/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -253,6 +281,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/4/2021",
     "enddate": "3/10/2021",
     "pollster": "Morning Consult",
@@ -262,6 +291,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/4/2021",
     "enddate": "3/8/2021",
     "pollster": "Morning Consult",
@@ -271,6 +301,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/4/2021",
     "enddate": "3/10/2021",
     "pollster": "Morning Consult",
@@ -280,6 +311,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/4/2021",
     "enddate": "3/6/2021",
     "pollster": "RMG Research",
@@ -289,6 +321,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/4/2021",
     "enddate": "3/8/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -298,6 +331,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/3/2021",
     "enddate": "3/4/2021",
     "pollster": "Ipsos",
@@ -307,6 +341,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/3/2021",
     "enddate": "3/7/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -316,6 +351,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/3/2021",
     "enddate": "3/8/2021",
     "pollster": "Marist College",
@@ -325,6 +361,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/3/2021",
     "enddate": "3/9/2021",
     "pollster": "Morning Consult",
@@ -334,6 +371,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/3/2021",
     "enddate": "3/8/2021",
     "pollster": "CNN/SSRS",
@@ -343,6 +381,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/3/2021",
     "enddate": "3/4/2021",
     "pollster": "Ipsos",
@@ -352,6 +391,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/3/2021",
     "enddate": "3/8/2021",
     "pollster": "CNN/SSRS",
@@ -361,6 +401,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/3/2021",
     "enddate": "3/9/2021",
     "pollster": "Morning Consult",
@@ -370,6 +411,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/3/2021",
     "enddate": "3/8/2021",
     "pollster": "Marist College",
@@ -379,6 +421,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/3/2021",
     "enddate": "3/7/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -388,6 +431,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/3/2021",
     "enddate": "3/8/2021",
     "pollster": "CNN/SSRS",
@@ -397,6 +441,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/3/2021",
     "enddate": "3/8/2021",
     "pollster": "Marist College",
@@ -406,6 +451,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/24/2021",
     "enddate": "3/25/2021",
     "pollster": "Ipsos",
@@ -415,6 +461,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/24/2021",
     "enddate": "3/25/2021",
     "pollster": "Ipsos",
@@ -424,6 +471,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/23/2021",
     "enddate": "3/25/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -433,6 +481,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/23/2021",
     "enddate": "3/25/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -442,6 +491,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/22/2021",
     "enddate": "3/24/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -451,6 +501,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/22/2021",
     "enddate": "3/24/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -460,6 +511,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/21/2021",
     "enddate": "3/22/2021",
     "pollster": "Redfield & Wilton Strategies",
@@ -469,6 +521,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/21/2021",
     "enddate": "3/23/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -478,6 +531,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/21/2021",
     "enddate": "3/22/2021",
     "pollster": "Redfield & Wilton Strategies",
@@ -487,6 +541,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/21/2021",
     "enddate": "3/23/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -496,6 +551,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/20/2021",
     "enddate": "3/23/2021",
     "pollster": "YouGov",
@@ -505,6 +561,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/20/2021",
     "enddate": "3/23/2021",
     "pollster": "YouGov",
@@ -514,6 +571,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/20/2021",
     "enddate": "3/23/2021",
     "pollster": "YouGov",
@@ -523,6 +581,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/2/2021",
     "enddate": "3/4/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -532,6 +591,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/2/2021",
     "enddate": "3/8/2021",
     "pollster": "Morning Consult",
@@ -541,6 +601,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/2/2021",
     "enddate": "3/8/2021",
     "pollster": "Morning Consult",
@@ -550,6 +611,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/2/2021",
     "enddate": "3/4/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -559,6 +621,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/19/2021",
     "enddate": "3/22/2021",
     "pollster": "HarrisX",
@@ -568,6 +631,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/19/2021",
     "enddate": "3/22/2021",
     "pollster": "Morning Consult",
@@ -577,6 +641,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/19/2021",
     "enddate": "3/22/2021",
     "pollster": "Morning Consult",
@@ -586,6 +651,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/19/2021",
     "enddate": "3/22/2021",
     "pollster": "HarrisX",
@@ -595,6 +661,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/18/2021",
     "enddate": "3/20/2021",
     "pollster": "RMG Research",
@@ -604,6 +671,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/18/2021",
     "enddate": "3/22/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -613,6 +681,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/18/2021",
     "enddate": "3/20/2021",
     "pollster": "RMG Research",
@@ -622,6 +691,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/18/2021",
     "enddate": "3/22/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -631,6 +701,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/17/2021",
     "enddate": "3/18/2021",
     "pollster": "Ipsos",
@@ -640,6 +711,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/17/2021",
     "enddate": "3/20/2021",
     "pollster": "American Research Group",
@@ -649,6 +721,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/17/2021",
     "enddate": "3/21/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -658,6 +731,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/17/2021",
     "enddate": "3/23/2021",
     "pollster": "Morning Consult",
@@ -667,6 +741,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/17/2021",
     "enddate": "3/18/2021",
     "pollster": "Ipsos",
@@ -676,6 +751,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/17/2021",
     "enddate": "3/20/2021",
     "pollster": "American Research Group",
@@ -685,6 +761,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/17/2021",
     "enddate": "3/23/2021",
     "pollster": "Morning Consult",
@@ -694,6 +771,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/17/2021",
     "enddate": "3/20/2021",
     "pollster": "American Research Group",
@@ -703,6 +781,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/17/2021",
     "enddate": "3/21/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -712,6 +791,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/16/2021",
     "enddate": "3/18/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -721,15 +801,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
-    "startdate": "3/16/2021",
-    "enddate": "3/22/2021",
-    "pollster": "Morning Consult",
-    "approve": 56,
-    "disapprove": 36,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/16/2021",
     "enddate": "3/22/2021",
     "pollster": "Morning Consult",
@@ -739,6 +811,17 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "3/16/2021",
+    "enddate": "3/22/2021",
+    "pollster": "Morning Consult",
+    "approve": 56,
+    "disapprove": 36,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/16/2021",
     "enddate": "3/18/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -748,6 +831,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/15/2021",
     "enddate": "3/17/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -757,6 +841,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/15/2021",
     "enddate": "3/19/2021",
     "pollster": "Morning Consult",
@@ -766,6 +851,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/15/2021",
     "enddate": "3/21/2021",
     "pollster": "Echelon Insights",
@@ -775,6 +861,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/15/2021",
     "enddate": "3/21/2021",
     "pollster": "Morning Consult",
@@ -784,6 +871,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/15/2021",
     "enddate": "3/19/2021",
     "pollster": "Morning Consult",
@@ -793,6 +881,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/15/2021",
     "enddate": "3/21/2021",
     "pollster": "Morning Consult",
@@ -802,6 +891,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/15/2021",
     "enddate": "3/17/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -811,6 +901,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/15/2021",
     "enddate": "3/21/2021",
     "pollster": "Echelon Insights",
@@ -820,6 +911,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/14/2021",
     "enddate": "3/16/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -829,15 +921,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
-    "startdate": "3/14/2021",
-    "enddate": "3/20/2021",
-    "pollster": "Morning Consult",
-    "approve": 56,
-    "disapprove": 35,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/14/2021",
     "enddate": "3/20/2021",
     "pollster": "Morning Consult",
@@ -847,6 +931,17 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "3/14/2021",
+    "enddate": "3/20/2021",
+    "pollster": "Morning Consult",
+    "approve": 56,
+    "disapprove": 35,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/14/2021",
     "enddate": "3/16/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -856,6 +951,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/13/2021",
     "enddate": "3/17/2021",
     "pollster": "YouGov",
@@ -865,6 +961,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/13/2021",
     "enddate": "3/19/2021",
     "pollster": "Morning Consult",
@@ -874,6 +971,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/13/2021",
     "enddate": "3/17/2021",
     "pollster": "YouGov",
@@ -883,6 +981,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/13/2021",
     "enddate": "3/19/2021",
     "pollster": "Morning Consult",
@@ -892,6 +991,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/13/2021",
     "enddate": "3/17/2021",
     "pollster": "YouGov",
@@ -901,6 +1001,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/12/2021",
     "enddate": "3/14/2021",
     "pollster": "HarrisX",
@@ -910,6 +1011,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/12/2021",
     "enddate": "3/15/2021",
     "pollster": "Morning Consult",
@@ -919,6 +1021,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/12/2021",
     "enddate": "3/16/2021",
     "pollster": "Civiqs",
@@ -928,6 +1031,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/12/2021",
     "enddate": "3/18/2021",
     "pollster": "Morning Consult",
@@ -937,6 +1041,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/12/2021",
     "enddate": "3/18/2021",
     "pollster": "Morning Consult",
@@ -946,6 +1051,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/12/2021",
     "enddate": "3/14/2021",
     "pollster": "HarrisX",
@@ -955,6 +1061,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/12/2021",
     "enddate": "3/16/2021",
     "pollster": "Civiqs",
@@ -964,6 +1071,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/12/2021",
     "enddate": "3/15/2021",
     "pollster": "Morning Consult",
@@ -973,6 +1081,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/11/2021",
     "enddate": "3/13/2021",
     "pollster": "RMG Research",
@@ -982,6 +1091,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/11/2021",
     "enddate": "3/15/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -991,6 +1101,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/11/2021",
     "enddate": "3/15/2021",
     "pollster": "Global Strategy Group/GBAO (Navigator Research)",
@@ -1000,6 +1111,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/11/2021",
     "enddate": "3/17/2021",
     "pollster": "Morning Consult",
@@ -1009,6 +1121,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/11/2021",
     "enddate": "3/17/2021",
     "pollster": "Morning Consult",
@@ -1018,6 +1131,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/11/2021",
     "enddate": "3/13/2021",
     "pollster": "RMG Research",
@@ -1027,6 +1141,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/11/2021",
     "enddate": "3/15/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1036,6 +1151,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/11/2021",
     "enddate": "3/15/2021",
     "pollster": "Global Strategy Group/GBAO (Navigator Research)",
@@ -1045,6 +1161,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/10/2021",
     "enddate": "3/11/2021",
     "pollster": "Ipsos",
@@ -1054,6 +1171,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/10/2021",
     "enddate": "3/13/2021",
     "pollster": "YouGov",
@@ -1063,6 +1181,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/10/2021",
     "enddate": "3/14/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1072,6 +1191,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/10/2021",
     "enddate": "3/16/2021",
     "pollster": "Morning Consult",
@@ -1081,6 +1201,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/10/2021",
     "enddate": "3/11/2021",
     "pollster": "Ipsos",
@@ -1090,6 +1211,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/10/2021",
     "enddate": "3/13/2021",
     "pollster": "YouGov",
@@ -1099,6 +1221,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/10/2021",
     "enddate": "3/16/2021",
     "pollster": "Morning Consult",
@@ -1108,6 +1231,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/10/2021",
     "enddate": "3/14/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1117,6 +1241,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/1/2021",
     "enddate": "3/3/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1126,6 +1251,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/1/2021",
     "enddate": "3/7/2021",
     "pollster": "Morning Consult",
@@ -1135,6 +1261,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/1/2021",
     "enddate": "3/7/2021",
     "pollster": "Pew Research Center",
@@ -1144,6 +1271,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/1/2021",
     "enddate": "3/15/2021",
     "pollster": "Gallup",
@@ -1153,6 +1281,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/1/2021",
     "enddate": "3/7/2021",
     "pollster": "Pew Research Center",
@@ -1162,6 +1291,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/1/2021",
     "enddate": "3/7/2021",
     "pollster": "Morning Consult",
@@ -1171,6 +1301,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/1/2021",
     "enddate": "3/15/2021",
     "pollster": "Gallup",
@@ -1180,6 +1311,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "3/1/2021",
     "enddate": "3/3/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1189,6 +1321,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/9/2021",
     "enddate": "2/10/2021",
     "pollster": "Ipsos",
@@ -1198,6 +1331,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/9/2021",
     "enddate": "2/11/2021",
     "pollster": "Morning Consult",
@@ -1207,6 +1341,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/9/2021",
     "enddate": "2/11/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1216,6 +1351,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/9/2021",
     "enddate": "2/11/2021",
     "pollster": "Morning Consult",
@@ -1225,6 +1361,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/9/2021",
     "enddate": "2/10/2021",
     "pollster": "Ipsos",
@@ -1234,6 +1371,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/9/2021",
     "enddate": "2/11/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1243,6 +1381,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/8/2021",
     "enddate": "2/10/2021",
     "pollster": "Morning Consult",
@@ -1252,6 +1391,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/8/2021",
     "enddate": "2/9/2021",
     "pollster": "HarrisX",
@@ -1261,6 +1401,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/8/2021",
     "enddate": "2/10/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1270,6 +1411,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/8/2021",
     "enddate": "2/10/2021",
     "pollster": "Morning Consult",
@@ -1279,6 +1421,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/8/2021",
     "enddate": "2/9/2021",
     "pollster": "HarrisX",
@@ -1288,6 +1431,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/8/2021",
     "enddate": "2/10/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1297,6 +1441,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/7/2021",
     "enddate": "2/9/2021",
     "pollster": "Morning Consult",
@@ -1306,6 +1451,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/7/2021",
     "enddate": "2/9/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1315,24 +1461,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
-    "startdate": "2/7/2021",
-    "enddate": "2/14/2021",
-    "pollster": "Saint Leo University",
-    "approve": 60.9,
-    "disapprove": 32.3,
-    "url": "https://polls.saintleo.edu/new-saint-leo-polling-survey-shows-six-out-of-10-americans-like-bidens-job-performance-so-far/"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
-    "startdate": "2/7/2021",
-    "enddate": "2/9/2021",
-    "pollster": "Morning Consult",
-    "approve": 55,
-    "disapprove": 33,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/7/2021",
     "enddate": "2/14/2021",
     "pollster": "Saint Leo University",
@@ -1342,6 +1471,27 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/7/2021",
+    "enddate": "2/9/2021",
+    "pollster": "Morning Consult",
+    "approve": 55,
+    "disapprove": 33,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/7/2021",
+    "enddate": "2/14/2021",
+    "pollster": "Saint Leo University",
+    "approve": 60.9,
+    "disapprove": 32.3,
+    "url": "https://polls.saintleo.edu/new-saint-leo-polling-survey-shows-six-out-of-10-americans-like-bidens-job-performance-so-far/"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/7/2021",
     "enddate": "2/9/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1351,6 +1501,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/6/2021",
     "enddate": "2/8/2021",
     "pollster": "Morning Consult",
@@ -1360,6 +1511,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/6/2021",
     "enddate": "2/9/2021",
     "pollster": "YouGov",
@@ -1369,6 +1521,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/6/2021",
     "enddate": "2/8/2021",
     "pollster": "Morning Consult",
@@ -1378,6 +1531,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/6/2021",
     "enddate": "2/9/2021",
     "pollster": "YouGov",
@@ -1387,6 +1541,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/6/2021",
     "enddate": "2/9/2021",
     "pollster": "YouGov",
@@ -1396,6 +1551,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/5/2021",
     "enddate": "2/7/2021",
     "pollster": "Morning Consult",
@@ -1405,6 +1561,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/5/2021",
     "enddate": "2/7/2021",
     "pollster": "Morning Consult",
@@ -1414,6 +1571,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/5/2021",
     "enddate": "2/8/2021",
     "pollster": "YouGov",
@@ -1423,6 +1581,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/5/2021",
     "enddate": "2/7/2021",
     "pollster": "Morning Consult",
@@ -1432,6 +1591,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/5/2021",
     "enddate": "2/8/2021",
     "pollster": "YouGov",
@@ -1441,6 +1601,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/5/2021",
     "enddate": "2/7/2021",
     "pollster": "Morning Consult",
@@ -1450,6 +1611,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/4/2021",
     "enddate": "2/6/2021",
     "pollster": "RMG Research",
@@ -1459,6 +1621,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/4/2021",
     "enddate": "2/6/2021",
     "pollster": "Morning Consult",
@@ -1468,6 +1631,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/4/2021",
     "enddate": "2/8/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1477,6 +1641,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/4/2021",
     "enddate": "2/6/2021",
     "pollster": "Morning Consult",
@@ -1486,6 +1651,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/4/2021",
     "enddate": "2/6/2021",
     "pollster": "RMG Research",
@@ -1495,6 +1661,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/4/2021",
     "enddate": "2/8/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1504,6 +1671,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/3/2021",
     "enddate": "2/5/2021",
     "pollster": "Morning Consult",
@@ -1513,6 +1681,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/3/2021",
     "enddate": "2/7/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1522,6 +1691,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/3/2021",
     "enddate": "2/18/2021",
     "pollster": "Gallup",
@@ -1531,6 +1701,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/3/2021",
     "enddate": "2/5/2021",
     "pollster": "Morning Consult",
@@ -1540,6 +1711,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/3/2021",
     "enddate": "2/18/2021",
     "pollster": "Gallup",
@@ -1549,6 +1721,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/3/2021",
     "enddate": "2/7/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1558,6 +1731,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/28/2021",
     "enddate": "3/2/2021",
     "pollster": "Morning Consult",
@@ -1567,42 +1741,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
-    "startdate": "2/28/2021",
-    "enddate": "3/2/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 50,
-    "disapprove": 47,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
-    "startdate": "2/28/2021",
-    "enddate": "3/6/2021",
-    "pollster": "Morning Consult",
-    "approve": 54,
-    "disapprove": 36,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
-    "startdate": "2/28/2021",
-    "enddate": "3/2/2021",
-    "pollster": "Morning Consult",
-    "approve": 54,
-    "disapprove": 36,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
-    "startdate": "2/28/2021",
-    "enddate": "3/6/2021",
-    "pollster": "Morning Consult",
-    "approve": 54,
-    "disapprove": 36,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/28/2021",
     "enddate": "3/2/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1612,6 +1751,47 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/28/2021",
+    "enddate": "3/6/2021",
+    "pollster": "Morning Consult",
+    "approve": 54,
+    "disapprove": 36,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/28/2021",
+    "enddate": "3/2/2021",
+    "pollster": "Morning Consult",
+    "approve": 54,
+    "disapprove": 36,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/28/2021",
+    "enddate": "3/6/2021",
+    "pollster": "Morning Consult",
+    "approve": 54,
+    "disapprove": 36,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/28/2021",
+    "enddate": "3/2/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 50,
+    "disapprove": 47,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/27/2021",
     "enddate": "3/1/2021",
     "pollster": "Morning Consult",
@@ -1621,6 +1801,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/27/2021",
     "enddate": "3/2/2021",
     "pollster": "YouGov",
@@ -1630,6 +1811,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/27/2021",
     "enddate": "3/5/2021",
     "pollster": "Morning Consult",
@@ -1639,6 +1821,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/27/2021",
     "enddate": "3/1/2021",
     "pollster": "Morning Consult",
@@ -1648,6 +1831,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/27/2021",
     "enddate": "3/2/2021",
     "pollster": "YouGov",
@@ -1657,6 +1841,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/27/2021",
     "enddate": "3/5/2021",
     "pollster": "Morning Consult",
@@ -1666,6 +1851,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/27/2021",
     "enddate": "3/2/2021",
     "pollster": "YouGov",
@@ -1675,6 +1861,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "2/27/2021",
     "pollster": "Public Policy Polling",
@@ -1684,6 +1871,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "2/28/2021",
     "pollster": "Léger",
@@ -1693,6 +1881,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "2/28/2021",
     "pollster": "Morning Consult",
@@ -1702,6 +1891,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "3/1/2021",
     "pollster": "Morning Consult",
@@ -1711,6 +1901,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "3/1/2021",
     "pollster": "Morning Consult",
@@ -1720,6 +1911,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "3/4/2021",
     "pollster": "Morning Consult",
@@ -1729,6 +1921,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "3/7/2021",
     "pollster": "Climate Nexus",
@@ -1738,6 +1931,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "2/28/2021",
     "pollster": "Léger",
@@ -1747,6 +1941,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "2/28/2021",
     "pollster": "Morning Consult",
@@ -1756,6 +1951,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "3/1/2021",
     "pollster": "Morning Consult",
@@ -1765,6 +1961,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "3/4/2021",
     "pollster": "Morning Consult",
@@ -1774,6 +1971,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "2/27/2021",
     "pollster": "Public Policy Polling",
@@ -1783,6 +1981,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "3/1/2021",
     "pollster": "Morning Consult",
@@ -1792,6 +1991,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/26/2021",
     "enddate": "3/7/2021",
     "pollster": "Climate Nexus",
@@ -1801,6 +2001,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "2/27/2021",
     "pollster": "Morning Consult",
@@ -1810,6 +2011,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "2/27/2021",
     "pollster": "RMG Research",
@@ -1819,6 +2021,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "3/1/2021",
     "pollster": "AP-NORC",
@@ -1828,6 +2031,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "3/1/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1837,6 +2041,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "3/1/2021",
     "pollster": "Monmouth University",
@@ -1846,6 +2051,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "3/1/2021",
     "pollster": "Global Strategy Group/GBAO (Navigator Research)",
@@ -1855,6 +2061,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "3/3/2021",
     "pollster": "Morning Consult",
@@ -1864,6 +2071,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "2/27/2021",
     "pollster": "Morning Consult",
@@ -1873,6 +2081,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "3/1/2021",
     "pollster": "Monmouth University",
@@ -1882,6 +2091,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "3/1/2021",
     "pollster": "AP-NORC",
@@ -1891,6 +2101,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "3/3/2021",
     "pollster": "Morning Consult",
@@ -1900,6 +2111,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "2/27/2021",
     "pollster": "RMG Research",
@@ -1909,6 +2121,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "3/1/2021",
     "pollster": "Monmouth University",
@@ -1918,6 +2131,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "3/1/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1927,6 +2141,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/25/2021",
     "enddate": "3/1/2021",
     "pollster": "Global Strategy Group/GBAO (Navigator Research)",
@@ -1936,6 +2151,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/26/2021",
     "pollster": "HarrisX",
@@ -1945,6 +2161,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/25/2021",
     "pollster": "Ipsos",
@@ -1954,6 +2171,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/26/2021",
     "pollster": "Morning Consult",
@@ -1963,6 +2181,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/28/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1972,6 +2191,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/27/2021",
     "pollster": "IBD/TIPP",
@@ -1981,6 +2201,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/28/2021",
     "pollster": "McLaughlin & Associates",
@@ -1990,6 +2211,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/26/2021",
     "pollster": "Morning Consult",
@@ -1999,6 +2221,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/25/2021",
     "pollster": "Ipsos",
@@ -2008,6 +2231,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/27/2021",
     "pollster": "IBD/TIPP",
@@ -2017,6 +2241,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/26/2021",
     "pollster": "HarrisX",
@@ -2026,6 +2251,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/27/2021",
     "pollster": "IBD/TIPP",
@@ -2035,6 +2261,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/28/2021",
     "pollster": "McLaughlin & Associates",
@@ -2044,6 +2271,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/24/2021",
     "enddate": "2/28/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2053,6 +2281,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/23/2021",
     "enddate": "2/25/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2062,60 +2291,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
-    "startdate": "2/23/2021",
-    "enddate": "2/25/2021",
-    "pollster": "Harris Poll",
-    "approve": 61,
-    "disapprove": 39,
-    "url": "https://harvardharrispoll.com/wp-content/uploads/2021/03/February2021_HHP_Topline_RV.pdf"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
-    "startdate": "2/23/2021",
-    "enddate": "2/24/2021",
-    "pollster": "HarrisX",
-    "approve": 59,
-    "disapprove": 41,
-    "url": "https://thehill.com/hilltv/what-americas-thinking/540569-what-americas-thinking-february-25-2021"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
-    "startdate": "2/23/2021",
-    "enddate": "2/25/2021",
-    "pollster": "Morning Consult",
-    "approve": 54,
-    "disapprove": 35,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
-    "startdate": "2/23/2021",
-    "enddate": "2/25/2021",
-    "pollster": "Morning Consult",
-    "approve": 54,
-    "disapprove": 35,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
-    "startdate": "2/23/2021",
-    "enddate": "2/24/2021",
-    "pollster": "HarrisX",
-    "approve": 59,
-    "disapprove": 41,
-    "url": "https://thehill.com/hilltv/what-americas-thinking/540569-what-americas-thinking-february-25-2021"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
-    "startdate": "2/23/2021",
-    "enddate": "2/25/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 49,
-    "disapprove": 49,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/23/2021",
     "enddate": "2/25/2021",
     "pollster": "Harris Poll",
@@ -2125,6 +2301,67 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/23/2021",
+    "enddate": "2/24/2021",
+    "pollster": "HarrisX",
+    "approve": 59,
+    "disapprove": 41,
+    "url": "https://thehill.com/hilltv/what-americas-thinking/540569-what-americas-thinking-february-25-2021"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/23/2021",
+    "enddate": "2/25/2021",
+    "pollster": "Morning Consult",
+    "approve": 54,
+    "disapprove": 35,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/23/2021",
+    "enddate": "2/25/2021",
+    "pollster": "Morning Consult",
+    "approve": 54,
+    "disapprove": 35,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/23/2021",
+    "enddate": "2/24/2021",
+    "pollster": "HarrisX",
+    "approve": 59,
+    "disapprove": 41,
+    "url": "https://thehill.com/hilltv/what-americas-thinking/540569-what-americas-thinking-february-25-2021"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/23/2021",
+    "enddate": "2/25/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 49,
+    "disapprove": 49,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/23/2021",
+    "enddate": "2/25/2021",
+    "pollster": "Harris Poll",
+    "approve": 61,
+    "disapprove": 39,
+    "url": "https://harvardharrispoll.com/wp-content/uploads/2021/03/February2021_HHP_Topline_RV.pdf"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/22/2021",
     "enddate": "2/24/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2134,6 +2371,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/22/2021",
     "enddate": "2/24/2021",
     "pollster": "Morning Consult",
@@ -2143,6 +2381,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/22/2021",
     "enddate": "2/24/2021",
     "pollster": "Marist College",
@@ -2152,6 +2391,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/22/2021",
     "enddate": "2/24/2021",
     "pollster": "Marist College",
@@ -2161,6 +2401,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/22/2021",
     "enddate": "2/24/2021",
     "pollster": "Morning Consult",
@@ -2170,6 +2411,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/22/2021",
     "enddate": "2/24/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2179,6 +2421,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/21/2021",
     "enddate": "2/23/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2188,6 +2431,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/21/2021",
     "enddate": "2/23/2021",
     "pollster": "Morning Consult",
@@ -2197,6 +2441,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/21/2021",
     "enddate": "2/23/2021",
     "pollster": "Morning Consult",
@@ -2206,6 +2451,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/21/2021",
     "enddate": "2/23/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2215,6 +2461,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/20/2021",
     "enddate": "2/22/2021",
     "pollster": "YouGov",
@@ -2224,6 +2471,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/20/2021",
     "enddate": "2/22/2021",
     "pollster": "Morning Consult",
@@ -2233,6 +2481,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/20/2021",
     "enddate": "2/22/2021",
     "pollster": "YouGov",
@@ -2242,6 +2491,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/20/2021",
     "enddate": "2/22/2021",
     "pollster": "Morning Consult",
@@ -2251,6 +2501,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/2/2021",
     "enddate": "2/3/2021",
     "pollster": "Ipsos",
@@ -2260,6 +2511,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/2/2021",
     "enddate": "2/4/2021",
     "pollster": "Morning Consult",
@@ -2269,6 +2521,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/2/2021",
     "enddate": "2/4/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2278,6 +2531,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/2/2021",
     "enddate": "2/3/2021",
     "pollster": "Emerson College",
@@ -2287,6 +2541,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/2/2021",
     "enddate": "2/3/2021",
     "pollster": "Ipsos",
@@ -2296,6 +2551,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/2/2021",
     "enddate": "2/3/2021",
     "pollster": "Emerson College",
@@ -2305,6 +2561,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/2/2021",
     "enddate": "2/4/2021",
     "pollster": "Morning Consult",
@@ -2314,6 +2571,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/2/2021",
     "enddate": "2/4/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2323,6 +2581,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/19/2021",
     "enddate": "2/21/2021",
     "pollster": "Morning Consult",
@@ -2332,6 +2591,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/19/2021",
     "enddate": "2/22/2021",
     "pollster": "YouGov",
@@ -2341,6 +2601,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/19/2021",
     "enddate": "2/22/2021",
     "pollster": "Morning Consult",
@@ -2350,6 +2611,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/19/2021",
     "enddate": "2/21/2021",
     "pollster": "Morning Consult",
@@ -2359,6 +2621,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/19/2021",
     "enddate": "2/22/2021",
     "pollster": "YouGov",
@@ -2368,6 +2631,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/19/2021",
     "enddate": "2/22/2021",
     "pollster": "Morning Consult",
@@ -2377,6 +2641,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/19/2021",
     "enddate": "2/22/2021",
     "pollster": "YouGov",
@@ -2386,6 +2651,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/18/2021",
     "enddate": "2/20/2021",
     "pollster": "Morning Consult",
@@ -2395,6 +2661,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/18/2021",
     "enddate": "2/20/2021",
     "pollster": "RMG Research",
@@ -2404,6 +2671,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/18/2021",
     "enddate": "2/21/2021",
     "pollster": "Morning Consult",
@@ -2413,6 +2681,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/18/2021",
     "enddate": "2/22/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2422,6 +2691,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/18/2021",
     "enddate": "2/23/2021",
     "pollster": "GQR Research",
@@ -2431,6 +2701,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/18/2021",
     "enddate": "2/20/2021",
     "pollster": "Morning Consult",
@@ -2440,6 +2711,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/18/2021",
     "enddate": "2/21/2021",
     "pollster": "Morning Consult",
@@ -2449,6 +2721,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/18/2021",
     "enddate": "2/20/2021",
     "pollster": "RMG Research",
@@ -2458,6 +2731,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/18/2021",
     "enddate": "2/22/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2467,6 +2741,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/18/2021",
     "enddate": "2/23/2021",
     "pollster": "GQR Research",
@@ -2476,6 +2751,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/17/2021",
     "enddate": "2/19/2021",
     "pollster": "Morning Consult",
@@ -2485,6 +2761,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/17/2021",
     "enddate": "2/18/2021",
     "pollster": "Ipsos",
@@ -2494,6 +2771,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/17/2021",
     "enddate": "2/21/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2503,6 +2781,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/17/2021",
     "enddate": "2/20/2021",
     "pollster": "American Research Group",
@@ -2512,6 +2791,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/17/2021",
     "enddate": "2/19/2021",
     "pollster": "Morning Consult",
@@ -2521,6 +2801,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/17/2021",
     "enddate": "2/18/2021",
     "pollster": "Ipsos",
@@ -2530,6 +2811,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/17/2021",
     "enddate": "2/20/2021",
     "pollster": "American Research Group",
@@ -2539,6 +2821,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/17/2021",
     "enddate": "2/20/2021",
     "pollster": "American Research Group",
@@ -2548,6 +2831,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/17/2021",
     "enddate": "2/21/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2557,6 +2841,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/16/2021",
     "enddate": "2/18/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2566,6 +2851,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/16/2021",
     "enddate": "2/18/2021",
     "pollster": "Morning Consult",
@@ -2575,6 +2861,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/16/2021",
     "enddate": "2/18/2021",
     "pollster": "Morning Consult",
@@ -2584,6 +2871,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/16/2021",
     "enddate": "2/18/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2593,6 +2881,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/15/2021",
     "enddate": "2/17/2021",
     "pollster": "Morning Consult",
@@ -2602,24 +2891,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
-    "startdate": "2/15/2021",
-    "enddate": "2/17/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 50,
-    "disapprove": 48,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
-    "startdate": "2/15/2021",
-    "enddate": "2/17/2021",
-    "pollster": "Morning Consult",
-    "approve": 54,
-    "disapprove": 35,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/15/2021",
     "enddate": "2/17/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2629,6 +2901,27 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/15/2021",
+    "enddate": "2/17/2021",
+    "pollster": "Morning Consult",
+    "approve": 54,
+    "disapprove": 35,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/15/2021",
+    "enddate": "2/17/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 50,
+    "disapprove": 48,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/14/2021",
     "enddate": "2/16/2021",
     "pollster": "Morning Consult",
@@ -2638,6 +2931,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/14/2021",
     "enddate": "2/15/2021",
     "pollster": "Morning Consult",
@@ -2647,6 +2941,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/14/2021",
     "enddate": "2/16/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2656,6 +2951,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/14/2021",
     "enddate": "2/16/2021",
     "pollster": "Morning Consult",
@@ -2665,6 +2961,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/14/2021",
     "enddate": "2/16/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2674,6 +2971,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/14/2021",
     "enddate": "2/15/2021",
     "pollster": "Morning Consult",
@@ -2683,6 +2981,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/13/2021",
     "enddate": "2/15/2021",
     "pollster": "Morning Consult",
@@ -2692,24 +2991,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
-    "startdate": "2/13/2021",
-    "enddate": "2/16/2021",
-    "pollster": "YouGov",
-    "approve": 54,
-    "disapprove": 37,
-    "url": "https://docs.cdn.yougov.com/3at75tb28w/econTabReport.pdf"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
-    "startdate": "2/13/2021",
-    "enddate": "2/15/2021",
-    "pollster": "Morning Consult",
-    "approve": 54,
-    "disapprove": 34,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/13/2021",
     "enddate": "2/16/2021",
     "pollster": "YouGov",
@@ -2719,6 +3001,27 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/13/2021",
+    "enddate": "2/15/2021",
+    "pollster": "Morning Consult",
+    "approve": 54,
+    "disapprove": 34,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
+    "startdate": "2/13/2021",
+    "enddate": "2/16/2021",
+    "pollster": "YouGov",
+    "approve": 54,
+    "disapprove": 37,
+    "url": "https://docs.cdn.yougov.com/3at75tb28w/econTabReport.pdf"
+  },
+  {
+    "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/13/2021",
     "enddate": "2/16/2021",
     "pollster": "YouGov",
@@ -2728,6 +3031,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/12/2021",
     "enddate": "2/14/2021",
     "pollster": "Morning Consult",
@@ -2737,6 +3041,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/12/2021",
     "enddate": "2/15/2021",
     "pollster": "Morning Consult",
@@ -2746,6 +3051,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/12/2021",
     "enddate": "2/15/2021",
     "pollster": "HarrisX",
@@ -2755,6 +3061,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/12/2021",
     "enddate": "2/15/2021",
     "pollster": "Morning Consult",
@@ -2764,6 +3071,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/12/2021",
     "enddate": "2/18/2021",
     "pollster": "Echelon Insights",
@@ -2773,6 +3081,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/12/2021",
     "enddate": "2/14/2021",
     "pollster": "Morning Consult",
@@ -2782,6 +3091,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/12/2021",
     "enddate": "2/15/2021",
     "pollster": "Morning Consult",
@@ -2791,6 +3101,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/12/2021",
     "enddate": "2/15/2021",
     "pollster": "HarrisX",
@@ -2800,6 +3111,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/12/2021",
     "enddate": "2/15/2021",
     "pollster": "Morning Consult",
@@ -2809,6 +3121,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/12/2021",
     "enddate": "2/18/2021",
     "pollster": "Echelon Insights",
@@ -2818,6 +3131,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/11/2021",
     "enddate": "2/13/2021",
     "pollster": "Morning Consult",
@@ -2827,6 +3141,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/11/2021",
     "enddate": "2/13/2021",
     "pollster": "RMG Research",
@@ -2836,6 +3151,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/11/2021",
     "enddate": "2/14/2021",
     "pollster": "Quinnipiac University",
@@ -2845,6 +3161,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/11/2021",
     "enddate": "2/15/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2854,6 +3171,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/11/2021",
     "enddate": "2/15/2021",
     "pollster": "Global Strategy Group/GBAO (Navigator Research)",
@@ -2863,6 +3181,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/11/2021",
     "enddate": "2/13/2021",
     "pollster": "Morning Consult",
@@ -2872,6 +3191,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/11/2021",
     "enddate": "2/14/2021",
     "pollster": "Quinnipiac University",
@@ -2881,6 +3201,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/11/2021",
     "enddate": "2/13/2021",
     "pollster": "RMG Research",
@@ -2890,6 +3211,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/11/2021",
     "enddate": "2/15/2021",
     "pollster": "Global Strategy Group/GBAO (Navigator Research)",
@@ -2899,6 +3221,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/11/2021",
     "enddate": "2/14/2021",
     "pollster": "Quinnipiac University",
@@ -2908,6 +3231,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/11/2021",
     "enddate": "2/15/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2917,6 +3241,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/10/2021",
     "enddate": "2/12/2021",
     "pollster": "Morning Consult",
@@ -2926,6 +3251,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/10/2021",
     "enddate": "2/14/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2935,6 +3261,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/10/2021",
     "enddate": "2/12/2021",
     "pollster": "Morning Consult",
@@ -2944,6 +3271,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/10/2021",
     "enddate": "2/14/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2953,6 +3281,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/1/2021",
     "enddate": "2/3/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2962,6 +3291,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/1/2021",
     "enddate": "2/3/2021",
     "pollster": "Morning Consult",
@@ -2971,6 +3301,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/1/2021",
     "enddate": "2/3/2021",
     "pollster": "Morning Consult",
@@ -2980,6 +3311,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "2/1/2021",
     "enddate": "2/3/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2989,6 +3321,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/31/2021",
     "enddate": "2/2/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2998,6 +3331,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/31/2021",
     "enddate": "2/2/2021",
     "pollster": "Morning Consult",
@@ -3007,6 +3341,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/31/2021",
     "enddate": "2/2/2021",
     "pollster": "YouGov",
@@ -3016,6 +3351,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/31/2021",
     "enddate": "2/2/2021",
     "pollster": "YouGov",
@@ -3025,6 +3361,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/31/2021",
     "enddate": "2/2/2021",
     "pollster": "Morning Consult",
@@ -3034,6 +3371,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/31/2021",
     "enddate": "2/2/2021",
     "pollster": "YouGov",
@@ -3043,6 +3381,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/31/2021",
     "enddate": "2/2/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3052,6 +3391,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/30/2021",
     "enddate": "2/1/2021",
     "pollster": "Morning Consult",
@@ -3061,6 +3401,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/30/2021",
     "enddate": "2/1/2021",
     "pollster": "Morning Consult",
@@ -3070,6 +3411,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/30/2021",
     "enddate": "2/1/2021",
     "pollster": "Morning Consult",
@@ -3079,6 +3421,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/29/2021",
     "enddate": "1/29/2021",
     "pollster": "John Zogby Strategies/EMI Research Solutions",
@@ -3088,6 +3431,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/29/2021",
     "enddate": "1/31/2021",
     "pollster": "Morning Consult",
@@ -3097,6 +3441,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/29/2021",
     "enddate": "2/1/2021",
     "pollster": "Morning Consult",
@@ -3106,6 +3451,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/29/2021",
     "enddate": "2/1/2021",
     "pollster": "Morning Consult",
@@ -3115,6 +3461,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/29/2021",
     "enddate": "1/31/2021",
     "pollster": "Morning Consult",
@@ -3124,6 +3471,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/29/2021",
     "enddate": "2/1/2021",
     "pollster": "Morning Consult",
@@ -3133,6 +3481,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/29/2021",
     "enddate": "1/29/2021",
     "pollster": "John Zogby Strategies/EMI Research Solutions",
@@ -3142,6 +3491,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/29/2021",
     "enddate": "2/1/2021",
     "pollster": "Morning Consult",
@@ -3151,6 +3501,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "1/29/2021",
     "pollster": "HarrisX",
@@ -3160,6 +3511,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "1/30/2021",
     "pollster": "RMG Research",
@@ -3169,6 +3521,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "1/30/2021",
     "pollster": "Morning Consult",
@@ -3178,6 +3531,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "2/1/2021",
     "pollster": "AP-NORC",
@@ -3187,6 +3541,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "2/1/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3196,6 +3551,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "2/1/2021",
     "pollster": "Quinnipiac University",
@@ -3205,6 +3561,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "1/30/2021",
     "pollster": "Morning Consult",
@@ -3214,6 +3571,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "2/1/2021",
     "pollster": "Quinnipiac University",
@@ -3223,6 +3581,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "2/1/2021",
     "pollster": "AP-NORC",
@@ -3232,6 +3591,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "1/29/2021",
     "pollster": "HarrisX",
@@ -3241,6 +3601,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "1/30/2021",
     "pollster": "RMG Research",
@@ -3250,6 +3611,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "2/1/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3259,6 +3621,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/28/2021",
     "enddate": "2/1/2021",
     "pollster": "Quinnipiac University",
@@ -3268,6 +3631,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/27/2021",
     "enddate": "1/28/2021",
     "pollster": "Morning Consult",
@@ -3277,6 +3641,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/27/2021",
     "enddate": "1/29/2021",
     "pollster": "IBD/TIPP",
@@ -3286,6 +3651,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/27/2021",
     "enddate": "1/29/2021",
     "pollster": "Morning Consult",
@@ -3295,6 +3661,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/27/2021",
     "enddate": "1/31/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3304,6 +3671,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/27/2021",
     "enddate": "2/1/2021",
     "pollster": "Global Strategy Group/GBAO (Navigator Research)",
@@ -3313,6 +3681,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/27/2021",
     "enddate": "1/29/2021",
     "pollster": "Morning Consult",
@@ -3322,6 +3691,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/27/2021",
     "enddate": "1/28/2021",
     "pollster": "Morning Consult",
@@ -3331,6 +3701,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/27/2021",
     "enddate": "1/29/2021",
     "pollster": "IBD/TIPP",
@@ -3340,6 +3711,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/27/2021",
     "enddate": "1/29/2021",
     "pollster": "IBD/TIPP",
@@ -3349,6 +3721,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/27/2021",
     "enddate": "1/31/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3358,6 +3731,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/27/2021",
     "enddate": "2/1/2021",
     "pollster": "Global Strategy Group/GBAO (Navigator Research)",
@@ -3367,6 +3741,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/26/2021",
     "enddate": "1/28/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3376,6 +3751,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/26/2021",
     "enddate": "1/28/2021",
     "pollster": "Morning Consult",
@@ -3385,6 +3761,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/26/2021",
     "enddate": "1/28/2021",
     "pollster": "Morning Consult",
@@ -3394,6 +3771,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/26/2021",
     "enddate": "1/28/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3403,6 +3781,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/25/2021",
     "enddate": "1/26/2021",
     "pollster": "Morning Consult",
@@ -3412,6 +3791,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/25/2021",
     "enddate": "1/27/2021",
     "pollster": "Morning Consult",
@@ -3421,6 +3801,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/25/2021",
     "enddate": "1/27/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3430,6 +3811,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/25/2021",
     "enddate": "1/26/2021",
     "pollster": "Morning Consult",
@@ -3439,6 +3821,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/25/2021",
     "enddate": "1/27/2021",
     "pollster": "Morning Consult",
@@ -3448,6 +3831,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/25/2021",
     "enddate": "1/27/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3457,6 +3841,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/24/2021",
     "enddate": "1/26/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3466,6 +3851,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/24/2021",
     "enddate": "1/26/2021",
     "pollster": "Morning Consult",
@@ -3475,6 +3861,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/24/2021",
     "enddate": "1/26/2021",
     "pollster": "YouGov",
@@ -3484,6 +3871,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/24/2021",
     "enddate": "1/27/2021",
     "pollster": "Marist College",
@@ -3493,6 +3881,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/24/2021",
     "enddate": "1/26/2021",
     "pollster": "Morning Consult",
@@ -3502,6 +3891,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/24/2021",
     "enddate": "1/26/2021",
     "pollster": "YouGov",
@@ -3511,6 +3901,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/24/2021",
     "enddate": "1/27/2021",
     "pollster": "Marist College",
@@ -3520,6 +3911,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/24/2021",
     "enddate": "1/26/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3529,6 +3921,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/24/2021",
     "enddate": "1/26/2021",
     "pollster": "YouGov",
@@ -3538,6 +3931,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/24/2021",
     "enddate": "1/27/2021",
     "pollster": "Marist College",
@@ -3547,6 +3941,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/23/2021",
     "enddate": "1/25/2021",
     "pollster": "Morning Consult",
@@ -3556,6 +3951,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/23/2021",
     "enddate": "1/25/2021",
     "pollster": "Morning Consult",
@@ -3565,6 +3961,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/22/2021",
     "enddate": "1/24/2021",
     "pollster": "Morning Consult",
@@ -3574,6 +3971,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/22/2021",
     "enddate": "1/25/2021",
     "pollster": "Morning Consult",
@@ -3583,6 +3981,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/22/2021",
     "enddate": "1/25/2021",
     "pollster": "Morning Consult",
@@ -3592,6 +3991,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/22/2021",
     "enddate": "1/25/2021",
     "pollster": "Data for Progress",
@@ -3601,6 +4001,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/22/2021",
     "enddate": "1/24/2021",
     "pollster": "Morning Consult",
@@ -3610,6 +4011,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/22/2021",
     "enddate": "1/25/2021",
     "pollster": "Morning Consult",
@@ -3619,6 +4021,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/22/2021",
     "enddate": "1/24/2021",
     "pollster": "Morning Consult",
@@ -3628,6 +4031,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/22/2021",
     "enddate": "1/25/2021",
     "pollster": "Morning Consult",
@@ -3637,6 +4041,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/22/2021",
     "enddate": "1/25/2021",
     "pollster": "Data for Progress",
@@ -3646,6 +4051,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "1/23/2021",
     "pollster": "RMG Research",
@@ -3655,6 +4061,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "1/23/2021",
     "pollster": "Morning Consult",
@@ -3664,6 +4071,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "1/22/2021",
     "pollster": "HarrisX",
@@ -3673,6 +4081,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "1/24/2021",
     "pollster": "Monmouth University",
@@ -3682,6 +4091,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "1/25/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3691,6 +4101,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "2/2/2021",
     "pollster": "Gallup",
@@ -3700,6 +4111,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "1/23/2021",
     "pollster": "Morning Consult",
@@ -3709,6 +4121,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "1/24/2021",
     "pollster": "Monmouth University",
@@ -3718,6 +4131,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "2/2/2021",
     "pollster": "Gallup",
@@ -3727,6 +4141,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "1/22/2021",
     "pollster": "HarrisX",
@@ -3736,6 +4151,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "1/23/2021",
     "pollster": "RMG Research",
@@ -3745,6 +4161,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "1/25/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3754,6 +4171,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/21/2021",
     "enddate": "1/24/2021",
     "pollster": "Monmouth University",
@@ -3763,6 +4181,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/21/2021",
     "pollster": "Morning Consult",
@@ -3772,6 +4191,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/21/2021",
     "pollster": "Ipsos",
@@ -3781,6 +4201,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/22/2021",
     "pollster": "Morning Consult",
@@ -3790,6 +4211,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/21/2021",
     "pollster": "YouGov",
@@ -3799,6 +4221,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/24/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3808,6 +4231,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/26/2021",
     "pollster": "Echelon Insights",
@@ -3817,6 +4241,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/21/2021",
     "pollster": "YouGov",
@@ -3826,6 +4251,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/21/2021",
     "pollster": "Ipsos",
@@ -3835,6 +4261,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/22/2021",
     "pollster": "Morning Consult",
@@ -3844,6 +4271,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/21/2021",
     "pollster": "Morning Consult",
@@ -3853,6 +4281,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/21/2021",
     "pollster": "Ipsos",
@@ -3862,6 +4291,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/22/2021",
     "pollster": "Morning Consult",
@@ -3871,6 +4301,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/24/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3880,6 +4311,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/20/2021",
     "enddate": "1/26/2021",
     "pollster": "Echelon Insights",
@@ -3889,6 +4321,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/19/2021",
     "enddate": "1/21/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -3898,6 +4331,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/19/2021",
     "enddate": "1/21/2021",
     "pollster": "Morning Consult",
@@ -3907,6 +4341,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/19/2021",
     "enddate": "1/21/2021",
     "pollster": "Morning Consult",
@@ -3916,6 +4351,7 @@
   },
   {
     "president": "Joseph R. Biden Jr.",
+    "modeldate": "3/29/2021",
     "startdate": "1/19/2021",
     "enddate": "1/21/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
