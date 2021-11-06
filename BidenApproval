@@ -1,7 +1,167 @@
 [
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "11/2/2021",
+    "enddate": "11/4/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 43,
+    "disapprove": 55,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "11/3/2021",
+    "enddate": "11/4/2021",
+    "pollster": "Ipsos",
+    "approve": 48,
+    "disapprove": 47,
+    "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2021-11/2021%20Ipsos%20Tracking%20-%20Core%20Political%20Presidential%20Approval%20Tracker%2011%2004%202021.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "11/3/2021",
+    "enddate": "11/4/2021",
+    "pollster": "Emerson College",
+    "approve": 41.3,
+    "disapprove": 50.4,
+    "url": "https://emersonpolling.reportablenews.com/pr/november-2021-national-poll-biden-job-approval-drops-again"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "11/3/2021",
+    "enddate": "11/4/2021",
+    "pollster": "Ipsos",
+    "approve": 48,
+    "disapprove": 47,
+    "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2021-11/2021%20Ipsos%20Tracking%20-%20Core%20Political%20Presidential%20Approval%20Tracker%2011%2004%202021.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "11/2/2021",
+    "enddate": "11/4/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 43,
+    "disapprove": 55,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "11/3/2021",
+    "enddate": "11/4/2021",
+    "pollster": "Emerson College",
+    "approve": 41.3,
+    "disapprove": 50.4,
+    "url": "https://emersonpolling.reportablenews.com/pr/november-2021-national-poll-biden-job-approval-drops-again"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "11/1/2021",
+    "enddate": "11/3/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 44,
+    "disapprove": 54,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "11/1/2021",
+    "enddate": "11/3/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 44,
+    "disapprove": 54,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/27/2021",
+    "enddate": "11/2/2021",
+    "pollster": "Morning Consult",
+    "approve": 44,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/31/2021",
+    "enddate": "11/2/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 44,
+    "disapprove": 55,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/30/2021",
+    "enddate": "11/2/2021",
+    "pollster": "YouGov",
+    "approve": 41,
+    "disapprove": 50,
+    "url": "https://docs.cdn.yougov.com/qwffht37bk/econTabReport.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/27/2021",
+    "enddate": "11/2/2021",
+    "pollster": "Morning Consult",
+    "approve": 44,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/30/2021",
+    "enddate": "11/2/2021",
+    "pollster": "YouGov",
+    "approve": 41,
+    "disapprove": 50,
+    "url": "https://docs.cdn.yougov.com/qwffht37bk/econTabReport.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/31/2021",
+    "enddate": "11/2/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 44,
+    "disapprove": 55,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/30/2021",
+    "enddate": "11/2/2021",
+    "pollster": "YouGov",
+    "approve": 44,
+    "disapprove": 51,
+    "url": "https://docs.cdn.yougov.com/qwffht37bk/econTabReport.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/26/2021",
+    "enddate": "11/1/2021",
+    "pollster": "Morning Consult",
+    "approve": 44,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/28/2021",
     "enddate": "11/1/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -11,7 +171,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/29/2021",
     "enddate": "11/1/2021",
     "pollster": "Morning Consult",
@@ -21,7 +181,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/26/2021",
+    "enddate": "11/1/2021",
+    "pollster": "Morning Consult",
+    "approve": 44,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/29/2021",
     "enddate": "11/1/2021",
     "pollster": "Morning Consult",
@@ -31,7 +201,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/28/2021",
     "enddate": "11/1/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -41,7 +211,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/29/2021",
     "enddate": "11/1/2021",
     "pollster": "Morning Consult",
@@ -51,7 +221,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/3/2021",
     "enddate": "10/9/2021",
     "pollster": "Morning Consult",
@@ -61,7 +231,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/6/2021",
     "enddate": "10/9/2021",
     "pollster": "RMG Research",
@@ -71,7 +241,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/3/2021",
     "enddate": "10/9/2021",
     "pollster": "Morning Consult",
@@ -81,7 +251,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/6/2021",
     "enddate": "10/9/2021",
     "pollster": "RMG Research",
@@ -91,7 +261,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/2/2021",
     "enddate": "10/8/2021",
     "pollster": "Morning Consult",
@@ -101,17 +271,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/6/2021",
-    "enddate": "10/8/2021",
-    "pollster": "Morning Consult",
-    "approve": 49,
-    "disapprove": 46,
-    "url": "https://morningconsult.com/2021/10/11/squid-game-netflix-popularity/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/6/2021",
     "enddate": "10/8/2021",
     "pollster": "YouGov",
@@ -121,27 +281,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/2/2021",
-    "enddate": "10/8/2021",
-    "pollster": "Morning Consult",
-    "approve": 46,
-    "disapprove": 47,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/6/2021",
-    "enddate": "10/8/2021",
-    "pollster": "YouGov",
-    "approve": 50,
-    "disapprove": 50,
-    "url": "https://www.cbsnews.com/news/democrats-build-back-better-americans-dont-know-opinion-poll/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/6/2021",
     "enddate": "10/8/2021",
     "pollster": "Morning Consult",
@@ -151,7 +291,37 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/2/2021",
+    "enddate": "10/8/2021",
+    "pollster": "Morning Consult",
+    "approve": 46,
+    "disapprove": 47,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/6/2021",
+    "enddate": "10/8/2021",
+    "pollster": "Morning Consult",
+    "approve": 49,
+    "disapprove": 46,
+    "url": "https://morningconsult.com/2021/10/11/squid-game-netflix-popularity/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/6/2021",
+    "enddate": "10/8/2021",
+    "pollster": "YouGov",
+    "approve": 50,
+    "disapprove": 50,
+    "url": "https://www.cbsnews.com/news/democrats-build-back-better-americans-dont-know-opinion-poll/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/1/2021",
     "enddate": "10/7/2021",
     "pollster": "Morning Consult",
@@ -161,7 +331,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/5/2021",
     "enddate": "10/7/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -171,7 +341,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/6/2021",
     "enddate": "10/7/2021",
     "pollster": "Ipsos",
@@ -181,7 +351,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/1/2021",
     "enddate": "10/7/2021",
     "pollster": "Morning Consult",
@@ -191,7 +361,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/6/2021",
     "enddate": "10/7/2021",
     "pollster": "Ipsos",
@@ -201,7 +371,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/5/2021",
     "enddate": "10/7/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -211,7 +381,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/30/2021",
     "enddate": "10/6/2021",
     "pollster": "Morning Consult",
@@ -221,7 +391,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/4/2021",
     "enddate": "10/6/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -231,7 +401,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/4/2021",
     "enddate": "10/6/2021",
     "pollster": "Trafalgar Group",
@@ -241,7 +411,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/3/2021",
     "enddate": "10/6/2021",
     "pollster": "Cor Services, Inc.",
@@ -251,7 +421,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/30/2021",
     "enddate": "10/6/2021",
     "pollster": "Morning Consult",
@@ -261,7 +431,27 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/4/2021",
+    "enddate": "10/6/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 43,
+    "disapprove": 55,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/3/2021",
+    "enddate": "10/6/2021",
+    "pollster": "Cor Services, Inc.",
+    "approve": 39,
+    "disapprove": 53,
+    "url": "https://excellenceinpolling.com/wp-content/uploads/2021/10/2021-Biden-Approval-Numbers-10-14-21-crosstabs.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/4/2021",
     "enddate": "10/6/2021",
     "pollster": "Trafalgar Group",
@@ -271,27 +461,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/4/2021",
-    "enddate": "10/6/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 43,
-    "disapprove": 55,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/3/2021",
-    "enddate": "10/6/2021",
-    "pollster": "Cor Services, Inc.",
-    "approve": 39,
-    "disapprove": 53,
-    "url": "https://excellenceinpolling.com/wp-content/uploads/2021/10/2021-Biden-Approval-Numbers-10-14-21-crosstabs.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/29/2021",
     "enddate": "10/5/2021",
     "pollster": "Morning Consult",
@@ -301,17 +471,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/3/2021",
-    "enddate": "10/5/2021",
-    "pollster": "YouGov",
-    "approve": 42,
-    "disapprove": 48,
-    "url": "https://docs.cdn.yougov.com/j46zs8picp/econTabReport.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/3/2021",
     "enddate": "10/5/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -321,7 +481,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/3/2021",
+    "enddate": "10/5/2021",
+    "pollster": "YouGov",
+    "approve": 42,
+    "disapprove": 48,
+    "url": "https://docs.cdn.yougov.com/j46zs8picp/econTabReport.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/5/2021",
     "enddate": "10/5/2021",
     "pollster": "Redfield & Wilton Strategies",
@@ -331,7 +501,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/29/2021",
     "enddate": "10/5/2021",
     "pollster": "Morning Consult",
@@ -341,7 +511,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/3/2021",
     "enddate": "10/5/2021",
     "pollster": "YouGov",
@@ -351,17 +521,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/3/2021",
-    "enddate": "10/5/2021",
-    "pollster": "YouGov",
-    "approve": 44,
-    "disapprove": 49,
-    "url": "https://docs.cdn.yougov.com/j46zs8picp/econTabReport.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/3/2021",
     "enddate": "10/5/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -371,7 +531,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/3/2021",
+    "enddate": "10/5/2021",
+    "pollster": "YouGov",
+    "approve": 44,
+    "disapprove": 49,
+    "url": "https://docs.cdn.yougov.com/j46zs8picp/econTabReport.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/5/2021",
     "enddate": "10/5/2021",
     "pollster": "Redfield & Wilton Strategies",
@@ -381,7 +551,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/28/2021",
     "enddate": "10/4/2021",
     "pollster": "Morning Consult",
@@ -391,7 +561,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/30/2021",
     "enddate": "10/4/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -401,27 +571,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/2/2021",
-    "enddate": "10/4/2021",
-    "pollster": "Morning Consult",
-    "approve": 45,
-    "disapprove": 52,
-    "url": "https://www.politico.com/f/?id=0000017c-5392-d47e-ab7e-dfb2c5590000"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/1/2021",
-    "enddate": "10/4/2021",
-    "pollster": "YouGov",
-    "approve": 42,
-    "disapprove": 50,
-    "url": "https://docs.cdn.yougov.com/a6ira9rwv9/20211001_yahoo_vaccine_tabs.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/1/2021",
     "enddate": "10/4/2021",
     "pollster": "Morning Consult",
@@ -431,7 +581,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/1/2021",
+    "enddate": "10/4/2021",
+    "pollster": "YouGov",
+    "approve": 42,
+    "disapprove": 50,
+    "url": "https://docs.cdn.yougov.com/a6ira9rwv9/20211001_yahoo_vaccine_tabs.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/1/2021",
     "enddate": "10/4/2021",
     "pollster": "Quinnipiac University",
@@ -441,7 +601,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/2/2021",
+    "enddate": "10/4/2021",
+    "pollster": "Morning Consult",
+    "approve": 45,
+    "disapprove": 52,
+    "url": "https://www.politico.com/f/?id=0000017c-5392-d47e-ab7e-dfb2c5590000"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "9/28/2021",
     "enddate": "10/4/2021",
     "pollster": "Morning Consult",
@@ -451,7 +621,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/1/2021",
     "enddate": "10/4/2021",
     "pollster": "Quinnipiac University",
@@ -461,7 +631,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/1/2021",
     "enddate": "10/4/2021",
     "pollster": "Morning Consult",
@@ -471,7 +641,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/1/2021",
     "enddate": "10/4/2021",
     "pollster": "YouGov",
@@ -481,7 +651,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/30/2021",
     "enddate": "10/4/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -491,17 +661,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/1/2021",
-    "enddate": "10/4/2021",
-    "pollster": "Quinnipiac University",
-    "approve": 40,
-    "disapprove": 53,
-    "url": "https://poll.qu.edu/poll-release?releaseid=3824"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/2/2021",
     "enddate": "10/4/2021",
     "pollster": "Morning Consult",
@@ -511,7 +671,27 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/1/2021",
+    "enddate": "10/4/2021",
+    "pollster": "Quinnipiac University",
+    "approve": 40,
+    "disapprove": 53,
+    "url": "https://poll.qu.edu/poll-release?releaseid=3824"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/25/2021",
+    "enddate": "10/31/2021",
+    "pollster": "Morning Consult",
+    "approve": 45,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/27/2021",
     "enddate": "10/31/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -521,7 +701,27 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/31/2021",
+    "enddate": "10/31/2021",
+    "pollster": "Redfield & Wilton Strategies",
+    "approve": 40,
+    "disapprove": 44,
+    "url": "https://redfieldandwiltonstrategies.com/joe-biden-administration-approval-ratings-31-october/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/25/2021",
+    "enddate": "10/31/2021",
+    "pollster": "Morning Consult",
+    "approve": 45,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/27/2021",
     "enddate": "10/31/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -531,7 +731,37 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/31/2021",
+    "enddate": "10/31/2021",
+    "pollster": "Redfield & Wilton Strategies",
+    "approve": 40,
+    "disapprove": 44,
+    "url": "https://redfieldandwiltonstrategies.com/joe-biden-administration-approval-ratings-31-october/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/24/2021",
+    "enddate": "10/30/2021",
+    "pollster": "Morning Consult",
+    "approve": 45,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/24/2021",
+    "enddate": "10/30/2021",
+    "pollster": "Morning Consult",
+    "approve": 45,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "9/27/2021",
     "enddate": "10/3/2021",
     "pollster": "Morning Consult",
@@ -541,7 +771,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/29/2021",
     "enddate": "10/3/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -551,7 +781,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/27/2021",
     "enddate": "10/3/2021",
     "pollster": "Morning Consult",
@@ -561,7 +791,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/29/2021",
     "enddate": "10/3/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -571,7 +801,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/23/2021",
+    "enddate": "10/29/2021",
+    "pollster": "Morning Consult",
+    "approve": 45,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/27/2021",
     "enddate": "10/29/2021",
     "pollster": "IBD/TIPP",
@@ -581,7 +821,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/23/2021",
+    "enddate": "10/29/2021",
+    "pollster": "Morning Consult",
+    "approve": 45,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/27/2021",
     "enddate": "10/29/2021",
     "pollster": "IBD/TIPP",
@@ -591,7 +841,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/22/2021",
+    "enddate": "10/28/2021",
+    "pollster": "Morning Consult",
+    "approve": 45,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/26/2021",
     "enddate": "10/28/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -601,27 +861,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/26/2021",
-    "enddate": "10/28/2021",
-    "pollster": "Morning Consult",
-    "approve": 47,
-    "disapprove": 48,
-    "url": "https://morningconsult.com/2021/11/01/braves-chop-ban/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/27/2021",
-    "enddate": "10/28/2021",
-    "pollster": "Ipsos",
-    "approve": 44,
-    "disapprove": 51,
-    "url": "https://www.ipsos.com/en-us/ipsos-core-political-presidential-approval-tracker-10282021"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/26/2021",
     "enddate": "10/28/2021",
     "pollster": "Morning Consult",
@@ -631,7 +871,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/26/2021",
+    "enddate": "10/28/2021",
+    "pollster": "Harris Poll",
+    "approve": 43,
+    "disapprove": 51,
+    "url": "https://mcusercontent.com/ca678077bc522bd7bd74bacbf/files/f5e7728d-554a-39d2-2939-8c4849d081c6/HHP_October_12PM_vF.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/27/2021",
     "enddate": "10/28/2021",
     "pollster": "Ipsos",
@@ -641,7 +891,47 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/22/2021",
+    "enddate": "10/28/2021",
+    "pollster": "Morning Consult",
+    "approve": 45,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/26/2021",
+    "enddate": "10/28/2021",
+    "pollster": "Morning Consult",
+    "approve": 47,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/2021/11/01/braves-chop-ban/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/27/2021",
+    "enddate": "10/28/2021",
+    "pollster": "Ipsos",
+    "approve": 44,
+    "disapprove": 51,
+    "url": "https://www.ipsos.com/en-us/ipsos-core-political-presidential-approval-tracker-10282021"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/26/2021",
+    "enddate": "10/28/2021",
+    "pollster": "Harris Poll",
+    "approve": 43,
+    "disapprove": 51,
+    "url": "https://mcusercontent.com/ca678077bc522bd7bd74bacbf/files/f5e7728d-554a-39d2-2939-8c4849d081c6/HHP_October_12PM_vF.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/26/2021",
     "enddate": "10/28/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -651,7 +941,27 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/21/2021",
+    "enddate": "10/27/2021",
+    "pollster": "Morning Consult",
+    "approve": 45,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/25/2021",
+    "enddate": "10/27/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 42,
+    "disapprove": 57,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/25/2021",
     "enddate": "10/27/2021",
     "pollster": "RMG Research",
@@ -661,27 +971,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/25/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/21/2021",
     "enddate": "10/27/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 42,
-    "disapprove": 57,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+    "pollster": "Morning Consult",
+    "approve": 45,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/25/2021",
-    "enddate": "10/27/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 42,
-    "disapprove": 57,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/25/2021",
     "enddate": "10/27/2021",
     "pollster": "RMG Research",
@@ -691,7 +991,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/25/2021",
+    "enddate": "10/27/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 42,
+    "disapprove": 57,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/20/2021",
     "enddate": "10/26/2021",
     "pollster": "Morning Consult",
@@ -701,7 +1011,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/24/2021",
     "enddate": "10/26/2021",
     "pollster": "YouGov",
@@ -711,17 +1021,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/23/2021",
-    "enddate": "10/26/2021",
-    "pollster": "NBC News",
-    "approve": 42,
-    "disapprove": 54,
-    "url": "https://www.nbcnews.com/politics/meet-the-press/biden-s-job-rating-sinks-42-percent-nbc-news-poll-n1282781"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/24/2021",
     "enddate": "10/26/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -731,7 +1031,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/23/2021",
+    "enddate": "10/26/2021",
+    "pollster": "NBC News",
+    "approve": 42,
+    "disapprove": 54,
+    "url": "https://www.nbcnews.com/politics/meet-the-press/biden-s-job-rating-sinks-42-percent-nbc-news-poll-n1282781"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/20/2021",
     "enddate": "10/26/2021",
     "pollster": "Morning Consult",
@@ -741,17 +1051,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/23/2021",
-    "enddate": "10/26/2021",
-    "pollster": "NBC News",
-    "approve": 42,
-    "disapprove": 54,
-    "url": "https://www.nbcnews.com/politics/meet-the-press/biden-s-job-rating-sinks-42-percent-nbc-news-poll-n1282781"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/24/2021",
     "enddate": "10/26/2021",
     "pollster": "YouGov",
@@ -761,7 +1061,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/23/2021",
+    "enddate": "10/26/2021",
+    "pollster": "NBC News",
+    "approve": 42,
+    "disapprove": 54,
+    "url": "https://www.nbcnews.com/politics/meet-the-press/biden-s-job-rating-sinks-42-percent-nbc-news-poll-n1282781"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/24/2021",
     "enddate": "10/26/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -771,7 +1081,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/24/2021",
     "enddate": "10/26/2021",
     "pollster": "YouGov",
@@ -781,7 +1091,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/23/2021",
     "enddate": "10/26/2021",
     "pollster": "NBC News",
@@ -791,7 +1101,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/19/2021",
     "enddate": "10/25/2021",
     "pollster": "Morning Consult",
@@ -801,7 +1111,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/21/2021",
     "enddate": "10/25/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -811,7 +1121,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/21/2021",
     "enddate": "10/25/2021",
     "pollster": "AP-NORC",
@@ -821,7 +1131,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/22/2021",
     "enddate": "10/25/2021",
     "pollster": "Global Strategy Group/GBAO (Navigator Research)",
@@ -831,7 +1141,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/19/2021",
     "enddate": "10/25/2021",
     "pollster": "Morning Consult",
@@ -841,7 +1151,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/21/2021",
     "enddate": "10/25/2021",
     "pollster": "AP-NORC",
@@ -851,7 +1161,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/21/2021",
     "enddate": "10/25/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -861,7 +1171,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/22/2021",
     "enddate": "10/25/2021",
     "pollster": "Global Strategy Group/GBAO (Navigator Research)",
@@ -871,7 +1181,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/18/2021",
     "enddate": "10/24/2021",
     "pollster": "Morning Consult",
@@ -881,7 +1191,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/20/2021",
     "enddate": "10/24/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -891,17 +1201,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/22/2021",
-    "enddate": "10/24/2021",
-    "pollster": "Morning Consult",
-    "approve": 46,
-    "disapprove": 51,
-    "url": "https://assets.morningconsult.com/wp-uploads/2021/10/27074729/2110134_crosstabs_POLITICO_RVs_v2_SH.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/22/2021",
     "enddate": "10/24/2021",
     "pollster": "Léger",
@@ -911,37 +1211,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/18/2021",
-    "enddate": "10/24/2021",
-    "pollster": "Morning Consult",
-    "approve": 45,
-    "disapprove": 48,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/22/2021",
-    "enddate": "10/24/2021",
-    "pollster": "Léger",
-    "approve": 43,
-    "disapprove": 54,
-    "url": "https://2g2ckk18vixp3neolz4b6605-wpengine.netdna-ssl.com/wp-content/uploads/2021/10/Legers-North-American-Tracker-October-25th-2021.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/20/2021",
-    "enddate": "10/24/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 43,
-    "disapprove": 56,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/22/2021",
     "enddate": "10/24/2021",
     "pollster": "Morning Consult",
@@ -951,7 +1221,57 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/18/2021",
+    "enddate": "10/24/2021",
+    "pollster": "Morning Consult",
+    "approve": 45,
+    "disapprove": 48,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/22/2021",
+    "enddate": "10/24/2021",
+    "pollster": "Léger",
+    "approve": 43,
+    "disapprove": 54,
+    "url": "https://2g2ckk18vixp3neolz4b6605-wpengine.netdna-ssl.com/wp-content/uploads/2021/10/Legers-North-American-Tracker-October-25th-2021.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/20/2021",
+    "enddate": "10/24/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 43,
+    "disapprove": 56,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/22/2021",
+    "enddate": "10/24/2021",
+    "pollster": "Morning Consult",
+    "approve": 46,
+    "disapprove": 51,
+    "url": "https://assets.morningconsult.com/wp-uploads/2021/10/27074729/2110134_crosstabs_POLITICO_RVs_v2_SH.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/17/2021",
+    "enddate": "10/23/2021",
+    "pollster": "Morning Consult",
+    "approve": 46,
+    "disapprove": 47,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/17/2021",
     "enddate": "10/23/2021",
     "pollster": "Saint Leo University",
@@ -961,17 +1281,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/17/2021",
-    "enddate": "10/23/2021",
-    "pollster": "Morning Consult",
-    "approve": 46,
-    "disapprove": 47,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/20/2021",
     "enddate": "10/23/2021",
     "pollster": "HarrisX",
@@ -981,7 +1291,27 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/23/2021",
+    "enddate": "10/23/2021",
+    "pollster": "Morning Consult",
+    "approve": 49,
+    "disapprove": 47,
+    "url": "https://morningconsult.com/2021/11/03/on-demand-telehealth-polling/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/17/2021",
+    "enddate": "10/23/2021",
+    "pollster": "Morning Consult",
+    "approve": 46,
+    "disapprove": 47,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/17/2021",
     "enddate": "10/23/2021",
     "pollster": "Saint Leo University",
@@ -991,17 +1321,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/17/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/23/2021",
     "enddate": "10/23/2021",
     "pollster": "Morning Consult",
-    "approve": 46,
+    "approve": 49,
     "disapprove": 47,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
+    "url": "https://morningconsult.com/2021/11/03/on-demand-telehealth-polling/"
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/20/2021",
     "enddate": "10/23/2021",
     "pollster": "HarrisX",
@@ -1011,7 +1341,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/16/2021",
     "enddate": "10/22/2021",
     "pollster": "Morning Consult",
@@ -1021,7 +1351,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/18/2021",
     "enddate": "10/22/2021",
     "pollster": "Marist College",
@@ -1031,7 +1361,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/16/2021",
     "enddate": "10/22/2021",
     "pollster": "Morning Consult",
@@ -1041,7 +1371,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/18/2021",
     "enddate": "10/22/2021",
     "pollster": "Marist College",
@@ -1051,7 +1381,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/18/2021",
     "enddate": "10/22/2021",
     "pollster": "Marist College",
@@ -1061,7 +1391,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/15/2021",
     "enddate": "10/21/2021",
     "pollster": "Morning Consult",
@@ -1071,7 +1401,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/16/2021",
     "enddate": "10/21/2021",
     "pollster": "Georgetown University/Battleground",
@@ -1081,27 +1411,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/19/2021",
-    "enddate": "10/21/2021",
-    "pollster": "Trafalgar Group",
-    "approve": 39.2,
-    "disapprove": 58.4,
-    "url": "https://www.thetrafalgargroup.org/news/nat-issues-biden-approval-1023/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/19/2021",
-    "enddate": "10/21/2021",
-    "pollster": "YouGov",
-    "approve": 44,
-    "disapprove": 49,
-    "url": "https://docs.cdn.yougov.com/4i6a6olite/20211021_yahoo_vaccine_tabs.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/19/2021",
     "enddate": "10/21/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1111,27 +1421,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/20/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/19/2021",
     "enddate": "10/21/2021",
-    "pollster": "Ipsos",
-    "approve": 46,
-    "disapprove": 48,
-    "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2021-10/2021%20Ipsos%20Tracking%20-%20Core%20Political%20Presidential%20Approval%20Tracker%2010%2021%202021.pdf"
+    "pollster": "Trafalgar Group",
+    "approve": 39.2,
+    "disapprove": 58.4,
+    "url": "https://www.thetrafalgargroup.org/news/nat-issues-biden-approval-1023/"
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/15/2021",
-    "enddate": "10/21/2021",
-    "pollster": "Morning Consult",
-    "approve": 46,
-    "disapprove": 47,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/19/2021",
     "enddate": "10/21/2021",
     "pollster": "YouGov",
@@ -1141,7 +1441,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/20/2021",
     "enddate": "10/21/2021",
     "pollster": "Ipsos",
@@ -1151,7 +1451,37 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/15/2021",
+    "enddate": "10/21/2021",
+    "pollster": "Morning Consult",
+    "approve": 46,
+    "disapprove": 47,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/19/2021",
+    "enddate": "10/21/2021",
+    "pollster": "YouGov",
+    "approve": 44,
+    "disapprove": 49,
+    "url": "https://docs.cdn.yougov.com/4i6a6olite/20211021_yahoo_vaccine_tabs.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/20/2021",
+    "enddate": "10/21/2021",
+    "pollster": "Ipsos",
+    "approve": 46,
+    "disapprove": 48,
+    "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2021-10/2021%20Ipsos%20Tracking%20-%20Core%20Political%20Presidential%20Approval%20Tracker%2010%2021%202021.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/16/2021",
     "enddate": "10/21/2021",
     "pollster": "Georgetown University/Battleground",
@@ -1161,7 +1491,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/19/2021",
     "enddate": "10/21/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1171,7 +1501,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/19/2021",
     "enddate": "10/21/2021",
     "pollster": "Trafalgar Group",
@@ -1181,7 +1511,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/14/2021",
     "enddate": "10/20/2021",
     "pollster": "Morning Consult",
@@ -1191,17 +1521,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/17/2021",
-    "enddate": "10/20/2021",
-    "pollster": "American Research Group",
-    "approve": 47,
-    "disapprove": 47,
-    "url": "https://americanresearchgroup.com/economy/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/18/2021",
     "enddate": "10/20/2021",
     "pollster": "RMG Research",
@@ -1211,7 +1531,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/17/2021",
+    "enddate": "10/20/2021",
+    "pollster": "American Research Group",
+    "approve": 47,
+    "disapprove": 47,
+    "url": "https://americanresearchgroup.com/economy/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/18/2021",
     "enddate": "10/20/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1221,7 +1551,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/14/2021",
     "enddate": "10/20/2021",
     "pollster": "Morning Consult",
@@ -1231,7 +1561,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/17/2021",
     "enddate": "10/20/2021",
     "pollster": "American Research Group",
@@ -1241,7 +1571,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/17/2021",
     "enddate": "10/20/2021",
     "pollster": "American Research Group",
@@ -1251,7 +1581,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/18/2021",
+    "enddate": "10/20/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 42,
+    "disapprove": 56,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/18/2021",
     "enddate": "10/20/2021",
     "pollster": "RMG Research",
@@ -1261,17 +1601,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/18/2021",
-    "enddate": "10/20/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 42,
-    "disapprove": 56,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/26/2021",
     "enddate": "10/2/2021",
     "pollster": "Morning Consult",
@@ -1281,7 +1611,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/29/2021",
     "enddate": "10/2/2021",
     "pollster": "IBD/TIPP",
@@ -1291,7 +1621,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/26/2021",
     "enddate": "10/2/2021",
     "pollster": "Morning Consult",
@@ -1301,7 +1631,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/29/2021",
     "enddate": "10/2/2021",
     "pollster": "IBD/TIPP",
@@ -1311,7 +1641,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/1/2021",
     "enddate": "10/19/2021",
     "pollster": "Gallup",
@@ -1321,7 +1651,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/13/2021",
     "enddate": "10/19/2021",
     "pollster": "Morning Consult",
@@ -1331,7 +1661,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/15/2021",
     "enddate": "10/19/2021",
     "pollster": "Echelon Insights",
@@ -1341,27 +1671,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/16/2021",
-    "enddate": "10/19/2021",
-    "pollster": "Fox News",
-    "approve": 46,
-    "disapprove": 53,
-    "url": "https://static.foxnews.com/foxnews.com/content/uploads/2021/10/Fox_October-16-19_National_Topline_October-20-Release.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/17/2021",
-    "enddate": "10/19/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 41,
-    "disapprove": 58,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/16/2021",
     "enddate": "10/19/2021",
     "pollster": "YouGov",
@@ -1371,7 +1681,27 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/16/2021",
+    "enddate": "10/19/2021",
+    "pollster": "Fox News",
+    "approve": 46,
+    "disapprove": 53,
+    "url": "https://static.foxnews.com/foxnews.com/content/uploads/2021/10/Fox_October-16-19_National_Topline_October-20-Release.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/17/2021",
+    "enddate": "10/19/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 41,
+    "disapprove": 58,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/1/2021",
     "enddate": "10/19/2021",
     "pollster": "Gallup",
@@ -1381,7 +1711,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/13/2021",
     "enddate": "10/19/2021",
     "pollster": "Morning Consult",
@@ -1391,7 +1721,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/16/2021",
     "enddate": "10/19/2021",
     "pollster": "YouGov",
@@ -1401,7 +1731,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/15/2021",
     "enddate": "10/19/2021",
     "pollster": "Echelon Insights",
@@ -1411,7 +1741,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/16/2021",
     "enddate": "10/19/2021",
     "pollster": "YouGov",
@@ -1421,17 +1751,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/17/2021",
-    "enddate": "10/19/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 41,
-    "disapprove": 58,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/16/2021",
     "enddate": "10/19/2021",
     "pollster": "Fox News",
@@ -1441,7 +1761,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/17/2021",
+    "enddate": "10/19/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 41,
+    "disapprove": 58,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/12/2021",
     "enddate": "10/18/2021",
     "pollster": "Morning Consult",
@@ -1451,7 +1781,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/14/2021",
+    "enddate": "10/18/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 42,
+    "disapprove": 56,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/14/2021",
     "enddate": "10/18/2021",
     "pollster": "McLaughlin & Associates",
@@ -1461,27 +1801,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/14/2021",
-    "enddate": "10/18/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 42,
-    "disapprove": 56,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/15/2021",
-    "enddate": "10/18/2021",
-    "pollster": "Quinnipiac University",
-    "approve": 37,
-    "disapprove": 52,
-    "url": "https://poll.qu.edu/poll-release?releaseid=3825"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/16/2021",
     "enddate": "10/18/2021",
     "pollster": "Morning Consult",
@@ -1491,17 +1811,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/12/2021",
-    "enddate": "10/18/2021",
-    "pollster": "Morning Consult",
-    "approve": 46,
-    "disapprove": 47,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/15/2021",
     "enddate": "10/18/2021",
     "pollster": "Quinnipiac University",
@@ -1511,7 +1821,27 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/12/2021",
+    "enddate": "10/18/2021",
+    "pollster": "Morning Consult",
+    "approve": 46,
+    "disapprove": 47,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/15/2021",
+    "enddate": "10/18/2021",
+    "pollster": "Quinnipiac University",
+    "approve": 37,
+    "disapprove": 52,
+    "url": "https://poll.qu.edu/poll-release?releaseid=3825"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/14/2021",
     "enddate": "10/18/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1521,7 +1851,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/14/2021",
     "enddate": "10/18/2021",
     "pollster": "McLaughlin & Associates",
@@ -1531,7 +1861,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/15/2021",
     "enddate": "10/18/2021",
     "pollster": "Quinnipiac University",
@@ -1541,7 +1871,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/16/2021",
     "enddate": "10/18/2021",
     "pollster": "Morning Consult",
@@ -1551,7 +1881,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/11/2021",
     "enddate": "10/17/2021",
     "pollster": "Morning Consult",
@@ -1561,7 +1891,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/13/2021",
+    "enddate": "10/17/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 42,
+    "disapprove": 56,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/13/2021",
     "enddate": "10/17/2021",
     "pollster": "Selzer & Co.",
@@ -1571,27 +1911,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/13/2021",
-    "enddate": "10/17/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 42,
-    "disapprove": 56,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/14/2021",
-    "enddate": "10/17/2021",
-    "pollster": "Morning Consult",
-    "approve": 49,
-    "disapprove": 45,
-    "url": "https://morningconsult.com/2021/10/28/network-resiliency-natural-disasters-polling/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/14/2021",
     "enddate": "10/17/2021",
     "pollster": "CNBC/Hart Research/Public Opinion Strategies",
@@ -1601,7 +1921,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/14/2021",
+    "enddate": "10/17/2021",
+    "pollster": "Morning Consult",
+    "approve": 49,
+    "disapprove": 45,
+    "url": "https://morningconsult.com/2021/10/28/network-resiliency-natural-disasters-polling/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/17/2021",
     "enddate": "10/17/2021",
     "pollster": "Redfield & Wilton Strategies",
@@ -1611,7 +1941,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/11/2021",
     "enddate": "10/17/2021",
     "pollster": "Morning Consult",
@@ -1621,7 +1951,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/13/2021",
     "enddate": "10/17/2021",
     "pollster": "Selzer & Co.",
@@ -1631,7 +1961,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/14/2021",
     "enddate": "10/17/2021",
     "pollster": "CNBC/Hart Research/Public Opinion Strategies",
@@ -1641,7 +1971,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/14/2021",
     "enddate": "10/17/2021",
     "pollster": "Morning Consult",
@@ -1651,7 +1981,17 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/13/2021",
+    "enddate": "10/17/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 42,
+    "disapprove": 56,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/13/2021",
     "enddate": "10/17/2021",
     "pollster": "Selzer & Co.",
@@ -1661,17 +2001,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/13/2021",
-    "enddate": "10/17/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 42,
-    "disapprove": 56,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/17/2021",
     "enddate": "10/17/2021",
     "pollster": "Redfield & Wilton Strategies",
@@ -1681,7 +2011,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/10/2021",
     "enddate": "10/16/2021",
     "pollster": "Morning Consult",
@@ -1691,7 +2021,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/14/2021",
     "enddate": "10/16/2021",
     "pollster": "RMG Research",
@@ -1701,7 +2031,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/10/2021",
     "enddate": "10/16/2021",
     "pollster": "Morning Consult",
@@ -1711,7 +2041,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/14/2021",
     "enddate": "10/16/2021",
     "pollster": "RMG Research",
@@ -1721,7 +2051,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/9/2021",
     "enddate": "10/15/2021",
     "pollster": "Morning Consult",
@@ -1731,7 +2061,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/9/2021",
     "enddate": "10/15/2021",
     "pollster": "Morning Consult",
@@ -1741,7 +2071,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/8/2021",
     "enddate": "10/14/2021",
     "pollster": "Morning Consult",
@@ -1751,7 +2081,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/12/2021",
     "enddate": "10/14/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1761,57 +2091,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/12/2021",
-    "enddate": "10/14/2021",
-    "pollster": "Cor Services, Inc.",
-    "approve": 40,
-    "disapprove": 56,
-    "url": "https://excellenceinpolling.com/wp-content/uploads/2021/10/2021-Biden-Approval-Numbers-10-14-21-crosstabs.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/13/2021",
-    "enddate": "10/14/2021",
-    "pollster": "Ipsos",
-    "approve": 46,
-    "disapprove": 48,
-    "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2021-10/2021%20Ipsos%20Tracking%20-%20Core%20Political%20Presidential%20Approval%20Tracker%2010%2014%202021.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/8/2021",
-    "enddate": "10/14/2021",
-    "pollster": "Morning Consult",
-    "approve": 46,
-    "disapprove": 47,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/13/2021",
-    "enddate": "10/14/2021",
-    "pollster": "Ipsos",
-    "approve": 46,
-    "disapprove": 48,
-    "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2021-10/2021%20Ipsos%20Tracking%20-%20Core%20Political%20Presidential%20Approval%20Tracker%2010%2014%202021.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/12/2021",
-    "enddate": "10/14/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 43,
-    "disapprove": 56,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/12/2021",
     "enddate": "10/14/2021",
     "pollster": "Cor Services, Inc.",
@@ -1821,7 +2101,57 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/13/2021",
+    "enddate": "10/14/2021",
+    "pollster": "Ipsos",
+    "approve": 46,
+    "disapprove": 48,
+    "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2021-10/2021%20Ipsos%20Tracking%20-%20Core%20Political%20Presidential%20Approval%20Tracker%2010%2014%202021.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/8/2021",
+    "enddate": "10/14/2021",
+    "pollster": "Morning Consult",
+    "approve": 46,
+    "disapprove": 47,
+    "url": "https://morningconsult.com/form/global-leader-approval/"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/13/2021",
+    "enddate": "10/14/2021",
+    "pollster": "Ipsos",
+    "approve": 46,
+    "disapprove": 48,
+    "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2021-10/2021%20Ipsos%20Tracking%20-%20Core%20Political%20Presidential%20Approval%20Tracker%2010%2014%202021.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/12/2021",
+    "enddate": "10/14/2021",
+    "pollster": "Cor Services, Inc.",
+    "approve": 40,
+    "disapprove": 56,
+    "url": "https://excellenceinpolling.com/wp-content/uploads/2021/10/2021-Biden-Approval-Numbers-10-14-21-crosstabs.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/12/2021",
+    "enddate": "10/14/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 43,
+    "disapprove": 56,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/7/2021",
     "enddate": "10/13/2021",
     "pollster": "Morning Consult",
@@ -1831,7 +2161,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/11/2021",
     "enddate": "10/13/2021",
     "pollster": "Morning Consult",
@@ -1841,7 +2171,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/11/2021",
     "enddate": "10/13/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1851,7 +2181,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/7/2021",
     "enddate": "10/13/2021",
     "pollster": "Morning Consult",
@@ -1861,7 +2191,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/11/2021",
     "enddate": "10/13/2021",
     "pollster": "Morning Consult",
@@ -1871,7 +2201,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/11/2021",
     "enddate": "10/13/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1881,7 +2211,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/6/2021",
     "enddate": "10/12/2021",
     "pollster": "Morning Consult",
@@ -1891,7 +2221,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/8/2021",
     "enddate": "10/12/2021",
     "pollster": "Morning Consult",
@@ -1901,27 +2231,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/9/2021",
-    "enddate": "10/12/2021",
-    "pollster": "YouGov",
-    "approve": 40,
-    "disapprove": 50,
-    "url": "https://docs.cdn.yougov.com/h2rgoa7a3x/econTabReport.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/10/2021",
-    "enddate": "10/12/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 43,
-    "disapprove": 56,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/9/2021",
     "enddate": "10/12/2021",
     "pollster": "Morning Consult",
@@ -1931,7 +2241,27 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/10/2021",
+    "enddate": "10/12/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 43,
+    "disapprove": 56,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/9/2021",
+    "enddate": "10/12/2021",
+    "pollster": "YouGov",
+    "approve": 40,
+    "disapprove": 50,
+    "url": "https://docs.cdn.yougov.com/h2rgoa7a3x/econTabReport.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/6/2021",
     "enddate": "10/12/2021",
     "pollster": "Morning Consult",
@@ -1941,7 +2271,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/8/2021",
     "enddate": "10/12/2021",
     "pollster": "Morning Consult",
@@ -1951,7 +2281,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/9/2021",
     "enddate": "10/12/2021",
     "pollster": "YouGov",
@@ -1961,7 +2291,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/9/2021",
     "enddate": "10/12/2021",
     "pollster": "Morning Consult",
@@ -1971,7 +2301,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/10/2021",
     "enddate": "10/12/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -1981,7 +2311,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/9/2021",
     "enddate": "10/12/2021",
     "pollster": "YouGov",
@@ -1991,7 +2321,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/5/2021",
     "enddate": "10/11/2021",
     "pollster": "Morning Consult",
@@ -2001,7 +2331,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/7/2021",
     "enddate": "10/11/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2011,7 +2341,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/7/2021",
     "enddate": "10/11/2021",
     "pollster": "Global Strategy Group/GBAO (Navigator Research)",
@@ -2021,7 +2351,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/7/2021",
     "enddate": "10/11/2021",
     "pollster": "CNN/SSRS",
@@ -2031,7 +2361,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/8/2021",
     "enddate": "10/11/2021",
     "pollster": "Morning Consult",
@@ -2041,7 +2371,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/5/2021",
     "enddate": "10/11/2021",
     "pollster": "Morning Consult",
@@ -2051,7 +2381,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/7/2021",
     "enddate": "10/11/2021",
     "pollster": "CNN/SSRS",
@@ -2061,7 +2391,27 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
+    "startdate": "10/7/2021",
+    "enddate": "10/11/2021",
+    "pollster": "Rasmussen Reports/Pulse Opinion Research",
+    "approve": 41,
+    "disapprove": 57,
+    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
+    "startdate": "10/7/2021",
+    "enddate": "10/11/2021",
+    "pollster": "Global Strategy Group/GBAO (Navigator Research)",
+    "approve": 46,
+    "disapprove": 51,
+    "url": "https://navigatorresearch.org/wp-content/uploads/2021/10/Navigator-Toplines-10.13.2021.pdf"
+  },
+  {
+    "president": "Joe Biden",
+    "modeldate": "11/5/2021",
     "startdate": "10/7/2021",
     "enddate": "10/11/2021",
     "pollster": "CNN/SSRS",
@@ -2071,27 +2421,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/7/2021",
-    "enddate": "10/11/2021",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 41,
-    "disapprove": 57,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
-    "startdate": "10/7/2021",
-    "enddate": "10/11/2021",
-    "pollster": "Global Strategy Group/GBAO (Navigator Research)",
-    "approve": 46,
-    "disapprove": 51,
-    "url": "https://navigatorresearch.org/wp-content/uploads/2021/10/Navigator-Toplines-10.13.2021.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/8/2021",
     "enddate": "10/11/2021",
     "pollster": "Morning Consult",
@@ -2101,7 +2431,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/4/2021",
     "enddate": "10/10/2021",
     "pollster": "Morning Consult",
@@ -2111,7 +2441,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/6/2021",
     "enddate": "10/10/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2121,7 +2451,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/8/2021",
     "enddate": "10/10/2021",
     "pollster": "Léger",
@@ -2131,7 +2461,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/4/2021",
     "enddate": "10/10/2021",
     "pollster": "Morning Consult",
@@ -2141,7 +2471,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/8/2021",
     "enddate": "10/10/2021",
     "pollster": "Léger",
@@ -2151,7 +2481,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "10/6/2021",
     "enddate": "10/10/2021",
     "pollster": "Rasmussen Reports/Pulse Opinion Research",
@@ -2161,7 +2491,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/25/2021",
     "enddate": "10/1/2021",
     "pollster": "Morning Consult",
@@ -2171,7 +2501,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/30/2021",
     "enddate": "10/1/2021",
     "pollster": "Public Policy Polling",
@@ -2181,7 +2511,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/25/2021",
     "enddate": "10/1/2021",
     "pollster": "Morning Consult",
@@ -2191,7 +2521,7 @@
   },
   {
     "president": "Joe Biden",
-    "modeldate": "11/2/2021",
+    "modeldate": "11/5/2021",
     "startdate": "9/30/2021",
     "enddate": "10/1/2021",
     "pollster": "Public Policy Polling",
