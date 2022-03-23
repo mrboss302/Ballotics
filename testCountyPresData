@@ -1,13 +1,11 @@
-[
-  {
-    "electionYear": 2000,
-    "stateName": "ALABAMA",
-    "stateID": "AL",
-    "countyName": "AUTAUGA",
-    "candidateName": "AL GORE",
-    "partyName": "DEMOCRAT",
-    "candidateVotes": 4942,
-    "totalVotes": 17208,
-    "dateUpdated": 20191203
-  }
-  ]
+[{
+	"electionYear": 2000,
+	"stateName": "ALABAMA",
+	"stateID": "AL",
+	"countyName": "AUTAUGA",
+	"candidateName": "AL GORE",
+	"partyName": "DEMOCRAT",
+	"candidateVotes": 4942,
+	"totalVotes": 17208,
+	"dateUpdated": 20191203
+}]
