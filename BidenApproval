@@ -1,232 +1,1353 @@
-[
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "12/26/2021",
-    "enddate": "1/1/2022",
-    "pollster": "Morning Consult",
-    "approve": 43,
-    "disapprove": 50,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "12/26/2021",
-    "enddate": "1/1/2022",
-    "pollster": "Morning Consult",
-    "approve": 43,
-    "disapprove": 50,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "12/29/2021",
-    "enddate": "1/2/2022",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 40,
-    "disapprove": 59,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "12/27/2021",
-    "enddate": "1/2/2022",
-    "pollster": "Morning Consult",
-    "approve": 42,
-    "disapprove": 50,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "12/29/2021",
-    "enddate": "1/2/2022",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 40,
-    "disapprove": 59,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "12/27/2021",
-    "enddate": "1/2/2022",
-    "pollster": "Morning Consult",
-    "approve": 42,
-    "disapprove": 50,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/2/2022",
-    "enddate": "1/4/2022",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 41,
-    "disapprove": 58,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/2/2022",
-    "enddate": "1/4/2022",
-    "pollster": "YouGov",
-    "approve": 43,
-    "disapprove": 51,
-    "url": "https://docs.cdn.yougov.com/g43s025yft/econTabReport.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "12/29/2021",
-    "enddate": "1/4/2022",
-    "pollster": "Morning Consult",
-    "approve": 42,
-    "disapprove": 50,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/2/2022",
-    "enddate": "1/4/2022",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 41,
-    "disapprove": 58,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/2/2022",
-    "enddate": "1/4/2022",
-    "pollster": "YouGov",
-    "approve": 40,
-    "disapprove": 50,
-    "url": "https://docs.cdn.yougov.com/tyivpnrtkb/econToplines.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "12/29/2021",
-    "enddate": "1/4/2022",
-    "pollster": "Morning Consult",
-    "approve": 42,
-    "disapprove": 50,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/2/2022",
-    "enddate": "1/4/2022",
-    "pollster": "YouGov",
-    "approve": 40,
-    "disapprove": 50,
-    "url": "https://docs.cdn.yougov.com/tyivpnrtkb/econToplines.pdf"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/3/2022",
-    "enddate": "1/5/2022",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 43,
-    "disapprove": 57,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "12/30/2021",
-    "enddate": "1/5/2022",
-    "pollster": "Morning Consult",
-    "approve": 42,
-    "disapprove": 50,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/3/2022",
-    "enddate": "1/5/2022",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 43,
-    "disapprove": 57,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/5/2022",
-    "enddate": "1/5/2022",
-    "pollster": "Morning Consult",
-    "approve": 43,
-    "disapprove": 50,
-    "url": "https://morningconsult.com/2022/01/06/cdc-guidance-shortened-isolation-period-polling/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "12/30/2021",
-    "enddate": "1/5/2022",
-    "pollster": "Morning Consult",
-    "approve": 42,
-    "disapprove": 50,
-    "url": "https://morningconsult.com/form/global-leader-approval/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/5/2022",
-    "enddate": "1/5/2022",
-    "pollster": "Morning Consult",
-    "approve": 43,
-    "disapprove": 50,
-    "url": "https://morningconsult.com/2022/01/06/cdc-guidance-shortened-isolation-period-polling/"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/4/2022",
-    "enddate": "1/6/2022",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 41,
-    "disapprove": 58,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/4/2022",
-    "enddate": "1/6/2022",
-    "pollster": "Rasmussen Reports/Pulse Opinion Research",
-    "approve": 41,
-    "disapprove": 58,
-    "url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/5/2022",
-    "enddate": "1/6/2022",
-    "pollster": "Ipsos",
-    "approve": 45,
-    "disapprove": 51,
-    "url": "https://www.ipsos.com/en-us/news-polls/ipsos-core-political-presidential-approval-tracker-01062022"
-  },
-  {
-    "president": "Joe Biden",
-    "modeldate": "1/10/2022",
-    "startdate": "1/5/2022",
-    "enddate": "1/6/2022",
-    "pollster": "Ipsos",
-    "approve": 45,
-    "disapprove": 51,
-    "url": "https://www.ipsos.com/en-us/news-polls/ipsos-core-political-presidential-approval-tracker-01062022"
-  }
-]
+[{
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/22/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/24/2022",
+	"disapprove": "57",
+	"approve": "42"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/22/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/24/2022",
+	"disapprove": "57",
+	"approve": "42"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/21/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/23/2022",
+	"disapprove": "58",
+	"approve": "41"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/21/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/23/2022",
+	"disapprove": "58",
+	"approve": "41"
+}, {
+	"url": "https://www.newsnationnow.com/polls/full-report-newsnation-ukraine-russia-survey/",
+	"startdate": "3/21/2022",
+	"pollster": "NewsNation",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "55.97",
+	"approve": "44.03"
+}, {
+	"url": "https://www.ipsos.com/en-us/news-polls/ipsos-core-political-presidential-approval-tracker-03232022",
+	"startdate": "3/21/2022",
+	"pollster": "Ipsos",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "54.43",
+	"approve": "39.96"
+}, {
+	"url": "https://www.ipsos.com/en-us/news-polls/ipsos-core-political-presidential-approval-tracker-03232022",
+	"startdate": "3/21/2022",
+	"pollster": "Ipsos",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "54.43",
+	"approve": "39.96"
+}, {
+	"url": "https://www.newsnationnow.com/polls/full-report-newsnation-ukraine-russia-survey/",
+	"startdate": "3/21/2022",
+	"pollster": "NewsNation",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "55.97",
+	"approve": "44.03"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/20/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "57",
+	"approve": "42"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/20/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "57",
+	"approve": "42"
+}, {
+	"url": "https://docs.cdn.yougov.com/joqdn4nhky/econToplines.pdf",
+	"startdate": "3/19/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "48",
+	"approve": "43"
+}, {
+	"url": "https://docs.cdn.yougov.com/joqdn4nhky/econToplines.pdf",
+	"startdate": "3/19/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "48",
+	"approve": "43"
+}, {
+	"url": "https://docs.cdn.yougov.com/l8ynsbxwgl/econTabReport.pdf",
+	"startdate": "3/19/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "49",
+	"approve": "45"
+}, {
+	"url": "https://www.nbcnews.com/politics/meet-the-press/bidens-job-approval-falls-lowest-level-presidency-war-inflation-fears-rcna21679",
+	"startdate": "3/18/2022",
+	"pollster": "Hart Research Associates/Public Opinion Strategies",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "55",
+	"approve": "40"
+}, {
+	"url": "https://www.nbcnews.com/politics/meet-the-press/bidens-job-approval-falls-lowest-level-presidency-war-inflation-fears-rcna21679",
+	"startdate": "3/18/2022",
+	"pollster": "Hart Research Associates/Public Opinion Strategies",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "55",
+	"approve": "40"
+}, {
+	"url": "https://www.nbcnews.com/politics/meet-the-press/bidens-job-approval-falls-lowest-level-presidency-war-inflation-fears-rcna21679",
+	"startdate": "3/18/2022",
+	"pollster": "Hart Research Associates/Public Opinion Strategies",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "54",
+	"approve": "41"
+}, {
+	"url": "https://mclaughlinonline.com/pols/wp-content/uploads/2022/03/National-Monthly-Release-March-2022-.pdf",
+	"startdate": "3/17/2022",
+	"pollster": "McLaughlin & Associates",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "57",
+	"approve": "41"
+}, {
+	"url": "https://mclaughlinonline.com/pols/wp-content/uploads/2022/03/National-Monthly-Release-March-2022-.pdf",
+	"startdate": "3/17/2022",
+	"pollster": "McLaughlin & Associates",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "57",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/16/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "50",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/16/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/22/2022",
+	"disapprove": "50",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/2022/03/24/vaping-e-cigarettes-youth-smoking-survey/",
+	"startdate": "3/18/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "56",
+	"approve": "38"
+}, {
+	"url": "https://echeloninsights.com/in-the-news/march-22-omnibus-political-update/",
+	"startdate": "3/18/2022",
+	"pollster": "Echelon Insights",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "53",
+	"approve": "45"
+}, {
+	"url": "https://www.foxnews.com/official-polls/fox-news-poll-higher-interest-gives-gop-edge-in-2022-midterms",
+	"startdate": "3/18/2022",
+	"pollster": "Beacon Research/Shaw & Company Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "54",
+	"approve": "45"
+}, {
+	"url": "https://morningconsult.com/2022/03/22/ketanji-brown-jackson-supreme-court-confirmation-hearing-survey/",
+	"startdate": "3/18/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "55",
+	"approve": "42"
+}, {
+	"url": "https://morningconsult.com/2022/03/24/vaping-e-cigarettes-youth-smoking-survey/",
+	"startdate": "3/18/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "56",
+	"approve": "38"
+}, {
+	"url": "https://www.foxnews.com/official-polls/fox-news-poll-higher-interest-gives-gop-edge-in-2022-midterms",
+	"startdate": "3/18/2022",
+	"pollster": "Beacon Research/Shaw & Company Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "54",
+	"approve": "45"
+}, {
+	"url": "https://echeloninsights.com/in-the-news/march-22-omnibus-political-update/",
+	"startdate": "3/18/2022",
+	"pollster": "Echelon Insights",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "53",
+	"approve": "45"
+}, {
+	"url": "https://morningconsult.com/2022/03/22/ketanji-brown-jackson-supreme-court-confirmation-hearing-survey/",
+	"startdate": "3/18/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "55",
+	"approve": "42"
+}, {
+	"url": "https://apnorc.org/projects/americans-dont-think-biden-is-being-tough-enough-on-russia/",
+	"startdate": "3/17/2022",
+	"pollster": "AP-NORC",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "56",
+	"approve": "43"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/17/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "58",
+	"approve": "41"
+}, {
+	"url": "https://navigatorresearch.org/wp-content/uploads/2022/03/Navigator-Update-03.25.2022.pdf",
+	"startdate": "3/17/2022",
+	"pollster": "Navigator Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "52",
+	"approve": "44"
+}, {
+	"url": "https://apnorc.org/projects/americans-dont-think-biden-is-being-tough-enough-on-russia/",
+	"startdate": "3/17/2022",
+	"pollster": "AP-NORC",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "56",
+	"approve": "43"
+}, {
+	"url": "https://navigatorresearch.org/wp-content/uploads/2022/03/Navigator-Update-03.25.2022.pdf",
+	"startdate": "3/17/2022",
+	"pollster": "Navigator Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "52",
+	"approve": "44"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/17/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "58",
+	"approve": "41"
+}, {
+	"url": "https://www.uml.edu/docs/2022-National-Topline-324_tcm18-350201.pdf",
+	"startdate": "3/15/2022",
+	"pollster": "University of Massachusetts Lowell",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "57",
+	"approve": "43"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/15/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://www.uml.edu/docs/2022-National-Topline-324_tcm18-350201.pdf",
+	"startdate": "3/15/2022",
+	"pollster": "University of Massachusetts Lowell",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "57",
+	"approve": "43"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/15/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/21/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://redfieldandwiltonstrategies.com/joe-biden-administration-approval-ratings-and-hypothetical-voting-intention-20-march-2022/",
+	"startdate": "3/20/2022",
+	"pollster": "Redfield & Wilton Strategies",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "45",
+	"approve": "39"
+}, {
+	"url": "https://redfieldandwiltonstrategies.com/joe-biden-administration-approval-ratings-and-hypothetical-voting-intention-20-march-2022/",
+	"startdate": "3/20/2022",
+	"pollster": "Redfield & Wilton Strategies",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "45",
+	"approve": "39"
+}, {
+	"url": "https://leger360.com/surveys/joe-biden-and-kamala-harris-approval-ratings-march-24-2022/",
+	"startdate": "3/18/2022",
+	"pollster": "Léger",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "51",
+	"approve": "47"
+}, {
+	"url": "https://emersonpolling.reportablenews.com/pr/national-poll-march-2022-us-voters-report-increased-hardship-as-prices-rise-blame-biden-for-gas-prices",
+	"startdate": "3/18/2022",
+	"pollster": "Emerson College",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "48.6",
+	"approve": "42.7"
+}, {
+	"url": "https://leger360.com/surveys/joe-biden-and-kamala-harris-approval-ratings-march-24-2022/",
+	"startdate": "3/18/2022",
+	"pollster": "Léger",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "51",
+	"approve": "47"
+}, {
+	"url": "https://emersonpolling.reportablenews.com/pr/national-poll-march-2022-us-voters-report-increased-hardship-as-prices-rise-blame-biden-for-gas-prices",
+	"startdate": "3/18/2022",
+	"pollster": "Emerson College",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "48.6",
+	"approve": "42.7"
+}, {
+	"url": "https://americanresearchgroup.com/economy/",
+	"startdate": "3/17/2022",
+	"pollster": "American Research Group",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "51",
+	"approve": "45"
+}, {
+	"url": "https://americanresearchgroup.com/economy/",
+	"startdate": "3/17/2022",
+	"pollster": "American Research Group",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "51",
+	"approve": "45"
+}, {
+	"url": "https://americanresearchgroup.com/economy/",
+	"startdate": "3/17/2022",
+	"pollster": "American Research Group",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "50",
+	"approve": "46"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/16/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "58",
+	"approve": "40"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/16/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "58",
+	"approve": "40"
+}, {
+	"url": "https://www.grinnell.edu/sites/default/files/docs/2022-03/FOR%20THE%20WEBSITE%20with%20branding%20v2%20Selzer%20Co%20GCNP%202249%20Methodology%20Document%203-21-2022.pdf",
+	"startdate": "3/15/2022",
+	"pollster": "Selzer & Co.",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "52",
+	"approve": "34"
+}, {
+	"url": "https://www.grinnell.edu/sites/default/files/docs/2022-03/FOR%20THE%20WEBSITE%20with%20branding%20v2%20Selzer%20Co%20GCNP%202249%20Methodology%20Document%203-21-2022.pdf",
+	"startdate": "3/15/2022",
+	"pollster": "Selzer & Co.",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "52",
+	"approve": "34"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/14/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/14/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/20/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://maristpoll.marist.edu/polls/npr-pbs-newshour-marist-national-poll-bounce-for-biden-following-state-of-the-union-march-2022/",
+	"startdate": "3/1/2022",
+	"pollster": "Marist College",
+	"modeldate": "3/27/2022",
+	"enddate": "3/2/2022",
+	"disapprove": "50",
+	"approve": "47"
+}, {
+	"url": "https://maristpoll.marist.edu/polls/npr-pbs-newshour-marist-national-poll-bounce-for-biden-following-state-of-the-union-march-2022/",
+	"startdate": "3/1/2022",
+	"pollster": "Marist College",
+	"modeldate": "3/27/2022",
+	"enddate": "3/2/2022",
+	"disapprove": "50",
+	"approve": "47"
+}, {
+	"url": "https://maristpoll.marist.edu/polls/npr-pbs-newshour-marist-national-poll-bounce-for-biden-following-state-of-the-union-march-2022/",
+	"startdate": "3/1/2022",
+	"pollster": "Marist College",
+	"modeldate": "3/27/2022",
+	"enddate": "3/2/2022",
+	"disapprove": "51",
+	"approve": "47"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/13/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/19/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/13/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/19/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/2022/03/22/oscars-best-picture-nominees/",
+	"startdate": "3/15/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/18/2022",
+	"disapprove": "54",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/2022/03/22/oscars-best-picture-nominees/",
+	"startdate": "3/15/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/18/2022",
+	"disapprove": "54",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/12/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/18/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/12/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/18/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://news.gallup.com/poll/390953/biden-job-rating-tepid-covid-russia-handling.aspx",
+	"startdate": "3/1/2022",
+	"pollster": "Gallup",
+	"modeldate": "3/27/2022",
+	"enddate": "3/18/2022",
+	"disapprove": "54",
+	"approve": "42"
+}, {
+	"url": "https://news.gallup.com/poll/390953/biden-job-rating-tepid-covid-russia-handling.aspx",
+	"startdate": "3/1/2022",
+	"pollster": "Gallup",
+	"modeldate": "3/27/2022",
+	"enddate": "3/18/2022",
+	"disapprove": "54",
+	"approve": "42"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/15/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/17/2022",
+	"disapprove": "60",
+	"approve": "38"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/15/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/17/2022",
+	"disapprove": "60",
+	"approve": "38"
+}, {
+	"url": "https://morningconsult.com/2022/03/23/disney-lgbtq-florida-bill/",
+	"startdate": "3/14/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/17/2022",
+	"disapprove": "53",
+	"approve": "43"
+}, {
+	"url": "https://morningconsult.com/2022/03/23/disney-lgbtq-florida-bill/",
+	"startdate": "3/14/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/17/2022",
+	"disapprove": "53",
+	"approve": "43"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/11/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/17/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/11/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/17/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/14/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/16/2022",
+	"disapprove": "58",
+	"approve": "41"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/14/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/16/2022",
+	"disapprove": "58",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/10/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/16/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/10/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/16/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/10/2021",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/16/2021",
+	"disapprove": "35",
+	"approve": "56"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/10/2021",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/16/2021",
+	"disapprove": "35",
+	"approve": "56"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/9/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/15/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/9/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/15/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://www.ipsos.com/en-us/news-polls/ipsos-core-political-presidential-approval-tracker-03162022",
+	"startdate": "3/14/2022",
+	"pollster": "Ipsos",
+	"modeldate": "3/27/2022",
+	"enddate": "3/15/2022",
+	"disapprove": "53.46",
+	"approve": "42.66"
+}, {
+	"url": "https://www.ipsos.com/en-us/news-polls/ipsos-core-political-presidential-approval-tracker-03162022",
+	"startdate": "3/14/2022",
+	"pollster": "Ipsos",
+	"modeldate": "3/27/2022",
+	"enddate": "3/15/2022",
+	"disapprove": "53.46",
+	"approve": "42.66"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/13/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/15/2022",
+	"disapprove": "57",
+	"approve": "42"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/13/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/15/2022",
+	"disapprove": "57",
+	"approve": "42"
+}, {
+	"url": "https://docs.cdn.yougov.com/2g5l01eto4/econToplines.pdf",
+	"startdate": "3/12/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/15/2022",
+	"disapprove": "50",
+	"approve": "40"
+}, {
+	"url": "https://docs.cdn.yougov.com/2g5l01eto4/econToplines.pdf",
+	"startdate": "3/12/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/15/2022",
+	"disapprove": "50",
+	"approve": "40"
+}, {
+	"url": "https://docs.cdn.yougov.com/bbui2643wn/econTabReport.pdf",
+	"startdate": "3/12/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/15/2022",
+	"disapprove": "53",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/8/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/8/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/2022/03/17/ncaa-march-madness-interest/",
+	"startdate": "3/11/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "54",
+	"approve": "40"
+}, {
+	"url": "https://assets.morningconsult.com/wp-uploads/2022/03/16070850/2203090_crosstabs_POLITICO_RVs_v2_SH.pdf",
+	"startdate": "3/11/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "56",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/2022/03/17/ncaa-march-madness-interest/",
+	"startdate": "3/11/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "54",
+	"approve": "40"
+}, {
+	"url": "https://assets.morningconsult.com/wp-uploads/2022/03/16070850/2203090_crosstabs_POLITICO_RVs_v2_SH.pdf",
+	"startdate": "3/11/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "56",
+	"approve": "41"
+}, {
+	"url": "https://www.monmouth.edu/polling-institute/reports/MonmouthPoll_US_031722/",
+	"startdate": "3/10/2022",
+	"pollster": "Monmouth University",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "54",
+	"approve": "39"
+}, {
+	"url": "https://poll.qu.edu/poll-release?releaseid=3839",
+	"startdate": "3/10/2022",
+	"pollster": "Quinnipiac University",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "53",
+	"approve": "38"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/10/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "56",
+	"approve": "42"
+}, {
+	"url": "https://ph.news.yahoo.com/poll-americans-warm-to-bidens-approach-on-russia-and-ukraine-125641393.html",
+	"startdate": "3/10/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "53",
+	"approve": "41"
+}, {
+	"url": "https://ph.news.yahoo.com/poll-americans-warm-to-bidens-approach-on-russia-and-ukraine-125641393.html",
+	"startdate": "3/10/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "53",
+	"approve": "41"
+}, {
+	"url": "https://poll.qu.edu/poll-release?releaseid=3839",
+	"startdate": "3/10/2022",
+	"pollster": "Quinnipiac University",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "53",
+	"approve": "38"
+}, {
+	"url": "https://www.monmouth.edu/polling-institute/reports/MonmouthPoll_US_031722/",
+	"startdate": "3/10/2022",
+	"pollster": "Monmouth University",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "54",
+	"approve": "39"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/10/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "56",
+	"approve": "42"
+}, {
+	"url": "https://www.monmouth.edu/polling-institute/reports/MonmouthPoll_US_031722/",
+	"startdate": "3/10/2022",
+	"pollster": "Monmouth University",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "55",
+	"approve": "39"
+}, {
+	"url": "https://poll.qu.edu/poll-release?releaseid=3839",
+	"startdate": "3/10/2022",
+	"pollster": "Quinnipiac University",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "53",
+	"approve": "40"
+}, {
+	"url": "https://ph.news.yahoo.com/poll-americans-warm-to-bidens-approach-on-russia-and-ukraine-125641393.html",
+	"startdate": "3/10/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2022",
+	"disapprove": "53",
+	"approve": "45"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/10/2021",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2021",
+	"disapprove": "46",
+	"approve": "52"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/10/2021",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/14/2021",
+	"disapprove": "46",
+	"approve": "52"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/9/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/13/2022",
+	"disapprove": "58",
+	"approve": "40"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/9/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/13/2022",
+	"disapprove": "58",
+	"approve": "40"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/7/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/13/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://www.pewresearch.org/politics/2022/03/15/public-expresses-mixed-views-of-u-s-response-to-russias-invasion-of-ukraine/",
+	"startdate": "3/7/2022",
+	"pollster": "Pew Research Center",
+	"modeldate": "3/27/2022",
+	"enddate": "3/13/2022",
+	"disapprove": "55",
+	"approve": "43"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/7/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/13/2022",
+	"disapprove": "51",
+	"approve": "41"
+}, {
+	"url": "https://www.pewresearch.org/politics/2022/03/15/public-expresses-mixed-views-of-u-s-response-to-russias-invasion-of-ukraine/",
+	"startdate": "3/7/2022",
+	"pollster": "Pew Research Center",
+	"modeldate": "3/27/2022",
+	"enddate": "3/13/2022",
+	"disapprove": "55",
+	"approve": "43"
+}, {
+	"url": "https://drive.google.com/file/d/1fIZaAH0X45MazScguHAnitO4SsV_PdhR/view",
+	"startdate": "3/10/2021",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/13/2021",
+	"disapprove": "38",
+	"approve": "62"
+}, {
+	"url": "https://drive.google.com/file/d/1fIZaAH0X45MazScguHAnitO4SsV_PdhR/view",
+	"startdate": "3/10/2021",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/13/2021",
+	"disapprove": "38",
+	"approve": "62"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/6/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/12/2022",
+	"disapprove": "51",
+	"approve": "42"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/6/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/12/2022",
+	"disapprove": "51",
+	"approve": "42"
+}, {
+	"url": "https://www.cbsnews.com/news/russia-ukraine-sanctions-gas-prices-opinion-poll-2022-03-13/",
+	"startdate": "3/8/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/11/2022",
+	"disapprove": "57",
+	"approve": "43"
+}, {
+	"url": "https://www.cbsnews.com/news/russia-ukraine-sanctions-gas-prices-opinion-poll-2022-03-13/",
+	"startdate": "3/8/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/11/2022",
+	"disapprove": "57",
+	"approve": "43"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/5/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/11/2022",
+	"disapprove": "50",
+	"approve": "42"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/5/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/11/2022",
+	"disapprove": "50",
+	"approve": "42"
+}, {
+	"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2021-03/2021_reuters_tracking_-_core_political_presidential_approval_tracker_03_11_2021.pdf",
+	"startdate": "3/10/2021",
+	"pollster": "Ipsos",
+	"modeldate": "3/27/2022",
+	"enddate": "3/11/2021",
+	"disapprove": "39.11",
+	"approve": "53.76"
+}, {
+	"url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2021-03/2021_reuters_tracking_-_core_political_presidential_approval_tracker_03_11_2021.pdf",
+	"startdate": "3/10/2021",
+	"pollster": "Ipsos",
+	"modeldate": "3/27/2022",
+	"enddate": "3/11/2021",
+	"disapprove": "39.11",
+	"approve": "53.76"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/8/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/10/2022",
+	"disapprove": "58",
+	"approve": "41"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/8/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/10/2022",
+	"disapprove": "58",
+	"approve": "41"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/4/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/10/2022",
+	"disapprove": "50",
+	"approve": "42"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/4/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/10/2022",
+	"disapprove": "50",
+	"approve": "42"
+}, {
+	"url": "https://amgreatness.com/2022/03/11/joe-bidens-approval-rating-in-new-trafalgar-poll-only-42-percent/",
+	"startdate": "3/8/2022",
+	"pollster": "Trafalgar Group",
+	"modeldate": "3/27/2022",
+	"enddate": "3/9/2022",
+	"disapprove": "52.4",
+	"approve": "41.8"
+}, {
+	"url": "https://amgreatness.com/2022/03/11/joe-bidens-approval-rating-in-new-trafalgar-poll-only-42-percent/",
+	"startdate": "3/8/2022",
+	"pollster": "Trafalgar Group",
+	"modeldate": "3/27/2022",
+	"enddate": "3/9/2022",
+	"disapprove": "52.4",
+	"approve": "41.8"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/7/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/9/2022",
+	"disapprove": "60",
+	"approve": "39"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/7/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/9/2022",
+	"disapprove": "60",
+	"approve": "39"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/3/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/9/2022",
+	"disapprove": "50",
+	"approve": "42"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/3/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/9/2022",
+	"disapprove": "50",
+	"approve": "42"
+}, {
+	"url": "https://www.surveymonkey.com/curiosity/aapi-data-2022/",
+	"startdate": "3/2/2022",
+	"pollster": "Momentive/SurveyMonkey",
+	"modeldate": "3/27/2022",
+	"enddate": "3/9/2022",
+	"disapprove": "54",
+	"approve": "45"
+}, {
+	"url": "https://thehill.com/opinion/campaign/597987-new-polling-confirms-democrats-left-leaning-policies-are-out-of-touch",
+	"startdate": "3/2/2022",
+	"pollster": "Schoen Cooperman Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/9/2022",
+	"disapprove": "54",
+	"approve": "45"
+}, {
+	"url": "https://www.surveymonkey.com/curiosity/aapi-data-2022/",
+	"startdate": "3/2/2022",
+	"pollster": "Momentive/SurveyMonkey",
+	"modeldate": "3/27/2022",
+	"enddate": "3/9/2022",
+	"disapprove": "54",
+	"approve": "45"
+}, {
+	"url": "https://thehill.com/opinion/campaign/597987-new-polling-confirms-democrats-left-leaning-policies-are-out-of-touch",
+	"startdate": "3/2/2022",
+	"pollster": "Schoen Cooperman Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/9/2022",
+	"disapprove": "54",
+	"approve": "45"
+}, {
+	"url": "https://redfieldandwiltonstrategies.com/joe-biden-administration-approval-ratings-and-hypothetical-voting-intention-8-march-2022/?utm_source=rss&utm_medium=rss&utm_campaign=joe-biden-administration-approval-ratings-and-hypothetical-voting-intention-8-march-2022",
+	"startdate": "3/8/2022",
+	"pollster": "Redfield & Wilton Strategies",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "47",
+	"approve": "37"
+}, {
+	"url": "https://redfieldandwiltonstrategies.com/joe-biden-administration-approval-ratings-and-hypothetical-voting-intention-8-march-2022/?utm_source=rss&utm_medium=rss&utm_campaign=joe-biden-administration-approval-ratings-and-hypothetical-voting-intention-8-march-2022",
+	"startdate": "3/8/2022",
+	"pollster": "Redfield & Wilton Strategies",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "47",
+	"approve": "37"
+}, {
+	"url": "https://www.ipsos.com/en-us/future/news-polls/ipsos-core-political-presidential-approval-tracker-03022022",
+	"startdate": "3/7/2022",
+	"pollster": "Ipsos",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "48.7",
+	"approve": "44.92"
+}, {
+	"url": "https://amgreatness.com/2022/03/15/new-poll-biden-in-trouble-with-voters-on-job-approval-inflation-ukraine/",
+	"startdate": "3/7/2022",
+	"pollster": "InsiderAdvantage",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "54",
+	"approve": "42"
+}, {
+	"url": "https://www.ipsos.com/en-us/future/news-polls/ipsos-core-political-presidential-approval-tracker-03022022",
+	"startdate": "3/7/2022",
+	"pollster": "Ipsos",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "48.7",
+	"approve": "44.92"
+}, {
+	"url": "https://amgreatness.com/2022/03/15/new-poll-biden-in-trouble-with-voters-on-job-approval-inflation-ukraine/",
+	"startdate": "3/7/2022",
+	"pollster": "InsiderAdvantage",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "54",
+	"approve": "42"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/6/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "57",
+	"approve": "41"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/6/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "57",
+	"approve": "41"
+}, {
+	"url": "https://docs.cdn.yougov.com/nnyqh3ib1d/econToplines.pdf",
+	"startdate": "3/5/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "48",
+	"approve": "41"
+}, {
+	"url": "https://docs.cdn.yougov.com/nnyqh3ib1d/econToplines.pdf",
+	"startdate": "3/5/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "48",
+	"approve": "41"
+}, {
+	"url": "https://docs.cdn.yougov.com/qtaw15lnp8/econTabReport.pdf",
+	"startdate": "3/5/2022",
+	"pollster": "YouGov",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "49",
+	"approve": "45"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/2/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "50",
+	"approve": "42"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/2/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/8/2022",
+	"disapprove": "50",
+	"approve": "42"
+}, {
+	"url": "https://morningconsult.com/2022/03/21/redistricting-racial-partisan-county-gerrymandering-survey/",
+	"startdate": "3/4/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/7/2022",
+	"disapprove": "51",
+	"approve": "46"
+}, {
+	"url": "https://morningconsult.com/2022/03/21/redistricting-racial-partisan-county-gerrymandering-survey/",
+	"startdate": "3/4/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/7/2022",
+	"disapprove": "51",
+	"approve": "46"
+}, {
+	"url": "https://navigatorresearch.org/ratings-of-bidens-pandemic-handling-improve-after-the-state-of-the-union/",
+	"startdate": "3/3/2022",
+	"pollster": "Navigator Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/7/2022",
+	"disapprove": "53",
+	"approve": "45"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/3/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/7/2022",
+	"disapprove": "58",
+	"approve": "41"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/3/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/7/2022",
+	"disapprove": "58",
+	"approve": "41"
+}, {
+	"url": "https://navigatorresearch.org/ratings-of-bidens-pandemic-handling-improve-after-the-state-of-the-union/",
+	"startdate": "3/3/2022",
+	"pollster": "Navigator Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/7/2022",
+	"disapprove": "53",
+	"approve": "45"
+}, {
+	"url": "https://www.wsj.com/articles/wsj-poll-biden-ukraine-inflation-midterms-11646975533",
+	"startdate": "3/2/2022",
+	"pollster": "Fabrizio, Lee & Associates/Impact Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/7/2022",
+	"disapprove": "57",
+	"approve": "42"
+}, {
+	"url": "https://www.wsj.com/articles/wsj-poll-biden-ukraine-inflation-midterms-11646975533",
+	"startdate": "3/2/2022",
+	"pollster": "Fabrizio, Lee & Associates/Impact Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/7/2022",
+	"disapprove": "57",
+	"approve": "42"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/1/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/7/2022",
+	"disapprove": "50",
+	"approve": "42"
+}, {
+	"url": "https://morningconsult.com/form/global-leader-approval/",
+	"startdate": "3/1/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/7/2022",
+	"disapprove": "50",
+	"approve": "42"
+}, {
+	"url": "https://morningconsult.com/2022/03/08/biden-approval-improves-state-of-the-union-ukraine/",
+	"startdate": "3/4/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/6/2022",
+	"disapprove": "51",
+	"approve": "45"
+}, {
+	"url": "https://poll.qu.edu/poll-release?releaseid=3838",
+	"startdate": "3/4/2022",
+	"pollster": "Quinnipiac University",
+	"modeldate": "3/27/2022",
+	"enddate": "3/6/2022",
+	"disapprove": "51",
+	"approve": "38"
+}, {
+	"url": "https://projects.fivethirtyeight.com/polls/20220308_US_Leger.pdf",
+	"startdate": "3/4/2022",
+	"pollster": "Léger",
+	"modeldate": "3/27/2022",
+	"enddate": "3/6/2022",
+	"disapprove": "49",
+	"approve": "48"
+}, {
+	"url": "https://projects.fivethirtyeight.com/polls/20220308_US_Leger.pdf",
+	"startdate": "3/4/2022",
+	"pollster": "Léger",
+	"modeldate": "3/27/2022",
+	"enddate": "3/6/2022",
+	"disapprove": "49",
+	"approve": "48"
+}, {
+	"url": "https://poll.qu.edu/poll-release?releaseid=3838",
+	"startdate": "3/4/2022",
+	"pollster": "Quinnipiac University",
+	"modeldate": "3/27/2022",
+	"enddate": "3/6/2022",
+	"disapprove": "51",
+	"approve": "38"
+}, {
+	"url": "https://poll.qu.edu/poll-release?releaseid=3838",
+	"startdate": "3/4/2022",
+	"pollster": "Quinnipiac University",
+	"modeldate": "3/27/2022",
+	"enddate": "3/6/2022",
+	"disapprove": "51",
+	"approve": "40"
+}, {
+	"url": "https://morningconsult.com/2022/03/08/biden-approval-improves-state-of-the-union-ukraine/",
+	"startdate": "3/4/2022",
+	"pollster": "Morning Consult",
+	"modeldate": "3/27/2022",
+	"enddate": "3/6/2022",
+	"disapprove": "51",
+	"approve": "45"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/2/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/6/2022",
+	"disapprove": "54",
+	"approve": "44"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/2/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/6/2022",
+	"disapprove": "54",
+	"approve": "44"
+}, {
+	"url": "https://www.investors.com/politics/biden-approval-rating-gets-anemic-state-of-the-union-bounce-amid-hot-inflation/",
+	"startdate": "3/2/2022",
+	"pollster": "TIPP Insights",
+	"modeldate": "3/27/2022",
+	"enddate": "3/4/2022",
+	"disapprove": "47",
+	"approve": "39"
+}, {
+	"url": "https://www.investors.com/politics/biden-approval-rating-gets-anemic-state-of-the-union-bounce-amid-hot-inflation/",
+	"startdate": "3/2/2022",
+	"pollster": "TIPP Insights",
+	"modeldate": "3/27/2022",
+	"enddate": "3/4/2022",
+	"disapprove": "47",
+	"approve": "39"
+}, {
+	"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+	"startdate": "3/1/2022",
+	"pollster": "Rasmussen Reports/Pulse Opinion Research",
+	"modeldate": "3/27/2022",
+	"enddate": "3/3/2022",
+	"disapprove": "55",
+	"approve": "42"
+}]
