@@ -25,7 +25,7 @@
   },
   {
     "bioguideID": "C001054",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -49,7 +49,7 @@
   },
   {
     "bioguideID": "M001212",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -73,7 +73,7 @@
   },
   {
     "bioguideID": "R000575",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -97,7 +97,7 @@
   },
   {
     "bioguideID": "A000055",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -121,7 +121,7 @@
   },
   {
     "bioguideID": "B001274",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -145,7 +145,7 @@
   },
   {
     "bioguideID": "P000609",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -169,7 +169,7 @@
   },
   {
     "bioguideID": "S001185",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -193,7 +193,7 @@
   },
   {
     "bioguideID": "C001087",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -217,7 +217,7 @@
   },
   {
     "bioguideID": "H001072",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -241,7 +241,7 @@
   },
   {
     "bioguideID": "W000809",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -265,7 +265,7 @@
   },
   {
     "bioguideID": "W000821",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -289,7 +289,7 @@
   },
   {
     "bioguideID": "R000600",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "Delegate",
     "electedDate": "3-Nov-20",
@@ -313,7 +313,7 @@
   },
   {
     "bioguideID": "O000171",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -337,7 +337,7 @@
   },
   {
     "bioguideID": "K000368",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -361,7 +361,7 @@
   },
   {
     "bioguideID": "G000551",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -385,7 +385,7 @@
   },
   {
     "bioguideID": "G000565",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -409,7 +409,7 @@
   },
   {
     "bioguideID": "B001302",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -433,7 +433,7 @@
   },
   {
     "bioguideID": "S001183",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -457,7 +457,7 @@
   },
   {
     "bioguideID": "G000574",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -481,7 +481,7 @@
   },
   {
     "bioguideID": "L000589",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -505,7 +505,7 @@
   },
   {
     "bioguideID": "S001211",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -529,7 +529,7 @@
   },
   {
     "bioguideID": "L000578",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -553,7 +553,7 @@
   },
   {
     "bioguideID": "H001068",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -577,7 +577,7 @@
   },
   {
     "bioguideID": "G000559",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -601,7 +601,7 @@
   },
   {
     "bioguideID": "M001177",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -625,7 +625,7 @@
   },
   {
     "bioguideID": "T000460",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -649,7 +649,7 @@
   },
   {
     "bioguideID": "M001163",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -673,7 +673,7 @@
   },
   {
     "bioguideID": "B001287",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -697,7 +697,7 @@
   },
   {
     "bioguideID": "O000019",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -721,7 +721,7 @@
   },
   {
     "bioguideID": "M001166",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -745,7 +745,7 @@
   },
   {
     "bioguideID": "H001090",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -769,7 +769,7 @@
   },
   {
     "bioguideID": "D000623",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "11th",
     "electedDate": "3-Nov-20",
@@ -793,7 +793,7 @@
   },
   {
     "bioguideID": "P000197",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "12th",
     "electedDate": "3-Nov-20",
@@ -817,7 +817,7 @@
   },
   {
     "bioguideID": "L000551",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "13th",
     "electedDate": "3-Nov-20",
@@ -841,7 +841,7 @@
   },
   {
     "bioguideID": "S001175",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "14th",
     "electedDate": "3-Nov-20",
@@ -865,7 +865,7 @@
   },
   {
     "bioguideID": "S001193",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "15th",
     "electedDate": "3-Nov-20",
@@ -889,7 +889,7 @@
   },
   {
     "bioguideID": "C001059",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "16th",
     "electedDate": "3-Nov-20",
@@ -913,7 +913,7 @@
   },
   {
     "bioguideID": "K000389",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "17th",
     "electedDate": "3-Nov-20",
@@ -937,7 +937,7 @@
   },
   {
     "bioguideID": "E000215",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "18th",
     "electedDate": "3-Nov-20",
@@ -961,7 +961,7 @@
   },
   {
     "bioguideID": "L000397",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "19th",
     "electedDate": "3-Nov-20",
@@ -985,7 +985,7 @@
   },
   {
     "bioguideID": "P000613",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "20th",
     "electedDate": "3-Nov-20",
@@ -1009,7 +1009,7 @@
   },
   {
     "bioguideID": "V000129",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "21st",
     "electedDate": "3-Nov-20",
@@ -1033,7 +1033,7 @@
   },
   {
     "bioguideID": "C001128",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "22nd",
     "electedDate": "7-Jun-22",
@@ -1057,7 +1057,7 @@
   },
   {
     "bioguideID": "M001165",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "23rd",
     "electedDate": "3-Nov-20",
@@ -1081,7 +1081,7 @@
   },
   {
     "bioguideID": "C001112",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "24th",
     "electedDate": "3-Nov-20",
@@ -1105,7 +1105,7 @@
   },
   {
     "bioguideID": "G000061",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "25th",
     "electedDate": "3-Nov-20",
@@ -1129,7 +1129,7 @@
   },
   {
     "bioguideID": "B001285",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "26th",
     "electedDate": "3-Nov-20",
@@ -1153,7 +1153,7 @@
   },
   {
     "bioguideID": "C001080",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "27th",
     "electedDate": "3-Nov-20",
@@ -1177,7 +1177,7 @@
   },
   {
     "bioguideID": "S001150",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "28th",
     "electedDate": "3-Nov-20",
@@ -1201,7 +1201,7 @@
   },
   {
     "bioguideID": "C001097",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "29th",
     "electedDate": "3-Nov-20",
@@ -1225,7 +1225,7 @@
   },
   {
     "bioguideID": "S000344",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "30th",
     "electedDate": "3-Nov-20",
@@ -1249,7 +1249,7 @@
   },
   {
     "bioguideID": "A000371",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "31st",
     "electedDate": "3-Nov-20",
@@ -1273,7 +1273,7 @@
   },
   {
     "bioguideID": "N000179",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "32nd",
     "electedDate": "3-Nov-20",
@@ -1297,7 +1297,7 @@
   },
   {
     "bioguideID": "L000582",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "33rd",
     "electedDate": "3-Nov-20",
@@ -1321,7 +1321,7 @@
   },
   {
     "bioguideID": "G000585",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "34th",
     "electedDate": "3-Nov-20",
@@ -1345,7 +1345,7 @@
   },
   {
     "bioguideID": "T000474",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "35th",
     "electedDate": "3-Nov-20",
@@ -1369,7 +1369,7 @@
   },
   {
     "bioguideID": "R000599",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "36th",
     "electedDate": "3-Nov-20",
@@ -1393,7 +1393,7 @@
   },
   {
     "bioguideID": "B001270",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "37th",
     "electedDate": "3-Nov-20",
@@ -1417,7 +1417,7 @@
   },
   {
     "bioguideID": "S001156",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "38th",
     "electedDate": "3-Nov-20",
@@ -1441,7 +1441,7 @@
   },
   {
     "bioguideID": "K000397",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "39th",
     "electedDate": "3-Nov-20",
@@ -1465,7 +1465,7 @@
   },
   {
     "bioguideID": "R000486",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "40th",
     "electedDate": "3-Nov-20",
@@ -1489,7 +1489,7 @@
   },
   {
     "bioguideID": "T000472",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "41st",
     "electedDate": "3-Nov-20",
@@ -1513,7 +1513,7 @@
   },
   {
     "bioguideID": "C000059",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "42nd",
     "electedDate": "3-Nov-20",
@@ -1537,7 +1537,7 @@
   },
   {
     "bioguideID": "W000187",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "43rd",
     "electedDate": "3-Nov-20",
@@ -1561,7 +1561,7 @@
   },
   {
     "bioguideID": "B001300",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "44th",
     "electedDate": "3-Nov-20",
@@ -1585,7 +1585,7 @@
   },
   {
     "bioguideID": "P000618",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "45th",
     "electedDate": "3-Nov-20",
@@ -1609,7 +1609,7 @@
   },
   {
     "bioguideID": "C001110",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "46th",
     "electedDate": "3-Nov-20",
@@ -1633,7 +1633,7 @@
   },
   {
     "bioguideID": "L000579",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "47th",
     "electedDate": "3-Nov-20",
@@ -1657,7 +1657,7 @@
   },
   {
     "bioguideID": "S001135",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "48th",
     "electedDate": "3-Nov-20",
@@ -1681,7 +1681,7 @@
   },
   {
     "bioguideID": "L000593",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "49th",
     "electedDate": "3-Nov-20",
@@ -1705,7 +1705,7 @@
   },
   {
     "bioguideID": "I000056",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "50th",
     "electedDate": "3-Nov-20",
@@ -1729,7 +1729,7 @@
   },
   {
     "bioguideID": "V000130",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "51st",
     "electedDate": "3-Nov-20",
@@ -1753,7 +1753,7 @@
   },
   {
     "bioguideID": "P000608",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "52nd",
     "electedDate": "3-Nov-20",
@@ -1777,7 +1777,7 @@
   },
   {
     "bioguideID": "J000305",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "53rd",
     "electedDate": "3-Nov-20",
@@ -1801,7 +1801,7 @@
   },
   {
     "bioguideID": "D000197",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -1825,7 +1825,7 @@
   },
   {
     "bioguideID": "N000191",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -1849,7 +1849,7 @@
   },
   {
     "bioguideID": "B000825",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -1873,7 +1873,7 @@
   },
   {
     "bioguideID": "B001297",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -1897,7 +1897,7 @@
   },
   {
     "bioguideID": "L000564",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -1921,7 +1921,7 @@
   },
   {
     "bioguideID": "C001121",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -1945,7 +1945,7 @@
   },
   {
     "bioguideID": "P000593",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -1969,7 +1969,7 @@
   },
   {
     "bioguideID": "L000557",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -1993,7 +1993,7 @@
   },
   {
     "bioguideID": "C001069",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -2017,7 +2017,7 @@
   },
   {
     "bioguideID": "D000216",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -2041,7 +2041,7 @@
   },
   {
     "bioguideID": "H001047",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -2065,7 +2065,7 @@
   },
   {
     "bioguideID": "H001081",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -2089,7 +2089,7 @@
   },
   {
     "bioguideID": "N000147",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "Delegate",
     "electedDate": "3-Nov-20",
@@ -2113,7 +2113,7 @@
   },
   {
     "bioguideID": "B001303",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "At Large",
     "electedDate": "3-Nov-20",
@@ -2137,7 +2137,7 @@
   },
   {
     "bioguideID": "G000578",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -2161,7 +2161,7 @@
   },
   {
     "bioguideID": "D000628",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -2185,7 +2185,7 @@
   },
   {
     "bioguideID": "C001039",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -2209,7 +2209,7 @@
   },
   {
     "bioguideID": "R000609",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -2233,7 +2233,7 @@
   },
   {
     "bioguideID": "L000586",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -2257,7 +2257,7 @@
   },
   {
     "bioguideID": "W000823",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -2281,7 +2281,7 @@
   },
   {
     "bioguideID": "M001202",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -2305,7 +2305,7 @@
   },
   {
     "bioguideID": "P000599",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -2329,7 +2329,7 @@
   },
   {
     "bioguideID": "S001200",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -2353,7 +2353,7 @@
   },
   {
     "bioguideID": "D000627",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -2377,7 +2377,7 @@
   },
   {
     "bioguideID": "W000806",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "11th",
     "electedDate": "3-Nov-20",
@@ -2401,7 +2401,7 @@
   },
   {
     "bioguideID": "B001257",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "12th",
     "electedDate": "3-Nov-20",
@@ -2425,7 +2425,7 @@
   },
   {
     "bioguideID": "C001111",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "13th",
     "electedDate": "3-Nov-20",
@@ -2449,7 +2449,7 @@
   },
   {
     "bioguideID": "C001066",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "14th",
     "electedDate": "3-Nov-20",
@@ -2473,7 +2473,7 @@
   },
   {
     "bioguideID": "F000472",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "15th",
     "electedDate": "3-Nov-20",
@@ -2497,7 +2497,7 @@
   },
   {
     "bioguideID": "B001260",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "16th",
     "electedDate": "3-Nov-20",
@@ -2521,7 +2521,7 @@
   },
   {
     "bioguideID": "S001214",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "17th",
     "electedDate": "3-Nov-20",
@@ -2545,7 +2545,7 @@
   },
   {
     "bioguideID": "M001199",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "18th",
     "electedDate": "3-Nov-20",
@@ -2569,7 +2569,7 @@
   },
   {
     "bioguideID": "D000032",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "19th",
     "electedDate": "3-Nov-20",
@@ -2593,7 +2593,7 @@
   },
   {
     "bioguideID": "C001127",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "20th",
     "electedDate": "11-Jan-22",
@@ -2617,7 +2617,7 @@
   },
   {
     "bioguideID": "F000462",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "21st",
     "electedDate": "3-Nov-20",
@@ -2641,7 +2641,7 @@
   },
   {
     "bioguideID": "D000610",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "22nd",
     "electedDate": "3-Nov-20",
@@ -2665,7 +2665,7 @@
   },
   {
     "bioguideID": "W000797",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "23rd",
     "electedDate": "3-Nov-20",
@@ -2689,7 +2689,7 @@
   },
   {
     "bioguideID": "W000808",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "24th",
     "electedDate": "3-Nov-20",
@@ -2713,7 +2713,7 @@
   },
   {
     "bioguideID": "D000600",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "25th",
     "electedDate": "3-Nov-20",
@@ -2737,7 +2737,7 @@
   },
   {
     "bioguideID": "G000593",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "26th",
     "electedDate": "3-Nov-20",
@@ -2761,7 +2761,7 @@
   },
   {
     "bioguideID": "S000168",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "27th",
     "electedDate": "3-Nov-20",
@@ -2785,7 +2785,7 @@
   },
   {
     "bioguideID": "C001103",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -2809,7 +2809,7 @@
   },
   {
     "bioguideID": "B000490",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -2833,7 +2833,7 @@
   },
   {
     "bioguideID": "F000465",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -2857,7 +2857,7 @@
   },
   {
     "bioguideID": "J000288",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -2881,7 +2881,7 @@
   },
   {
     "bioguideID": "W000788",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -2905,7 +2905,7 @@
   },
   {
     "bioguideID": "M001208",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -2929,7 +2929,7 @@
   },
   {
     "bioguideID": "B001312",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -2953,7 +2953,7 @@
   },
   {
     "bioguideID": "S001189",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -2977,7 +2977,7 @@
   },
   {
     "bioguideID": "C001116",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -3001,7 +3001,7 @@
   },
   {
     "bioguideID": "H001071",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -3025,7 +3025,7 @@
   },
   {
     "bioguideID": "L000583",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "11th",
     "electedDate": "3-Nov-20",
@@ -3049,7 +3049,7 @@
   },
   {
     "bioguideID": "A000372",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "12th",
     "electedDate": "3-Nov-20",
@@ -3073,7 +3073,7 @@
   },
   {
     "bioguideID": "S001157",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "13th",
     "electedDate": "3-Nov-20",
@@ -3097,7 +3097,7 @@
   },
   {
     "bioguideID": "G000596",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "14th",
     "electedDate": "3-Nov-20",
@@ -3121,7 +3121,7 @@
   },
   {
     "bioguideID": "S001204",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "Delegate",
     "electedDate": "3-Nov-20",
@@ -3145,7 +3145,7 @@
   },
   {
     "bioguideID": "C001055",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -3169,7 +3169,7 @@
   },
   {
     "bioguideID": "K000396",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -3193,7 +3193,7 @@
   },
   {
     "bioguideID": "H001091",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -3217,7 +3217,7 @@
   },
   {
     "bioguideID": "M001215",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -3241,7 +3241,7 @@
   },
   {
     "bioguideID": "A000378",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -3265,7 +3265,7 @@
   },
   {
     "bioguideID": "F000446",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -3289,7 +3289,7 @@
   },
   {
     "bioguideID": "F000469",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -3313,7 +3313,7 @@
   },
   {
     "bioguideID": "S001148",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -3337,7 +3337,7 @@
   },
   {
     "bioguideID": "R000515",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -3361,7 +3361,7 @@
   },
   {
     "bioguideID": "K000385",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -3385,7 +3385,7 @@
   },
   {
     "bioguideID": "N000192",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -3409,7 +3409,7 @@
   },
   {
     "bioguideID": "G000586",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -3433,7 +3433,7 @@
   },
   {
     "bioguideID": "Q000023",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -3457,7 +3457,7 @@
   },
   {
     "bioguideID": "C001117",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -3481,7 +3481,7 @@
   },
   {
     "bioguideID": "D000096",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -3505,7 +3505,7 @@
   },
   {
     "bioguideID": "K000391",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -3529,7 +3529,7 @@
   },
   {
     "bioguideID": "S001145",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -3553,7 +3553,7 @@
   },
   {
     "bioguideID": "S001190",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -3577,7 +3577,7 @@
   },
   {
     "bioguideID": "F000454",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "11th",
     "electedDate": "3-Nov-20",
@@ -3601,7 +3601,7 @@
   },
   {
     "bioguideID": "B001295",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "12th",
     "electedDate": "3-Nov-20",
@@ -3625,7 +3625,7 @@
   },
   {
     "bioguideID": "D000619",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "13th",
     "electedDate": "3-Nov-20",
@@ -3649,7 +3649,7 @@
   },
   {
     "bioguideID": "U000040",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "14th",
     "electedDate": "3-Nov-20",
@@ -3673,7 +3673,7 @@
   },
   {
     "bioguideID": "M001211",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "15th",
     "electedDate": "3-Nov-20",
@@ -3697,7 +3697,7 @@
   },
   {
     "bioguideID": "K000378",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "16th",
     "electedDate": "3-Nov-20",
@@ -3721,7 +3721,7 @@
   },
   {
     "bioguideID": "B001286",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "17th",
     "electedDate": "3-Nov-20",
@@ -3745,7 +3745,7 @@
   },
   {
     "bioguideID": "L000585",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "18th",
     "electedDate": "3-Nov-20",
@@ -3769,7 +3769,7 @@
   },
   {
     "bioguideID": "M001214",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -3817,7 +3817,7 @@
   },
   {
     "bioguideID": "B001299",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -3841,7 +3841,7 @@
   },
   {
     "bioguideID": "B001307",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -3865,7 +3865,7 @@
   },
   {
     "bioguideID": "S000929",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -3889,7 +3889,7 @@
   },
   {
     "bioguideID": "P000615",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -3913,7 +3913,7 @@
   },
   {
     "bioguideID": "C001072",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -3937,7 +3937,7 @@
   },
   {
     "bioguideID": "B001275",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -3961,7 +3961,7 @@
   },
   {
     "bioguideID": "H001074",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -3985,7 +3985,7 @@
   },
   {
     "bioguideID": "M000871",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -4009,7 +4009,7 @@
   },
   {
     "bioguideID": "L000266",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -4033,7 +4033,7 @@
   },
   {
     "bioguideID": "D000629",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -4057,7 +4057,7 @@
   },
   {
     "bioguideID": "E000298",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -4081,7 +4081,7 @@
   },
   {
     "bioguideID": "C001108",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -4105,7 +4105,7 @@
   },
   {
     "bioguideID": "G000558",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -4129,7 +4129,7 @@
   },
   {
     "bioguideID": "Y000062",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -4153,7 +4153,7 @@
   },
   {
     "bioguideID": "M001184",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -4177,7 +4177,7 @@
   },
   {
     "bioguideID": "R000395",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -4201,7 +4201,7 @@
   },
   {
     "bioguideID": "B001282",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -4225,7 +4225,7 @@
   },
   {
     "bioguideID": "S001176",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -4249,7 +4249,7 @@
   },
   {
     "bioguideID": "C001125",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "24-Apr-21",
@@ -4273,7 +4273,7 @@
   },
   {
     "bioguideID": "H001077",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -4297,7 +4297,7 @@
   },
   {
     "bioguideID": "J000299",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -4321,7 +4321,7 @@
   },
   {
     "bioguideID": "L000595",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "5th",
     "electedDate": "20-Mar-21",
@@ -4345,7 +4345,7 @@
   },
   {
     "bioguideID": "G000577",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -4369,7 +4369,7 @@
   },
   {
     "bioguideID": "N000015",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -4393,7 +4393,7 @@
   },
   {
     "bioguideID": "M000312",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -4417,7 +4417,7 @@
   },
   {
     "bioguideID": "T000482",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -4441,7 +4441,7 @@
   },
   {
     "bioguideID": "A000148",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -4465,7 +4465,7 @@
   },
   {
     "bioguideID": "C001101",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -4489,7 +4489,7 @@
   },
   {
     "bioguideID": "M001196",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -4513,7 +4513,7 @@
   },
   {
     "bioguideID": "P000617",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -4537,7 +4537,7 @@
   },
   {
     "bioguideID": "L000562",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -4561,7 +4561,7 @@
   },
   {
     "bioguideID": "K000375",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -4585,7 +4585,7 @@
   },
   {
     "bioguideID": "H001052",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -4609,7 +4609,7 @@
   },
   {
     "bioguideID": "R000576",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -4633,7 +4633,7 @@
   },
   {
     "bioguideID": "S001168",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -4657,7 +4657,7 @@
   },
   {
     "bioguideID": "B001304",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -4681,7 +4681,7 @@
   },
   {
     "bioguideID": "H000874",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -4705,7 +4705,7 @@
   },
   {
     "bioguideID": "T000483",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -4729,7 +4729,7 @@
   },
   {
     "bioguideID": "M000687",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -4753,7 +4753,7 @@
   },
   {
     "bioguideID": "R000606",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -4777,7 +4777,7 @@
   },
   {
     "bioguideID": "P000597",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -4801,7 +4801,7 @@
   },
   {
     "bioguideID": "G000592",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -4825,7 +4825,7 @@
   },
   {
     "bioguideID": "B001301",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -4849,7 +4849,7 @@
   },
   {
     "bioguideID": "H001058",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -4873,7 +4873,7 @@
   },
   {
     "bioguideID": "M001186",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -4897,7 +4897,7 @@
   },
   {
     "bioguideID": "M001194",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -4921,7 +4921,7 @@
   },
   {
     "bioguideID": "K000380",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -4945,7 +4945,7 @@
   },
   {
     "bioguideID": "U000031",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -4969,7 +4969,7 @@
   },
   {
     "bioguideID": "W000798",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -4993,7 +4993,7 @@
   },
   {
     "bioguideID": "S001208",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -5017,7 +5017,7 @@
   },
   {
     "bioguideID": "L000592",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -5041,7 +5041,7 @@
   },
   {
     "bioguideID": "M001136",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -5065,7 +5065,7 @@
   },
   {
     "bioguideID": "S001215",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "11th",
     "electedDate": "3-Nov-20",
@@ -5089,7 +5089,7 @@
   },
   {
     "bioguideID": "D000624",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "12th",
     "electedDate": "3-Nov-20",
@@ -5113,7 +5113,7 @@
   },
   {
     "bioguideID": "T000481",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "13th",
     "electedDate": "3-Nov-20",
@@ -5137,7 +5137,7 @@
   },
   {
     "bioguideID": "L000581",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "14th",
     "electedDate": "3-Nov-20",
@@ -5161,7 +5161,7 @@
   },
   {
     "bioguideID": "F000475",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "9-Aug-22",
@@ -5185,7 +5185,7 @@
   },
   {
     "bioguideID": "C001119",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -5209,7 +5209,7 @@
   },
   {
     "bioguideID": "P000616",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -5233,7 +5233,7 @@
   },
   {
     "bioguideID": "M001143",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -5257,7 +5257,7 @@
   },
   {
     "bioguideID": "O000173",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -5281,7 +5281,7 @@
   },
   {
     "bioguideID": "E000294",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -5305,7 +5305,7 @@
   },
   {
     "bioguideID": "F000470",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -5329,7 +5329,7 @@
   },
   {
     "bioguideID": "S001212",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -5353,7 +5353,7 @@
   },
   {
     "bioguideID": "B001224",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -5377,7 +5377,7 @@
   },
   {
     "bioguideID": "W000812",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -5401,7 +5401,7 @@
   },
   {
     "bioguideID": "L000569",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -5425,7 +5425,7 @@
   },
   {
     "bioguideID": "H001053",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -5449,7 +5449,7 @@
   },
   {
     "bioguideID": "C001061",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -5473,7 +5473,7 @@
   },
   {
     "bioguideID": "G000546",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -5497,7 +5497,7 @@
   },
   {
     "bioguideID": "L000576",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -5521,7 +5521,7 @@
   },
   {
     "bioguideID": "S001195",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -5545,7 +5545,7 @@
   },
   {
     "bioguideID": "S001177",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "Delegate",
     "electedDate": "3-Nov-20",
@@ -5569,7 +5569,7 @@
   },
   {
     "bioguideID": "K000388",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -5593,7 +5593,7 @@
   },
   {
     "bioguideID": "T000193",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -5617,7 +5617,7 @@
   },
   {
     "bioguideID": "G000591",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -5641,7 +5641,7 @@
   },
   {
     "bioguideID": "P000601",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -5665,7 +5665,7 @@
   },
   {
     "bioguideID": "R000103",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "At Large",
     "electedDate": "3-Nov-20",
@@ -5689,7 +5689,7 @@
   },
   {
     "bioguideID": "B001251",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -5713,7 +5713,7 @@
   },
   {
     "bioguideID": "R000305",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -5737,7 +5737,7 @@
   },
   {
     "bioguideID": "M001210",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -5761,7 +5761,7 @@
   },
   {
     "bioguideID": "P000523",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -5785,7 +5785,7 @@
   },
   {
     "bioguideID": "F000450",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -5809,7 +5809,7 @@
   },
   {
     "bioguideID": "M001135",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -5833,7 +5833,7 @@
   },
   {
     "bioguideID": "R000603",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -5857,7 +5857,7 @@
   },
   {
     "bioguideID": "H001067",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -5881,7 +5881,7 @@
   },
   {
     "bioguideID": "B001311",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -5905,7 +5905,7 @@
   },
   {
     "bioguideID": "M001156",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -5929,7 +5929,7 @@
   },
   {
     "bioguideID": "C001104",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "11th",
     "electedDate": "3-Nov-20",
@@ -5953,7 +5953,7 @@
   },
   {
     "bioguideID": "A000370",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "12th",
     "electedDate": "3-Nov-20",
@@ -5977,7 +5977,7 @@
   },
   {
     "bioguideID": "B001305",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "13th",
     "electedDate": "3-Nov-20",
@@ -6001,7 +6001,7 @@
   },
   {
     "bioguideID": "A000377",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "At Large",
     "electedDate": "3-Nov-20",
@@ -6025,7 +6025,7 @@
   },
   {
     "bioguideID": "F000474",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "28-Jun-22",
@@ -6049,7 +6049,7 @@
   },
   {
     "bioguideID": "B001298",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -6073,7 +6073,7 @@
   },
   {
     "bioguideID": "S001172",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -6097,7 +6097,7 @@
   },
   {
     "bioguideID": "P000614",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -6121,7 +6121,7 @@
   },
   {
     "bioguideID": "K000382",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -6145,7 +6145,7 @@
   },
   {
     "bioguideID": "N000188",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -6169,7 +6169,7 @@
   },
   {
     "bioguideID": "V000133",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -6193,7 +6193,7 @@
   },
   {
     "bioguideID": "K000394",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -6217,7 +6217,7 @@
   },
   {
     "bioguideID": "S000522",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -6241,7 +6241,7 @@
   },
   {
     "bioguideID": "G000583",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -6265,7 +6265,7 @@
   },
   {
     "bioguideID": "P000034",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -6289,7 +6289,7 @@
   },
   {
     "bioguideID": "M001203",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -6313,7 +6313,7 @@
   },
   {
     "bioguideID": "S001165",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -6337,7 +6337,7 @@
   },
   {
     "bioguideID": "P000096",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -6361,7 +6361,7 @@
   },
   {
     "bioguideID": "P000604",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -6385,7 +6385,7 @@
   },
   {
     "bioguideID": "S001207",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "11th",
     "electedDate": "3-Nov-20",
@@ -6409,7 +6409,7 @@
   },
   {
     "bioguideID": "W000822",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "12th",
     "electedDate": "3-Nov-20",
@@ -6433,7 +6433,7 @@
   },
   {
     "bioguideID": "S001218",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "1st",
     "electedDate": "1-Jun-21",
@@ -6457,7 +6457,7 @@
   },
   {
     "bioguideID": "H001084",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -6481,7 +6481,7 @@
   },
   {
     "bioguideID": "L000273",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -6505,7 +6505,7 @@
   },
   {
     "bioguideID": "T000468",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -6529,7 +6529,7 @@
   },
   {
     "bioguideID": "A000369",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -6553,7 +6553,7 @@
   },
   {
     "bioguideID": "L000590",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -6577,7 +6577,7 @@
   },
   {
     "bioguideID": "H001066",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -6601,7 +6601,7 @@
   },
   {
     "bioguideID": "Z000017",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -6625,7 +6625,7 @@
   },
   {
     "bioguideID": "G000597",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -6649,7 +6649,7 @@
   },
   {
     "bioguideID": "S001201",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -6673,7 +6673,7 @@
   },
   {
     "bioguideID": "R000602",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Miss",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -6697,7 +6697,7 @@
   },
   {
     "bioguideID": "M001137",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -6721,7 +6721,7 @@
   },
   {
     "bioguideID": "M001188",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -6745,7 +6745,7 @@
   },
   {
     "bioguideID": "V000081",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -6769,7 +6769,7 @@
   },
   {
     "bioguideID": "J000294",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -6793,7 +6793,7 @@
   },
   {
     "bioguideID": "C001067",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -6817,7 +6817,7 @@
   },
   {
     "bioguideID": "N000002",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -6841,7 +6841,7 @@
   },
   {
     "bioguideID": "M000317",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "11th",
     "electedDate": "3-Nov-20",
@@ -6865,7 +6865,7 @@
   },
   {
     "bioguideID": "M000087",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "12th",
     "electedDate": "3-Nov-20",
@@ -6889,7 +6889,7 @@
   },
   {
     "bioguideID": "E000297",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "13th",
     "electedDate": "3-Nov-20",
@@ -6913,7 +6913,7 @@
   },
   {
     "bioguideID": "O000172",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "14th",
     "electedDate": "3-Nov-20",
@@ -6937,7 +6937,7 @@
   },
   {
     "bioguideID": "T000486",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "15th",
     "electedDate": "3-Nov-20",
@@ -6961,7 +6961,7 @@
   },
   {
     "bioguideID": "B001223",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "16th",
     "electedDate": "3-Nov-20",
@@ -6985,7 +6985,7 @@
   },
   {
     "bioguideID": "J000306",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "17th",
     "electedDate": "3-Nov-20",
@@ -7009,7 +7009,7 @@
   },
   {
     "bioguideID": "M001185",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "18th",
     "electedDate": "3-Nov-20",
@@ -7057,7 +7057,7 @@
   },
   {
     "bioguideID": "T000469",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "20th",
     "electedDate": "3-Nov-20",
@@ -7081,7 +7081,7 @@
   },
   {
     "bioguideID": "S001196",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "21st",
     "electedDate": "3-Nov-20",
@@ -7105,7 +7105,7 @@
   },
   {
     "bioguideID": "T000478",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "22nd",
     "electedDate": "3-Nov-20",
@@ -7153,7 +7153,7 @@
   },
   {
     "bioguideID": "K000386",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "24th",
     "electedDate": "3-Nov-20",
@@ -7177,7 +7177,7 @@
   },
   {
     "bioguideID": "M001206",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "25th",
     "electedDate": "3-Nov-20",
@@ -7201,7 +7201,7 @@
   },
   {
     "bioguideID": "H001038",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "26th",
     "electedDate": "3-Nov-20",
@@ -7225,7 +7225,7 @@
   },
   {
     "bioguideID": "J000020",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "27th",
     "electedDate": "3-Nov-20",
@@ -7249,7 +7249,7 @@
   },
   {
     "bioguideID": "C000266",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -7273,7 +7273,7 @@
   },
   {
     "bioguideID": "W000815",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -7297,7 +7297,7 @@
   },
   {
     "bioguideID": "B001281",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -7321,7 +7321,7 @@
   },
   {
     "bioguideID": "J000289",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -7345,7 +7345,7 @@
   },
   {
     "bioguideID": "L000566",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -7369,7 +7369,7 @@
   },
   {
     "bioguideID": "J000292",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -7393,7 +7393,7 @@
   },
   {
     "bioguideID": "G000563",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -7417,7 +7417,7 @@
   },
   {
     "bioguideID": "D000626",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -7441,7 +7441,7 @@
   },
   {
     "bioguideID": "K000009",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -7465,7 +7465,7 @@
   },
   {
     "bioguideID": "T000463",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -7489,7 +7489,7 @@
   },
   {
     "bioguideID": "B001313",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "11th",
     "electedDate": "2-Nov-21",
@@ -7513,7 +7513,7 @@
   },
   {
     "bioguideID": "B001306",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "12th",
     "electedDate": "3-Nov-20",
@@ -7537,7 +7537,7 @@
   },
   {
     "bioguideID": "R000577",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "13th",
     "electedDate": "3-Nov-20",
@@ -7561,7 +7561,7 @@
   },
   {
     "bioguideID": "J000295",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "14th",
     "electedDate": "3-Nov-20",
@@ -7585,7 +7585,7 @@
   },
   {
     "bioguideID": "C001126",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "15th",
     "electedDate": "2-Nov-21",
@@ -7609,7 +7609,7 @@
   },
   {
     "bioguideID": "G000588",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "16th",
     "electedDate": "3-Nov-20",
@@ -7633,7 +7633,7 @@
   },
   {
     "bioguideID": "H001082",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -7657,7 +7657,7 @@
   },
   {
     "bioguideID": "M001190",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -7681,7 +7681,7 @@
   },
   {
     "bioguideID": "L000491",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -7705,7 +7705,7 @@
   },
   {
     "bioguideID": "C001053",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -7729,7 +7729,7 @@
   },
   {
     "bioguideID": "B000740",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -7753,7 +7753,7 @@
   },
   {
     "bioguideID": "B001278",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -7777,7 +7777,7 @@
   },
   {
     "bioguideID": "B000668",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -7801,7 +7801,7 @@
   },
   {
     "bioguideID": "B000574",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -7825,7 +7825,7 @@
   },
   {
     "bioguideID": "D000191",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -7849,7 +7849,7 @@
   },
   {
     "bioguideID": "S001180",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -7873,7 +7873,7 @@
   },
   {
     "bioguideID": "F000466",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -7897,7 +7897,7 @@
   },
   {
     "bioguideID": "B001296",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -7921,7 +7921,7 @@
   },
   {
     "bioguideID": "E000296",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -7945,7 +7945,7 @@
   },
   {
     "bioguideID": "D000631",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -7969,7 +7969,7 @@
   },
   {
     "bioguideID": "S001205",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -7993,7 +7993,7 @@
   },
   {
     "bioguideID": "H001085",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -8017,7 +8017,7 @@
   },
   {
     "bioguideID": "W000826",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -8041,7 +8041,7 @@
   },
   {
     "bioguideID": "C001090",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -8065,7 +8065,7 @@
   },
   {
     "bioguideID": "M001204",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -8089,7 +8089,7 @@
   },
   {
     "bioguideID": "P000605",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -8113,7 +8113,7 @@
   },
   {
     "bioguideID": "S001199",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "11th",
     "electedDate": "3-Nov-20",
@@ -8137,7 +8137,7 @@
   },
   {
     "bioguideID": "K000395",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "12th",
     "electedDate": "3-Nov-20",
@@ -8161,7 +8161,7 @@
   },
   {
     "bioguideID": "J000302",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "13th",
     "electedDate": "3-Nov-20",
@@ -8185,7 +8185,7 @@
   },
   {
     "bioguideID": "R000610",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "14th",
     "electedDate": "3-Nov-20",
@@ -8209,7 +8209,7 @@
   },
   {
     "bioguideID": "T000467",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "15th",
     "electedDate": "3-Nov-20",
@@ -8233,7 +8233,7 @@
   },
   {
     "bioguideID": "K000376",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "16th",
     "electedDate": "3-Nov-20",
@@ -8257,7 +8257,7 @@
   },
   {
     "bioguideID": "L000588",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "17th",
     "electedDate": "3-Nov-20",
@@ -8281,7 +8281,7 @@
   },
   {
     "bioguideID": "D000482",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "18th",
     "electedDate": "3-Nov-20",
@@ -8305,7 +8305,7 @@
   },
   {
     "bioguideID": "G000582",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Miss",
     "district": "Resident Commissioner",
     "electedDate": "3-Nov-20",
@@ -8329,7 +8329,7 @@
   },
   {
     "bioguideID": "C001084",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -8353,7 +8353,7 @@
   },
   {
     "bioguideID": "L000559",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -8377,7 +8377,7 @@
   },
   {
     "bioguideID": "M000194",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -8401,7 +8401,7 @@
   },
   {
     "bioguideID": "W000795",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -8425,7 +8425,7 @@
   },
   {
     "bioguideID": "D000615",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -8449,7 +8449,7 @@
   },
   {
     "bioguideID": "T000480",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -8473,7 +8473,7 @@
   },
   {
     "bioguideID": "N000190",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -8497,7 +8497,7 @@
   },
   {
     "bioguideID": "C000537",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -8521,7 +8521,7 @@
   },
   {
     "bioguideID": "R000597",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -8545,7 +8545,7 @@
   },
   {
     "bioguideID": "J000301",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "At Large",
     "electedDate": "3-Nov-20",
@@ -8569,7 +8569,7 @@
   },
   {
     "bioguideID": "H001086",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -8593,7 +8593,7 @@
   },
   {
     "bioguideID": "B001309",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -8617,7 +8617,7 @@
   },
   {
     "bioguideID": "F000459",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -8641,7 +8641,7 @@
   },
   {
     "bioguideID": "D000616",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -8665,7 +8665,7 @@
   },
   {
     "bioguideID": "C000754",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -8689,7 +8689,7 @@
   },
   {
     "bioguideID": "R000612",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -8713,7 +8713,7 @@
   },
   {
     "bioguideID": "G000590",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -8737,7 +8737,7 @@
   },
   {
     "bioguideID": "K000392",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -8761,7 +8761,7 @@
   },
   {
     "bioguideID": "C001068",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -8785,7 +8785,7 @@
   },
   {
     "bioguideID": "G000552",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -8809,7 +8809,7 @@
   },
   {
     "bioguideID": "C001120",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -8833,7 +8833,7 @@
   },
   {
     "bioguideID": "T000479",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -8857,7 +8857,7 @@
   },
   {
     "bioguideID": "F000246",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -8881,7 +8881,7 @@
   },
   {
     "bioguideID": "G000589",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -8905,7 +8905,7 @@
   },
   {
     "bioguideID": "E000071",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "27-Jul-21",
@@ -8929,7 +8929,7 @@
   },
   {
     "bioguideID": "F000468",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -8953,7 +8953,7 @@
   },
   {
     "bioguideID": "B000755",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -8977,7 +8977,7 @@
   },
   {
     "bioguideID": "G000553",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -9001,7 +9001,7 @@
   },
   {
     "bioguideID": "M001157",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -9025,7 +9025,7 @@
   },
   {
     "bioguideID": "P000048",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "11th",
     "electedDate": "3-Nov-20",
@@ -9049,7 +9049,7 @@
   },
   {
     "bioguideID": "G000377",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "12th",
     "electedDate": "3-Nov-20",
@@ -9073,7 +9073,7 @@
   },
   {
     "bioguideID": "J000304",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "13th",
     "electedDate": "3-Nov-20",
@@ -9097,7 +9097,7 @@
   },
   {
     "bioguideID": "W000814",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "14th",
     "electedDate": "3-Nov-20",
@@ -9121,7 +9121,7 @@
   },
   {
     "bioguideID": "G000581",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "15th",
     "electedDate": "3-Nov-20",
@@ -9145,7 +9145,7 @@
   },
   {
     "bioguideID": "E000299",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "16th",
     "electedDate": "3-Nov-20",
@@ -9169,7 +9169,7 @@
   },
   {
     "bioguideID": "S000250",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "17th",
     "electedDate": "3-Nov-20",
@@ -9193,7 +9193,7 @@
   },
   {
     "bioguideID": "J000032",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "18th",
     "electedDate": "3-Nov-20",
@@ -9217,7 +9217,7 @@
   },
   {
     "bioguideID": "A000375",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "19th",
     "electedDate": "3-Nov-20",
@@ -9241,7 +9241,7 @@
   },
   {
     "bioguideID": "C001091",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "20th",
     "electedDate": "3-Nov-20",
@@ -9265,7 +9265,7 @@
   },
   {
     "bioguideID": "R000614",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "21st",
     "electedDate": "3-Nov-20",
@@ -9289,7 +9289,7 @@
   },
   {
     "bioguideID": "N000026",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "22nd",
     "electedDate": "3-Nov-20",
@@ -9313,7 +9313,7 @@
   },
   {
     "bioguideID": "G000594",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "23rd",
     "electedDate": "3-Nov-20",
@@ -9337,7 +9337,7 @@
   },
   {
     "bioguideID": "V000134",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "24th",
     "electedDate": "3-Nov-20",
@@ -9361,7 +9361,7 @@
   },
   {
     "bioguideID": "W000816",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "25th",
     "electedDate": "3-Nov-20",
@@ -9385,7 +9385,7 @@
   },
   {
     "bioguideID": "B001248",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "26th",
     "electedDate": "3-Nov-20",
@@ -9409,7 +9409,7 @@
   },
   {
     "bioguideID": "C001115",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "27th",
     "electedDate": "3-Nov-20",
@@ -9433,7 +9433,7 @@
   },
   {
     "bioguideID": "C001063",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "28th",
     "electedDate": "3-Nov-20",
@@ -9457,7 +9457,7 @@
   },
   {
     "bioguideID": "G000587",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "29th",
     "electedDate": "3-Nov-20",
@@ -9481,7 +9481,7 @@
   },
   {
     "bioguideID": "J000126",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "30th",
     "electedDate": "3-Nov-20",
@@ -9505,7 +9505,7 @@
   },
   {
     "bioguideID": "C001051",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "31st",
     "electedDate": "3-Nov-20",
@@ -9529,7 +9529,7 @@
   },
   {
     "bioguideID": "A000376",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "32nd",
     "electedDate": "3-Nov-20",
@@ -9553,7 +9553,7 @@
   },
   {
     "bioguideID": "V000131",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "33rd",
     "electedDate": "3-Nov-20",
@@ -9577,7 +9577,7 @@
   },
   {
     "bioguideID": "F000473",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "34th",
     "electedDate": "14-Jun-22",
@@ -9601,7 +9601,7 @@
   },
   {
     "bioguideID": "D000399",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "35th",
     "electedDate": "3-Nov-20",
@@ -9625,7 +9625,7 @@
   },
   {
     "bioguideID": "B001291",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "36th",
     "electedDate": "3-Nov-20",
@@ -9649,7 +9649,7 @@
   },
   {
     "bioguideID": "M001213",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -9673,7 +9673,7 @@
   },
   {
     "bioguideID": "S001192",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -9697,7 +9697,7 @@
   },
   {
     "bioguideID": "C001114",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -9721,7 +9721,7 @@
   },
   {
     "bioguideID": "O000086",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -9745,7 +9745,7 @@
   },
   {
     "bioguideID": "W000804",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -9769,7 +9769,7 @@
   },
   {
     "bioguideID": "L000591",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mrs.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -9793,7 +9793,7 @@
   },
   {
     "bioguideID": "S000185",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -9817,7 +9817,7 @@
   },
   {
     "bioguideID": "M001200",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -9841,7 +9841,7 @@
   },
   {
     "bioguideID": "G000595",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -9865,7 +9865,7 @@
   },
   {
     "bioguideID": "C001118",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -9889,7 +9889,7 @@
   },
   {
     "bioguideID": "S001209",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -9913,7 +9913,7 @@
   },
   {
     "bioguideID": "B001292",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -9937,7 +9937,7 @@
   },
   {
     "bioguideID": "G000568",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -9961,7 +9961,7 @@
   },
   {
     "bioguideID": "W000825",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -9985,7 +9985,7 @@
   },
   {
     "bioguideID": "C001078",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "11th",
     "electedDate": "3-Nov-20",
@@ -10009,7 +10009,7 @@
   },
   {
     "bioguideID": "P000610",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "Delegate",
     "electedDate": "3-Nov-20",
@@ -10033,7 +10033,7 @@
   },
   {
     "bioguideID": "W000800",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "At Large",
     "electedDate": "3-Nov-20",
@@ -10057,7 +10057,7 @@
   },
   {
     "bioguideID": "D000617",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -10081,7 +10081,7 @@
   },
   {
     "bioguideID": "L000560",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -10105,7 +10105,7 @@
   },
   {
     "bioguideID": "H001056",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -10129,7 +10129,7 @@
   },
   {
     "bioguideID": "N000189",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -10153,7 +10153,7 @@
   },
   {
     "bioguideID": "M001159",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -10177,7 +10177,7 @@
   },
   {
     "bioguideID": "K000381",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -10201,7 +10201,7 @@
   },
   {
     "bioguideID": "J000298",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -10225,7 +10225,7 @@
   },
   {
     "bioguideID": "S001216",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -10249,7 +10249,7 @@
   },
   {
     "bioguideID": "S000510",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "9th",
     "electedDate": "3-Nov-20",
@@ -10273,7 +10273,7 @@
   },
   {
     "bioguideID": "S001159",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "10th",
     "electedDate": "3-Nov-20",
@@ -10297,7 +10297,7 @@
   },
   {
     "bioguideID": "S001213",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -10321,7 +10321,7 @@
   },
   {
     "bioguideID": "P000607",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -10345,7 +10345,7 @@
   },
   {
     "bioguideID": "K000188",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Mr.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -10369,7 +10369,7 @@
   },
   {
     "bioguideID": "M001160",
-    "caucus": "D",
+    "caucus": "Democrat",
     "courtesy": "Ms.",
     "district": "4th",
     "electedDate": "3-Nov-20",
@@ -10393,7 +10393,7 @@
   },
   {
     "bioguideID": "F000471",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "5th",
     "electedDate": "3-Nov-20",
@@ -10417,7 +10417,7 @@
   },
   {
     "bioguideID": "G000576",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "6th",
     "electedDate": "3-Nov-20",
@@ -10441,7 +10441,7 @@
   },
   {
     "bioguideID": "T000165",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "7th",
     "electedDate": "3-Nov-20",
@@ -10465,7 +10465,7 @@
   },
   {
     "bioguideID": "G000579",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "8th",
     "electedDate": "3-Nov-20",
@@ -10489,7 +10489,7 @@
   },
   {
     "bioguideID": "M001180",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "1st",
     "electedDate": "3-Nov-20",
@@ -10513,7 +10513,7 @@
   },
   {
     "bioguideID": "M001195",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mr.",
     "district": "2nd",
     "electedDate": "3-Nov-20",
@@ -10537,7 +10537,7 @@
   },
   {
     "bioguideID": "M001205",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Mrs.",
     "district": "3rd",
     "electedDate": "3-Nov-20",
@@ -10561,7 +10561,7 @@
   },
   {
     "bioguideID": "C001109",
-    "caucus": "R",
+    "caucus": "Republican",
     "courtesy": "Ms.",
     "district": "At Large",
     "electedDate": "3-Nov-20",
