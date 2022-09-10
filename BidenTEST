@@ -1,0 +1,221 @@
+ [{
+ 		"president": "Joe Biden",
+ 		"startdate": "7/31/2022",
+ 		"enddate": "8/1/2022",
+ 		"pollster": "InsiderAdvantage",
+ 		"approve": 38,
+ 		"disapprove": 60,
+ 		"url": "https://amgreatness.com/2022/08/03/biden-has-38-percent-approval-in-new-insider-advantage-poll-61-percent-of-likely-voters-say-were-in-a-recession/",
+ 		"poll_id": 79608
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "7/31/2022",
+ 		"enddate": "8/2/2022",
+ 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+ 		"approve": 43,
+ 		"disapprove": 54,
+ 		"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+ 		"poll_id": 79606
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "7/30/2022",
+ 		"enddate": "8/2/2022",
+ 		"pollster": "YouGov",
+ 		"approve": 40,
+ 		"disapprove": 55,
+ 		"url": "https://docs.cdn.yougov.com/d1ik3gw9iw/econTabReport.pdf",
+ 		"poll_id": 79599
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/1/2022",
+ 		"enddate": "8/3/2022",
+ 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+ 		"approve": 44,
+ 		"disapprove": 54,
+ 		"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+ 		"poll_id": 79611
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/2/2022",
+ 		"enddate": "8/4/2022",
+ 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+ 		"approve": 43,
+ 		"disapprove": 55,
+ 		"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+ 		"poll_id": 79623
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/3/2022",
+ 		"enddate": "8/7/2022",
+ 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+ 		"approve": 45,
+ 		"disapprove": 54,
+ 		"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+ 		"poll_id": 79627
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/5/2022",
+ 		"enddate": "8/7/2022",
+ 		"pollster": "Morning Consult",
+ 		"approve": 39,
+ 		"disapprove": 59,
+ 		"url": "https://assets.morningconsult.com/wp-uploads/2022/08/09170742/2208040_crosstabs_POLITICO_RVs_v1_8-10-22HD.pdf",
+ 		"poll_id": 79652
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/4/2022",
+ 		"enddate": "8/8/2022",
+ 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+ 		"approve": 44,
+ 		"disapprove": 55,
+ 		"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+ 		"poll_id": 79634
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/6/2022",
+ 		"enddate": "8/7/2022",
+ 		"pollster": "Morning Consult",
+ 		"approve": 41,
+ 		"disapprove": 57,
+ 		"url": "https://morningconsult.com/2022/08/10/can-americans-find-taiwan-on-a-map/",
+ 		"poll_id": 79733
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/5/2022",
+ 		"enddate": "8/8/2022",
+ 		"pollster": "The Bullfinch Group",
+ 		"approve": 44,
+ 		"disapprove": 54,
+ 		"url": "https://www.thebullfinchgroup.com/post/public-release-of-bullfinch-q3-nationwide-survey",
+ 		"poll_id": 79644
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/7/2022",
+ 		"enddate": "8/9/2022",
+ 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+ 		"approve": 45,
+ 		"disapprove": 54,
+ 		"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+ 		"poll_id": 79651
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/7/2022",
+ 		"enddate": "8/9/2022",
+ 		"pollster": "YouGov",
+ 		"approve": 41,
+ 		"disapprove": 55,
+ 		"url": "https://docs.cdn.yougov.com/33oc20o9t6/econTabReport.pdf",
+ 		"poll_id": 79661
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/6/2022",
+ 		"enddate": "8/9/2022",
+ 		"pollster": "Beacon Research/Shaw & Company Research",
+ 		"approve": 42,
+ 		"disapprove": 58,
+ 		"url": "https://static.foxnews.com/foxnews.com/content/uploads/2022/08/Fox_August-6-9-2022_National_Topline_August-11-Release.pdf",
+ 		"poll_id": 79717
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/8/2022",
+ 		"enddate": "8/10/2022",
+ 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+ 		"approve": 45,
+ 		"disapprove": 54,
+ 		"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+ 		"poll_id": 79692
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/9/2022",
+ 		"enddate": "8/11/2022",
+ 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+ 		"approve": 45,
+ 		"disapprove": 53,
+ 		"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+ 		"poll_id": 79718
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/10/2022",
+ 		"enddate": "8/10/2022",
+ 		"pollster": "Morning Consult",
+ 		"approve": 42,
+ 		"disapprove": 56,
+ 		"url": "https://morningconsult.com/2022/08/11/fbi-raid-increases-trumps-2024-primary-support/",
+ 		"poll_id": 79713
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/10/2022",
+ 		"enddate": "8/12/2022",
+ 		"pollster": "Big Village",
+ 		"approve": 41,
+ 		"disapprove": 54.4,
+ 		"url": "https://engine-insights.com/blog/public-opinion-polling/",
+ 		"poll_id": 79732
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/10/2022",
+ 		"enddate": "8/14/2022",
+ 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+ 		"approve": 44,
+ 		"disapprove": 54,
+ 		"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+ 		"poll_id": 79734
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/11/2022",
+ 		"enddate": "8/15/2022",
+ 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+ 		"approve": 43,
+ 		"disapprove": 55,
+ 		"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+ 		"poll_id": 79743
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/12/2022",
+ 		"enddate": "8/14/2022",
+ 		"pollster": "Morning Consult",
+ 		"approve": 42,
+ 		"disapprove": 56,
+ 		"url": "https://assets.morningconsult.com/wp-uploads/2022/08/16155007/2208087_crosstabs_POLITICO_RVs_v1_8-17-22_SH.pdf",
+ 		"poll_id": 79749
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/14/2022",
+ 		"enddate": "8/16/2022",
+ 		"pollster": "Rasmussen Reports/Pulse Opinion Research",
+ 		"approve": 42,
+ 		"disapprove": 57,
+ 		"url": "https://www.rasmussenreports.com/public_content/politics/biden_administration/biden_approval_index_history",
+ 		"poll_id": 79750
+ 	},
+ 	{
+ 		"president": "Joe Biden",
+ 		"startdate": "8/13/2022",
+ 		"enddate": "8/16/2022",
+ 		"pollster": "YouGov",
+ 		"approve": 44.4,
+ 		"disapprove": 51.22,
+ 		"url": "https://today.yougov.com/topics/politics/articles-reports/2022/08/17/politics-elections-economist-yougov-poll-august-13",
+ 		"poll_id": 79757
+ 	}
+ ]
