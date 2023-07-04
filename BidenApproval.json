@@ -1,0 +1,14 @@
+ [{
+    "president": "Joe Biden",
+    "subgroup": "All polls",
+    "modeldate": "6/25/2023",
+    "startdate": "1/1/2021",
+    "enddate": "1/31/2021",
+    "pollster": "SurveyMonkey",
+    "approve": 57,
+    "disapprove": 40,
+    "url": "https://www.surveymonkey.com/curiosity/biden-approval-tracker-2022/",
+    "poll_id": 80774,
+    "createddate": "9/24/2022",
+    "timestamp": "10:57:58 25 Jun 2023"
+  }]
