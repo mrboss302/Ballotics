@@ -1,7 +1,7 @@
 {
 	"MemberData": {
 		"title-info": {
-			"congress-num": 118,
+			"congress-num": "118",
 			"congress-text": "One Hundred Eighteenth Congress",
 			"session": "1",
 			"majority": "R",
@@ -20701,12 +20701,8 @@
 						"office-zip": 20515,
 						"office-zip-suffix": 3901,
 						"phone": "(202) 225-4911",
-						"elected-date": {
-							"_date": ""
-						},
-						"sworn-date": {
-							"_date": ""
-						},
+						"elected-date": "",
+						"sworn-date": "",
 						"footnote-ref": "0",
 						"footnote": "Vacancy due to the resignation of David N. Cicilline, May 31, 2023."
 					},
