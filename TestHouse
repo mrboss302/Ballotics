@@ -1,13 +1,14 @@
 {
 	"MemberData": {
 		"title-info": {
-			"congress-num": "118",
+			"congress-num": 118,
 			"congress-text": "One Hundred Eighteenth Congress",
 			"session": "1",
 			"majority": "R",
 			"minority": "D",
 			"clerk": "KEVIN F. McCUMBER",
-			"weburl": "https://clerk.house.gov"
+			"weburl": "https://clerk.house.gov",
+			"dateUpdated": "9/8/2023"
 		},
 		"members": {
 			"member": [
