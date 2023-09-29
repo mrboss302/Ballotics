@@ -380,17 +380,17 @@
         "bioguide_id": "E000295"
       },
       {
-        "member_full": "Feinstein (D-CA)",
-        "last_name": "Feinstein",
-        "first_name": "Dianne",
-        "party": "D",
+        "member_full": "",
+        "last_name": "",
+        "first_name": "",
+        "party": "",
         "state": "CA",
-        "address": "331 Hart Senate Office Building Washington DC 20510",
-        "phone": "(202) 224-3841",
-        "email": "https://www.feinstein.senate.gov/public/index.cfm/e-mail-me",
-        "website": "https://www.feinstein.senate.gov",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "website": "",
         "class": "Class I",
-        "bioguide_id": "F000062"
+        "bioguide_id": ""
       },
       {
         "member_full": "Fetterman (D-PA)",
@@ -1307,6 +1307,6 @@
         "bioguide_id": "Y000064"
       }
     ],
-    "last_updated": "2023-03-02T08:54-05:00"
+    "last_updated": "2023-09-29"
   }
 }
