@@ -1,5 +1,149 @@
 [
   {
+    "poll_id": 84244,
+    "pollster_id": 320,
+    "pollster": "Monmouth U.",
+    "sponsor_ids": "",
+    "sponsors": "",
+    "display_name": "Monmouth University",
+    "pollster_rating_id": 215,
+    "pollster_rating_name": "Monmouth University",
+    "fte_grade": "A",
+    "methodology": "Live Phone/Text-to-Web",
+    "state": "",
+    "start_date": "9/19/23",
+    "end_date": "9/24/23",
+    "sponsor_candidate_id": "",
+    "sponsor_candidate": "",
+    "sponsor_candidate_party": "",
+    "question_id": 182361,
+    "sample_size": 814,
+    "population": "a",
+    "subpopulation": "",
+    "population_full": "a",
+    "tracking": "",
+    "created_at": "9/27/23 11:52",
+    "notes": "",
+    "url": "https://www.monmouth.edu/polling-institute/documents/monmouthpoll_us_092723.pdf",
+    "source": "",
+    "internal": "FALSE",
+    "partisan": "",
+    "politician_id": 6826,
+    "politician": "Kamala Harris",
+    "yes": 36,
+    "no": 56,
+    "alternate_answers": 8,
+    "timestamp": "10/08/2023"
+  },
+  {
+    "poll_id": 84244,
+    "pollster_id": 320,
+    "pollster": "Monmouth U.",
+    "sponsor_ids": "",
+    "sponsors": "",
+    "display_name": "Monmouth University",
+    "pollster_rating_id": 215,
+    "pollster_rating_name": "Monmouth University",
+    "fte_grade": "A",
+    "methodology": "Live Phone/Text-to-Web",
+    "state": "",
+    "start_date": "9/19/23",
+    "end_date": "9/24/23",
+    "sponsor_candidate_id": "",
+    "sponsor_candidate": "",
+    "sponsor_candidate_party": "",
+    "question_id": 182362,
+    "sample_size": 737,
+    "population": "rv",
+    "subpopulation": "",
+    "population_full": "rv",
+    "tracking": "",
+    "created_at": "9/27/23 11:52",
+    "notes": "",
+    "url": "https://www.monmouth.edu/polling-institute/documents/monmouthpoll_us_092723.pdf",
+    "source": "",
+    "internal": "FALSE",
+    "partisan": "",
+    "politician_id": 6826,
+    "politician": "Kamala Harris",
+    "yes": 36,
+    "no": 57,
+    "alternate_answers": 7,
+    "timestamp": "10/08/2023"
+  },
+  {
+    "poll_id": 84217,
+    "pollster_id": 1562,
+    "pollster": "Redfield & Wilton Strategies",
+    "sponsor_ids": "",
+    "sponsors": "",
+    "display_name": "Redfield & Wilton Strategies",
+    "pollster_rating_id": 562,
+    "pollster_rating_name": "Redfield & Wilton Strategies",
+    "fte_grade": "B/C",
+    "methodology": "Online Panel",
+    "state": "",
+    "start_date": "9/17/23",
+    "end_date": "9/17/23",
+    "sponsor_candidate_id": "",
+    "sponsor_candidate": "",
+    "sponsor_candidate_party": "",
+    "question_id": 182033,
+    "sample_size": 1500,
+    "population": "rv",
+    "subpopulation": "",
+    "population_full": "rv",
+    "tracking": "",
+    "created_at": "9/22/23 12:23",
+    "notes": "",
+    "url": "https://redfieldandwiltonstrategies.com/joe-biden-administration-approval-ratings-and-hypothetical-voting-intention-17-september-2023/?utm_source=rss&utm_medium=rss&utm_campaign=joe-biden-administration-approval-ratings-and-hypothetical-voting-intention-17-september-2023",
+    "source": "",
+    "internal": "FALSE",
+    "partisan": "",
+    "politician_id": 6826,
+    "politician": "Kamala Harris",
+    "yes": 35,
+    "no": 42,
+    "alternate_answers": 23,
+    "timestamp": "10/08/2023"
+  },
+  {
+    "poll_id": 84117,
+    "pollster_id": 568,
+    "pollster": "YouGov",
+    "sponsor_ids": 133,
+    "sponsors": "CBS News",
+    "display_name": "YouGov",
+    "pollster_rating_id": 391,
+    "pollster_rating_name": "YouGov",
+    "fte_grade": "B+",
+    "methodology": "Online Panel",
+    "state": "",
+    "start_date": "9/5/23",
+    "end_date": "9/8/23",
+    "sponsor_candidate_id": "",
+    "sponsor_candidate": "",
+    "sponsor_candidate_party": "",
+    "question_id": 181293,
+    "sample_size": 2335,
+    "population": "a",
+    "subpopulation": "",
+    "population_full": "a",
+    "tracking": "",
+    "created_at": "9/11/23 09:58",
+    "notes": "",
+    "url": "https://www.cbsnews.com/news/age-president-senator-performance-concerns-outweigh-benefits-of-experience/",
+    "source": "",
+    "internal": "FALSE",
+    "partisan": "",
+    "politician_id": 6826,
+    "politician": "Kamala Harris",
+    "yes": 41,
+    "no": 59,
+    "alternate_answers": 0,
+    "timestamp": "10/08/2023"
+  },
+  {
     "poll_id": 84115,
     "pollster_id": 1562,
     "pollster": "Redfield & Wilton Strategies",
@@ -33,7 +177,43 @@
     "yes": 34,
     "no": 43,
     "alternate_answers": 23,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
+  },
+  {
+    "poll_id": 84171,
+    "pollster_id": 1193,
+    "pollster": "SurveyMonkey",
+    "sponsor_ids": 1876,
+    "sponsors": "The 19th",
+    "display_name": "SurveyMonkey",
+    "pollster_rating_id": 324,
+    "pollster_rating_name": "SurveyMonkey",
+    "fte_grade": "C",
+    "methodology": "Online Panel",
+    "state": "",
+    "start_date": "8/24/23",
+    "end_date": "8/31/23",
+    "sponsor_candidate_id": "",
+    "sponsor_candidate": "",
+    "sponsor_candidate_party": "",
+    "question_id": 181714,
+    "sample_size": 20191,
+    "population": "a",
+    "subpopulation": "",
+    "population_full": "a",
+    "tracking": "",
+    "created_at": "9/18/23 10:28",
+    "notes": "",
+    "url": "https://www.surveymonkey.com/curiosity/19th-politics-2023/",
+    "source": "",
+    "internal": "FALSE",
+    "partisan": "",
+    "politician_id": 6826,
+    "politician": "Kamala Harris",
+    "yes": 40,
+    "no": 56,
+    "alternate_answers": 4,
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83951,
@@ -69,7 +249,7 @@
     "yes": 41,
     "no": 47,
     "alternate_answers": 12,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83917,
@@ -105,7 +285,7 @@
     "yes": 44,
     "no": 54,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83392,
@@ -141,7 +321,7 @@
     "yes": 33,
     "no": 44,
     "alternate_answers": 23,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83355,
@@ -177,7 +357,7 @@
     "yes": 41,
     "no": 56,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83340,
@@ -213,7 +393,7 @@
     "yes": 42,
     "no": 57,
     "alternate_answers": 1,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83261,
@@ -249,7 +429,7 @@
     "yes": 44,
     "no": 54,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83235,
@@ -285,7 +465,7 @@
     "yes": 40,
     "no": 52,
     "alternate_answers": 7,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83235,
@@ -321,7 +501,7 @@
     "yes": 40,
     "no": 53,
     "alternate_answers": 7,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83213,
@@ -357,7 +537,7 @@
     "yes": 35,
     "no": 44,
     "alternate_answers": 14,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83121,
@@ -393,7 +573,7 @@
     "yes": 41,
     "no": 56,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83139,
@@ -429,7 +609,7 @@
     "yes": 35,
     "no": 40,
     "alternate_answers": 23,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83064,
@@ -465,7 +645,7 @@
     "yes": 42,
     "no": 55,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83029,
@@ -501,7 +681,7 @@
     "yes": 37,
     "no": 45,
     "alternate_answers": 19,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 83022,
@@ -537,7 +717,7 @@
     "yes": 39,
     "no": 51,
     "alternate_answers": 10,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82957,
@@ -573,7 +753,7 @@
     "yes": 38,
     "no": 60,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82932,
@@ -609,7 +789,7 @@
     "yes": 33,
     "no": 48,
     "alternate_answers": 19,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82872,
@@ -645,7 +825,7 @@
     "yes": 37,
     "no": 52,
     "alternate_answers": 11,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82872,
@@ -681,7 +861,7 @@
     "yes": 37,
     "no": 53,
     "alternate_answers": 10,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82849,
@@ -717,7 +897,7 @@
     "yes": 36,
     "no": 44,
     "alternate_answers": 21,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82782,
@@ -753,7 +933,7 @@
     "yes": 39,
     "no": 59,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82786,
@@ -789,7 +969,7 @@
     "yes": 40,
     "no": 46,
     "alternate_answers": 14,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82786,
@@ -825,7 +1005,7 @@
     "yes": 43,
     "no": 49,
     "alternate_answers": 8,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82727,
@@ -861,7 +1041,7 @@
     "yes": 41,
     "no": 44,
     "alternate_answers": 15,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82727,
@@ -897,7 +1077,7 @@
     "yes": 41,
     "no": 49,
     "alternate_answers": 9,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82701,
@@ -933,7 +1113,7 @@
     "yes": 39,
     "no": 47,
     "alternate_answers": 15,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82672,
@@ -969,7 +1149,7 @@
     "yes": 43,
     "no": 57,
     "alternate_answers": 0,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82682,
@@ -1005,7 +1185,7 @@
     "yes": 42,
     "no": 56,
     "alternate_answers": 1,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82687,
@@ -1041,7 +1221,7 @@
     "yes": 43,
     "no": 54,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82630,
@@ -1077,7 +1257,7 @@
     "yes": 41,
     "no": 56,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82557,
@@ -1113,7 +1293,7 @@
     "yes": 35,
     "no": 44,
     "alternate_answers": 21,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82549,
@@ -1149,7 +1329,7 @@
     "yes": 44,
     "no": 53,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82512,
@@ -1185,7 +1365,7 @@
     "yes": 42,
     "no": 46.3,
     "alternate_answers": 11.7,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82450,
@@ -1221,7 +1401,7 @@
     "yes": 37,
     "no": 43,
     "alternate_answers": 20,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82419,
@@ -1257,7 +1437,7 @@
     "yes": 36,
     "no": 53,
     "alternate_answers": 12,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82419,
@@ -1293,7 +1473,7 @@
     "yes": 37,
     "no": 53,
     "alternate_answers": 10,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82502,
@@ -1329,7 +1509,7 @@
     "yes": 43,
     "no": 54,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82418,
@@ -1365,7 +1545,7 @@
     "yes": 42,
     "no": 45.5,
     "alternate_answers": 12.5,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82401,
@@ -1401,7 +1581,7 @@
     "yes": 42,
     "no": 56,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82350,
@@ -1437,7 +1617,7 @@
     "yes": 43,
     "no": 53,
     "alternate_answers": 4,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82237,
@@ -1473,7 +1653,7 @@
     "yes": 38,
     "no": 40,
     "alternate_answers": 22,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82260,
@@ -1509,7 +1689,7 @@
     "yes": 41,
     "no": 56,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82217,
@@ -1545,7 +1725,7 @@
     "yes": 42,
     "no": 46.6,
     "alternate_answers": 11.4,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82249,
@@ -1581,7 +1761,7 @@
     "yes": 42,
     "no": 55,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82168,
@@ -1617,7 +1797,7 @@
     "yes": 42,
     "no": 55,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82095,
@@ -1653,7 +1833,7 @@
     "yes": 39,
     "no": 57,
     "alternate_answers": 4,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82105,
@@ -1689,7 +1869,7 @@
     "yes": 38,
     "no": 41,
     "alternate_answers": 21,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82066,
@@ -1725,7 +1905,7 @@
     "yes": 40,
     "no": 57,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82017,
@@ -1761,7 +1941,7 @@
     "yes": 41.7,
     "no": 46.3,
     "alternate_answers": 12,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 82012,
@@ -1797,7 +1977,7 @@
     "yes": 35,
     "no": 42,
     "alternate_answers": 23,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 81984,
@@ -1833,7 +2013,7 @@
     "yes": 41,
     "no": 56,
     "alternate_answers": 4,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 81963,
@@ -1869,7 +2049,7 @@
     "yes": 43.1,
     "no": 45.5,
     "alternate_answers": 11.4,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 81879,
@@ -1905,7 +2085,7 @@
     "yes": 41.3,
     "no": 45.4,
     "alternate_answers": 13.3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 81772,
@@ -1941,7 +2121,7 @@
     "yes": 38,
     "no": 44,
     "alternate_answers": 18,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 81765,
@@ -1977,7 +2157,7 @@
     "yes": 42.2,
     "no": 45.4,
     "alternate_answers": 12.4,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 81767,
@@ -2013,7 +2193,7 @@
     "yes": 43,
     "no": 55,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 81688,
@@ -2049,7 +2229,7 @@
     "yes": 37,
     "no": 43,
     "alternate_answers": 20,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 81663,
@@ -2085,7 +2265,7 @@
     "yes": 41,
     "no": 57,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 81527,
@@ -2121,7 +2301,7 @@
     "yes": 37,
     "no": 45,
     "alternate_answers": 18,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 81515,
@@ -2157,7 +2337,7 @@
     "yes": 41,
     "no": 57,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 81067,
@@ -2193,7 +2373,7 @@
     "yes": 37,
     "no": 43,
     "alternate_answers": 21,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 80944,
@@ -2229,7 +2409,7 @@
     "yes": 35,
     "no": 44,
     "alternate_answers": 22,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 80974,
@@ -2265,7 +2445,7 @@
     "yes": 39,
     "no": 59,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 80811,
@@ -2301,7 +2481,7 @@
     "yes": 41,
     "no": 57,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 80668,
@@ -2337,7 +2517,7 @@
     "yes": 35,
     "no": 40,
     "alternate_answers": 25,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79977,
@@ -2373,7 +2553,7 @@
     "yes": 40,
     "no": 58,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79924,
@@ -2409,7 +2589,7 @@
     "yes": 34,
     "no": 45,
     "alternate_answers": 22,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79794,
@@ -2445,7 +2625,7 @@
     "yes": 35,
     "no": 43,
     "alternate_answers": 22,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79674,
@@ -2481,7 +2661,7 @@
     "yes": 39,
     "no": 59,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79820,
@@ -2517,7 +2697,7 @@
     "yes": 43.8,
     "no": 51.7,
     "alternate_answers": 4.5,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79820,
@@ -2553,7 +2733,7 @@
     "yes": 39.6,
     "no": 51.4,
     "alternate_answers": 9,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79593,
@@ -2589,7 +2769,7 @@
     "yes": 33,
     "no": 40,
     "alternate_answers": 26,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79510,
@@ -2625,7 +2805,7 @@
     "yes": 40,
     "no": 58,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79390,
@@ -2661,7 +2841,7 @@
     "yes": 39,
     "no": 58,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79381,
@@ -2697,7 +2877,7 @@
     "yes": 39,
     "no": 59,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79385,
@@ -2733,7 +2913,7 @@
     "yes": 34,
     "no": 43,
     "alternate_answers": 24,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79299,
@@ -2769,7 +2949,7 @@
     "yes": 40,
     "no": 58,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79185,
@@ -2805,7 +2985,7 @@
     "yes": 32,
     "no": 39,
     "alternate_answers": 29,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79164,
@@ -2841,7 +3021,7 @@
     "yes": 39,
     "no": 59,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79079,
@@ -2877,7 +3057,7 @@
     "yes": 37,
     "no": 41,
     "alternate_answers": 21,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 79074,
@@ -2913,7 +3093,7 @@
     "yes": 40,
     "no": 58,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78993,
@@ -2949,7 +3129,7 @@
     "yes": 37,
     "no": 45,
     "alternate_answers": 18,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78970,
@@ -2985,7 +3165,7 @@
     "yes": 41,
     "no": 57,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78899,
@@ -3021,7 +3201,7 @@
     "yes": 36,
     "no": 43,
     "alternate_answers": 21,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78868,
@@ -3057,7 +3237,7 @@
     "yes": 40,
     "no": 58,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78870,
@@ -3093,7 +3273,7 @@
     "yes": 41,
     "no": 53,
     "alternate_answers": 5,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78798,
@@ -3129,7 +3309,7 @@
     "yes": 28.5,
     "no": 62.6,
     "alternate_answers": 8.9,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78797,
@@ -3165,7 +3345,7 @@
     "yes": 36,
     "no": 46,
     "alternate_answers": 19,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78754,
@@ -3201,7 +3381,7 @@
     "yes": 39,
     "no": 48,
     "alternate_answers": 14,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78754,
@@ -3237,7 +3417,7 @@
     "yes": 41,
     "no": 49,
     "alternate_answers": 10,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78726,
@@ -3273,7 +3453,7 @@
     "yes": 37,
     "no": 43,
     "alternate_answers": 20,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78664,
@@ -3309,7 +3489,7 @@
     "yes": 37,
     "no": 43,
     "alternate_answers": 21,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78665,
@@ -3345,7 +3525,7 @@
     "yes": 42,
     "no": 56,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78680,
@@ -3381,7 +3561,7 @@
     "yes": 40.3,
     "no": 51.9,
     "alternate_answers": 7.8,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78561,
@@ -3417,7 +3597,7 @@
     "yes": 34,
     "no": 43,
     "alternate_answers": 23,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78545,
@@ -3453,7 +3633,7 @@
     "yes": 44,
     "no": 54,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78490,
@@ -3489,7 +3669,7 @@
     "yes": 37,
     "no": 42,
     "alternate_answers": 22,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78493,
@@ -3525,7 +3705,7 @@
     "yes": 40,
     "no": 56,
     "alternate_answers": 4,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78425,
@@ -3561,7 +3741,7 @@
     "yes": 36,
     "no": 43,
     "alternate_answers": 21,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78405,
@@ -3597,7 +3777,7 @@
     "yes": 40,
     "no": 57,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78360,
@@ -3633,7 +3813,7 @@
     "yes": 43.3,
     "no": 48.5,
     "alternate_answers": 8.2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78361,
@@ -3669,7 +3849,7 @@
     "yes": 42,
     "no": 56,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78322,
@@ -3705,7 +3885,7 @@
     "yes": 43,
     "no": 54,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78281,
@@ -3741,7 +3921,7 @@
     "yes": 44,
     "no": 56,
     "alternate_answers": 0,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78272,
@@ -3777,7 +3957,7 @@
     "yes": 35,
     "no": 43,
     "alternate_answers": 23,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78170,
@@ -3813,7 +3993,7 @@
     "yes": 32.3,
     "no": 47.4,
     "alternate_answers": 20.3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78176,
@@ -3849,7 +4029,7 @@
     "yes": 35,
     "no": 53,
     "alternate_answers": 13,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78125,
@@ -3885,7 +4065,7 @@
     "yes": 37,
     "no": 41,
     "alternate_answers": 23,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78114,
@@ -3921,7 +4101,7 @@
     "yes": 44,
     "no": 54,
     "alternate_answers": 1,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78070,
@@ -3957,7 +4137,7 @@
     "yes": 43,
     "no": 50,
     "alternate_answers": 7,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 78037,
@@ -3993,7 +4173,7 @@
     "yes": 35,
     "no": 42,
     "alternate_answers": 24,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 77985,
@@ -4029,7 +4209,7 @@
     "yes": 41,
     "no": 57,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 77827,
@@ -4065,7 +4245,7 @@
     "yes": 42,
     "no": 55,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 77890,
@@ -4101,7 +4281,7 @@
     "yes": 40,
     "no": 43,
     "alternate_answers": 0,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 77770,
@@ -4137,7 +4317,7 @@
     "yes": 40,
     "no": 53,
     "alternate_answers": 7,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 77744,
@@ -4173,7 +4353,7 @@
     "yes": 34,
     "no": 44,
     "alternate_answers": 23,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 77481,
@@ -4209,7 +4389,7 @@
     "yes": 43,
     "no": 55,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 77474,
@@ -4245,7 +4425,7 @@
     "yes": 27.8,
     "no": 51.2,
     "alternate_answers": 21,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 77199,
@@ -4281,7 +4461,7 @@
     "yes": 37,
     "no": 42,
     "alternate_answers": 21,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 77037,
@@ -4317,7 +4497,7 @@
     "yes": 42,
     "no": 56,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 77142,
@@ -4353,7 +4533,7 @@
     "yes": 39,
     "no": 45,
     "alternate_answers": 16,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 77160,
@@ -4389,7 +4569,7 @@
     "yes": 47.3,
     "no": 44.9,
     "alternate_answers": 7.8,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 76909,
@@ -4425,7 +4605,7 @@
     "yes": 45,
     "no": 53,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 76922,
@@ -4461,7 +4641,7 @@
     "yes": 37,
     "no": 38,
     "alternate_answers": 25,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 76755,
@@ -4497,7 +4677,7 @@
     "yes": 43,
     "no": 55,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 76629,
@@ -4533,7 +4713,7 @@
     "yes": 39,
     "no": 38,
     "alternate_answers": 23,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 76604,
@@ -4569,7 +4749,7 @@
     "yes": 43,
     "no": 54,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 76470,
@@ -4605,7 +4785,7 @@
     "yes": 42,
     "no": 41,
     "alternate_answers": 16,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 76445,
@@ -4641,7 +4821,7 @@
     "yes": 39,
     "no": 36,
     "alternate_answers": 26,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 76409,
@@ -4677,7 +4857,7 @@
     "yes": 49,
     "no": 49,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 76120,
@@ -4713,7 +4893,7 @@
     "yes": 45,
     "no": 52,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75985,
@@ -4749,7 +4929,7 @@
     "yes": 52,
     "no": 48,
     "alternate_answers": 0,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75985,
@@ -4785,7 +4965,7 @@
     "yes": 50,
     "no": 50,
     "alternate_answers": 1,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75949,
@@ -4821,7 +5001,7 @@
     "yes": 41,
     "no": 34,
     "alternate_answers": 26,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75790,
@@ -4857,7 +5037,7 @@
     "yes": 44,
     "no": 53,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75618,
@@ -4893,7 +5073,7 @@
     "yes": 39,
     "no": 45,
     "alternate_answers": 17,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75618,
@@ -4929,7 +5109,7 @@
     "yes": 42,
     "no": 47,
     "alternate_answers": 11,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75560,
@@ -4965,7 +5145,7 @@
     "yes": 49,
     "no": 49,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 76478,
@@ -5001,7 +5181,7 @@
     "yes": 46,
     "no": 42,
     "alternate_answers": 12,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75489,
@@ -5037,7 +5217,7 @@
     "yes": 47,
     "no": 43,
     "alternate_answers": 10,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75434,
@@ -5073,7 +5253,7 @@
     "yes": 49,
     "no": 50,
     "alternate_answers": 2,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75287,
@@ -5109,7 +5289,7 @@
     "yes": 49,
     "no": 48,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75278,
@@ -5145,7 +5325,7 @@
     "yes": 55,
     "no": 40,
     "alternate_answers": 5,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75034,
@@ -5181,7 +5361,7 @@
     "yes": 51,
     "no": 47,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 74983,
@@ -5217,7 +5397,7 @@
     "yes": 50,
     "no": 47,
     "alternate_answers": 3,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 74976,
@@ -5253,7 +5433,7 @@
     "yes": 44,
     "no": 43,
     "alternate_answers": 13,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 74895,
@@ -5289,7 +5469,7 @@
     "yes": 45,
     "no": 40,
     "alternate_answers": 15,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 75277,
@@ -5325,7 +5505,7 @@
     "yes": 55,
     "no": 40,
     "alternate_answers": 5,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 74850,
@@ -5361,7 +5541,7 @@
     "yes": 47,
     "no": 39,
     "alternate_answers": 14,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 74805,
@@ -5397,7 +5577,7 @@
     "yes": 49,
     "no": 36,
     "alternate_answers": 14,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 74784,
@@ -5433,7 +5613,7 @@
     "yes": 47,
     "no": 39,
     "alternate_answers": 14,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 74729,
@@ -5469,7 +5649,7 @@
     "yes": 43,
     "no": 37,
     "alternate_answers": 19,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 74729,
@@ -5505,7 +5685,7 @@
     "yes": 47,
     "no": 39,
     "alternate_answers": 13,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 74726,
@@ -5541,7 +5721,7 @@
     "yes": 53,
     "no": 38,
     "alternate_answers": 10,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 74712,
@@ -5577,7 +5757,7 @@
     "yes": 47,
     "no": 39,
     "alternate_answers": 15,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   },
   {
     "poll_id": 74408,
@@ -5613,6 +5793,6 @@
     "yes": 55.2,
     "no": 31.7,
     "alternate_answers": 0,
-    "timestamp": "9/10/2023"
+    "timestamp": "10/08/2023"
   }
 ]
