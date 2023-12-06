@@ -7,9 +7,7 @@
       "majority": "R",
       "minority": "D",
       "clerk": "KEVIN F. McCUMBER",
-      "weburl": "https://clerk.house.gov",
-      "dateUpdated": "9/30/2023"
-
+      "weburl": "https://clerk.house.gov"
     },
     "members": {
       "member": [
@@ -4398,17 +4396,17 @@
         {
           "statedistrict": "FL18",
           "member-info": {
-            "namelist": "Franklin, C.",
+            "namelist": "Franklin, Scott",
             "bioguideID": "F000472",
             "lastname": "Franklin",
-            "firstname": "C.",
-            "middlename": "Scott",
-            "sort-name": "FRANKLIN,C.",
+            "firstname": "Scott",
+            "middlename": "",
+            "sort-name": "FRANKLIN,SCOTT",
             "suffix": "",
             "courtesy": "Mr.",
             "prior-congress": 117,
-            "official-name": "C. Scott Franklin",
-            "formal-name": "Mr. C. Scott Franklin of Florida",
+            "official-name": "Scott Franklin",
+            "formal-name": "Mr. Scott Franklin of Florida",
             "party": "R",
             "caucus": "R",
             "state": {
@@ -7444,17 +7442,7 @@
             "sworn-date": "January  7, 2023"
           },
           "committee-assignments": {
-            "committee": [
-              "",
-              "",
-              ""
-            ],
-            "subcommittee": [
-              "",
-              "",
-              "",
-              ""
-            ]
+            "committee": ""
           }
         },
         {
@@ -8787,7 +8775,10 @@
             "sworn-date": "January  7, 2023"
           },
           "committee-assignments": {
-            "committee": "",
+            "committee": [
+              "",
+              ""
+            ],
             "subcommittee": [
               "",
               ""
@@ -11481,31 +11472,47 @@
         {
           "statedistrict": "NY03",
           "member-info": {
-            "namelist": "Santos, George",
-            "bioguideID": "S001222",
-            "lastname": "Santos",
-            "firstname": "George",
+            "namelist": "",
+            "bioguideID": "",
+            "lastname": "",
+            "firstname": "",
             "middlename": "",
-            "sort-name": "SANTOS,GEORGE",
+            "sort-name": "",
             "suffix": "",
-            "courtesy": "Mr.",
+            "courtesy": "",
             "prior-congress": 0,
-            "official-name": "George Santos",
-            "formal-name": "Mr. Santos",
-            "party": "R",
-            "caucus": "R",
+            "official-name": "",
+            "formal-name": "",
+            "party": "",
+            "caucus": "",
             "state": {
               "state-fullname": "New York"
             },
             "district": "3rd",
-            "townname": "New York City",
+            "townname": "",
             "office-building": "LHOB",
             "office-room": 1117,
             "office-zip": 20515,
             "office-zip-suffix": 3203,
             "phone": "(202) 225-3335",
-            "elected-date": "November  8, 2022",
-            "sworn-date": "January  7, 2023"
+            "elected-date": "",
+            "sworn-date": "",
+            "footnote-ref": 0,
+            "footnote": "Vacancy due to the expulsion of George Santos, pursuant to H. Res. 878, December 1, 2023."
+          },
+          "predecessor-info": {
+            "pred-lastname": "Santos",
+            "pred-firstname": "George",
+            "pred-middlename": "",
+            "pred-official-name": "George Santos",
+            "pred-formal-name": "Mr. Santos",
+            "pred-title": "",
+            "pred-memindex": "S001222",
+            "pred-sort-name": "SANTOS,GEORGE",
+            "pred-party": "R",
+            "pred-vacate-date": "December  1, 2023",
+            "pred-footnote-ref": 0,
+            "pred-footnote": "Vacancy due to the expulsion of George Santos, pursuant to H. Res. 878, December 1, 2023."
           },
           "committee-assignments": {
             "committee": ""
@@ -12542,6 +12549,7 @@
               ""
             ],
             "subcommittee": [
+              "",
               "",
               "",
               "",
@@ -14265,33 +14273,33 @@
         {
           "statedistrict": "RI01",
           "member-info": {
-            "namelist": "",
-            "bioguideID": "",
-            "lastname": "",
-            "firstname": "",
+            "namelist": "Amo, Gabe",
+            "bioguideID": "A000380",
+            "lastname": "Amo",
+            "firstname": "Gabe",
             "middlename": "",
-            "sort-name": "",
+            "sort-name": "AMO,GABE",
             "suffix": "",
-            "courtesy": "",
+            "courtesy": "Mr.",
             "prior-congress": 0,
-            "official-name": "",
-            "formal-name": "",
-            "party": "",
-            "caucus": "",
+            "official-name": "Gabe Amo",
+            "formal-name": "Mr. Amo",
+            "party": "D",
+            "caucus": "D",
             "state": {
               "state-fullname": "Rhode Island"
             },
             "district": "1st",
-            "townname": "",
+            "townname": "Providence",
             "office-building": "RHOB",
             "office-room": 2233,
             "office-zip": 20515,
             "office-zip-suffix": 3901,
             "phone": "(202) 225-4911",
-            "elected-date": "",
-            "sworn-date": "",
+            "elected-date": "November  7, 2023",
+            "sworn-date": "November 13, 2023",
             "footnote-ref": 0,
-            "footnote": "Vacancy due to the resignation of David N. Cicilline, May 31, 2023."
+            "footnote": "Elected November 7, 2023, to fill the vacancy due to the resignation of David N. Cicilline, May 31, 2023."
           },
           "predecessor-info": {
             "pred-lastname": "Cicilline",
@@ -16677,33 +16685,33 @@
         {
           "statedistrict": "UT02",
           "member-info": {
-            "namelist": "",
-            "bioguideID": "",
-            "lastname": "",
-            "firstname": "",
+            "namelist": "Maloy, Celeste",
+            "bioguideID": "M001228",
+            "lastname": "Maloy",
+            "firstname": "Celeste",
             "middlename": "",
-            "sort-name": "",
+            "sort-name": "MALOY,CELESTE",
             "suffix": "",
-            "courtesy": "",
+            "courtesy": "Ms.",
             "prior-congress": 0,
-            "official-name": "",
-            "formal-name": "",
-            "party": "",
-            "caucus": "",
+            "official-name": "Celeste Maloy",
+            "formal-name": "Ms. Maloy",
+            "party": "R",
+            "caucus": "R",
             "state": {
               "state-fullname": "Utah"
             },
             "district": "2nd",
-            "townname": "",
+            "townname": "Cedar City",
             "office-building": "CHOB",
             "office-room": 166,
             "office-zip": 20515,
             "office-zip-suffix": 4402,
             "phone": "(202) 225-9730",
-            "elected-date": "",
-            "sworn-date": "",
+            "elected-date": "November 21, 2023",
+            "sworn-date": "November 28, 2023",
             "footnote-ref": 0,
-            "footnote": "Vacancy due to the resignation of Chris Stewart, September 15, 2023."
+            "footnote": "Elected November 21, 2023, to fill the vacancy due to the resignation of Chris Stewart, September 15, 2023."
           },
           "predecessor-info": {
             "pred-lastname": "Stewart",
