@@ -1,0 +1,3156 @@
+Year,State,PartyColor,ElectoralVote,Winner
+2024,Alabama,Republican,9,Donald J. Trump
+2024,Alaska,Republican,3,Donald J. Trump
+2024,Arizona,Republican,11,Donald J. Trump
+2024,Arkansas,Republican,6,Donald J. Trump
+2024,California,Democrat,55,Kamala D. Harris
+2024,Colorado,Democrat,9,Kamala D. Harris
+2024,Connecticut,Democrat,7,Kamala D. Harris
+2024,Delaware,Democrat,3,Kamala D. Harris
+2024,Florida,Republican,29,Donald J. Trump
+2024,Georgia,Republican,16,Donald J. Trump
+2024,Hawaii,Democrat,4,Kamala D. Harris
+2024,Idaho,Republican,4,Donald J. Trump
+2024,Illinois,Democrat,20,Kamala D. Harris
+2024,Indiana,Republican,11,Donald J. Trump
+2024,Iowa,Republican,6,Donald J. Trump
+2024,Kansas,Republican,6,Donald J. Trump
+2024,Kentucky,Republican,8,Donald J. Trump
+2024,Louisiana,Republican,8,Donald J. Trump
+2024,Maine,Democrat,2,Kamala D. Harris
+2024,Maine CD-1,Democrat-NE,1,Kamala D. Harris
+2024,Maine CD-2,Republican,1,Donald J. Trump
+2024,Maryland,Democrat,10,Kamala D. Harris
+2024,Massachusetts,Democrat,11,Kamala D. Harris
+2024,Michigan,Republican,16,Donald J. Trump
+2024,Minnesota,Democrat,10,Kamala D. Harris
+2024,Mississippi,Republican,6,Donald J. Trump
+2024,Missouri,Republican,10,Donald J. Trump
+2024,Montana,Republican,3,Donald J. Trump
+2024,Nebraska,Republican-2,2,Donald J. Trump
+2024,Nebraska CD-1,Republican-2,1,Donald J. Trump
+2024,Nebraska CD-2,Democrat,1,Kamala D. Harris
+2024,Nebraska CD-3,Republican-2,1,Donald J. Trump
+2024,Nevada,Republican,6,Donald J. Trump
+2024,New Hampshire,Democrat,4,Kamala D. Harris
+2024,New Jersey,Democrat,14,Kamala D. Harris
+2024,New Mexico,Democrat,5,Kamala D. Harris
+2024,New York,Democrat,29,Kamala D. Harris
+2024,North Carolina,Republican,15,Donald J. Trump
+2024,North Dakota,Republican,3,Donald J. Trump
+2024,Ohio,Republican,18,Donald J. Trump
+2024,Oklahoma,Republican,7,Donald J. Trump
+2024,Oregon,Democrat,7,Kamala D. Harris
+2024,Pennsylvania,Republican,20,Donald J. Trump
+2024,Rhode Island,Democrat,4,Kamala D. Harris
+2024,South Carolina,Republican,9,Donald J. Trump
+2024,South Dakota,Republican,3,Donald J. Trump
+2024,Tennessee,Republican,11,Donald J. Trump
+2024,Texas,Republican,38,Donald J. Trump
+2024,Utah,Republican,6,Donald J. Trump
+2024,Vermont,Democrat,3,Kamala D. Harris
+2024,Virginia,Democrat,13,Kamala D. Harris
+2024,Washington,Democrat,12,Kamala D. Harris
+2024,West Virginia,Republican,5,Donald J. Trump
+2024,Wisconsin,Republican,10,Donald J. Trump
+2024,Wyoming,Republican,3,Donald J. Trump
+2024,"Washington, D.C.",Democrat,3,Kamala D. Harris
+2020,Alabama,Republican,9,Donald J. Trump
+2020,Alaska,Republican,3,Donald J. Trump
+2020,Arizona,Democrat,11,Joseph R. Biden
+2020,Arkansas,Republican,6,Donald J. Trump
+2020,California,Democrat,55,Joseph R. Biden
+2020,Colorado,Democrat,9,Joseph R. Biden
+2020,Connecticut,Democrat,7,Joseph R. Biden
+2020,Delaware,Democrat,3,Joseph R. Biden
+2020,Florida,Republican,29,Donald J. Trump
+2020,Georgia,Democrat,16,Joseph R. Biden
+2020,Hawaii,Democrat,4,Joseph R. Biden
+2020,Idaho,Republican,4,Donald J. Trump
+2020,Illinois,Democrat,20,Joseph R. Biden
+2020,Indiana,Republican,11,Donald J. Trump
+2020,Iowa,Republican,6,Donald J. Trump
+2020,Kansas,Republican,6,Donald J. Trump
+2020,Kentucky,Republican,8,Donald J. Trump
+2020,Louisiana,Republican,8,Donald J. Trump
+2020,Maine,Democrat,2,Joseph R. Biden
+2020,Maine CD-1,Democrat-NE,1,Joseph R. Biden
+2020,Maine CD-2,Republican,1,Donald J. Trump
+2020,Maryland,Democrat,10,Joseph R. Biden
+2020,Massachusetts,Democrat,11,Joseph R. Biden
+2020,Michigan,Democrat,16,Joseph R. Biden
+2020,Minnesota,Democrat,10,Joseph R. Biden
+2020,Mississippi,Republican,6,Donald J. Trump
+2020,Missouri,Republican,10,Donald J. Trump
+2020,Montana,Republican,3,Donald J. Trump
+2020,Nebraska,Republican-2,2,Donald J. Trump
+2020,Nebraska CD-1,Republican-2,1,Donald J. Trump
+2020,Nebraska CD-2,Democrat,1,Joseph R. Biden
+2020,Nebraska CD-3,Republican-2,1,Donald J. Trump
+2020,Nevada,Democrat,6,Joseph R. Biden
+2020,New Hampshire,Democrat,4,Joseph R. Biden
+2020,New Jersey,Democrat,14,Joseph R. Biden
+2020,New Mexico,Democrat,5,Joseph R. Biden
+2020,New York,Democrat,29,Joseph R. Biden
+2020,North Carolina,Republican,15,Donald J. Trump
+2020,North Dakota,Republican,3,Donald J. Trump
+2020,Ohio,Republican,18,Donald J. Trump
+2020,Oklahoma,Republican,7,Donald J. Trump
+2020,Oregon,Democrat,7,Joseph R. Biden
+2020,Pennsylvania,Democrat,20,Joseph R. Biden
+2020,Rhode Island,Democrat,4,Joseph R. Biden
+2020,South Carolina,Republican,9,Donald J. Trump
+2020,South Dakota,Republican,3,Donald J. Trump
+2020,Tennessee,Republican,11,Donald J. Trump
+2020,Texas,Republican,38,Donald J. Trump
+2020,Utah,Republican,6,Donald J. Trump
+2020,Vermont,Democrat,3,Joseph R. Biden
+2020,Virginia,Democrat,13,Joseph R. Biden
+2020,Washington,Democrat,12,Joseph R. Biden
+2020,West Virginia,Republican,5,Donald J. Trump
+2020,Wisconsin,Democrat,10,Joseph R. Biden
+2020,Wyoming,Republican,3,Donald J. Trump
+2020,"Washington, D.C.",Democrat,3,Joseph R. Biden
+2016,Alabama,Republican,9,Donald J. Trump
+2016,Alaska,Republican,3,Donald J. Trump
+2016,Arizona,Republican,11,Donald J. Trump
+2016,Arkansas,Republican,6,Donald J. Trump
+2016,California,Democrat,55,Hillary R. Clinton
+2016,Colorado,Democrat,9,Hillary R. Clinton
+2016,Connecticut,Democrat,7,Hillary R. Clinton
+2016,Delaware,Democrat,3,Hillary R. Clinton
+2016,Florida,Republican,29,Donald J. Trump
+2016,Georgia,Republican,16,Donald J. Trump
+2016,Hawaii,Democrat,4,Hillary R. Clinton
+2016,Idaho,Republican,4,Donald J. Trump
+2016,Illinois,Democrat,20,Hillary R. Clinton
+2016,Indiana,Republican,11,Donald J. Trump
+2016,Iowa,Republican,6,Donald J. Trump
+2016,Kansas,Republican,6,Donald J. Trump
+2016,Kentucky,Republican,8,Donald J. Trump
+2016,Louisiana,Republican,8,Donald J. Trump
+2016,Maine,Democrat,2,Hillary R. Clinton
+2016,Maine CD-1,Democrat-NE,1,Hillary R. Clinton
+2016,Maine CD-2,Republican-2,1,Donald J. Trump
+2016,Maryland,Democrat,10,Hillary R. Clinton
+2016,Massachusetts,Democrat,11,Hillary R. Clinton
+2016,Michigan,Republican,16,Donald J. Trump
+2016,Minnesota,Democrat,10,Hillary R. Clinton
+2016,Mississippi,Republican,6,Donald J. Trump
+2016,Missouri,Republican,10,Donald J. Trump
+2016,Montana,Republican,3,Donald J. Trump
+2016,Nebraska,Republican,2,Donald J. Trump
+2016,Nebraska CD-1,Republican,1,Donald J. Trump
+2016,Nebraska CD-2,Republican,1,Donald J. Trump
+2016,Nebraska CD-3,Republican,1,Donald J. Trump
+2016,Nevada,Democrat,6,Hillary R. Clinton
+2016,New Hampshire,Democrat,4,Hillary R. Clinton
+2016,New Jersey,Democrat,14,Hillary R. Clinton
+2016,New Mexico,Democrat,5,Hillary R. Clinton
+2016,New York,Democrat,29,Hillary R. Clinton
+2016,North Carolina,Republican,15,Donald J. Trump
+2016,North Dakota,Republican,3,Donald J. Trump
+2016,Ohio,Republican,18,Donald J. Trump
+2016,Oklahoma,Republican,7,Donald J. Trump
+2016,Oregon,Democrat,7,Hillary R. Clinton
+2016,Pennsylvania,Republican,20,Donald J. Trump
+2016,Rhode Island,Democrat,4,Hillary R. Clinton
+2016,South Carolina,Republican,9,Donald J. Trump
+2016,South Dakota,Republican,3,Donald J. Trump
+2016,Tennessee,Republican,11,Donald J. Trump
+2016,Texas,Republican,36,Donald J. Trump
+2016,Utah,Republican,6,Donald J. Trump
+2016,Vermont,Democrat,3,Hillary R. Clinton
+2016,Virginia,Democrat,13,Hillary R. Clinton
+2016,Washington,Democrat,12,Hillary R. Clinton
+2016,West Virginia,Republican,5,Donald J. Trump
+2016,Wisconsin,Republican,10,Donald J. Trump
+2016,Wyoming,Republican,3,Donald J. Trump
+2016,"Washington, D.C.",Democrat,3,Hillary R. Clinton
+2012,Alabama,Republican,9,W. Mitt Romney
+2012,Alaska,Republican,3,W. Mitt Romney
+2012,Arizona,Republican,11,W. Mitt Romney
+2012,Arkansas,Republican,6,W. Mitt Romney
+2012,California,Democrat,55,Barack H. Obama
+2012,Colorado,Democrat,9,Barack H. Obama
+2012,Connecticut,Democrat,7,Barack H. Obama
+2012,Delaware,Democrat,3,Barack H. Obama
+2012,Florida,Democrat,29,Barack H. Obama
+2012,Georgia,Republican,16,W. Mitt Romney
+2012,Hawaii,Democrat,4,Barack H. Obama
+2012,Idaho,Republican,4,W. Mitt Romney
+2012,Illinois,Democrat,20,Barack H. Obama
+2012,Indiana,Republican,11,W. Mitt Romney
+2012,Iowa,Democrat,6,Barack H. Obama
+2012,Kansas,Republican,6,W. Mitt Romney
+2012,Kentucky,Republican,8,W. Mitt Romney
+2012,Louisiana,Republican,8,W. Mitt Romney
+2012,Maine,Democrat,2,Barack H. Obama
+2012,Maine CD-1,Democrat,1,Barack H. Obama
+2012,Maine CD-2,Democrat,1,Barack H. Obama
+2012,Maryland,Democrat,10,Barack H. Obama
+2012,Massachusetts,Democrat,11,Barack H. Obama
+2012,Michigan,Democrat,16,Barack H. Obama
+2012,Minnesota,Democrat,10,Barack H. Obama
+2012,Mississippi,Republican,6,W. Mitt Romney
+2012,Missouri,Republican,10,W. Mitt Romney
+2012,Montana,Republican,3,W. Mitt Romney
+2012,Nebraska,Republican,2,W. Mitt Romney
+2012,Nebraska CD-1,Republican,1,W. Mitt Romney
+2012,Nebraska CD-2,Republican,1,W. Mitt Romney
+2012,Nebraska CD-3,Republican,1,W. Mitt Romney
+2012,Nevada,Democrat,6,Barack H. Obama
+2012,New Hampshire,Democrat,4,Barack H. Obama
+2012,New Jersey,Democrat,14,Barack H. Obama
+2012,New Mexico,Democrat,5,Barack H. Obama
+2012,New York,Democrat,29,Barack H. Obama
+2012,North Carolina,Republican,15,W. Mitt Romney
+2012,North Dakota,Republican,3,W. Mitt Romney
+2012,Ohio,Democrat,18,Barack H. Obama
+2012,Oklahoma,Republican,7,W. Mitt Romney
+2012,Oregon,Democrat,7,Barack H. Obama
+2012,Pennsylvania,Democrat,20,Barack H. Obama
+2012,Rhode Island,Democrat,4,Barack H. Obama
+2012,South Carolina,Republican,9,W. Mitt Romney
+2012,South Dakota,Republican,3,W. Mitt Romney
+2012,Tennessee,Republican,11,W. Mitt Romney
+2012,Texas,Republican,38,W. Mitt Romney
+2012,Utah,Republican,6,W. Mitt Romney
+2012,Vermont,Democrat,3,Barack H. Obama
+2012,Virginia,Democrat,13,Barack H. Obama
+2012,Washington,Democrat,12,Barack H. Obama
+2012,West Virginia,Republican,5,W. Mitt Romney
+2012,Wisconsin,Democrat,10,Barack H. Obama
+2012,Wyoming,Republican,3,W. Mitt Romney
+2012,"Washington, D.C.",Democrat,3,Barack H. Obama
+2008,Alabama,Republican,9,John S. McCain
+2008,Alaska,Republican,3,John S. McCain
+2008,Arizona,Republican,10,John S. McCain
+2008,Arkansas,Republican,6,John S. McCain
+2008,California,Democrat,55,Barack H. Obama
+2008,Colorado,Democrat,9,Barack H. Obama
+2008,Connecticut,Democrat,7,Barack H. Obama
+2008,Delaware,Democrat,3,Barack H. Obama
+2008,Florida,Democrat,27,Barack H. Obama
+2008,Georgia,Republican,15,John S. McCain
+2008,Hawaii,Democrat,4,Barack H. Obama
+2008,Idaho,Republican,4,John S. McCain
+2008,Illinois,Democrat,21,Barack H. Obama
+2008,Indiana,Democrat,11,Barack H. Obama
+2008,Iowa,Democrat,7,Barack H. Obama
+2008,Kansas,Republican,6,John S. McCain
+2008,Kentucky,Republican,8,John S. McCain
+2008,Louisiana,Republican,9,John S. McCain
+2008,Maine,Democrat,2,Barack H. Obama
+2008,Maine CD-1,Democrat,1,Barack H. Obama
+2008,Maine CD-2,Democrat,1,Barack H. Obama
+2008,Maryland,Democrat,10,Barack H. Obama
+2008,Massachusetts,Democrat,12,Barack H. Obama
+2008,Michigan,Democrat,17,Barack H. Obama
+2008,Minnesota,Democrat,10,Barack H. Obama
+2008,Mississippi,Republican,6,John S. McCain
+2008,Missouri,Republican,11,John S. McCain
+2008,Montana,Republican,3,John S. McCain
+2008,Nebraska,Republican-2,2,John S. McCain
+2008,Nebraska CD-1,Republican-2,1,John S. McCain
+2008,Nebraska CD-2,Democrat,1,Barack H. Obama
+2008,Nebraska CD-3,Republican-2,1,John S. McCain
+2008,Nevada,Democrat,5,Barack H. Obama
+2008,New Hampshire,Democrat,4,Barack H. Obama
+2008,New Jersey,Democrat,15,Barack H. Obama
+2008,New Mexico,Democrat,5,Barack H. Obama
+2008,New York,Democrat,31,Barack H. Obama
+2008,North Carolina,Democrat,15,Barack H. Obama
+2008,North Dakota,Republican,3,John S. McCain
+2008,Ohio,Democrat,20,Barack H. Obama
+2008,Oklahoma,Republican,7,John S. McCain
+2008,Oregon,Democrat,7,Barack H. Obama
+2008,Pennsylvania,Democrat,21,Barack H. Obama
+2008,Rhode Island,Democrat,4,Barack H. Obama
+2008,South Carolina,Republican,8,John S. McCain
+2008,South Dakota,Republican,3,John S. McCain
+2008,Tennessee,Republican,11,John S. McCain
+2008,Texas,Republican,34,John S. McCain
+2008,Utah,Republican,5,John S. McCain
+2008,Vermont,Democrat,3,Barack H. Obama
+2008,Virginia,Democrat,13,Barack H. Obama
+2008,Washington,Democrat,11,Barack H. Obama
+2008,West Virginia,Republican,5,John S. McCain
+2008,Wisconsin,Democrat,10,Barack H. Obama
+2008,Wyoming,Republican,3,John S. McCain
+2008,"Washington, D.C.",Democrat,3,Barack H. Obama
+2004,Alabama,Republican,9,George W. Bush
+2004,Alaska,Republican,3,George W. Bush
+2004,Arizona,Republican,10,George W. Bush
+2004,Arkansas,Republican,6,George W. Bush
+2004,California,Democrat,55,John F. Kerry
+2004,Colorado,Republican,9,George W. Bush
+2004,Connecticut,Democrat,7,John F. Kerry
+2004,Delaware,Democrat,3,John F. Kerry
+2004,Florida,Republican,27,George W. Bush
+2004,Georgia,Republican,15,George W. Bush
+2004,Hawaii,Democrat,4,John F. Kerry
+2004,Idaho,Republican,4,George W. Bush
+2004,Illinois,Democrat,21,John F. Kerry
+2004,Indiana,Republican,11,George W. Bush
+2004,Iowa,Republican,7,George W. Bush
+2004,Kansas,Republican,6,George W. Bush
+2004,Kentucky,Republican,8,George W. Bush
+2004,Louisiana,Republican,9,George W. Bush
+2004,Maine,Democrat,2,John F. Kerry
+2004,Maine CD-1,Democrat,1,John F. Kerry
+2004,Maine CD-2,Democrat,1,John F. Kerry
+2004,Maryland,Democrat,10,John F. Kerry
+2004,Massachusetts,Democrat,12,John F. Kerry
+2004,Michigan,Democrat,17,John F. Kerry
+2004,Minnesota,Democrat,9,John F. Kerry
+2004,Mississippi,Republican,6,George W. Bush
+2004,Missouri,Republican,11,George W. Bush
+2004,Montana,Republican,3,George W. Bush
+2004,Nebraska,Republican,2,George W. Bush
+2004,Nebraska CD-1,Republican,1,George W. Bush
+2004,Nebraska CD-2,Republican,1,George W. Bush
+2004,Nebraska CD-3,Republican,1,George W. Bush
+2004,Nevada,Republican,5,George W. Bush
+2004,New Hampshire,Democrat,4,John F. Kerry
+2004,New Jersey,Democrat,15,John F. Kerry
+2004,New Mexico,Republican,5,George W. Bush
+2004,New York,Democrat,31,John F. Kerry
+2004,North Carolina,Republican,15,George W. Bush
+2004,North Dakota,Republican,3,George W. Bush
+2004,Ohio,Republican,20,George W. Bush
+2004,Oklahoma,Republican,7,George W. Bush
+2004,Oregon,Democrat,7,John F. Kerry
+2004,Pennsylvania,Democrat,21,John F. Kerry
+2004,Rhode Island,Democrat,4,John F. Kerry
+2004,South Carolina,Republican,8,George W. Bush
+2004,South Dakota,Republican,3,George W. Bush
+2004,Tennessee,Republican,11,George W. Bush
+2004,Texas,Republican,34,George W. Bush
+2004,Utah,Republican,5,George W. Bush
+2004,Vermont,Democrat,3,John F. Kerry
+2004,Virginia,Republican,13,George W. Bush
+2004,Washington,Democrat,11,John F. Kerry
+2004,West Virginia,Republican,5,George W. Bush
+2004,Wisconsin,Democrat,10,John F. Kerry
+2004,Wyoming,Republican,3,George W. Bush
+2004,"Washington, D.C.",Democrat,3,John F. Kerry
+2000,Alabama,Republican,9,George W. Bush
+2000,Alaska,Republican,3,George W. Bush
+2000,Arizona,Republican,8,George W. Bush
+2000,Arkansas,Republican,6,George W. Bush
+2000,California,Democrat,54,"Albert Gore, Jr."
+2000,Colorado,Republican,8,George W. Bush
+2000,Connecticut,Democrat,8,"Albert Gore, Jr."
+2000,Delaware,Democrat,3,"Albert Gore, Jr."
+2000,Florida,Republican,25,George W. Bush
+2000,Georgia,Republican,13,George W. Bush
+2000,Hawaii,Democrat,4,"Albert Gore, Jr."
+2000,Idaho,Republican,4,George W. Bush
+2000,Illinois,Democrat,22,"Albert Gore, Jr."
+2000,Indiana,Republican,12,George W. Bush
+2000,Iowa,Democrat,7,"Albert Gore, Jr."
+2000,Kansas,Republican,6,George W. Bush
+2000,Kentucky,Republican,8,George W. Bush
+2000,Louisiana,Republican,9,George W. Bush
+2000,Maine,Democrat,2,"Albert Gore, Jr."
+2000,Maine CD-1,Democrat,1,"Albert Gore, Jr."
+2000,Maine CD-2,Democrat,1,"Albert Gore, Jr."
+2000,Maryland,Democrat,10,"Albert Gore, Jr."
+2000,Massachusetts,Democrat,12,"Albert Gore, Jr."
+2000,Michigan,Democrat,18,"Albert Gore, Jr."
+2000,Minnesota,Democrat,10,"Albert Gore, Jr."
+2000,Mississippi,Republican,7,George W. Bush
+2000,Missouri,Republican,11,George W. Bush
+2000,Montana,Republican,3,George W. Bush
+2000,Nebraska,Republican,2,George W. Bush
+2000,Nebraska CD-1,Republican,1,George W. Bush
+2000,Nebraska CD-2,Republican,1,George W. Bush
+2000,Nebraska CD-3,Republican,1,George W. Bush
+2000,Nevada,Republican,4,George W. Bush
+2000,New Hampshire,Republican,4,George W. Bush
+2000,New Jersey,Democrat,15,"Albert Gore, Jr."
+2000,New Mexico,Democrat,5,"Albert Gore, Jr."
+2000,New York,Democrat,33,"Albert Gore, Jr."
+2000,North Carolina,Republican,14,George W. Bush
+2000,North Dakota,Republican,3,George W. Bush
+2000,Ohio,Republican,21,George W. Bush
+2000,Oklahoma,Republican,8,George W. Bush
+2000,Oregon,Democrat,7,"Albert Gore, Jr."
+2000,Pennsylvania,Democrat,23,"Albert Gore, Jr."
+2000,Rhode Island,Democrat,4,"Albert Gore, Jr."
+2000,South Carolina,Republican,8,George W. Bush
+2000,South Dakota,Republican,3,George W. Bush
+2000,Tennessee,Republican,11,George W. Bush
+2000,Texas,Republican,32,George W. Bush
+2000,Utah,Republican,5,George W. Bush
+2000,Vermont,Democrat,3,"Albert Gore, Jr."
+2000,Virginia,Republican,13,George W. Bush
+2000,Washington,Democrat,11,"Albert Gore, Jr."
+2000,West Virginia,Republican,5,George W. Bush
+2000,Wisconsin,Democrat,11,"Albert Gore, Jr."
+2000,Wyoming,Republican,3,George W. Bush
+2000,"Washington, D.C.",Democrat,3,"Albert Gore, Jr."
+1996,Alabama,Republican,9,Robert Dole
+1996,Alaska,Republican,3,Robert Dole
+1996,Arizona,Democrat,8,William J. Clinton
+1996,Arkansas,Democrat,6,William J. Clinton
+1996,California,Democrat,54,William J. Clinton
+1996,Colorado,Republican,8,Robert Dole
+1996,Connecticut,Democrat,8,William J. Clinton
+1996,Delaware,Democrat,3,William J. Clinton
+1996,Florida,Democrat,25,William J. Clinton
+1996,Georgia,Republican,13,Robert Dole
+1996,Hawaii,Democrat,4,William J. Clinton
+1996,Idaho,Republican,4,Robert Dole
+1996,Illinois,Democrat,22,William J. Clinton
+1996,Indiana,Republican,12,Robert Dole
+1996,Iowa,Democrat,7,William J. Clinton
+1996,Kansas,Republican,6,Robert Dole
+1996,Kentucky,Democrat,8,William J. Clinton
+1996,Louisiana,Democrat,9,William J. Clinton
+1996,Maine,Democrat,2,William J. Clinton
+1996,Maine CD-1,Democrat,1,William J. Clinton
+1996,Maine CD-2,Democrat,1,William J. Clinton
+1996,Maryland,Democrat,10,William J. Clinton
+1996,Massachusetts,Democrat,12,William J. Clinton
+1996,Michigan,Democrat,18,William J. Clinton
+1996,Minnesota,Democrat,10,William J. Clinton
+1996,Mississippi,Republican,7,Robert Dole
+1996,Missouri,Democrat,11,William J. Clinton
+1996,Montana,Republican,3,Robert Dole
+1996,Nebraska,Republican,2,Robert Dole
+1996,Nebraska CD-1,Republican,1,Robert Dole
+1996,Nebraska CD-2,Republican,1,Robert Dole
+1996,Nebraska CD-3,Republican,1,Robert Dole
+1996,Nevada,Democrat,4,William J. Clinton
+1996,New Hampshire,Democrat,4,William J. Clinton
+1996,New Jersey,Democrat,15,William J. Clinton
+1996,New Mexico,Democrat,5,William J. Clinton
+1996,New York,Democrat,33,William J. Clinton
+1996,North Carolina,Republican,14,Robert Dole
+1996,North Dakota,Republican,3,Robert Dole
+1996,Ohio,Democrat,21,William J. Clinton
+1996,Oklahoma,Republican,8,Robert Dole
+1996,Oregon,Democrat,7,William J. Clinton
+1996,Pennsylvania,Democrat,23,William J. Clinton
+1996,Rhode Island,Democrat,4,William J. Clinton
+1996,South Carolina,Republican,8,Robert Dole
+1996,South Dakota,Republican,3,Robert Dole
+1996,Tennessee,Democrat,11,William J. Clinton
+1996,Texas,Republican,32,Robert Dole
+1996,Utah,Republican,5,Robert Dole
+1996,Vermont,Democrat,3,William J. Clinton
+1996,Virginia,Republican,13,Robert Dole
+1996,Washington,Democrat,11,William J. Clinton
+1996,West Virginia,Democrat,5,William J. Clinton
+1996,Wisconsin,Democrat,11,William J. Clinton
+1996,Wyoming,Republican,3,Robert Dole
+1996,"Washington, D.C.",Democrat,3,William J. Clinton
+1992,Alabama,Republican,9,George Bush
+1992,Alaska,Republican,3,George Bush
+1992,Arizona,Republican,8,William J. Clinton
+1992,Arkansas,Democrat,6,William J. Clinton
+1992,California,Democrat,54,William J. Clinton
+1992,Colorado,Democrat,8,William J. Clinton
+1992,Connecticut,Democrat,8,William J. Clinton
+1992,Delaware,Democrat,3,William J. Clinton
+1992,Florida,Republican,25,George Bush
+1992,Georgia,Democrat,13,William J. Clinton
+1992,Hawaii,Democrat,4,William J. Clinton
+1992,Idaho,Republican,4,George Bush
+1992,Illinois,Democrat,22,William J. Clinton
+1992,Indiana,Republican,12,George Bush
+1992,Iowa,Democrat,7,William J. Clinton
+1992,Kansas,Republican,6,George Bush
+1992,Kentucky,Democrat,8,William J. Clinton
+1992,Louisiana,Democrat,9,William J. Clinton
+1992,Maine,Democrat,2,William J. Clinton
+1992,Maine CD-1,Democrat,1,William J. Clinton
+1992,Maine CD-2,Democrat,1,William J. Clinton
+1992,Maryland,Democrat,10,William J. Clinton
+1992,Massachusetts,Democrat,12,William J. Clinton
+1992,Michigan,Democrat,18,William J. Clinton
+1992,Minnesota,Democrat,10,William J. Clinton
+1992,Mississippi,Republican,7,George Bush
+1992,Missouri,Democrat,11,William J. Clinton
+1992,Montana,Democrat,3,William J. Clinton
+1992,Nebraska,Republican,2,George Bush
+1992,Nebraska CD-1,Republican,1,George Bush
+1992,Nebraska CD-2,Republican,1,George Bush
+1992,Nebraska CD-3,Republican,1,George Bush
+1992,Nevada,Democrat,4,William J. Clinton
+1992,New Hampshire,Democrat,4,William J. Clinton
+1992,New Jersey,Democrat,15,William J. Clinton
+1992,New Mexico,Democrat,5,William J. Clinton
+1992,New York,Democrat,33,William J. Clinton
+1992,North Carolina,Republican,14,George Bush
+1992,North Dakota,Republican,3,George Bush
+1992,Ohio,Democrat,21,William J. Clinton
+1992,Oklahoma,Republican,8,George Bush
+1992,Oregon,Democrat,7,William J. Clinton
+1992,Pennsylvania,Democrat,23,William J. Clinton
+1992,Rhode Island,Democrat,4,William J. Clinton
+1992,South Carolina,Republican,8,George Bush
+1992,South Dakota,Republican,3,George Bush
+1992,Tennessee,Democrat,11,William J. Clinton
+1992,Texas,Republican,32,George Bush
+1992,Utah,Republican,5,George Bush
+1992,Vermont,Democrat,3,William J. Clinton
+1992,Virginia,Republican,13,George Bush
+1992,Washington,Democrat,11,William J. Clinton
+1992,West Virginia,Democrat,5,William J. Clinton
+1992,Wisconsin,Democrat,11,William J. Clinton
+1992,Wyoming,Republican,3,George Bush
+1992,"Washington, D.C.",Democrat,3,William J. Clinton
+1988,Alabama,Republican,9,George Bush
+1988,Alaska,Republican,3,George Bush
+1988,Arizona,Republican,7,George Bush
+1988,Arkansas,Republican,6,George Bush
+1988,California,Republican,47,George Bush
+1988,Colorado,Republican,8,George Bush
+1988,Connecticut,Republican,8,George Bush
+1988,Delaware,Republican,3,George Bush
+1988,Florida,Republican,21,George Bush
+1988,Georgia,Republican,12,George Bush
+1988,Hawaii,Democrat,4,Michael S. Dukakis
+1988,Idaho,Republican,4,George Bush
+1988,Illinois,Republican,24,George Bush
+1988,Indiana,Republican,12,George Bush
+1988,Iowa,Democrat,8,Michael S. Dukakis
+1988,Kansas,Republican,7,George Bush
+1988,Kentucky,Republican,9,George Bush
+1988,Louisiana,Republican,10,George Bush
+1988,Maine,Republican,2,George Bush
+1988,Maine CD-1,Republican,1,George Bush
+1988,Maine CD-2,Republican,1,George Bush
+1988,Maryland,Republican,10,George Bush
+1988,Massachusetts,Democrat,13,Michael S. Dukakis
+1988,Michigan,Republican,20,George Bush
+1988,Minnesota,Democrat,10,Michael S. Dukakis
+1988,Mississippi,Republican,7,George Bush
+1988,Missouri,Republican,10,George Bush
+1988,Montana,Republican,4,George Bush
+1988,Nebraska,Republican,5,George Bush
+1988,Nevada,Republican,4,George Bush
+1988,New Hampshire,Republican,4,George Bush
+1988,New Jersey,Republican,16,George Bush
+1988,New Mexico,Republican,5,George Bush
+1988,New York,Democrat,36,Michael S. Dukakis
+1988,North Carolina,Republican,13,George Bush
+1988,North Dakota,Republican,3,George Bush
+1988,Ohio,Republican,23,George Bush
+1988,Oklahoma,Republican,8,George Bush
+1988,Oregon,Democrat,7,Michael S. Dukakis
+1988,Pennsylvania,Republican,25,George Bush
+1988,Rhode Island,Democrat,4,Michael S. Dukakis
+1988,South Carolina,Republican,8,George Bush
+1988,South Dakota,Republican,3,George Bush
+1988,Tennessee,Republican,11,George Bush
+1988,Texas,Republican,29,George Bush
+1988,Utah,Republican,5,George Bush
+1988,Vermont,Republican,3,George Bush
+1988,Virginia,Republican,12,George Bush
+1988,Washington,Democrat,10,Michael S. Dukakis
+1988,West Virginia,Democrat,5,Michael S. Dukakis
+1988,Wisconsin,Democrat,11,Michael S. Dukakis
+1988,Wyoming,Republican,3,George Bush
+1988,"Washington, D.C.",Democrat,3,Michael S. Dukakis
+1984,Alabama,Republican,9,Ronald Reagan
+1984,Alaska,Republican,3,Ronald Reagan
+1984,Arizona,Republican,7,Ronald Reagan
+1984,Arkansas,Republican,6,Ronald Reagan
+1984,California,Republican,47,Ronald Reagan
+1984,Colorado,Republican,8,Ronald Reagan
+1984,Connecticut,Republican,8,Ronald Reagan
+1984,Delaware,Republican,3,Ronald Reagan
+1984,Florida,Republican,21,Ronald Reagan
+1984,Georgia,Republican,12,Ronald Reagan
+1984,Hawaii,Republican,4,Ronald Reagan
+1984,Idaho,Republican,4,Ronald Reagan
+1984,Illinois,Republican,24,Ronald Reagan
+1984,Indiana,Republican,12,Ronald Reagan
+1984,Iowa,Republican,8,Ronald Reagan
+1984,Kansas,Republican,7,Ronald Reagan
+1984,Kentucky,Republican,9,Ronald Reagan
+1984,Louisiana,Republican,10,Ronald Reagan
+1984,Maine,Republican,2,Ronald Reagan
+1984,Maine CD-1,Republican,1,Ronald Reagan
+1984,Maine CD-2,Republican,1,Ronald Reagan
+1984,Maryland,Republican,10,Ronald Reagan
+1984,Massachusetts,Republican,13,Ronald Reagan
+1984,Michigan,Republican,20,Ronald Reagan
+1984,Minnesota,Democrat,10,Walter F. Mondale
+1984,Mississippi,Republican,7,Ronald Reagan
+1984,Missouri,Republican,11,Ronald Reagan
+1984,Montana,Republican,4,Ronald Reagan
+1984,Nebraska,Republican,5,Ronald Reagan
+1984,Nevada,Republican,4,Ronald Reagan
+1984,New Hampshire,Republican,4,Ronald Reagan
+1984,New Jersey,Republican,16,Ronald Reagan
+1984,New Mexico,Republican,5,Ronald Reagan
+1984,New York,Republican,36,Ronald Reagan
+1984,North Carolina,Republican,13,Ronald Reagan
+1984,North Dakota,Republican,3,Ronald Reagan
+1984,Ohio,Republican,23,Ronald Reagan
+1984,Oklahoma,Republican,8,Ronald Reagan
+1984,Oregon,Republican,7,Ronald Reagan
+1984,Pennsylvania,Republican,25,Ronald Reagan
+1984,Rhode Island,Republican,4,Ronald Reagan
+1984,South Carolina,Republican,8,Ronald Reagan
+1984,South Dakota,Republican,3,Ronald Reagan
+1984,Tennessee,Republican,11,Ronald Reagan
+1984,Texas,Republican,29,Ronald Reagan
+1984,Utah,Republican,5,Ronald Reagan
+1984,Vermont,Republican,3,Ronald Reagan
+1984,Virginia,Republican,12,Ronald Reagan
+1984,Washington,Republican,10,Ronald Reagan
+1984,West Virginia,Republican,6,Ronald Reagan
+1984,Wisconsin,Republican,11,Ronald Reagan
+1984,Wyoming,Republican,3,Ronald Reagan
+1984,"Washington, D.C.",Democrat,3,Walter F. Mondale
+1980,Alabama,Republican,9,Ronald Reagan
+1980,Alaska,Republican,3,Ronald Reagan
+1980,Arizona,Republican,6,Ronald Reagan
+1980,Arkansas,Republican,6,Ronald Reagan
+1980,California,Republican,45,Ronald Reagan
+1980,Colorado,Republican,7,Ronald Reagan
+1980,Connecticut,Republican,8,Ronald Reagan
+1980,Delaware,Republican,3,Ronald Reagan
+1980,Florida,Republican,17,Ronald Reagan
+1980,Georgia,Democrat,12,Jimmy Carter
+1980,Hawaii,Democrat,4,Jimmy Carter
+1980,Idaho,Republican,4,Ronald Reagan
+1980,Illinois,Republican,26,Ronald Reagan
+1980,Indiana,Republican,13,Ronald Reagan
+1980,Iowa,Republican,8,Ronald Reagan
+1980,Kansas,Republican,7,Ronald Reagan
+1980,Kentucky,Republican,9,Ronald Reagan
+1980,Louisiana,Republican,10,Ronald Reagan
+1980,Maine,Republican,2,Ronald Reagan
+1980,Maine CD-1,Republican,1,Ronald Reagan
+1980,Maine CD-2,Republican,1,Ronald Reagan
+1980,Maryland,Democrat,10,Jimmy Carter
+1980,Massachusetts,Republican,14,Ronald Reagan
+1980,Michigan,Republican,21,Ronald Reagan
+1980,Minnesota,Democrat,10,Jimmy Carter
+1980,Mississippi,Republican,7,Ronald Reagan
+1980,Missouri,Republican,12,Ronald Reagan
+1980,Montana,Republican,4,Ronald Reagan
+1980,Nebraska,Republican,5,Ronald Reagan
+1980,Nevada,Republican,3,Ronald Reagan
+1980,New Hampshire,Republican,4,Ronald Reagan
+1980,New Jersey,Republican,17,Ronald Reagan
+1980,New Mexico,Republican,4,Ronald Reagan
+1980,New York,Republican,41,Ronald Reagan
+1980,North Carolina,Republican,13,Ronald Reagan
+1980,North Dakota,Republican,3,Ronald Reagan
+1980,Ohio,Republican,25,Ronald Reagan
+1980,Oklahoma,Republican,8,Ronald Reagan
+1980,Oregon,Republican,6,Ronald Reagan
+1980,Pennsylvania,Republican,27,Ronald Reagan
+1980,Rhode Island,Democrat,4,Jimmy Carter
+1980,South Carolina,Republican,8,Ronald Reagan
+1980,South Dakota,Republican,3,Ronald Reagan
+1980,Tennessee,Republican,10,Ronald Reagan
+1980,Texas,Republican,26,Ronald Reagan
+1980,Utah,Republican,4,Ronald Reagan
+1980,Vermont,Republican,3,Ronald Reagan
+1980,Virginia,Republican,12,Ronald Reagan
+1980,Washington,Republican,9,Ronald Reagan
+1980,West Virginia,Democrat,6,Jimmy Carter
+1980,Wisconsin,Republican,11,Ronald Reagan
+1980,Wyoming,Republican,3,Ronald Reagan
+1980,"Washington, D.C.",Democrat,3,Jimmy Carter
+1976,Alabama,Democrat,9,Jimmy Carter
+1976,Alaska,Republican,3,Gerald R. Ford
+1976,Arizona,Republican,6,Gerald R. Ford
+1976,Arkansas,Democrat,6,Jimmy Carter
+1976,California,Republican,45,Gerald R. Ford
+1976,Colorado,Republican,7,Gerald R. Ford
+1976,Connecticut,Republican,8,Gerald R. Ford
+1976,Delaware,Democrat,3,Jimmy Carter
+1976,Florida,Democrat,17,Jimmy Carter
+1976,Georgia,Democrat,12,Jimmy Carter
+1976,Hawaii,Democrat,4,Jimmy Carter
+1976,Idaho,Republican,4,Gerald R. Ford
+1976,Illinois,Republican,26,Gerald R. Ford
+1976,Indiana,Republican,13,Gerald R. Ford
+1976,Iowa,Republican,8,Gerald R. Ford
+1976,Kansas,Republican,7,Gerald R. Ford
+1976,Kentucky,Democrat,9,Jimmy Carter
+1976,Louisiana,Democrat,10,Jimmy Carter
+1976,Maine,Republican,2,Gerald R. Ford
+1976,Maine CD-1,Republican,1,Gerald R. Ford
+1976,Maine CD-2,Republican,1,Gerald R. Ford
+1976,Maryland,Democrat,10,Jimmy Carter
+1976,Massachusetts,Democrat,14,Jimmy Carter
+1976,Michigan,Republican,21,Gerald R. Ford
+1976,Minnesota,Democrat,10,Jimmy Carter
+1976,Mississippi,Democrat,7,Jimmy Carter
+1976,Missouri,Democrat,12,Jimmy Carter
+1976,Montana,Republican,4,Gerald R. Ford
+1976,Nebraska,Republican,5,Gerald R. Ford
+1976,Nevada,Republican,3,Gerald R. Ford
+1976,New Hampshire,Republican,4,Gerald R. Ford
+1976,New Jersey,Republican,17,Gerald R. Ford
+1976,New Mexico,Republican,4,Gerald R. Ford
+1976,New York,Democrat,41,Jimmy Carter
+1976,North Carolina,Democrat,13,Jimmy Carter
+1976,North Dakota,Republican,3,Gerald R. Ford
+1976,Ohio,Democrat,25,Jimmy Carter
+1976,Oklahoma,Republican,8,Gerald R. Ford
+1976,Oregon,Republican,6,Gerald R. Ford
+1976,Pennsylvania,Democrat,27,Jimmy Carter
+1976,Rhode Island,Democrat,4,Jimmy Carter
+1976,South Carolina,Democrat,8,Jimmy Carter
+1976,South Dakota,Republican,4,Gerald R. Ford
+1976,Tennessee,Democrat,10,Jimmy Carter
+1976,Texas,Democrat,26,Jimmy Carter
+1976,Utah,Republican,4,Gerald R. Ford
+1976,Vermont,Republican,3,Gerald R. Ford
+1976,Virginia,Republican,12,Gerald R. Ford
+1976,Washington,Republican,8,Gerald R. Ford
+1976,West Virginia,Democrat,6,Jimmy Carter
+1976,Wisconsin,Democrat,11,Jimmy Carter
+1976,Wyoming,Republican,3,Gerald R. Ford
+1976,"Washington, D.C.",Democrat,3,Jimmy Carter
+1972,Alabama,Republican,9,Richard M. Nixon
+1972,Alaska,Republican,3,Richard M. Nixon
+1972,Arizona,Republican,6,Richard M. Nixon
+1972,Arkansas,Republican,6,Richard M. Nixon
+1972,California,Republican,45,Richard M. Nixon
+1972,Colorado,Republican,7,Richard M. Nixon
+1972,Connecticut,Republican,8,Richard M. Nixon
+1972,Delaware,Republican,3,Richard M. Nixon
+1972,Florida,Republican,17,Richard M. Nixon
+1972,Georgia,Republican,12,Richard M. Nixon
+1972,Hawaii,Republican,4,Richard M. Nixon
+1972,Idaho,Republican,4,Richard M. Nixon
+1972,Illinois,Republican,26,Richard M. Nixon
+1972,Indiana,Republican,13,Richard M. Nixon
+1972,Iowa,Republican,8,Richard M. Nixon
+1972,Kansas,Republican,7,Richard M. Nixon
+1972,Kentucky,Republican,9,Richard M. Nixon
+1972,Louisiana,Republican,10,Richard M. Nixon
+1972,Maine,Republican,2,Richard M. Nixon
+1972,Maine CD-1,Republican,1,Richard M. Nixon
+1972,Maine CD-2,Republican,1,Richard M. Nixon
+1972,Maryland,Republican,10,Richard M. Nixon
+1972,Massachusetts,Democrat,14,George McGovern
+1972,Michigan,Republican,21,Richard M. Nixon
+1972,Minnesota,Republican,10,Richard M. Nixon
+1972,Mississippi,Republican,7,Richard M. Nixon
+1972,Missouri,Republican,12,Richard M. Nixon
+1972,Montana,Republican,4,Richard M. Nixon
+1972,Nebraska,Republican,5,Richard M. Nixon
+1972,Nevada,Republican,3,Richard M. Nixon
+1972,New Hampshire,Republican,4,Richard M. Nixon
+1972,New Jersey,Republican,17,Richard M. Nixon
+1972,New Mexico,Republican,4,Richard M. Nixon
+1972,New York,Republican,41,Richard M. Nixon
+1972,North Carolina,Republican,13,Richard M. Nixon
+1972,North Dakota,Republican,3,Richard M. Nixon
+1972,Ohio,Republican,25,Richard M. Nixon
+1972,Oklahoma,Republican,8,Richard M. Nixon
+1972,Oregon,Republican,6,Richard M. Nixon
+1972,Pennsylvania,Republican,27,Richard M. Nixon
+1972,Rhode Island,Republican,4,Richard M. Nixon
+1972,South Carolina,Republican,8,Richard M. Nixon
+1972,South Dakota,Republican,4,Richard M. Nixon
+1972,Tennessee,Republican,10,Richard M. Nixon
+1972,Texas,Republican,26,Richard M. Nixon
+1972,Utah,Republican,4,Richard M. Nixon
+1972,Vermont,Republican,3,Richard M. Nixon
+1972,Virginia,Republican,11,Richard M. Nixon
+1972,Washington,Republican,9,Richard M. Nixon
+1972,West Virginia,Republican,6,Richard M. Nixon
+1972,Wisconsin,Republican,11,Richard M. Nixon
+1972,Wyoming,Republican,3,Richard M. Nixon
+1972,"Washington, D.C.",Democrat,3,George McGovern
+1968,Alabama,American Independent,10,George C. Wallace
+1968,Alaska,Republican,3,Richard M. Nixon
+1968,Arizona,Republican,5,Richard M. Nixon
+1968,Arkansas,American Independent,6,George C. Wallace
+1968,California,Republican,40,Richard M. Nixon
+1968,Colorado,Republican,6,Richard M. Nixon
+1968,Connecticut,Democrat,8,Hubert H. Humphrey
+1968,Delaware,Republican,3,Richard M. Nixon
+1968,Florida,Republican,14,Richard M. Nixon
+1968,Georgia,American Independent,12,George C. Wallace
+1968,Hawaii,Democrat,4,Hubert H. Humphrey
+1968,Idaho,Republican,4,Richard M. Nixon
+1968,Illinois,Republican,26,Richard M. Nixon
+1968,Indiana,Republican,13,Richard M. Nixon
+1968,Iowa,Republican,9,Richard M. Nixon
+1968,Kansas,Republican,7,Richard M. Nixon
+1968,Kentucky,Republican,9,Richard M. Nixon
+1968,Louisiana,American Independent,10,George C. Wallace
+1968,Maine,Democrat,4,Hubert H. Humphrey
+1968,Maryland,Democrat,10,Hubert H. Humphrey
+1968,Massachusetts,Democrat,14,Hubert H. Humphrey
+1968,Michigan,Democrat,21,Hubert H. Humphrey
+1968,Minnesota,Democrat,10,Hubert H. Humphrey
+1968,Mississippi,American Independent,7,George C. Wallace
+1968,Missouri,Republican,12,Richard M. Nixon
+1968,Montana,Republican,4,Richard M. Nixon
+1968,Nebraska,Republican,5,Richard M. Nixon
+1968,Nevada,Republican,3,Richard M. Nixon
+1968,New Hampshire,Republican,4,Richard M. Nixon
+1968,New Jersey,Republican,17,Richard M. Nixon
+1968,New Mexico,Republican,4,Richard M. Nixon
+1968,New York,Democrat,43,Hubert H. Humphrey
+1968,North Carolina,Republican,12,Richard M. Nixon
+1968,North Dakota,Republican,4,Richard M. Nixon
+1968,Ohio,Republican,26,Richard M. Nixon
+1968,Oklahoma,Republican,8,Richard M. Nixon
+1968,Oregon,Republican,6,Richard M. Nixon
+1968,Pennsylvania,Democrat,29,Hubert H. Humphrey
+1968,Rhode Island,Democrat,4,Hubert H. Humphrey
+1968,South Carolina,Republican,8,Richard M. Nixon
+1968,South Dakota,Republican,4,Richard M. Nixon
+1968,Tennessee,Republican,11,Richard M. Nixon
+1968,Texas,Democrat,25,Hubert H. Humphrey
+1968,Utah,Republican,4,Richard M. Nixon
+1968,Vermont,Republican,3,Richard M. Nixon
+1968,Virginia,Republican,12,Richard M. Nixon
+1968,Washington,Democrat,9,Hubert H. Humphrey
+1968,West Virginia,Democrat,7,Hubert H. Humphrey
+1968,Wisconsin,Republican,12,Richard M. Nixon
+1968,Wyoming,Republican,3,Richard M. Nixon
+1968,"Washington, D.C.",Democrat,3,Hubert H. Humphrey
+1964,Alabama,Republican,10,Barry M. Goldwater
+1964,Alaska,Democrat,3,Lyndon B. Johnson
+1964,Arizona,Republican,5,Barry M. Goldwater
+1964,Arkansas,Democrat,6,Lyndon B. Johnson
+1964,California,Democrat,40,Lyndon B. Johnson
+1964,Colorado,Democrat,6,Lyndon B. Johnson
+1964,Connecticut,Democrat,8,Lyndon B. Johnson
+1964,Delaware,Democrat,3,Lyndon B. Johnson
+1964,Florida,Democrat,14,Lyndon B. Johnson
+1964,Georgia,Republican,12,Barry M. Goldwater
+1964,Hawaii,Democrat,4,Lyndon B. Johnson
+1964,Idaho,Democrat,4,Lyndon B. Johnson
+1964,Illinois,Democrat,26,Lyndon B. Johnson
+1964,Indiana,Democrat,13,Lyndon B. Johnson
+1964,Iowa,Democrat,9,Lyndon B. Johnson
+1964,Kansas,Democrat,7,Lyndon B. Johnson
+1964,Kentucky,Democrat,9,Lyndon B. Johnson
+1964,Louisiana,Republican,10,Barry M. Goldwater
+1964,Maine,Democrat,4,Lyndon B. Johnson
+1964,Maryland,Democrat,10,Lyndon B. Johnson
+1964,Massachusetts,Democrat,14,Lyndon B. Johnson
+1964,Michigan,Democrat,21,Lyndon B. Johnson
+1964,Minnesota,Democrat,10,Lyndon B. Johnson
+1964,Mississippi,Republican,7,Barry M. Goldwater
+1964,Missouri,Democrat,12,Lyndon B. Johnson
+1964,Montana,Democrat,4,Lyndon B. Johnson
+1964,Nebraska,Democrat,5,Lyndon B. Johnson
+1964,Nevada,Democrat,3,Lyndon B. Johnson
+1964,New Hampshire,Democrat,4,Lyndon B. Johnson
+1964,New Jersey,Democrat,17,Lyndon B. Johnson
+1964,New Mexico,Democrat,4,Lyndon B. Johnson
+1964,New York,Democrat,43,Lyndon B. Johnson
+1964,North Carolina,Democrat,13,Lyndon B. Johnson
+1964,North Dakota,Democrat,4,Lyndon B. Johnson
+1964,Ohio,Democrat,26,Lyndon B. Johnson
+1964,Oklahoma,Democrat,8,Lyndon B. Johnson
+1964,Oregon,Democrat,6,Lyndon B. Johnson
+1964,Pennsylvania,Democrat,29,Lyndon B. Johnson
+1964,Rhode Island,Democrat,4,Lyndon B. Johnson
+1964,South Carolina,Republican,8,Barry M. Goldwater
+1964,South Dakota,Democrat,4,Lyndon B. Johnson
+1964,Tennessee,Democrat,11,Lyndon B. Johnson
+1964,Texas,Democrat,25,Lyndon B. Johnson
+1964,Utah,Democrat,4,Lyndon B. Johnson
+1964,Vermont,Democrat,3,Lyndon B. Johnson
+1964,Virginia,Democrat,12,Lyndon B. Johnson
+1964,Washington,Democrat,9,Lyndon B. Johnson
+1964,West Virginia,Democrat,7,Lyndon B. Johnson
+1964,Wisconsin,Democrat,12,Lyndon B. Johnson
+1964,Wyoming,Democrat,3,Lyndon B. Johnson
+1964,"Washington, D.C.",Democrat,3,Lyndon B. Johnson
+1960,Alabama,Democrat,5,John F. Kennedy
+1960,Alabama-2,Democrat-2,6,Harry F. Byrd
+1960,Alaska,Republican,3,Richard M. Nixon
+1960,Arizona,Republican,4,Richard M. Nixon
+1960,Arkansas,Democrat,8,John F. Kennedy
+1960,California,Republican,32,Richard M. Nixon
+1960,Colorado,Republican,6,John F. Kennedy
+1960,Connecticut,Democrat,8,John F. Kennedy
+1960,Delaware,Democrat,3,John F. Kennedy
+1960,Florida,Republican,10,Richard M. Nixon
+1960,Georgia,Democrat,12,John F. Kennedy
+1960,Hawaii,Democrat,3,John F. Kennedy
+1960,Idaho,Republican,4,Richard M. Nixon
+1960,Illinois,Democrat,27,John F. Kennedy
+1960,Indiana,Republican,13,Richard M. Nixon
+1960,Iowa,Republican,10,Richard M. Nixon
+1960,Kansas,Republican,8,Richard M. Nixon
+1960,Kentucky,Republican,10,Richard M. Nixon
+1960,Louisiana,Democrat,10,John F. Kennedy
+1960,Maine,Republican,4,Richard M. Nixon
+1960,Maryland,Democrat,9,John F. Kennedy
+1960,Massachusetts,Democrat,16,John F. Kennedy
+1960,Michigan,Democrat,20,John F. Kennedy
+1960,Minnesota,Democrat,11,John F. Kennedy
+1960,Mississippi,Democrat-2,8,Harry F. Byrd
+1960,Missouri,Democrat,13,John F. Kennedy
+1960,Montana,Republican,4,Richard M. Nixon
+1960,Nebraska,Republican,6,Richard M. Nixon
+1960,Nevada,Democrat,3,John F. Kennedy
+1960,New Hampshire,Republican,4,Richard M. Nixon
+1960,New Jersey,Democrat,16,John F. Kennedy
+1960,New Mexico,Democrat,4,John F. Kennedy
+1960,New York,Democrat,45,John F. Kennedy
+1960,North Carolina,Democrat,14,John F. Kennedy
+1960,North Dakota,Republican,4,Richard M. Nixon
+1960,Ohio,Republican,25,Richard M. Nixon
+1960,Oklahoma,Republican,7,Richard M. Nixon
+1960,Oklahoma-2,Democrat-2,1,Harry F. Byrd
+1960,Oregon,Republican,7,Richard M. Nixon
+1960,Pennsylvania,Republican,32,Richard M. Nixon
+1960,Rhode Island,Democrat,4,John F. Kennedy
+1960,South Carolina,Democrat,8,John F. Kennedy
+1960,South Dakota,Republican,4,Richard M. Nixon
+1960,Tennessee,Republican,11,Richard M. Nixon
+1960,Texas,Democrat,24,John F. Kennedy
+1960,Utah,Republican,4,Richard M. Nixon
+1960,Vermont,Republican,3,Richard M. Nixon
+1960,Virginia,Republican,12,Richard M. Nixon
+1960,Washington,Republican,9,Richard M. Nixon
+1960,West Virginia,Democrat,8,John F. Kennedy
+1960,Wisconsin,Republican,12,Richard M. Nixon
+1960,Wyoming,Republican,3,Richard M. Nixon
+1960,"Washington, D.C.",Vacant State,0,
+1956,Alabama,Democrat,10,Adlai Stevenson
+1956,Alaska,Vacant State,0,
+1956,Arizona,Republican,4,Dwight D. Eisenhower
+1956,Arkansas,Democrat,8,Adlai Stevenson
+1956,California,Republican,32,Dwight D. Eisenhower
+1956,Colorado,Republican,6,Dwight D. Eisenhower
+1956,Connecticut,Republican,8,Dwight D. Eisenhower
+1956,Delaware,Republican,3,Dwight D. Eisenhower
+1956,Florida,Republican,10,Dwight D. Eisenhower
+1956,Georgia,Democrat,12,Adlai Stevenson
+1956,Hawaii,Vacant State,0,
+1956,Idaho,Republican,4,Dwight D. Eisenhower
+1956,Illinois,Republican,27,Dwight D. Eisenhower
+1956,Indiana,Republican,13,Dwight D. Eisenhower
+1956,Iowa,Republican,10,Dwight D. Eisenhower
+1956,Kansas,Republican,8,Dwight D. Eisenhower
+1956,Kentucky,Republican,10,Dwight D. Eisenhower
+1956,Louisiana,Republican,10,Dwight D. Eisenhower
+1956,Maine,Republican,5,Dwight D. Eisenhower
+1956,Maryland,Republican,9,Dwight D. Eisenhower
+1956,Massachusetts,Republican,16,Dwight D. Eisenhower
+1956,Michigan,Republican,20,Dwight D. Eisenhower
+1956,Minnesota,Republican,11,Dwight D. Eisenhower
+1956,Mississippi,Democrat,8,Adlai Stevenson
+1956,Missouri,Democrat,13,Adlai Stevenson
+1956,Montana,Republican,4,Dwight D. Eisenhower
+1956,Nebraska,Republican,6,Dwight D. Eisenhower
+1956,Nevada,Republican,3,Dwight D. Eisenhower
+1956,New Hampshire,Republican,4,Dwight D. Eisenhower
+1956,New Jersey,Republican,16,Dwight D. Eisenhower
+1956,New Mexico,Republican,4,Dwight D. Eisenhower
+1956,New York,Republican,45,Dwight D. Eisenhower
+1956,North Carolina,Democrat,14,Adlai Stevenson
+1956,North Dakota,Republican,4,Dwight D. Eisenhower
+1956,Ohio,Republican,25,Dwight D. Eisenhower
+1956,Oklahoma,Republican,8,Dwight D. Eisenhower
+1956,Oregon,Republican,6,Dwight D. Eisenhower
+1956,Pennsylvania,Republican,32,Dwight D. Eisenhower
+1956,Rhode Island,Republican,4,Dwight D. Eisenhower
+1956,South Carolina,Democrat,8,Adlai Stevenson
+1956,South Dakota,Republican,4,Dwight D. Eisenhower
+1956,Tennessee,Republican,11,Dwight D. Eisenhower
+1956,Texas,Republican,24,Dwight D. Eisenhower
+1956,Utah,Republican,4,Dwight D. Eisenhower
+1956,Vermont,Republican,3,Dwight D. Eisenhower
+1956,Virginia,Republican,12,Dwight D. Eisenhower
+1956,Washington,Republican,9,Dwight D. Eisenhower
+1956,West Virginia,Republican,8,Dwight D. Eisenhower
+1956,Wisconsin,Republican,12,Dwight D. Eisenhower
+1956,Wyoming,Republican,3,Dwight D. Eisenhower
+1956,"Washington, D.C.",Vacant State,0,
+1952,Alabama,Democrat,11,Adlai Stevenson
+1952,Alaska,Vacant State,0,
+1952,Arizona,Republican,4,Dwight D. Eisenhower
+1952,Arkansas,Democrat,8,Adlai Stevenson
+1952,California,Republican,32,Dwight D. Eisenhower
+1952,Colorado,Republican,6,Dwight D. Eisenhower
+1952,Connecticut,Republican,8,Dwight D. Eisenhower
+1952,Delaware,Republican,3,Dwight D. Eisenhower
+1952,Florida,Republican,10,Dwight D. Eisenhower
+1952,Georgia,Democrat,12,Adlai Stevenson
+1952,Hawaii,Vacant State,0,
+1952,Idaho,Republican,4,Dwight D. Eisenhower
+1952,Illinois,Republican,27,Dwight D. Eisenhower
+1952,Indiana,Republican,13,Dwight D. Eisenhower
+1952,Iowa,Republican,10,Dwight D. Eisenhower
+1952,Kansas,Republican,8,Dwight D. Eisenhower
+1952,Kentucky,Democrat,10,Adlai Stevenson
+1952,Louisiana,Democrat,10,Adlai Stevenson
+1952,Maine,Republican,5,Dwight D. Eisenhower
+1952,Maryland,Republican,9,Dwight D. Eisenhower
+1952,Massachusetts,Republican,16,Dwight D. Eisenhower
+1952,Michigan,Republican,20,Dwight D. Eisenhower
+1952,Minnesota,Republican,11,Dwight D. Eisenhower
+1952,Mississippi,Republican,8,Adlai Stevenson
+1952,Missouri,Democrat,13,Adlai Stevenson
+1952,Montana,Republican,4,Dwight D. Eisenhower
+1952,Nebraska,Republican,6,Dwight D. Eisenhower
+1952,Nevada,Republican,3,Dwight D. Eisenhower
+1952,New Hampshire,Republican,4,Dwight D. Eisenhower
+1952,New Jersey,Republican,16,Dwight D. Eisenhower
+1952,New Mexico,Republican,4,Dwight D. Eisenhower
+1952,New York,Republican,45,Dwight D. Eisenhower
+1952,North Carolina,Democrat,14,Adlai Stevenson
+1952,North Dakota,Republican,4,Dwight D. Eisenhower
+1952,Ohio,Republican,25,Dwight D. Eisenhower
+1952,Oklahoma,Republican,8,Dwight D. Eisenhower
+1952,Oregon,Republican,6,Dwight D. Eisenhower
+1952,Pennsylvania,Republican,32,Dwight D. Eisenhower
+1952,Rhode Island,Republican,4,Dwight D. Eisenhower
+1952,South Carolina,Democrat,8,Adlai Stevenson
+1952,South Dakota,Republican,4,Dwight D. Eisenhower
+1952,Tennessee,Republican,11,Dwight D. Eisenhower
+1952,Texas,Republican,24,Dwight D. Eisenhower
+1952,Utah,Republican,4,Dwight D. Eisenhower
+1952,Vermont,Republican,3,Dwight D. Eisenhower
+1952,Virginia,Republican,12,Dwight D. Eisenhower
+1952,Washington,Republican,9,Dwight D. Eisenhower
+1952,West Virginia,Democrat,8,Adlai Stevenson
+1952,Wisconsin,Republican,12,Dwight D. Eisenhower
+1952,Wyoming,Republican,3,Dwight D. Eisenhower
+1952,"Washington, D.C.",Vacant State,0,
+1948,Alabama,States' Rights Democrat,11,J. Strom Thurmond
+1948,Alaska,Vacant State,0,
+1948,Arizona,Democrat,4,Harry S. Truman
+1948,Arkansas,Democrat,9,Harry S. Truman
+1948,California,Democrat,25,Harry S. Truman
+1948,Colorado,Democrat,6,Harry S. Truman
+1948,Connecticut,Republican,8,Thomas E. Dewey
+1948,Delaware,Republican,3,Thomas E. Dewey
+1948,Florida,Democrat,8,Harry S. Truman
+1948,Georgia,States' Rights Democrat,12,J. Strom Thurmond
+1948,Hawaii,Vacant State,0,
+1948,Idaho,Democrat,4,Harry S. Truman
+1948,Illinois,Democrat,28,Harry S. Truman
+1948,Indiana,Republican,13,Thomas E. Dewey
+1948,Iowa,Democrat,10,Harry S. Truman
+1948,Kansas,Republican,8,Thomas E. Dewey
+1948,Kentucky,Democrat,11,Harry S. Truman
+1948,Louisiana,Democrat,10,Harry S. Truman
+1948,Maine,Republican,5,Thomas E. Dewey
+1948,Maryland,Democrat,8,Harry S. Truman
+1948,Massachusetts,Democrat,16,Harry S. Truman
+1948,Michigan,Republican,19,Thomas E. Dewey
+1948,Minnesota,Democrat,11,Harry S. Truman
+1948,Mississippi,States' Rights Democrat,9,J. Strom Thurmond
+1948,Missouri,Democrat,15,Harry S. Truman
+1948,Montana,Democrat,4,Harry S. Truman
+1948,Nebraska,Republican,6,Thomas E. Dewey
+1948,Nevada,Democrat,3,Harry S. Truman
+1948,New Hampshire,Republican,4,Thomas E. Dewey
+1948,New Jersey,Republican,16,Thomas E. Dewey
+1948,New Mexico,Democrat,4,Harry S. Truman
+1948,New York,Republican,47,Thomas E. Dewey
+1948,North Carolina,Democrat,14,Harry S. Truman
+1948,North Dakota,Republican,4,Thomas E. Dewey
+1948,Ohio,Democrat,25,Harry S. Truman
+1948,Oklahoma,Democrat,10,Harry S. Truman
+1948,Oregon,Republican,6,Thomas E. Dewey
+1948,Pennsylvania,Republican,35,Thomas E. Dewey
+1948,Rhode Island,Democrat,4,Harry S. Truman
+1948,South Carolina,States' Rights Democrat,8,J. Strom Thurmond
+1948,South Dakota,Republican,4,Thomas E. Dewey
+1948,Tennessee,Democrat,11,Harry S. Truman
+1948,Texas,Democrat,23,Harry S. Truman
+1948,Utah,Democrat,4,Harry S. Truman
+1948,Vermont,Republican,3,Thomas E. Dewey
+1948,Virginia,Democrat,11,Harry S. Truman
+1948,Washington,Democrat,8,Harry S. Truman
+1948,West Virginia,Democrat,8,Harry S. Truman
+1948,Wisconsin,Democrat,12,Harry S. Truman
+1948,Wyoming,Republican,3,Thomas E. Dewey
+1944,Alabama,Democrat,11,Franklin D. Roosevelt
+1944,Alaska,Vacant State,0,
+1944,Arizona,Democrat,4,Franklin D. Roosevelt
+1944,Arkansas,Democrat,9,Franklin D. Roosevelt
+1944,California,Democrat,25,Franklin D. Roosevelt
+1944,Colorado,Republican,6,Thomas E. Dewey
+1944,Connecticut,Democrat,8,Franklin D. Roosevelt
+1944,Delaware,Democrat,3,Franklin D. Roosevelt
+1944,Florida,Democrat,8,Franklin D. Roosevelt
+1944,Georgia,Democrat,12,Franklin D. Roosevelt
+1944,Hawaii,Vacant State,0,
+1944,Idaho,Democrat,4,Franklin D. Roosevelt
+1944,Illinois,Democrat,28,Franklin D. Roosevelt
+1944,Indiana,Republican,13,Thomas E. Dewey
+1944,Iowa,Republican,10,Thomas E. Dewey
+1944,Kansas,Republican,8,Thomas E. Dewey
+1944,Kentucky,Democrat,11,Franklin D. Roosevelt
+1944,Louisiana,Democrat,10,Franklin D. Roosevelt
+1944,Maine,Republican,5,Thomas E. Dewey
+1944,Maryland,Democrat,8,Franklin D. Roosevelt
+1944,Massachusetts,Democrat,16,Franklin D. Roosevelt
+1944,Michigan,Democrat,19,Franklin D. Roosevelt
+1944,Minnesota,Democrat,11,Franklin D. Roosevelt
+1944,Mississippi,Democrat,9,Franklin D. Roosevelt
+1944,Missouri,Democrat,15,Franklin D. Roosevelt
+1944,Montana,Democrat,4,Franklin D. Roosevelt
+1944,Nebraska,Republican,6,Thomas E. Dewey
+1944,Nevada,Democrat,3,Franklin D. Roosevelt
+1944,New Hampshire,Democrat,4,Franklin D. Roosevelt
+1944,New Jersey,Democrat,16,Franklin D. Roosevelt
+1944,New Mexico,Democrat,4,Franklin D. Roosevelt
+1944,New York,Democrat,47,Franklin D. Roosevelt
+1944,North Carolina,Democrat,14,Franklin D. Roosevelt
+1944,North Dakota,Republican,4,Thomas E. Dewey
+1944,Ohio,Republican,25,Thomas E. Dewey
+1944,Oklahoma,Democrat,10,Franklin D. Roosevelt
+1944,Oregon,Democrat,6,Franklin D. Roosevelt
+1944,Pennsylvania,Democrat,35,Franklin D. Roosevelt
+1944,Rhode Island,Democrat,4,Franklin D. Roosevelt
+1944,South Carolina,Democrat,8,Franklin D. Roosevelt
+1944,South Dakota,Republican,4,Thomas E. Dewey
+1944,Tennessee,Democrat,12,Franklin D. Roosevelt
+1944,Texas,Democrat,23,Franklin D. Roosevelt
+1944,Utah,Democrat,4,Franklin D. Roosevelt
+1944,Vermont,Republican,3,Thomas E. Dewey
+1944,Virginia,Democrat,11,Franklin D. Roosevelt
+1944,Washington,Democrat,8,Franklin D. Roosevelt
+1944,West Virginia,Democrat,8,Franklin D. Roosevelt
+1944,Wisconsin,Republican,12,Thomas E. Dewey
+1944,Wyoming,Republican,3,Thomas E. Dewey
+1944,"Washington, D.C.",Vacant State,0,
+1940,Alabama,Democrat,11,Franklin D. Roosevelt
+1940,Alaska,Vacant State,0,
+1940,Arizona,Democrat,3,Franklin D. Roosevelt
+1940,Arkansas,Democrat,9,Franklin D. Roosevelt
+1940,California,Democrat,22,Franklin D. Roosevelt
+1940,Colorado,Republican,6,Wendell L. Willkie
+1940,Connecticut,Democrat,8,Franklin D. Roosevelt
+1940,Delaware,Democrat,3,Franklin D. Roosevelt
+1940,Florida,Democrat,7,Franklin D. Roosevelt
+1940,Georgia,Democrat,12,Franklin D. Roosevelt
+1940,Hawaii,Vacant State,0,
+1940,Idaho,Democrat,4,Franklin D. Roosevelt
+1940,Illinois,Democrat,29,Franklin D. Roosevelt
+1940,Indiana,Republican,14,Wendell L. Willkie
+1940,Iowa,Republican,11,Wendell L. Willkie
+1940,Kansas,Republican,9,Wendell L. Willkie
+1940,Kentucky,Democrat,11,Franklin D. Roosevelt
+1940,Louisiana,Democrat,10,Franklin D. Roosevelt
+1940,Maine,Republican,5,Wendell L. Willkie
+1940,Maryland,Democrat,8,Franklin D. Roosevelt
+1940,Massachusetts,Democrat,17,Franklin D. Roosevelt
+1940,Michigan,Republican,19,Wendell L. Willkie
+1940,Minnesota,Democrat,11,Franklin D. Roosevelt
+1940,Mississippi,Democrat,9,Franklin D. Roosevelt
+1940,Missouri,Democrat,15,Franklin D. Roosevelt
+1940,Montana,Democrat,4,Franklin D. Roosevelt
+1940,Nebraska,Republican,7,Wendell L. Willkie
+1940,Nevada,Democrat,3,Franklin D. Roosevelt
+1940,New Hampshire,Democrat,4,Franklin D. Roosevelt
+1940,New Jersey,Democrat,16,Franklin D. Roosevelt
+1940,New Mexico,Democrat,3,Franklin D. Roosevelt
+1940,New York,Democrat,47,Franklin D. Roosevelt
+1940,North Carolina,Democrat,13,Franklin D. Roosevelt
+1940,North Dakota,Republican,4,Wendell L. Willkie
+1940,Ohio,Democrat,26,Franklin D. Roosevelt
+1940,Oklahoma,Democrat,11,Franklin D. Roosevelt
+1940,Oregon,Democrat,5,Franklin D. Roosevelt
+1940,Pennsylvania,Democrat,36,Franklin D. Roosevelt
+1940,Rhode Island,Democrat,4,Franklin D. Roosevelt
+1940,South Carolina,Democrat,8,Franklin D. Roosevelt
+1940,South Dakota,Republican,4,Wendell L. Willkie
+1940,Tennessee,Democrat,11,Franklin D. Roosevelt
+1940,Texas,Democrat,23,Franklin D. Roosevelt
+1940,Utah,Democrat,4,Franklin D. Roosevelt
+1940,Vermont,Republican,3,Wendell L. Willkie
+1940,Virginia,Democrat,11,Franklin D. Roosevelt
+1940,Washington,Democrat,8,Franklin D. Roosevelt
+1940,West Virginia,Democrat,8,Franklin D. Roosevelt
+1940,Wisconsin,Democrat,12,Franklin D. Roosevelt
+1940,Wyoming,Democrat,3,Franklin D. Roosevelt
+1940,"Washington, D.C.",Vacant State,0,
+1936,Alabama,Democrat,11,Franklin D. Roosevelt
+1936,Alaska,Vacant State,0,
+1936,Arizona,Democrat,3,Franklin D. Roosevelt
+1936,Arkansas,Democrat,9,Franklin D. Roosevelt
+1936,California,Democrat,22,Franklin D. Roosevelt
+1936,Colorado,Democrat,6,Franklin D. Roosevelt
+1936,Connecticut,Democrat,8,Franklin D. Roosevelt
+1936,Delaware,Democrat,3,Franklin D. Roosevelt
+1936,Florida,Democrat,7,Franklin D. Roosevelt
+1936,Georgia,Democrat,12,Franklin D. Roosevelt
+1936,Hawaii,Vacant State,0,
+1936,Idaho,Democrat,4,Franklin D. Roosevelt
+1936,Illinois,Democrat,29,Franklin D. Roosevelt
+1936,Indiana,Democrat,14,Franklin D. Roosevelt
+1936,Iowa,Democrat,11,Franklin D. Roosevelt
+1936,Kansas,Democrat,9,Franklin D. Roosevelt
+1936,Kentucky,Democrat,11,Franklin D. Roosevelt
+1936,Louisiana,Democrat,10,Franklin D. Roosevelt
+1936,Maine,Republican,5,Alfred M. Landon
+1936,Maryland,Democrat,8,Franklin D. Roosevelt
+1936,Massachusetts,Democrat,17,Franklin D. Roosevelt
+1936,Michigan,Democrat,19,Franklin D. Roosevelt
+1936,Minnesota,Democrat,11,Franklin D. Roosevelt
+1936,Mississippi,Democrat,9,Franklin D. Roosevelt
+1936,Missouri,Democrat,15,Franklin D. Roosevelt
+1936,Montana,Democrat,4,Franklin D. Roosevelt
+1936,Nebraska,Democrat,7,Franklin D. Roosevelt
+1936,Nevada,Democrat,3,Franklin D. Roosevelt
+1936,New Hampshire,Democrat,4,Franklin D. Roosevelt
+1936,New Jersey,Democrat,16,Franklin D. Roosevelt
+1936,New Mexico,Democrat,3,Franklin D. Roosevelt
+1936,New York,Democrat,47,Franklin D. Roosevelt
+1936,North Carolina,Democrat,13,Franklin D. Roosevelt
+1936,North Dakota,Democrat,4,Franklin D. Roosevelt
+1936,Ohio,Democrat,26,Franklin D. Roosevelt
+1936,Oklahoma,Democrat,11,Franklin D. Roosevelt
+1936,Oregon,Democrat,5,Franklin D. Roosevelt
+1936,Pennsylvania,Democrat,36,Franklin D. Roosevelt
+1936,Rhode Island,Democrat,4,Franklin D. Roosevelt
+1936,South Carolina,Democrat,8,Franklin D. Roosevelt
+1936,South Dakota,Democrat,4,Franklin D. Roosevelt
+1936,Tennessee,Democrat,11,Franklin D. Roosevelt
+1936,Texas,Democrat,23,Franklin D. Roosevelt
+1936,Utah,Democrat,4,Franklin D. Roosevelt
+1936,Vermont,Republican,3,Alfred M. Landon
+1936,Virginia,Democrat,11,Franklin D. Roosevelt
+1936,Washington,Democrat,8,Franklin D. Roosevelt
+1936,West Virginia,Democrat,8,Franklin D. Roosevelt
+1936,Wisconsin,Democrat,12,Franklin D. Roosevelt
+1936,Wyoming,Democrat,3,Franklin D. Roosevelt
+1936,"Washington, D.C.",Vacant State,0,
+1932,Alabama,Democrat,9,Franklin D. Roosevelt
+1932,Alaska,Vacant State,0,
+1932,Arizona,Democrat,3,Franklin D. Roosevelt
+1932,Arkansas,Democrat,9,Franklin D. Roosevelt
+1932,California,Democrat,22,Franklin D. Roosevelt
+1932,Colorado,Democrat,6,Franklin D. Roosevelt
+1932,Connecticut,Republican,8,Herbert C. Hoover
+1932,Delaware,Republican,3,Herbert C. Hoover
+1932,Florida,Democrat,7,Franklin D. Roosevelt
+1932,Georgia,Democrat,12,Franklin D. Roosevelt
+1932,Hawaii,Vacant State,0,
+1932,Idaho,Democrat,4,Franklin D. Roosevelt
+1932,Illinois,Democrat,29,Franklin D. Roosevelt
+1932,Indiana,Democrat,14,Franklin D. Roosevelt
+1932,Iowa,Democrat,11,Franklin D. Roosevelt
+1932,Kansas,Democrat,9,Franklin D. Roosevelt
+1932,Kentucky,Democrat,11,Franklin D. Roosevelt
+1932,Louisiana,Democrat,10,Franklin D. Roosevelt
+1932,Maine,Republican,5,Herbert C. Hoover
+1932,Maryland,Democrat,8,Franklin D. Roosevelt
+1932,Massachusetts,Democrat,17,Franklin D. Roosevelt
+1932,Michigan,Democrat,19,Franklin D. Roosevelt
+1932,Minnesota,Democrat,11,Franklin D. Roosevelt
+1932,Mississippi,Democrat,9,Franklin D. Roosevelt
+1932,Missouri,Democrat,15,Franklin D. Roosevelt
+1932,Montana,Democrat,4,Franklin D. Roosevelt
+1932,Nebraska,Democrat,7,Franklin D. Roosevelt
+1932,Nevada,Democrat,3,Franklin D. Roosevelt
+1932,New Hampshire,Republican,4,Herbert C. Hoover
+1932,New Jersey,Democrat,16,Franklin D. Roosevelt
+1932,New Mexico,Democrat,3,Franklin D. Roosevelt
+1932,New York,Democrat,47,Franklin D. Roosevelt
+1932,North Carolina,Democrat,13,Franklin D. Roosevelt
+1932,North Dakota,Democrat,4,Franklin D. Roosevelt
+1932,Ohio,Democrat,26,Franklin D. Roosevelt
+1932,Oklahoma,Democrat,11,Franklin D. Roosevelt
+1932,Oregon,Democrat,5,Franklin D. Roosevelt
+1932,Pennsylvania,Republican,36,Herbert C. Hoover
+1932,Rhode Island,Democrat,4,Franklin D. Roosevelt
+1932,South Carolina,Democrat,8,Franklin D. Roosevelt
+1932,South Dakota,Democrat,4,Franklin D. Roosevelt
+1932,Tennessee,Democrat,11,Franklin D. Roosevelt
+1932,Texas,Democrat,23,Franklin D. Roosevelt
+1932,Utah,Democrat,4,Franklin D. Roosevelt
+1932,Vermont,Republican,3,Herbert C. Hoover
+1932,Virginia,Democrat,11,Franklin D. Roosevelt
+1932,Washington,Democrat,8,Franklin D. Roosevelt
+1932,West Virginia,Democrat,8,Franklin D. Roosevelt
+1932,Wisconsin,Democrat,12,Franklin D. Roosevelt
+1932,Wyoming,Democrat,3,Franklin D. Roosevelt
+1932,"Washington, D.C.",Vacant State,0,
+1928,Alabama,Democrat,12,Alfred E. Smith
+1928,Alaska,Vacant State,0,
+1928,Arizona,Republican,9,Herbert C. Hoover
+1928,Arkansas,Democrat,9,Alfred E. Smith
+1928,California,Republican,13,Herbert C. Hoover
+1928,Colorado,Republican,6,Herbert C. Hoover
+1928,Connecticut,Republican,7,Herbert C. Hoover
+1928,Delaware,Republican,3,Herbert C. Hoover
+1928,Florida,Republican,6,Herbert C. Hoover
+1928,Georgia,Democrat,14,Alfred E. Smith
+1928,Hawaii,Vacant State,0,
+1928,Idaho,Republican,4,Herbert C. Hoover
+1928,Illinois,Republican,29,Herbert C. Hoover
+1928,Indiana,Republican,15,Herbert C. Hoover
+1928,Iowa,Republican,13,Herbert C. Hoover
+1928,Kansas,Republican,10,Herbert C. Hoover
+1928,Kentucky,Republican,13,Herbert C. Hoover
+1928,Louisiana,Democrat,10,Alfred E. Smith
+1928,Maine,Republican,6,Herbert C. Hoover
+1928,Maryland,Republican,8,Herbert C. Hoover
+1928,Massachusetts,Democrat,18,Alfred E. Smith
+1928,Michigan,Republican,15,Herbert C. Hoover
+1928,Minnesota,Republican,12,Herbert C. Hoover
+1928,Mississippi,Democrat,10,Alfred E. Smith
+1928,Missouri,Republican,18,Herbert C. Hoover
+1928,Montana,Republican,4,Herbert C. Hoover
+1928,Nebraska,Republican,8,Herbert C. Hoover
+1928,Nevada,Republican,3,Herbert C. Hoover
+1928,New Hampshire,Republican,4,Herbert C. Hoover
+1928,New Jersey,Republican,14,Herbert C. Hoover
+1928,New Mexico,Republican,3,Herbert C. Hoover
+1928,New York,Republican,45,Herbert C. Hoover
+1928,North Carolina,Republican,12,Herbert C. Hoover
+1928,North Dakota,Republican,5,Herbert C. Hoover
+1928,Ohio,Republican,24,Herbert C. Hoover
+1928,Oklahoma,Republican,10,Herbert C. Hoover
+1928,Oregon,Republican,5,Herbert C. Hoover
+1928,Pennsylvania,Republican,38,Herbert C. Hoover
+1928,Rhode Island,Democrat,5,Alfred E. Smith
+1928,South Carolina,Democrat,9,Alfred E. Smith
+1928,South Dakota,Republican,5,Herbert C. Hoover
+1928,Tennessee,Republican,12,Herbert C. Hoover
+1928,Texas,Republican,20,Herbert C. Hoover
+1928,Utah,Republican,4,Herbert C. Hoover
+1928,Vermont,Republican,4,Herbert C. Hoover
+1928,Virginia,Republican,12,Herbert C. Hoover
+1928,Washington,Republican,7,Herbert C. Hoover
+1928,West Virginia,Republican,8,Herbert C. Hoover
+1928,Wisconsin,Republican,13,Herbert C. Hoover
+1928,Wyoming,Republican,3,Herbert C. Hoover
+1928,"Washington, D.C.",Vacant State,0,
+1924,Alabama,Democrat,12,John W. Davis
+1924,Alaska,Vacant State,0,
+1924,Arizona,Republican,3,Calvin Coolidge
+1924,Arkansas,Democrat,9,John W. Davis
+1924,California,Republican,13,Calvin Coolidge
+1924,Colorado,Republican,6,Calvin Coolidge
+1924,Connecticut,Republican,7,Calvin Coolidge
+1924,Delaware,Republican,3,Calvin Coolidge
+1924,Florida,Democrat,6,Calvin Coolidge
+1924,Georgia,Democrat,14,John W. Davis
+1924,Hawaii,Vacant State,0,
+1924,Idaho,Republican,4,Calvin Coolidge
+1924,Illinois,Republican,29,Calvin Coolidge
+1924,Indiana,Republican,15,Calvin Coolidge
+1924,Iowa,Republican,13,Calvin Coolidge
+1924,Kansas,Republican,10,Calvin Coolidge
+1924,Kentucky,Republican,13,Calvin Coolidge
+1924,Louisiana,Democrat,10,John W. Davis
+1924,Maine,Republican,6,Calvin Coolidge
+1924,Maryland,Republican,8,Calvin Coolidge
+1924,Massachusetts,Republican,18,Calvin Coolidge
+1924,Michigan,Republican,15,Calvin Coolidge
+1924,Minnesota,Republican,12,Calvin Coolidge
+1924,Mississippi,Democrat,10,John W. Davis
+1924,Missouri,Republican,18,Calvin Coolidge
+1924,Montana,Republican,4,Calvin Coolidge
+1924,Nebraska,Republican,8,Calvin Coolidge
+1924,Nevada,Republican,3,Calvin Coolidge
+1924,New Hampshire,Republican,4,Calvin Coolidge
+1924,New Jersey,Republican,14,Calvin Coolidge
+1924,New Mexico,Republican,3,Calvin Coolidge
+1924,New York,Republican,45,Calvin Coolidge
+1924,North Carolina,Democrat,12,John W. Davis
+1924,North Dakota,Republican,5,Calvin Coolidge
+1924,Ohio,Republican,24,Calvin Coolidge
+1924,Oklahoma,Democrat,10,John W. Davis
+1924,Oregon,Republican,5,Calvin Coolidge
+1924,Pennsylvania,Republican,38,Calvin Coolidge
+1924,Rhode Island,Republican,5,John W. Davis
+1924,South Carolina,Democrat,9,John W. Davis
+1924,South Dakota,Republican,5,Calvin Coolidge
+1924,Tennessee,Democrat,12,John W. Davis
+1924,Texas,Democrat,20,John W. Davis
+1924,Utah,Republican,4,Calvin Coolidge
+1924,Vermont,Republican,4,Calvin Coolidge
+1924,Virginia,Democrat,12,John W. Davis
+1924,Washington,Republican,7,Calvin Coolidge
+1924,West Virginia,Republican,8,Calvin Coolidge
+1924,Wisconsin,Progressive,13,Robert M. LaFollette
+1924,Wyoming,Republican,3,Calvin Coolidge
+1924,"Washington, D.C.",Vacant State,0,
+1920,Alabama,Democrat,12,James M. Cox
+1920,Alaska,Vacant State,0,
+1920,Arizona,Republican,3,Warren G. Harding
+1920,Arkansas,Democrat,9,James M. Cox
+1920,California,Republican,13,Warren G. Harding
+1920,Colorado,Republican,6,Warren G. Harding
+1920,Connecticut,Republican,7,Warren G. Harding
+1920,Delaware,Republican,3,Warren G. Harding
+1920,Florida,Democrat,6,Warren G. Harding
+1920,Georgia,Democrat,14,James M. Cox
+1920,Hawaii,Vacant State,0,
+1920,Idaho,Republican,4,Warren G. Harding
+1920,Illinois,Republican,29,Warren G. Harding
+1920,Indiana,Republican,15,Warren G. Harding
+1920,Iowa,Republican,13,Warren G. Harding
+1920,Kansas,Republican,10,Warren G. Harding
+1920,Kentucky,Democrat,13,James M. Cox
+1920,Louisiana,Democrat,10,James M. Cox
+1920,Maine,Republican,6,Warren G. Harding
+1920,Maryland,Republican,8,Warren G. Harding
+1920,Massachusetts,Republican,18,Warren G. Harding
+1920,Michigan,Republican,15,Warren G. Harding
+1920,Minnesota,Republican,12,Warren G. Harding
+1920,Mississippi,Democrat,10,James M. Cox
+1920,Missouri,Republican,18,Warren G. Harding
+1920,Montana,Republican,4,Warren G. Harding
+1920,Nebraska,Republican,8,Warren G. Harding
+1920,Nevada,Republican,3,Warren G. Harding
+1920,New Hampshire,Republican,4,Warren G. Harding
+1920,New Jersey,Republican,14,Warren G. Harding
+1920,New Mexico,Republican,3,Warren G. Harding
+1920,New York,Republican,45,Warren G. Harding
+1920,North Carolina,Democrat,12,James M. Cox
+1920,North Dakota,Republican,5,Warren G. Harding
+1920,Ohio,Republican,24,Warren G. Harding
+1920,Oklahoma,Republican,10,Warren G. Harding
+1920,Oregon,Republican,5,Warren G. Harding
+1920,Pennsylvania,Republican,38,Warren G. Harding
+1920,Rhode Island,Republican,4,James M. Cox
+1920,South Carolina,Democrat,9,James M. Cox
+1920,South Dakota,Republican,5,Warren G. Harding
+1920,Tennessee,Republican,12,Warren G. Harding
+1920,Texas,Democrat,20,James M. Cox
+1920,Utah,Republican,4,Warren G. Harding
+1920,Vermont,Republican,4,Warren G. Harding
+1920,Virginia,Democrat,12,James M. Cox
+1920,Washington,Republican,7,Warren G. Harding
+1920,West Virginia,Republican,8,Warren G. Harding
+1920,Wisconsin,Republican,13,Warren G. Harding
+1920,Wyoming,Republican,3,Warren G. Harding
+1920,"Washington, D.C.",Vacant State,0,
+1916,Alabama,Democrat,12,Woodrow Wilson
+1916,Alaska,Vacant State,0,
+1916,Arizona,Democrat,3,Woodrow Wilson
+1916,Arkansas,Democrat,9,Woodrow Wilson
+1916,California,Democrat,13,Woodrow Wilson
+1916,Colorado,Democrat,6,Woodrow Wilson
+1916,Connecticut,Republican,7,Charles E. Hughes
+1916,Delaware,Republican,3,Charles E. Hughes
+1916,Florida,Democrat,6,Woodrow Wilson
+1916,Georgia,Democrat,14,Woodrow Wilson
+1916,Hawaii,Vacant State,0,
+1916,Idaho,Democrat,4,Woodrow Wilson
+1916,Illinois,Republican,29,Charles E. Hughes
+1916,Indiana,Republican,15,Charles E. Hughes
+1916,Iowa,Republican,13,Charles E. Hughes
+1916,Kansas,Democrat,10,Woodrow Wilson
+1916,Kentucky,Democrat,10,Woodrow Wilson
+1916,Louisiana,Democrat,10,Woodrow Wilson
+1916,Maine,Republican,6,Charles E. Hughes
+1916,Maryland,Democrat,8,Woodrow Wilson
+1916,Massachusetts,Republican,18,Charles E. Hughes
+1916,Michigan,Republican,15,Charles E. Hughes
+1916,Minnesota,Republican,12,Charles E. Hughes
+1916,Mississippi,Democrat,10,Woodrow Wilson
+1916,Missouri,Democrat,18,Woodrow Wilson
+1916,Montana,Democrat,4,Woodrow Wilson
+1916,Nebraska,Democrat,8,Woodrow Wilson
+1916,Nevada,Democrat,3,Woodrow Wilson
+1916,New Hampshire,Democrat,4,Woodrow Wilson
+1916,New Jersey,Republican,14,Charles E. Hughes
+1916,New Mexico,Democrat,3,Woodrow Wilson
+1916,New York,Republican,45,Charles E. Hughes
+1916,North Carolina,Democrat,12,Woodrow Wilson
+1916,North Dakota,Democrat,5,Woodrow Wilson
+1916,Ohio,Democrat,24,Woodrow Wilson
+1916,Oklahoma,Democrat,10,Woodrow Wilson
+1916,Oregon,Republican,5,Charles E. Hughes
+1916,Pennsylvania,Republican,38,Charles E. Hughes
+1916,Rhode Island,Republican,4,Charles E. Hughes
+1916,South Carolina,Democrat,9,Woodrow Wilson
+1916,South Dakota,Republican,5,Charles E. Hughes
+1916,Tennessee,Democrat,12,Woodrow Wilson
+1916,Texas,Democrat,20,Woodrow Wilson
+1916,Utah,Democrat,4,Woodrow Wilson
+1916,Vermont,Republican,4,Charles E. Hughes
+1916,Virginia,Democrat,12,Woodrow Wilson
+1916,Washington,Democrat,7,Woodrow Wilson
+1916,West Virginia,Republican,7,Charles E. Hughes
+1916,West Virginia-2,Democrat,1,Woodrow Wilson
+1916,Wisconsin,Republican,13,Charles E. Hughes
+1916,Wyoming,Democrat,3,Woodrow Wilson
+1916,"Washington, D.C.",Vacant State,0,
+1912,Alabama,Democrat,12,Woodrow Wilson
+1912,Alaska,Vacant State,0,
+1912,Arizona,Democrat,3,Woodrow Wilson
+1912,Arkansas,Democrat,9,Woodrow Wilson
+1912,California,Progressive,11,Theodore Roosevelt
+1912,California-2,Democrat,2,Woodrow Wilson
+1912,Colorado,Democrat,6,Woodrow Wilson
+1912,Connecticut,Democrat,7,Woodrow Wilson
+1912,Delaware,Democrat,3,Woodrow Wilson
+1912,Florida,Democrat,6,Woodrow Wilson
+1912,Georgia,Democrat,14,Woodrow Wilson
+1912,Hawaii,Vacant State,0,
+1912,Idaho,Democrat,4,Woodrow Wilson
+1912,Illinois,Democrat,29,Woodrow Wilson
+1912,Indiana,Democrat,15,Woodrow Wilson
+1912,Iowa,Democrat,13,Woodrow Wilson
+1912,Kansas,Democrat,10,Woodrow Wilson
+1912,Kentucky,Democrat,13,Woodrow Wilson
+1912,Louisiana,Democrat,10,Woodrow Wilson
+1912,Maine,Democrat,6,Woodrow Wilson
+1912,Maryland,Democrat,8,Woodrow Wilson
+1912,Massachusetts,Democrat,18,Woodrow Wilson
+1912,Michigan,Progressive,15,Theodore Roosevelt
+1912,Minnesota,Progressive,12,Theodore Roosevelt
+1912,Mississippi,Democrat,10,Woodrow Wilson
+1912,Missouri,Democrat,18,Woodrow Wilson
+1912,Montana,Democrat,4,Woodrow Wilson
+1912,Nebraska,Democrat,8,Woodrow Wilson
+1912,Nevada,Democrat,3,Woodrow Wilson
+1912,New Hampshire,Democrat,4,Woodrow Wilson
+1912,New Jersey,Democrat,14,Woodrow Wilson
+1912,New Mexico,Democrat,3,Woodrow Wilson
+1912,New York,Democrat,45,Woodrow Wilson
+1912,North Carolina,Democrat,12,Woodrow Wilson
+1912,North Dakota,Democrat,5,Woodrow Wilson
+1912,Ohio,Democrat,24,Woodrow Wilson
+1912,Oklahoma,Democrat,10,Woodrow Wilson
+1912,Oregon,Democrat,5,Woodrow Wilson
+1912,Pennsylvania,Progressive,38,Theodore Roosevelt
+1912,Rhode Island,Democrat,4,Woodrow Wilson
+1912,South Carolina,Democrat,9,Woodrow Wilson
+1912,South Dakota,Progressive,5,Theodore Roosevelt
+1912,Tennessee,Democrat,12,Woodrow Wilson
+1912,Texas,Democrat,20,Woodrow Wilson
+1912,Utah,Republican,4,William H. Taft
+1912,Vermont,Republican,4,William H. Taft
+1912,Virginia,Democrat,12,Woodrow Wilson
+1912,Washington,Progressive,7,Theodore Roosevelt
+1912,West Virginia,Democrat,8,Woodrow Wilson
+1912,Wisconsin,Democrat,13,Woodrow Wilson
+1912,Wyoming,Democrat,3,Woodrow Wilson
+1912,"Washington, D.C.",Vacant State,0,
+1908,Alabama,Democrat,11,William J. Bryan
+1908,Alaska,Vacant State,0,
+1908,Arizona,Vacant State,0,
+1908,Arkansas,Democrat,9,William J. Bryan
+1908,California,Republican,10,William H. Taft
+1908,Colorado,Democrat,5,William J. Bryan
+1908,Connecticut,Republican,7,William H. Taft
+1908,Delaware,Republican,3,William H. Taft
+1908,Florida,Democrat,5,William J. Bryan
+1908,Georgia,Democrat,13,William J. Bryan
+1908,Hawaii,Vacant State,0,
+1908,Idaho,Republican,3,William H. Taft
+1908,Illinois,Republican,27,William H. Taft
+1908,Indiana,Republican,15,William H. Taft
+1908,Iowa,Republican,13,William H. Taft
+1908,Kansas,Republican,10,William H. Taft
+1908,Kentucky,Democrat,13,William J. Bryan
+1908,Louisiana,Democrat,9,William J. Bryan
+1908,Maine,Republican,6,William H. Taft
+1908,Maryland,Democrat,6,William J. Bryan
+1908,Maryland-2,Republican,2,William H. Taft
+1908,Massachusetts,Republican,16,William H. Taft
+1908,Michigan,Republican,14,William H. Taft
+1908,Minnesota,Republican,11,William H. Taft
+1908,Mississippi,Democrat,10,William J. Bryan
+1908,Missouri,Republican,18,William H. Taft
+1908,Montana,Republican,3,William H. Taft
+1908,Nebraska,Democrat,8,William J. Bryan
+1908,Nevada,Democrat,6,William J. Bryan
+1908,New Hampshire,Republican,4,William H. Taft
+1908,New Jersey,Republican,12,William H. Taft
+1908,New Mexico,Vacant State,0,
+1908,New York,Republican,39,William J. Bryan
+1908,North Carolina,Democrat,12,William J. Bryan
+1908,North Dakota,Republican,4,William H. Taft
+1908,Ohio,Republican,23,William H. Taft
+1908,Oklahoma,Democrat,7,William J. Bryan
+1908,Oregon,Republican,4,William H. Taftn
+1908,Pennsylvania,Republican,34,William H. Taft
+1908,Rhode Island,Republican,4,William H. Taft
+1908,South Carolina,Democrat,9,William J. Bryan
+1908,South Dakota,Republican,4,William H. Taft
+1908,Tennessee,Democrat,12,William J. Bryan
+1908,Texas,Democrat,18,William J. Bryan
+1908,Utah,Republican,3,William H. Taft
+1908,Vermont,Republican,4,William H. Taft
+1908,Virginia,Democrat,12,William J. Bryan
+1908,Washington,Republican,5,William H. Taft
+1908,West Virginia,Republican,7,William H. Taft
+1908,Wisconsin,Republican,13,William H. Taft
+1908,Wyoming,Republican,3,William H. Taft
+1908,"Washington, D.C.",Vacant State,0,
+1904,Alabama,Democrat,11,Alton B. Parker
+1904,Alaska,Vacant State,0,
+1904,Arizona,Vacant State,0,
+1904,Arkansas,Democrat,9,Alton B. Parker
+1904,California,Republican,10,Theodore Roosevelt
+1904,Colorado,Republican,5,Theodore Roosevelt
+1904,Connecticut,Republican,7,Theodore Roosevelt
+1904,Delaware,Republican,3,Theodore Roosevelt
+1904,Florida,Democrat,5,Alton B. Parker
+1904,Georgia,Democrat,13,Alton B. Parker
+1904,Hawaii,Vacant State,0,
+1904,Idaho,Republican,4,Theodore Roosevelt
+1904,Illinois,Republican,27,Theodore Roosevelt
+1904,Indiana,Republican,15,Theodore Roosevelt
+1904,Iowa,Republican,13,Theodore Roosevelt
+1904,Kansas,Republican,10,Theodore Roosevelt
+1904,Kentucky,Democrat,13,Alton B. Parker
+1904,Louisiana,Democrat,9,Alton B. Parker
+1904,Maine,Republican,6,Theodore Roosevelt
+1904,Maryland,Democrat,7,Alton B. Parker
+1904,Maryland-2,Republican,1,Theodore Roosevelt
+1904,Massachusetts,Republican,16,Theodore Roosevelt
+1904,Michigan,Republican,14,Theodore Roosevelt
+1904,Minnesota,Republican,11,Theodore Roosevelt
+1904,Mississippi,Democrat,10,Alton B. Parker
+1904,Missouri,Republican,18,Theodore Roosevelt
+1904,Montana,Republican,3,Theodore Roosevelt
+1904,Nebraska,Republican,8,Theodore Roosevelt
+1904,Nevada,Republican,3,Theodore Roosevelt
+1904,New Hampshire,Republican,4,Theodore Roosevelt
+1904,New Jersey,Republican,12,Theodore Roosevelt
+1904,New Mexico,Vacant State,0,
+1904,New York,Republican,39,Alton B. Parker
+1904,North Carolina,Democrat,12,Alton B. Parker
+1904,North Dakota,Republican,4,Theodore Roosevelt
+1904,Ohio,Republican,23,Theodore Roosevelt
+1904,Oklahoma,Vacant State,0,
+1904,Oregon,Republican,4,Theodore Rooseveltn
+1904,Pennsylvania,Republican,34,Theodore Roosevelt
+1904,Rhode Island,Republican,4,Theodore Roosevelt
+1904,South Carolina,Democrat,9,Alton B. Parker
+1904,South Dakota,Republican,4,Theodore Roosevelt
+1904,Tennessee,Democrat,12,Alton B. Parker
+1904,Texas,Democrat,18,Alton B. Parker
+1904,Utah,Republican,3,Theodore Roosevelt
+1904,Vermont,Republican,4,Theodore Roosevelt
+1904,Virginia,Democrat,12,Alton B. Parker
+1904,Washington,Republican,5,Theodore Roosevelt
+1904,West Virginia,Republican,7,Theodore Roosevelt
+1904,Wisconsin,Republican,13,Theodore Roosevelt
+1904,Wyoming,Republican,3,Theodore Roosevelt
+1904,"Washington, D.C.",Vacant State,0,
+1900,Alabama,Democrat,11,William J. Bryan
+1900,Alaska,Vacant State,0,
+1900,Arizona,Vacant State,0,
+1900,Arkansas,Democrat,8,William J. Bryan
+1900,California,Republican,9,William McKinley
+1900,Colorado,Democrat,4,William J. Bryan
+1900,Connecticut,Republican,6,William McKinley
+1900,Delaware,Republican,3,William McKinley
+1900,Florida,Democrat,4,William J. Bryan
+1900,Georgia,Democrat,13,William J. Bryan
+1900,Hawaii,Vacant State,0,
+1900,Idaho,Democrat,3,William J. Bryan
+1900,Illinois,Republican,24,William McKinley
+1900,Indiana,Republican,15,William McKinley
+1900,Iowa,Republican,13,William McKinley
+1900,Kansas,Republican,10,William McKinley
+1900,Kentucky,Democrat,13,William J. Bryan
+1900,Louisiana,Democrat,8,William J. Bryan
+1900,Maine,Republican,6,William McKinley
+1900,Maryland,Republican,8,William McKinley
+1900,Massachusetts,Republican,15,William McKinley
+1900,Michigan,Republican,14,William McKinley
+1900,Minnesota,Republican,9,William McKinley
+1900,Mississippi,Democrat,9,William J. Bryan
+1900,Missouri,Democrat,17,William J. Bryan
+1900,Montana,Democrat,3,William J. Bryan
+1900,Nebraska,Republican,8,William McKinley
+1900,Nevada,Democrat,3,William J. Bryan
+1900,New Hampshire,Republican,4,William McKinley
+1900,New Jersey,Republican,10,William McKinley
+1900,New Mexico,Vacant State,0,
+1900,New York,Republican,36,William J. Bryan
+1900,North Carolina,Democrat,11,William J. Bryan
+1900,North Dakota,Republican,3,William McKinley
+1900,Ohio,Republican,23,William McKinley
+1900,Oklahoma,Vacant State,0,
+1900,Oregon,Republican,4,William McKinleyn
+1900,Pennsylvania,Republican,32,William McKinley
+1900,Rhode Island,Republican,4,William McKinley
+1900,South Carolina,Democrat,9,William J. Bryan
+1900,South Dakota,Republican,4,William McKinley
+1900,Tennessee,Democrat,12,William J. Bryan
+1900,Texas,Democrat,15,William J. Bryan
+1900,Utah,Republican,3,William McKinley
+1900,Vermont,Republican,4,William McKinley
+1900,Virginia,Democrat,12,William J. Bryan
+1900,Washington,Republican,4,William McKinley
+1900,West Virginia,Republican,6,William McKinley
+1900,Wisconsin,Republican,12,William McKinley
+1900,Wyoming,Republican,3,William McKinley
+1900,"Washington, D.C.",Vacant State,0,
+1896,Alabama,Democrat,11,William J. Bryan
+1896,Alaska,Vacant State,0,
+1896,Arizona,Vacant State,0,
+1896,Arkansas,Democrat,8,William J. Bryan
+1896,California,Republican,8,William McKinley
+1896,California-2,Democrat,1,William J. Bryan
+1896,Colorado,Democrat,4,William J. Bryan
+1896,Connecticut,Republican,6,William McKinley
+1896,Delaware,Republican,3,William McKinley
+1896,Florida,Democrat,4,William J. Bryan
+1896,Georgia,Democrat,13,William J. Bryan
+1896,Hawaii,Vacant State,0,
+1896,Idaho,Democrat,3,William J. Bryan
+1896,Illinois,Republican,24,William McKinley
+1896,Indiana,Republican,15,William McKinley
+1896,Iowa,Republican,13,William McKinley
+1896,Kansas,Democrat,10,William J. Bryan
+1896,Kentucky,Republican,12,William McKinley
+1896,Kentucky-2,Democrat,1,William J. Bryan
+1896,Louisiana,Democrat,8,William J. Bryan
+1896,Maine,Republican,6,William McKinley
+1896,Maryland,Republican,8,William McKinley
+1896,Massachusetts,Republican,15,William McKinley
+1896,Michigan,Republican,14,William McKinley
+1896,Minnesota,Republican,9,William McKinley
+1896,Mississippi,Democrat,9,William J. Bryan
+1896,Missouri,Democrat,17,William J. Bryan
+1896,Montana,Democrat,3,William J. Bryan
+1896,Nebraska,Democrat,8,William J. Bryan
+1896,Nevada,Democrat,3,William J. Bryan
+1896,New Hampshire,Republican,4,William McKinley
+1896,New Jersey,Republican,14,William McKinley
+1896,New Mexico,Vacant State,0,
+1896,New York,Republican,36,William J. Bryan
+1896,North Carolina,Democrat,11,William J. Bryan
+1896,North Dakota,Republican,3,William McKinley
+1896,Ohio,Republican,23,William McKinley
+1896,Oklahoma,Vacant State,0,
+1896,Oregon,Republican,4,William McKinleyn
+1896,Pennsylvania,Republican,32,William McKinley
+1896,Rhode Island,Republican,4,William McKinley
+1896,South Carolina,Democrat,9,William J. Bryan
+1896,South Dakota,Democrat,4,William J. Bryan
+1896,Tennessee,Democrat,12,William J. Bryan
+1896,Texas,Democrat,15,William J. Bryan
+1896,Utah,Democrat,3,William J. Bryan
+1896,Vermont,Republican,4,William McKinley
+1896,Virginia,Democrat,12,William J. Bryan
+1896,Washington,Democrat,4,William J. Bryan
+1896,West Virginia,Republican,6,William McKinley
+1896,Wisconsin,Republican,12,William McKinley
+1896,Wyoming,Democrat,3,William J. Bryan
+1896,"Washington, D.C.",Vacant State,0,
+1892,Alabama,Democrat,11,Grover Cleveland
+1892,Alaska,Vacant State,0,
+1892,Arizona,Vacant State,0,
+1892,Arkansas,Democrat,8,Grover Cleveland
+1892,California,Democrat,8,Grover Cleveland
+1892,California-2,Republican,1,Benjamin Harrison
+1892,Colorado,Other,4,James B. Weaver
+1892,Connecticut,Democrat,6,Grover Cleveland
+1892,Delaware,Democrat,3,Grover Cleveland
+1892,Florida,Democrat,4,Grover Cleveland
+1892,Georgia,Democrat,13,Grover Cleveland
+1892,Hawaii,Vacant State,0,
+1892,Idaho,Other,3,James B. Weaver
+1892,Illinois,Democrat,24,Benjamin Harrison
+1892,Indiana,Democrat,15,Benjamin Harrison
+1892,Iowa,Republican,13,Benjamin Harrison
+1892,Kansas,Other,10,James B. Weaver
+1892,Kentucky,Democrat,13,Grover Cleveland
+1892,Louisiana,Democrat,8,Grover Cleveland
+1892,Maine,Republican,6,Benjamin Harrison
+1892,Maryland,Democrat,8,Benjamin Harrison
+1892,Massachusetts,Republican,15,Benjamin Harrison
+1892,Michigan,Republican,9,Benjamin Harrison
+1892,Michigan-2,Democrat,5,Grover Cleveland
+1892,Minnesota,Republican,9,Benjamin Harrison
+1892,Mississippi,Democrat,9,Grover Cleveland
+1892,Missouri,Democrat,17,Grover Cleveland
+1892,Montana,Republican,3,Grover Cleveland
+1892,Nebraska,Republican,8,Grover Cleveland
+1892,Nevada,Other,3,James B. Weaver
+1892,New Hampshire,Republican,4,Benjamin Harrison
+1892,New Jersey,Democrat,10,Grover Cleveland
+1892,New Mexico,Vacant State,0,
+1892,New York,Democrat,36,Grover Cleveland
+1892,North Carolina,Democrat,11,Grover Cleveland
+1892,North Dakota,Other,1,James B. Weaver
+1892,North Dakota-2,Republican,1,James B. Weaver
+1892,North Dakota-3,Democrat,1,James B. Weaver
+1892,Ohio,Republican,22,Benjamin Harrison
+1892,Ohio-2,Democrat,1,Grover Cleveland
+1892,Oklahoma,Vacant State,0,
+1892,Oregon,Republican,3,Benjamin Harrison
+1892,Oregon-2,Other,1,James B. Weaver
+1892,Pennsylvania,Republican,32,Benjamin Harrison
+1892,Rhode Island,Republican,4,Benjamin Harrison
+1892,South Carolina,Democrat,9,Grover Cleveland
+1892,South Dakota,Republican,4,Grover Cleveland
+1892,Tennessee,Democrat,12,Grover Cleveland
+1892,Texas,Democrat,15,Grover Cleveland
+1892,Utah,Vacant State,0,
+1892,Vermont,Republican,4,Benjamin Harrison
+1892,Virginia,Democrat,12,Grover Cleveland
+1892,Washington,Republican,4,Grover Cleveland
+1892,West Virginia,Democrat,6,Grover Cleveland
+1892,Wisconsin,Democrat,12,Grover Cleveland
+1892,Wyoming,Republican,3,Grover Cleveland
+1892,"Washington, D.C.",Vacant State,0,
+1888,Alabama,Democrat,10,Grover Cleveland
+1888,Arkansas,Democrat,7,Grover Cleveland
+1888,California,Republican,8,Benjamin Harrison
+1888,Colorado,Republican,3,Benjamin Harrison
+1888,Connecticut,Democrat,6,Grover Cleveland
+1888,Delaware,Democrat,3,Grover Cleveland
+1888,Florida,Democrat,4,Grover Cleveland
+1888,Georgia,Democrat,12,Grover Cleveland
+1888,Illinois,Republican,22,Benjamin Harrison
+1888,Indiana,Republican,15,Benjamin Harrison
+1888,Iowa,Republican,13,Benjamin Harrison
+1888,Kansas,Republican,9,Benjamin Harrison
+1888,Kentucky,Democrat,13,Grover Cleveland
+1888,Louisiana,Democrat,8,Benjamin Harrison
+1888,Maine,Republican,6,Benjamin Harrison
+1888,Maryland,Democrat,8,Grover Cleveland
+1888,Massachusetts,Republican,14,Benjamin Harrison
+1888,Michigan,Republican,13,Benjamin Harrison
+1888,Minnesota,Republican,7,Benjamin Harrison
+1888,Mississippi,Democrat,9,Grover Cleveland
+1888,Missouri,Democrat,16,Grover Cleveland
+1888,Nebraska,Republican,5,Benjamin Harrison
+1888,Nevada,Republican,3,Benjamin Harrison
+1888,New Hampshire,Republican,4,Benjamin Harrison
+1888,New Jersey,Democrat,9,Grover Cleveland
+1888,New York,Republican,36,Benjamin Harrison
+1888,North Carolina,Democrat,11,Grover Cleveland
+1888,Ohio,Republican,23,Benjamin Harrison
+1888,Oregon,Republican,3,Benjamin Harrison
+1888,Pennsylvania,Republican,30,Benjamin Harrison
+1888,Rhode Island,Republican,4,Benjamin Harrison
+1888,South Carolina,Democrat,9,Grover Cleveland
+1888,Tennessee,Democrat,12,Grover Cleveland
+1888,Texas,Democrat,13,Grover Cleveland
+1888,Vermont,Republican,4,Benjamin Harrison
+1888,Virginia,Democrat,12,Grover Cleveland
+1888,West Virginia,Democrat,6,Grover Cleveland
+1888,Wisconsin,Republican,11,Benjamin Harrison
+1888,Hawaii,Vacant State,0,
+1888,Idaho,Vacant State,0,
+1888,Montana,Vacant State,0,
+1888,New Mexico,Vacant State,0,
+1888,North Dakota,Vacant State,0,
+1888,Oklahoma,Vacant State,0,
+1888,South Dakota,Vacant State,0,
+1888,Utah,Vacant State,0,
+1888,Washington,Vacant State,0,
+1888,Wyoming,Vacant State,0,
+1888,"Washington, D.C.",Vacant State,0,
+1888,Alaska,Vacant State,0,
+1888,Arizona,Vacant State,0,
+1884,Alabama,Democrat,10,Grover Cleveland
+1884,Arkansas,Democrat,7,Grover Cleveland
+1884,California,Republican,8,James G. Blaine
+1884,Colorado,Republican,3,James G. Blaine
+1884,Connecticut,Democrat,6,Grover Cleveland
+1884,Delaware,Democrat,3,Grover Cleveland
+1884,Florida,Democrat,4,Grover Cleveland
+1884,Georgia,Democrat,12,Grover Cleveland
+1884,Illinois,Republican,22,James G. Blaine
+1884,Indiana,Democrat,15,Grover Cleveland
+1884,Iowa,Republican,13,James G. Blaine
+1884,Kansas,Republican,9,James G. Blaine
+1884,Kentucky,Democrat,13,Grover Cleveland
+1884,Louisiana,Democrat,8,James G. Blaine
+1884,Maine,Republican,6,James G. Blaine
+1884,Maryland,Democrat,8,Grover Cleveland
+1884,Massachusetts,Republican,14,James G. Blaine
+1884,Michigan,Republican,13,James G. Blaine
+1884,Minnesota,Republican,7,James G. Blaine
+1884,Mississippi,Democrat,9,Grover Cleveland
+1884,Missouri,Democrat,16,Grover Cleveland
+1884,Nebraska,Republican,5,James G. Blaine
+1884,Nevada,Republican,3,James G. Blaine
+1884,New Hampshire,Republican,4,James G. Blaine
+1884,New Jersey,Democrat,9,Grover Cleveland
+1884,New York,Democrat,36,Grover Cleveland
+1884,North Carolina,Democrat,11,Grover Cleveland
+1884,Ohio,Republican,23,James G. Blaine
+1884,Oregon,Republican,3,James G. Blaine
+1884,Pennsylvania,Republican,30,James G. Blaine
+1884,Rhode Island,Republican,4,James G. Blaine
+1884,South Carolina,Democrat,9,Grover Cleveland
+1884,Tennessee,Democrat,12,Grover Cleveland
+1884,Texas,Democrat,13,Grover Cleveland
+1884,Vermont,Republican,4,James G. Blaine
+1884,Virginia,Democrat,12,Grover Cleveland
+1884,West Virginia,Democrat,6,Grover Cleveland
+1884,Wisconsin,Republican,11,James G. Blaine
+1884,Hawaii,Vacant State,0,
+1884,Idaho,Vacant State,0,
+1884,Montana,Vacant State,0,
+1884,New Mexico,Vacant State,0,
+1884,North Dakota,Vacant State,0,
+1884,Oklahoma,Vacant State,0,
+1884,South Dakota,Vacant State,0,
+1884,Utah,Vacant State,0,
+1884,Washington,Vacant State,0,
+1884,Wyoming,Vacant State,0,
+1884,"Washington, D.C.",Vacant State,0,
+1884,Alaska,Vacant State,0,
+1884,Arizona,Vacant State,0,
+1880,Alabama,Democrat,10,Winfield S. Hancock
+1880,Arkansas,Democrat,6,Winfield S. Hancock
+1880,California,Democrat,5,Winfield S. Hancock
+1880,California-2,Republican,1,James A. Garfield
+1880,Colorado,Republican,3,James A. Garfield
+1880,Connecticut,Republican,6,James A. Garfield
+1880,Delaware,Democrat,3,Winfield S. Hancock
+1880,Florida,Democrat,4,Winfield S. Hancock
+1880,Georgia,Democrat,11,Winfield S. Hancock
+1880,Illinois,Republican,21,James A. Garfield
+1880,Indiana,Republican,15,James A. Garfield
+1880,Iowa,Republican,11,James A. Garfield
+1880,Kansas,Republican,5,James A. Garfield
+1880,Kentucky,Democrat,12,Winfield S. Hancock
+1880,Louisiana,Democrat,8,James A. Garfield
+1880,Maine,Republican,7,James A. Garfield
+1880,Maryland,Democrat,8,Winfield S. Hancock
+1880,Massachusetts,Republican,13,James A. Garfield
+1880,Michigan,Republican,11,James A. Garfield
+1880,Minnesota,Republican,5,James A. Garfield
+1880,Mississippi,Democrat,8,Winfield S. Hancock
+1880,Missouri,Democrat,15,Winfield S. Hancock
+1880,Nebraska,Republican,3,James A. Garfield
+1880,Nevada,Democrat,3,Winfield S. Hancock
+1880,New Hampshire,Republican,5,James A. Garfield
+1880,New Jersey,Democrat,9,Winfield S. Hancock
+1880,New York,Republican,35,James A. Garfield
+1880,North Carolina,Democrat,10,Winfield S. Hancock
+1880,Ohio,Republican,22,James A. Garfield
+1880,Oregon,Republican,3,James A. Garfield
+1880,Pennsylvania,Republican,29,James A. Garfield
+1880,Rhode Island,Republican,4,James A. Garfield
+1880,South Carolina,Democrat,7,Winfield S. Hancock
+1880,Tennessee,Democrat,12,Winfield S. Hancock
+1880,Texas,Democrat,8,Winfield S. Hancock
+1880,Vermont,Republican,5,James A. Garfield
+1880,Virginia,Democrat,11,Winfield S. Hancock
+1880,West Virginia,Democrat,5,Winfield S. Hancock
+1880,Wisconsin,Republican,10,James A. Garfield
+1880,Hawaii,Vacant State,0,
+1880,Idaho,Vacant State,0,
+1880,Montana,Vacant State,0,
+1880,New Mexico,Vacant State,0,
+1880,North Dakota,Vacant State,0,
+1880,Oklahoma,Vacant State,0,
+1880,South Dakota,Vacant State,0,
+1880,Utah,Vacant State,0,
+1880,Washington,Vacant State,0,
+1880,Wyoming,Vacant State,0,
+1880,"Washington, D.C.",Vacant State,0,
+1880,Alaska,Vacant State,0,
+1880,Arizona,Vacant State,0,
+1876,Alabama,Democrat,10,Samuel J. Tilden
+1876,Arkansas,Democrat,6,Samuel J. Tilden
+1876,California,Republican,6,Rutherford B. Hayes
+1876,Colorado,Republican,3,Rutherford B. Hayes
+1876,Connecticut,Democrat,6,Samuel J. Tilden
+1876,Delaware,Democrat,3,Samuel J. Tilden
+1876,Florida,Republican,4,Rutherford B. Hayes
+1876,Georgia,Democrat,11,Samuel J. Tilden
+1876,Illinois,Republican,21,Rutherford B. Hayes
+1876,Indiana,Democrat,15,Samuel J. Tilden
+1876,Iowa,Republican,11,Rutherford B. Hayes
+1876,Kansas,Republican,5,Rutherford B. Hayes
+1876,Kentucky,Democrat,12,Samuel J. Tilden
+1876,Louisiana,Republican,8,Rutherford B. Hayes
+1876,Maine,Republican,7,Rutherford B. Hayes
+1876,Maryland,Democrat,8,Samuel J. Tilden
+1876,Massachusetts,Republican,13,Rutherford B. Hayes
+1876,Michigan,Republican,11,Rutherford B. Hayes
+1876,Minnesota,Republican,5,Rutherford B. Hayes
+1876,Mississippi,Democrat,8,Samuel J. Tilden
+1876,Missouri,Democrat,15,Samuel J. Tilden
+1876,Nebraska,Republican,3,Rutherford B. Hayes
+1876,Nevada,Republican,3,Rutherford B. Hayes
+1876,New Hampshire,Republican,5,Rutherford B. Hayes
+1876,New Jersey,Democrat,9,Samuel J. Tilden
+1876,New York,Democrat,35,Samuel J. Tilden
+1876,North Carolina,Democrat,10,Samuel J. Tilden
+1876,Ohio,Republican,22,Rutherford B. Hayes
+1876,Oregon,Republican,3,Rutherford B. Hayes
+1876,Pennsylvania,Republican,29,Rutherford B. Hayes
+1876,Rhode Island,Republican,4,Rutherford B. Hayes
+1876,South Carolina,Republican,7,Rutherford B. Hayes
+1876,Tennessee,Democrat,12,Samuel J. Tilden
+1876,Texas,Democrat,8,Samuel J. Tilden
+1876,Vermont,Republican,5,Rutherford B. Hayes
+1876,Virginia,Democrat,11,Samuel J. Tilden
+1876,West Virginia,Democrat,5,Samuel J. Tilden
+1876,Wisconsin,Republican,10,Rutherford B. Hayes
+1876,Hawaii,Vacant State,0,
+1876,Idaho,Vacant State,0,
+1876,Montana,Vacant State,0,
+1876,New Mexico,Vacant State,0,
+1876,North Dakota,Vacant State,0,
+1876,Oklahoma,Vacant State,0,
+1876,South Dakota,Vacant State,0,
+1876,Utah,Vacant State,0,
+1876,Washington,Vacant State,0,
+1876,Wyoming,Vacant State,0,
+1876,"Washington, D.C.",Vacant State,0,
+1876,Alaska,Vacant State,0,
+1876,Arizona,Vacant State,0,
+1872,Alabama,Republican,10,Ulysses S. Grant
+1872,Arkansas,Republican,6,Ulysses S. Grant
+1872,California,Republican,6,Ulysses S. Grant
+1872,Connecticut,Republican,6,Ulysses S. Grant
+1872,Delaware,Republican,3,Ulysses S. Grant
+1872,Florida,Republican,4,Ulysses S. Grant
+1872,Georgia,Democrat,11,Horace Greeley
+1872,Illinois,Republican,21,Ulysses S. Grant
+1872,Indiana,Republican,15,Ulysses S. Grant
+1872,Iowa,Republican,11,Ulysses S. Grant
+1872,Kansas,Republican,5,Ulysses S. Grant
+1872,Kentucky,Democrat,12,Horace Greeley
+1872,Louisiana,Republican,8,Ulysses S. Grant
+1872,Maine,Republican,7,Ulysses S. Grant
+1872,Maryland,Democrat,8,Horace Greeley
+1872,Massachusetts,Republican,13,Ulysses S. Grant
+1872,Michigan,Republican,11,Ulysses S. Grant
+1872,Minnesota,Republican,5,Ulysses S. Grant
+1872,Mississippi,Republican,8,Ulysses S. Grant
+1872,Missouri,Democrat,15,Horace Greeley
+1872,Nebraska,Republican,3,Ulysses S. Grant
+1872,Nevada,Republican,3,Ulysses S. Grant
+1872,New Hampshire,Republican,5,Ulysses S. Grant
+1872,New Jersey,Republican,9,Ulysses S. Grant
+1872,New York,Republican,35,Ulysses S. Grant
+1872,North Carolina,Republican,10,Ulysses S. Grant
+1872,Ohio,Republican,22,Ulysses S. Grant
+1872,Oregon,Republican,3,Ulysses S. Grant
+1872,Pennsylvania,Republican,29,Ulysses S. Grant
+1872,Rhode Island,Republican,4,Ulysses S. Grant
+1872,South Carolina,Republican,7,Ulysses S. Grant
+1872,Tennessee,Democrat,12,Horace Greeley
+1872,Texas,Democrat,8,Horace Greeley
+1872,Vermont,Republican,5,Ulysses S. Grant
+1872,Virginia,Republican,11,Ulysses S. Grant
+1872,West Virginia,Republican,5,Ulysses S. Grant
+1872,Wisconsin,Republican,10,Ulysses S. Grant
+1872,Colorado,Vacant State,0,
+1872,Hawaii,Vacant State,0,
+1872,Idaho,Vacant State,0,
+1872,Montana,Vacant State,0,
+1872,New Mexico,Vacant State,0,
+1872,North Dakota,Vacant State,0,
+1872,Oklahoma,Vacant State,0,
+1872,South Dakota,Vacant State,0,
+1872,Utah,Vacant State,0,
+1872,Washington,Vacant State,0,
+1872,Wyoming,Vacant State,0,
+1872,"Washington, D.C.",Vacant State,0,
+1872,Alaska,Vacant State,0,
+1872,Arizona,Vacant State,0,
+1868,Alabama,Republican,8,Ulysses S. Grant
+1868,Arkansas,Republican,0,Ulysses S. Grant
+1868,California,Republican,5,Ulysses S. Grant
+1868,Connecticut,Republican,6,Ulysses S. Grant
+1868,Delaware,Democrat,3,Horatio Seymour
+1868,Florida,Republican,3,Ulysses S. Grant
+1868,Georgia,Democrat,9,Horatio Seymour
+1868,Illinois,Republican,16,Ulysses S. Grant
+1868,Indiana,Republican,13,Ulysses S. Grant
+1868,Iowa,Republican,8,Ulysses S. Grant
+1868,Kansas,Republican,3,Ulysses S. Grant
+1868,Kentucky,Democrat,11,Horatio Seymour
+1868,Louisiana,Democrat,7,Horatio Seymour
+1868,Maine,Republican,7,Ulysses S. Grant
+1868,Maryland,Democrat,7,Horatio Seymour
+1868,Massachusetts,Republican,12,Ulysses S. Grant
+1868,Michigan,Republican,8,Ulysses S. Grant
+1868,Minnesota,Republican,4,Ulysses S. Grant
+1868,Mississippi,Neutral,0,
+1868,Missouri,Republican,11,Ulysses S. Grant
+1868,Nebraska,Republican,3,Ulysses S. Grant
+1868,Nevada,Republican,3,Ulysses S. Grant
+1868,New Hampshire,Republican,5,Ulysses S. Grant
+1868,New Jersey,Democrat,7,Horatio Seymour
+1868,New York,Democrat,33,Horatio Seymour
+1868,North Carolina,Republican,9,Ulysses S. Grant
+1868,Ohio,Republican,21,Ulysses S. Grant
+1868,Oregon,Democrat,3,Horatio Seymour
+1868,Pennsylvania,Republican,26,Ulysses S. Grant
+1868,Rhode Island,Republican,4,Ulysses S. Grant
+1868,South Carolina,Republican,6,Ulysses S. Grant
+1868,Tennessee,Republican,10,Ulysses S. Grant
+1868,Texas,Neutral,0,
+1868,Vermont,Republican,5,Ulysses S. Grant
+1868,Virginia,Neutral,0,
+1868,West Virginia,Republican,5,Ulysses S. Grant
+1868,Wisconsin,Republican,8,Ulysses S. Grant
+1868,Colorado,Vacant State,0,
+1868,Hawaii,Vacant State,0,
+1868,Idaho,Vacant State,0,
+1868,Montana,Vacant State,0,
+1868,New Mexico,Vacant State,0,
+1868,North Dakota,Vacant State,0,
+1868,Oklahoma,Vacant State,0,
+1868,South Dakota,Vacant State,0,
+1868,Utah,Vacant State,0,
+1868,Washington,Vacant State,0,
+1868,Wyoming,Vacant State,0,
+1868,"Washington, D.C.",Vacant State,0,
+1868,Alaska,Vacant State,0,
+1868,Arizona,Vacant State,0,
+1864,Alabama,Neutral,0,
+1864,Arkansas,Neutral,0,
+1864,California,Republican,5,Abraham Lincoln
+1864,Connecticut,Republican,6,Abraham Lincoln
+1864,Delaware,Democrat,3,George B. McClellan
+1864,Florida,Neutral,0,
+1864,Georgia,Neutral,0,
+1864,Illinois,Republican,16,Abraham Lincoln
+1864,Indiana,Republican,13,Abraham Lincoln
+1864,Iowa,Republican,8,Abraham Lincoln
+1864,Kansas,Republican,3,Abraham Lincoln
+1864,Kentucky,Democrat,11,George B. McClellan
+1864,Louisiana,Neutral,0,
+1864,Maine,Republican,7,Abraham Lincoln
+1864,Maryland,Republican,7,Abraham Lincoln
+1864,Massachusetts,Republican,12,Abraham Lincoln
+1864,Michigan,Republican,8,Abraham Lincoln
+1864,Minnesota,Republican,4,Abraham Lincoln
+1864,Mississippi,Neutral,0,
+1864,Missouri,Republican,11,Abraham Lincoln
+1864,Nevada,Republican,2,Abraham Lincoln
+1864,New Hampshire,Republican,5,Abraham Lincoln
+1864,New Jersey,Democrat,7,George B. McClellan
+1864,New York,Republican,33,Abraham Lincoln
+1864,North Carolina,Neutral,0,
+1864,Ohio,Republican,21,Abraham Lincoln
+1864,Oregon,Republican,3,Abraham Lincoln
+1864,Pennsylvania,Republican,26,Abraham Lincoln
+1864,Rhode Island,Republican,4,Abraham Lincoln
+1864,South Carolina,Neutral,0,
+1864,Tennessee,Neutral,0,
+1864,Texas,Neutral,0,
+1864,Vermont,Republican,5,Abraham Lincoln
+1864,Virginia,Neutral,0,
+1864,West Virginia,Republican,5,Abraham Lincoln
+1864,Wisconsin,Republican,8,Abraham Lincoln
+1864,Nebraska,Vacant State,0,
+1864,Colorado,Vacant State,0,
+1864,Hawaii,Vacant State,0,
+1864,Idaho,Vacant State,0,
+1864,Montana,Vacant State,0,
+1864,New Mexico,Vacant State,0,
+1864,North Dakota,Vacant State,0,
+1864,Oklahoma,Vacant State,0,
+1864,South Dakota,Vacant State,0,
+1864,Utah,Vacant State,0,
+1864,Washington,Vacant State,0,
+1864,Wyoming,Vacant State,0,
+1864,"Washington, D.C.",Vacant State,0,
+1864,Alaska,Vacant State,0,
+1864,Arizona,Vacant State,0,
+1860,Alabama,Democrat,9,John C. Breckinridge
+1860,Arkansas,Democrat,4,John C. Breckinridge
+1860,California,Republican,4,Abraham Lincoln
+1860,Connecticut,Republican,6,Abraham Lincoln
+1860,Delaware,Democrat,3,John C. Breckinridge
+1860,Florida,Democrat,3,John C. Breckinridge
+1860,Georgia,Democrat,10,John C. Breckinridge
+1860,Illinois,Republican,11,Abraham Lincoln
+1860,Indiana,Republican,13,Abraham Lincoln
+1860,Iowa,Republican,4,Abraham Lincoln
+1860,Kentucky,Constitutional Union,12,John Bell
+1860,Louisiana,Democrat,6,John C. Breckinridge
+1860,Maine,Republican,8,Abraham Lincoln
+1860,Maryland,Democrat,8,John C. Breckinridge
+1860,Massachusetts,Republican,13,Abraham Lincoln
+1860,Michigan,Republican,6,Abraham Lincoln
+1860,Minnesota,Republican,4,Abraham Lincoln
+1860,Mississippi,Democrat,7,Abraham Lincoln
+1860,Missouri,Democrat-2,9,Stephen A. Douglas
+1860,New Hampshire,Republican,5,Abraham Lincoln
+1860,New Jersey,Democrat-2,3,Stephen A. Douglas
+1860,New Jersey-2,Republican,4,Abraham Lincoln
+1860,New York,Republican,35,Abraham Lincoln
+1860,North Carolina,Democrat,10,John C. Breckinridge
+1860,Ohio,Republican,23,Abraham Lincoln
+1860,Oregon,Republican,3,Abraham Lincoln
+1860,Pennsylvania,Republican,27,Abraham Lincoln
+1860,Rhode Island,Republican,4,Abraham Lincoln
+1860,South Carolina,Democrat,8,John C. Breckinridge
+1860,Tennessee,Constitutional Union,12,John Bell
+1860,Texas,Democrat,4,John C. Breckinridge
+1860,Vermont,Republican,5,Abraham Lincoln
+1860,Virginia,Constitutional Union,13,John Bell
+1860,West Virginia,Other,0,
+1860,Wisconsin,Republican,5,Abraham Lincoln
+1860,Nevada,Vacant State,0,
+1860,Kansas,Vacant State,0,
+1860,Colorado,Vacant State,0,
+1860,Nebraska,Vacant State,0,
+1860,Hawaii,Vacant State,0,
+1860,Idaho,Vacant State,0,
+1860,Montana,Vacant State,0,
+1860,New Mexico,Vacant State,0,
+1860,North Dakota,Vacant State,0,
+1860,Oklahoma,Vacant State,0,
+1860,South Dakota,Vacant State,0,
+1860,Utah,Vacant State,0,
+1860,Washington,Vacant State,0,
+1860,Wyoming,Vacant State,0,
+1860,"Washington, D.C.",Vacant State,0,
+1860,Alaska,Vacant State,0,
+1860,Arizona,Vacant State,0,
+1856,Alabama,Democrat,9,James Buchanan
+1856,Arkansas,Democrat,4,James Buchanan
+1856,California,Democrat,4,James Buchanan
+1856,Connecticut,Republican,6,James Buchanan
+1856,Delaware,Democrat,3,James Buchanan
+1856,Florida,Democrat,3,James Buchanan
+1856,Georgia,Democrat,10,James Buchanan
+1856,Illinois,Democrat,11,James Buchanan
+1856,Indiana,Democrat,13,James Buchanan
+1856,Iowa,Republican,4,James Buchanan
+1856,Kentucky,Democrat,12,James Buchanan
+1856,Louisiana,Democrat,6,James Buchanan
+1856,Maine,Republican,8,John C. Fremont
+1856,Maryland,American,8,Millard Fillmore
+1856,Massachusetts,Republican,13,James Buchanan
+1856,Michigan,Republican,6,James Buchanan
+1856,Mississippi,Democrat,7,James Buchanan
+1856,Missouri,Democrat,9,John C. Fremont
+1856,New Hampshire,Republican,5,James Buchanan
+1856,New Jersey,Democrat,7,James Buchanan
+1856,New York,Republican,35,John C. Fremont
+1856,North Carolina,Democrat,10,James Buchanan
+1856,Ohio,Republican,23,James Buchanan
+1856,Pennsylvania,Democrat,27,James Buchanan
+1856,Rhode Island,Republican,4,James Buchanan
+1856,South Carolina,Democrat,8,James Buchanan
+1856,Tennessee,Democrat,12,James Buchanan
+1856,Texas,Democrat,4,James Buchanan
+1856,Vermont,Republican,5,James Buchanan
+1856,Virginia,Democrat,13,James Buchanan
+1856,West Virginia,Democrat,0,
+1856,Wisconsin,Republican,5,James Buchanan
+1856,Nebraska,Vacant State,0,
+1856,Kansas,Vacant State,0,
+1856,Minnesota,Vacant State,0,
+1856,Oregon,Vacant State,0,
+1856,Hawaii,Vacant State,0,
+1856,Idaho,Vacant State,0,
+1856,Montana,Vacant State,0,
+1856,New Mexico,Vacant State,0,
+1856,North Dakota,Vacant State,0,
+1856,Oklahoma,Vacant State,0,
+1856,South Dakota,Vacant State,0,
+1856,Utah,Vacant State,0,
+1856,Washington,Vacant State,0,
+1856,Wyoming,Vacant State,0,
+1856,"Washington, D.C.",Vacant State,0,
+1856,Alaska,Vacant State,0,
+1856,Arizona,Vacant State,0,
+1856,Colorado,Vacant State,0,
+1856,Nevada,Vacant State,0,
+1852,Alabama,Democrat,9,Franklin Pierce
+1852,Arkansas,Democrat,4,Franklin Pierce
+1852,California,Democrat,4,Franklin Pierce
+1852,Connecticut,Democrat,6,Franklin Pierce
+1852,Delaware,Democrat,3,Franklin Pierce
+1852,Florida,Democrat,3,Franklin Pierce
+1852,Georgia,Democrat,10,Franklin Pierce
+1852,Illinois,Democrat,11,Franklin Pierce
+1852,Indiana,Democrat,13,Franklin Pierce
+1852,Iowa,Democrat,4,Franklin Pierce
+1852,Kentucky,Whig,12,Winfield Scott
+1852,Louisiana,Democrat,6,Franklin Pierce
+1852,Maine,Democrat,8,Franklin Pierce
+1852,Maryland,Democrat,8,Franklin Pierce
+1852,Massachusetts,Whig,13,Winfield Scott
+1852,Michigan,Democrat,6,Franklin Pierce
+1852,Mississippi,Democrat,7,Franklin Pierce
+1852,Missouri,Democrat,9,Franklin Pierce
+1852,New Hampshire,Democrat,5,Franklin Pierce
+1852,New Jersey,Democrat,7,Franklin Pierce
+1852,New York,Democrat,35,Franklin Pierce
+1852,North Carolina,Democrat,10,Franklin Pierce
+1852,Ohio,Democrat,23,Franklin Pierce
+1852,Pennsylvania,Democrat,27,Franklin Pierce
+1852,Rhode Island,Democrat,4,Franklin Pierce
+1852,South Carolina,Democrat,8,Franklin Pierce
+1852,Tennessee,Whig,12,Winfield Scott
+1852,Texas,Democrat,4,Franklin Pierce
+1852,Vermont,Whig,5,Winfield Scott
+1852,Virginia,Democrat,15,Franklin Pierce
+1852,West Virginia,Democrat,0,
+1852,Wisconsin,Democrat,5,Franklin Pierce
+1852,Nebraska,Vacant State,0,
+1852,Kansas,Vacant State,0,
+1852,Minnesota,Vacant State,0,
+1852,Oregon,Vacant State,0,
+1852,Hawaii,Vacant State,0,
+1852,Idaho,Vacant State,0,
+1852,Montana,Vacant State,0,
+1852,New Mexico,Vacant State,0,
+1852,North Dakota,Vacant State,0,
+1852,Oklahoma,Vacant State,0,
+1852,South Dakota,Vacant State,0,
+1852,Utah,Vacant State,0,
+1852,Washington,Vacant State,0,
+1852,Wyoming,Vacant State,0,
+1852,"Washington, D.C.",Vacant State,0,
+1852,Alaska,Vacant State,0,
+1852,Arizona,Vacant State,0,
+1852,Colorado,Vacant State,0,
+1852,Nevada,Vacant State,0,
+1848,Alabama,Democrat,9,Lewis Cass
+1848,Arkansas,Democrat,3,Lewis Cass
+1848,Connecticut,Whig,6,Zachary Taylor
+1848,Delaware,Whig,3,Zachary Taylor
+1848,Florida,Whig,3,Zachary Taylor
+1848,Georgia,Whig,10,Zachary Taylor
+1848,Illinois,Democrat,9,Lewis Cass
+1848,Indiana,Democrat,12,Lewis Cass
+1848,Iowa,Democrat,4,Lewis Cass
+1848,Kentucky,Whig,12,Zachary Taylor
+1848,Louisiana,Whig,6,Zachary Taylor
+1848,Maine,Democrat,9,Lewis Cass
+1848,Maryland,Whig,8,Zachary Taylor
+1848,Massachusetts,Whig,12,Zachary Taylor
+1848,Michigan,Democrat,5,Lewis Cass
+1848,Mississippi,Democrat,6,Lewis Cass
+1848,Missouri,Democrat,7,Lewis Cass
+1848,New Hampshire,Democrat,6,Lewis Cass
+1848,New Jersey,Whig,7,Zachary Taylor
+1848,New York,Whig,36,Zachary Taylor
+1848,North Carolina,Whig,11,Zachary Taylor
+1848,Ohio,Democrat,23,Zachary Taylor
+1848,Pennsylvania,Whig,26,Zachary Taylor
+1848,Rhode Island,Whig,4,Zachary Taylor
+1848,South Carolina,Democrat,9,Lewis Cass
+1848,Tennessee,Whig,13,Zachary Taylor
+1848,Texas,Democrat,4,Lewis Cass
+1848,Vermont,Whig,6,Zachary Taylor
+1848,Virginia,Democrat,17,Zachary Taylor
+1848,West Virginia,Democrat,0,
+1848,Wisconsin,Democrat,4,Lewis Cass
+1848,California,Vacant State,0,
+1848,Nebraska,Vacant State,0,
+1848,Kansas,Vacant State,0,
+1848,Minnesota,Vacant State,0,
+1848,Oregon,Vacant State,0,
+1848,Hawaii,Vacant State,0,
+1848,Idaho,Vacant State,0,
+1848,Montana,Vacant State,0,
+1848,New Mexico,Vacant State,0,
+1848,North Dakota,Vacant State,0,
+1848,Oklahoma,Vacant State,0,
+1848,South Dakota,Vacant State,0,
+1848,Utah,Vacant State,0,
+1848,Washington,Vacant State,0,
+1848,Wyoming,Vacant State,0,
+1848,"Washington, D.C.",Vacant State,0,
+1848,Alaska,Vacant State,0,
+1848,Arizona,Vacant State,0,
+1848,Colorado,Vacant State,0,
+1848,Nevada,Vacant State,0,
+1844,Alabama,Democrat,9,James K. Polk
+1844,Arkansas,Democrat,3,James K. Polk
+1844,Connecticut,Whig,6,Henry Clay
+1844,Delaware,Whig,3,Henry Clay
+1844,Georgia,Democrat,10,James K. Polk
+1844,Illinois,Democrat,9,James K. Polk
+1844,Indiana,Democrat,12,James K. Polk
+1844,Kentucky,Whig,12,Henry Clay
+1844,Louisiana,Democrat,6,James K. Polk
+1844,Maine,Democrat,9,James K. Polk
+1844,Maryland,Whig,8,Henry Clay
+1844,Massachusetts,Whig,12,Henry Clay
+1844,Michigan,Democrat,5,James K. Polk
+1844,Mississippi,Democrat,6,James K. Polk
+1844,Missouri,Democrat,7,James K. Polk
+1844,New Hampshire,Democrat,6,James K. Polk
+1844,New Jersey,Whig,7,Henry Clay
+1844,New York,Democrat,36,James K. Polk
+1844,North Carolina,Whig,11,Henry Clay
+1844,Ohio,Whig,23,Henry Clay
+1844,Pennsylvania,Democrat,26,James K. Polk
+1844,Rhode Island,Whig,4,Henry Clay
+1844,South Carolina,Democrat,9,James K. Polk
+1844,Tennessee,Whig,13,Henry Clay
+1844,Vermont,Whig,6,Henry Clay
+1844,Virginia,Democrat,17,James K. Polk
+1844,West Virginia,Democrat,0,
+1844,Florida,Vacant State,0,
+1844,Wisconsin,Vacant State,0,
+1844,Texas,Vacant State,0,
+1844,Iowa,Vacant State,0,
+1844,California,Vacant State,0,
+1844,Nebraska,Vacant State,0,
+1844,Kansas,Vacant State,0,
+1844,Minnesota,Vacant State,0,
+1844,Oregon,Vacant State,0,
+1844,Hawaii,Vacant State,0,
+1844,Idaho,Vacant State,0,
+1844,Montana,Vacant State,0,
+1844,New Mexico,Vacant State,0,
+1844,North Dakota,Vacant State,0,
+1844,Oklahoma,Vacant State,0,
+1844,South Dakota,Vacant State,0,
+1844,Utah,Vacant State,0,
+1844,Washington,Vacant State,0,
+1844,Wyoming,Vacant State,0,
+1844,"Washington, D.C.",Vacant State,0,
+1844,Alaska,Vacant State,0,
+1844,Arizona,Vacant State,0,
+1844,Colorado,Vacant State,0,
+1844,Nevada,Vacant State,0,
+1840,Alabama,Democrat,7,Martin Van Buren
+1840,Arkansas,Democrat,3,Martin Van Buren
+1840,Connecticut,Whig,8,William H. Harrison
+1840,Delaware,Whig,3,William H. Harrison
+1840,Georgia,Whig,11,William H. Harrison
+1840,Illinois,Democrat,5,Martin Van Buren
+1840,Indiana,Whig,9,William H. Harrison 
+1840,Kentucky,Whig,15,William H. Harrison
+1840,Louisiana,Whig,5,William H. Harrison
+1840,Maine,Whig,10,William H. Harrison
+1840,Maryland,Whig,10,William H. Harrison
+1840,Massachusetts,Whig,14,William H. Harrison
+1840,Michigan,Whig,3,William H. Harrison 
+1840,Mississippi,Whig,4,William H. Harrison 
+1840,Missouri,Democrat,4,Martin Van Buren
+1840,New Hampshire,Democrat,7,Martin Van Buren
+1840,New Jersey,Whig,8,William H. Harrison
+1840,New York,Whig,42,William H. Harrison
+1840,North Carolina,Whig,15,William H. Harrison
+1840,Ohio,Whig,21,William H. Harrison
+1840,Pennsylvania,Whig,30,William H. Harrison
+1840,Rhode Island,Whig,4,William H. Harrison
+1840,South Carolina,Democrat,11,Martin Van Buren
+1840,Tennessee,Whig,15,William H. Harrison
+1840,Vermont,Whig,7,William H. Harrison
+1840,Virginia,Democrat,23,Martin Van Buren
+1840,West Virginia,Democrat,0,
+1840,Florida,Vacant State,0,
+1840,Wisconsin,Vacant State,0,
+1840,Texas,Vacant State,0,
+1840,Iowa,Vacant State,0,
+1840,California,Vacant State,0,
+1840,Nebraska,Vacant State,0,
+1840,Kansas,Vacant State,0,
+1840,Minnesota,Vacant State,0,
+1840,Oregon,Vacant State,0,
+1840,Hawaii,Vacant State,0,
+1840,Idaho,Vacant State,0,
+1840,Montana,Vacant State,0,
+1840,New Mexico,Vacant State,0,
+1840,North Dakota,Vacant State,0,
+1840,Oklahoma,Vacant State,0,
+1840,South Dakota,Vacant State,0,
+1840,Utah,Vacant State,0,
+1840,Washington,Vacant State,0,
+1840,Wyoming,Vacant State,0,
+1840,"Washington, D.C.",Vacant State,0,
+1840,Alaska,Vacant State,0,
+1840,Arizona,Vacant State,0,
+1840,Colorado,Vacant State,0,
+1840,Nevada,Vacant State,0,
+1836,Alabama,Democrat,7,Martin Van Buren
+1836,Arkansas,Democrat,3,Martin Van Buren
+1836,Connecticut,Democrat,8,Martin Van Buren
+1836,Delaware,Whig,3,William H. Harrison
+1836,Georgia,Whig-2,11,Hugh L. White
+1836,Illinois,Democrat,9,Martin Van Buren
+1836,Indiana,Whig,9,William H. Harrison 
+1836,Kentucky,Whig,15,William H. Harrison
+1836,Louisiana,Democrat,5,William H. Harrison
+1836,Maine,Democrat,10,William H. Harrison
+1836,Maryland,Whig,10,William H. Harrison
+1836,Massachusetts,Whig-3,14,Daniel Webster
+1836,Michigan,Democrat,3,William H. Harrison
+1836,Mississippi,Democrat,4,William H. Harrison
+1836,Missouri,Democrat,4,Martin Van Buren
+1836,New Hampshire,Democrat,7,Martin Van Buren
+1836,New Jersey,Whig,8,William H. Harrison
+1836,New York,Democrat,42,Martin Van Buren
+1836,North Carolina,Democrat,15,William H. Harrison
+1836,Ohio,Whig,21,William H. Harrison
+1836,Pennsylvania,Democrat,30,Martin Van Buren
+1836,Rhode Island,Democrat,4,Martin Van Buren
+1836,South Carolina,Whig-4,11,W.P. Mangum
+1836,Tennessee,Whig-2,15,Hugh L. White
+1836,Vermont,Whig,7,William H. Harrison
+1836,Virginia,Democrat,23,Martin Van Buren
+1836,West Virginia,Democrat,0,
+1836,Florida,Vacant State,0,
+1836,Wisconsin,Vacant State,0,
+1836,Texas,Vacant State,0,
+1836,Iowa,Vacant State,0,
+1836,California,Vacant State,0,
+1836,Nebraska,Vacant State,0,
+1836,Kansas,Vacant State,0,
+1836,Minnesota,Vacant State,0,
+1836,Oregon,Vacant State,0,
+1836,Hawaii,Vacant State,0,
+1836,Idaho,Vacant State,0,
+1836,Montana,Vacant State,0,
+1836,New Mexico,Vacant State,0,
+1836,North Dakota,Vacant State,0,
+1836,Oklahoma,Vacant State,0,
+1836,South Dakota,Vacant State,0,
+1836,Utah,Vacant State,0,
+1836,Washington,Vacant State,0,
+1836,Wyoming,Vacant State,0,
+1836,"Washington, D.C.",Vacant State,0,
+1836,Alaska,Vacant State,0,
+1836,Arizona,Vacant State,0,
+1836,Colorado,Vacant State,0,
+1836,Nevada,Vacant State,0,
+1832,Alabama,Democrat,7,Andrew Jackson
+1832,Connecticut,National Republican,8,Henry Clay
+1832,Delaware,National Republican,3,Henry Clay
+1832,Georgia,Democrat,11,Andrew Jackson
+1832,Illinois,Democrat,5,Andrew Jackson
+1832,Indiana,Democrat,9,Andrew Jackson 
+1832,Kentucky,National Republican,15,Henry Clay
+1832,Louisiana,Democrat,5,Andrew Jackson
+1832,Maine,Democrat,10,Andrew Jackson
+1832,Maryland,National Republican,5,Henry Clay
+1832,Maryland-2,Democrat,3,Andrew Jackson
+1832,Massachusetts,National Republican,14,Henry Clay
+1832,Mississippi,Democrat,4,Andrew Jackson
+1832,Missouri,Democrat,4,Andrew Jackson
+1832,New Hampshire,Democrat,7,Andrew Jackson
+1832,New Jersey,Democrat,8,Andrew Jackson
+1832,New York,Democrat,42,Andrew Jackson
+1832,North Carolina,Democrat,15,Andrew Jackson
+1832,Ohio,Democrat,21,Andrew Jackson
+1832,Pennsylvania,Democrat,30,Andrew Jackson
+1832,Rhode Island,National Republican,4,Henry Clay
+1832,South Carolina,Independent,11,John Floyd
+1832,Tennessee,Democrat,15,Andrew Jackson
+1832,Vermont,Anti-Masonic,7,William Wirt
+1832,Virginia,Democrat,23,Andrew Jackson
+1832,West Virginia,Democrat,0,
+1832,Florida,Vacant State,0,
+1832,Wisconsin,Vacant State,0,
+1832,Texas,Vacant State,0,
+1832,Iowa,Vacant State,0,
+1832,California,Vacant State,0,
+1832,Nebraska,Vacant State,0,
+1832,Kansas,Vacant State,0,
+1832,Minnesota,Vacant State,0,
+1832,Oregon,Vacant State,0,
+1832,Hawaii,Vacant State,0,
+1832,Idaho,Vacant State,0,
+1832,Montana,Vacant State,0,
+1832,New Mexico,Vacant State,0,
+1832,North Dakota,Vacant State,0,
+1832,Oklahoma,Vacant State,0,
+1832,South Dakota,Vacant State,0,
+1832,Utah,Vacant State,0,
+1832,Washington,Vacant State,0,
+1832,Wyoming,Vacant State,0,
+1832,"Washington, D.C.",Vacant State,0,
+1832,Alaska,Vacant State,0,
+1832,Arizona,Vacant State,0,
+1832,Colorado,Vacant State,0,
+1832,Nevada,Vacant State,0,
+1832,Arkansas,Democrat,0,
+1832,Michigan,Democrat,0,
+1828,Alabama,Democrat,5,Andrew Jackson
+1828,Connecticut,National Republican,8,John Quincy Adams
+1828,Delaware,National Republican,3,John Quincy Adams
+1828,Georgia,Democrat,9,Andrew Jackson
+1828,Illinois,Democrat,3,Andrew Jackson
+1828,Indiana,Democrat,5,Andrew Jackson
+1828,Kentucky,Democrat,14,Andrew Jackson
+1828,Louisiana,Democrat,5,Andrew Jackson
+1828,Maine,National Republican,8,John Quincy Adams
+1828,Maine-2,Democrat,1,John Quincy Adams
+1828,Maryland,National Republican,6,John Quincy Adams
+1828,Maryland-2,Democrat,5,Andrew Jackson
+1828,Massachusetts,National Republican,15,John Quincy Adams
+1828,Mississippi,Democrat,3,Andrew Jackson
+1828,Missouri,Democrat,3,Andrew Jackson
+1828,New Hampshire,National Republican,8,John Quincy Adams
+1828,New Jersey,National Republican,8,John Quincy Adams
+1828,New York,Democrat,20,Andrew Jackson
+1828,New York-2,National Republican,16,John Quincy Adams
+1828,North Carolina,Democrat,15,Andrew Jackson
+1828,Ohio,Democrat,16,Andrew Jackson
+1828,Pennsylvania,Democrat,28,Andrew Jackson
+1828,Rhode Island,National Republican,4,John Quincy Adams
+1828,South Carolina,Democrat,11,Andrew Jackson
+1828,Tennessee,Democrat,11,Andrew Jackson
+1828,Vermont,National Republican,7,John Quincy Adams
+1828,Virginia,Democrat,24,Andrew Jackson
+1828,West Virginia,Democrat,0,
+1828,Florida,Vacant State,0,
+1828,Wisconsin,Vacant State,0,
+1828,Texas,Vacant State,0,
+1828,Iowa,Vacant State,0,
+1828,California,Vacant State,0,
+1828,Nebraska,Vacant State,0,
+1828,Kansas,Vacant State,0,
+1828,Minnesota,Vacant State,0,
+1828,Oregon,Vacant State,0,
+1828,Hawaii,Vacant State,0,
+1828,Idaho,Vacant State,0,
+1828,Montana,Vacant State,0,
+1828,New Mexico,Vacant State,0,
+1828,North Dakota,Vacant State,0,
+1828,Oklahoma,Vacant State,0,
+1828,South Dakota,Vacant State,0,
+1828,Utah,Vacant State,0,
+1828,Washington,Vacant State,0,
+1828,Wyoming,Vacant State,0,
+1828,"Washington, D.C.",Vacant State,0,
+1828,Alaska,Vacant State,0,
+1828,Arizona,Vacant State,0,
+1828,Colorado,Vacant State,0,
+1828,Nevada,Vacant State,0,
+1828,Arkansas,Democrat,0,
+1828,Michigan,Democrat,0,
+1824,Alabama,Democratic-Republican-2,5,Andrew Jackson
+1824,Connecticut,Democratic-Republican,8,John Quincy Adams
+1824,Delaware,Democratic-Republican-3,2,William H. Crawford
+1824,Delaware-2,Democratic-Republican,1,William H. Crawford
+1824,Georgia,Democratic-Republican-3,9,William H. Crawford
+1824,Illinois,Democratic-Republican,1,John Quincy Adams
+1824,Illinois-2,Democratic-Republican-2,2,Andrew Jackson
+1824,Indiana,Democratic-Republican-2,5,Andrew Jackson
+1824,Kentucky,Democratic-Republican-4,14,Henry Clay
+1824,Louisiana,Democratic-Republican-2,3,Andrew Jackson
+1824,Louisiana-2,Democratic-Republican,2,John Quincy Adams
+1824,Maine,Democratic-Republican,9,John Quincy Adams
+1824,Maryland,Democratic-Republican-2,7,Andrew Jackson
+1824,Maryland-2,Democratic-Republican,3,John Quincy Adams
+1824,Maryland-3,Democratic-Republican-3,1,William Crawford
+1824,Massachusetts,Democratic-Republican,15,John Quincy Adams
+1824,Mississippi,Democratic-Republican-2,3,Andrew Jackson
+1824,Missouri,Democratic-Republican-4,3,Henry Clay
+1824,New Hampshire,Democratic-Republican,8,John Quincy Adams
+1824,New Jersey,Democratic-Republican-2,8,Andrew Jackson
+1824,New York,Democratic-Republican,26,John Quincy Adams
+1824,New York-2,Democratic-Republican-2,1,Andrew Jackson
+1824,New York-3,Democratic-Republican-3,5,William H. Crawford
+1824,New York-4,Democratic-Republican-4,4,Henry Clay
+1824,North Carolina,Democratic-Republican-2,15,Andrew Jackson
+1824,Ohio,Democratic-Republican-4,16,Henry Clay
+1824,Pennsylvania,Democratic-Republican,28,John Quincy Adams
+1824,Rhode Island,Democratic-Republican,4,John Quincy Adams
+1824,South Carolina,Democratic-Republican-2,9,Andrew Jackson
+1824,Tennessee,Democratic-Republican-2,11,Andrew Jackson
+1824,Vermont,Democratic-Republican,7,John Quincy Adams
+1824,Virginia,Democratic-Republican-3,24,William H. Crawford
+1824,West Virginia,Vacant State,0,
+1824,Florida,Vacant State,0,
+1824,Wisconsin,Vacant State,0,
+1824,Texas,Vacant State,0,
+1824,Iowa,Vacant State,0,
+1824,California,Vacant State,0,
+1824,Nebraska,Vacant State,0,
+1824,Kansas,Vacant State,0,
+1824,Minnesota,Vacant State,0,
+1824,Oregon,Vacant State,0,
+1824,Hawaii,Vacant State,0,
+1824,Idaho,Vacant State,0,
+1824,Montana,Vacant State,0,
+1824,New Mexico,Vacant State,0,
+1824,North Dakota,Vacant State,0,
+1824,Oklahoma,Vacant State,0,
+1824,South Dakota,Vacant State,0,
+1824,Utah,Vacant State,0,
+1824,Washington,Vacant State,0,
+1824,Wyoming,Vacant State,0,
+1824,"Washington, D.C.",Vacant State,0,
+1824,Alaska,Vacant State,0,
+1824,Arizona,Vacant State,0,
+1824,Colorado,Vacant State,0,
+1824,Nevada,Vacant State,0,
+1824,Arkansas,Vacant State,0,
+1824,Michigan,Vacant State,0,
+1820,Alabama,Democratic-Republican,5,James Monroe
+1820,Connecticut,Democratic-Republican,8,James Monroe
+1820,Delaware,Democratic-Republican,4,James Monroe
+1820,Georgia,Democratic-Republican,8,James Monroe
+1820,Illinois,Democratic-Republican,3,James Monroe
+1820,Indiana,Democratic-Republican,3,James Monroe
+1820,Kentucky,Democratic-Republican,12,James Monroe
+1820,Louisiana,Democratic-Republican,3,James Monroe
+1820,Maine,Democratic-Republican,9,James Monroe
+1820,Maryland,Democratic-Republican,11,James Monroe
+1820,Massachusetts,Democratic-Republican,15,James Monroe
+1820,Mississippi,Democratic-Republican,2,James Monroe
+1820,Missouri,Democratic-Republican,3,James Monroe
+1820,New Hampshire,Democratic-Republican,7,James Monroe
+1820,New Hampshire-2,Democratic-Republican-2,1,James Monroe
+1820,New Jersey,Democratic-Republican,8,James Monroe
+1820,New York,Democratic-Republican,29,James Monroe
+1820,North Carolina,Democratic-Republican,15,James Monroe
+1820,Ohio,Democratic-Republican,8,James Monroe
+1820,Pennsylvania,Democratic-Republican,24,James Monroe
+1820,Rhode Island,Democratic-Republican,4,James Monroe
+1820,South Carolina,Democratic-Republican,11,James Monroe
+1820,Tennessee,Democratic-Republican,7,James Monroe
+1820,Vermont,Democratic-Republican,8,James Monroe
+1820,Virginia,Democratic-Republican,25,James Monroe
+1820,West Virginia,Democratic-Republican,0,
+1820,Florida,Vacant State,0,
+1820,Wisconsin,Vacant State,0,
+1820,Texas,Vacant State,0,
+1820,Iowa,Vacant State,0,
+1820,California,Vacant State,0,
+1820,Nebraska,Vacant State,0,
+1820,Kansas,Vacant State,0,
+1820,Minnesota,Vacant State,0,
+1820,Oregon,Vacant State,0,
+1820,Hawaii,Vacant State,0,
+1820,Idaho,Vacant State,0,
+1820,Montana,Vacant State,0,
+1820,New Mexico,Vacant State,0,
+1820,North Dakota,Vacant State,0,
+1820,Oklahoma,Vacant State,0,
+1820,South Dakota,Vacant State,0,
+1820,Utah,Vacant State,0,
+1820,Washington,Vacant State,0,
+1820,Wyoming,Vacant State,0,
+1820,"Washington, D.C.",Vacant State,0,
+1820,Alaska,Vacant State,0,
+1820,Arizona,Vacant State,0,
+1820,Colorado,Vacant State,0,
+1820,Nevada,Vacant State,0,
+1820,Arkansas,Vacant State,0,
+1820,Michigan,Vacant State,0,
+1816,Connecticut,Federalist,9,Rufus King
+1816,Delaware,Federalist,3,Rufus King
+1816,Georgia,Democratic-Republican,8,James Monroe
+1816,Indiana,Democratic-Republican,3,James Monroe
+1816,Kentucky,Democratic-Republican,12,James Monroe
+1816,Louisiana,Democratic-Republican,3,James Monroe
+1816,Maryland,Democratic-Republican,8,James Monroe
+1816,Massachusetts,Federalist,22,Rufus King
+1816,New Hampshire,Democratic-Republican,8,James Monroe
+1816,New Jersey,Democratic-Republican,8,James Monroe
+1816,New York,Democratic-Republican,29,James Monroe
+1816,North Carolina,Democratic-Republican,15,James Monroe
+1816,Ohio,Democratic-Republican,8,James Monroe
+1816,Pennsylvania,Democratic-Republican,25,James Monroe
+1816,Rhode Island,Democratic-Republican,4,James Monroe
+1816,South Carolina,Democratic-Republican,11,James Monroe
+1816,Tennessee,Democratic-Republican,8,James Monroe
+1816,Vermont,Democratic-Republican,8,James Monroe
+1816,Virginia,Democratic-Republican,25,James Monroe
+1816,West Virginia,Democratic-Republican,0,
+1816,Maine,Vacant State,0,
+1816,Mississippi,Vacant State,0,
+1816,Missouri,Vacant State,0,
+1816,Florida,Vacant State,0,
+1816,Wisconsin,Vacant State,0,
+1816,Texas,Vacant State,0,
+1816,Iowa,Vacant State,0,
+1816,California,Vacant State,0,
+1816,Nebraska,Vacant State,0,
+1816,Kansas,Vacant State,0,
+1816,Minnesota,Vacant State,0,
+1816,Oregon,Vacant State,0,
+1816,Hawaii,Vacant State,0,
+1816,Idaho,Vacant State,0,
+1816,Montana,Vacant State,0,
+1816,New Mexico,Vacant State,0,
+1816,North Dakota,Vacant State,0,
+1816,Oklahoma,Vacant State,0,
+1816,South Dakota,Vacant State,0,
+1816,Utah,Vacant State,0,
+1816,Washington,Vacant State,0,
+1816,Wyoming,Vacant State,0,
+1816,"Washington, D.C.",Vacant State,0,
+1816,Alaska,Vacant State,0,
+1816,Arizona,Vacant State,0,
+1816,Colorado,Vacant State,0,
+1816,Nevada,Vacant State,0,
+1816,Arkansas,Vacant State,0,
+1816,Michigan,Vacant State,0,
+1816,Alabama,Vacant State,0,
+1816,Illinois,Vacant State,0,
+1812,Connecticut,Federalist,9,De Witt Clinton
+1812,Delaware,Federalist,4,De Witt Clinton
+1812,Georgia,Democratic-Republican,8,James Madison
+1812,Kentucky,Democratic-Republican,12,James Madison
+1812,Louisiana,Democratic-Republican,3,James Madison
+1812,Maryland,Democratic-Republican,6,James Madison
+1812,Maryland-2,Federalist,5,James Madison
+1812,Massachusetts,Federalist,22,De Witt Clinton
+1812,New Hampshire,Democratic-Republican,8,James Madison
+1812,New Jersey,Federalist,8,James Madison
+1812,New York,Federalist,29,James Madison
+1812,North Carolina,Democratic-Republican,15,James Madison
+1812,Ohio,Democratic-Republican,7,James Madison
+1812,Pennsylvania,Democratic-Republican,25,James Madison
+1812,Rhode Island,Federalist,4,De Witt Clinton
+1812,South Carolina,Democratic-Republican,11,James Madison
+1812,Tennessee,Democratic-Republican,8,James Madison
+1812,Vermont,Democratic-Republican,8,James Madison
+1812,Virginia,Democratic-Republican,25,James Madison
+1812,West Virginia,Democratic-Republican,0,
+1812,Maine,Vacant State,0,
+1812,Mississippi,Vacant State,0,
+1812,Missouri,Vacant State,0,
+1812,Florida,Vacant State,0,
+1812,Wisconsin,Vacant State,0,
+1812,Texas,Vacant State,0,
+1812,Iowa,Vacant State,0,
+1812,California,Vacant State,0,
+1812,Nebraska,Vacant State,0,
+1812,Kansas,Vacant State,0,
+1812,Minnesota,Vacant State,0,
+1812,Oregon,Vacant State,0,
+1812,Hawaii,Vacant State,0,
+1812,Idaho,Vacant State,0,
+1812,Montana,Vacant State,0,
+1812,New Mexico,Vacant State,0,
+1812,North Dakota,Vacant State,0,
+1812,Oklahoma,Vacant State,0,
+1812,South Dakota,Vacant State,0,
+1812,Utah,Vacant State,0,
+1812,Washington,Vacant State,0,
+1812,Wyoming,Vacant State,0,
+1812,"Washington, D.C.",Vacant State,0,
+1812,Alaska,Vacant State,0,
+1812,Arizona,Vacant State,0,
+1812,Colorado,Vacant State,0,
+1812,Nevada,Vacant State,0,
+1812,Arkansas,Vacant State,0,
+1812,Michigan,Vacant State,0,
+1812,Alabama,Vacant State,0,
+1812,Illinois,Vacant State,0,
+1812,Indiana,Vacant State,0,
+1808,Connecticut,Federalist,9,Charles C. Pinckney
+1808,Delaware,Federalist,3,Charles C. Pinckney
+1808,Georgia,Democratic-Republican,6,James Madison
+1808,Kentucky,Democratic-Republican,5,James Madison
+1808,Maryland,Democratic-Republican,9,James Madison
+1808,Maryland-2,Federalist,2,James Madison
+1808,Massachusetts,Federalist,19,Charles C. Pinckney
+1808,New Hampshire,Democratic-Republican,7,James Madison
+1808,New Jersey,Democratic-Republican,8,James Madison
+1808,New York,Democratic-Republican,13,James Madison
+1808,New York-2,Democratic-Republican-2,6,George Clinton
+1808,North Carolina,Democratic-Republican,11,James Madison
+1808,North Carolina-2,Democratic-Republican-2,3,James Madison
+1808,Ohio,Democratic-Republican,3,James Madison
+1808,Pennsylvania,Democratic-Republican,20,James Madison
+1808,Rhode Island,Federalist,4,Charles C. Pinckney
+1808,South Carolina,Democratic-Republican,10,James Madison
+1808,Tennessee,Democratic-Republican,5,James Madison
+1808,Vermont,Democratic-Republican,6,James Madison
+1808,Virginia,Democratic-Republican,24,James Madison
+1808,West Virginia,Democratic-Republican,0,
+1808,Maine,Vacant State,0,
+1808,Mississippi,Vacant State,0,
+1808,Missouri,Vacant State,0,
+1808,Florida,Vacant State,0,
+1808,Wisconsin,Vacant State,0,
+1808,Texas,Vacant State,0,
+1808,Iowa,Vacant State,0,
+1808,California,Vacant State,0,
+1808,Nebraska,Vacant State,0,
+1808,Kansas,Vacant State,0,
+1808,Minnesota,Vacant State,0,
+1808,Oregon,Vacant State,0,
+1808,Hawaii,Vacant State,0,
+1808,Idaho,Vacant State,0,
+1808,Montana,Vacant State,0,
+1808,New Mexico,Vacant State,0,
+1808,North Dakota,Vacant State,0,
+1808,Oklahoma,Vacant State,0,
+1808,South Dakota,Vacant State,0,
+1808,Utah,Vacant State,0,
+1808,Washington,Vacant State,0,
+1808,Wyoming,Vacant State,0,
+1808,"Washington, D.C.",Vacant State,0,
+1808,Alaska,Vacant State,0,
+1808,Arizona,Vacant State,0,
+1808,Colorado,Vacant State,0,
+1808,Nevada,Vacant State,0,
+1808,Arkansas,Vacant State,0,
+1808,Michigan,Vacant State,0,
+1808,Alabama,Vacant State,0,
+1808,Illinois,Vacant State,0,
+1808,Indiana,Vacant State,0,
+1808,Louisiana,Vacant State,0,
+1804,Connecticut,Federalist,9,Charles C. Pinckney
+1804,Delaware,Federalist,3,Charles C. Pinckney
+1804,Georgia,Democratic-Republican,6,Thomas Jefferson
+1804,Kentucky,Democratic-Republican,8,Thomas Jefferson
+1804,Maryland,Democratic-Republican,9,Thomas Jefferson
+1804,Maryland-2,Federalist,2,Thomas Jefferson
+1804,Massachusetts,Democratic-Republican,19,Thomas Jefferson
+1804,New Hampshire,Democratic-Republican,7,Thomas Jefferson
+1804,New Jersey,Democratic-Republican,8,Thomas Jefferson
+1804,New York,Democratic-Republican,19,Thomas Jefferson
+1804,North Carolina,Democratic-Republican,14,Thomas Jefferson
+1804,Ohio,Democratic-Republican,3,Thomas Jefferson
+1804,Pennsylvania,Democratic-Republican,20,Thomas Jefferson
+1804,Rhode Island,Democratic-Republican,4,Thomas Jefferson
+1804,South Carolina,Democratic-Republican,10,Thomas Jefferson
+1804,Tennessee,Democratic-Republican,5,Thomas Jefferson
+1804,Vermont,Democratic-Republican,6,Thomas Jefferson
+1804,Virginia,Democratic-Republican,24,Thomas Jefferson
+1804,West Virginia,Democratic-Republican,0,
+1804,Maine,Vacant State,0,
+1804,Mississippi,Vacant State,0,
+1804,Missouri,Vacant State,0,
+1804,Florida,Vacant State,0,
+1804,Wisconsin,Vacant State,0,
+1804,Texas,Vacant State,0,
+1804,Iowa,Vacant State,0,
+1804,California,Vacant State,0,
+1804,Nebraska,Vacant State,0,
+1804,Kansas,Vacant State,0,
+1804,Minnesota,Vacant State,0,
+1804,Oregon,Vacant State,0,
+1804,Hawaii,Vacant State,0,
+1804,Idaho,Vacant State,0,
+1804,Montana,Vacant State,0,
+1804,New Mexico,Vacant State,0,
+1804,North Dakota,Vacant State,0,
+1804,Oklahoma,Vacant State,0,
+1804,South Dakota,Vacant State,0,
+1804,Utah,Vacant State,0,
+1804,Washington,Vacant State,0,
+1804,Wyoming,Vacant State,0,
+1804,"Washington, D.C.",Vacant State,0,
+1804,Alaska,Vacant State,0,
+1804,Arizona,Vacant State,0,
+1804,Colorado,Vacant State,0,
+1804,Nevada,Vacant State,0,
+1804,Arkansas,Vacant State,0,
+1804,Michigan,Vacant State,0,
+1804,Alabama,Vacant State,0,
+1804,Illinois,Vacant State,0,
+1804,Indiana,Vacant State,0,
+1804,Louisiana,Vacant State,0,
+1800,Connecticut,Federalist,9,John Adams
+1800,Delaware,Federalist,3,John Adams
+1800,Georgia,Democratic-Republican,4,Thomas Jefferson
+1800,Kentucky,Democratic-Republican,4,Thomas Jefferson
+1800,Maryland,Democratic-Republican,5,Thomas Jefferson
+1800,Maryland-2,Federalist,5,Thomas Jefferson
+1800,Massachusetts,Federalist,16,John Adams
+1800,New Hampshire,Democratic-Republican,6,Thomas Jefferson
+1800,New Jersey,Federalist,7,John Adams
+1800,New York,Democratic-Republican,12,Thomas Jefferson
+1800,North Carolina,Democratic-Republican,8,Thomas Jefferson
+1800,North Carolina-2,Federalist,4,Thomas Jefferson
+1800,Pennsylvania,Democratic-Republican,8,Thomas Jefferson
+1800,Pennsylvania-2,Federalist,7,Thomas Jefferson
+1800,Rhode Island,Federalist,4,John Adams
+1800,South Carolina,Democratic-Republican,8,Thomas Jefferson
+1800,Tennessee,Democratic-Republican,3,Thomas Jefferson
+1800,Vermont,Democratic-Republican,4,Thomas Jefferson
+1800,Virginia,Democratic-Republican,21,Thomas Jefferson
+1800,West Virginia,Democratic-Republican,0,
+1800,Maine,Vacant State,0,
+1800,Mississippi,Vacant State,0,
+1800,Missouri,Vacant State,0,
+1800,Florida,Vacant State,0,
+1800,Wisconsin,Vacant State,0,
+1800,Texas,Vacant State,0,
+1800,Iowa,Vacant State,0,
+1800,California,Vacant State,0,
+1800,Nebraska,Vacant State,0,
+1800,Kansas,Vacant State,0,
+1800,Minnesota,Vacant State,0,
+1800,Oregon,Vacant State,0,
+1800,Hawaii,Vacant State,0,
+1800,Idaho,Vacant State,0,
+1800,Montana,Vacant State,0,
+1800,New Mexico,Vacant State,0,
+1800,North Dakota,Vacant State,0,
+1800,Oklahoma,Vacant State,0,
+1800,South Dakota,Vacant State,0,
+1800,Utah,Vacant State,0,
+1800,Washington,Vacant State,0,
+1800,Wyoming,Vacant State,0,
+1800,"Washington, D.C.",Vacant State,0,
+1800,Alaska,Vacant State,0,
+1800,Arizona,Vacant State,0,
+1800,Colorado,Vacant State,0,
+1800,Nevada,Vacant State,0,
+1800,Arkansas,Vacant State,0,
+1800,Michigan,Vacant State,0,
+1800,Alabama,Vacant State,0,
+1800,Illinois,Vacant State,0,
+1800,Indiana,Vacant State,0,
+1800,Louisiana,Vacant State,0,
+1800,Ohio,Vacant State,0,
+1796,Connecticut,Federalist,9,John Adams
+1796,Delaware,Federalist,3,John Adams
+1796,Georgia,Democratic-Republican,4,Thomas Jefferson
+1796,Kentucky,Democratic-Republican,4,Thomas Jefferson
+1796,Maryland,Federalist,7,John Adams
+1796,Maryland-2,Democratic-Republican,4,Thomas Jefferson
+1796,Massachusetts,Federalist,16,John Adams
+1796,New Hampshire,Federalist,6,John Adams
+1796,New Jersey,Federalist,7,John Adams
+1796,New York,Federalist,12,John Adams
+1796,North Carolina,Democratic-Republican,11,Thomas Jefferson
+1796,North Carolina-2,Federalist,1,John Adams
+1796,Pennsylvania,Democratic-Republican,14,Thomas Jefferson
+1796,Pennsylvania-2,Federalist,1,John Adams
+1796,Rhode Island,Federalist,4,John Adams
+1796,South Carolina,Democratic-Republican,8,Thomas Jefferson
+1796,Tennessee,Democratic-Republican,3,Thomas Jefferson
+1796,Vermont,Federalist,4,John Adams
+1796,Virginia,Democratic-Republican,20,Thomas Jefferson
+1796,Virginia-2,Federalist,1,Thomas Jefferson
+1796,West Virginia,Vacant State,0,
+1796,Maine,Vacant State,0,
+1796,Mississippi,Vacant State,0,
+1796,Missouri,Vacant State,0,
+1796,Florida,Vacant State,0,
+1796,Wisconsin,Vacant State,0,
+1796,Texas,Vacant State,0,
+1796,Iowa,Vacant State,0,
+1796,California,Vacant State,0,
+1796,Nebraska,Vacant State,0,
+1796,Kansas,Vacant State,0,
+1796,Minnesota,Vacant State,0,
+1796,Oregon,Vacant State,0,
+1796,Hawaii,Vacant State,0,
+1796,Idaho,Vacant State,0,
+1796,Montana,Vacant State,0,
+1796,New Mexico,Vacant State,0,
+1796,North Dakota,Vacant State,0,
+1796,Oklahoma,Vacant State,0,
+1796,South Dakota,Vacant State,0,
+1796,Utah,Vacant State,0,
+1796,Washington,Vacant State,0,
+1796,Wyoming,Vacant State,0,
+1796,"Washington, D.C.",Vacant State,0,
+1796,Alaska,Vacant State,0,
+1796,Arizona,Vacant State,0,
+1796,Colorado,Vacant State,0,
+1796,Nevada,Vacant State,0,
+1796,Arkansas,Vacant State,0,
+1796,Michigan,Vacant State,0,
+1796,Alabama,Vacant State,0,
+1796,Illinois,Vacant State,0,
+1796,Indiana,Vacant State,0,
+1796,Louisiana,Vacant State,0,
+1796,Ohio,Vacant State,0,
+1792,Connecticut,Independent,9,George Washington
+1792,Delaware,Independent,3,George Washington
+1792,Georgia,Independent,4,George Washington
+1792,Kentucky,Independent,4,George Washington
+1792,Maryland,Independent,8,George Washington
+1792,Massachusetts,Independent,16,George Washington
+1792,New Hampshire,Independent,6,George Washington
+1792,New Jersey,Independent,7,George Washington
+1792,New York,Independent,12,George Washington
+1792,North Carolina,Independent,12,George Washington
+1792,Pennsylvania,Independent,15,George Washington
+1792,Rhode Island,Independent,4,George Washington
+1792,South Carolina,Independent,8,George Washington
+1792,Vermont,Independent,3,George Washington
+1792,Virginia,Independent,21,George Washington
+1792,West Virginia,Independent,0,
+1792,Maine,Vacant State,0,
+1792,Mississippi,Vacant State,0,
+1792,Missouri,Vacant State,0,
+1792,Florida,Vacant State,0,
+1792,Wisconsin,Vacant State,0,
+1792,Texas,Vacant State,0,
+1792,Iowa,Vacant State,0,
+1792,California,Vacant State,0,
+1792,Nebraska,Vacant State,0,
+1792,Kansas,Vacant State,0,
+1792,Minnesota,Vacant State,0,
+1792,Oregon,Vacant State,0,
+1792,Hawaii,Vacant State,0,
+1792,Idaho,Vacant State,0,
+1792,Montana,Vacant State,0,
+1792,New Mexico,Vacant State,0,
+1792,North Dakota,Vacant State,0,
+1792,Oklahoma,Vacant State,0,
+1792,South Dakota,Vacant State,0,
+1792,Utah,Vacant State,0,
+1792,Washington,Vacant State,0,
+1792,Wyoming,Vacant State,0,
+1792,"Washington, D.C.",Vacant State,0,
+1792,Alaska,Vacant State,0,
+1792,Arizona,Vacant State,0,
+1792,Colorado,Vacant State,0,
+1792,Nevada,Vacant State,0,
+1792,Arkansas,Vacant State,0,
+1792,Michigan,Vacant State,0,
+1792,Alabama,Vacant State,0,
+1792,Illinois,Vacant State,0,
+1792,Indiana,Vacant State,0,
+1792,Louisiana,Vacant State,0,
+1792,Ohio,Vacant State,0,
+1792,Tennessee,Vacant State,0,
+1788,Connecticut,Independent,7,George Washington
+1788,Delaware,Independent,3,George Washington
+1788,Georgia,Independent,5,George Washington
+1788,Maryland,Independent,6,George Washington
+1788,Massachusetts,Independent,10,George Washington
+1788,New Hampshire,Independent,5,George Washington
+1788,New Jersey,Independent,6,George Washington
+1788,New York,Neutral,0,
+1788,North Carolina,Neutral,0,
+1788,Pennsylvania,Independent,10,George Washington
+1788,Rhode Island,Neutral,0,
+1788,South Carolina,Independent,7,George Washington
+1788,Virginia,Independent,10,George Washington
+1788,West Virginia,Independent,0,
+1788,Maine,Vacant State,0,
+1788,Mississippi,Vacant State,0,
+1788,Missouri,Vacant State,0,
+1788,Florida,Vacant State,0,
+1788,Wisconsin,Vacant State,0,
+1788,Texas,Vacant State,0,
+1788,Iowa,Vacant State,0,
+1788,California,Vacant State,0,
+1788,Nebraska,Vacant State,0,
+1788,Kansas,Vacant State,0,
+1788,Minnesota,Vacant State,0,
+1788,Oregon,Vacant State,0,
+1788,Hawaii,Vacant State,0,
+1788,Idaho,Vacant State,0,
+1788,Montana,Vacant State,0,
+1788,New Mexico,Vacant State,0,
+1788,North Dakota,Vacant State,0,
+1788,Oklahoma,Vacant State,0,
+1788,South Dakota,Vacant State,0,
+1788,Utah,Vacant State,0,
+1788,Washington,Vacant State,0,
+1788,Wyoming,Vacant State,0,
+1788,"Washington, D.C.",Vacant State,0,
+1788,Alaska,Vacant State,0,
+1788,Arizona,Vacant State,0,
+1788,Colorado,Vacant State,0,
+1788,Nevada,Vacant State,0,
+1788,Arkansas,Vacant State,0,
+1788,Michigan,Vacant State,0,
+1788,Alabama,Vacant State,0,
+1788,Illinois,Vacant State,0,
+1788,Indiana,Vacant State,0,
+1788,Kentucky,Vacant State,0,
+1788,Louisiana,Vacant State,0,
+1788,Ohio,Vacant State,0,
+1788,Tennessee,Vacant State,0,
+1788,Vermont,Vacant State,0,
