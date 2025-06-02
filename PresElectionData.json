@@ -1,0 +1,1852 @@
+{
+  "1788" : [
+    {
+      "electoralVote" : 69,
+      "evMajority" : 69,
+      "evTotal" : 138,
+      "name" : "George Washington",
+      "party" : "Independent",
+      "partyColor" : "Independent",
+      "popularVote" : 0,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 34,
+      "evMajority" : 69,
+      "evTotal" : 138,
+      "name" : "John Adams",
+      "party" : "Federalist",
+      "partyColor" : "Federalist",
+      "popularVote" : 0,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 35,
+      "evMajority" : 69,
+      "evTotal" : 138,
+      "name" : "Others",
+      "party" : "Various",
+      "partyColor" : "Other",
+      "popularVote" : 0,
+      "winner" : false
+    }
+  ],
+  "1792" : [
+    {
+      "electoralVote" : 132,
+      "evMajority" : 132,
+      "evTotal" : 264,
+      "name" : "George Washington",
+      "party" : "Independent",
+      "partyColor" : "Independent",
+      "popularVote" : 0,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 77,
+      "evMajority" : 132,
+      "evTotal" : 264,
+      "name" : "John Adams",
+      "party" : "Federalist",
+      "partyColor" : "Federalist",
+      "popularVote" : 0,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 50,
+      "evMajority" : 132,
+      "evTotal" : 264,
+      "name" : "George Clinton",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican",
+      "popularVote" : 0,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 4,
+      "evMajority" : 132,
+      "evTotal" : 264,
+      "name" : "Thomas Jefferson",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican-2",
+      "popularVote" : 0,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 1,
+      "evMajority" : 132,
+      "evTotal" : 264,
+      "name" : "Aaron Burr",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican-3",
+      "popularVote" : 0,
+      "winner" : false
+    }
+  ],
+  "1796" : [
+    {
+      "electoralVote" : 71,
+      "evMajority" : 70,
+      "evTotal" : 276,
+      "name" : "John Adams",
+      "party" : "Federalist",
+      "partyColor" : "Federalist",
+      "popularVote" : 0,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 68,
+      "evMajority" : 70,
+      "evTotal" : 276,
+      "name" : "Thomas Jefferson",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican",
+      "popularVote" : 0,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 59,
+      "evMajority" : 70,
+      "evTotal" : 276,
+      "name" : "Thomas Pinckney",
+      "party" : "Federalist",
+      "partyColor" : "Federalist-2",
+      "popularVote" : 0,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 48,
+      "evMajority" : 70,
+      "evTotal" : 276,
+      "name" : "Various",
+      "party" : "Various",
+      "partyColor" : "Other",
+      "popularVote" : 0,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 30,
+      "evMajority" : 0,
+      "evTotal" : 276,
+      "name" : "Aaron Burr",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican-2",
+      "popularVote" : 0,
+      "winner" : false
+    }
+  ],
+  "1800" : [
+    {
+      "electoralVote" : 73,
+      "evMajority" : 70,
+      "evTotal" : 275,
+      "name" : "Thomas Jefferson",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican",
+      "popularVote" : 0,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 73,
+      "evMajority" : 70,
+      "evTotal" : 275,
+      "name" : "Aaron Burr",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican-2",
+      "popularVote" : 0,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 65,
+      "evMajority" : 70,
+      "evTotal" : 275,
+      "name" : "John Adams",
+      "party" : "Federalist",
+      "partyColor" : "Federalist",
+      "popularVote" : 0,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 64,
+      "evMajority" : 70,
+      "evTotal" : 275,
+      "name" : "Charles C. Pinckney",
+      "party" : "Federalist",
+      "partyColor" : "Federalist-2",
+      "popularVote" : 0,
+      "winner" : false
+    }
+  ],
+  "1804" : [
+    {
+      "electoralVote" : 162,
+      "evMajority" : 89,
+      "evTotal" : 176,
+      "name" : "Thomas Jefferson",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican",
+      "popularVote" : 0,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 14,
+      "evMajority" : 89,
+      "evTotal" : 176,
+      "name" : "Charles C. Pinckney",
+      "party" : "Federalist",
+      "partyColor" : "Federalist",
+      "popularVote" : 0,
+      "winner" : false
+    }
+  ],
+  "1808" : [
+    {
+      "electoralVote" : 122,
+      "evMajority" : 88,
+      "evTotal" : 176,
+      "name" : "James Madison",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican",
+      "popularVote" : 0,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 47,
+      "evMajority" : 88,
+      "evTotal" : 175,
+      "name" : "Charles C. Pinckney",
+      "party" : "Federalist",
+      "partyColor" : "Federalist",
+      "popularVote" : 0,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 6,
+      "evMajority" : 88,
+      "evTotal" : 175,
+      "name" : "George Clinton",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican-2",
+      "popularVote" : 0,
+      "winner" : false
+    }
+  ],
+  "1812" : [
+    {
+      "electoralVote" : 128,
+      "evMajority" : 109,
+      "evTotal" : 218,
+      "name" : "James Madison",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican",
+      "popularVote" : 0,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 89,
+      "evMajority" : 109,
+      "evTotal" : 217,
+      "name" : "De Witt Clinton",
+      "party" : "Federalist",
+      "partyColor" : "Federalist",
+      "popularVote" : 0,
+      "winner" : false
+    }
+  ],
+  "1816" : [
+    {
+      "electoralVote" : 183,
+      "evMajority" : 109,
+      "evTotal" : 218,
+      "name" : "James Monroe",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican",
+      "popularVote" : 0,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 34,
+      "evMajority" : 109,
+      "evTotal" : 217,
+      "name" : "Rufus King",
+      "party" : "Federalist",
+      "partyColor" : "Federalist",
+      "popularVote" : 0,
+      "winner" : false
+    }
+  ],
+  "1820" : [
+    {
+      "electoralVote" : 231,
+      "evMajority" : 118,
+      "evTotal" : 235,
+      "name" : "James Monroe",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican",
+      "popularVote" : 0,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 1,
+      "evMajority" : 118,
+      "evTotal" : 235,
+      "name" : "John Quincy Adams",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican-2",
+      "popularVote" : 0,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 3,
+      "evMajority" : 118,
+      "evTotal" : 235,
+      "name" : "Not Voting",
+      "party" : "Other",
+      "partyColor" : "Other",
+      "popularVote" : 0,
+      "winner" : false
+    }
+  ],
+  "1824" : [
+    {
+      "electoralVote" : 99,
+      "evMajority" : 131,
+      "evTotal" : 261,
+      "name" : "Andrew Jackson",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican",
+      "popularVote" : 153544,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 84,
+      "evMajority" : 131,
+      "evTotal" : 261,
+      "name" : "John Quincy Adams",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican-2",
+      "popularVote" : 108740,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 41,
+      "evMajority" : 131,
+      "evTotal" : 261,
+      "name" : "William H. Crawford",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican-3",
+      "popularVote" : 40856,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 37,
+      "evMajority" : 131,
+      "evTotal" : 261,
+      "name" : "Henry Clay",
+      "party" : "Democratic-Republican",
+      "partyColor" : "Democratic-Republican-4",
+      "popularVote" : 47531,
+      "winner" : false
+    }
+  ],
+  "1828" : [
+    {
+      "electoralVote" : 178,
+      "evMajority" : 131,
+      "evTotal" : 261,
+      "name" : "Andrew Jackson",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 647286,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 83,
+      "evMajority" : 131,
+      "evTotal" : 261,
+      "name" : "John Quincy Adams",
+      "party" : "National Republican",
+      "partyColor" : "National Republican",
+      "popularVote" : 508064,
+      "winner" : false
+    }
+  ],
+  "1832" : [
+    {
+      "electoralVote" : 219,
+      "evMajority" : 144,
+      "evTotal" : 286,
+      "name" : "Andrew Jackson",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 687502,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 49,
+      "evMajority" : 144,
+      "evTotal" : 286,
+      "name" : "Henry Clay",
+      "party" : "National Republican",
+      "partyColor" : "National Republican",
+      "popularVote" : 530189,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 11,
+      "evMajority" : 144,
+      "evTotal" : 286,
+      "name" : "John Floyd",
+      "party" : "Independent",
+      "partyColor" : "Independent",
+      "popularVote" : 0,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 7,
+      "evMajority" : 144,
+      "evTotal" : 286,
+      "name" : "William Wirt",
+      "party" : "Anti-Masonic",
+      "partyColor" : "Anti-Masonic",
+      "popularVote" : 101051,
+      "winner" : false
+    }
+  ],
+  "1836" : [
+    {
+      "electoralVote" : 170,
+      "evMajority" : 148,
+      "evTotal" : 294,
+      "name" : "Martin Van Buren",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 762678,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 73,
+      "evMajority" : 148,
+      "evTotal" : 294,
+      "name" : "William H. Harrison",
+      "party" : "Whig",
+      "partyColor" : "Whig",
+      "popularVote" : 735651,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 26,
+      "evMajority" : 148,
+      "evTotal" : 294,
+      "name" : "Hugh L. White",
+      "party" : "Whig",
+      "partyColor" : "Whig-2",
+      "popularVote" : 146107,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 14,
+      "evMajority" : 148,
+      "evTotal" : 294,
+      "name" : "Daniel Webster",
+      "party" : "Whig",
+      "partyColor" : "Whig-3",
+      "popularVote" : 41201,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 11,
+      "evMajority" : 148,
+      "evTotal" : 294,
+      "name" : "W.P. Mangum",
+      "party" : "Whig",
+      "partyColor" : "Whig-4",
+      "popularVote" : 0,
+      "winner" : false
+    }
+  ],
+  "1840" : [
+    {
+      "electoralVote" : 234,
+      "evMajority" : 148,
+      "evTotal" : 294,
+      "name" : "William H. Harrison",
+      "party" : "Whig",
+      "partyColor" : "Whig",
+      "popularVote" : 1275016,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 60,
+      "evMajority" : 148,
+      "evTotal" : 294,
+      "name" : "Martin Van Buren",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 1129102,
+      "winner" : false
+    }
+  ],
+  "1844" : [
+    {
+      "electoralVote" : 170,
+      "evMajority" : 138,
+      "evTotal" : 275,
+      "name" : "James K. Polk",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 1337243,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 105,
+      "evMajority" : 138,
+      "evTotal" : 275,
+      "name" : "Henry Clay",
+      "party" : "Whig",
+      "partyColor" : "Whig",
+      "popularVote" : 1299062,
+      "winner" : false
+    }
+  ],
+  "1848" : [
+    {
+      "electoralVote" : 163,
+      "evMajority" : 146,
+      "evTotal" : 296,
+      "name" : "Zachary Taylor",
+      "party" : "Whig",
+      "partyColor" : "Whig",
+      "popularVote" : 1360099,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 127,
+      "evMajority" : 146,
+      "evTotal" : 296,
+      "name" : "Lewis Cass",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 1220544,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 146,
+      "evTotal" : 296,
+      "name" : "Martin Van Buren",
+      "party" : "Free Soil",
+      "partyColor" : "Free Soil",
+      "popularVote" : 291501,
+      "winner" : false
+    }
+  ],
+  "1852" : [
+    {
+      "electoralVote" : 254,
+      "evMajority" : 149,
+      "evTotal" : 296,
+      "name" : "Franklin Pierce",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 1601274,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 42,
+      "evMajority" : 149,
+      "evTotal" : 296,
+      "name" : "Winfield Scott",
+      "party" : "Whig",
+      "partyColor" : "Whig",
+      "popularVote" : 1386580,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 149,
+      "evTotal" : 296,
+      "name" : "John P. Hale",
+      "party" : "Free Soil",
+      "partyColor" : "Free Soil",
+      "popularVote" : 155210,
+      "winner" : false
+    }
+  ],
+  "1856" : [
+    {
+      "electoralVote" : 174,
+      "evMajority" : 149,
+      "evTotal" : 296,
+      "name" : "James Buchanan",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 1838169,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 114,
+      "evMajority" : 149,
+      "evTotal" : 296,
+      "name" : "John C. Fremont",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 1341264,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 8,
+      "evMajority" : 149,
+      "evTotal" : 296,
+      "name" : "Millard Fillmore",
+      "party" : "American",
+      "partyColor" : "American",
+      "popularVote" : 873000,
+      "winner" : false
+    }
+  ],
+  "1860" : [
+    {
+      "electoralVote" : 180,
+      "evMajority" : 152,
+      "evTotal" : 303,
+      "name" : "Abraham Lincoln",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 1866452,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 72,
+      "evMajority" : 152,
+      "evTotal" : 303,
+      "name" : "John C. Breckinridge",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 847953,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 39,
+      "evMajority" : 152,
+      "evTotal" : 303,
+      "name" : "John Bell",
+      "party" : "Constitutional Union",
+      "partyColor" : "Constitutional Union",
+      "popularVote" : 592906,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 12,
+      "evMajority" : 152,
+      "evTotal" : 303,
+      "name" : "Stephen A. Douglas",
+      "party" : "Democrat",
+      "partyColor" : "Democrat-2",
+      "popularVote" : 1382713,
+      "winner" : false
+    }
+  ],
+  "1864" : [
+    {
+      "electoralVote" : 212,
+      "evMajority" : 117,
+      "evTotal" : 233,
+      "name" : "Abraham Lincoln",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 2213665,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 21,
+      "evMajority" : 117,
+      "evTotal" : 233,
+      "name" : "George B. McClellan",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 1805237,
+      "winner" : false
+    }
+  ],
+  "1868" : [
+    {
+      "electoralVote" : 214,
+      "evMajority" : 148,
+      "evTotal" : 294,
+      "name" : "Ulysses S. Grant",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 3012833,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 80,
+      "evMajority" : 148,
+      "evTotal" : 294,
+      "name" : "Horatio Seymour",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 2703249,
+      "winner" : false
+    }
+  ],
+  "1872" : [
+    {
+      "electoralVote" : 286,
+      "evMajority" : 176,
+      "evTotal" : 352,
+      "name" : "Ulysses S. Grant",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 3597132,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 63,
+      "evMajority" : 176,
+      "evTotal" : 352,
+      "name" : "Various ***",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 2834125,
+      "winner" : false
+    }
+  ],
+  "1876" : [
+    {
+      "electoralVote" : 185,
+      "evMajority" : 185,
+      "evTotal" : 369,
+      "name" : "Rutherford B. Hayes",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 4036298,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 184,
+      "evMajority" : 185,
+      "evTotal" : 369,
+      "name" : "Samuel J. Tilden",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 4444952,
+      "winner" : false
+    }
+  ],
+  "1880" : [
+    {
+      "electoralVote" : 214,
+      "evMajority" : 185,
+      "evTotal" : 369,
+      "name" : "James A. Garfield",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 4454416,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 155,
+      "evMajority" : 185,
+      "evTotal" : 369,
+      "name" : "Winfield S. Hancock",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 4444952,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 185,
+      "evTotal" : 369,
+      "name" : "James Weaver",
+      "party" : "Greenback",
+      "partyColor" : "Greenback",
+      "popularVote" : 308578,
+      "winner" : false
+    }
+  ],
+  "1884" : [
+    {
+      "electoralVote" : 219,
+      "evMajority" : 201,
+      "evTotal" : 401,
+      "name" : "Grover Cleveland",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 4874986,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 182,
+      "evMajority" : 201,
+      "evTotal" : 401,
+      "name" : "James G. Blaine",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 4851981,
+      "winner" : false
+    }
+  ],
+  "1888" : [
+    {
+      "electoralVote" : 233,
+      "evMajority" : 201,
+      "evTotal" : 401,
+      "name" : "Benjamin Harrison",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 5439853,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 168,
+      "evMajority" : 201,
+      "evTotal" : 401,
+      "name" : "Grover Cleveland",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 5540309,
+      "winner" : false
+    }
+  ],
+  "1892" : [
+    {
+      "electoralVote" : 277,
+      "evMajority" : 223,
+      "evTotal" : 444,
+      "name" : "Grover Cleveland",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 5556918,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 145,
+      "evMajority" : 223,
+      "evTotal" : 444,
+      "name" : "Benjamin Harrison",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 5176108,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 22,
+      "evMajority" : 223,
+      "evTotal" : 444,
+      "name" : "James B. Weaver",
+      "party" : "People's Party",
+      "partyColor" : "Socialist",
+      "popularVote" : 1027329,
+      "winner" : false
+    }
+  ],
+  "1896" : [
+    {
+      "electoralVote" : 271,
+      "evMajority" : 224,
+      "evTotal" : 447,
+      "name" : "William McKinley",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 7104779,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 176,
+      "evMajority" : 224,
+      "evTotal" : 447,
+      "name" : "William J. Bryan",
+      "party" : "Democrat-Populist",
+      "partyColor" : "Democrat",
+      "popularVote" : 6502925,
+      "winner" : false
+    }
+  ],
+  "1900" : [
+    {
+      "electoralVote" : 292,
+      "evMajority" : 224,
+      "evTotal" : 447,
+      "name" : "William McKinley",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 7207923,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 155,
+      "evMajority" : 224,
+      "evTotal" : 447,
+      "name" : "William J. Bryan",
+      "party" : "Democrat-Populist",
+      "partyColor" : "Democrat",
+      "popularVote" : 6358133,
+      "winner" : false
+    }
+  ],
+  "1904" : [
+    {
+      "electoralVote" : 336,
+      "evMajority" : 239,
+      "evTotal" : 476,
+      "name" : "Theodore Roosevelt",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 7623486,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 140,
+      "evMajority" : 239,
+      "evTotal" : 476,
+      "name" : "Alton B. Parker",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 5077911,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 239,
+      "evTotal" : 476,
+      "name" : "Eugene Debs",
+      "party" : "Socialist",
+      "partyColor" : "Socialist",
+      "popularVote" : 402895,
+      "winner" : false
+    }
+  ],
+  "1908" : [
+    {
+      "electoralVote" : 321,
+      "evMajority" : 242,
+      "evTotal" : 483,
+      "name" : "William H. Taft",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 7678908,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 162,
+      "evMajority" : 242,
+      "evTotal" : 483,
+      "name" : "William J. Bryan",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 6409104,
+      "winner" : false
+    }
+  ],
+  "1912" : [
+    {
+      "electoralVote" : 435,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Woodrow Wilson",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 6293454,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 88,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Theodore Roosevelt",
+      "party" : "Progressive",
+      "partyColor" : "Progressive",
+      "popularVote" : 4119207,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 8,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "William H. Taft",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 3483922,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Eugene Debs",
+      "party" : "Socialist",
+      "partyColor" : "Socialist",
+      "popularVote" : 901551,
+      "winner" : false
+    }
+  ],
+  "1916" : [
+    {
+      "electoralVote" : 277,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Woodrow Wilson",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 9126868,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 254,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Charles E. Hughes",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 8548728,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Allan Benson",
+      "party" : "Socialist",
+      "partyColor" : "Socialist",
+      "popularVote" : 590524,
+      "winner" : false
+    }
+  ],
+  "1920" : [
+    {
+      "electoralVote" : 404,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Warren G. Harding",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 16152200,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 127,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "James M. Cox",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 9147353,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Eugene Debs",
+      "party" : "Socialist",
+      "partyColor" : "Socialist",
+      "popularVote" : 919799,
+      "winner" : false
+    }
+  ],
+  "1924" : [
+    {
+      "electoralVote" : 382,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Calvin Coolidge",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 15725016,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 136,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "John W. Davis",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 8386503,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 13,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Robert M. LaFollette",
+      "party" : "Progressive",
+      "partyColor" : "Progressive",
+      "popularVote" : 4822856,
+      "winner" : false
+    }
+  ],
+  "1928" : [
+    {
+      "electoralVote" : 444,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Herbert C. Hoover",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 21391381,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 87,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Alfred E. Smith",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 15016443,
+      "winner" : false
+    }
+  ],
+  "1932" : [
+    {
+      "electoralVote" : 472,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Franklin D. Roosevelt",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 22821857,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 59,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Herbert C. Hoover",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 15761841,
+      "winner" : false
+    }
+  ],
+  "1936" : [
+    {
+      "electoralVote" : 523,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Franklin D. Roosevelt",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 27751597,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 8,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Alfred M. Landon",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 16679583,
+      "winner" : false
+    }
+  ],
+  "1940" : [
+    {
+      "electoralVote" : 449,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Franklin D. Roosevelt",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 27244160,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 82,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Wendell L. Willkie",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 22305198,
+      "winner" : false
+    }
+  ],
+  "1944" : [
+    {
+      "electoralVote" : 432,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Franklin D. Roosevelt",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 25602504,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 99,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Thomas E. Dewey",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 22006285,
+      "winner" : false
+    }
+  ],
+  "1948" : [
+    {
+      "electoralVote" : 303,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Harry S. Truman",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 24105695,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 189,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Thomas E. Dewey",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 21969170,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 39,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "J. Strom Thurmond",
+      "party" : "States' Rights Democrat",
+      "partyColor" : "States' Rights Democrat",
+      "popularVote" : 1169021,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Henry Wallace",
+      "party" : "Progressive",
+      "partyColor" : "Progressive",
+      "popularVote" : 1157328,
+      "winner" : false
+    }
+  ],
+  "1952" : [
+    {
+      "electoralVote" : 442,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Dwight Eisenhower",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 33778963,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 89,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Adlai Stevenson",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 27314992,
+      "winner" : false
+    }
+  ],
+  "1956" : [
+    {
+      "electoralVote" : 457,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Dwight Eisenhower",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 35581003,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 73,
+      "evMajority" : 266,
+      "evTotal" : 531,
+      "name" : "Adlai Stevenson",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 25738765,
+      "winner" : false
+    }
+  ],
+  "1960" : [
+    {
+      "electoralVote" : 303,
+      "evMajority" : 269,
+      "evTotal" : 537,
+      "name" : "John F. Kennedy",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 34227096,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 219,
+      "evMajority" : 269,
+      "evTotal" : 537,
+      "name" : "Richard M. Nixon",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 34107646,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 15,
+      "evMajority" : 269,
+      "evTotal" : 537,
+      "name" : "Harry F. Byrd",
+      "party" : "Democrat",
+      "partyColor" : "Democrat-2",
+      "popularVote" : 116248,
+      "winner" : false
+    }
+  ],
+  "1964" : [
+    {
+      "electoralVote" : 486,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Lyndon B. Johnson",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 42825463,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 52,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Barry M. Goldwater",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 27146969,
+      "winner" : false
+    }
+  ],
+  "1968" : [
+    {
+      "electoralVote" : 301,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Richard M. Nixon",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 31710470,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 191,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Hubert H. Humphrey",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 30898055,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 46,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "George C. Wallace",
+      "party" : "American Independent",
+      "partyColor" : "American Independent",
+      "popularVote" : 9906473,
+      "winner" : false
+    }
+  ],
+  "1972" : [
+    {
+      "electoralVote" : 520,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Richard M. Nixon",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 46740323,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 17,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "George McGovern",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 28901598,
+      "winner" : false
+    }
+  ],
+  "1976" : [
+    {
+      "electoralVote" : 297,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Jimmy Carter",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 40825839,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 240,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Gerald R. Ford",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 39147770,
+      "winner" : false
+    }
+  ],
+  "1980" : [
+    {
+      "electoralVote" : 489,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Ronald Reagan",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 43901812,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 49,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Jimmy Carter",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 35483820,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "John Anderson",
+      "party" : "Independent",
+      "partyColor" : "Independent",
+      "popularVote" : 5719850,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Ed Clark",
+      "party" : "Libertarian",
+      "partyColor" : "Libertarian",
+      "popularVote" : 921128,
+      "winner" : false
+    }
+  ],
+  "1984" : [
+    {
+      "electoralVote" : 525,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Ronald Reagan",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 54455000,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 13,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Walter F. Mondale",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 37577000,
+      "winner" : false
+    }
+  ],
+  "1988" : [
+    {
+      "electoralVote" : 426,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "George Bush",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 47946000,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 111,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Michael S. Dukakis",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 41016000,
+      "winner" : false
+    }
+  ],
+  "1992" : [
+    {
+      "electoralVote" : 370,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "William J. Clinton",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 44909825,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 168,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "George Bush",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 39104550,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Ross Perot",
+      "party" : "Reform",
+      "partyColor" : "Reform",
+      "popularVote" : 19743821,
+      "winner" : false
+    }
+  ],
+  "1996" : [
+    {
+      "electoralVote" : 379,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "William J. Clinton",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 45593073,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 159,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Robert Dole",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 37816739,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Ross Perot",
+      "party" : "Reform",
+      "partyColor" : "Reform",
+      "popularVote" : 8085508,
+      "winner" : false
+    }
+  ],
+  "2000" : [
+    {
+      "electoralVote" : 271,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "George W. Bush",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 50460000,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 267,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Albert Gore, Jr.",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 50999897,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Ralph Nader",
+      "party" : "Green",
+      "partyColor" : "Green Party",
+      "popularVote" : 2882982,
+      "winner" : false
+    }
+  ],
+  "2004" : [
+    {
+      "electoralVote" : 286,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "George W. Bush",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 62040610,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 251,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "John F. Kerry",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 59028444,
+      "winner" : false
+    }
+  ],
+  "2008" : [
+    {
+      "electoralVote" : 365,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Barack H. Obama",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 69498516,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 173,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "John S. McCain",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 59948323,
+      "winner" : false
+    }
+  ],
+  "2012" : [
+    {
+      "electoralVote" : 332,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Barack H. Obama",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 65915795,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 206,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "W. Mitt Romney",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 60933504,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Gary Johnson",
+      "party" : "Libertarian",
+      "partyColor" : "Libertarian",
+      "popularVote" : 1275971,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Jill Stein",
+      "party" : "Green",
+      "partyColor" : "Green Party",
+      "popularVote" : 469627,
+      "winner" : false
+    }
+  ],
+  "2016" : [
+    {
+      "electoralVote" : 304,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Donald J. Trump",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 62980160,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 227,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Hillary R. Clinton",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 65845063,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Gary Johnson",
+      "party" : "Libertarian",
+      "partyColor" : "Libertarian",
+      "popularVote" : 4488931,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Jill Stein",
+      "party" : "Green",
+      "partyColor" : "Green Party",
+      "popularVote" : 1457050,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Evan McMullin",
+      "party" : "Independent",
+      "partyColor" : "Independent",
+      "popularVote" : 728830,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 7,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Other",
+      "party" : "Other",
+      "partyColor" : "Other",
+      "popularVote" : 0,
+      "winner" : false
+    }
+  ],
+  "2020" : [
+    {
+      "electoralVote" : 306,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Joe Biden",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 81283501,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 232,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Donald J. Trump",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 74223975,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Jo Jorgensen",
+      "party" : "Libertarian",
+      "partyColor" : "Libertarian",
+      "popularVote" : 1865724,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Howie Hawkins",
+      "party" : "Green",
+      "partyColor" : "Green Party",
+      "popularVote" : 405038,
+      "winner" : false
+    }
+  ],
+  "2024" : [
+    {
+      "electoralVote" : 312,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Donald J. Trump",
+      "party" : "Republican",
+      "partyColor" : "Republican",
+      "popularVote" : 75715267,
+      "winner" : true
+    },
+    {
+      "electoralVote" : 226,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Kamala Harris",
+      "party" : "Democrat",
+      "partyColor" : "Democrat",
+      "popularVote" : 71978952,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Jill Stein",
+      "party" : "Green",
+      "partyColor" : "Green Party",
+      "popularVote" : 716276,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Robert F. Kennedy Jr.",
+      "party" : "Independent",
+      "partyColor" : "Independent",
+      "popularVote" : 681122,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Chase Oliver",
+      "party" : "Libertarian",
+      "partyColor" : "Libertarian",
+      "popularVote" : 623552,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Claudia De la Cruz",
+      "party" : "Peace and Freedom",
+      "partyColor" : "Peace and Freedom",
+      "popularVote" : 120310,
+      "winner" : false
+    },
+    {
+      "electoralVote" : 0,
+      "evMajority" : 270,
+      "evTotal" : 538,
+      "name" : "Cornel West",
+      "party" : "Other",
+      "partyColor" : "Other",
+      "popularVote" : 74690,
+      "winner" : false
+    }
+  ]
+}
