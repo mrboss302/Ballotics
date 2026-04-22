@@ -258,7 +258,23 @@ def parse_house_vote_detail(xml_url: str, db: Dict[str, Any], vote_id: str) -> T
         totals["present"] = safe_int(root.find(".//present-total"))
         totals["not_voting"] = safe_int(root.find(".//not-voting-total"))
         
+        # New Deep Extract for the House
         extra_details["vote_type"] = safe_text(root.find(".//vote-type"))
+        
+        legis_num = safe_text(root.find(".//legis-num"))
+        if legis_num:
+            # e.g., "H. RES. 1157" -> ["H.", "RES.", "1157"]
+            parts = legis_num.split(" ")
+            if len(parts) >= 2:
+                extra_details["document_type"] = " ".join(parts[:-1]).replace(".", "")
+                extra_details["document_number"] = parts[-1]
+                
+        extra_details["amendment_number"] = safe_text(root.find(".//amendment-num"))
+        extra_details["amendment_purpose"] = safe_text(root.find(".//amendment-author"))
+
+        # The House XML uses <majority> for the requirement, e.g., "1/2"
+        majority_req = safe_text(root.find(".//majority"))
+        extra_details["required_votes"] = majority_req if majority_req else "1/2"
 
         for rv in root.findall(".//recorded-vote"):
             legislator = rv.find("legislator")
@@ -289,12 +305,10 @@ def process_house_votes(db: Dict[str, Any], congress: int, session: int, *, enri
 
         question = item.get("question") or ""
         
-        # Determine Required Votes: House defaults to 1/2 unless suspending rules
-        req_votes = "2/3" if "Suspension" in question else "1/2"
-        extra_details["required_votes"] = req_votes
-
-        bill_type = (item.get("legislationType") or "").strip()
-        bill_number = str(item.get("legislationNumber") or "").strip()
+        # Override the API JSON values with the deep XML extractions if they exist
+        bill_type = extra_details.get("document_type") or (item.get("legislationType") or "").strip()
+        bill_number = extra_details.get("document_number") or str(item.get("legislationNumber") or "").strip()
+        
         summary = get_ai_summary(vote_description or question, {"type": bill_type, "number": bill_number}) if enrich_ai else None
 
         record = make_vote_record(
