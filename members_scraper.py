@@ -15,7 +15,7 @@ def safe_text(node) -> str:
     return node.text.strip() if node is not None and node.text else ""
 
 def strip_namespaces(root):
-    """Removes annoying hidden namespaces from government XMLs."""
+    """Removes annoying hidden namespaces from government XMLs and lowercases tags."""
     for elem in root.iter():
         if '}' in elem.tag:
             elem.tag = elem.tag.split('}', 1)[1]
@@ -41,8 +41,9 @@ def fetch_house_members() -> dict:
         bioguide = safe_text(bioguide_node)
         if not bioguide: continue
 
+        # The House XML stores the state abbreviation as an attribute: <state postal-code="AK">
         state_node = info.find("state")
-        state_postal = safe_text(state_node.find("postal-code")) if state_node is not None else ""
+        state_postal = state_node.get("postal-code", "") if state_node is not None else ""
 
         members[bioguide] = {
             "bioguide_id": bioguide,
@@ -93,6 +94,7 @@ def fetch_senate_members() -> dict:
             "state": safe_text(person.find("state")),
             "senate_data": {
                 "lis_member_id": lis_id,
+                # XML tag was <homeTown>, lowercased by strip_namespaces to hometown
                 "hometown": safe_text(person.find("hometown")),
                 "office": safe_text(person.find("office")),
                 "leadership_position": safe_text(person.find("leadership_position"))
