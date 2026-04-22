@@ -93,10 +93,10 @@ def get_highest_roll_call_number(db: Dict[str, Any], chamber: str, congress: int
     numbers = [int(v.get("roll_call_number", 0)) for v in db.get("votes", []) if v.get("chamber") == chamber and v.get("congress") == congress and v.get("session") == session]
     return max(numbers, default=0)
 
-def build_congress_gov_url(congress: int, bill_type: str, bill_number: str) -> Optional[str]:
-    """Generates a stable deep link to Congress.gov for the bill text."""
+def build_congress_gov_url(congress: int, bill_type: str, bill_number: str) -> str:
+    """Generates a stable deep link to Congress.gov for the plain text of a bill."""
     if not bill_type or not bill_number:
-        return None
+        return ""
         
     bt = bill_type.lower().replace(".", "").strip()
     type_map = {
@@ -108,8 +108,8 @@ def build_congress_gov_url(congress: int, bill_type: str, bill_number: str) -> O
     
     mapped_type = type_map.get(bt)
     if mapped_type:
-        return f"https://www.congress.gov/bill/{congress}th-congress/{mapped_type}/{bill_number}/text"
-    return None
+        return f"https://www.congress.gov/bill/{congress}th-congress/{mapped_type}/{bill_number}/text?format=txt"
+    return ""
 
 # -----------------------------------------------------------------------------
 # AI Summary
@@ -180,7 +180,7 @@ def make_vote_record(*, chamber: str, congress: int, session: int, roll_call_num
                      result: str, vote_description: str, bill_type: str, bill_number: str, source_url: Optional[str], 
                      member_votes: Dict[str, str], totals: Dict[str, int], extra_details: Dict[str, str], ai_summary: Optional[str] = None) -> Dict[str, Any]:
     
-    congress_gov_url = build_congress_gov_url(congress, bill_type, bill_number)
+    bill_text_url = build_congress_gov_url(congress, bill_type, bill_number)
     
     return {
         "id": f"{congress}-{session}-{chamber[0]}-{roll_call_number}",
@@ -190,15 +190,15 @@ def make_vote_record(*, chamber: str, congress: int, session: int, roll_call_num
         "roll_call_number": roll_call_number,
         "date": date,
         "question": question,
+        "required_votes": extra_details.get("required_votes", "1/2"),
         "result": result,
         "vote_description": vote_description,
-        "majority_requirement": extra_details.get("majority_requirement", ""),
         "vote_type": extra_details.get("vote_type", ""),
         "bill": {
             "congress": congress,
             "type": bill_type,
             "number": bill_number,
-            "congress_gov_url": congress_gov_url,
+            "text_url": bill_text_url,
             "ai_summary": ai_summary or "Summary pending."
         },
         "amendment": {
@@ -258,8 +258,6 @@ def parse_house_vote_detail(xml_url: str, db: Dict[str, Any], vote_id: str) -> T
         totals["present"] = safe_int(root.find(".//present-total"))
         totals["not_voting"] = safe_int(root.find(".//not-voting-total"))
         
-        # New Extract: Majority Requirement and Vote Type
-        extra_details["majority_requirement"] = safe_text(root.find(".//majority"))
         extra_details["vote_type"] = safe_text(root.find(".//vote-type"))
 
         for rv in root.findall(".//recorded-vote"):
@@ -289,13 +287,19 @@ def process_house_votes(db: Dict[str, Any], congress: int, session: int, *, enri
         if xml_url:
             vote_description, totals, member_votes, extra_details = parse_house_vote_detail(xml_url, db, vote_id)
 
+        question = item.get("question") or ""
+        
+        # Determine Required Votes: House defaults to 1/2 unless suspending rules
+        req_votes = "2/3" if "Suspension" in question else "1/2"
+        extra_details["required_votes"] = req_votes
+
         bill_type = (item.get("legislationType") or "").strip()
         bill_number = str(item.get("legislationNumber") or "").strip()
-        summary = get_ai_summary(vote_description or item.get("question", ""), {"type": bill_type, "number": bill_number}) if enrich_ai else None
+        summary = get_ai_summary(vote_description or question, {"type": bill_type, "number": bill_number}) if enrich_ai else None
 
         record = make_vote_record(
             chamber="House", congress=congress, session=session, roll_call_number=roll,
-            date=item.get("startDate") or "", question=item.get("question") or "", result=item.get("result") or "",
+            date=item.get("startDate") or "", question=question, result=item.get("result") or "",
             vote_description=vote_description, bill_type=bill_type, bill_number=bill_number,
             source_url=xml_url, member_votes=member_votes, totals=totals, extra_details=extra_details, ai_summary=summary
         )
@@ -333,8 +337,8 @@ def parse_senate_vote_detail(detail_url: str, id_map: Dict[str, str], db: Dict[s
             totals["present"] = safe_int(count.find("present"))
             totals["not_voting"] = safe_int(count.find("absent"))
             
-        # New Extract: Deep metadata mapping the old Core Data schema
-        extra_details["majority_requirement"] = safe_text(root.find(".//majority_requirement"))
+        majority_req = safe_text(root.find(".//majority_requirement"))
+        extra_details["required_votes"] = majority_req if majority_req else "1/2"
         extra_details["document_type"] = safe_text(root.find(".//document_type"))
         extra_details["document_number"] = safe_text(root.find(".//document_number"))
         extra_details["amendment_number"] = safe_text(root.find(".//amendment_number"))
@@ -367,7 +371,6 @@ def process_senate_votes(db: Dict[str, Any], congress: int, session: int, id_map
         detail_url = f"https://www.senate.gov/legislative/LIS/roll_call_votes/vote{congress}{session}/vote_{congress}_{session}_{vote_number_text.zfill(5)}.xml"
         totals, member_votes, extra_details = parse_senate_vote_detail(detail_url, id_map, db, vote_id)
 
-        # Dynamic Bill Mapping
         bill_type = extra_details.get("document_type", "Senate Vote")
         bill_number = extra_details.get("document_number", vote_number_text)
 
