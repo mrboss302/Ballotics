@@ -214,7 +214,7 @@ def get_ai_summary(vote_description: str, bill_info: Optional[Dict[str, str]] = 
         return "Summary pending."
 
 # -----------------------------------------------------------------------------
-# Senate ID Mapping (Bulletproof Version)
+# Senate ID Mapping (The Final Patch)
 # -----------------------------------------------------------------------------
 
 def build_senate_id_map() -> Dict[str, str]:
@@ -231,21 +231,24 @@ def build_senate_id_map() -> Dict[str, str]:
     try:
         root = ET.fromstring(response.content)
         
-        # 1. Strip all namespaces and normalize to lowercase to make searching bulletproof
+        # 1. Strip namespaces and normalize to lowercase
         for elem in root.iter():
             if '}' in elem.tag:
                 elem.tag = elem.tag.split('}', 1)[1]
             elem.tag = elem.tag.lower()
             
-        # 2. Look for either <senator> or <member> tags
+        # 2. Look for the Senator elements
         for person in root.findall(".//senator") + root.findall(".//member"):
-            # Check for the ID as an attribute first, then as a child node
             lis = person.get("lis_member_id")
             if not lis:
                 lis_node = person.find("lis_member_id")
                 lis = safe_text(lis_node)
                 
-            bio_node = person.find("bioguideid") or person.find("bioguide_id")
+            # THE FIX: Explicitly check for None to avoid the Python boolean bug
+            bio_node = person.find("bioguideid")
+            if bio_node is None:
+                bio_node = person.find("bioguide_id")
+                
             bio = safe_text(bio_node)
             
             if lis and bio:
