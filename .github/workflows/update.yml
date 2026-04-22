@@ -1,0 +1,41 @@
+name: Nightly Vote Sync
+
+# 1. When should this run?
+on:
+  schedule:
+    - cron: '0 8 * * *' # Runs every day at 8:00 AM UTC (4:00 AM EST)
+  workflow_dispatch: # Allows you to click a "Run" button manually on GitHub
+
+# 2. What permissions does it need?
+permissions:
+  contents: write # Needed to push the new JSON file back to the repo
+
+# 3. The steps to execute
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Scraper Script
+        env:
+          CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python scraper.py
+
+      - name: Commit and Push JSON File
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add latest-votes.json
+          git commit -m "Automated nightly data sync" || echo "No changes to commit"
+          git push
