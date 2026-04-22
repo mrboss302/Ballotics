@@ -1,0 +1,7091 @@
+{
+  "metadata": {
+    "last_updated": "2026-04-22T23:46:59.053391Z",
+    "total_members": 537,
+    "house_count": 437,
+    "senate_count": 100
+  },
+  "members": {
+    "B001323": {
+      "bioguide_id": "B001323",
+      "chamber": "House",
+      "first_name": "Nicholas",
+      "last_name": "Begich",
+      "party": "R",
+      "state": "AK",
+      "house_data": {
+        "district": "At Large",
+        "town_name": "Chugiak",
+        "phone": "(202) 225-5765"
+      }
+    },
+    "M001212": {
+      "bioguide_id": "M001212",
+      "chamber": "House",
+      "first_name": "Barry",
+      "last_name": "Moore",
+      "party": "R",
+      "state": "AL",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Enterprise",
+        "phone": "(202) 225-2901"
+      }
+    },
+    "F000481": {
+      "bioguide_id": "F000481",
+      "chamber": "House",
+      "first_name": "Shomari",
+      "last_name": "Figures",
+      "party": "D",
+      "state": "AL",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Mobile",
+        "phone": "(202) 225-4931"
+      }
+    },
+    "R000575": {
+      "bioguide_id": "R000575",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Rogers",
+      "party": "R",
+      "state": "AL",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Weaver",
+        "phone": "(202) 225-3261"
+      }
+    },
+    "A000055": {
+      "bioguide_id": "A000055",
+      "chamber": "House",
+      "first_name": "Robert",
+      "last_name": "Aderholt",
+      "party": "R",
+      "state": "AL",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Haleyville",
+        "phone": "(202) 225-4876"
+      }
+    },
+    "S001220": {
+      "bioguide_id": "S001220",
+      "chamber": "House",
+      "first_name": "Dale",
+      "last_name": "Strong",
+      "party": "R",
+      "state": "AL",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Huntsville",
+        "phone": "(202) 225-4801"
+      }
+    },
+    "P000609": {
+      "bioguide_id": "P000609",
+      "chamber": "House",
+      "first_name": "Gary",
+      "last_name": "Palmer",
+      "party": "R",
+      "state": "AL",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Hoover",
+        "phone": "(202) 225-4921"
+      }
+    },
+    "S001185": {
+      "bioguide_id": "S001185",
+      "chamber": "House",
+      "first_name": "Terri",
+      "last_name": "Sewell",
+      "party": "D",
+      "state": "AL",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Birmingham",
+        "phone": "(202) 225-2665"
+      }
+    },
+    "C001087": {
+      "bioguide_id": "C001087",
+      "chamber": "House",
+      "first_name": "Eric",
+      "last_name": "Crawford",
+      "party": "R",
+      "state": "AR",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Jonesboro",
+        "phone": "(202) 225-4076"
+      }
+    },
+    "H001072": {
+      "bioguide_id": "H001072",
+      "chamber": "House",
+      "first_name": "J.",
+      "last_name": "Hill",
+      "party": "R",
+      "state": "AR",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Little Rock",
+        "phone": "(202) 225-2506"
+      }
+    },
+    "W000809": {
+      "bioguide_id": "W000809",
+      "chamber": "House",
+      "first_name": "Steve",
+      "last_name": "Womack",
+      "party": "R",
+      "state": "AR",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Rogers",
+        "phone": "(202) 225-4301"
+      }
+    },
+    "W000821": {
+      "bioguide_id": "W000821",
+      "chamber": "House",
+      "first_name": "Bruce",
+      "last_name": "Westerman",
+      "party": "R",
+      "state": "AR",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Hot Springs",
+        "phone": "(202) 225-3772"
+      }
+    },
+    "R000600": {
+      "bioguide_id": "R000600",
+      "chamber": "House",
+      "first_name": "Aumua Amata",
+      "last_name": "Radewagen",
+      "party": "R",
+      "state": "AS",
+      "house_data": {
+        "district": "Delegate",
+        "town_name": "Pago Pago",
+        "phone": "(202) 225-8577"
+      }
+    },
+    "S001183": {
+      "bioguide_id": "S001183",
+      "chamber": "House",
+      "first_name": "David",
+      "last_name": "Schweikert",
+      "party": "R",
+      "state": "AZ",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Fountain Hills",
+        "phone": "(202) 225-2190"
+      }
+    },
+    "C001132": {
+      "bioguide_id": "C001132",
+      "chamber": "House",
+      "first_name": "Elijah",
+      "last_name": "Crane",
+      "party": "R",
+      "state": "AZ",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Oro Valley",
+        "phone": "(202) 225-3361"
+      }
+    },
+    "A000381": {
+      "bioguide_id": "A000381",
+      "chamber": "House",
+      "first_name": "Yassamin",
+      "last_name": "Ansari",
+      "party": "D",
+      "state": "AZ",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Phoenix",
+        "phone": "(202) 225-4065"
+      }
+    },
+    "S001211": {
+      "bioguide_id": "S001211",
+      "chamber": "House",
+      "first_name": "Greg",
+      "last_name": "Stanton",
+      "party": "D",
+      "state": "AZ",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Phoenix",
+        "phone": "(202) 225-9888"
+      }
+    },
+    "B001302": {
+      "bioguide_id": "B001302",
+      "chamber": "House",
+      "first_name": "Andy",
+      "last_name": "Biggs",
+      "party": "R",
+      "state": "AZ",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Gilbert",
+        "phone": "(202) 225-2635"
+      }
+    },
+    "C001133": {
+      "bioguide_id": "C001133",
+      "chamber": "House",
+      "first_name": "Juan",
+      "last_name": "Ciscomani",
+      "party": "R",
+      "state": "AZ",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Tucson",
+        "phone": "(202) 225-2542"
+      }
+    },
+    "G000606": {
+      "bioguide_id": "G000606",
+      "chamber": "House",
+      "first_name": "Adelita",
+      "last_name": "Grijalva",
+      "party": "D",
+      "state": "AZ",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Tucson",
+        "phone": "(202) 225-2435"
+      }
+    },
+    "H001098": {
+      "bioguide_id": "H001098",
+      "chamber": "House",
+      "first_name": "Abraham",
+      "last_name": "Hamadeh",
+      "party": "R",
+      "state": "AZ",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Phoenix",
+        "phone": "(202) 225-4576"
+      }
+    },
+    "G000565": {
+      "bioguide_id": "G000565",
+      "chamber": "House",
+      "first_name": "Paul",
+      "last_name": "Gosar",
+      "party": "R",
+      "state": "AZ",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Bullhead City",
+        "phone": "(202) 225-2315"
+      }
+    },
+    "H001068": {
+      "bioguide_id": "H001068",
+      "chamber": "House",
+      "first_name": "Jared",
+      "last_name": "Huffman",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "San Rafael",
+        "phone": "(202) 225-5161"
+      }
+    },
+    "K000401": {
+      "bioguide_id": "K000401",
+      "chamber": "House",
+      "first_name": "Kevin",
+      "last_name": "Kiley",
+      "party": "I",
+      "state": "CA",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Rocklin",
+        "phone": "(202) 225-2523"
+      }
+    },
+    "T000460": {
+      "bioguide_id": "T000460",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Thompson",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "4th",
+        "town_name": "St. Helena",
+        "phone": "(202) 225-3311"
+      }
+    },
+    "M001177": {
+      "bioguide_id": "M001177",
+      "chamber": "House",
+      "first_name": "Tom",
+      "last_name": "McClintock",
+      "party": "R",
+      "state": "CA",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Elk Grove",
+        "phone": "(202) 225-2511"
+      }
+    },
+    "B001287": {
+      "bioguide_id": "B001287",
+      "chamber": "House",
+      "first_name": "Ami",
+      "last_name": "Bera",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Elk Grove",
+        "phone": "(202) 225-5716"
+      }
+    },
+    "M001163": {
+      "bioguide_id": "M001163",
+      "chamber": "House",
+      "first_name": "Doris",
+      "last_name": "Matsui",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Sacramento",
+        "phone": "(202) 225-7163"
+      }
+    },
+    "G000559": {
+      "bioguide_id": "G000559",
+      "chamber": "House",
+      "first_name": "John",
+      "last_name": "Garamendi",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Walnut Grove",
+        "phone": "(202) 225-1880"
+      }
+    },
+    "H001090": {
+      "bioguide_id": "H001090",
+      "chamber": "House",
+      "first_name": "Josh",
+      "last_name": "Harder",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Tracy",
+        "phone": "(202) 225-4540"
+      }
+    },
+    "D000623": {
+      "bioguide_id": "D000623",
+      "chamber": "House",
+      "first_name": "Mark",
+      "last_name": "DeSaulnier",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "10th",
+        "town_name": "Concord",
+        "phone": "(202) 225-2095"
+      }
+    },
+    "P000197": {
+      "bioguide_id": "P000197",
+      "chamber": "House",
+      "first_name": "Nancy",
+      "last_name": "Pelosi",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "11th",
+        "town_name": "San Francisco",
+        "phone": "(202) 225-4965"
+      }
+    },
+    "S001231": {
+      "bioguide_id": "S001231",
+      "chamber": "House",
+      "first_name": "Lateefah",
+      "last_name": "Simon",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "12th",
+        "town_name": "Oakland",
+        "phone": "(202) 225-2661"
+      }
+    },
+    "G000605": {
+      "bioguide_id": "G000605",
+      "chamber": "House",
+      "first_name": "Adam",
+      "last_name": "Gray",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "13th",
+        "town_name": "Merced",
+        "phone": "(202) 225-1947"
+      }
+    },
+    "M001225": {
+      "bioguide_id": "M001225",
+      "chamber": "House",
+      "first_name": "Kevin",
+      "last_name": "Mullin",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "15th",
+        "town_name": "South San Francisco",
+        "phone": "(202) 225-3531"
+      }
+    },
+    "L000607": {
+      "bioguide_id": "L000607",
+      "chamber": "House",
+      "first_name": "Sam",
+      "last_name": "Liccardo",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "16th",
+        "town_name": "San José",
+        "phone": "(202) 225-8104"
+      }
+    },
+    "K000389": {
+      "bioguide_id": "K000389",
+      "chamber": "House",
+      "first_name": "Ro",
+      "last_name": "Khanna",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "17th",
+        "town_name": "Fremont",
+        "phone": "(202) 225-2631"
+      }
+    },
+    "L000397": {
+      "bioguide_id": "L000397",
+      "chamber": "House",
+      "first_name": "Zoe",
+      "last_name": "Lofgren",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "18th",
+        "town_name": "San José",
+        "phone": "(202) 225-3072"
+      }
+    },
+    "P000613": {
+      "bioguide_id": "P000613",
+      "chamber": "House",
+      "first_name": "Jimmy",
+      "last_name": "Panetta",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "19th",
+        "town_name": "Carmel Valley",
+        "phone": "(202) 225-2861"
+      }
+    },
+    "F000480": {
+      "bioguide_id": "F000480",
+      "chamber": "House",
+      "first_name": "Vince",
+      "last_name": "Fong",
+      "party": "R",
+      "state": "CA",
+      "house_data": {
+        "district": "20th",
+        "town_name": "Bakersfield",
+        "phone": "(202) 225-2915"
+      }
+    },
+    "C001059": {
+      "bioguide_id": "C001059",
+      "chamber": "House",
+      "first_name": "Jim",
+      "last_name": "Costa",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "21st",
+        "town_name": "Fresno",
+        "phone": "(202) 225-3341"
+      }
+    },
+    "V000129": {
+      "bioguide_id": "V000129",
+      "chamber": "House",
+      "first_name": "David",
+      "last_name": "Valadao",
+      "party": "R",
+      "state": "CA",
+      "house_data": {
+        "district": "22nd",
+        "town_name": "Hanford",
+        "phone": "(202) 225-4695"
+      }
+    },
+    "O000019": {
+      "bioguide_id": "O000019",
+      "chamber": "House",
+      "first_name": "Jay",
+      "last_name": "Obernolte",
+      "party": "R",
+      "state": "CA",
+      "house_data": {
+        "district": "23rd",
+        "town_name": "Big Bear Lake",
+        "phone": "(202) 225-5861"
+      }
+    },
+    "C001112": {
+      "bioguide_id": "C001112",
+      "chamber": "House",
+      "first_name": "Salud",
+      "last_name": "Carbajal",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "24th",
+        "town_name": "Santa Barbara",
+        "phone": "(202) 225-3601"
+      }
+    },
+    "R000599": {
+      "bioguide_id": "R000599",
+      "chamber": "House",
+      "first_name": "Raul",
+      "last_name": "Ruiz",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "25th",
+        "town_name": "Indio",
+        "phone": "(202) 225-5330"
+      }
+    },
+    "B001285": {
+      "bioguide_id": "B001285",
+      "chamber": "House",
+      "first_name": "Julia",
+      "last_name": "Brownley",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "26th",
+        "town_name": "Westlake Village",
+        "phone": "(202) 225-5811"
+      }
+    },
+    "W000830": {
+      "bioguide_id": "W000830",
+      "chamber": "House",
+      "first_name": "George",
+      "last_name": "Whitesides",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "27th",
+        "town_name": "Agua Dulce",
+        "phone": "(202) 225-1956"
+      }
+    },
+    "C001080": {
+      "bioguide_id": "C001080",
+      "chamber": "House",
+      "first_name": "Judy",
+      "last_name": "Chu",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "28th",
+        "town_name": "Monterey Park",
+        "phone": "(202) 225-5464"
+      }
+    },
+    "R000620": {
+      "bioguide_id": "R000620",
+      "chamber": "House",
+      "first_name": "Luz",
+      "last_name": "Rivas",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "29th",
+        "town_name": "San Fernando Valley",
+        "phone": "(202) 225-6131"
+      }
+    },
+    "F000483": {
+      "bioguide_id": "F000483",
+      "chamber": "House",
+      "first_name": "Laura",
+      "last_name": "Friedman",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "30th",
+        "town_name": "Glendale",
+        "phone": "(202) 225-4176"
+      }
+    },
+    "C001123": {
+      "bioguide_id": "C001123",
+      "chamber": "House",
+      "first_name": "Gilbert",
+      "last_name": "Cisneros",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "31st",
+        "town_name": "Covina",
+        "phone": "(202) 225-5256"
+      }
+    },
+    "S000344": {
+      "bioguide_id": "S000344",
+      "chamber": "House",
+      "first_name": "Brad",
+      "last_name": "Sherman",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "32nd",
+        "town_name": "Sherman Oaks",
+        "phone": "(202) 225-5911"
+      }
+    },
+    "A000371": {
+      "bioguide_id": "A000371",
+      "chamber": "House",
+      "first_name": "Pete",
+      "last_name": "Aguilar",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "33rd",
+        "town_name": "Redlands",
+        "phone": "(202) 225-3201"
+      }
+    },
+    "G000585": {
+      "bioguide_id": "G000585",
+      "chamber": "House",
+      "first_name": "Jimmy",
+      "last_name": "Gomez",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "34th",
+        "town_name": "Los Angeles",
+        "phone": "(202) 225-6235"
+      }
+    },
+    "T000474": {
+      "bioguide_id": "T000474",
+      "chamber": "House",
+      "first_name": "Norma",
+      "last_name": "Torres",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "35th",
+        "town_name": "Pomona",
+        "phone": "(202) 225-6161"
+      }
+    },
+    "L000582": {
+      "bioguide_id": "L000582",
+      "chamber": "House",
+      "first_name": "Ted",
+      "last_name": "Lieu",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "36th",
+        "town_name": "Torrance",
+        "phone": "(202) 225-3976"
+      }
+    },
+    "K000400": {
+      "bioguide_id": "K000400",
+      "chamber": "House",
+      "first_name": "Sydney",
+      "last_name": "Kamlager-Dove",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "37th",
+        "town_name": "Los Angeles",
+        "phone": "(202) 225-7084"
+      }
+    },
+    "S001156": {
+      "bioguide_id": "S001156",
+      "chamber": "House",
+      "first_name": "Linda",
+      "last_name": "Sánchez",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "38th",
+        "town_name": "Whittier",
+        "phone": "(202) 225-6676"
+      }
+    },
+    "T000472": {
+      "bioguide_id": "T000472",
+      "chamber": "House",
+      "first_name": "Mark",
+      "last_name": "Takano",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "39th",
+        "town_name": "Riverside",
+        "phone": "(202) 225-2305"
+      }
+    },
+    "K000397": {
+      "bioguide_id": "K000397",
+      "chamber": "House",
+      "first_name": "Young",
+      "last_name": "Kim",
+      "party": "R",
+      "state": "CA",
+      "house_data": {
+        "district": "40th",
+        "town_name": "La Habra",
+        "phone": "(202) 225-4111"
+      }
+    },
+    "C000059": {
+      "bioguide_id": "C000059",
+      "chamber": "House",
+      "first_name": "Ken",
+      "last_name": "Calvert",
+      "party": "R",
+      "state": "CA",
+      "house_data": {
+        "district": "41st",
+        "town_name": "Corona",
+        "phone": "(202) 225-1986"
+      }
+    },
+    "G000598": {
+      "bioguide_id": "G000598",
+      "chamber": "House",
+      "first_name": "Robert",
+      "last_name": "Garcia",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "42nd",
+        "town_name": "Long Beach",
+        "phone": "(202) 225-7924"
+      }
+    },
+    "W000187": {
+      "bioguide_id": "W000187",
+      "chamber": "House",
+      "first_name": "Maxine",
+      "last_name": "Waters",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "43rd",
+        "town_name": "Los Angeles",
+        "phone": "(202) 225-2201"
+      }
+    },
+    "B001300": {
+      "bioguide_id": "B001300",
+      "chamber": "House",
+      "first_name": "Nanette",
+      "last_name": "Barragán",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "44th",
+        "town_name": "Los Angeles",
+        "phone": "(202) 225-8220"
+      }
+    },
+    "T000491": {
+      "bioguide_id": "T000491",
+      "chamber": "House",
+      "first_name": "Derek",
+      "last_name": "Tran",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "45th",
+        "town_name": "Orange",
+        "phone": "(202) 225-2415"
+      }
+    },
+    "C001110": {
+      "bioguide_id": "C001110",
+      "chamber": "House",
+      "first_name": "J.",
+      "last_name": "Correa",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "46th",
+        "town_name": "Santa Ana",
+        "phone": "(202) 225-2965"
+      }
+    },
+    "M001241": {
+      "bioguide_id": "M001241",
+      "chamber": "House",
+      "first_name": "Dave",
+      "last_name": "Min",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "47th",
+        "town_name": "Irvine",
+        "phone": "(202) 225-5611"
+      }
+    },
+    "I000056": {
+      "bioguide_id": "I000056",
+      "chamber": "House",
+      "first_name": "Darrell",
+      "last_name": "Issa",
+      "party": "R",
+      "state": "CA",
+      "house_data": {
+        "district": "48th",
+        "town_name": "San Diego",
+        "phone": "(202) 225-5672"
+      }
+    },
+    "L000593": {
+      "bioguide_id": "L000593",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Levin",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "49th",
+        "town_name": "San Juan Capistrano",
+        "phone": "(202) 225-3906"
+      }
+    },
+    "P000608": {
+      "bioguide_id": "P000608",
+      "chamber": "House",
+      "first_name": "Scott",
+      "last_name": "Peters",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "50th",
+        "town_name": "San Diego",
+        "phone": "(202) 225-0508"
+      }
+    },
+    "J000305": {
+      "bioguide_id": "J000305",
+      "chamber": "House",
+      "first_name": "Sara",
+      "last_name": "Jacobs",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "51st",
+        "town_name": "San Diego",
+        "phone": "(202) 225-2040"
+      }
+    },
+    "V000130": {
+      "bioguide_id": "V000130",
+      "chamber": "House",
+      "first_name": "Juan",
+      "last_name": "Vargas",
+      "party": "D",
+      "state": "CA",
+      "house_data": {
+        "district": "52nd",
+        "town_name": "San Diego",
+        "phone": "(202) 225-8045"
+      }
+    },
+    "D000197": {
+      "bioguide_id": "D000197",
+      "chamber": "House",
+      "first_name": "Diana",
+      "last_name": "DeGette",
+      "party": "D",
+      "state": "CO",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Denver",
+        "phone": "(202) 225-4431"
+      }
+    },
+    "N000191": {
+      "bioguide_id": "N000191",
+      "chamber": "House",
+      "first_name": "Joe",
+      "last_name": "Neguse",
+      "party": "D",
+      "state": "CO",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Lafayette",
+        "phone": "(202) 225-2161"
+      }
+    },
+    "H001100": {
+      "bioguide_id": "H001100",
+      "chamber": "House",
+      "first_name": "Jeff",
+      "last_name": "Hurd",
+      "party": "R",
+      "state": "CO",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Grand Junction",
+        "phone": "(202) 225-4676"
+      }
+    },
+    "B000825": {
+      "bioguide_id": "B000825",
+      "chamber": "House",
+      "first_name": "Lauren",
+      "last_name": "Boebert",
+      "party": "R",
+      "state": "CO",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Silt",
+        "phone": "(202) 225-4761"
+      }
+    },
+    "C001137": {
+      "bioguide_id": "C001137",
+      "chamber": "House",
+      "first_name": "Jeff",
+      "last_name": "Crank",
+      "party": "R",
+      "state": "CO",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Colorado Springs",
+        "phone": "(202) 225-4422"
+      }
+    },
+    "C001121": {
+      "bioguide_id": "C001121",
+      "chamber": "House",
+      "first_name": "Jason",
+      "last_name": "Crow",
+      "party": "D",
+      "state": "CO",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Aurora",
+        "phone": "(202) 225-7882"
+      }
+    },
+    "P000620": {
+      "bioguide_id": "P000620",
+      "chamber": "House",
+      "first_name": "Brittany",
+      "last_name": "Pettersen",
+      "party": "D",
+      "state": "CO",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Lakewood",
+        "phone": "(202) 225-2645"
+      }
+    },
+    "E000300": {
+      "bioguide_id": "E000300",
+      "chamber": "House",
+      "first_name": "Gabe",
+      "last_name": "Evans",
+      "party": "R",
+      "state": "CO",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Fort Lupton",
+        "phone": "(202) 225-5625"
+      }
+    },
+    "L000557": {
+      "bioguide_id": "L000557",
+      "chamber": "House",
+      "first_name": "John",
+      "last_name": "Larson",
+      "party": "D",
+      "state": "CT",
+      "house_data": {
+        "district": "1st",
+        "town_name": "East Hartford",
+        "phone": "(202) 225-2265"
+      }
+    },
+    "C001069": {
+      "bioguide_id": "C001069",
+      "chamber": "House",
+      "first_name": "Joe",
+      "last_name": "Courtney",
+      "party": "D",
+      "state": "CT",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Vernon",
+        "phone": "(202) 225-2076"
+      }
+    },
+    "D000216": {
+      "bioguide_id": "D000216",
+      "chamber": "House",
+      "first_name": "Rosa",
+      "last_name": "DeLauro",
+      "party": "D",
+      "state": "CT",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "New Haven",
+        "phone": "(202) 225-3661"
+      }
+    },
+    "H001047": {
+      "bioguide_id": "H001047",
+      "chamber": "House",
+      "first_name": "James",
+      "last_name": "Himes",
+      "party": "D",
+      "state": "CT",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Cos Cob",
+        "phone": "(202) 225-5541"
+      }
+    },
+    "H001081": {
+      "bioguide_id": "H001081",
+      "chamber": "House",
+      "first_name": "Jahana",
+      "last_name": "Hayes",
+      "party": "D",
+      "state": "CT",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Wolcott",
+        "phone": "(202) 225-4476"
+      }
+    },
+    "N000147": {
+      "bioguide_id": "N000147",
+      "chamber": "House",
+      "first_name": "Eleanor",
+      "last_name": "Norton",
+      "party": "D",
+      "state": "DC",
+      "house_data": {
+        "district": "Delegate",
+        "town_name": "District of Columbia",
+        "phone": "(202) 225-8050"
+      }
+    },
+    "M001238": {
+      "bioguide_id": "M001238",
+      "chamber": "House",
+      "first_name": "Sarah",
+      "last_name": "McBride",
+      "party": "D",
+      "state": "DE",
+      "house_data": {
+        "district": "At Large",
+        "town_name": "Wilmington",
+        "phone": "(202) 225-4165"
+      }
+    },
+    "P000622": {
+      "bioguide_id": "P000622",
+      "chamber": "House",
+      "first_name": "Jimmy",
+      "last_name": "Patronis",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Fort Walton Beach",
+        "phone": "(202) 225-4136"
+      }
+    },
+    "D000628": {
+      "bioguide_id": "D000628",
+      "chamber": "House",
+      "first_name": "Neal",
+      "last_name": "Dunn",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Panama City",
+        "phone": "(202) 225-5235"
+      }
+    },
+    "C001039": {
+      "bioguide_id": "C001039",
+      "chamber": "House",
+      "first_name": "Kat",
+      "last_name": "Cammack",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Gainesville",
+        "phone": "(202) 225-5744"
+      }
+    },
+    "B001314": {
+      "bioguide_id": "B001314",
+      "chamber": "House",
+      "first_name": "Aaron",
+      "last_name": "Bean",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Fernandina Beach",
+        "phone": "(202) 225-0123"
+      }
+    },
+    "R000609": {
+      "bioguide_id": "R000609",
+      "chamber": "House",
+      "first_name": "John",
+      "last_name": "Rutherford",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Jacksonville",
+        "phone": "(202) 225-2501"
+      }
+    },
+    "F000484": {
+      "bioguide_id": "F000484",
+      "chamber": "House",
+      "first_name": "Randy",
+      "last_name": "Fine",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Melbourne Beach",
+        "phone": "(202) 225-2706"
+      }
+    },
+    "M001216": {
+      "bioguide_id": "M001216",
+      "chamber": "House",
+      "first_name": "Cory",
+      "last_name": "Mills",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "7th",
+        "town_name": "New Smyrna Beach",
+        "phone": "(202) 225-4035"
+      }
+    },
+    "H001099": {
+      "bioguide_id": "H001099",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Haridopolos",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Indian Harbour Beach",
+        "phone": "(202) 225-3671"
+      }
+    },
+    "S001200": {
+      "bioguide_id": "S001200",
+      "chamber": "House",
+      "first_name": "Darren",
+      "last_name": "Soto",
+      "party": "D",
+      "state": "FL",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Kissimmee",
+        "phone": "(202) 225-9889"
+      }
+    },
+    "F000476": {
+      "bioguide_id": "F000476",
+      "chamber": "House",
+      "first_name": "Maxwell",
+      "last_name": "Frost",
+      "party": "D",
+      "state": "FL",
+      "house_data": {
+        "district": "10th",
+        "town_name": "Orlando",
+        "phone": "(202) 225-2176"
+      }
+    },
+    "W000806": {
+      "bioguide_id": "W000806",
+      "chamber": "House",
+      "first_name": "Daniel",
+      "last_name": "Webster",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "11th",
+        "town_name": "Clermont",
+        "phone": "(202) 225-1002"
+      }
+    },
+    "B001257": {
+      "bioguide_id": "B001257",
+      "chamber": "House",
+      "first_name": "Gus",
+      "last_name": "Bilirakis",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "12th",
+        "town_name": "Palm Harbor",
+        "phone": "(202) 225-5755"
+      }
+    },
+    "L000596": {
+      "bioguide_id": "L000596",
+      "chamber": "House",
+      "first_name": "Anna Paulina",
+      "last_name": "Luna",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "13th",
+        "town_name": "St. Petersburg",
+        "phone": "(202) 225-5961"
+      }
+    },
+    "C001066": {
+      "bioguide_id": "C001066",
+      "chamber": "House",
+      "first_name": "Kathy",
+      "last_name": "Castor",
+      "party": "D",
+      "state": "FL",
+      "house_data": {
+        "district": "14th",
+        "town_name": "Tampa",
+        "phone": "(202) 225-3376"
+      }
+    },
+    "L000597": {
+      "bioguide_id": "L000597",
+      "chamber": "House",
+      "first_name": "Laurel",
+      "last_name": "Lee",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "15th",
+        "town_name": "Tampa",
+        "phone": "(202) 225-5626"
+      }
+    },
+    "B001260": {
+      "bioguide_id": "B001260",
+      "chamber": "House",
+      "first_name": "Vern",
+      "last_name": "Buchanan",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "16th",
+        "town_name": "Sarasota",
+        "phone": "(202) 225-5015"
+      }
+    },
+    "S001214": {
+      "bioguide_id": "S001214",
+      "chamber": "House",
+      "first_name": "W.",
+      "last_name": "Steube",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "17th",
+        "town_name": "Sarasota",
+        "phone": "(202) 225-5792"
+      }
+    },
+    "F000472": {
+      "bioguide_id": "F000472",
+      "chamber": "House",
+      "first_name": "Scott",
+      "last_name": "Franklin",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "18th",
+        "town_name": "Lakeland",
+        "phone": "(202) 225-1252"
+      }
+    },
+    "D000032": {
+      "bioguide_id": "D000032",
+      "chamber": "House",
+      "first_name": "Byron",
+      "last_name": "Donalds",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "19th",
+        "town_name": "Naples",
+        "phone": "(202) 225-2536"
+      }
+    },
+    "C001127": {
+      "bioguide_id": "C001127",
+      "chamber": "House",
+      "first_name": "Sheila",
+      "last_name": "Cherfilus-McCormick",
+      "party": "D",
+      "state": "FL",
+      "house_data": {
+        "district": "20th",
+        "town_name": "Miramar",
+        "phone": "(202) 225-1313"
+      }
+    },
+    "M001199": {
+      "bioguide_id": "M001199",
+      "chamber": "House",
+      "first_name": "Brian",
+      "last_name": "Mast",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "21st",
+        "town_name": "Fort Pierce",
+        "phone": "(202) 225-3026"
+      }
+    },
+    "F000462": {
+      "bioguide_id": "F000462",
+      "chamber": "House",
+      "first_name": "Lois",
+      "last_name": "Frankel",
+      "party": "D",
+      "state": "FL",
+      "house_data": {
+        "district": "22nd",
+        "town_name": "West Palm Beach",
+        "phone": "(202) 225-9890"
+      }
+    },
+    "M001217": {
+      "bioguide_id": "M001217",
+      "chamber": "House",
+      "first_name": "Jared",
+      "last_name": "Moskowitz",
+      "party": "D",
+      "state": "FL",
+      "house_data": {
+        "district": "23rd",
+        "town_name": "Parkland",
+        "phone": "(202) 225-3001"
+      }
+    },
+    "W000808": {
+      "bioguide_id": "W000808",
+      "chamber": "House",
+      "first_name": "Frederica",
+      "last_name": "Wilson",
+      "party": "D",
+      "state": "FL",
+      "house_data": {
+        "district": "24th",
+        "town_name": "Miami Gardens",
+        "phone": "(202) 225-4506"
+      }
+    },
+    "W000797": {
+      "bioguide_id": "W000797",
+      "chamber": "House",
+      "first_name": "Debbie",
+      "last_name": "Wasserman Schultz",
+      "party": "D",
+      "state": "FL",
+      "house_data": {
+        "district": "25th",
+        "town_name": "Weston",
+        "phone": "(202) 225-7931"
+      }
+    },
+    "D000600": {
+      "bioguide_id": "D000600",
+      "chamber": "House",
+      "first_name": "Mario",
+      "last_name": "Diaz-Balart",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "26th",
+        "town_name": "Miami",
+        "phone": "(202) 225-4211"
+      }
+    },
+    "S000168": {
+      "bioguide_id": "S000168",
+      "chamber": "House",
+      "first_name": "Maria",
+      "last_name": "Salazar",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "27th",
+        "town_name": "Miami",
+        "phone": "(202) 225-3931"
+      }
+    },
+    "G000593": {
+      "bioguide_id": "G000593",
+      "chamber": "House",
+      "first_name": "Carlos",
+      "last_name": "Gimenez",
+      "party": "R",
+      "state": "FL",
+      "house_data": {
+        "district": "28th",
+        "town_name": "Miami",
+        "phone": "(202) 225-2778"
+      }
+    },
+    "C001103": {
+      "bioguide_id": "C001103",
+      "chamber": "House",
+      "first_name": "Earl",
+      "last_name": "Carter",
+      "party": "R",
+      "state": "GA",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Pooler",
+        "phone": "(202) 225-5831"
+      }
+    },
+    "B000490": {
+      "bioguide_id": "B000490",
+      "chamber": "House",
+      "first_name": "Sanford",
+      "last_name": "Bishop",
+      "party": "D",
+      "state": "GA",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Albany",
+        "phone": "(202) 225-3631"
+      }
+    },
+    "J000311": {
+      "bioguide_id": "J000311",
+      "chamber": "House",
+      "first_name": "Brian",
+      "last_name": "Jack",
+      "party": "R",
+      "state": "GA",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Peachtree City",
+        "phone": "(202) 225-5901"
+      }
+    },
+    "J000288": {
+      "bioguide_id": "J000288",
+      "chamber": "House",
+      "first_name": "Henry",
+      "last_name": "Johnson",
+      "party": "D",
+      "state": "GA",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Lithonia",
+        "phone": "(202) 225-1605"
+      }
+    },
+    "W000788": {
+      "bioguide_id": "W000788",
+      "chamber": "House",
+      "first_name": "Nikema",
+      "last_name": "Williams",
+      "party": "D",
+      "state": "GA",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Atlanta",
+        "phone": "(202) 225-3801"
+      }
+    },
+    "M001208": {
+      "bioguide_id": "M001208",
+      "chamber": "House",
+      "first_name": "Lucy",
+      "last_name": "McBath",
+      "party": "D",
+      "state": "GA",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Marietta",
+        "phone": "(202) 225-4501"
+      }
+    },
+    "M001218": {
+      "bioguide_id": "M001218",
+      "chamber": "House",
+      "first_name": "Richard",
+      "last_name": "McCormick",
+      "party": "R",
+      "state": "GA",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Suwanee",
+        "phone": "(202) 225-4272"
+      }
+    },
+    "S001189": {
+      "bioguide_id": "S001189",
+      "chamber": "House",
+      "first_name": "Austin",
+      "last_name": "Scott",
+      "party": "R",
+      "state": "GA",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Tifton",
+        "phone": "(202) 225-6531"
+      }
+    },
+    "C001116": {
+      "bioguide_id": "C001116",
+      "chamber": "House",
+      "first_name": "Andrew",
+      "last_name": "Clyde",
+      "party": "R",
+      "state": "GA",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Athens",
+        "phone": "(202) 225-9893"
+      }
+    },
+    "C001129": {
+      "bioguide_id": "C001129",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Collins",
+      "party": "R",
+      "state": "GA",
+      "house_data": {
+        "district": "10th",
+        "town_name": "Jackson",
+        "phone": "(202) 225-4101"
+      }
+    },
+    "L000583": {
+      "bioguide_id": "L000583",
+      "chamber": "House",
+      "first_name": "Barry",
+      "last_name": "Loudermilk",
+      "party": "R",
+      "state": "GA",
+      "house_data": {
+        "district": "11th",
+        "town_name": "Cassville",
+        "phone": "(202) 225-2931"
+      }
+    },
+    "A000372": {
+      "bioguide_id": "A000372",
+      "chamber": "House",
+      "first_name": "Rick",
+      "last_name": "Allen",
+      "party": "R",
+      "state": "GA",
+      "house_data": {
+        "district": "12th",
+        "town_name": "Augusta",
+        "phone": "(202) 225-2823"
+      }
+    },
+    "S001157": {
+      "bioguide_id": "S001157",
+      "chamber": "House",
+      "first_name": "David",
+      "last_name": "Scott",
+      "party": "D",
+      "state": "GA",
+      "house_data": {
+        "district": "13th",
+        "town_name": "Atlanta",
+        "phone": "(202) 225-2939"
+      }
+    },
+    "F000485": {
+      "bioguide_id": "F000485",
+      "chamber": "House",
+      "first_name": "Clay",
+      "last_name": "Fuller",
+      "party": "R",
+      "state": "GA",
+      "house_data": {
+        "district": "14th",
+        "town_name": "Lookout Mountain",
+        "phone": "(202) 225-5211"
+      }
+    },
+    "M001219": {
+      "bioguide_id": "M001219",
+      "chamber": "House",
+      "first_name": "James",
+      "last_name": "Moylan",
+      "party": "R",
+      "state": "GU",
+      "house_data": {
+        "district": "Delegate",
+        "town_name": "Tumon",
+        "phone": "(202) 225-1188"
+      }
+    },
+    "C001055": {
+      "bioguide_id": "C001055",
+      "chamber": "House",
+      "first_name": "Ed",
+      "last_name": "Case",
+      "party": "D",
+      "state": "HI",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Kaneohe",
+        "phone": "(202) 225-2726"
+      }
+    },
+    "T000487": {
+      "bioguide_id": "T000487",
+      "chamber": "House",
+      "first_name": "Jill",
+      "last_name": "Tokuda",
+      "party": "D",
+      "state": "HI",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Kaneohe",
+        "phone": "(202) 225-4906"
+      }
+    },
+    "M001215": {
+      "bioguide_id": "M001215",
+      "chamber": "House",
+      "first_name": "Mariannette",
+      "last_name": "Miller-Meeks",
+      "party": "R",
+      "state": "IA",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Le Claire",
+        "phone": "(202) 225-6576"
+      }
+    },
+    "H001091": {
+      "bioguide_id": "H001091",
+      "chamber": "House",
+      "first_name": "Ashley",
+      "last_name": "Hinson",
+      "party": "R",
+      "state": "IA",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Marion",
+        "phone": "(202) 225-2911"
+      }
+    },
+    "N000193": {
+      "bioguide_id": "N000193",
+      "chamber": "House",
+      "first_name": "Zachary",
+      "last_name": "Nunn",
+      "party": "R",
+      "state": "IA",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Bondurant",
+        "phone": "(202) 225-5476"
+      }
+    },
+    "F000446": {
+      "bioguide_id": "F000446",
+      "chamber": "House",
+      "first_name": "Randy",
+      "last_name": "Feenstra",
+      "party": "R",
+      "state": "IA",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Hull",
+        "phone": "(202) 225-4426"
+      }
+    },
+    "F000469": {
+      "bioguide_id": "F000469",
+      "chamber": "House",
+      "first_name": "Russ",
+      "last_name": "Fulcher",
+      "party": "R",
+      "state": "ID",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Meridian",
+        "phone": "(202) 225-6611"
+      }
+    },
+    "S001148": {
+      "bioguide_id": "S001148",
+      "chamber": "House",
+      "first_name": "Michael",
+      "last_name": "Simpson",
+      "party": "R",
+      "state": "ID",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Idaho Falls",
+        "phone": "(202) 225-5531"
+      }
+    },
+    "J000309": {
+      "bioguide_id": "J000309",
+      "chamber": "House",
+      "first_name": "Jonathan",
+      "last_name": "Jackson",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Chicago",
+        "phone": "(202) 225-4372"
+      }
+    },
+    "K000385": {
+      "bioguide_id": "K000385",
+      "chamber": "House",
+      "first_name": "Robin",
+      "last_name": "Kelly",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Matteson",
+        "phone": "(202) 225-0773"
+      }
+    },
+    "R000617": {
+      "bioguide_id": "R000617",
+      "chamber": "House",
+      "first_name": "Delia",
+      "last_name": "Ramirez",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Chicago",
+        "phone": "(202) 225-5701"
+      }
+    },
+    "G000586": {
+      "bioguide_id": "G000586",
+      "chamber": "House",
+      "first_name": "Jesús",
+      "last_name": "García",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Chicago",
+        "phone": "(202) 225-8203"
+      }
+    },
+    "Q000023": {
+      "bioguide_id": "Q000023",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Quigley",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Chicago",
+        "phone": "(202) 225-4061"
+      }
+    },
+    "C001117": {
+      "bioguide_id": "C001117",
+      "chamber": "House",
+      "first_name": "Sean",
+      "last_name": "Casten",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Downers Grove",
+        "phone": "(202) 225-4561"
+      }
+    },
+    "D000096": {
+      "bioguide_id": "D000096",
+      "chamber": "House",
+      "first_name": "Danny",
+      "last_name": "Davis",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Chicago",
+        "phone": "(202) 225-5006"
+      }
+    },
+    "K000391": {
+      "bioguide_id": "K000391",
+      "chamber": "House",
+      "first_name": "Raja",
+      "last_name": "Krishnamoorthi",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Schaumburg",
+        "phone": "(202) 225-3711"
+      }
+    },
+    "S001145": {
+      "bioguide_id": "S001145",
+      "chamber": "House",
+      "first_name": "Janice",
+      "last_name": "Schakowsky",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Evanston",
+        "phone": "(202) 225-2111"
+      }
+    },
+    "S001190": {
+      "bioguide_id": "S001190",
+      "chamber": "House",
+      "first_name": "Bradley",
+      "last_name": "Schneider",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "10th",
+        "town_name": "Highland Park",
+        "phone": "(202) 225-4835"
+      }
+    },
+    "F000454": {
+      "bioguide_id": "F000454",
+      "chamber": "House",
+      "first_name": "Bill",
+      "last_name": "Foster",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "11th",
+        "town_name": "Naperville",
+        "phone": "(202) 225-3515"
+      }
+    },
+    "B001295": {
+      "bioguide_id": "B001295",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Bost",
+      "party": "R",
+      "state": "IL",
+      "house_data": {
+        "district": "12th",
+        "town_name": "Murphysboro",
+        "phone": "(202) 225-5661"
+      }
+    },
+    "B001315": {
+      "bioguide_id": "B001315",
+      "chamber": "House",
+      "first_name": "Nikki",
+      "last_name": "Budzinski",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "13th",
+        "town_name": "Springfield",
+        "phone": "(202) 225-2371"
+      }
+    },
+    "U000040": {
+      "bioguide_id": "U000040",
+      "chamber": "House",
+      "first_name": "Lauren",
+      "last_name": "Underwood",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "14th",
+        "town_name": "Naperville",
+        "phone": "(202) 225-2976"
+      }
+    },
+    "M001211": {
+      "bioguide_id": "M001211",
+      "chamber": "House",
+      "first_name": "Mary",
+      "last_name": "Miller",
+      "party": "R",
+      "state": "IL",
+      "house_data": {
+        "district": "15th",
+        "town_name": "Oakland",
+        "phone": "(202) 225-5271"
+      }
+    },
+    "L000585": {
+      "bioguide_id": "L000585",
+      "chamber": "House",
+      "first_name": "Darin",
+      "last_name": "LaHood",
+      "party": "R",
+      "state": "IL",
+      "house_data": {
+        "district": "16th",
+        "town_name": "Peoria",
+        "phone": "(202) 225-6201"
+      }
+    },
+    "S001225": {
+      "bioguide_id": "S001225",
+      "chamber": "House",
+      "first_name": "Eric",
+      "last_name": "Sorensen",
+      "party": "D",
+      "state": "IL",
+      "house_data": {
+        "district": "17th",
+        "town_name": "Moline",
+        "phone": "(202) 225-5905"
+      }
+    },
+    "M001214": {
+      "bioguide_id": "M001214",
+      "chamber": "House",
+      "first_name": "Frank",
+      "last_name": "Mrvan",
+      "party": "D",
+      "state": "IN",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Highland",
+        "phone": "(202) 225-2461"
+      }
+    },
+    "Y000067": {
+      "bioguide_id": "Y000067",
+      "chamber": "House",
+      "first_name": "Rudy",
+      "last_name": "Yakym",
+      "party": "R",
+      "state": "IN",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Granger",
+        "phone": "(202) 225-3915"
+      }
+    },
+    "S001188": {
+      "bioguide_id": "S001188",
+      "chamber": "House",
+      "first_name": "Marlin",
+      "last_name": "Stutzman",
+      "party": "R",
+      "state": "IN",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Howe",
+        "phone": "(202) 225-4436"
+      }
+    },
+    "B001307": {
+      "bioguide_id": "B001307",
+      "chamber": "House",
+      "first_name": "James",
+      "last_name": "Baird",
+      "party": "R",
+      "state": "IN",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Greencastle",
+        "phone": "(202) 225-5037"
+      }
+    },
+    "S000929": {
+      "bioguide_id": "S000929",
+      "chamber": "House",
+      "first_name": "Victoria",
+      "last_name": "Spartz",
+      "party": "R",
+      "state": "IN",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Noblesville",
+        "phone": "(202) 225-2276"
+      }
+    },
+    "S001229": {
+      "bioguide_id": "S001229",
+      "chamber": "House",
+      "first_name": "Jefferson",
+      "last_name": "Shreve",
+      "party": "R",
+      "state": "IN",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Indianapolis",
+        "phone": "(202) 225-3021"
+      }
+    },
+    "C001072": {
+      "bioguide_id": "C001072",
+      "chamber": "House",
+      "first_name": "André",
+      "last_name": "Carson",
+      "party": "D",
+      "state": "IN",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Indianapolis",
+        "phone": "(202) 225-4011"
+      }
+    },
+    "M001233": {
+      "bioguide_id": "M001233",
+      "chamber": "House",
+      "first_name": "Mark",
+      "last_name": "Messmer",
+      "party": "R",
+      "state": "IN",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Jasper",
+        "phone": "(202) 225-4636"
+      }
+    },
+    "H001093": {
+      "bioguide_id": "H001093",
+      "chamber": "House",
+      "first_name": "Erin",
+      "last_name": "Houchin",
+      "party": "R",
+      "state": "IN",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Salem",
+        "phone": "(202) 225-5315"
+      }
+    },
+    "M000871": {
+      "bioguide_id": "M000871",
+      "chamber": "House",
+      "first_name": "Tracey",
+      "last_name": "Mann",
+      "party": "R",
+      "state": "KS",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Salina",
+        "phone": "(202) 225-2715"
+      }
+    },
+    "S001228": {
+      "bioguide_id": "S001228",
+      "chamber": "House",
+      "first_name": "Derek",
+      "last_name": "Schmidt",
+      "party": "R",
+      "state": "KS",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Independence",
+        "phone": "(202) 225-6601"
+      }
+    },
+    "D000629": {
+      "bioguide_id": "D000629",
+      "chamber": "House",
+      "first_name": "Sharice",
+      "last_name": "Davids",
+      "party": "D",
+      "state": "KS",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Roeland Park",
+        "phone": "(202) 225-2865"
+      }
+    },
+    "E000298": {
+      "bioguide_id": "E000298",
+      "chamber": "House",
+      "first_name": "Ron",
+      "last_name": "Estes",
+      "party": "R",
+      "state": "KS",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Wichita",
+        "phone": "(202) 225-6216"
+      }
+    },
+    "C001108": {
+      "bioguide_id": "C001108",
+      "chamber": "House",
+      "first_name": "James",
+      "last_name": "Comer",
+      "party": "R",
+      "state": "KY",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Tompkinsville",
+        "phone": "(202) 225-3115"
+      }
+    },
+    "G000558": {
+      "bioguide_id": "G000558",
+      "chamber": "House",
+      "first_name": "Brett",
+      "last_name": "Guthrie",
+      "party": "R",
+      "state": "KY",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Bowling Green",
+        "phone": "(202) 225-3501"
+      }
+    },
+    "M001220": {
+      "bioguide_id": "M001220",
+      "chamber": "House",
+      "first_name": "Morgan",
+      "last_name": "McGarvey",
+      "party": "D",
+      "state": "KY",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Louisville",
+        "phone": "(202) 225-5401"
+      }
+    },
+    "M001184": {
+      "bioguide_id": "M001184",
+      "chamber": "House",
+      "first_name": "Thomas",
+      "last_name": "Massie",
+      "party": "R",
+      "state": "KY",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Garrison",
+        "phone": "(202) 225-3465"
+      }
+    },
+    "R000395": {
+      "bioguide_id": "R000395",
+      "chamber": "House",
+      "first_name": "Harold",
+      "last_name": "Rogers",
+      "party": "R",
+      "state": "KY",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Somerset",
+        "phone": "(202) 225-4601"
+      }
+    },
+    "B001282": {
+      "bioguide_id": "B001282",
+      "chamber": "House",
+      "first_name": "Andy",
+      "last_name": "Barr",
+      "party": "R",
+      "state": "KY",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Lexington",
+        "phone": "(202) 225-4706"
+      }
+    },
+    "S001176": {
+      "bioguide_id": "S001176",
+      "chamber": "House",
+      "first_name": "Steve",
+      "last_name": "Scalise",
+      "party": "R",
+      "state": "LA",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Jefferson",
+        "phone": "(202) 225-3015"
+      }
+    },
+    "C001125": {
+      "bioguide_id": "C001125",
+      "chamber": "House",
+      "first_name": "Troy",
+      "last_name": "Carter",
+      "party": "D",
+      "state": "LA",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "New Orleans",
+        "phone": "(202) 225-6636"
+      }
+    },
+    "H001077": {
+      "bioguide_id": "H001077",
+      "chamber": "House",
+      "first_name": "Clay",
+      "last_name": "Higgins",
+      "party": "R",
+      "state": "LA",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Lafayette",
+        "phone": "(202) 225-2031"
+      }
+    },
+    "J000299": {
+      "bioguide_id": "J000299",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Johnson",
+      "party": "R",
+      "state": "LA",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Benton",
+        "phone": "(202) 225-2777"
+      }
+    },
+    "L000595": {
+      "bioguide_id": "L000595",
+      "chamber": "House",
+      "first_name": "Julia",
+      "last_name": "Letlow",
+      "party": "R",
+      "state": "LA",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Start",
+        "phone": "(202) 225-8490"
+      }
+    },
+    "F000110": {
+      "bioguide_id": "F000110",
+      "chamber": "House",
+      "first_name": "Cleo",
+      "last_name": "Fields",
+      "party": "D",
+      "state": "LA",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Baton Rouge",
+        "phone": "(202) 225-3901"
+      }
+    },
+    "N000015": {
+      "bioguide_id": "N000015",
+      "chamber": "House",
+      "first_name": "Richard",
+      "last_name": "Neal",
+      "party": "D",
+      "state": "MA",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Springfield",
+        "phone": "(202) 225-5601"
+      }
+    },
+    "M000312": {
+      "bioguide_id": "M000312",
+      "chamber": "House",
+      "first_name": "James",
+      "last_name": "McGovern",
+      "party": "D",
+      "state": "MA",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Worcester",
+        "phone": "(202) 225-6101"
+      }
+    },
+    "T000482": {
+      "bioguide_id": "T000482",
+      "chamber": "House",
+      "first_name": "Lori",
+      "last_name": "Trahan",
+      "party": "D",
+      "state": "MA",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Westford",
+        "phone": "(202) 225-3411"
+      }
+    },
+    "A000148": {
+      "bioguide_id": "A000148",
+      "chamber": "House",
+      "first_name": "Jake",
+      "last_name": "Auchincloss",
+      "party": "D",
+      "state": "MA",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Newton",
+        "phone": "(202) 225-5931"
+      }
+    },
+    "C001101": {
+      "bioguide_id": "C001101",
+      "chamber": "House",
+      "first_name": "Katherine",
+      "last_name": "Clark",
+      "party": "D",
+      "state": "MA",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Revere",
+        "phone": "(202) 225-2836"
+      }
+    },
+    "M001196": {
+      "bioguide_id": "M001196",
+      "chamber": "House",
+      "first_name": "Seth",
+      "last_name": "Moulton",
+      "party": "D",
+      "state": "MA",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Salem",
+        "phone": "(202) 225-8020"
+      }
+    },
+    "P000617": {
+      "bioguide_id": "P000617",
+      "chamber": "House",
+      "first_name": "Ayanna",
+      "last_name": "Pressley",
+      "party": "D",
+      "state": "MA",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Boston",
+        "phone": "(202) 225-5111"
+      }
+    },
+    "L000562": {
+      "bioguide_id": "L000562",
+      "chamber": "House",
+      "first_name": "Stephen",
+      "last_name": "Lynch",
+      "party": "D",
+      "state": "MA",
+      "house_data": {
+        "district": "8th",
+        "town_name": "South Boston",
+        "phone": "(202) 225-8273"
+      }
+    },
+    "K000375": {
+      "bioguide_id": "K000375",
+      "chamber": "House",
+      "first_name": "William",
+      "last_name": "Keating",
+      "party": "D",
+      "state": "MA",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Bourne",
+        "phone": "(202) 225-3111"
+      }
+    },
+    "H001052": {
+      "bioguide_id": "H001052",
+      "chamber": "House",
+      "first_name": "Andy",
+      "last_name": "Harris",
+      "party": "R",
+      "state": "MD",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Cambridge",
+        "phone": "(202) 225-5311"
+      }
+    },
+    "O000176": {
+      "bioguide_id": "O000176",
+      "chamber": "House",
+      "first_name": "Johnny",
+      "last_name": "Olszewski",
+      "party": "D",
+      "state": "MD",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Sparrows Point",
+        "phone": "(202) 225-3061"
+      }
+    },
+    "E000301": {
+      "bioguide_id": "E000301",
+      "chamber": "House",
+      "first_name": "Sarah",
+      "last_name": "Elfreth",
+      "party": "D",
+      "state": "MD",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Annapolis",
+        "phone": "(202) 225-4016"
+      }
+    },
+    "I000058": {
+      "bioguide_id": "I000058",
+      "chamber": "House",
+      "first_name": "Glenn",
+      "last_name": "Ivey",
+      "party": "D",
+      "state": "MD",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Cheverly",
+        "phone": "(202) 225-8699"
+      }
+    },
+    "H000874": {
+      "bioguide_id": "H000874",
+      "chamber": "House",
+      "first_name": "Steny",
+      "last_name": "Hoyer",
+      "party": "D",
+      "state": "MD",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Mechanicsville",
+        "phone": "(202) 225-4131"
+      }
+    },
+    "M001232": {
+      "bioguide_id": "M001232",
+      "chamber": "House",
+      "first_name": "April",
+      "last_name": "McClain Delaney",
+      "party": "D",
+      "state": "MD",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Potomac",
+        "phone": "(202) 225-2721"
+      }
+    },
+    "M000687": {
+      "bioguide_id": "M000687",
+      "chamber": "House",
+      "first_name": "Kweisi",
+      "last_name": "Mfume",
+      "party": "D",
+      "state": "MD",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Baltimore",
+        "phone": "(202) 225-4741"
+      }
+    },
+    "R000606": {
+      "bioguide_id": "R000606",
+      "chamber": "House",
+      "first_name": "Jamie",
+      "last_name": "Raskin",
+      "party": "D",
+      "state": "MD",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Takoma Park",
+        "phone": "(202) 225-5341"
+      }
+    },
+    "P000597": {
+      "bioguide_id": "P000597",
+      "chamber": "House",
+      "first_name": "Chellie",
+      "last_name": "Pingree",
+      "party": "D",
+      "state": "ME",
+      "house_data": {
+        "district": "1st",
+        "town_name": "North Haven",
+        "phone": "(202) 225-6116"
+      }
+    },
+    "G000592": {
+      "bioguide_id": "G000592",
+      "chamber": "House",
+      "first_name": "Jared",
+      "last_name": "Golden",
+      "party": "D",
+      "state": "ME",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Lewiston",
+        "phone": "(202) 225-6306"
+      }
+    },
+    "B001301": {
+      "bioguide_id": "B001301",
+      "chamber": "House",
+      "first_name": "Jack",
+      "last_name": "Bergman",
+      "party": "R",
+      "state": "MI",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Watersmeet",
+        "phone": "(202) 225-4735"
+      }
+    },
+    "M001194": {
+      "bioguide_id": "M001194",
+      "chamber": "House",
+      "first_name": "John",
+      "last_name": "Moolenaar",
+      "party": "R",
+      "state": "MI",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Caledonia",
+        "phone": "(202) 225-3561"
+      }
+    },
+    "S001221": {
+      "bioguide_id": "S001221",
+      "chamber": "House",
+      "first_name": "Hillary",
+      "last_name": "Scholten",
+      "party": "D",
+      "state": "MI",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Grand Rapids",
+        "phone": "(202) 225-3831"
+      }
+    },
+    "H001058": {
+      "bioguide_id": "H001058",
+      "chamber": "House",
+      "first_name": "Bill",
+      "last_name": "Huizenga",
+      "party": "R",
+      "state": "MI",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Holland",
+        "phone": "(202) 225-4401"
+      }
+    },
+    "W000798": {
+      "bioguide_id": "W000798",
+      "chamber": "House",
+      "first_name": "Tim",
+      "last_name": "Walberg",
+      "party": "R",
+      "state": "MI",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Tipton",
+        "phone": "(202) 225-6276"
+      }
+    },
+    "D000624": {
+      "bioguide_id": "D000624",
+      "chamber": "House",
+      "first_name": "Debbie",
+      "last_name": "Dingell",
+      "party": "D",
+      "state": "MI",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Ann Arbor",
+        "phone": "(202) 225-4071"
+      }
+    },
+    "B001321": {
+      "bioguide_id": "B001321",
+      "chamber": "House",
+      "first_name": "Tom",
+      "last_name": "Barrett",
+      "party": "R",
+      "state": "MI",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Charlotte",
+        "phone": "(202) 225-4872"
+      }
+    },
+    "M001237": {
+      "bioguide_id": "M001237",
+      "chamber": "House",
+      "first_name": "Kristen",
+      "last_name": "McDonald Rivet",
+      "party": "D",
+      "state": "MI",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Bay City",
+        "phone": "(202) 225-3611"
+      }
+    },
+    "M001136": {
+      "bioguide_id": "M001136",
+      "chamber": "House",
+      "first_name": "Lisa",
+      "last_name": "McClain",
+      "party": "R",
+      "state": "MI",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Bruce",
+        "phone": "(202) 225-2106"
+      }
+    },
+    "J000307": {
+      "bioguide_id": "J000307",
+      "chamber": "House",
+      "first_name": "John",
+      "last_name": "James",
+      "party": "R",
+      "state": "MI",
+      "house_data": {
+        "district": "10th",
+        "town_name": "Shelby Township",
+        "phone": "(202) 225-4961"
+      }
+    },
+    "S001215": {
+      "bioguide_id": "S001215",
+      "chamber": "House",
+      "first_name": "Haley",
+      "last_name": "Stevens",
+      "party": "D",
+      "state": "MI",
+      "house_data": {
+        "district": "11th",
+        "town_name": "Birmingham",
+        "phone": "(202) 225-8171"
+      }
+    },
+    "T000481": {
+      "bioguide_id": "T000481",
+      "chamber": "House",
+      "first_name": "Rashida",
+      "last_name": "Tlaib",
+      "party": "D",
+      "state": "MI",
+      "house_data": {
+        "district": "12th",
+        "town_name": "Detroit",
+        "phone": "(202) 225-5126"
+      }
+    },
+    "T000488": {
+      "bioguide_id": "T000488",
+      "chamber": "House",
+      "first_name": "Shri",
+      "last_name": "Thanedar",
+      "party": "D",
+      "state": "MI",
+      "house_data": {
+        "district": "13th",
+        "town_name": "Detroit",
+        "phone": "(202) 225-5802"
+      }
+    },
+    "F000475": {
+      "bioguide_id": "F000475",
+      "chamber": "House",
+      "first_name": "Brad",
+      "last_name": "Finstad",
+      "party": "R",
+      "state": "MN",
+      "house_data": {
+        "district": "1st",
+        "town_name": "New Ulm",
+        "phone": "(202) 225-2472"
+      }
+    },
+    "C001119": {
+      "bioguide_id": "C001119",
+      "chamber": "House",
+      "first_name": "Angie",
+      "last_name": "Craig",
+      "party": "D",
+      "state": "MN",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Prior Lake",
+        "phone": "(202) 225-2271"
+      }
+    },
+    "M001234": {
+      "bioguide_id": "M001234",
+      "chamber": "House",
+      "first_name": "Kelly",
+      "last_name": "Morrison",
+      "party": "D",
+      "state": "MN",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Wayzata",
+        "phone": "(202) 225-2871"
+      }
+    },
+    "M001143": {
+      "bioguide_id": "M001143",
+      "chamber": "House",
+      "first_name": "Betty",
+      "last_name": "McCollum",
+      "party": "D",
+      "state": "MN",
+      "house_data": {
+        "district": "4th",
+        "town_name": "St. Paul",
+        "phone": "(202) 225-6631"
+      }
+    },
+    "O000173": {
+      "bioguide_id": "O000173",
+      "chamber": "House",
+      "first_name": "Ilhan",
+      "last_name": "Omar",
+      "party": "D",
+      "state": "MN",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Minneapolis",
+        "phone": "(202) 225-4755"
+      }
+    },
+    "E000294": {
+      "bioguide_id": "E000294",
+      "chamber": "House",
+      "first_name": "Tom",
+      "last_name": "Emmer",
+      "party": "R",
+      "state": "MN",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Delano",
+        "phone": "(202) 225-2331"
+      }
+    },
+    "F000470": {
+      "bioguide_id": "F000470",
+      "chamber": "House",
+      "first_name": "Michelle",
+      "last_name": "Fischbach",
+      "party": "R",
+      "state": "MN",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Regal",
+        "phone": "(202) 225-2165"
+      }
+    },
+    "S001212": {
+      "bioguide_id": "S001212",
+      "chamber": "House",
+      "first_name": "Pete",
+      "last_name": "Stauber",
+      "party": "R",
+      "state": "MN",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Hermantown",
+        "phone": "(202) 225-6211"
+      }
+    },
+    "B001324": {
+      "bioguide_id": "B001324",
+      "chamber": "House",
+      "first_name": "Wesley",
+      "last_name": "Bell",
+      "party": "D",
+      "state": "MO",
+      "house_data": {
+        "district": "1st",
+        "town_name": "St. Louis",
+        "phone": "(202) 225-2406"
+      }
+    },
+    "W000812": {
+      "bioguide_id": "W000812",
+      "chamber": "House",
+      "first_name": "Ann",
+      "last_name": "Wagner",
+      "party": "R",
+      "state": "MO",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Ballwin",
+        "phone": "(202) 225-1621"
+      }
+    },
+    "O000177": {
+      "bioguide_id": "O000177",
+      "chamber": "House",
+      "first_name": "Robert",
+      "last_name": "Onder",
+      "party": "R",
+      "state": "MO",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Augusta",
+        "phone": "(202) 225-2956"
+      }
+    },
+    "A000379": {
+      "bioguide_id": "A000379",
+      "chamber": "House",
+      "first_name": "Mark",
+      "last_name": "Alford",
+      "party": "R",
+      "state": "MO",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Lake Winnebago",
+        "phone": "(202) 225-2876"
+      }
+    },
+    "C001061": {
+      "bioguide_id": "C001061",
+      "chamber": "House",
+      "first_name": "Emanuel",
+      "last_name": "Cleaver",
+      "party": "D",
+      "state": "MO",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Kansas City",
+        "phone": "(202) 225-4535"
+      }
+    },
+    "G000546": {
+      "bioguide_id": "G000546",
+      "chamber": "House",
+      "first_name": "Sam",
+      "last_name": "Graves",
+      "party": "R",
+      "state": "MO",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Tarkio",
+        "phone": "(202) 225-7041"
+      }
+    },
+    "B001316": {
+      "bioguide_id": "B001316",
+      "chamber": "House",
+      "first_name": "Eric",
+      "last_name": "Burlison",
+      "party": "R",
+      "state": "MO",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Ozark",
+        "phone": "(202) 225-6536"
+      }
+    },
+    "S001195": {
+      "bioguide_id": "S001195",
+      "chamber": "House",
+      "first_name": "Jason",
+      "last_name": "Smith",
+      "party": "R",
+      "state": "MO",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Salem",
+        "phone": "(202) 225-4404"
+      }
+    },
+    "K000404": {
+      "bioguide_id": "K000404",
+      "chamber": "House",
+      "first_name": "Kimberlyn",
+      "last_name": "King-Hinds",
+      "party": "R",
+      "state": "MP",
+      "house_data": {
+        "district": "Delegate",
+        "town_name": "Tinian",
+        "phone": "(202) 225-2646"
+      }
+    },
+    "K000388": {
+      "bioguide_id": "K000388",
+      "chamber": "House",
+      "first_name": "Trent",
+      "last_name": "Kelly",
+      "party": "R",
+      "state": "MS",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Saltillo",
+        "phone": "(202) 225-4306"
+      }
+    },
+    "T000193": {
+      "bioguide_id": "T000193",
+      "chamber": "House",
+      "first_name": "Bennie",
+      "last_name": "Thompson",
+      "party": "D",
+      "state": "MS",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Bolton",
+        "phone": "(202) 225-5876"
+      }
+    },
+    "G000591": {
+      "bioguide_id": "G000591",
+      "chamber": "House",
+      "first_name": "Michael",
+      "last_name": "Guest",
+      "party": "R",
+      "state": "MS",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Brandon",
+        "phone": "(202) 225-5031"
+      }
+    },
+    "E000235": {
+      "bioguide_id": "E000235",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Ezell",
+      "party": "R",
+      "state": "MS",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Pascagoula",
+        "phone": "(202) 225-5772"
+      }
+    },
+    "Z000018": {
+      "bioguide_id": "Z000018",
+      "chamber": "House",
+      "first_name": "Ryan",
+      "last_name": "Zinke",
+      "party": "R",
+      "state": "MT",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Whitefish",
+        "phone": "(202) 225-5628"
+      }
+    },
+    "D000634": {
+      "bioguide_id": "D000634",
+      "chamber": "House",
+      "first_name": "Troy",
+      "last_name": "Downing",
+      "party": "R",
+      "state": "MT",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Helena",
+        "phone": "(202) 225-3211"
+      }
+    },
+    "D000230": {
+      "bioguide_id": "D000230",
+      "chamber": "House",
+      "first_name": "Donald",
+      "last_name": "Davis",
+      "party": "D",
+      "state": "NC",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Snow Hill",
+        "phone": "(202) 225-3101"
+      }
+    },
+    "R000305": {
+      "bioguide_id": "R000305",
+      "chamber": "House",
+      "first_name": "Deborah",
+      "last_name": "Ross",
+      "party": "D",
+      "state": "NC",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Raleigh",
+        "phone": "(202) 225-3032"
+      }
+    },
+    "M001210": {
+      "bioguide_id": "M001210",
+      "chamber": "House",
+      "first_name": "Gregory",
+      "last_name": "Murphy",
+      "party": "R",
+      "state": "NC",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Greenville",
+        "phone": "(202) 225-3415"
+      }
+    },
+    "F000477": {
+      "bioguide_id": "F000477",
+      "chamber": "House",
+      "first_name": "Valerie",
+      "last_name": "Foushee",
+      "party": "D",
+      "state": "NC",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Hillsborough",
+        "phone": "(202) 225-1784"
+      }
+    },
+    "F000450": {
+      "bioguide_id": "F000450",
+      "chamber": "House",
+      "first_name": "Virginia",
+      "last_name": "Foxx",
+      "party": "R",
+      "state": "NC",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Banner Elk",
+        "phone": "(202) 225-2071"
+      }
+    },
+    "M001240": {
+      "bioguide_id": "M001240",
+      "chamber": "House",
+      "first_name": "Addison",
+      "last_name": "McDowell",
+      "party": "R",
+      "state": "NC",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Advance",
+        "phone": "(202) 225-3065"
+      }
+    },
+    "R000603": {
+      "bioguide_id": "R000603",
+      "chamber": "House",
+      "first_name": "David",
+      "last_name": "Rouzer",
+      "party": "R",
+      "state": "NC",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Wilmington",
+        "phone": "(202) 225-2731"
+      }
+    },
+    "H001102": {
+      "bioguide_id": "H001102",
+      "chamber": "House",
+      "first_name": "Mark",
+      "last_name": "Harris",
+      "party": "R",
+      "state": "NC",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Indian Trail",
+        "phone": "(202) 225-1976"
+      }
+    },
+    "H001067": {
+      "bioguide_id": "H001067",
+      "chamber": "House",
+      "first_name": "Richard",
+      "last_name": "Hudson",
+      "party": "R",
+      "state": "NC",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Southern Pines",
+        "phone": "(202) 225-3715"
+      }
+    },
+    "H001101": {
+      "bioguide_id": "H001101",
+      "chamber": "House",
+      "first_name": "Pat",
+      "last_name": "Harrigan",
+      "party": "R",
+      "state": "NC",
+      "house_data": {
+        "district": "10th",
+        "town_name": "Hickory",
+        "phone": "(202) 225-2576"
+      }
+    },
+    "E000246": {
+      "bioguide_id": "E000246",
+      "chamber": "House",
+      "first_name": "Chuck",
+      "last_name": "Edwards",
+      "party": "R",
+      "state": "NC",
+      "house_data": {
+        "district": "11th",
+        "town_name": "Flat Rock",
+        "phone": "(202) 225-6401"
+      }
+    },
+    "A000370": {
+      "bioguide_id": "A000370",
+      "chamber": "House",
+      "first_name": "Alma",
+      "last_name": "Adams",
+      "party": "D",
+      "state": "NC",
+      "house_data": {
+        "district": "12th",
+        "town_name": "Charlotte",
+        "phone": "(202) 225-1510"
+      }
+    },
+    "K000405": {
+      "bioguide_id": "K000405",
+      "chamber": "House",
+      "first_name": "Brad",
+      "last_name": "Knott",
+      "party": "R",
+      "state": "NC",
+      "house_data": {
+        "district": "13th",
+        "town_name": "Raleigh",
+        "phone": "(202) 225-4531"
+      }
+    },
+    "M001236": {
+      "bioguide_id": "M001236",
+      "chamber": "House",
+      "first_name": "Tim",
+      "last_name": "Moore",
+      "party": "R",
+      "state": "NC",
+      "house_data": {
+        "district": "14th",
+        "town_name": "Kings Mountain",
+        "phone": "(202) 225-5634"
+      }
+    },
+    "F000482": {
+      "bioguide_id": "F000482",
+      "chamber": "House",
+      "first_name": "Julie",
+      "last_name": "Fedorchak",
+      "party": "R",
+      "state": "ND",
+      "house_data": {
+        "district": "At Large",
+        "town_name": "Mandan",
+        "phone": "(202) 225-2611"
+      }
+    },
+    "F000474": {
+      "bioguide_id": "F000474",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Flood",
+      "party": "R",
+      "state": "NE",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Norfolk",
+        "phone": "(202) 225-4806"
+      }
+    },
+    "B001298": {
+      "bioguide_id": "B001298",
+      "chamber": "House",
+      "first_name": "Don",
+      "last_name": "Bacon",
+      "party": "R",
+      "state": "NE",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Papillion",
+        "phone": "(202) 225-4155"
+      }
+    },
+    "S001172": {
+      "bioguide_id": "S001172",
+      "chamber": "House",
+      "first_name": "Adrian",
+      "last_name": "Smith",
+      "party": "R",
+      "state": "NE",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Gering",
+        "phone": "(202) 225-6435"
+      }
+    },
+    "P000614": {
+      "bioguide_id": "P000614",
+      "chamber": "House",
+      "first_name": "Chris",
+      "last_name": "Pappas",
+      "party": "D",
+      "state": "NH",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Manchester",
+        "phone": "(202) 225-5456"
+      }
+    },
+    "G000604": {
+      "bioguide_id": "G000604",
+      "chamber": "House",
+      "first_name": "Maggie",
+      "last_name": "Goodlander",
+      "party": "D",
+      "state": "NH",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Nashua",
+        "phone": "(202) 225-5206"
+      }
+    },
+    "N000188": {
+      "bioguide_id": "N000188",
+      "chamber": "House",
+      "first_name": "Donald",
+      "last_name": "Norcross",
+      "party": "D",
+      "state": "NJ",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Camden City",
+        "phone": "(202) 225-6501"
+      }
+    },
+    "V000133": {
+      "bioguide_id": "V000133",
+      "chamber": "House",
+      "first_name": "Jefferson",
+      "last_name": "Van Drew",
+      "party": "R",
+      "state": "NJ",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Dennis Township",
+        "phone": "(202) 225-6572"
+      }
+    },
+    "C001136": {
+      "bioguide_id": "C001136",
+      "chamber": "House",
+      "first_name": "Herbert",
+      "last_name": "Conaway",
+      "party": "D",
+      "state": "NJ",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Delran",
+        "phone": "(202) 225-4765"
+      }
+    },
+    "S000522": {
+      "bioguide_id": "S000522",
+      "chamber": "House",
+      "first_name": "Christopher",
+      "last_name": "Smith",
+      "party": "R",
+      "state": "NJ",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Manchester",
+        "phone": "(202) 225-3765"
+      }
+    },
+    "G000583": {
+      "bioguide_id": "G000583",
+      "chamber": "House",
+      "first_name": "Josh",
+      "last_name": "Gottheimer",
+      "party": "D",
+      "state": "NJ",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Wyckoff",
+        "phone": "(202) 225-4465"
+      }
+    },
+    "P000034": {
+      "bioguide_id": "P000034",
+      "chamber": "House",
+      "first_name": "Frank",
+      "last_name": "Pallone",
+      "party": "D",
+      "state": "NJ",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Long Branch",
+        "phone": "(202) 225-4671"
+      }
+    },
+    "K000398": {
+      "bioguide_id": "K000398",
+      "chamber": "House",
+      "first_name": "Thomas",
+      "last_name": "Kean",
+      "party": "R",
+      "state": "NJ",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Westfield",
+        "phone": "(202) 225-5361"
+      }
+    },
+    "M001226": {
+      "bioguide_id": "M001226",
+      "chamber": "House",
+      "first_name": "Robert",
+      "last_name": "Menendez",
+      "party": "D",
+      "state": "NJ",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Jersey City",
+        "phone": "(202) 225-7919"
+      }
+    },
+    "P000621": {
+      "bioguide_id": "P000621",
+      "chamber": "House",
+      "first_name": "Nellie",
+      "last_name": "Pou",
+      "party": "D",
+      "state": "NJ",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Borough of North Haledon",
+        "phone": "(202) 225-5751"
+      }
+    },
+    "M001229": {
+      "bioguide_id": "M001229",
+      "chamber": "House",
+      "first_name": "LaMonica",
+      "last_name": "McIver",
+      "party": "D",
+      "state": "NJ",
+      "house_data": {
+        "district": "10th",
+        "town_name": "Newark",
+        "phone": "(202) 225-3436"
+      }
+    },
+    "W000822": {
+      "bioguide_id": "W000822",
+      "chamber": "House",
+      "first_name": "Bonnie",
+      "last_name": "Watson Coleman",
+      "party": "D",
+      "state": "NJ",
+      "house_data": {
+        "district": "12th",
+        "town_name": "Ewing Township",
+        "phone": "(202) 225-5801"
+      }
+    },
+    "S001218": {
+      "bioguide_id": "S001218",
+      "chamber": "House",
+      "first_name": "Melanie",
+      "last_name": "Stansbury",
+      "party": "D",
+      "state": "NM",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Albuquerque",
+        "phone": "(202) 225-6316"
+      }
+    },
+    "V000136": {
+      "bioguide_id": "V000136",
+      "chamber": "House",
+      "first_name": "Gabe",
+      "last_name": "Vasquez",
+      "party": "D",
+      "state": "NM",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Las Cruces",
+        "phone": "(202) 225-2365"
+      }
+    },
+    "L000273": {
+      "bioguide_id": "L000273",
+      "chamber": "House",
+      "first_name": "Teresa",
+      "last_name": "Leger Fernandez",
+      "party": "D",
+      "state": "NM",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Santa Fe",
+        "phone": "(202) 225-6190"
+      }
+    },
+    "T000468": {
+      "bioguide_id": "T000468",
+      "chamber": "House",
+      "first_name": "Dina",
+      "last_name": "Titus",
+      "party": "D",
+      "state": "NV",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Las Vegas",
+        "phone": "(202) 225-5965"
+      }
+    },
+    "A000369": {
+      "bioguide_id": "A000369",
+      "chamber": "House",
+      "first_name": "Mark",
+      "last_name": "Amodei",
+      "party": "R",
+      "state": "NV",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Carson City",
+        "phone": "(202) 225-6155"
+      }
+    },
+    "L000590": {
+      "bioguide_id": "L000590",
+      "chamber": "House",
+      "first_name": "Susie",
+      "last_name": "Lee",
+      "party": "D",
+      "state": "NV",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Las Vegas",
+        "phone": "(202) 225-3252"
+      }
+    },
+    "H001066": {
+      "bioguide_id": "H001066",
+      "chamber": "House",
+      "first_name": "Steven",
+      "last_name": "Horsford",
+      "party": "D",
+      "state": "NV",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Las Vegas",
+        "phone": "(202) 225-9894"
+      }
+    },
+    "L000598": {
+      "bioguide_id": "L000598",
+      "chamber": "House",
+      "first_name": "Nick",
+      "last_name": "LaLota",
+      "party": "R",
+      "state": "NY",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Suffolk County",
+        "phone": "(202) 225-3826"
+      }
+    },
+    "G000597": {
+      "bioguide_id": "G000597",
+      "chamber": "House",
+      "first_name": "Andrew",
+      "last_name": "Garbarino",
+      "party": "R",
+      "state": "NY",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Bayport",
+        "phone": "(202) 225-7896"
+      }
+    },
+    "S001201": {
+      "bioguide_id": "S001201",
+      "chamber": "House",
+      "first_name": "Thomas",
+      "last_name": "Suozzi",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Glen Cove",
+        "phone": "(202) 225-3335"
+      }
+    },
+    "G000602": {
+      "bioguide_id": "G000602",
+      "chamber": "House",
+      "first_name": "Laura",
+      "last_name": "Gillen",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Rockville Centre",
+        "phone": "(202) 225-5516"
+      }
+    },
+    "M001137": {
+      "bioguide_id": "M001137",
+      "chamber": "House",
+      "first_name": "Gregory",
+      "last_name": "Meeks",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Queens",
+        "phone": "(202) 225-3461"
+      }
+    },
+    "M001188": {
+      "bioguide_id": "M001188",
+      "chamber": "House",
+      "first_name": "Grace",
+      "last_name": "Meng",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Queens",
+        "phone": "(202) 225-2601"
+      }
+    },
+    "V000081": {
+      "bioguide_id": "V000081",
+      "chamber": "House",
+      "first_name": "Nydia",
+      "last_name": "Velázquez",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Brooklyn",
+        "phone": "(202) 225-2361"
+      }
+    },
+    "J000294": {
+      "bioguide_id": "J000294",
+      "chamber": "House",
+      "first_name": "Hakeem",
+      "last_name": "Jeffries",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Brooklyn",
+        "phone": "(202) 225-5936"
+      }
+    },
+    "C001067": {
+      "bioguide_id": "C001067",
+      "chamber": "House",
+      "first_name": "Yvette",
+      "last_name": "Clarke",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Brooklyn",
+        "phone": "(202) 225-6231"
+      }
+    },
+    "G000599": {
+      "bioguide_id": "G000599",
+      "chamber": "House",
+      "first_name": "Daniel",
+      "last_name": "Goldman",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "10th",
+        "town_name": "New York",
+        "phone": "(202) 225-7944"
+      }
+    },
+    "M000317": {
+      "bioguide_id": "M000317",
+      "chamber": "House",
+      "first_name": "Nicole",
+      "last_name": "Malliotakis",
+      "party": "R",
+      "state": "NY",
+      "house_data": {
+        "district": "11th",
+        "town_name": "Staten Island",
+        "phone": "(202) 225-3371"
+      }
+    },
+    "N000002": {
+      "bioguide_id": "N000002",
+      "chamber": "House",
+      "first_name": "Jerrold",
+      "last_name": "Nadler",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "12th",
+        "town_name": "New York",
+        "phone": "(202) 225-5635"
+      }
+    },
+    "E000297": {
+      "bioguide_id": "E000297",
+      "chamber": "House",
+      "first_name": "Adriano",
+      "last_name": "Espaillat",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "13th",
+        "town_name": "New York",
+        "phone": "(202) 225-4365"
+      }
+    },
+    "O000172": {
+      "bioguide_id": "O000172",
+      "chamber": "House",
+      "first_name": "Alexandria",
+      "last_name": "Ocasio-Cortez",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "14th",
+        "town_name": "East Elmhurst",
+        "phone": "(202) 225-3965"
+      }
+    },
+    "T000486": {
+      "bioguide_id": "T000486",
+      "chamber": "House",
+      "first_name": "Ritchie",
+      "last_name": "Torres",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "15th",
+        "town_name": "Bronx",
+        "phone": "(202) 225-4361"
+      }
+    },
+    "L000606": {
+      "bioguide_id": "L000606",
+      "chamber": "House",
+      "first_name": "George",
+      "last_name": "Latimer",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "16th",
+        "town_name": "Rye",
+        "phone": "(202) 225-2464"
+      }
+    },
+    "L000599": {
+      "bioguide_id": "L000599",
+      "chamber": "House",
+      "first_name": "Michael",
+      "last_name": "Lawler",
+      "party": "R",
+      "state": "NY",
+      "house_data": {
+        "district": "17th",
+        "town_name": "Pearl River",
+        "phone": "(202) 225-6506"
+      }
+    },
+    "R000579": {
+      "bioguide_id": "R000579",
+      "chamber": "House",
+      "first_name": "Patrick",
+      "last_name": "Ryan",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "18th",
+        "town_name": "Gardiner",
+        "phone": "(202) 225-5614"
+      }
+    },
+    "R000622": {
+      "bioguide_id": "R000622",
+      "chamber": "House",
+      "first_name": "Josh",
+      "last_name": "Riley",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "19th",
+        "town_name": "Ithaca",
+        "phone": "(202) 225-5441"
+      }
+    },
+    "T000469": {
+      "bioguide_id": "T000469",
+      "chamber": "House",
+      "first_name": "Paul",
+      "last_name": "Tonko",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "20th",
+        "town_name": "Amsterdam",
+        "phone": "(202) 225-5076"
+      }
+    },
+    "S001196": {
+      "bioguide_id": "S001196",
+      "chamber": "House",
+      "first_name": "Elise",
+      "last_name": "Stefanik",
+      "party": "R",
+      "state": "NY",
+      "house_data": {
+        "district": "21st",
+        "town_name": "Schuylerville",
+        "phone": "(202) 225-4611"
+      }
+    },
+    "M001231": {
+      "bioguide_id": "M001231",
+      "chamber": "House",
+      "first_name": "John",
+      "last_name": "Mannion",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "22nd",
+        "town_name": "Geddes",
+        "phone": "(202) 225-3701"
+      }
+    },
+    "L000600": {
+      "bioguide_id": "L000600",
+      "chamber": "House",
+      "first_name": "Nicholas",
+      "last_name": "Langworthy",
+      "party": "R",
+      "state": "NY",
+      "house_data": {
+        "district": "23rd",
+        "town_name": "Pendleton",
+        "phone": "(202) 225-3161"
+      }
+    },
+    "T000478": {
+      "bioguide_id": "T000478",
+      "chamber": "House",
+      "first_name": "Claudia",
+      "last_name": "Tenney",
+      "party": "R",
+      "state": "NY",
+      "house_data": {
+        "district": "24th",
+        "town_name": "Canandaigua",
+        "phone": "(202) 225-3665"
+      }
+    },
+    "M001206": {
+      "bioguide_id": "M001206",
+      "chamber": "House",
+      "first_name": "Joseph",
+      "last_name": "Morelle",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "25th",
+        "town_name": "Irondequoit",
+        "phone": "(202) 225-3615"
+      }
+    },
+    "K000402": {
+      "bioguide_id": "K000402",
+      "chamber": "House",
+      "first_name": "Timothy",
+      "last_name": "Kennedy",
+      "party": "D",
+      "state": "NY",
+      "house_data": {
+        "district": "26th",
+        "town_name": "Buffalo",
+        "phone": "(202) 225-3306"
+      }
+    },
+    "L000601": {
+      "bioguide_id": "L000601",
+      "chamber": "House",
+      "first_name": "Greg",
+      "last_name": "Landsman",
+      "party": "D",
+      "state": "OH",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Cincinnati",
+        "phone": "(202) 225-2216"
+      }
+    },
+    "T000490": {
+      "bioguide_id": "T000490",
+      "chamber": "House",
+      "first_name": "David",
+      "last_name": "Taylor",
+      "party": "R",
+      "state": "OH",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Amelia",
+        "phone": "(202) 225-3164"
+      }
+    },
+    "B001281": {
+      "bioguide_id": "B001281",
+      "chamber": "House",
+      "first_name": "Joyce",
+      "last_name": "Beatty",
+      "party": "D",
+      "state": "OH",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Columbus",
+        "phone": "(202) 225-4324"
+      }
+    },
+    "J000289": {
+      "bioguide_id": "J000289",
+      "chamber": "House",
+      "first_name": "Jim",
+      "last_name": "Jordan",
+      "party": "R",
+      "state": "OH",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Urbana",
+        "phone": "(202) 225-2676"
+      }
+    },
+    "L000566": {
+      "bioguide_id": "L000566",
+      "chamber": "House",
+      "first_name": "Robert",
+      "last_name": "Latta",
+      "party": "R",
+      "state": "OH",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Bowling Green",
+        "phone": "(202) 225-6405"
+      }
+    },
+    "R000619": {
+      "bioguide_id": "R000619",
+      "chamber": "House",
+      "first_name": "Michael",
+      "last_name": "Rulli",
+      "party": "R",
+      "state": "OH",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Salem",
+        "phone": "(202) 225-5705"
+      }
+    },
+    "M001222": {
+      "bioguide_id": "M001222",
+      "chamber": "House",
+      "first_name": "Max",
+      "last_name": "Miller",
+      "party": "R",
+      "state": "OH",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Rocky River",
+        "phone": "(202) 225-3876"
+      }
+    },
+    "D000626": {
+      "bioguide_id": "D000626",
+      "chamber": "House",
+      "first_name": "Warren",
+      "last_name": "Davidson",
+      "party": "R",
+      "state": "OH",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Troy",
+        "phone": "(202) 225-6205"
+      }
+    },
+    "K000009": {
+      "bioguide_id": "K000009",
+      "chamber": "House",
+      "first_name": "Marcy",
+      "last_name": "Kaptur",
+      "party": "D",
+      "state": "OH",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Toledo",
+        "phone": "(202) 225-4146"
+      }
+    },
+    "T000463": {
+      "bioguide_id": "T000463",
+      "chamber": "House",
+      "first_name": "Michael",
+      "last_name": "Turner",
+      "party": "R",
+      "state": "OH",
+      "house_data": {
+        "district": "10th",
+        "town_name": "Dayton",
+        "phone": "(202) 225-6465"
+      }
+    },
+    "B001313": {
+      "bioguide_id": "B001313",
+      "chamber": "House",
+      "first_name": "Shontel",
+      "last_name": "Brown",
+      "party": "D",
+      "state": "OH",
+      "house_data": {
+        "district": "11th",
+        "town_name": "Warrensville Heights",
+        "phone": "(202) 225-7032"
+      }
+    },
+    "B001306": {
+      "bioguide_id": "B001306",
+      "chamber": "House",
+      "first_name": "Troy",
+      "last_name": "Balderson",
+      "party": "R",
+      "state": "OH",
+      "house_data": {
+        "district": "12th",
+        "town_name": "Zanesville",
+        "phone": "(202) 225-5355"
+      }
+    },
+    "S001223": {
+      "bioguide_id": "S001223",
+      "chamber": "House",
+      "first_name": "Emilia",
+      "last_name": "Sykes",
+      "party": "D",
+      "state": "OH",
+      "house_data": {
+        "district": "13th",
+        "town_name": "Akron",
+        "phone": "(202) 225-6265"
+      }
+    },
+    "J000295": {
+      "bioguide_id": "J000295",
+      "chamber": "House",
+      "first_name": "David",
+      "last_name": "Joyce",
+      "party": "R",
+      "state": "OH",
+      "house_data": {
+        "district": "14th",
+        "town_name": "South Russell Village",
+        "phone": "(202) 225-5731"
+      }
+    },
+    "C001126": {
+      "bioguide_id": "C001126",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Carey",
+      "party": "R",
+      "state": "OH",
+      "house_data": {
+        "district": "15th",
+        "town_name": "Columbus",
+        "phone": "(202) 225-2015"
+      }
+    },
+    "H001082": {
+      "bioguide_id": "H001082",
+      "chamber": "House",
+      "first_name": "Kevin",
+      "last_name": "Hern",
+      "party": "R",
+      "state": "OK",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Tulsa",
+        "phone": "(202) 225-2211"
+      }
+    },
+    "B001317": {
+      "bioguide_id": "B001317",
+      "chamber": "House",
+      "first_name": "Josh",
+      "last_name": "Brecheen",
+      "party": "R",
+      "state": "OK",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Coalgate",
+        "phone": "(202) 225-2701"
+      }
+    },
+    "L000491": {
+      "bioguide_id": "L000491",
+      "chamber": "House",
+      "first_name": "Frank",
+      "last_name": "Lucas",
+      "party": "R",
+      "state": "OK",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Cheyenne",
+        "phone": "(202) 225-5565"
+      }
+    },
+    "C001053": {
+      "bioguide_id": "C001053",
+      "chamber": "House",
+      "first_name": "Tom",
+      "last_name": "Cole",
+      "party": "R",
+      "state": "OK",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Moore",
+        "phone": "(202) 225-6165"
+      }
+    },
+    "B000740": {
+      "bioguide_id": "B000740",
+      "chamber": "House",
+      "first_name": "Stephanie",
+      "last_name": "Bice",
+      "party": "R",
+      "state": "OK",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Oklahoma City",
+        "phone": "(202) 225-2132"
+      }
+    },
+    "B001278": {
+      "bioguide_id": "B001278",
+      "chamber": "House",
+      "first_name": "Suzanne",
+      "last_name": "Bonamici",
+      "party": "D",
+      "state": "OR",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Washington County",
+        "phone": "(202) 225-0855"
+      }
+    },
+    "B000668": {
+      "bioguide_id": "B000668",
+      "chamber": "House",
+      "first_name": "Cliff",
+      "last_name": "Bentz",
+      "party": "R",
+      "state": "OR",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Ontario",
+        "phone": "(202) 225-6730"
+      }
+    },
+    "D000635": {
+      "bioguide_id": "D000635",
+      "chamber": "House",
+      "first_name": "Maxine",
+      "last_name": "Dexter",
+      "party": "D",
+      "state": "OR",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Portland",
+        "phone": "(202) 225-4811"
+      }
+    },
+    "H001094": {
+      "bioguide_id": "H001094",
+      "chamber": "House",
+      "first_name": "Val",
+      "last_name": "Hoyle",
+      "party": "D",
+      "state": "OR",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Springfield",
+        "phone": "(202) 225-6416"
+      }
+    },
+    "B001326": {
+      "bioguide_id": "B001326",
+      "chamber": "House",
+      "first_name": "Janelle",
+      "last_name": "Bynum",
+      "party": "D",
+      "state": "OR",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Happy Valley",
+        "phone": "(202) 225-5711"
+      }
+    },
+    "S001226": {
+      "bioguide_id": "S001226",
+      "chamber": "House",
+      "first_name": "Andrea",
+      "last_name": "Salinas",
+      "party": "D",
+      "state": "OR",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Tigard",
+        "phone": "(202) 225-5643"
+      }
+    },
+    "F000466": {
+      "bioguide_id": "F000466",
+      "chamber": "House",
+      "first_name": "Brian",
+      "last_name": "Fitzpatrick",
+      "party": "R",
+      "state": "PA",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Levittown",
+        "phone": "(202) 225-4276"
+      }
+    },
+    "B001296": {
+      "bioguide_id": "B001296",
+      "chamber": "House",
+      "first_name": "Brendan",
+      "last_name": "Boyle",
+      "party": "D",
+      "state": "PA",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Philadelphia",
+        "phone": "(202) 225-6111"
+      }
+    },
+    "E000296": {
+      "bioguide_id": "E000296",
+      "chamber": "House",
+      "first_name": "Dwight",
+      "last_name": "Evans",
+      "party": "D",
+      "state": "PA",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Philadelphia",
+        "phone": "(202) 225-4001"
+      }
+    },
+    "D000631": {
+      "bioguide_id": "D000631",
+      "chamber": "House",
+      "first_name": "Madeleine",
+      "last_name": "Dean",
+      "party": "D",
+      "state": "PA",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Bala Cynwyd",
+        "phone": "(202) 225-4731"
+      }
+    },
+    "S001205": {
+      "bioguide_id": "S001205",
+      "chamber": "House",
+      "first_name": "Mary Gay",
+      "last_name": "Scanlon",
+      "party": "D",
+      "state": "PA",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Swarthmore",
+        "phone": "(202) 225-2011"
+      }
+    },
+    "H001085": {
+      "bioguide_id": "H001085",
+      "chamber": "House",
+      "first_name": "Chrissy",
+      "last_name": "Houlahan",
+      "party": "D",
+      "state": "PA",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Devon",
+        "phone": "(202) 225-4315"
+      }
+    },
+    "M001230": {
+      "bioguide_id": "M001230",
+      "chamber": "House",
+      "first_name": "Ryan",
+      "last_name": "Mackenzie",
+      "party": "R",
+      "state": "PA",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Lower Macungie",
+        "phone": "(202) 225-6411"
+      }
+    },
+    "B001327": {
+      "bioguide_id": "B001327",
+      "chamber": "House",
+      "first_name": "Robert",
+      "last_name": "Bresnahan",
+      "party": "R",
+      "state": "PA",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Dallas Township",
+        "phone": "(202) 225-5546"
+      }
+    },
+    "M001204": {
+      "bioguide_id": "M001204",
+      "chamber": "House",
+      "first_name": "Daniel",
+      "last_name": "Meuser",
+      "party": "R",
+      "state": "PA",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Dallas",
+        "phone": "(202) 225-6511"
+      }
+    },
+    "P000605": {
+      "bioguide_id": "P000605",
+      "chamber": "House",
+      "first_name": "Scott",
+      "last_name": "Perry",
+      "party": "R",
+      "state": "PA",
+      "house_data": {
+        "district": "10th",
+        "town_name": "Dillsburg",
+        "phone": "(202) 225-5836"
+      }
+    },
+    "S001199": {
+      "bioguide_id": "S001199",
+      "chamber": "House",
+      "first_name": "Lloyd",
+      "last_name": "Smucker",
+      "party": "R",
+      "state": "PA",
+      "house_data": {
+        "district": "11th",
+        "town_name": "Lancaster",
+        "phone": "(202) 225-2411"
+      }
+    },
+    "L000602": {
+      "bioguide_id": "L000602",
+      "chamber": "House",
+      "first_name": "Summer",
+      "last_name": "Lee",
+      "party": "D",
+      "state": "PA",
+      "house_data": {
+        "district": "12th",
+        "town_name": "Swissvale",
+        "phone": "(202) 225-2135"
+      }
+    },
+    "J000302": {
+      "bioguide_id": "J000302",
+      "chamber": "House",
+      "first_name": "John",
+      "last_name": "Joyce",
+      "party": "R",
+      "state": "PA",
+      "house_data": {
+        "district": "13th",
+        "town_name": "Hollidaysburg",
+        "phone": "(202) 225-2431"
+      }
+    },
+    "R000610": {
+      "bioguide_id": "R000610",
+      "chamber": "House",
+      "first_name": "Guy",
+      "last_name": "Reschenthaler",
+      "party": "R",
+      "state": "PA",
+      "house_data": {
+        "district": "14th",
+        "town_name": "Peters Township",
+        "phone": "(202) 225-2065"
+      }
+    },
+    "T000467": {
+      "bioguide_id": "T000467",
+      "chamber": "House",
+      "first_name": "Glenn",
+      "last_name": "Thompson",
+      "party": "R",
+      "state": "PA",
+      "house_data": {
+        "district": "15th",
+        "town_name": "Howard",
+        "phone": "(202) 225-5121"
+      }
+    },
+    "K000376": {
+      "bioguide_id": "K000376",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Kelly",
+      "party": "R",
+      "state": "PA",
+      "house_data": {
+        "district": "16th",
+        "town_name": "Butler",
+        "phone": "(202) 225-5406"
+      }
+    },
+    "D000530": {
+      "bioguide_id": "D000530",
+      "chamber": "House",
+      "first_name": "Christopher",
+      "last_name": "Deluzio",
+      "party": "D",
+      "state": "PA",
+      "house_data": {
+        "district": "17th",
+        "town_name": "Aspinwall",
+        "phone": "(202) 225-2301"
+      }
+    },
+    "H001103": {
+      "bioguide_id": "H001103",
+      "chamber": "House",
+      "first_name": "Pablo",
+      "last_name": "Hernández",
+      "party": "D",
+      "state": "PR",
+      "house_data": {
+        "district": "Resident Commissioner",
+        "town_name": "San Juan",
+        "phone": "(202) 225-2615"
+      }
+    },
+    "A000380": {
+      "bioguide_id": "A000380",
+      "chamber": "House",
+      "first_name": "Gabe",
+      "last_name": "Amo",
+      "party": "D",
+      "state": "RI",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Providence",
+        "phone": "(202) 225-4911"
+      }
+    },
+    "M001223": {
+      "bioguide_id": "M001223",
+      "chamber": "House",
+      "first_name": "Seth",
+      "last_name": "Magaziner",
+      "party": "D",
+      "state": "RI",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Cranston",
+        "phone": "(202) 225-2735"
+      }
+    },
+    "M000194": {
+      "bioguide_id": "M000194",
+      "chamber": "House",
+      "first_name": "Nancy",
+      "last_name": "Mace",
+      "party": "R",
+      "state": "SC",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Charleston",
+        "phone": "(202) 225-3176"
+      }
+    },
+    "W000795": {
+      "bioguide_id": "W000795",
+      "chamber": "House",
+      "first_name": "Joe",
+      "last_name": "Wilson",
+      "party": "R",
+      "state": "SC",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Springdale",
+        "phone": "(202) 225-2452"
+      }
+    },
+    "B001325": {
+      "bioguide_id": "B001325",
+      "chamber": "House",
+      "first_name": "Sheri",
+      "last_name": "Biggs",
+      "party": "R",
+      "state": "SC",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Salem",
+        "phone": "(202) 225-5301"
+      }
+    },
+    "T000480": {
+      "bioguide_id": "T000480",
+      "chamber": "House",
+      "first_name": "William",
+      "last_name": "Timmons",
+      "party": "R",
+      "state": "SC",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Greenville",
+        "phone": "(202) 225-6030"
+      }
+    },
+    "N000190": {
+      "bioguide_id": "N000190",
+      "chamber": "House",
+      "first_name": "Ralph",
+      "last_name": "Norman",
+      "party": "R",
+      "state": "SC",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Rock Hill",
+        "phone": "(202) 225-5501"
+      }
+    },
+    "C000537": {
+      "bioguide_id": "C000537",
+      "chamber": "House",
+      "first_name": "James",
+      "last_name": "Clyburn",
+      "party": "D",
+      "state": "SC",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Columbia",
+        "phone": "(202) 225-3315"
+      }
+    },
+    "F000478": {
+      "bioguide_id": "F000478",
+      "chamber": "House",
+      "first_name": "Russell",
+      "last_name": "Fry",
+      "party": "R",
+      "state": "SC",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Murrells Inlet",
+        "phone": "(202) 225-9895"
+      }
+    },
+    "J000301": {
+      "bioguide_id": "J000301",
+      "chamber": "House",
+      "first_name": "Dusty",
+      "last_name": "Johnson",
+      "party": "R",
+      "state": "SD",
+      "house_data": {
+        "district": "At Large",
+        "town_name": "Mitchell",
+        "phone": "(202) 225-2801"
+      }
+    },
+    "H001086": {
+      "bioguide_id": "H001086",
+      "chamber": "House",
+      "first_name": "Diana",
+      "last_name": "Harshbarger",
+      "party": "R",
+      "state": "TN",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Kingsport",
+        "phone": "(202) 225-6356"
+      }
+    },
+    "B001309": {
+      "bioguide_id": "B001309",
+      "chamber": "House",
+      "first_name": "Tim",
+      "last_name": "Burchett",
+      "party": "R",
+      "state": "TN",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Knoxville",
+        "phone": "(202) 225-5435"
+      }
+    },
+    "F000459": {
+      "bioguide_id": "F000459",
+      "chamber": "House",
+      "first_name": "Charles",
+      "last_name": "Fleischmann",
+      "party": "R",
+      "state": "TN",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Chattanooga",
+        "phone": "(202) 225-3271"
+      }
+    },
+    "D000616": {
+      "bioguide_id": "D000616",
+      "chamber": "House",
+      "first_name": "Scott",
+      "last_name": "DesJarlais",
+      "party": "R",
+      "state": "TN",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Sherwood",
+        "phone": "(202) 225-6831"
+      }
+    },
+    "O000175": {
+      "bioguide_id": "O000175",
+      "chamber": "House",
+      "first_name": "Andrew",
+      "last_name": "Ogles",
+      "party": "R",
+      "state": "TN",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Columbia",
+        "phone": "(202) 225-4311"
+      }
+    },
+    "R000612": {
+      "bioguide_id": "R000612",
+      "chamber": "House",
+      "first_name": "John",
+      "last_name": "Rose",
+      "party": "R",
+      "state": "TN",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Cookeville",
+        "phone": "(202) 225-4231"
+      }
+    },
+    "V000139": {
+      "bioguide_id": "V000139",
+      "chamber": "House",
+      "first_name": "Matt",
+      "last_name": "Van Epps",
+      "party": "R",
+      "state": "TN",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Nashville",
+        "phone": "(202) 225-2811"
+      }
+    },
+    "K000392": {
+      "bioguide_id": "K000392",
+      "chamber": "House",
+      "first_name": "David",
+      "last_name": "Kustoff",
+      "party": "R",
+      "state": "TN",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Germantown",
+        "phone": "(202) 225-4714"
+      }
+    },
+    "C001068": {
+      "bioguide_id": "C001068",
+      "chamber": "House",
+      "first_name": "Steve",
+      "last_name": "Cohen",
+      "party": "D",
+      "state": "TN",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Memphis",
+        "phone": "(202) 225-3265"
+      }
+    },
+    "M001224": {
+      "bioguide_id": "M001224",
+      "chamber": "House",
+      "first_name": "Nathaniel",
+      "last_name": "Moran",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Whitehouse",
+        "phone": "(202) 225-3035"
+      }
+    },
+    "C001120": {
+      "bioguide_id": "C001120",
+      "chamber": "House",
+      "first_name": "Dan",
+      "last_name": "Crenshaw",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Humble",
+        "phone": "(202) 225-6565"
+      }
+    },
+    "S001224": {
+      "bioguide_id": "S001224",
+      "chamber": "House",
+      "first_name": "Keith",
+      "last_name": "Self",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "McKinney",
+        "phone": "(202) 225-4201"
+      }
+    },
+    "F000246": {
+      "bioguide_id": "F000246",
+      "chamber": "House",
+      "first_name": "Pat",
+      "last_name": "Fallon",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Frisco",
+        "phone": "(202) 225-6673"
+      }
+    },
+    "G000589": {
+      "bioguide_id": "G000589",
+      "chamber": "House",
+      "first_name": "Lance",
+      "last_name": "Gooden",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Terrell",
+        "phone": "(202) 225-3484"
+      }
+    },
+    "E000071": {
+      "bioguide_id": "E000071",
+      "chamber": "House",
+      "first_name": "Jake",
+      "last_name": "Ellzey",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Midlothian",
+        "phone": "(202) 225-2002"
+      }
+    },
+    "F000468": {
+      "bioguide_id": "F000468",
+      "chamber": "House",
+      "first_name": "Lizzie",
+      "last_name": "Fletcher",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Houston",
+        "phone": "(202) 225-2571"
+      }
+    },
+    "L000603": {
+      "bioguide_id": "L000603",
+      "chamber": "House",
+      "first_name": "Morgan",
+      "last_name": "Luttrell",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Magnolia",
+        "phone": "(202) 225-4901"
+      }
+    },
+    "G000553": {
+      "bioguide_id": "G000553",
+      "chamber": "House",
+      "first_name": "Al",
+      "last_name": "Green",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Houston",
+        "phone": "(202) 225-7508"
+      }
+    },
+    "M001157": {
+      "bioguide_id": "M001157",
+      "chamber": "House",
+      "first_name": "Michael",
+      "last_name": "McCaul",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "10th",
+        "town_name": "Austin",
+        "phone": "(202) 225-2401"
+      }
+    },
+    "P000048": {
+      "bioguide_id": "P000048",
+      "chamber": "House",
+      "first_name": "August",
+      "last_name": "Pfluger",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "11th",
+        "town_name": "San Angelo",
+        "phone": "(202) 225-3605"
+      }
+    },
+    "G000601": {
+      "bioguide_id": "G000601",
+      "chamber": "House",
+      "first_name": "Craig",
+      "last_name": "Goldman",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "12th",
+        "town_name": "Fort Worth",
+        "phone": "(202) 225-5071"
+      }
+    },
+    "J000304": {
+      "bioguide_id": "J000304",
+      "chamber": "House",
+      "first_name": "Ronny",
+      "last_name": "Jackson",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "13th",
+        "town_name": "Amarillo",
+        "phone": "(202) 225-3706"
+      }
+    },
+    "W000814": {
+      "bioguide_id": "W000814",
+      "chamber": "House",
+      "first_name": "Randy",
+      "last_name": "Weber",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "14th",
+        "town_name": "Friendswood",
+        "phone": "(202) 225-2831"
+      }
+    },
+    "D000594": {
+      "bioguide_id": "D000594",
+      "chamber": "House",
+      "first_name": "Monica",
+      "last_name": "De La Cruz",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "15th",
+        "town_name": "McAllen",
+        "phone": "(202) 225-9901"
+      }
+    },
+    "E000299": {
+      "bioguide_id": "E000299",
+      "chamber": "House",
+      "first_name": "Veronica",
+      "last_name": "Escobar",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "16th",
+        "town_name": "El Paso",
+        "phone": "(202) 225-4831"
+      }
+    },
+    "S000250": {
+      "bioguide_id": "S000250",
+      "chamber": "House",
+      "first_name": "Pete",
+      "last_name": "Sessions",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "17th",
+        "town_name": "Waco",
+        "phone": "(202) 225-6105"
+      }
+    },
+    "M001245": {
+      "bioguide_id": "M001245",
+      "chamber": "House",
+      "first_name": "Christian",
+      "last_name": "Menefee",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "18th",
+        "town_name": "Houston",
+        "phone": "(202) 225-3816"
+      }
+    },
+    "A000375": {
+      "bioguide_id": "A000375",
+      "chamber": "House",
+      "first_name": "Jodey",
+      "last_name": "Arrington",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "19th",
+        "town_name": "Lubbock",
+        "phone": "(202) 225-4005"
+      }
+    },
+    "C001091": {
+      "bioguide_id": "C001091",
+      "chamber": "House",
+      "first_name": "Joaquin",
+      "last_name": "Castro",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "20th",
+        "town_name": "San Antonio",
+        "phone": "(202) 225-3236"
+      }
+    },
+    "R000614": {
+      "bioguide_id": "R000614",
+      "chamber": "House",
+      "first_name": "Chip",
+      "last_name": "Roy",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "21st",
+        "town_name": "Austin",
+        "phone": "(202) 225-4236"
+      }
+    },
+    "N000026": {
+      "bioguide_id": "N000026",
+      "chamber": "House",
+      "first_name": "Troy",
+      "last_name": "Nehls",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "22nd",
+        "town_name": "Richmond",
+        "phone": "(202) 225-5951"
+      }
+    },
+    "V000134": {
+      "bioguide_id": "V000134",
+      "chamber": "House",
+      "first_name": "Beth",
+      "last_name": "Van Duyne",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "24th",
+        "town_name": "Irving",
+        "phone": "(202) 225-6605"
+      }
+    },
+    "W000816": {
+      "bioguide_id": "W000816",
+      "chamber": "House",
+      "first_name": "Roger",
+      "last_name": "Williams",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "25th",
+        "town_name": "Weatherford",
+        "phone": "(202) 225-9896"
+      }
+    },
+    "G000603": {
+      "bioguide_id": "G000603",
+      "chamber": "House",
+      "first_name": "Brandon",
+      "last_name": "Gill",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "26th",
+        "town_name": "Flower Mound",
+        "phone": "(202) 225-7772"
+      }
+    },
+    "C001115": {
+      "bioguide_id": "C001115",
+      "chamber": "House",
+      "first_name": "Michael",
+      "last_name": "Cloud",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "27th",
+        "town_name": "Victoria",
+        "phone": "(202) 225-7742"
+      }
+    },
+    "C001063": {
+      "bioguide_id": "C001063",
+      "chamber": "House",
+      "first_name": "Henry",
+      "last_name": "Cuellar",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "28th",
+        "town_name": "Laredo",
+        "phone": "(202) 225-1640"
+      }
+    },
+    "G000587": {
+      "bioguide_id": "G000587",
+      "chamber": "House",
+      "first_name": "Sylvia",
+      "last_name": "Garcia",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "29th",
+        "town_name": "Houston",
+        "phone": "(202) 225-1688"
+      }
+    },
+    "C001130": {
+      "bioguide_id": "C001130",
+      "chamber": "House",
+      "first_name": "Jasmine",
+      "last_name": "Crockett",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "30th",
+        "town_name": "Dallas",
+        "phone": "(202) 225-8885"
+      }
+    },
+    "C001051": {
+      "bioguide_id": "C001051",
+      "chamber": "House",
+      "first_name": "John",
+      "last_name": "Carter",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "31st",
+        "town_name": "Round Rock",
+        "phone": "(202) 225-3864"
+      }
+    },
+    "J000310": {
+      "bioguide_id": "J000310",
+      "chamber": "House",
+      "first_name": "Julie",
+      "last_name": "Johnson",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "32nd",
+        "town_name": "Farmers Branch",
+        "phone": "(202) 225-2231"
+      }
+    },
+    "V000131": {
+      "bioguide_id": "V000131",
+      "chamber": "House",
+      "first_name": "Marc",
+      "last_name": "Veasey",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "33rd",
+        "town_name": "Fort Worth",
+        "phone": "(202) 225-9897"
+      }
+    },
+    "G000581": {
+      "bioguide_id": "G000581",
+      "chamber": "House",
+      "first_name": "Vicente",
+      "last_name": "Gonzalez",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "34th",
+        "town_name": "McAllen",
+        "phone": "(202) 225-2531"
+      }
+    },
+    "C001131": {
+      "bioguide_id": "C001131",
+      "chamber": "House",
+      "first_name": "Greg",
+      "last_name": "Casar",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "35th",
+        "town_name": "Austin",
+        "phone": "(202) 225-5645"
+      }
+    },
+    "B001291": {
+      "bioguide_id": "B001291",
+      "chamber": "House",
+      "first_name": "Brian",
+      "last_name": "Babin",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "36th",
+        "town_name": "Woodville",
+        "phone": "(202) 225-1555"
+      }
+    },
+    "D000399": {
+      "bioguide_id": "D000399",
+      "chamber": "House",
+      "first_name": "Lloyd",
+      "last_name": "Doggett",
+      "party": "D",
+      "state": "TX",
+      "house_data": {
+        "district": "37th",
+        "town_name": "Austin",
+        "phone": "(202) 225-4865"
+      }
+    },
+    "H001095": {
+      "bioguide_id": "H001095",
+      "chamber": "House",
+      "first_name": "Wesley",
+      "last_name": "Hunt",
+      "party": "R",
+      "state": "TX",
+      "house_data": {
+        "district": "38th",
+        "town_name": "Houston",
+        "phone": "(202) 225-5646"
+      }
+    },
+    "M001213": {
+      "bioguide_id": "M001213",
+      "chamber": "House",
+      "first_name": "Blake",
+      "last_name": "Moore",
+      "party": "R",
+      "state": "UT",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Salt Lake City",
+        "phone": "(202) 225-0453"
+      }
+    },
+    "M001228": {
+      "bioguide_id": "M001228",
+      "chamber": "House",
+      "first_name": "Celeste",
+      "last_name": "Maloy",
+      "party": "R",
+      "state": "UT",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Cedar City",
+        "phone": "(202) 225-9730"
+      }
+    },
+    "K000403": {
+      "bioguide_id": "K000403",
+      "chamber": "House",
+      "first_name": "Mike",
+      "last_name": "Kennedy",
+      "party": "R",
+      "state": "UT",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Alpine",
+        "phone": "(202) 225-7751"
+      }
+    },
+    "O000086": {
+      "bioguide_id": "O000086",
+      "chamber": "House",
+      "first_name": "Burgess",
+      "last_name": "Owens",
+      "party": "R",
+      "state": "UT",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Salt Lake City",
+        "phone": "(202) 225-3011"
+      }
+    },
+    "W000804": {
+      "bioguide_id": "W000804",
+      "chamber": "House",
+      "first_name": "Robert",
+      "last_name": "Wittman",
+      "party": "R",
+      "state": "VA",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Montross",
+        "phone": "(202) 225-4261"
+      }
+    },
+    "K000399": {
+      "bioguide_id": "K000399",
+      "chamber": "House",
+      "first_name": "Jennifer",
+      "last_name": "Kiggans",
+      "party": "R",
+      "state": "VA",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Virginia Beach",
+        "phone": "(202) 225-4215"
+      }
+    },
+    "S000185": {
+      "bioguide_id": "S000185",
+      "chamber": "House",
+      "first_name": "Robert",
+      "last_name": "Scott",
+      "party": "D",
+      "state": "VA",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Newport News",
+        "phone": "(202) 225-8351"
+      }
+    },
+    "M001227": {
+      "bioguide_id": "M001227",
+      "chamber": "House",
+      "first_name": "Jennifer",
+      "last_name": "McClellan",
+      "party": "D",
+      "state": "VA",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Richmond",
+        "phone": "(202) 225-6365"
+      }
+    },
+    "M001239": {
+      "bioguide_id": "M001239",
+      "chamber": "House",
+      "first_name": "John",
+      "last_name": "McGuire",
+      "party": "R",
+      "state": "VA",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Manakin-Sabot",
+        "phone": "(202) 225-4711"
+      }
+    },
+    "C001118": {
+      "bioguide_id": "C001118",
+      "chamber": "House",
+      "first_name": "Ben",
+      "last_name": "Cline",
+      "party": "R",
+      "state": "VA",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Botetourt",
+        "phone": "(202) 225-5431"
+      }
+    },
+    "V000138": {
+      "bioguide_id": "V000138",
+      "chamber": "House",
+      "first_name": "Eugene",
+      "last_name": "Vindman",
+      "party": "D",
+      "state": "VA",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Dale City",
+        "phone": "(202) 225-2815"
+      }
+    },
+    "B001292": {
+      "bioguide_id": "B001292",
+      "chamber": "House",
+      "first_name": "Donald",
+      "last_name": "Beyer",
+      "party": "D",
+      "state": "VA",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Alexandria",
+        "phone": "(202) 225-4376"
+      }
+    },
+    "G000568": {
+      "bioguide_id": "G000568",
+      "chamber": "House",
+      "first_name": "H.",
+      "last_name": "Griffith",
+      "party": "R",
+      "state": "VA",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Salem",
+        "phone": "(202) 225-3861"
+      }
+    },
+    "S001230": {
+      "bioguide_id": "S001230",
+      "chamber": "House",
+      "first_name": "Suhas",
+      "last_name": "Subramanyam",
+      "party": "D",
+      "state": "VA",
+      "house_data": {
+        "district": "10th",
+        "town_name": "Loudoun County",
+        "phone": "(202) 225-5136"
+      }
+    },
+    "W000831": {
+      "bioguide_id": "W000831",
+      "chamber": "House",
+      "first_name": "James",
+      "last_name": "Walkinshaw",
+      "party": "D",
+      "state": "VA",
+      "house_data": {
+        "district": "11th",
+        "town_name": "Fairfax County",
+        "phone": "(202) 225-1492"
+      }
+    },
+    "P000610": {
+      "bioguide_id": "P000610",
+      "chamber": "House",
+      "first_name": "Stacey",
+      "last_name": "Plaskett",
+      "party": "D",
+      "state": "VI",
+      "house_data": {
+        "district": "Delegate",
+        "town_name": "St. Croix",
+        "phone": "(202) 225-1790"
+      }
+    },
+    "B001318": {
+      "bioguide_id": "B001318",
+      "chamber": "House",
+      "first_name": "Becca",
+      "last_name": "Balint",
+      "party": "D",
+      "state": "VT",
+      "house_data": {
+        "district": "At Large",
+        "town_name": "Brattleboro",
+        "phone": "(202) 225-4115"
+      }
+    },
+    "D000617": {
+      "bioguide_id": "D000617",
+      "chamber": "House",
+      "first_name": "Suzan",
+      "last_name": "DelBene",
+      "party": "D",
+      "state": "WA",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Medina",
+        "phone": "(202) 225-6311"
+      }
+    },
+    "L000560": {
+      "bioguide_id": "L000560",
+      "chamber": "House",
+      "first_name": "Rick",
+      "last_name": "Larsen",
+      "party": "D",
+      "state": "WA",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Everett",
+        "phone": "(202) 225-2605"
+      }
+    },
+    "G000600": {
+      "bioguide_id": "G000600",
+      "chamber": "House",
+      "first_name": "Marie",
+      "last_name": "Perez",
+      "party": "D",
+      "state": "WA",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Skamania County",
+        "phone": "(202) 225-3536"
+      }
+    },
+    "N000189": {
+      "bioguide_id": "N000189",
+      "chamber": "House",
+      "first_name": "Dan",
+      "last_name": "Newhouse",
+      "party": "R",
+      "state": "WA",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Sunnyside",
+        "phone": "(202) 225-5816"
+      }
+    },
+    "B001322": {
+      "bioguide_id": "B001322",
+      "chamber": "House",
+      "first_name": "Michael",
+      "last_name": "Baumgartner",
+      "party": "R",
+      "state": "WA",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Spokane",
+        "phone": "(202) 225-2006"
+      }
+    },
+    "R000621": {
+      "bioguide_id": "R000621",
+      "chamber": "House",
+      "first_name": "Emily",
+      "last_name": "Randall",
+      "party": "D",
+      "state": "WA",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Bremerton",
+        "phone": "(202) 225-5916"
+      }
+    },
+    "J000298": {
+      "bioguide_id": "J000298",
+      "chamber": "House",
+      "first_name": "Pramila",
+      "last_name": "Jayapal",
+      "party": "D",
+      "state": "WA",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Seattle",
+        "phone": "(202) 225-3106"
+      }
+    },
+    "S001216": {
+      "bioguide_id": "S001216",
+      "chamber": "House",
+      "first_name": "Kim",
+      "last_name": "Schrier",
+      "party": "D",
+      "state": "WA",
+      "house_data": {
+        "district": "8th",
+        "town_name": "Sammamish",
+        "phone": "(202) 225-7761"
+      }
+    },
+    "S000510": {
+      "bioguide_id": "S000510",
+      "chamber": "House",
+      "first_name": "Adam",
+      "last_name": "Smith",
+      "party": "D",
+      "state": "WA",
+      "house_data": {
+        "district": "9th",
+        "town_name": "Bellevue",
+        "phone": "(202) 225-8901"
+      }
+    },
+    "S001159": {
+      "bioguide_id": "S001159",
+      "chamber": "House",
+      "first_name": "Marilyn",
+      "last_name": "Strickland",
+      "party": "D",
+      "state": "WA",
+      "house_data": {
+        "district": "10th",
+        "town_name": "Tacoma",
+        "phone": "(202) 225-9740"
+      }
+    },
+    "S001213": {
+      "bioguide_id": "S001213",
+      "chamber": "House",
+      "first_name": "Bryan",
+      "last_name": "Steil",
+      "party": "R",
+      "state": "WI",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Janesville",
+        "phone": "(202) 225-3031"
+      }
+    },
+    "P000607": {
+      "bioguide_id": "P000607",
+      "chamber": "House",
+      "first_name": "Mark",
+      "last_name": "Pocan",
+      "party": "D",
+      "state": "WI",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Town of Vermont",
+        "phone": "(202) 225-2906"
+      }
+    },
+    "V000135": {
+      "bioguide_id": "V000135",
+      "chamber": "House",
+      "first_name": "Derrick",
+      "last_name": "Van Orden",
+      "party": "R",
+      "state": "WI",
+      "house_data": {
+        "district": "3rd",
+        "town_name": "Prairie du Chien",
+        "phone": "(202) 225-5506"
+      }
+    },
+    "M001160": {
+      "bioguide_id": "M001160",
+      "chamber": "House",
+      "first_name": "Gwen",
+      "last_name": "Moore",
+      "party": "D",
+      "state": "WI",
+      "house_data": {
+        "district": "4th",
+        "town_name": "Milwaukee",
+        "phone": "(202) 225-4572"
+      }
+    },
+    "F000471": {
+      "bioguide_id": "F000471",
+      "chamber": "House",
+      "first_name": "Scott",
+      "last_name": "Fitzgerald",
+      "party": "R",
+      "state": "WI",
+      "house_data": {
+        "district": "5th",
+        "town_name": "Clyman",
+        "phone": "(202) 225-5101"
+      }
+    },
+    "G000576": {
+      "bioguide_id": "G000576",
+      "chamber": "House",
+      "first_name": "Glenn",
+      "last_name": "Grothman",
+      "party": "R",
+      "state": "WI",
+      "house_data": {
+        "district": "6th",
+        "town_name": "Glenbeulah",
+        "phone": "(202) 225-2476"
+      }
+    },
+    "T000165": {
+      "bioguide_id": "T000165",
+      "chamber": "House",
+      "first_name": "Thomas",
+      "last_name": "Tiffany",
+      "party": "R",
+      "state": "WI",
+      "house_data": {
+        "district": "7th",
+        "town_name": "Minocqua",
+        "phone": "(202) 225-3365"
+      }
+    },
+    "W000829": {
+      "bioguide_id": "W000829",
+      "chamber": "House",
+      "first_name": "Tony",
+      "last_name": "Wied",
+      "party": "R",
+      "state": "WI",
+      "house_data": {
+        "district": "8th",
+        "town_name": "De Pere",
+        "phone": "(202) 225-5665"
+      }
+    },
+    "M001205": {
+      "bioguide_id": "M001205",
+      "chamber": "House",
+      "first_name": "Carol",
+      "last_name": "Miller",
+      "party": "R",
+      "state": "WV",
+      "house_data": {
+        "district": "1st",
+        "town_name": "Huntington",
+        "phone": "(202) 225-3452"
+      }
+    },
+    "M001235": {
+      "bioguide_id": "M001235",
+      "chamber": "House",
+      "first_name": "Riley",
+      "last_name": "Moore",
+      "party": "R",
+      "state": "WV",
+      "house_data": {
+        "district": "2nd",
+        "town_name": "Harpers Ferry",
+        "phone": "(202) 225-2711"
+      }
+    },
+    "H001096": {
+      "bioguide_id": "H001096",
+      "chamber": "House",
+      "first_name": "Harriet",
+      "last_name": "Hageman",
+      "party": "R",
+      "state": "WY",
+      "house_data": {
+        "district": "At Large",
+        "town_name": "Cheyenne",
+        "phone": "(202) 225-2311"
+      }
+    },
+    "A000382": {
+      "bioguide_id": "A000382",
+      "chamber": "Senate",
+      "first_name": "Angela D.",
+      "last_name": "Alsobrooks",
+      "party": "D",
+      "state": "MD",
+      "senate_data": {
+        "lis_member_id": "S428",
+        "hometown": "Upper Marlboro",
+        "office": "374 Russell",
+        "leadership_position": ""
+      }
+    },
+    "A000383": {
+      "bioguide_id": "A000383",
+      "chamber": "Senate",
+      "first_name": "Alan",
+      "last_name": "Armstrong",
+      "party": "R",
+      "state": "OK",
+      "senate_data": {
+        "lis_member_id": "S440",
+        "hometown": "Tulsa",
+        "office": "G12 Dirksen",
+        "leadership_position": ""
+      }
+    },
+    "B001230": {
+      "bioguide_id": "B001230",
+      "chamber": "Senate",
+      "first_name": "Tammy",
+      "last_name": "Baldwin",
+      "party": "D",
+      "state": "WI",
+      "senate_data": {
+        "lis_member_id": "S354",
+        "hometown": "Madison",
+        "office": "141 Hart",
+        "leadership_position": ""
+      }
+    },
+    "B001299": {
+      "bioguide_id": "B001299",
+      "chamber": "Senate",
+      "first_name": "Jim",
+      "last_name": "Banks",
+      "party": "R",
+      "state": "IN",
+      "senate_data": {
+        "lis_member_id": "S429",
+        "hometown": "Columbia City",
+        "office": "303 Hart",
+        "leadership_position": ""
+      }
+    },
+    "B001261": {
+      "bioguide_id": "B001261",
+      "chamber": "Senate",
+      "first_name": "John",
+      "last_name": "Barrasso",
+      "party": "R",
+      "state": "WY",
+      "senate_data": {
+        "lis_member_id": "S317",
+        "hometown": "Casper",
+        "office": "307 Dirksen",
+        "leadership_position": "Majority Whip"
+      }
+    },
+    "B001267": {
+      "bioguide_id": "B001267",
+      "chamber": "Senate",
+      "first_name": "Michael F.",
+      "last_name": "Bennet",
+      "party": "D",
+      "state": "CO",
+      "senate_data": {
+        "lis_member_id": "S330",
+        "hometown": "Denver",
+        "office": "261 Russell",
+        "leadership_position": ""
+      }
+    },
+    "B001243": {
+      "bioguide_id": "B001243",
+      "chamber": "Senate",
+      "first_name": "Marsha",
+      "last_name": "Blackburn",
+      "party": "R",
+      "state": "TN",
+      "senate_data": {
+        "lis_member_id": "S396",
+        "hometown": "Brentwood",
+        "office": "357 Dirksen",
+        "leadership_position": ""
+      }
+    },
+    "B001277": {
+      "bioguide_id": "B001277",
+      "chamber": "Senate",
+      "first_name": "Richard",
+      "last_name": "Blumenthal",
+      "party": "D",
+      "state": "CT",
+      "senate_data": {
+        "lis_member_id": "S341",
+        "hometown": "Greenwich",
+        "office": "503 Hart",
+        "leadership_position": ""
+      }
+    },
+    "B001303": {
+      "bioguide_id": "B001303",
+      "chamber": "Senate",
+      "first_name": "Lisa",
+      "last_name": "Blunt Rochester",
+      "party": "D",
+      "state": "DE",
+      "senate_data": {
+        "lis_member_id": "S430",
+        "hometown": "Wilmington",
+        "office": "513 Hart",
+        "leadership_position": ""
+      }
+    },
+    "B001288": {
+      "bioguide_id": "B001288",
+      "chamber": "Senate",
+      "first_name": "Cory A.",
+      "last_name": "Booker",
+      "party": "D",
+      "state": "NJ",
+      "senate_data": {
+        "lis_member_id": "S370",
+        "hometown": "Newark",
+        "office": "306 Hart",
+        "leadership_position": ""
+      }
+    },
+    "B001236": {
+      "bioguide_id": "B001236",
+      "chamber": "Senate",
+      "first_name": "John",
+      "last_name": "Boozman",
+      "party": "R",
+      "state": "AR",
+      "senate_data": {
+        "lis_member_id": "S343",
+        "hometown": "Rogers",
+        "office": "555 Dirksen",
+        "leadership_position": ""
+      }
+    },
+    "B001319": {
+      "bioguide_id": "B001319",
+      "chamber": "Senate",
+      "first_name": "Katie Boyd",
+      "last_name": "Britt",
+      "party": "R",
+      "state": "AL",
+      "senate_data": {
+        "lis_member_id": "S416",
+        "hometown": "Montgomery",
+        "office": "416 Russell",
+        "leadership_position": ""
+      }
+    },
+    "B001305": {
+      "bioguide_id": "B001305",
+      "chamber": "Senate",
+      "first_name": "Ted",
+      "last_name": "Budd",
+      "party": "R",
+      "state": "NC",
+      "senate_data": {
+        "lis_member_id": "S417",
+        "hometown": "Advance",
+        "office": "354 Russell",
+        "leadership_position": ""
+      }
+    },
+    "C000127": {
+      "bioguide_id": "C000127",
+      "chamber": "Senate",
+      "first_name": "Maria",
+      "last_name": "Cantwell",
+      "party": "D",
+      "state": "WA",
+      "senate_data": {
+        "lis_member_id": "S275",
+        "hometown": "Edmonds",
+        "office": "511 Hart",
+        "leadership_position": ""
+      }
+    },
+    "C001047": {
+      "bioguide_id": "C001047",
+      "chamber": "Senate",
+      "first_name": "Shelley Moore",
+      "last_name": "Capito",
+      "party": "R",
+      "state": "WV",
+      "senate_data": {
+        "lis_member_id": "S372",
+        "hometown": "Charleston",
+        "office": "170 Russell",
+        "leadership_position": ""
+      }
+    },
+    "C001075": {
+      "bioguide_id": "C001075",
+      "chamber": "Senate",
+      "first_name": "Bill",
+      "last_name": "Cassidy",
+      "party": "R",
+      "state": "LA",
+      "senate_data": {
+        "lis_member_id": "S373",
+        "hometown": "Baton Rouge",
+        "office": "455 Dirksen",
+        "leadership_position": ""
+      }
+    },
+    "C001035": {
+      "bioguide_id": "C001035",
+      "chamber": "Senate",
+      "first_name": "Susan M.",
+      "last_name": "Collins",
+      "party": "R",
+      "state": "ME",
+      "senate_data": {
+        "lis_member_id": "S252",
+        "hometown": "Bangor",
+        "office": "413 Dirksen",
+        "leadership_position": ""
+      }
+    },
+    "C001088": {
+      "bioguide_id": "C001088",
+      "chamber": "Senate",
+      "first_name": "Christopher A.",
+      "last_name": "Coons",
+      "party": "D",
+      "state": "DE",
+      "senate_data": {
+        "lis_member_id": "S337",
+        "hometown": "Wilmington",
+        "office": "218 Russell",
+        "leadership_position": ""
+      }
+    },
+    "C001056": {
+      "bioguide_id": "C001056",
+      "chamber": "Senate",
+      "first_name": "John",
+      "last_name": "Cornyn",
+      "party": "R",
+      "state": "TX",
+      "senate_data": {
+        "lis_member_id": "S287",
+        "hometown": "Austin",
+        "office": "517 Hart",
+        "leadership_position": ""
+      }
+    },
+    "C001113": {
+      "bioguide_id": "C001113",
+      "chamber": "Senate",
+      "first_name": "Catherine",
+      "last_name": "Cortez Masto",
+      "party": "D",
+      "state": "NV",
+      "senate_data": {
+        "lis_member_id": "S385",
+        "hometown": "Las Vegas",
+        "office": "309 Hart",
+        "leadership_position": ""
+      }
+    },
+    "C001095": {
+      "bioguide_id": "C001095",
+      "chamber": "Senate",
+      "first_name": "Tom",
+      "last_name": "Cotton",
+      "party": "R",
+      "state": "AR",
+      "senate_data": {
+        "lis_member_id": "S374",
+        "hometown": "Little Rock",
+        "office": "326 Russell",
+        "leadership_position": ""
+      }
+    },
+    "C001096": {
+      "bioguide_id": "C001096",
+      "chamber": "Senate",
+      "first_name": "Kevin",
+      "last_name": "Cramer",
+      "party": "R",
+      "state": "ND",
+      "senate_data": {
+        "lis_member_id": "S398",
+        "hometown": "Bismarck",
+        "office": "313 Hart",
+        "leadership_position": ""
+      }
+    },
+    "C000880": {
+      "bioguide_id": "C000880",
+      "chamber": "Senate",
+      "first_name": "Mike",
+      "last_name": "Crapo",
+      "party": "R",
+      "state": "ID",
+      "senate_data": {
+        "lis_member_id": "S266",
+        "hometown": "Idaho Falls",
+        "office": "239 Dirksen",
+        "leadership_position": ""
+      }
+    },
+    "C001098": {
+      "bioguide_id": "C001098",
+      "chamber": "Senate",
+      "first_name": "Ted",
+      "last_name": "Cruz",
+      "party": "R",
+      "state": "TX",
+      "senate_data": {
+        "lis_member_id": "S355",
+        "hometown": "Houston",
+        "office": "167 Russell",
+        "leadership_position": ""
+      }
+    },
+    "C001114": {
+      "bioguide_id": "C001114",
+      "chamber": "Senate",
+      "first_name": "John  R.",
+      "last_name": "Curtis",
+      "party": "R",
+      "state": "UT",
+      "senate_data": {
+        "lis_member_id": "S431",
+        "hometown": "Provo",
+        "office": "502 Hart",
+        "leadership_position": ""
+      }
+    },
+    "D000618": {
+      "bioguide_id": "D000618",
+      "chamber": "Senate",
+      "first_name": "Steve",
+      "last_name": "Daines",
+      "party": "R",
+      "state": "MT",
+      "senate_data": {
+        "lis_member_id": "S375",
+        "hometown": "Belgrade",
+        "office": "320 Hart",
+        "leadership_position": ""
+      }
+    },
+    "D000622": {
+      "bioguide_id": "D000622",
+      "chamber": "Senate",
+      "first_name": "Tammy",
+      "last_name": "Duckworth",
+      "party": "D",
+      "state": "IL",
+      "senate_data": {
+        "lis_member_id": "S386",
+        "hometown": "Hoffman Estates",
+        "office": "524 Hart",
+        "leadership_position": ""
+      }
+    },
+    "D000563": {
+      "bioguide_id": "D000563",
+      "chamber": "Senate",
+      "first_name": "Richard J.",
+      "last_name": "Durbin",
+      "party": "D",
+      "state": "IL",
+      "senate_data": {
+        "lis_member_id": "S253",
+        "hometown": "Springfield",
+        "office": "711 Hart",
+        "leadership_position": "Democratic Whip"
+      }
+    },
+    "E000295": {
+      "bioguide_id": "E000295",
+      "chamber": "Senate",
+      "first_name": "Joni",
+      "last_name": "Ernst",
+      "party": "R",
+      "state": "IA",
+      "senate_data": {
+        "lis_member_id": "S376",
+        "hometown": "Red Oak",
+        "office": "260 Russell",
+        "leadership_position": ""
+      }
+    },
+    "F000479": {
+      "bioguide_id": "F000479",
+      "chamber": "Senate",
+      "first_name": "John",
+      "last_name": "Fetterman",
+      "party": "D",
+      "state": "PA",
+      "senate_data": {
+        "lis_member_id": "S418",
+        "hometown": "Braddock",
+        "office": "142 Russell",
+        "leadership_position": ""
+      }
+    },
+    "F000463": {
+      "bioguide_id": "F000463",
+      "chamber": "Senate",
+      "first_name": "Deb",
+      "last_name": "Fischer",
+      "party": "R",
+      "state": "NE",
+      "senate_data": {
+        "lis_member_id": "S357",
+        "hometown": "Lincoln",
+        "office": "448 Russell",
+        "leadership_position": ""
+      }
+    },
+    "G000574": {
+      "bioguide_id": "G000574",
+      "chamber": "Senate",
+      "first_name": "Ruben",
+      "last_name": "Gallego",
+      "party": "D",
+      "state": "AZ",
+      "senate_data": {
+        "lis_member_id": "S432",
+        "hometown": "Phoenix",
+        "office": "302 Hart",
+        "leadership_position": ""
+      }
+    },
+    "G000555": {
+      "bioguide_id": "G000555",
+      "chamber": "Senate",
+      "first_name": "Kirsten E.",
+      "last_name": "Gillibrand",
+      "party": "D",
+      "state": "NY",
+      "senate_data": {
+        "lis_member_id": "S331",
+        "hometown": "Albany",
+        "office": "478 Russell",
+        "leadership_position": ""
+      }
+    },
+    "G000359": {
+      "bioguide_id": "G000359",
+      "chamber": "Senate",
+      "first_name": "Lindsey",
+      "last_name": "Graham",
+      "party": "R",
+      "state": "SC",
+      "senate_data": {
+        "lis_member_id": "S293",
+        "hometown": "Seneca",
+        "office": "211 Russell",
+        "leadership_position": ""
+      }
+    },
+    "G000386": {
+      "bioguide_id": "G000386",
+      "chamber": "Senate",
+      "first_name": "Chuck",
+      "last_name": "Grassley",
+      "party": "R",
+      "state": "IA",
+      "senate_data": {
+        "lis_member_id": "S153",
+        "hometown": "New Hartford",
+        "office": "135 Hart",
+        "leadership_position": "President Pro Tempore"
+      }
+    },
+    "H000601": {
+      "bioguide_id": "H000601",
+      "chamber": "Senate",
+      "first_name": "Bill",
+      "last_name": "Hagerty",
+      "party": "R",
+      "state": "TN",
+      "senate_data": {
+        "lis_member_id": "S407",
+        "hometown": "Nashville",
+        "office": "251 Russell",
+        "leadership_position": ""
+      }
+    },
+    "H001076": {
+      "bioguide_id": "H001076",
+      "chamber": "Senate",
+      "first_name": "Margaret Wood",
+      "last_name": "Hassan",
+      "party": "D",
+      "state": "NH",
+      "senate_data": {
+        "lis_member_id": "S388",
+        "hometown": "Newfields",
+        "office": "324 Hart",
+        "leadership_position": ""
+      }
+    },
+    "H001089": {
+      "bioguide_id": "H001089",
+      "chamber": "Senate",
+      "first_name": "Josh",
+      "last_name": "Hawley",
+      "party": "R",
+      "state": "MO",
+      "senate_data": {
+        "lis_member_id": "S399",
+        "hometown": "Springfield",
+        "office": "381 Russell",
+        "leadership_position": ""
+      }
+    },
+    "H001046": {
+      "bioguide_id": "H001046",
+      "chamber": "Senate",
+      "first_name": "Martin",
+      "last_name": "Heinrich",
+      "party": "D",
+      "state": "NM",
+      "senate_data": {
+        "lis_member_id": "S359",
+        "hometown": "Albuquerque",
+        "office": "709 Hart",
+        "leadership_position": ""
+      }
+    },
+    "H000273": {
+      "bioguide_id": "H000273",
+      "chamber": "Senate",
+      "first_name": "John W.",
+      "last_name": "Hickenlooper",
+      "party": "D",
+      "state": "CO",
+      "senate_data": {
+        "lis_member_id": "S408",
+        "hometown": "Denver",
+        "office": "316 Hart",
+        "leadership_position": ""
+      }
+    },
+    "H001042": {
+      "bioguide_id": "H001042",
+      "chamber": "Senate",
+      "first_name": "Mazie K.",
+      "last_name": "Hirono",
+      "party": "D",
+      "state": "HI",
+      "senate_data": {
+        "lis_member_id": "S361",
+        "hometown": "Honolulu",
+        "office": "109 Hart",
+        "leadership_position": ""
+      }
+    },
+    "H001061": {
+      "bioguide_id": "H001061",
+      "chamber": "Senate",
+      "first_name": "John",
+      "last_name": "Hoeven",
+      "party": "R",
+      "state": "ND",
+      "senate_data": {
+        "lis_member_id": "S344",
+        "hometown": "Bismarck",
+        "office": "338 Russell",
+        "leadership_position": ""
+      }
+    },
+    "H001104": {
+      "bioguide_id": "H001104",
+      "chamber": "Senate",
+      "first_name": "Jon",
+      "last_name": "Husted",
+      "party": "R",
+      "state": "OH",
+      "senate_data": {
+        "lis_member_id": "S438",
+        "hometown": "Upper Arlington",
+        "office": "304 Russell",
+        "leadership_position": ""
+      }
+    },
+    "H001079": {
+      "bioguide_id": "H001079",
+      "chamber": "Senate",
+      "first_name": "Cindy",
+      "last_name": "Hyde-Smith",
+      "party": "R",
+      "state": "MS",
+      "senate_data": {
+        "lis_member_id": "S395",
+        "hometown": "Brookhaven",
+        "office": "528 Hart",
+        "leadership_position": ""
+      }
+    },
+    "J000293": {
+      "bioguide_id": "J000293",
+      "chamber": "Senate",
+      "first_name": "Ron",
+      "last_name": "Johnson",
+      "party": "R",
+      "state": "WI",
+      "senate_data": {
+        "lis_member_id": "S345",
+        "hometown": "Oshkosh",
+        "office": "328 Hart",
+        "leadership_position": ""
+      }
+    },
+    "J000312": {
+      "bioguide_id": "J000312",
+      "chamber": "Senate",
+      "first_name": "James C.",
+      "last_name": "Justice",
+      "party": "R",
+      "state": "WV",
+      "senate_data": {
+        "lis_member_id": "S437",
+        "hometown": "Lewisburg",
+        "office": "509 Hart",
+        "leadership_position": ""
+      }
+    },
+    "K000384": {
+      "bioguide_id": "K000384",
+      "chamber": "Senate",
+      "first_name": "Tim",
+      "last_name": "Kaine",
+      "party": "D",
+      "state": "VA",
+      "senate_data": {
+        "lis_member_id": "S362",
+        "hometown": "Richmond",
+        "office": "231 Russell",
+        "leadership_position": ""
+      }
+    },
+    "K000377": {
+      "bioguide_id": "K000377",
+      "chamber": "Senate",
+      "first_name": "Mark",
+      "last_name": "Kelly",
+      "party": "D",
+      "state": "AZ",
+      "senate_data": {
+        "lis_member_id": "S406",
+        "hometown": "Tucson",
+        "office": "516 Hart",
+        "leadership_position": ""
+      }
+    },
+    "K000393": {
+      "bioguide_id": "K000393",
+      "chamber": "Senate",
+      "first_name": "John",
+      "last_name": "Kennedy",
+      "party": "R",
+      "state": "LA",
+      "senate_data": {
+        "lis_member_id": "S389",
+        "hometown": "Madisonville",
+        "office": "437 Russell",
+        "leadership_position": ""
+      }
+    },
+    "K000394": {
+      "bioguide_id": "K000394",
+      "chamber": "Senate",
+      "first_name": "Andy",
+      "last_name": "Kim",
+      "party": "D",
+      "state": "NJ",
+      "senate_data": {
+        "lis_member_id": "S426",
+        "hometown": "Moorestown",
+        "office": "520 Hart",
+        "leadership_position": ""
+      }
+    },
+    "K000383": {
+      "bioguide_id": "K000383",
+      "chamber": "Senate",
+      "first_name": "Angus S.",
+      "last_name": "King",
+      "party": "I",
+      "state": "ME",
+      "senate_data": {
+        "lis_member_id": "S363",
+        "hometown": "Brunswick",
+        "office": "133 Hart",
+        "leadership_position": ""
+      }
+    },
+    "K000367": {
+      "bioguide_id": "K000367",
+      "chamber": "Senate",
+      "first_name": "Amy",
+      "last_name": "Klobuchar",
+      "party": "D",
+      "state": "MN",
+      "senate_data": {
+        "lis_member_id": "S311",
+        "hometown": "Minneapolis",
+        "office": "425 Dirksen",
+        "leadership_position": ""
+      }
+    },
+    "L000575": {
+      "bioguide_id": "L000575",
+      "chamber": "Senate",
+      "first_name": "James",
+      "last_name": "Lankford",
+      "party": "R",
+      "state": "OK",
+      "senate_data": {
+        "lis_member_id": "S378",
+        "hometown": "Oklahoma City",
+        "office": "731 Hart",
+        "leadership_position": ""
+      }
+    },
+    "L000577": {
+      "bioguide_id": "L000577",
+      "chamber": "Senate",
+      "first_name": "Mike",
+      "last_name": "Lee",
+      "party": "R",
+      "state": "UT",
+      "senate_data": {
+        "lis_member_id": "S346",
+        "hometown": "Provo",
+        "office": "363 Russell",
+        "leadership_position": ""
+      }
+    },
+    "L000570": {
+      "bioguide_id": "L000570",
+      "chamber": "Senate",
+      "first_name": "Ben Ray",
+      "last_name": "Lujan",
+      "party": "D",
+      "state": "NM",
+      "senate_data": {
+        "lis_member_id": "S409",
+        "hometown": "Nambe",
+        "office": "498 Russell",
+        "leadership_position": ""
+      }
+    },
+    "L000571": {
+      "bioguide_id": "L000571",
+      "chamber": "Senate",
+      "first_name": "Cynthia M.",
+      "last_name": "Lummis",
+      "party": "R",
+      "state": "WY",
+      "senate_data": {
+        "lis_member_id": "S410",
+        "hometown": "Cheyenne",
+        "office": "127A Russell",
+        "leadership_position": ""
+      }
+    },
+    "M000133": {
+      "bioguide_id": "M000133",
+      "chamber": "Senate",
+      "first_name": "Edward J.",
+      "last_name": "Markey",
+      "party": "D",
+      "state": "MA",
+      "senate_data": {
+        "lis_member_id": "S369",
+        "hometown": "Malden",
+        "office": "255 Dirksen",
+        "leadership_position": ""
+      }
+    },
+    "M001198": {
+      "bioguide_id": "M001198",
+      "chamber": "Senate",
+      "first_name": "Roger",
+      "last_name": "Marshall",
+      "party": "R",
+      "state": "KS",
+      "senate_data": {
+        "lis_member_id": "S411",
+        "hometown": "Great Bend",
+        "office": "479A Russell",
+        "leadership_position": ""
+      }
+    },
+    "M000355": {
+      "bioguide_id": "M000355",
+      "chamber": "Senate",
+      "first_name": "Mitch",
+      "last_name": "McConnell",
+      "party": "R",
+      "state": "KY",
+      "senate_data": {
+        "lis_member_id": "S174",
+        "hometown": "Louisville",
+        "office": "317 Russell",
+        "leadership_position": ""
+      }
+    },
+    "M001243": {
+      "bioguide_id": "M001243",
+      "chamber": "Senate",
+      "first_name": "David",
+      "last_name": "McCormick",
+      "party": "R",
+      "state": "PA",
+      "senate_data": {
+        "lis_member_id": "S433",
+        "hometown": "Pittsburgh",
+        "office": "702 Hart",
+        "leadership_position": ""
+      }
+    },
+    "M001176": {
+      "bioguide_id": "M001176",
+      "chamber": "Senate",
+      "first_name": "Jeff",
+      "last_name": "Merkley",
+      "party": "D",
+      "state": "OR",
+      "senate_data": {
+        "lis_member_id": "S322",
+        "hometown": "Portland",
+        "office": "531 Hart",
+        "leadership_position": ""
+      }
+    },
+    "M001244": {
+      "bioguide_id": "M001244",
+      "chamber": "Senate",
+      "first_name": "Ashley",
+      "last_name": "Moody",
+      "party": "R",
+      "state": "FL",
+      "senate_data": {
+        "lis_member_id": "S439",
+        "hometown": "Tampa",
+        "office": "387 Russell",
+        "leadership_position": ""
+      }
+    },
+    "M000934": {
+      "bioguide_id": "M000934",
+      "chamber": "Senate",
+      "first_name": "Jerry",
+      "last_name": "Moran",
+      "party": "R",
+      "state": "KS",
+      "senate_data": {
+        "lis_member_id": "S347",
+        "hometown": "Manhattan",
+        "office": "521 Dirksen",
+        "leadership_position": ""
+      }
+    },
+    "M001242": {
+      "bioguide_id": "M001242",
+      "chamber": "Senate",
+      "first_name": "Bernie",
+      "last_name": "Moreno",
+      "party": "R",
+      "state": "OH",
+      "senate_data": {
+        "lis_member_id": "S434",
+        "hometown": "Westlake",
+        "office": "284 Russell",
+        "leadership_position": ""
+      }
+    },
+    "M001153": {
+      "bioguide_id": "M001153",
+      "chamber": "Senate",
+      "first_name": "Lisa",
+      "last_name": "Murkowski",
+      "party": "R",
+      "state": "AK",
+      "senate_data": {
+        "lis_member_id": "S288",
+        "hometown": "Girdwood",
+        "office": "522 Hart",
+        "leadership_position": ""
+      }
+    },
+    "M001169": {
+      "bioguide_id": "M001169",
+      "chamber": "Senate",
+      "first_name": "Christopher",
+      "last_name": "Murphy",
+      "party": "D",
+      "state": "CT",
+      "senate_data": {
+        "lis_member_id": "S364",
+        "hometown": "Hartford",
+        "office": "136 Hart",
+        "leadership_position": ""
+      }
+    },
+    "M001111": {
+      "bioguide_id": "M001111",
+      "chamber": "Senate",
+      "first_name": "Patty",
+      "last_name": "Murray",
+      "party": "D",
+      "state": "WA",
+      "senate_data": {
+        "lis_member_id": "S229",
+        "hometown": "Seattle",
+        "office": "154 Russell",
+        "leadership_position": ""
+      }
+    },
+    "O000174": {
+      "bioguide_id": "O000174",
+      "chamber": "Senate",
+      "first_name": "Jon",
+      "last_name": "Ossoff",
+      "party": "D",
+      "state": "GA",
+      "senate_data": {
+        "lis_member_id": "S414",
+        "hometown": "Atlanta",
+        "office": "317 Hart",
+        "leadership_position": ""
+      }
+    },
+    "P000145": {
+      "bioguide_id": "P000145",
+      "chamber": "Senate",
+      "first_name": "Alex",
+      "last_name": "Padilla",
+      "party": "D",
+      "state": "CA",
+      "senate_data": {
+        "lis_member_id": "S413",
+        "hometown": "Los Angeles",
+        "office": "331 Hart",
+        "leadership_position": ""
+      }
+    },
+    "P000603": {
+      "bioguide_id": "P000603",
+      "chamber": "Senate",
+      "first_name": "Rand",
+      "last_name": "Paul",
+      "party": "R",
+      "state": "KY",
+      "senate_data": {
+        "lis_member_id": "S348",
+        "hometown": "Bowling Green",
+        "office": "295 Russell",
+        "leadership_position": ""
+      }
+    },
+    "P000595": {
+      "bioguide_id": "P000595",
+      "chamber": "Senate",
+      "first_name": "Gary C.",
+      "last_name": "Peters",
+      "party": "D",
+      "state": "MI",
+      "senate_data": {
+        "lis_member_id": "S380",
+        "hometown": "Bloomfield Hills",
+        "office": "724 Hart",
+        "leadership_position": ""
+      }
+    },
+    "R000122": {
+      "bioguide_id": "R000122",
+      "chamber": "Senate",
+      "first_name": "Jack",
+      "last_name": "Reed",
+      "party": "D",
+      "state": "RI",
+      "senate_data": {
+        "lis_member_id": "S259",
+        "hometown": "Jamestown",
+        "office": "728 Hart",
+        "leadership_position": ""
+      }
+    },
+    "R000618": {
+      "bioguide_id": "R000618",
+      "chamber": "Senate",
+      "first_name": "Pete",
+      "last_name": "Ricketts",
+      "party": "R",
+      "state": "NE",
+      "senate_data": {
+        "lis_member_id": "S423",
+        "hometown": "Omaha",
+        "office": "139 Russell",
+        "leadership_position": ""
+      }
+    },
+    "R000584": {
+      "bioguide_id": "R000584",
+      "chamber": "Senate",
+      "first_name": "James  E.",
+      "last_name": "Risch",
+      "party": "R",
+      "state": "ID",
+      "senate_data": {
+        "lis_member_id": "S323",
+        "hometown": "Boise",
+        "office": "483 Russell",
+        "leadership_position": ""
+      }
+    },
+    "R000608": {
+      "bioguide_id": "R000608",
+      "chamber": "Senate",
+      "first_name": "Jacky",
+      "last_name": "Rosen",
+      "party": "D",
+      "state": "NV",
+      "senate_data": {
+        "lis_member_id": "S402",
+        "hometown": "Henderson",
+        "office": "713 Hart",
+        "leadership_position": ""
+      }
+    },
+    "R000605": {
+      "bioguide_id": "R000605",
+      "chamber": "Senate",
+      "first_name": "Mike",
+      "last_name": "Rounds",
+      "party": "R",
+      "state": "SD",
+      "senate_data": {
+        "lis_member_id": "S381",
+        "hometown": "Fort Pierre",
+        "office": "716 Hart",
+        "leadership_position": ""
+      }
+    },
+    "S000033": {
+      "bioguide_id": "S000033",
+      "chamber": "Senate",
+      "first_name": "Bernard",
+      "last_name": "Sanders",
+      "party": "I",
+      "state": "VT",
+      "senate_data": {
+        "lis_member_id": "S313",
+        "hometown": "Burlington",
+        "office": "332 Dirksen",
+        "leadership_position": ""
+      }
+    },
+    "S001194": {
+      "bioguide_id": "S001194",
+      "chamber": "Senate",
+      "first_name": "Brian",
+      "last_name": "Schatz",
+      "party": "D",
+      "state": "HI",
+      "senate_data": {
+        "lis_member_id": "S353",
+        "hometown": "Honolulu",
+        "office": "722 Hart",
+        "leadership_position": ""
+      }
+    },
+    "S001150": {
+      "bioguide_id": "S001150",
+      "chamber": "Senate",
+      "first_name": "Adam B.",
+      "last_name": "Schiff",
+      "party": "D",
+      "state": "CA",
+      "senate_data": {
+        "lis_member_id": "S427",
+        "hometown": "Burbank",
+        "office": "112 Hart",
+        "leadership_position": ""
+      }
+    },
+    "S001227": {
+      "bioguide_id": "S001227",
+      "chamber": "Senate",
+      "first_name": "Eric",
+      "last_name": "Schmitt",
+      "party": "R",
+      "state": "MO",
+      "senate_data": {
+        "lis_member_id": "S420",
+        "hometown": "Glendale",
+        "office": "404 Russell",
+        "leadership_position": ""
+      }
+    },
+    "S000148": {
+      "bioguide_id": "S000148",
+      "chamber": "Senate",
+      "first_name": "Charles E.",
+      "last_name": "Schumer",
+      "party": "D",
+      "state": "NY",
+      "senate_data": {
+        "lis_member_id": "S270",
+        "hometown": "Brooklyn",
+        "office": "322 Hart",
+        "leadership_position": "Democratic Leader Chair of the Conference"
+      }
+    },
+    "S001184": {
+      "bioguide_id": "S001184",
+      "chamber": "Senate",
+      "first_name": "Tim",
+      "last_name": "Scott",
+      "party": "R",
+      "state": "SC",
+      "senate_data": {
+        "lis_member_id": "S365",
+        "hometown": "Charleston",
+        "office": "104 Hart",
+        "leadership_position": ""
+      }
+    },
+    "S001217": {
+      "bioguide_id": "S001217",
+      "chamber": "Senate",
+      "first_name": "Rick",
+      "last_name": "Scott",
+      "party": "R",
+      "state": "FL",
+      "senate_data": {
+        "lis_member_id": "S404",
+        "hometown": "Naples",
+        "office": "110 Hart",
+        "leadership_position": ""
+      }
+    },
+    "S001181": {
+      "bioguide_id": "S001181",
+      "chamber": "Senate",
+      "first_name": "Jeanne",
+      "last_name": "Shaheen",
+      "party": "D",
+      "state": "NH",
+      "senate_data": {
+        "lis_member_id": "S324",
+        "hometown": "Madbury",
+        "office": "506 Hart",
+        "leadership_position": ""
+      }
+    },
+    "S001232": {
+      "bioguide_id": "S001232",
+      "chamber": "Senate",
+      "first_name": "Tim",
+      "last_name": "Sheehy",
+      "party": "R",
+      "state": "MT",
+      "senate_data": {
+        "lis_member_id": "S435",
+        "hometown": "Bozeman",
+        "office": "124 Russell",
+        "leadership_position": ""
+      }
+    },
+    "S001208": {
+      "bioguide_id": "S001208",
+      "chamber": "Senate",
+      "first_name": "Elissa",
+      "last_name": "Slotkin",
+      "party": "D",
+      "state": "MI",
+      "senate_data": {
+        "lis_member_id": "S436",
+        "hometown": "Holly",
+        "office": "291 Russell",
+        "leadership_position": ""
+      }
+    },
+    "S001203": {
+      "bioguide_id": "S001203",
+      "chamber": "Senate",
+      "first_name": "Tina",
+      "last_name": "Smith",
+      "party": "D",
+      "state": "MN",
+      "senate_data": {
+        "lis_member_id": "S394",
+        "hometown": "Minneapolis",
+        "office": "720 Hart",
+        "leadership_position": ""
+      }
+    },
+    "S001198": {
+      "bioguide_id": "S001198",
+      "chamber": "Senate",
+      "first_name": "Dan",
+      "last_name": "Sullivan",
+      "party": "R",
+      "state": "AK",
+      "senate_data": {
+        "lis_member_id": "S383",
+        "hometown": "Anchorage",
+        "office": "706 Hart",
+        "leadership_position": ""
+      }
+    },
+    "T000250": {
+      "bioguide_id": "T000250",
+      "chamber": "Senate",
+      "first_name": "John",
+      "last_name": "Thune",
+      "party": "R",
+      "state": "SD",
+      "senate_data": {
+        "lis_member_id": "S303",
+        "hometown": "Sioux Falls",
+        "office": "511 Dirksen",
+        "leadership_position": "Majority Leader"
+      }
+    },
+    "T000476": {
+      "bioguide_id": "T000476",
+      "chamber": "Senate",
+      "first_name": "Thom",
+      "last_name": "Tillis",
+      "party": "R",
+      "state": "NC",
+      "senate_data": {
+        "lis_member_id": "S384",
+        "hometown": "Huntersville",
+        "office": "113 Dirksen",
+        "leadership_position": ""
+      }
+    },
+    "T000278": {
+      "bioguide_id": "T000278",
+      "chamber": "Senate",
+      "first_name": "Tommy",
+      "last_name": "Tuberville",
+      "party": "R",
+      "state": "AL",
+      "senate_data": {
+        "lis_member_id": "S412",
+        "hometown": "Auburn",
+        "office": "455 Russell",
+        "leadership_position": ""
+      }
+    },
+    "V000128": {
+      "bioguide_id": "V000128",
+      "chamber": "Senate",
+      "first_name": "Chris",
+      "last_name": "Van Hollen",
+      "party": "D",
+      "state": "MD",
+      "senate_data": {
+        "lis_member_id": "S390",
+        "hometown": "Kensington",
+        "office": "730 Hart",
+        "leadership_position": ""
+      }
+    },
+    "W000805": {
+      "bioguide_id": "W000805",
+      "chamber": "Senate",
+      "first_name": "Mark R.",
+      "last_name": "Warner",
+      "party": "D",
+      "state": "VA",
+      "senate_data": {
+        "lis_member_id": "S327",
+        "hometown": "Alexandria",
+        "office": "703 Hart",
+        "leadership_position": ""
+      }
+    },
+    "W000790": {
+      "bioguide_id": "W000790",
+      "chamber": "Senate",
+      "first_name": "Raphael G.",
+      "last_name": "Warnock",
+      "party": "D",
+      "state": "GA",
+      "senate_data": {
+        "lis_member_id": "S415",
+        "hometown": "Atlanta",
+        "office": "717 Hart",
+        "leadership_position": ""
+      }
+    },
+    "W000817": {
+      "bioguide_id": "W000817",
+      "chamber": "Senate",
+      "first_name": "Elizabeth",
+      "last_name": "Warren",
+      "party": "D",
+      "state": "MA",
+      "senate_data": {
+        "lis_member_id": "S366",
+        "hometown": "Cambridge",
+        "office": "311 Hart",
+        "leadership_position": ""
+      }
+    },
+    "W000800": {
+      "bioguide_id": "W000800",
+      "chamber": "Senate",
+      "first_name": "Peter",
+      "last_name": "Welch",
+      "party": "D",
+      "state": "VT",
+      "senate_data": {
+        "lis_member_id": "S422",
+        "hometown": "Norwich",
+        "office": "115 Russell",
+        "leadership_position": ""
+      }
+    },
+    "W000802": {
+      "bioguide_id": "W000802",
+      "chamber": "Senate",
+      "first_name": "Sheldon",
+      "last_name": "Whitehouse",
+      "party": "D",
+      "state": "RI",
+      "senate_data": {
+        "lis_member_id": "S316",
+        "hometown": "Newport",
+        "office": "530 Hart",
+        "leadership_position": ""
+      }
+    },
+    "W000437": {
+      "bioguide_id": "W000437",
+      "chamber": "Senate",
+      "first_name": "Roger F.",
+      "last_name": "Wicker",
+      "party": "R",
+      "state": "MS",
+      "senate_data": {
+        "lis_member_id": "S318",
+        "hometown": "Tupelo",
+        "office": "425 Russell",
+        "leadership_position": ""
+      }
+    },
+    "W000779": {
+      "bioguide_id": "W000779",
+      "chamber": "Senate",
+      "first_name": "Ron",
+      "last_name": "Wyden",
+      "party": "D",
+      "state": "OR",
+      "senate_data": {
+        "lis_member_id": "S247",
+        "hometown": "Portland",
+        "office": "221 Dirksen",
+        "leadership_position": ""
+      }
+    },
+    "Y000064": {
+      "bioguide_id": "Y000064",
+      "chamber": "Senate",
+      "first_name": "Todd",
+      "last_name": "Young",
+      "party": "R",
+      "state": "IN",
+      "senate_data": {
+        "lis_member_id": "S391",
+        "hometown": "Bargersville",
+        "office": "185 Dirksen",
+        "leadership_position": ""
+      }
+    }
+  }
+}
