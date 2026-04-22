@@ -220,10 +220,6 @@ def get_ai_summary(vote_description: str, bill_info: Optional[Dict[str, str]] = 
 def build_senate_id_map() -> Dict[str, str]:
     """
     Maps Senate LIS member IDs to Bioguide IDs.
-
-    This is intentionally called once at the orchestration level and passed
-    into process_senate_votes() to avoid redundant network fetches if this
-    function is ever called in a multi-session loop.
     """
     logger.info("Building Senate ID translation map...")
     url = "https://www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml"
@@ -237,13 +233,19 @@ def build_senate_id_map() -> Dict[str, str]:
 
     try:
         root = ET.fromstring(response.content)
-        for member in root.findall(".//member"):
-            lis = member.find("lis_member_id")
-            bio = member.find("bioguideId") or member.find("bioguide_id")
-            lis_text = safe_text(lis)
+        # FIX 1: The Senate roster uses <senator> tags, not <member>
+        for senator in root.findall(".//senator"):
+            
+            # FIX 2: lis_member_id is an attribute of the tag, not a child element
+            lis_text = senator.get("lis_member_id")
+            
+            # bioguideId is a standard child element
+            bio = senator.find("bioguideId") or senator.find("bioguide_id")
             bio_text = safe_text(bio)
+            
             if lis_text and bio_text:
-                id_map[lis_text] = bio_text
+                id_map[lis_text.strip()] = bio_text.strip()
+                
     except ET.ParseError as exc:
         logger.error("Failed parsing Senate ID map XML: %s", exc)
 
