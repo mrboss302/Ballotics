@@ -111,6 +111,27 @@ def build_congress_gov_url(congress: int, bill_type: str, bill_number: str) -> s
         return f"https://www.congress.gov/bill/{congress}th-congress/{mapped_type}/{bill_number}/text?format=txt"
     return ""
 
+def convert_senate_date(date_str: str, congress: int, session: int) -> str:
+    """Converts Senate date like '26-Feb' to a full ISO 8601 string to match the House."""
+    if not date_str:
+        return ""
+    
+    # Calculate exact year: Congress 1 started in 1789. Session 1 is odd year, Session 2 is even.
+    year = 1789 + (congress - 1) * 2 + (session - 1)
+    
+    try:
+        # Senate index returns "26-Feb"
+        if "-" in date_str:
+            dt = datetime.strptime(date_str, "%d-%b")
+            # Default to 12:00 PM EST since exact minute is missing from the index XML
+            return f"{year}-{dt.month:02d}-{dt.day:02d}T12:00:00-05:00"
+            
+        # Fallback if the XML switches to a full date string format
+        dt = datetime.strptime(date_str, "%B %d, %Y")
+        return f"{dt.year}-{dt.month:02d}-{dt.day:02d}T12:00:00-05:00"
+    except ValueError:
+        return date_str # Return raw if parsing fails so data is not dropped
+
 # -----------------------------------------------------------------------------
 # AI Summary
 # -----------------------------------------------------------------------------
@@ -392,9 +413,13 @@ def process_senate_votes(db: Dict[str, Any], congress: int, session: int, id_map
         question = safe_text(vote.find("question"))
         summary = get_ai_summary(title or question, {"type": bill_type, "number": bill_number}) if enrich_ai else None
 
+        # Apply the new ISO Date Conversion
+        raw_date = safe_text(vote.find("vote_date"))
+        formatted_date = convert_senate_date(raw_date, congress, session)
+
         record = make_vote_record(
             chamber="Senate", congress=congress, session=session, roll_call_number=roll,
-            date=safe_text(vote.find("vote_date")), question=question, result=safe_text(vote.find("result")),
+            date=formatted_date, question=question, result=safe_text(vote.find("result")),
             vote_description=title, bill_type=bill_type, bill_number=bill_number,
             source_url=detail_url, member_votes=member_votes, totals=totals, extra_details=extra_details, ai_summary=summary
         )
