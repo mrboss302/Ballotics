@@ -510,7 +510,10 @@ def parse_senate_vote_detail(
         for member in root.findall(".//member"):
             lis_id = safe_text(member.find("lis_member_id"))
             vote_cast = safe_text(member.find("vote_cast"))
-            bioguide = id_map.get(lis_id)
+            
+            # The Fix: Fallback to the lis_id if the Bioguide map is empty or fails
+            bioguide = id_map.get(lis_id) or lis_id
+            
             if bioguide:
                 member_votes[bioguide] = vote_cast
     except ET.ParseError as exc:
