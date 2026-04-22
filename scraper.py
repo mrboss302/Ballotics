@@ -214,13 +214,10 @@ def get_ai_summary(vote_description: str, bill_info: Optional[Dict[str, str]] = 
         return "Summary pending."
 
 # -----------------------------------------------------------------------------
-# Senate ID Mapping
+# Senate ID Mapping (Bulletproof Version)
 # -----------------------------------------------------------------------------
 
 def build_senate_id_map() -> Dict[str, str]:
-    """
-    Maps Senate LIS member IDs to Bioguide IDs.
-    """
     logger.info("Building Senate ID translation map...")
     url = "https://www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml"
     response = request_with_retries(url)
@@ -233,18 +230,26 @@ def build_senate_id_map() -> Dict[str, str]:
 
     try:
         root = ET.fromstring(response.content)
-        # FIX 1: The Senate roster uses <senator> tags, not <member>
-        for senator in root.findall(".//senator"):
+        
+        # 1. Strip all namespaces and normalize to lowercase to make searching bulletproof
+        for elem in root.iter():
+            if '}' in elem.tag:
+                elem.tag = elem.tag.split('}', 1)[1]
+            elem.tag = elem.tag.lower()
             
-            # FIX 2: lis_member_id is an attribute of the tag, not a child element
-            lis_text = senator.get("lis_member_id")
+        # 2. Look for either <senator> or <member> tags
+        for person in root.findall(".//senator") + root.findall(".//member"):
+            # Check for the ID as an attribute first, then as a child node
+            lis = person.get("lis_member_id")
+            if not lis:
+                lis_node = person.find("lis_member_id")
+                lis = safe_text(lis_node)
+                
+            bio_node = person.find("bioguideid") or person.find("bioguide_id")
+            bio = safe_text(bio_node)
             
-            # bioguideId is a standard child element
-            bio = senator.find("bioguideId") or senator.find("bioguide_id")
-            bio_text = safe_text(bio)
-            
-            if lis_text and bio_text:
-                id_map[lis_text.strip()] = bio_text.strip()
+            if lis and bio:
+                id_map[lis.strip()] = bio.strip()
                 
     except ET.ParseError as exc:
         logger.error("Failed parsing Senate ID map XML: %s", exc)
