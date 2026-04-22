@@ -1,4 +1,4 @@
-name: Nightly Vote Sync
+name: Nightly Data Sync
 
 on:
   schedule:
@@ -12,18 +12,15 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
     env:
-      # This opts you into Node.js 24 now, clearing the warning
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout Repository
-        # v4 is actually okay, but we'll ensure the runner uses Node 24
         uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          # This helps prevent library conflicts by caching
           cache: 'pip' 
 
       - name: Install Dependencies
@@ -31,16 +28,23 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Scraper Script
+      - name: Run Vote Scraper
         env:
           CONGRESS_API_KEY: ${{ secrets.CONGRESS_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scraper.py
 
-      - name: Commit and Push JSON File
+      - name: Run Member Scraper
+        # No API keys needed for this script since it hits public XML endpoints!
+        run: python members_scraper.py
+
+      - name: Commit and Push Data
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add latest-votes.json
-          git commit -m "Automated nightly data sync" || echo "No changes to commit"
+          
+          # Add both generated JSON files to the commit
+          git add latest-votes.json latest-members.json
+          
+          git commit -m "Automated nightly data sync (Votes & Members)" || echo "No changes to commit"
           git push
