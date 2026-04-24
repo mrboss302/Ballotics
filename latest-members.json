@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "last_updated": "2026-04-22T23:46:59.053391Z",
-    "total_members": 537,
-    "house_count": 437,
+    "last_updated": "2026-04-24T08:50:48.473607Z",
+    "total_members": 536,
+    "house_count": 436,
     "senate_count": 100
   },
   "members": {
@@ -1384,19 +1384,6 @@
         "phone": "(202) 225-2536"
       }
     },
-    "C001127": {
-      "bioguide_id": "C001127",
-      "chamber": "House",
-      "first_name": "Sheila",
-      "last_name": "Cherfilus-McCormick",
-      "party": "D",
-      "state": "FL",
-      "house_data": {
-        "district": "20th",
-        "town_name": "Miramar",
-        "phone": "(202) 225-1313"
-      }
-    },
     "M001199": {
       "bioguide_id": "M001199",
       "chamber": "House",
@@ -1655,19 +1642,6 @@
         "district": "12th",
         "town_name": "Augusta",
         "phone": "(202) 225-2823"
-      }
-    },
-    "S001157": {
-      "bioguide_id": "S001157",
-      "chamber": "House",
-      "first_name": "David",
-      "last_name": "Scott",
-      "party": "D",
-      "state": "GA",
-      "house_data": {
-        "district": "13th",
-        "town_name": "Atlanta",
-        "phone": "(202) 225-2939"
       }
     },
     "F000485": {
@@ -3449,6 +3423,19 @@
         "district": "10th",
         "town_name": "Newark",
         "phone": "(202) 225-3436"
+      }
+    },
+    "M001246": {
+      "bioguide_id": "M001246",
+      "chamber": "House",
+      "first_name": "Analilia",
+      "last_name": "Mejia",
+      "party": "D",
+      "state": "NJ",
+      "house_data": {
+        "district": "11th",
+        "town_name": "Glen Ridge",
+        "phone": "(202) 225-5034"
       }
     },
     "W000822": {
