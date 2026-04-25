@@ -11,6 +11,15 @@ logger = logging.getLogger("ballotics-members")
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 OUTPUT_FILE = "latest-members.json"
 
+# Update these based on the current Congress session
+HOUSE_LEADERSHIP = {
+    "J000299": "Speaker of the House",      # Mike Johnson
+    "S001176": "Majority Leader",           # Steve Scalise
+    "E000294": "Majority Whip",             # Tom Emmer
+    "J000294": "Minority Leader",           # Hakeem Jeffries
+    "C001101": "Minority Whip"              # Katherine Clark
+}
+
 def safe_text(node) -> str:
     return node.text.strip() if node is not None and node.text else ""
 
@@ -68,6 +77,10 @@ def fetch_house_members() -> dict:
                     sub_data["name"] = sub_name
                 committees.append(sub_data)
 
+        # Extract dates safely
+        elected_node = info.find("elected-date")
+        sworn_node = info.find("sworn-date")
+
         members[bioguide] = {
             "bioguide_id": bioguide,
             "chamber": "House",
@@ -83,9 +96,13 @@ def fetch_house_members() -> dict:
                 "office_room": safe_text(info.find("office-room")),
                 "office_zip": safe_text(info.find("office-zip")),
                 "committees": committees,
-                "leadership_position": safe_text(info.find("leadership")),
+                "leadership_position": HOUSE_LEADERSHIP.get(bioguide, ""), 
                 "prior_congress": safe_text(info.find("prior-congress")),
-                "official_name": safe_text(info.find("official-name"))
+                "caucus": safe_text(info.find("caucus")),
+                "courtesy_title": safe_text(info.find("courtesy")),
+                "official_name": safe_text(info.find("official-name")),
+                "elected_date": elected_node.get("date", "") if elected_node is not None else "",
+                "sworn_date": sworn_node.get("date", "") if sworn_node is not None else ""
             }
         }
     return members
@@ -177,16 +194,19 @@ def build_member_database():
     house_members = fetch_house_members()
     senate_members = fetch_senate_members()
 
+    # Merge dictionaries
     all_members = {**house_members, **senate_members}
 
+    # Load existing file to check for differences
     existing_data = {"metadata": {}, "members": {}}
     if os.path.exists(OUTPUT_FILE):
         try:
-            with open(OUTPUT_FILE, "r") as f:
+            with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
                 existing_data = json.load(f)
         except Exception:
             pass
 
+    # THE DELTA CHECK: Only update the timestamp if the roster actually changed
     old_members = existing_data.get("members", {})
     
     if all_members == old_members:
