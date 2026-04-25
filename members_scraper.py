@@ -53,29 +53,47 @@ def fetch_house_members() -> dict:
         state_node = info.find("state")
         state_postal = state_node.get("postal-code", "") if state_node is not None else ""
 
-        # Dynamically extract all committee and subcommittee data
-        committees = []
+        # Dynamically extract and nest committee and subcommittee data
+        committees_dict = {}
         committee_assignments = info.find("committee-assignments")
         if committee_assignments is not None:
+            # First pass: Grab all main committees
             for c in committee_assignments.findall("committee"):
-                com_data = {"type": "committee", "comcode": c.get("comcode", ""), "rank": c.get("rank", "")}
+                comcode = c.get("comcode", "")
+                com_data = {
+                    "type": "committee",
+                    "comcode": comcode,
+                    "rank": c.get("rank", ""),
+                    "name": safe_text(c),
+                    "subcommittees": []
+                }
                 if c.get("leadership"):
                     com_data["leadership"] = c.get("leadership")
+                    
+                committees_dict[comcode] = com_data
                 
-                com_name = safe_text(c)
-                if com_name:
-                    com_data["name"] = com_name
-                committees.append(com_data)
-                
+            # Second pass: Grab subcommittees and nest them under their parents
             for s in committee_assignments.findall("subcommittee"):
-                sub_data = {"type": "subcommittee", "subcomcode": s.get("subcomcode", ""), "rank": s.get("rank", "")}
+                subcomcode = s.get("subcomcode", "")
+                # Parent codes are always the first 3 letters of the subcomcode + "00"
+                parent_comcode = subcomcode[:3] + "00" if len(subcomcode) >= 3 else ""
+                
+                sub_data = {
+                    "type": "subcommittee",
+                    "subcomcode": subcomcode,
+                    "rank": s.get("rank", ""),
+                    "name": safe_text(s)
+                }
                 if s.get("leadership"):
                     sub_data["leadership"] = s.get("leadership")
                 
-                sub_name = safe_text(s)
-                if sub_name:
-                    sub_data["name"] = sub_name
-                committees.append(sub_data)
+                # Attach to parent if we found one, otherwise add it to the root level
+                if parent_comcode in committees_dict:
+                    committees_dict[parent_comcode]["subcommittees"].append(sub_data)
+                else:
+                    committees_dict[subcomcode] = sub_data
+                    
+        final_committees = list(committees_dict.values())
 
         # Extract dates safely
         elected_node = info.find("elected-date")
@@ -95,7 +113,7 @@ def fetch_house_members() -> dict:
                 "office_building": safe_text(info.find("office-building")),
                 "office_room": safe_text(info.find("office-room")),
                 "office_zip": safe_text(info.find("office-zip")),
-                "committees": committees,
+                "committees": final_committees,
                 "leadership_position": HOUSE_LEADERSHIP.get(bioguide, ""), 
                 "prior_congress": safe_text(info.find("prior-congress")),
                 "caucus": safe_text(info.find("caucus")),
