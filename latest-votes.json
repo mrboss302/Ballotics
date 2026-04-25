@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-04-25T01:56:59.134302Z",
+    "generated_at": "2026-04-25T08:28:17.248606Z",
     "congress": 119,
     "session": 2,
     "version": 2
@@ -23,7 +23,7 @@
         "type": "S.Con.Res.",
         "number": "33",
         "text_url": "https://www.congress.gov/bill/119th-congress/senate-concurrent-resolution/33/text?format=txt",
-        "ai_summary": "Summary pending."
+        "ai_summary": "S.Con.Res. 33 establishes the congressional budget for the U.S. government for fiscal year 2026 and outlines budgetary levels for the following years, from 2027 to 2035. This resolution affects federal spending and revenue decisions, impacting various government programs and services. It serves as a guideline for future appropriations and fiscal policy."
       },
       "amendment": {
         "number": "",
@@ -160,7 +160,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Schiff Amendment No. 5333 creates a reserve fund that ensures any money allocated to the Federal Emergency Management Agency (FEMA) for public assistance and hazard mitigation programs does not increase the federal deficit. This amendment affects FEMA's funding and its ability to respond to emergencies and implement safety measures."
       },
       "amendment": {
         "number": "S.Amdt. 5333",
@@ -297,7 +297,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This amendment creates a reserve fund to support a study by the Comptroller General on the economic effects of private drug pricing agreements made by federal entities with pharmaceutical companies. It aims to analyze how these agreements impact the economy. The study will inform future policy decisions regarding drug pricing."
       },
       "amendment": {
         "number": "S.Amdt. 5336",
@@ -434,7 +434,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This motion seeks to set a rule that would prevent certain reconciliation legislation from providing new funding to federal agencies that already have unspent funds from earlier bills. It affects federal agencies by limiting their access to additional financial resources. The goal is to ensure that existing funds are utilized before allocating new ones."
       },
       "amendment": {
         "number": "S.Amdt. 4855",
@@ -571,7 +571,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The bill aims to lower prescription drug prices in the United States by more than 50% by implementing a pricing model that ensures Americans pay the same prices as those in Europe and Canada. This policy affects American consumers who purchase prescription medications. It seeks to make healthcare more affordable for the general public."
       },
       "amendment": {
         "number": "S.Amdt. 5159",
@@ -708,7 +708,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The bill creates a reserve fund that aims to address how hedge fund ownership of single-family homes affects rent prices. It seeks to ensure that any financial measures taken will not increase the deficit. This legislation primarily impacts renters and the housing market."
       },
       "amendment": {
         "number": "S.Amdt. 5235",
@@ -845,7 +845,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Paul Amendment No. 5378 aims to reduce new budget authority by $70 billion by cutting various funding sources. It proposes to decrease foreign aid by $45 billion, eliminate $5 billion in refugee spending, cut $16 billion from the Department of Education, and reduce National Science Foundation funding by $4 billion. This amendment affects government spending priorities, particularly in foreign aid, education, and scientific research."
       },
       "amendment": {
         "number": "S.Amdt. 5378",
@@ -982,7 +982,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This motion aims to set a rule that would prevent any legislation from being considered if it does not lead to a reduction in home electricity bills. It affects lawmakers and stakeholders involved in energy policy and budgeting. The goal is to ensure that any proposed laws contribute to lowering electricity costs for consumers."
       },
       "amendment": {
         "number": "S.Amdt. 5001",
@@ -1119,7 +1119,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This motion aims to set up a reserve fund that would allow for extending the ban on Medicaid payments to abortion providers without increasing the deficit. It affects Medicaid funding and abortion services. The motion seeks to bypass certain budget rules to facilitate this funding change."
       },
       "amendment": {
         "number": "S.Amdt. 4794",
@@ -1256,7 +1256,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This bill aims to create rules for voter registration and voting in federal elections by establishing identification requirements and procedures for counting ballots. It affects voters and election officials by setting standards for how identification is handled during the voting process. The bill also includes provisions to ensure that these changes do not increase the federal deficit."
       },
       "amendment": {
         "number": "S.Amdt. 5414",
@@ -1393,7 +1393,7 @@
         "type": "H R",
         "number": "5587",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "Technical procedural vote."
       },
       "amendment": {
         "number": "",
@@ -1859,7 +1859,7 @@
         "type": "H R",
         "number": "6387",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The FIRE Act aims to support and enhance the capabilities of local fire departments. It provides funding for equipment, training, and resources to improve fire safety and emergency response. This legislation primarily affects firefighters and the communities they serve."
       },
       "amendment": {
         "number": "",
@@ -2326,7 +2326,7 @@
         "type": "H R",
         "number": "6387",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The FIRE Act aims to enhance funding and support for fire prevention and safety programs. It affects local fire departments and communities by providing resources to improve fire safety measures. This legislation seeks to reduce fire-related risks and enhance public safety."
       },
       "amendment": {
         "number": "",
@@ -2793,7 +2793,7 @@
         "type": "H R",
         "number": "4690",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Reliable Federal Infrastructure Act aims to improve and maintain federal infrastructure systems. It affects various stakeholders, including federal agencies, state and local governments, and the public who rely on these infrastructure services. The bill seeks to ensure that infrastructure projects are effectively funded and managed for long-term reliability."
       },
       "amendment": {
         "number": "",
@@ -3260,7 +3260,7 @@
         "type": "H R",
         "number": "4690",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Reliable Federal Infrastructure Act aims to improve and maintain the nation's infrastructure by providing funding and resources for various projects. It affects federal, state, and local governments, as well as contractors and workers involved in infrastructure development. The bill seeks to enhance the safety and efficiency of transportation, utilities, and public facilities."
       },
       "amendment": {
         "number": "",
@@ -3727,7 +3727,7 @@
         "type": "H RES",
         "number": "1182",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This bill expresses support for rural communities in the U.S. by acknowledging their roles in environmental stewardship, energy resource supply, food production, manufacturing, and economic stability. It recognizes the contributions of these communities and the work of the House of Representatives in supporting them. The bill affects rural residents and stakeholders in agriculture, energy, and manufacturing sectors."
       },
       "amendment": {
         "number": "",
@@ -4194,7 +4194,7 @@
         "type": "H RES",
         "number": "1189",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "Technical procedural vote."
       },
       "amendment": {
         "number": "",
@@ -4662,7 +4662,7 @@
         "type": "H RES",
         "number": "1189",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "Technical procedural vote."
       },
       "amendment": {
         "number": "",
@@ -5130,7 +5130,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This motion aims to set up a reserve fund that would allow for increased funding for child care services for families without adding to the deficit. It affects families seeking child care support by potentially providing them with more financial resources. The motion seeks to bypass certain budget rules to facilitate this funding."
       },
       "amendment": {
         "number": "S.Amdt. 5294",
@@ -5267,7 +5267,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This motion aims to set up a reserve fund that would help protect consumers from price increases linked to tariffs and the Iran war, without adding to the deficit. It affects consumers who may face higher prices due to these factors. The motion seeks to bypass certain budget rules to allow this funding."
       },
       "amendment": {
         "number": "S.Amdt. 4956",
@@ -5404,7 +5404,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This motion aims to set a rule that would prevent any reconciliation legislation from being considered if it does not increase federal funding or participation in school meal programs. It affects legislation related to school meals and the funding mechanisms that support them. The motion seeks to ensure that school meal programs receive adequate financial support."
       },
       "amendment": {
         "number": "S.Amdt. 4884",
@@ -5541,7 +5541,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Graham Amendment No. 5281 creates a financial reserve to support the apprehension and deportation of adult illegal immigrants who have been convicted of serious crimes, such as rape, murder, or sexual abuse of a minor, after entering the United States illegally. This amendment primarily affects individuals who fall into these categories and the resources allocated for their enforcement. It aims to address public safety concerns related to these specific offenses."
       },
       "amendment": {
         "number": "S.Amdt. 5281",
@@ -5678,7 +5678,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This motion aims to set a rule that would allow lawmakers to challenge reconciliation legislation if it does not tackle the issue of insurance companies interfering with patient care. It affects patients who may face delays or denials in accessing medical services due to insurance practices. The bill seeks to ensure that legislation addresses these concerns directly."
       },
       "amendment": {
         "number": "S.Amdt. 4897",
@@ -5815,7 +5815,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This motion aims to set up a reserve fund that would help manage grocery costs without increasing the deficit. It affects individuals and families who purchase groceries by potentially providing financial support or relief related to those costs. The motion seeks to bypass certain budget rules to facilitate this funding."
       },
       "amendment": {
         "number": "S.Amdt. 4798",
@@ -5952,7 +5952,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This bill aims to establish a rule that would allow lawmakers to challenge any reconciliation legislation that fails to reduce out-of-pocket health care costs for Americans facing financial difficulties. It affects individuals who are struggling with health care expenses. The motion seeks to ensure that health care affordability is prioritized in legislative discussions."
       },
       "amendment": {
         "number": "S.Amdt. 4799",
