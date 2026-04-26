@@ -29,12 +29,13 @@ def test_clarity_scraper():
     
     print("\n3. Parsing Presidential Race Results...")
     
-    # DEFENSIVE FIX: If the root is already a list, use it. Otherwise, look for 'Contests'.
+    # DEFENSIVE FIX 1: If the root is already a list, use it. Otherwise, look for the 'Contests' key.
     contests = data if isinstance(data, list) else data.get('Contests', [])
     
     for contest in contests:
         race_name = contest.get('C', '')
         
+        # Look for the Presidential race
         if "President of the US" in race_name:
             print(f"\nRace Found: {race_name}")
             
@@ -43,7 +44,7 @@ def test_clarity_scraper():
             
             for idx, candidate in enumerate(candidates):
                 try:
-                    # DEFENSIVE FIX: Check if votes are a 2D array (split by Early/Absentee/Day-of) 
+                    # DEFENSIVE FIX 2: Check if votes are a 2D array (split by Early/Absentee/Day-of) 
                     # or just a flat 1D array of totals.
                     if len(votes) > 0 and isinstance(votes[0], list):
                         total_votes = int(votes[0][idx])
