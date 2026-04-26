@@ -1,60 +1,43 @@
 import requests
+import json
 
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 
-def test_clarity_scraper():
-    print("--- TESTING GEORGIA 2024 ELECTION SCRAPER (HALL COUNTY) ---")
+def test_sos_api_scraper():
+    print("--- TESTING GEORGIA SOS MODERN API ---")
     
-    base_url = "https://results.enr.clarityelections.com/GA/Hall/122850"
+    # The golden URL you found!
+    url = "https://results.sos.ga.gov/results/public/api/elections/Georgia/40726SpecialElection/data"
     
-    print("\n1. Fetching current data version...")
-    ver_response = requests.get(f"{base_url}/current_ver.txt", headers=HEADERS)
+    print(f"\n1. Fetching data from: {url}")
+    response = requests.get(url, headers=HEADERS)
     
-    if ver_response.status_code != 200:
-        print(f"Failed to fetch version: {ver_response.status_code}")
+    if response.status_code != 200:
+        print(f"Failed to fetch data: {response.status_code}")
         return
         
-    version = ver_response.text.strip()
-    print(f"   -> Latest Version: {version}")
+    data = response.json()
     
-    summary_url = f"{base_url}/{version}/json/en/summary.json"
-    print(f"\n2. Fetching summary JSON from: {summary_url}")
+    print("\n2. Root JSON Keys:")
+    print(list(data.keys()))
     
-    sum_response = requests.get(summary_url, headers=HEADERS)
-    if sum_response.status_code != 200:
-        print(f"Failed to fetch summary: {sum_response.status_code}")
-        return
-        
-    data = sum_response.json()
+    print("\n3. Peeking at the data structure...")
     
-    print("\n3. Parsing Presidential Race Results...")
-    
-    # DEFENSIVE FIX 1: If the root is already a list, use it. Otherwise, look for the 'Contests' key.
-    contests = data if isinstance(data, list) else data.get('Contests', [])
-    
-    for contest in contests:
-        race_name = contest.get('C', '')
-        
-        # Look for the Presidential race
-        if "President of the US" in race_name:
-            print(f"\nRace Found: {race_name}")
+    # Usually modern APIs have a 'contests', 'races', or 'results' key
+    # Let's try to find the list of races
+    for key in ['contests', 'races', 'results', 'election']:
+        if key in data:
+            items = data[key]
+            print(f"\nFound '{key}' array with {len(items)} items.")
             
-            candidates = contest.get('CH', []) 
-            votes = contest.get('V', [])       
+            if len(items) > 0:
+                print("\n--- First Item Sample ---")
+                print(json.dumps(items[0], indent=2)[:1000]) # Print first 1000 chars of the first item
+            return
             
-            for idx, candidate in enumerate(candidates):
-                try:
-                    # DEFENSIVE FIX 2: Check if votes are a 2D array (split by Early/Absentee/Day-of) 
-                    # or just a flat 1D array of totals.
-                    if len(votes) > 0 and isinstance(votes[0], list):
-                        total_votes = int(votes[0][idx])
-                    else:
-                        total_votes = int(votes[idx])
-                        
-                    print(f"  - {candidate}: {total_votes:,} votes")
-                except (IndexError, TypeError, ValueError):
-                    print(f"  - {candidate}: Data structure mismatch")
-            break
+    # If we didn't find those common keys, just print a chunk of the raw JSON so we can eyeball it
+    print("\nCould not find a standard 'contests' array. Here is a raw sample:")
+    print(json.dumps(data, indent=2)[:1000])
 
 if __name__ == "__main__":
-    test_clarity_scraper()
+    test_sos_api_scraper()
