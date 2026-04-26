@@ -1,16 +1,12 @@
 import requests
-import json
 
-# Standard headers to act like a normal web browser
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
 
 def test_clarity_scraper():
     print("--- TESTING GEORGIA 2024 ELECTION SCRAPER (HALL COUNTY) ---")
     
-    # 1. The Clarity Election ID for Hall County's Nov 2024 General Election is 122850
     base_url = "https://results.enr.clarityelections.com/GA/Hall/122850"
     
-    # 2. First, we have to ask the server what the latest "version" of the data is
     print("\n1. Fetching current data version...")
     ver_response = requests.get(f"{base_url}/current_ver.txt", headers=HEADERS)
     
@@ -21,7 +17,6 @@ def test_clarity_scraper():
     version = ver_response.text.strip()
     print(f"   -> Latest Version: {version}")
     
-    # 3. Now we use that version to download the hidden summary.json file
     summary_url = f"{base_url}/{version}/json/en/summary.json"
     print(f"\n2. Fetching summary JSON from: {summary_url}")
     
@@ -33,28 +28,30 @@ def test_clarity_scraper():
     data = sum_response.json()
     
     print("\n3. Parsing Presidential Race Results...")
-    # Clarity JSON is heavily minified to save bandwidth. 
-    # 'Contests' is the list of races. 
-    contests = data.get('Contests', [])
+    
+    # DEFENSIVE FIX: If the root is already a list, use it. Otherwise, look for 'Contests'.
+    contests = data if isinstance(data, list) else data.get('Contests', [])
     
     for contest in contests:
-        race_name = contest.get('C', '') # 'C' = Contest Name
+        race_name = contest.get('C', '')
         
-        # Look specifically for the Presidential race
         if "President of the US" in race_name:
             print(f"\nRace Found: {race_name}")
             
-            candidates = contest.get('CH', []) # 'CH' = Choices (Candidates)
-            votes = contest.get('V', [])       # 'V' = Votes arrays
+            candidates = contest.get('CH', []) 
+            votes = contest.get('V', [])       
             
-            # The Votes array is deeply nested. Usually votes[0][0] is the total votes for candidate 0.
-            # Let's zip them together and print the results
             for idx, candidate in enumerate(candidates):
                 try:
-                    # Depending on the state's exact setup, total votes are usually the first element of the vote array
-                    total_votes = votes[0][idx] 
+                    # DEFENSIVE FIX: Check if votes are a 2D array (split by Early/Absentee/Day-of) 
+                    # or just a flat 1D array of totals.
+                    if len(votes) > 0 and isinstance(votes[0], list):
+                        total_votes = int(votes[0][idx])
+                    else:
+                        total_votes = int(votes[idx])
+                        
                     print(f"  - {candidate}: {total_votes:,} votes")
-                except IndexError:
+                except (IndexError, TypeError, ValueError):
                     print(f"  - {candidate}: Data structure mismatch")
             break
 
