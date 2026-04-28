@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-27T09:01:21.412108Z",
+    "last_updated": "2026-04-28T08:59:47.216433Z",
     "total_members": 536,
     "house_count": 436,
     "senate_count": 100,
@@ -9,7 +9,7 @@
       {
         "name": "house_members_clerk_xml",
         "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
-        "retrieved_at": "2026-04-27T09:01:20.883437Z",
+        "retrieved_at": "2026-04-28T08:59:46.706539Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -20,7 +20,7 @@
       {
         "name": "senate_cvc_member_xml",
         "url": "https://www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml",
-        "retrieved_at": "2026-04-27T09:01:21.179530Z",
+        "retrieved_at": "2026-04-28T08:59:46.890106Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -32,7 +32,7 @@
       {
         "name": "senate_cfm_contact_xml",
         "url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
-        "retrieved_at": "2026-04-27T09:01:21.236692Z",
+        "retrieved_at": "2026-04-28T08:59:47.022783Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -39746,7 +39746,7 @@
         "office_building": "",
         "office_room": "",
         "office_zip": "",
-        "address": "G12 Dirksen Senate Office Building Washington DC 20510",
+        "address": "330 Hart Senate Office Building Washington DC 20510",
         "website": "https://www.armstrong.senate.gov/",
         "email": "https://www.armstrong.senate.gov/"
       },
@@ -45942,7 +45942,7 @@
         "office_building": "",
         "office_room": "",
         "office_zip": "",
-        "address": "112 Hart Senate Office Building Washington DC 20510",
+        "address": "B40C Dirksen Senate Office Building Washington DC 20510",
         "website": "https://www.schiff.senate.gov",
         "email": "https://www.schiff.senate.gov"
       },
