@@ -1,11 +1,285 @@
 {
   "metadata": {
-    "generated_at": "2026-04-28T08:59:46.420524Z",
+    "generated_at": "2026-04-29T09:01:19.368332Z",
     "congress": 119,
     "session": 2,
     "version": 2
   },
   "votes": [
+    {
+      "id": "119-2-S-108",
+      "chamber": "Senate",
+      "congress": 119,
+      "session": 2,
+      "roll_call_number": 108,
+      "date": "2026-04-28T12:00:00-05:00",
+      "question": "On the Point of Order",
+      "required_votes": "1/2",
+      "result": "Well Taken",
+      "vote_description": "Is the Point of Order Well Taken Re: The Privilege Status of S.J.Res. 124?; A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Republic of Cuba that have not been authorized by Congress.",
+      "vote_type": "",
+      "bill": {
+        "congress": 119,
+        "type": "S.J.Res.",
+        "number": "124",
+        "text_url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/124/text?format=txt",
+        "ai_summary": "Summary pending."
+      },
+      "amendment": {
+        "number": "",
+        "purpose": "No Statement of Purpose on File."
+      },
+      "tie_breaker": {
+        "by_whom": "",
+        "vote": ""
+      },
+      "totals": {
+        "yeas": 51,
+        "nays": 47,
+        "present": 0,
+        "not_voting": 2
+      },
+      "member_votes": {
+        "A000382": "Nay",
+        "A000383": "Yea",
+        "B001230": "Nay",
+        "B001299": "Yea",
+        "B001261": "Yea",
+        "B001267": "Nay",
+        "B001243": "Yea",
+        "B001277": "Nay",
+        "B001303": "Nay",
+        "B001288": "Nay",
+        "B001236": "Yea",
+        "B001319": "Yea",
+        "B001305": "Yea",
+        "C000127": "Nay",
+        "C001047": "Yea",
+        "C001075": "Yea",
+        "C001035": "Nay",
+        "C001088": "Nay",
+        "C001056": "Yea",
+        "C001113": "Nay",
+        "C001095": "Yea",
+        "C001096": "Yea",
+        "C000880": "Yea",
+        "C001098": "Yea",
+        "C001114": "Yea",
+        "D000618": "Yea",
+        "D000622": "Nay",
+        "D000563": "Nay",
+        "E000295": "Yea",
+        "F000479": "Yea",
+        "F000463": "Yea",
+        "G000574": "Nay",
+        "G000555": "Nay",
+        "G000359": "Yea",
+        "G000386": "Yea",
+        "H000601": "Yea",
+        "H001076": "Nay",
+        "H001089": "Yea",
+        "H001046": "Nay",
+        "H000273": "Nay",
+        "H001042": "Nay",
+        "H001061": "Yea",
+        "H001104": "Yea",
+        "H001079": "Yea",
+        "J000293": "Yea",
+        "J000312": "Yea",
+        "K000384": "Nay",
+        "K000377": "Nay",
+        "K000393": "Yea",
+        "K000394": "Nay",
+        "K000383": "Nay",
+        "K000367": "Nay",
+        "L000575": "Yea",
+        "L000577": "Yea",
+        "L000570": "Nay",
+        "L000571": "Yea",
+        "M000133": "Nay",
+        "M001198": "Yea",
+        "M000355": "Yea",
+        "M001243": "Yea",
+        "M001176": "Nay",
+        "M001244": "Yea",
+        "M000934": "Yea",
+        "M001242": "Yea",
+        "M001153": "Yea",
+        "M001169": "Nay",
+        "M001111": "Nay",
+        "O000174": "Nay",
+        "P000145": "Nay",
+        "P000603": "Nay",
+        "P000595": "Nay",
+        "R000122": "Nay",
+        "R000618": "Yea",
+        "R000584": "Yea",
+        "R000608": "Nay",
+        "R000605": "Yea",
+        "S000033": "Nay",
+        "S001194": "Nay",
+        "S001150": "Nay",
+        "S001227": "Yea",
+        "S000148": "Nay",
+        "S001217": "Yea",
+        "S001184": "Yea",
+        "S001181": "Nay",
+        "S001232": "Yea",
+        "S001208": "Nay",
+        "S001203": "Nay",
+        "S001198": "Yea",
+        "T000250": "Yea",
+        "T000476": "Yea",
+        "T000278": "Not Voting",
+        "V000128": "Nay",
+        "W000805": "Not Voting",
+        "W000790": "Nay",
+        "W000817": "Nay",
+        "W000800": "Nay",
+        "W000802": "Nay",
+        "W000437": "Yea",
+        "W000779": "Nay",
+        "Y000064": "Yea"
+      },
+      "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00108.xml"
+    },
+    {
+      "id": "119-2-S-107",
+      "chamber": "Senate",
+      "congress": 119,
+      "session": 2,
+      "roll_call_number": 107,
+      "date": "2026-04-28T12:00:00-05:00",
+      "question": "On the Motion to Proceed",
+      "required_votes": "1/2",
+      "result": "Agreed to",
+      "vote_description": "Motion to Proceed to Executive Session to Consider S. Res. 690; An executive resolution authorizing the en bloc consideration in Executive Session of certain nominations on the Executive Calendar.",
+      "vote_type": "",
+      "bill": {
+        "congress": 119,
+        "type": "S.Res.",
+        "number": "690",
+        "text_url": "https://www.congress.gov/bill/119th-congress/senate-resolution/690/text?format=txt",
+        "ai_summary": "Summary pending."
+      },
+      "amendment": {
+        "number": "",
+        "purpose": "No Statement of Purpose on File."
+      },
+      "tie_breaker": {
+        "by_whom": "",
+        "vote": ""
+      },
+      "totals": {
+        "yeas": 52,
+        "nays": 47,
+        "present": 0,
+        "not_voting": 1
+      },
+      "member_votes": {
+        "A000382": "Nay",
+        "A000383": "Yea",
+        "B001230": "Nay",
+        "B001299": "Yea",
+        "B001261": "Yea",
+        "B001267": "Nay",
+        "B001243": "Yea",
+        "B001277": "Nay",
+        "B001303": "Nay",
+        "B001288": "Nay",
+        "B001236": "Yea",
+        "B001319": "Yea",
+        "B001305": "Yea",
+        "C000127": "Nay",
+        "C001047": "Yea",
+        "C001075": "Yea",
+        "C001035": "Yea",
+        "C001088": "Nay",
+        "C001056": "Yea",
+        "C001113": "Nay",
+        "C001095": "Yea",
+        "C001096": "Yea",
+        "C000880": "Yea",
+        "C001098": "Yea",
+        "C001114": "Yea",
+        "D000618": "Yea",
+        "D000622": "Nay",
+        "D000563": "Nay",
+        "E000295": "Yea",
+        "F000479": "Nay",
+        "F000463": "Yea",
+        "G000574": "Nay",
+        "G000555": "Nay",
+        "G000359": "Yea",
+        "G000386": "Yea",
+        "H000601": "Yea",
+        "H001076": "Nay",
+        "H001089": "Yea",
+        "H001046": "Nay",
+        "H000273": "Nay",
+        "H001042": "Nay",
+        "H001061": "Yea",
+        "H001104": "Yea",
+        "H001079": "Yea",
+        "J000293": "Yea",
+        "J000312": "Yea",
+        "K000384": "Nay",
+        "K000377": "Nay",
+        "K000393": "Yea",
+        "K000394": "Nay",
+        "K000383": "Nay",
+        "K000367": "Nay",
+        "L000575": "Yea",
+        "L000577": "Yea",
+        "L000570": "Nay",
+        "L000571": "Yea",
+        "M000133": "Nay",
+        "M001198": "Yea",
+        "M000355": "Yea",
+        "M001243": "Yea",
+        "M001176": "Nay",
+        "M001244": "Yea",
+        "M000934": "Yea",
+        "M001242": "Yea",
+        "M001153": "Yea",
+        "M001169": "Nay",
+        "M001111": "Nay",
+        "O000174": "Nay",
+        "P000145": "Nay",
+        "P000603": "Yea",
+        "P000595": "Nay",
+        "R000122": "Nay",
+        "R000618": "Yea",
+        "R000584": "Yea",
+        "R000608": "Nay",
+        "R000605": "Yea",
+        "S000033": "Nay",
+        "S001194": "Nay",
+        "S001150": "Nay",
+        "S001227": "Yea",
+        "S000148": "Nay",
+        "S001217": "Yea",
+        "S001184": "Yea",
+        "S001181": "Nay",
+        "S001232": "Yea",
+        "S001208": "Nay",
+        "S001203": "Nay",
+        "S001198": "Yea",
+        "T000250": "Yea",
+        "T000476": "Yea",
+        "T000278": "Not Voting",
+        "V000128": "Nay",
+        "W000805": "Nay",
+        "W000790": "Nay",
+        "W000817": "Nay",
+        "W000800": "Nay",
+        "W000802": "Nay",
+        "W000437": "Yea",
+        "W000779": "Nay",
+        "Y000064": "Yea"
+      },
+      "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00107.xml"
+    },
     {
       "id": "119-2-H-139",
       "chamber": "House",
@@ -23,7 +297,7 @@
         "type": "H R",
         "number": "227",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Clergy Act, associated with H.R. 227, aims to provide specific legal protections and benefits for clergy members. It affects religious leaders by ensuring they have certain rights and support in their roles. This legislation seeks to enhance the ability of clergy to serve their communities effectively."
       },
       "amendment": {
         "number": "",
@@ -489,7 +763,7 @@
         "type": "H R",
         "number": "7959",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The IRS Whistleblower Program Improvement Act aims to enhance the protections and incentives for individuals who report tax fraud or misconduct to the IRS. This bill affects whistleblowers by potentially increasing their rewards and safeguarding them from retaliation. It seeks to strengthen the overall effectiveness of the IRS in detecting and addressing tax violations."
       },
       "amendment": {
         "number": "",
@@ -955,7 +1229,7 @@
         "type": "PN",
         "number": "730-14",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "Technical procedural vote."
       },
       "amendment": {
         "number": "",
@@ -35863,7 +36137,7 @@
         "type": "H RES",
         "number": "1095",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "Technical procedural vote."
       },
       "amendment": {
         "number": "",
@@ -36801,7 +37075,7 @@
         "type": "S.J.Res.",
         "number": "104",
         "text_url": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/104/text?format=txt",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The bill directs the removal of U.S. Armed Forces from hostilities involving Iran that Congress has not authorized. It affects military personnel and U.S. foreign policy regarding Iran. The motion seeks to advance this resolution for further consideration."
       },
       "amendment": {
         "number": "",
@@ -36938,7 +37212,7 @@
         "type": "H.R.",
         "number": "6644",
         "text_url": "https://www.congress.gov/bill/119th-congress/house-bill/6644/text?format=txt",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The motion seeks to advance H.R. 6644, a bill aimed at increasing the availability of housing in the United States. This legislation will impact individuals and families seeking housing, as well as the housing market overall. The bill may also address related issues beyond housing supply."
       },
       "amendment": {
         "number": "",
@@ -37075,7 +37349,7 @@
         "type": "H.R.",
         "number": "6644",
         "text_url": "https://www.congress.gov/bill/119th-congress/house-bill/6644/text?format=txt",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The motion to invoke cloture aims to limit debate and move forward with H.R. 6644, a bill designed to increase the supply of housing in America. This bill affects individuals and families seeking housing, as well as the housing market overall. It seeks to address housing shortages and improve access to affordable housing options."
       },
       "amendment": {
         "number": "",
@@ -37212,7 +37486,7 @@
         "type": "PN",
         "number": "730-46",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The bill confirms Ryan McCormack as the Under Secretary of Transportation for Policy. This position involves overseeing transportation policy at the federal level. The confirmation affects the Department of Transportation and its ability to implement policies under McCormack's leadership."
       },
       "amendment": {
         "number": "",
@@ -37349,7 +37623,7 @@
         "type": "PN",
         "number": "730-46",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "Technical procedural vote."
       },
       "amendment": {
         "number": "",
@@ -37486,7 +37760,7 @@
         "type": "PN",
         "number": "730-19",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The bill confirms John DeLeeuw from Texas as a member of the National Transportation Safety Board. This board is responsible for investigating transportation accidents and promoting safety in various transportation sectors. The confirmation affects the operations and oversight of transportation safety in the United States."
       },
       "amendment": {
         "number": "",
@@ -37623,7 +37897,7 @@
         "type": "PN",
         "number": "730-19",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "Technical procedural vote."
       },
       "amendment": {
         "number": "",
@@ -41512,7 +41786,7 @@
         "type": "H.R.",
         "number": "7147",
         "text_url": "https://www.congress.gov/bill/119th-congress/house-bill/7147/text?format=txt",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The motion to invoke cloture aims to limit debate and move forward with H.R. 7147, which proposes additional funding for the fiscal year ending September 30, 2026, along with other related provisions. This bill affects government funding and services for the specified fiscal year."
       },
       "amendment": {
         "number": "",
@@ -41649,7 +41923,7 @@
         "type": "H.R.",
         "number": "7147",
         "text_url": "https://www.congress.gov/bill/119th-congress/house-bill/7147/text?format=txt",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The motion to invoke cloture aims to limit debate and allow the Senate to proceed to H.R. 7147, which is a bill that provides funding for various programs and services for the fiscal year ending September 30, 2026. This bill affects government operations and the allocation of federal resources. It is intended to ensure that appropriations are made in a timely manner for the upcoming fiscal year."
       },
       "amendment": {
         "number": "",
@@ -41786,7 +42060,7 @@
         "type": "H.J.Res.",
         "number": "142",
         "text_url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/142/text?format=txt",
-        "ai_summary": "Summary pending."
+        "ai_summary": "H. J. Res. 142 is a joint resolution that disapproves the D.C. Council's approval of a specific tax amendment related to income and franchise taxes in Washington, D.C. This resolution affects the residents and businesses in D.C. by potentially blocking changes to their tax regulations."
       },
       "amendment": {
         "number": "",
@@ -41923,7 +42197,7 @@
         "type": "H R",
         "number": "2189",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Law-Enforcement Innovate to De-Escalate Act aims to promote strategies and training for law enforcement agencies to reduce the use of force and improve community relations. This bill affects police departments and their interactions with the communities they serve. It seeks to enhance public safety while fostering trust between law enforcement and citizens."
       },
       "amendment": {
         "number": "",
@@ -42391,7 +42665,7 @@
         "type": "S",
         "number": "1383",
         "text_url": "https://www.congress.gov/bill/119th-congress/senate-bill/1383/text?format=txt",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Veterans Accessibility Advisory Committee Act establishes a committee to advise on improving accessibility for veterans. This bill affects veterans by ensuring their needs are considered in policies related to accessibility. The committee will provide recommendations to enhance services and facilities for veterans."
       },
       "amendment": {
         "number": "",
@@ -42860,7 +43134,7 @@
         "type": "S",
         "number": "1383",
         "text_url": "https://www.congress.gov/bill/119th-congress/senate-bill/1383/text?format=txt",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Veterans Accessibility Advisory Committee Act establishes a committee to advise on improving accessibility for veterans. This bill affects veterans by ensuring their needs are considered in policies related to accessibility. The committee will provide recommendations to enhance services and facilities for veterans."
       },
       "amendment": {
         "number": "",
@@ -43329,7 +43603,7 @@
         "type": "H R",
         "number": "261",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Undersea Cable Protection Act aims to enhance the security and protection of undersea cables that are crucial for global telecommunications. This legislation affects telecommunications companies, maritime industries, and national security agencies by establishing regulations and measures to safeguard these vital infrastructures."
       },
       "amendment": {
         "number": "",
@@ -43798,7 +44072,7 @@
         "type": "H R",
         "number": "261",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Undersea Cable Protection Act aims to enhance the security and protection of undersea cables that are crucial for global telecommunications. This legislation affects telecommunications companies, maritime industries, and national security agencies by establishing regulations to safeguard these vital infrastructures."
       },
       "amendment": {
         "number": "",
@@ -44267,7 +44541,7 @@
         "type": "H J RES",
         "number": "72",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This bill addresses a national emergency declared by the President on February 1, 2025. It outlines the implications and actions related to that emergency. The bill affects the government's response and resources allocated during this declared emergency."
       },
       "amendment": {
         "number": "",
@@ -44736,7 +45010,7 @@
         "type": "H R",
         "number": "3617",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Securing America’s Critical Minerals Supply Act aims to enhance the domestic production and processing of critical minerals essential for various industries, including technology and renewable energy. This bill affects companies involved in mining and processing these minerals, as well as industries that rely on them for manufacturing. It seeks to reduce dependence on foreign sources for these vital materials."
       },
       "amendment": {
         "number": "",
@@ -45205,7 +45479,7 @@
         "type": "H R",
         "number": "3617",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The Securing America’s Critical Minerals Supply Act aims to enhance the domestic production and processing of critical minerals essential for various industries, including technology and renewable energy. This bill affects companies involved in mining and processing these minerals, as well as industries that rely on them for manufacturing. It seeks to reduce dependence on foreign sources for these vital materials."
       },
       "amendment": {
         "number": "",
@@ -45674,7 +45948,7 @@
         "type": "H RES",
         "number": "1057",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "Technical procedural vote."
       },
       "amendment": {
         "number": "",
@@ -46143,7 +46417,7 @@
         "type": "H RES",
         "number": "1057",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "Technical procedural vote."
       },
       "amendment": {
         "number": "",
@@ -46612,7 +46886,7 @@
         "type": "H.J.Res.",
         "number": "142",
         "text_url": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/142/text?format=txt",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This bill allows Congress to disapprove a decision made by the District of Columbia Council regarding changes to the D.C. Income and Franchise Tax laws. It affects residents and businesses in Washington, D.C., who are subject to these tax regulations. The motion is a step toward potentially overturning the local tax amendment."
       },
       "amendment": {
         "number": "",
