@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-05-07T09:03:30.147209Z",
+    "last_updated": "2026-05-08T08:41:28.501811Z",
     "total_members": 536,
     "house_count": 436,
     "senate_count": 100,
@@ -9,7 +9,7 @@
       {
         "name": "house_members_clerk_xml",
         "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
-        "retrieved_at": "2026-05-07T09:03:29.572750Z",
+        "retrieved_at": "2026-05-08T08:41:27.646599Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -20,7 +20,7 @@
       {
         "name": "senate_cvc_member_xml",
         "url": "https://www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml",
-        "retrieved_at": "2026-05-07T09:03:29.806755Z",
+        "retrieved_at": "2026-05-08T08:41:28.015166Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -32,7 +32,7 @@
       {
         "name": "senate_cfm_contact_xml",
         "url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
-        "retrieved_at": "2026-05-07T09:03:29.963373Z",
+        "retrieved_at": "2026-05-08T08:41:28.140785Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -1421,7 +1421,7 @@
           "type": "subcommittee",
           "code": "HM11",
           "name": "Border Security and Enforcement",
-          "rank": "2",
+          "rank": "3",
           "leadership": "",
           "subcommittees": []
         }
@@ -7202,7 +7202,7 @@
           "type": "subcommittee",
           "code": "HM05",
           "name": "Counterterrorism and Intelligence",
-          "rank": "3",
+          "rank": "4",
           "leadership": "",
           "subcommittees": []
         },
@@ -7210,7 +7210,7 @@
           "type": "subcommittee",
           "code": "HM12",
           "name": "Emergency Management and Technology",
-          "rank": "3",
+          "rank": "2",
           "leadership": "",
           "subcommittees": []
         },
@@ -10595,7 +10595,7 @@
           "type": "subcommittee",
           "code": "SM23",
           "name": "Contracting and Infrastructure",
-          "rank": "3",
+          "rank": "2",
           "leadership": "",
           "subcommittees": []
         }
@@ -12639,16 +12639,16 @@
         },
         {
           "type": "subcommittee",
-          "code": "HM09",
-          "name": "Oversight, Investigations, and Accountability",
-          "rank": "2",
+          "code": "HM08",
+          "name": "Cybersecurity and Infrastructure Protection",
+          "rank": "1",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "subcommittee",
-          "code": "HM11",
-          "name": "Border Security and Enforcement",
+          "code": "HM09",
+          "name": "Oversight, Investigations, and Accountability",
           "rank": "2",
           "leadership": "",
           "subcommittees": []
@@ -19976,7 +19976,7 @@
           "type": "subcommittee",
           "code": "SM23",
           "name": "Contracting and Infrastructure",
-          "rank": "5",
+          "rank": "4",
           "leadership": "",
           "subcommittees": []
         },
@@ -20393,7 +20393,7 @@
           "type": "subcommittee",
           "code": "SM23",
           "name": "Contracting and Infrastructure",
-          "rank": "4",
+          "rank": "3",
           "leadership": "",
           "subcommittees": []
         },
@@ -22248,7 +22248,7 @@
           "type": "subcommittee",
           "code": "HM09",
           "name": "Oversight, Investigations, and Accountability",
-          "rank": "5",
+          "rank": "4",
           "leadership": "",
           "subcommittees": []
         },
@@ -22256,7 +22256,7 @@
           "type": "subcommittee",
           "code": "HM11",
           "name": "Border Security and Enforcement",
-          "rank": "5",
+          "rank": "6",
           "leadership": "",
           "subcommittees": []
         },
@@ -23845,6 +23845,14 @@
           "rank": "13",
           "leadership": "",
           "subcommittees": []
+        },
+        {
+          "type": "subcommittee",
+          "code": "HM11",
+          "name": "Border Security and Enforcement",
+          "rank": "4",
+          "leadership": "",
+          "subcommittees": []
         }
       ],
       "contact": {
@@ -24645,17 +24653,17 @@
         },
         {
           "type": "subcommittee",
-          "code": "HM08",
-          "name": "Cybersecurity and Infrastructure Protection",
-          "rank": "4",
+          "code": "HM05",
+          "name": "Counterterrorism and Intelligence",
+          "rank": "3",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "subcommittee",
-          "code": "HM09",
-          "name": "Oversight, Investigations, and Accountability",
-          "rank": "3",
+          "code": "HM08",
+          "name": "Cybersecurity and Infrastructure Protection",
+          "rank": "4",
           "leadership": "",
           "subcommittees": []
         }
@@ -28029,6 +28037,22 @@
           "rank": "1",
           "leadership": "Chair",
           "subcommittees": []
+        },
+        {
+          "type": "subcommittee",
+          "code": "HM09",
+          "name": "Oversight, Investigations, and Accountability",
+          "rank": "5",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "subcommittee",
+          "code": "HM12",
+          "name": "Emergency Management and Technology",
+          "rank": "4",
+          "leadership": "",
+          "subcommittees": []
         }
       ],
       "contact": {
@@ -28271,8 +28295,8 @@
         },
         {
           "type": "subcommittee",
-          "code": "HM12",
-          "name": "Emergency Management and Technology",
+          "code": "HM11",
+          "name": "Border Security and Enforcement",
           "rank": "2",
           "leadership": "",
           "subcommittees": []
@@ -29689,7 +29713,7 @@
           "type": "subcommittee",
           "code": "HM05",
           "name": "Counterterrorism and Intelligence",
-          "rank": "4",
+          "rank": "5",
           "leadership": "",
           "subcommittees": []
         },
@@ -29697,7 +29721,7 @@
           "type": "subcommittee",
           "code": "HM12",
           "name": "Emergency Management and Technology",
-          "rank": "4",
+          "rank": "3",
           "leadership": "",
           "subcommittees": []
         }
@@ -29907,8 +29931,8 @@
           "type": "subcommittee",
           "code": "SM23",
           "name": "Contracting and Infrastructure",
-          "rank": "2",
-          "leadership": "",
+          "rank": "1",
+          "leadership": "Chairman",
           "subcommittees": []
         },
         {
@@ -31257,7 +31281,7 @@
           "type": "subcommittee",
           "code": "HM11",
           "name": "Border Security and Enforcement",
-          "rank": "4",
+          "rank": "5",
           "leadership": "",
           "subcommittees": []
         },
@@ -32243,7 +32267,7 @@
           "type": "subcommittee",
           "code": "HM09",
           "name": "Oversight, Investigations, and Accountability",
-          "rank": "4",
+          "rank": "3",
           "leadership": "",
           "subcommittees": []
         },
@@ -32251,7 +32275,7 @@
           "type": "subcommittee",
           "code": "HM11",
           "name": "Border Security and Enforcement",
-          "rank": "3",
+          "rank": "4",
           "leadership": "",
           "subcommittees": []
         }
@@ -32429,7 +32453,7 @@
           "type": "subcommittee",
           "code": "HM05",
           "name": "Counterterrorism and Intelligence",
-          "rank": "5",
+          "rank": "6",
           "leadership": "",
           "subcommittees": []
         },
@@ -33221,7 +33245,7 @@
           "type": "subcommittee",
           "code": "SM23",
           "name": "Contracting and Infrastructure",
-          "rank": "6",
+          "rank": "5",
           "leadership": "",
           "subcommittees": []
         }
@@ -35538,7 +35562,7 @@
           "type": "subcommittee",
           "code": "HM11",
           "name": "Border Security and Enforcement",
-          "rank": "3",
+          "rank": "2",
           "leadership": "",
           "subcommittees": []
         },
@@ -37531,7 +37555,7 @@
           "type": "subcommittee",
           "code": "HM11",
           "name": "Border Security and Enforcement",
-          "rank": "4",
+          "rank": "3",
           "leadership": "",
           "subcommittees": []
         }
