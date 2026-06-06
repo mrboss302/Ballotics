@@ -1,11 +1,148 @@
 {
   "metadata": {
-    "generated_at": "2026-06-05T09:20:21.504586Z",
+    "generated_at": "2026-06-06T09:01:47.186819Z",
     "congress": 119,
     "session": 2,
     "version": 2
   },
   "votes": [
+    {
+      "id": "119-2-S-164",
+      "chamber": "Senate",
+      "congress": 119,
+      "session": 2,
+      "roll_call_number": 164,
+      "date": "2026-06-05T12:00:00-05:00",
+      "question": "On the Motion to Proceed",
+      "required_votes": "1/2",
+      "result": "Rejected",
+      "vote_description": "Motion to Proceed to the House Message to Accompany S. 1318; A bill to direct the American Battle Monuments Commission to establish a program to identify American-Jewish servicemembers buried in United States military cemeteries overseas under markers that incorrectly represent their religion and heritage, and for other purposes.",
+      "vote_type": "",
+      "bill": {
+        "congress": 119,
+        "type": "S.",
+        "number": "1318",
+        "text_url": "https://www.congress.gov/bill/119th-congress/senate-bill/1318/text?format=txt",
+        "ai_summary": "The bill directs the American Battle Monuments Commission to create a program that identifies American-Jewish servicemembers buried in U.S. military cemeteries overseas who have markers that inaccurately represent their religion and heritage. This initiative aims to correct these inaccuracies and honor the true identities of these servicemembers. It affects the families of the identified servicemembers and the broader community that values accurate representation of heritage."
+      },
+      "amendment": {
+        "number": "",
+        "purpose": "No Statement of Purpose on File."
+      },
+      "tie_breaker": {
+        "by_whom": "",
+        "vote": ""
+      },
+      "totals": {
+        "yeas": 47,
+        "nays": 52,
+        "present": 0,
+        "not_voting": 1
+      },
+      "member_votes": {
+        "A000382": "Nay",
+        "A000383": "Yea",
+        "B001230": "Nay",
+        "B001299": "Yea",
+        "B001261": "Yea",
+        "B001267": "Not Voting",
+        "B001243": "Yea",
+        "B001277": "Nay",
+        "B001303": "Nay",
+        "B001288": "Nay",
+        "B001236": "Yea",
+        "B001319": "Yea",
+        "B001305": "Yea",
+        "C000127": "Nay",
+        "C001047": "Yea",
+        "C001075": "Yea",
+        "C001035": "Yea",
+        "C001088": "Nay",
+        "C001056": "Yea",
+        "C001113": "Nay",
+        "C001095": "Yea",
+        "C001096": "Yea",
+        "C000880": "Yea",
+        "C001098": "Yea",
+        "C001114": "Yea",
+        "D000618": "Yea",
+        "D000622": "Nay",
+        "D000563": "Nay",
+        "E000295": "Yea",
+        "F000479": "Yea",
+        "F000463": "Yea",
+        "G000574": "Nay",
+        "G000555": "Nay",
+        "G000359": "Yea",
+        "G000386": "Yea",
+        "H000601": "Yea",
+        "H001076": "Nay",
+        "H001089": "Nay",
+        "H001046": "Nay",
+        "H000273": "Nay",
+        "H001042": "Nay",
+        "H001061": "Yea",
+        "H001104": "Yea",
+        "H001079": "Yea",
+        "J000293": "Yea",
+        "J000312": "Yea",
+        "K000384": "Nay",
+        "K000377": "Nay",
+        "K000393": "Nay",
+        "K000394": "Nay",
+        "K000383": "Nay",
+        "K000367": "Nay",
+        "L000575": "Yea",
+        "L000577": "Nay",
+        "L000570": "Nay",
+        "L000571": "Yea",
+        "M000133": "Nay",
+        "M001198": "Yea",
+        "M000355": "Yea",
+        "M001243": "Yea",
+        "M001176": "Nay",
+        "M001244": "Yea",
+        "M000934": "Yea",
+        "M001242": "Yea",
+        "M001153": "Yea",
+        "M001169": "Nay",
+        "M001111": "Nay",
+        "O000174": "Nay",
+        "P000145": "Nay",
+        "P000603": "Nay",
+        "P000595": "Nay",
+        "R000122": "Nay",
+        "R000618": "Yea",
+        "R000584": "Yea",
+        "R000608": "Nay",
+        "R000605": "Yea",
+        "S000033": "Nay",
+        "S001194": "Nay",
+        "S001150": "Nay",
+        "S001227": "Nay",
+        "S000148": "Nay",
+        "S001217": "Nay",
+        "S001184": "Yea",
+        "S001181": "Nay",
+        "S001232": "Yea",
+        "S001208": "Nay",
+        "S001203": "Nay",
+        "S001198": "Yea",
+        "T000250": "Yea",
+        "T000476": "Yea",
+        "T000278": "Nay",
+        "V000128": "Nay",
+        "W000805": "Nay",
+        "W000790": "Nay",
+        "W000817": "Nay",
+        "W000800": "Nay",
+        "W000802": "Nay",
+        "W000437": "Yea",
+        "W000779": "Nay",
+        "Y000064": "Yea"
+      },
+      "source_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00164.xml"
+    },
     {
       "id": "119-2-S-163",
       "chamber": "Senate",
@@ -5556,7 +5693,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This bill aims to prevent the federal government from giving money to individuals who have been convicted of specific crimes. It affects those individuals by restricting their access to federal funds. The motion seeks to set aside budget rules to allow this amendment to be considered."
       },
       "amendment": {
         "number": "S.Amdt. 5501",
@@ -5693,7 +5830,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The bill aims to ensure that only citizens can register to vote in federal elections and mandates that voters present photo identification. This affects individuals seeking to vote in federal elections, as they will need to provide proof of citizenship and identification. The motion also involves a procedural step related to budgetary rules."
       },
       "amendment": {
         "number": "S.Amdt. 5779",
@@ -5830,7 +5967,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This bill aims to prevent a person from serving as the Director of National Intelligence while also holding the position of head of any other federal department or agency. It affects individuals who might be considered for the Director role and seeks to ensure that this position is not held concurrently with other significant federal leadership roles. The motion involves a procedural step to bypass certain budgetary rules related to this amendment."
       },
       "amendment": {
         "number": "S.Amdt. 5556",
@@ -5967,7 +6104,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "The motion seeks to set aside budget rules to allow for the funding of a proposal to build 7 million new homes. This initiative aims to address housing shortages. It affects individuals and families in need of affordable housing."
       },
       "amendment": {
         "number": "S.Amdt. 5535",
@@ -6104,7 +6241,7 @@
         "type": "S.",
         "number": "2",
         "text_url": "https://www.congress.gov/bill/119th-congress/senate-bill/2/text?format=txt",
-        "ai_summary": "Summary pending."
+        "ai_summary": "Technical procedural vote."
       },
       "amendment": {
         "number": "",
@@ -6241,7 +6378,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This motion seeks to bypass budget rules to allow funding for the HOME Investment Partnerships program. This program supports affordable housing initiatives. It affects communities and individuals in need of housing assistance."
       },
       "amendment": {
         "number": "S.Amdt. 5514",
@@ -6378,7 +6515,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This bill aims to clarify rules regarding the use of funds for the White House Ballroom and prohibits certain expenditures. It affects how budgetary discipline applies to this specific funding. The motion seeks to waive existing budget rules to allow for this amendment."
       },
       "amendment": {
         "number": "S.Amdt. 5512",
@@ -6515,7 +6652,7 @@
         "type": "S.Amdt.",
         "number": "",
         "text_url": "",
-        "ai_summary": "Summary pending."
+        "ai_summary": "This motion seeks to allow the reallocation of funds originally designated for the Anti-Weaponization Fund to instead support fraud enforcement efforts. It affects the budgeting process by changing how specific funds are utilized within the government."
       },
       "amendment": {
         "number": "S.Amdt. 5452",
@@ -6652,7 +6789,7 @@
         "type": "S.",
         "number": "2",
         "text_url": "https://www.congress.gov/bill/119th-congress/senate-bill/2/text?format=txt",
-        "ai_summary": "Summary pending."
+        "ai_summary": "Technical procedural vote."
       },
       "amendment": {
         "number": "",
