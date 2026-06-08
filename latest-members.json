@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-07T09:11:29.832740Z",
+    "last_updated": "2026-06-08T09:46:47.694234Z",
     "total_members": 536,
     "house_count": 436,
     "senate_count": 100,
@@ -9,7 +9,7 @@
       {
         "name": "house_members_clerk_xml",
         "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
-        "retrieved_at": "2026-06-07T09:11:29.427240Z",
+        "retrieved_at": "2026-06-08T09:46:46.849232Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -20,7 +20,7 @@
       {
         "name": "senate_cvc_member_xml",
         "url": "https://www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml",
-        "retrieved_at": "2026-06-07T09:11:29.622506Z",
+        "retrieved_at": "2026-06-08T09:46:47.234956Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -32,7 +32,7 @@
       {
         "name": "senate_cfm_contact_xml",
         "url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
-        "retrieved_at": "2026-06-07T09:11:29.664631Z",
+        "retrieved_at": "2026-06-08T09:46:47.311084Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -39941,6 +39941,14 @@
         },
         {
           "type": "committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
           "rank": "",
@@ -39951,14 +39959,6 @@
           "type": "committee",
           "code": "SSBK00",
           "name": "Committee on Banking, Housing, and Urban Affairs",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40085,6 +40085,14 @@
         },
         {
           "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSAF00",
           "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
@@ -40095,14 +40103,6 @@
           "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40169,6 +40169,14 @@
         },
         {
           "type": "committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSEC00",
           "name": "Joint Economic Committee",
           "rank": "",
@@ -40179,14 +40187,6 @@
           "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40253,6 +40253,14 @@
         },
         {
           "type": "committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SCNC00",
           "name": "United States Senate Caucus on International Narcotics Control",
           "rank": "",
@@ -40263,14 +40271,6 @@
           "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40413,16 +40413,16 @@
         },
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40481,8 +40481,16 @@
         },
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40505,16 +40513,8 @@
         },
         {
           "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40573,8 +40573,8 @@
         },
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40597,8 +40597,8 @@
         },
         {
           "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40649,6 +40649,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSEC00",
           "name": "Joint Economic Committee",
           "rank": "",
@@ -40675,14 +40683,6 @@
           "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40741,6 +40741,14 @@
         },
         {
           "type": "committee",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSTX00",
           "name": "Joint Committee on Taxation",
           "rank": "",
@@ -40767,14 +40775,6 @@
           "type": "committee",
           "code": "SSEG00",
           "name": "Committee on Energy and Natural Resources",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40833,6 +40833,14 @@
         },
         {
           "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
           "rank": "",
@@ -40843,14 +40851,6 @@
           "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40917,16 +40917,16 @@
         },
         {
           "type": "committee",
-          "code": "SSEG00",
-          "name": "Committee on Energy and Natural Resources",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
+          "code": "SSEG00",
+          "name": "Committee on Energy and Natural Resources",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41061,6 +41061,14 @@
         },
         {
           "type": "committee",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SLET00",
           "name": "Select Committee on Ethics",
           "rank": "",
@@ -41071,14 +41079,6 @@
           "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41389,6 +41389,14 @@
         },
         {
           "type": "committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
           "rank": "",
@@ -41399,14 +41407,6 @@
           "type": "committee",
           "code": "SSBK00",
           "name": "Committee on Banking, Housing, and Urban Affairs",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41549,16 +41549,16 @@
         },
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41625,16 +41625,16 @@
         },
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41769,6 +41769,14 @@
         },
         {
           "type": "committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
@@ -41779,14 +41787,6 @@
           "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41913,6 +41913,14 @@
         },
         {
           "type": "committee",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSAF00",
           "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
@@ -41923,14 +41931,6 @@
           "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41989,14 +41989,6 @@
         },
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSAF00",
           "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
@@ -42007,6 +41999,14 @@
           "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42059,6 +42059,14 @@
           "type": "committee",
           "code": "JSIK00",
           "name": "Joint Congressional Committee on Inaugural Ceremonies - 2024",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42118,14 +42126,6 @@
           "rank": "",
           "leadership": "",
           "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
         }
       ],
       "contact": {
@@ -42181,8 +42181,8 @@
         },
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42205,8 +42205,8 @@
         },
         {
           "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42509,6 +42509,14 @@
         },
         {
           "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSPR00",
           "name": "Joint Committee on Printing",
           "rank": "",
@@ -42527,14 +42535,6 @@
           "type": "committee",
           "code": "SSBK00",
           "name": "Committee on Banking, Housing, and Urban Affairs",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42609,16 +42609,16 @@
         },
         {
           "type": "committee",
-          "code": "JSEC00",
-          "name": "Joint Economic Committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
+          "code": "JSEC00",
+          "name": "Joint Economic Committee",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42829,6 +42829,14 @@
         },
         {
           "type": "committee",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
@@ -42839,14 +42847,6 @@
           "type": "committee",
           "code": "SSEG00",
           "name": "Committee on Energy and Natural Resources",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42905,22 +42905,6 @@
         },
         {
           "type": "committee",
-          "code": "SSEG00",
-          "name": "Committee on Energy and Natural Resources",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSSB00",
           "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
@@ -42931,6 +42915,22 @@
           "type": "committee",
           "code": "SSVA00",
           "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSEG00",
+          "name": "Committee on Energy and Natural Resources",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43073,6 +43073,14 @@
         },
         {
           "type": "committee",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SPAG00",
           "name": "Special Committee on Aging",
           "rank": "",
@@ -43083,14 +43091,6 @@
           "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43141,6 +43141,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSLC00",
           "name": "Joint Committee of Congress on the Library",
           "rank": "",
@@ -43167,14 +43175,6 @@
           "type": "committee",
           "code": "SSEG00",
           "name": "Committee on Energy and Natural Resources",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43301,6 +43301,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSAF00",
           "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
@@ -43319,14 +43327,6 @@
           "type": "committee",
           "code": "SSEG00",
           "name": "Committee on Energy and Natural Resources",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43697,6 +43697,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -43715,14 +43723,6 @@
           "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43789,6 +43789,14 @@
         },
         {
           "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSEC00",
           "name": "Joint Economic Committee",
           "rank": "",
@@ -43815,14 +43823,6 @@
           "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44201,16 +44201,16 @@
         },
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44337,6 +44337,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSPR00",
           "name": "Joint Committee on Printing",
           "rank": "",
@@ -44363,14 +44371,6 @@
           "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44521,6 +44521,14 @@
         },
         {
           "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSPR00",
           "name": "Joint Committee on Printing",
           "rank": "",
@@ -44539,14 +44547,6 @@
           "type": "committee",
           "code": "SSBU00",
           "name": "Committee on the Budget",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44689,6 +44689,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSAF00",
           "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
@@ -44723,14 +44731,6 @@
           "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45017,6 +45017,14 @@
         },
         {
           "type": "committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
           "rank": "",
@@ -45027,14 +45035,6 @@
           "type": "committee",
           "code": "SSBU00",
           "name": "Committee on the Budget",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45085,6 +45085,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -45095,14 +45103,6 @@
           "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45169,6 +45169,14 @@
         },
         {
           "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSPR00",
           "name": "Joint Committee on Printing",
           "rank": "",
@@ -45195,14 +45203,6 @@
           "type": "committee",
           "code": "SSBU00",
           "name": "Committee on the Budget",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45565,6 +45565,14 @@
         },
         {
           "type": "committee",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -45591,14 +45599,6 @@
           "type": "committee",
           "code": "SSEG00",
           "name": "Committee on Energy and Natural Resources",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45657,6 +45657,14 @@
         },
         {
           "type": "committee",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
@@ -45667,14 +45675,6 @@
           "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45725,14 +45725,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -45767,6 +45759,14 @@
           "type": "committee",
           "code": "SSBK00",
           "name": "Committee on Banking, Housing, and Urban Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45841,16 +45841,16 @@
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46001,16 +46001,16 @@
         },
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46145,16 +46145,16 @@
         },
         {
           "type": "committee",
-          "code": "SLIN00",
-          "name": "Select Committee on Intelligence",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
+          "code": "SLIN00",
+          "name": "Select Committee on Intelligence",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46221,16 +46221,16 @@
         },
         {
           "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46373,8 +46373,8 @@
         },
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46405,8 +46405,8 @@
         },
         {
           "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46457,6 +46457,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
@@ -46467,14 +46475,6 @@
           "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46533,6 +46533,14 @@
         },
         {
           "type": "committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSAF00",
           "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
@@ -46543,14 +46551,6 @@
           "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46685,6 +46685,14 @@
         },
         {
           "type": "committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
@@ -46695,14 +46703,6 @@
           "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46845,8 +46845,8 @@
         },
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46861,8 +46861,8 @@
         },
         {
           "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46921,6 +46921,14 @@
         },
         {
           "type": "committee",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSAF00",
           "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
@@ -46939,14 +46947,6 @@
           "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47081,6 +47081,14 @@
         },
         {
           "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -47099,14 +47107,6 @@
           "type": "committee",
           "code": "SSBU00",
           "name": "Committee on the Budget",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47325,16 +47325,16 @@
         },
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47409,14 +47409,6 @@
         },
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SCNC00",
           "name": "United States Senate Caucus on International Narcotics Control",
           "rank": "",
@@ -47427,6 +47419,14 @@
           "type": "committee",
           "code": "SSBU00",
           "name": "Committee on the Budget",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47485,8 +47485,8 @@
         },
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47517,8 +47517,8 @@
         },
         {
           "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47661,6 +47661,14 @@
         },
         {
           "type": "committee",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -47671,14 +47679,6 @@
           "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
