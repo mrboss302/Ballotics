@@ -1,26 +1,26 @@
 {
   "metadata": {
-    "last_updated": "2026-08-12T09:16:14.596042Z",
-    "total_members": 537,
-    "house_count": 437,
+    "last_updated": "2026-09-02T12:40:40.782858Z",
+    "total_members": 538,
+    "house_count": 438,
     "senate_count": 100,
     "source_count": 3,
     "sources": [
       {
         "name": "house_members_clerk_xml",
         "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
-        "retrieved_at": "2026-08-12T09:16:13.963862Z",
+        "retrieved_at": "2026-09-02T12:40:39.971256Z",
         "status": "success",
         "http_status": 200,
         "error": "",
-        "parsed_members": 437,
+        "parsed_members": 438,
         "skipped_vacancies": 0,
-        "skipped_missing_bioguide": 4
+        "skipped_missing_bioguide": 3
       },
       {
         "name": "senate_cvc_member_xml",
         "url": "https://www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml",
-        "retrieved_at": "2026-08-12T09:16:14.348365Z",
+        "retrieved_at": "2026-09-02T12:40:40.262650Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -32,7 +32,7 @@
       {
         "name": "senate_cfm_contact_xml",
         "url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
-        "retrieved_at": "2026-08-12T09:16:14.420128Z",
+        "retrieved_at": "2026-09-02T12:40:40.343410Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -2345,6 +2345,22 @@
           "name": "Early Childhood, Elementary, and Secondary Education",
           "rank": "1",
           "leadership": "Chairman",
+          "subcommittees": []
+        },
+        {
+          "type": "subcommittee",
+          "code": "JU03",
+          "name": "Courts, Intellectual Property, Artificial Intelligence, and the Internet",
+          "rank": "8",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "subcommittee",
+          "code": "JU08",
+          "name": "Crime and Federal Government Surveillance",
+          "rank": "6",
+          "leadership": "",
           "subcommittees": []
         }
       ],
@@ -5306,9 +5322,9 @@
         },
         {
           "type": "subcommittee",
-          "code": "JU10",
-          "name": "The Constitution and Limited Government",
-          "rank": "6",
+          "code": "JU08",
+          "name": "Crime and Federal Government Surveillance",
+          "rank": "5",
           "leadership": "",
           "subcommittees": []
         }
@@ -7779,14 +7795,6 @@
         },
         {
           "type": "subcommittee",
-          "code": "GO16",
-          "name": "Delivering on Government Efficiency",
-          "rank": "2",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "subcommittee",
           "code": "GO24",
           "name": "Government Operations",
           "rank": "2",
@@ -8812,7 +8820,7 @@
           "type": "subcommittee",
           "code": "GO16",
           "name": "Delivering on Government Efficiency",
-          "rank": "4",
+          "rank": "3",
           "leadership": "",
           "subcommittees": []
         },
@@ -9966,16 +9974,16 @@
         },
         {
           "type": "subcommittee",
-          "code": "JU08",
-          "name": "Crime and Federal Government Surveillance",
-          "rank": "2",
+          "code": "JU03",
+          "name": "Courts, Intellectual Property, Artificial Intelligence, and the Internet",
+          "rank": "7",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "subcommittee",
-          "code": "JU13",
-          "name": "Oversight",
+          "code": "JU08",
+          "name": "Crime and Federal Government Surveillance",
           "rank": "2",
           "leadership": "",
           "subcommittees": []
@@ -10797,7 +10805,7 @@
           "type": "subcommittee",
           "code": "JU13",
           "name": "Oversight",
-          "rank": "3",
+          "rank": "2",
           "leadership": "",
           "subcommittees": []
         },
@@ -11626,6 +11634,59 @@
         "caucus": "R",
         "elected_date": "20241105",
         "sworn_date": "20250103"
+      },
+      "source": {
+        "primary": "house_members_clerk_xml",
+        "contact": "house_members_clerk_xml",
+        "contact_status": "matched"
+      }
+    },
+    "B001328": {
+      "bioguide_id": "B001328",
+      "chamber": "House",
+      "name": {
+        "first": "Everton",
+        "last": "Blair",
+        "official": "Everton Blair Jr.",
+        "courtesy_title": "Mr."
+      },
+      "party": {
+        "code": "D",
+        "name": "Democratic"
+      },
+      "state": "GA",
+      "district": "13th",
+      "leadership": {
+        "position": "",
+        "source": "",
+        "last_reviewed": ""
+      },
+      "committees": [
+        {
+          "type": "committee",
+          "code": "",
+          "name": "",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        }
+      ],
+      "contact": {
+        "status": "matched",
+        "phone": "(202) 225-2939",
+        "office_building": "CHOB",
+        "office_room": "468",
+        "office_zip": "20515",
+        "address": "",
+        "website": "",
+        "email": ""
+      },
+      "house_data": {
+        "town_name": "Lilburn",
+        "prior_congress": "0",
+        "caucus": "D",
+        "elected_date": "20260825",
+        "sworn_date": "20260901"
       },
       "source": {
         "primary": "house_members_clerk_xml",
@@ -16807,14 +16868,6 @@
           "rank": "5",
           "leadership": "",
           "subcommittees": []
-        },
-        {
-          "type": "subcommittee",
-          "code": "GO33",
-          "name": "Federal Law Enforcement",
-          "rank": "5",
-          "leadership": "",
-          "subcommittees": []
         }
       ],
       "contact": {
@@ -16913,7 +16966,7 @@
           "type": "subcommittee",
           "code": "GO16",
           "name": "Delivering on Government Efficiency",
-          "rank": "3",
+          "rank": "2",
           "leadership": "",
           "subcommittees": []
         }
@@ -22421,7 +22474,7 @@
           "type": "subcommittee",
           "code": "JU08",
           "name": "Crime and Federal Government Surveillance",
-          "rank": "6",
+          "rank": "7",
           "leadership": "",
           "subcommittees": []
         },
@@ -23057,22 +23110,6 @@
           "code": "SM27",
           "name": "Economic Growth, Tax, and Capital Access",
           "rank": "4",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "subcommittee",
-          "code": "VR03",
-          "name": "Health",
-          "rank": "5",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "subcommittee",
-          "code": "VR11",
-          "name": "Technology Modernization",
-          "rank": "2",
           "leadership": "",
           "subcommittees": []
         }
@@ -24995,6 +25032,14 @@
           "subcommittees": []
         },
         {
+          "type": "committee",
+          "code": "ZS00",
+          "name": "Select Committee on the  Strategic Competition Between the United States and the Chinese Communist Party",
+          "rank": "11",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
           "type": "subcommittee",
           "code": "WM05",
           "name": "Tax",
@@ -25545,7 +25590,7 @@
           "type": "subcommittee",
           "code": "JU10",
           "name": "The Constitution and Limited Government",
-          "rank": "7",
+          "rank": "6",
           "leadership": "",
           "subcommittees": []
         }
@@ -30434,6 +30479,22 @@
           "rank": "3",
           "leadership": "",
           "subcommittees": []
+        },
+        {
+          "type": "subcommittee",
+          "code": "JU01",
+          "name": "Immigration Integrity, Security, and Enforcement",
+          "rank": "10",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "subcommittee",
+          "code": "JU10",
+          "name": "The Constitution and Limited Government",
+          "rank": "7",
+          "leadership": "",
+          "subcommittees": []
         }
       ],
       "contact": {
@@ -34529,6 +34590,22 @@
           "rank": "17",
           "leadership": "",
           "subcommittees": []
+        },
+        {
+          "type": "subcommittee",
+          "code": "GO16",
+          "name": "Delivering on Government Efficiency",
+          "rank": "8",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "subcommittee",
+          "code": "GO33",
+          "name": "Federal Law Enforcement",
+          "rank": "5",
+          "leadership": "",
+          "subcommittees": []
         }
       ],
       "contact": {
@@ -35549,7 +35626,7 @@
           "type": "subcommittee",
           "code": "GO16",
           "name": "Delivering on Government Efficiency",
-          "rank": "6",
+          "rank": "5",
           "leadership": "",
           "subcommittees": []
         },
@@ -35998,7 +36075,15 @@
           "type": "subcommittee",
           "code": "GO16",
           "name": "Delivering on Government Efficiency",
-          "rank": "5",
+          "rank": "4",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "subcommittee",
+          "code": "GO33",
+          "name": "Federal Law Enforcement",
+          "rank": "1",
           "leadership": "",
           "subcommittees": []
         }
@@ -37635,7 +37720,7 @@
           "type": "subcommittee",
           "code": "GO16",
           "name": "Delivering on Government Efficiency",
-          "rank": "7",
+          "rank": "6",
           "leadership": "",
           "subcommittees": []
         },
@@ -37728,7 +37813,7 @@
           "type": "subcommittee",
           "code": "GO16",
           "name": "Delivering on Government Efficiency",
-          "rank": "8",
+          "rank": "7",
           "leadership": "",
           "subcommittees": []
         },
@@ -38339,7 +38424,7 @@
           "type": "subcommittee",
           "code": "JU03",
           "name": "Courts, Intellectual Property, Artificial Intelligence, and the Internet",
-          "rank": "8",
+          "rank": "9",
           "leadership": "",
           "subcommittees": []
         },
