@@ -1,26 +1,26 @@
 {
   "metadata": {
-    "last_updated": "2026-09-02T12:40:40.782858Z",
-    "total_members": 538,
-    "house_count": 438,
+    "last_updated": "2026-09-04T12:37:11.288692Z",
+    "total_members": 539,
+    "house_count": 439,
     "senate_count": 100,
     "source_count": 3,
     "sources": [
       {
         "name": "house_members_clerk_xml",
         "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
-        "retrieved_at": "2026-09-02T12:40:39.971256Z",
+        "retrieved_at": "2026-09-04T12:37:10.209753Z",
         "status": "success",
         "http_status": 200,
         "error": "",
-        "parsed_members": 438,
+        "parsed_members": 439,
         "skipped_vacancies": 0,
-        "skipped_missing_bioguide": 3
+        "skipped_missing_bioguide": 2
       },
       {
         "name": "senate_cvc_member_xml",
         "url": "https://www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml",
-        "retrieved_at": "2026-09-02T12:40:40.262650Z",
+        "retrieved_at": "2026-09-04T12:37:10.798061Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -32,7 +32,7 @@
       {
         "name": "senate_cfm_contact_xml",
         "url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
-        "retrieved_at": "2026-09-02T12:40:40.343410Z",
+        "retrieved_at": "2026-09-04T12:37:10.856753Z",
         "status": "success",
         "http_status": 200,
         "error": "",
@@ -3254,6 +3254,59 @@
         "caucus": "D",
         "elected_date": "20241105",
         "sworn_date": "20250103"
+      },
+      "source": {
+        "primary": "house_members_clerk_xml",
+        "contact": "house_members_clerk_xml",
+        "contact_status": "matched"
+      }
+    },
+    "W000832": {
+      "bioguide_id": "W000832",
+      "chamber": "House",
+      "name": {
+        "first": "Aisha",
+        "last": "Wahab",
+        "official": "Aisha Wahab",
+        "courtesy_title": "Ms."
+      },
+      "party": {
+        "code": "D",
+        "name": "Democratic"
+      },
+      "state": "CA",
+      "district": "14th",
+      "leadership": {
+        "position": "",
+        "source": "",
+        "last_reviewed": ""
+      },
+      "committees": [
+        {
+          "type": "committee",
+          "code": "",
+          "name": "",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        }
+      ],
+      "contact": {
+        "status": "matched",
+        "phone": "(202) 225-5065",
+        "office_building": "CHOB",
+        "office_room": "174",
+        "office_zip": "20515",
+        "address": "",
+        "website": "",
+        "email": ""
+      },
+      "house_data": {
+        "town_name": "East Bay",
+        "prior_congress": "0",
+        "caucus": "D",
+        "elected_date": "20260818",
+        "sworn_date": "20260902"
       },
       "source": {
         "primary": "house_members_clerk_xml",
