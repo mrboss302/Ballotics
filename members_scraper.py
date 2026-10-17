@@ -47,7 +47,11 @@ MIN_CHAMBER_SIZE = {"House": 400, "Senate": 90}
 MAX_CHAMBER_SIZE = {"House": 450, "Senate": 105}
 BIOGUIDE_PATTERN = re.compile(r"^[A-Z]\d{6}$")
 HOUSE_PROFILE_PATTERN = re.compile(r"/members/([A-Za-z]\d{6})(?:/)?$", re.I)
-# Senate.gov leadership cards identify senators through portrait URLs such as\n# /bioguide/photo/G/G000386.jpg; retain compatibility with older /bio/ links.\nSENATE_BIO_PATTERN = re.compile(\n    r"/(?:(?:search/)?bio|bioguide/photo/[A-Za-z])/([A-Za-z]\\d{6})(?:\\.(?:jpe?g|png))?/?$", re.I\n)
+# Senate.gov leadership cards identify senators through portrait URLs such as
+# /bioguide/photo/G/G000386.jpg; retain compatibility with older /bio/ links.
+SENATE_BIO_PATTERN = re.compile(
+    r"/(?:(?:search/)?bio|bioguide/photo/[A-Za-z])/([A-Za-z]\d{6})(?:\.(?:jpe?g|png))?/?$", re.I
+)
 
 HOUSE_TITLES = (
     "Speaker of the House", "Majority Leader", "Majority Whip",
