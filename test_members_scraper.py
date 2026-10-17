@@ -20,10 +20,15 @@ class SenateLeadershipParsingTests(unittest.TestCase):
                 portrait_url = (
                     f"https://bioguide.congress.gov/bioguide/photo/{bio[0]}/{bio}.jpg"
                 )
+            identity = (
+                f'<a href="{portrait_url}"></a>'
+                if index == 0
+                else f'<img src="{portrait_url}" alt="Senator portrait">'
+            )
             cards.append(
-                f'<a href="{portrait_url}"><img alt="Senator portrait"></a>'
-                f'<a href="/position">{title}</a>'
-                f'<a href="https://example.senate.gov">{bio}</a>'
+                identity
+                + f'<a href="/position">{title}</a>'
+                + f'<a href="https://example.senate.gov">{bio}</a>'
             )
 
         committee_bio = "Z999999"
@@ -34,8 +39,8 @@ class SenateLeadershipParsingTests(unittest.TestCase):
             + "<h2>Political Party Leaders</h2>"
             + "".join(cards[1:])
             + "<h2>Committee Chair</h2>"
-            + f'<a href="https://bioguide.congress.gov/bioguide/photo/Z/{committee_bio}.jpg">'
-              '<img alt="Senator portrait"></a><a>Chair</a>'
+            + f'<img src="https://bioguide.congress.gov/bioguide/photo/Z/{committee_bio}.jpg" '
+              'alt="Senator portrait"><a>Chair</a>'
         )
 
         roles, errors = parse_official_leadership(
