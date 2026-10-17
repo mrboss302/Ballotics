@@ -342,11 +342,19 @@ class EvidenceHTML(HTMLParser):
         self._hidden = 0
 
     def handle_starttag(self, tag: str, attrs: List[Tuple[str, Optional[str]]]) -> None:
+        attributes = dict(attrs)
         if tag in {"style", "script", "noscript"}:
             self._hidden += 1
         if tag == "a":
-            href = dict(attrs).get("href") or ""
+            href = attributes.get("href") or ""
             self._anchor = {"href": href, "start": len(self.words)}
+        elif tag == "img":
+            # Senate.gov exposes Bioguide IDs in portrait image src URLs,
+            # rather than linking the images to member biography pages.
+            src = attributes.get("src") or ""
+            if src:
+                self.links.append({"href": src, "start": len(self.words),
+                                   "end": len(self.words), "text": attributes.get("alt", "")})
 
     def handle_data(self, data: str) -> None:
         if self._hidden:
