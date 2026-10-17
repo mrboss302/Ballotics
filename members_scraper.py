@@ -47,7 +47,11 @@ MIN_CHAMBER_SIZE = {"House": 400, "Senate": 90}
 MAX_CHAMBER_SIZE = {"House": 450, "Senate": 105}
 BIOGUIDE_PATTERN = re.compile(r"^[A-Z]\d{6}$")
 HOUSE_PROFILE_PATTERN = re.compile(r"/members/([A-Za-z]\d{6})(?:/)?$", re.I)
-SENATE_BIO_PATTERN = re.compile(r"/bio/([A-Za-z]\d{6})(?:/)?$", re.I)
+# Senate.gov leadership cards identify senators through portrait URLs such as
+# /bioguide/photo/G/G000386.jpg; retain compatibility with older /bio/ links.
+SENATE_BIO_PATTERN = re.compile(
+    r"/(?:(?:search/)?bio|bioguide/photo/[A-Za-z])/([A-Za-z]\d{6})(?:\.(?:jpe?g|png))?/?$", re.I
+)
 
 HOUSE_TITLES = (
     "Speaker of the House", "Majority Leader", "Majority Whip",
@@ -338,11 +342,19 @@ class EvidenceHTML(HTMLParser):
         self._hidden = 0
 
     def handle_starttag(self, tag: str, attrs: List[Tuple[str, Optional[str]]]) -> None:
+        attributes = dict(attrs)
         if tag in {"style", "script", "noscript"}:
             self._hidden += 1
         if tag == "a":
-            href = dict(attrs).get("href") or ""
+            href = attributes.get("href") or ""
             self._anchor = {"href": href, "start": len(self.words)}
+        elif tag == "img":
+            # Senate.gov exposes Bioguide IDs in portrait image src URLs,
+            # rather than linking the images to member biography pages.
+            src = attributes.get("src") or ""
+            if src:
+                self.links.append({"href": src, "start": len(self.words),
+                                   "end": len(self.words), "text": attributes.get("alt", "")})
 
     def handle_data(self, data: str) -> None:
         if self._hidden:
