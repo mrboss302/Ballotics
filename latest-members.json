@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": 3,
-    "last_updated": "2026-10-22T13:39:00.415652Z",
+    "last_updated": "2026-10-24T12:32:46.386754Z",
     "large_roster_change_explicitly_approved": false,
     "total_members": 539,
     "house_count": 439,
@@ -11,7 +11,7 @@
       {
         "name": "house_members_clerk_xml",
         "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
-        "retrieved_at": "2026-10-22T13:38:59.481657Z",
+        "retrieved_at": "2026-10-24T12:32:42.088937Z",
         "status": "success",
         "error": "",
         "parsed_members": 439,
@@ -22,26 +22,26 @@
       {
         "name": "senate_cvc_member_xml",
         "url": "https://www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml",
-        "retrieved_at": "2026-10-22T13:38:59.739968Z",
-        "status": "success",
-        "error": "",
+        "retrieved_at": "2026-10-24T12:32:42.353362Z",
+        "status": "fallback",
+        "error": "Request failed for www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml",
+        "fallback_source": "senate_cfm_contact_xml",
         "parsed_members": 100,
         "missing_bioguide": 0,
         "duplicate_bioguide": 0,
-        "missing_contacts": 0,
-        "preserved_contacts": 0
+        "preserved_committees": 100
       },
       {
         "name": "senate_cfm_contact_xml",
         "url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
-        "retrieved_at": "2026-10-22T13:38:59.796433Z",
+        "retrieved_at": "2026-10-24T12:32:45.661619Z",
         "status": "success",
         "error": ""
       },
       {
         "name": "house_leadership_directory",
         "url": "https://clerk.house.gov/Members/ViewLeadership",
-        "retrieved_at": "2026-10-22T13:38:59.973313Z",
+        "retrieved_at": "2026-10-24T12:32:45.878836Z",
         "status": "success",
         "error": "",
         "roles": 9
@@ -49,7 +49,7 @@
       {
         "name": "senate_leadership_directory",
         "url": "https://www.senate.gov/senators/leadership.htm",
-        "retrieved_at": "2026-10-22T13:39:00.332371Z",
+        "retrieved_at": "2026-10-24T12:32:46.243866Z",
         "status": "success",
         "error": "",
         "roles": 18
@@ -57,7 +57,7 @@
     ],
     "leadership": {
       "source": "official_chamber_directories",
-      "checked_at": "2026-10-22T13:39:00.412699Z",
+      "checked_at": "2026-10-24T12:32:46.384759Z",
       "congress_gov_api_used": false,
       "api_requests": 0,
       "api_errors": [],
@@ -40160,7 +40160,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40222,7 +40222,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40301,7 +40301,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40379,7 +40379,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40458,7 +40458,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40536,7 +40536,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40622,7 +40622,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40708,7 +40708,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40786,7 +40786,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40873,7 +40873,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40967,7 +40967,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41053,7 +41053,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41139,7 +41139,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41233,7 +41233,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41320,7 +41320,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41398,7 +41398,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41468,7 +41468,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41554,7 +41554,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41656,7 +41656,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41743,7 +41743,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41830,7 +41830,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41908,7 +41908,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41986,7 +41986,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42064,7 +42064,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42073,9 +42073,9 @@
       "bioguide_id": "C001114",
       "chamber": "Senate",
       "name": {
-        "first": "John  R.",
+        "first": "John R.",
         "last": "Curtis",
-        "official": "John  R. Curtis",
+        "official": "John R. Curtis",
         "courtesy_title": ""
       },
       "party": {
@@ -42142,7 +42142,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42220,7 +42220,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42298,7 +42298,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42377,7 +42377,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42455,7 +42455,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42533,7 +42533,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42651,7 +42651,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42737,7 +42737,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42815,7 +42815,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42893,7 +42893,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42996,7 +42996,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43082,7 +43082,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43168,7 +43168,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43246,7 +43246,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43324,7 +43324,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43402,7 +43402,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43488,7 +43488,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43566,7 +43566,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43652,7 +43652,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43738,7 +43738,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43816,7 +43816,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43894,7 +43894,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43972,7 +43972,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44058,7 +44058,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44136,7 +44136,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44222,7 +44222,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44231,9 +44231,9 @@
       "bioguide_id": "K000383",
       "chamber": "Senate",
       "name": {
-        "first": "Angus S.",
+        "first": "Angus S., Jr.",
         "last": "King",
-        "official": "Angus S. King",
+        "official": "Angus S., Jr. King",
         "courtesy_title": ""
       },
       "party": {
@@ -44300,7 +44300,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44411,7 +44411,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44498,7 +44498,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44576,7 +44576,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44586,8 +44586,8 @@
       "chamber": "Senate",
       "name": {
         "first": "Ben Ray",
-        "last": "Lujan",
-        "official": "Ben Ray Lujan",
+        "last": "Luján",
+        "official": "Ben Ray Luján",
         "courtesy_title": ""
       },
       "party": {
@@ -44670,7 +44670,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44740,7 +44740,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44818,7 +44818,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44896,7 +44896,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44982,7 +44982,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45068,7 +45068,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45162,7 +45162,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45256,7 +45256,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45350,7 +45350,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45436,7 +45436,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45514,7 +45514,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45593,7 +45593,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45671,7 +45671,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45741,7 +45741,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45843,7 +45843,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45921,7 +45921,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45999,7 +45999,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46077,7 +46077,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46155,7 +46155,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46164,9 +46164,9 @@
       "bioguide_id": "R000584",
       "chamber": "Senate",
       "name": {
-        "first": "James  E.",
+        "first": "James E.",
         "last": "Risch",
-        "official": "James  E. Risch",
+        "official": "James E. Risch",
         "courtesy_title": ""
       },
       "party": {
@@ -46249,7 +46249,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46327,7 +46327,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46421,7 +46421,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46516,7 +46516,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46611,7 +46611,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46689,7 +46689,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46767,7 +46767,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46846,7 +46846,93 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
+        "contact": "senate_cfm_contact_xml",
+        "contact_status": "matched"
+      }
+    },
+    "S001217": {
+      "bioguide_id": "S001217",
+      "chamber": "Senate",
+      "name": {
+        "first": "Rick",
+        "last": "Scott",
+        "official": "Rick Scott",
+        "courtesy_title": ""
+      },
+      "party": {
+        "code": "R",
+        "name": "Republican"
+      },
+      "state": "FL",
+      "district": "",
+      "leadership": {
+        "position": "",
+        "source": "",
+        "last_reviewed": "",
+        "roles": [],
+        "status": "verified"
+      },
+      "committees": [
+        {
+          "type": "committee",
+          "code": "SPAG00",
+          "name": "Special Committee on Aging",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSFR00",
+          "name": "Committee on Foreign Relations",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSGA00",
+          "name": "Committee on Homeland Security and Governmental Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        }
+      ],
+      "contact": {
+        "status": "matched",
+        "phone": "(202) 224-5274",
+        "office_building": "",
+        "office_room": "",
+        "office_zip": "",
+        "address": "110 Hart Senate Office Building Washington DC 20510",
+        "website": "https://www.rickscott.senate.gov/",
+        "email": "https://www.rickscott.senate.gov/contact/contact"
+      },
+      "senate_data": {
+        "lis_member_id": "S404",
+        "hometown": "Naples",
+        "office": "110 Hart",
+        "senate_class": "Class I"
+      },
+      "source": {
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46933,93 +47019,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
-        "contact": "senate_cfm_contact_xml",
-        "contact_status": "matched"
-      }
-    },
-    "S001217": {
-      "bioguide_id": "S001217",
-      "chamber": "Senate",
-      "name": {
-        "first": "Rick",
-        "last": "Scott",
-        "official": "Rick Scott",
-        "courtesy_title": ""
-      },
-      "party": {
-        "code": "R",
-        "name": "Republican"
-      },
-      "state": "FL",
-      "district": "",
-      "leadership": {
-        "position": "",
-        "source": "",
-        "last_reviewed": "",
-        "roles": [],
-        "status": "verified"
-      },
-      "committees": [
-        {
-          "type": "committee",
-          "code": "SPAG00",
-          "name": "Special Committee on Aging",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSFR00",
-          "name": "Committee on Foreign Relations",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSGA00",
-          "name": "Committee on Homeland Security and Governmental Affairs",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        }
-      ],
-      "contact": {
-        "status": "matched",
-        "phone": "(202) 224-5274",
-        "office_building": "",
-        "office_room": "",
-        "office_zip": "",
-        "address": "110 Hart Senate Office Building Washington DC 20510",
-        "website": "https://www.rickscott.senate.gov/",
-        "email": "https://www.rickscott.senate.gov/contact/contact"
-      },
-      "senate_data": {
-        "lis_member_id": "S404",
-        "hometown": "Naples",
-        "office": "110 Hart",
-        "senate_class": "Class I"
-      },
-      "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47113,7 +47113,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47183,7 +47183,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47261,7 +47261,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47339,7 +47339,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47417,7 +47417,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47504,7 +47504,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47590,7 +47590,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47676,7 +47676,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47754,7 +47754,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47849,7 +47849,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47927,7 +47927,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -48014,7 +48014,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -48092,7 +48092,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -48186,7 +48186,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -48280,7 +48280,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -48366,7 +48366,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -48444,7 +48444,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cvc_member_xml",
+        "primary": "senate_cfm_contact_xml_fallback",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
