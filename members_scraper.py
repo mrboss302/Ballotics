@@ -267,6 +267,10 @@ def parse_senate_contacts(root: Optional[ET.Element]) -> Dict[str, Dict[str, str
                 "phone": safe_text(person.find("phone")),
                 "email": safe_text(person.find("email")),
                 "website": safe_text(person.find("website")),
+                "first": safe_text(person.find("first_name")),
+                "last": safe_text(person.find("last_name")),
+                "party": safe_text(person.find("party")),
+                "state": safe_text(person.find("state")),
             }
     return output
 
@@ -328,6 +332,54 @@ def parse_senate_members(root: ET.Element, contacts: Dict[str, Dict[str, str]],
                        "contact": "senate_cfm_contact_xml" if status == "matched" else
                                   ("previous_verified_snapshot" if status == "stale_preserved" else ""),
                        "contact_status": status},
+        }
+    return output, stats
+
+
+def parse_senate_members_from_contacts(root: ET.Element,
+                                       old_members: Dict[str, Dict[str, Any]]) -> Tuple[Dict[str, Dict[str, Any]], Dict[str, int]]:
+    """Build a guarded Senate roster from the official Senate contact feed.
+
+    This feed lacks committee assignments, so carry those forward only from the
+    last verified member snapshot and identify them as preserved data.
+    """
+    output: Dict[str, Dict[str, Any]] = {}
+    stats = {"missing_bioguide": 0, "duplicate_bioguide": 0,
+             "preserved_committees": 0}
+    for person in root.findall(".//member"):
+        bio = safe_text(person.find("bioguide_id")) or safe_text(person.find("bioguideid"))
+        if not BIOGUIDE_PATTERN.fullmatch(bio):
+            stats["missing_bioguide"] += 1
+            continue
+        if bio in output:
+            stats["duplicate_bioguide"] += 1
+            continue
+        first = safe_text(person.find("first_name"))
+        last = safe_text(person.find("last_name"))
+        official = " ".join(filter(None, (first, last)))
+        prior = old_members.get(bio, {})
+        committees = prior.get("committees", []) if prior.get("chamber") == "Senate" else []
+        if committees:
+            stats["preserved_committees"] += 1
+        output[bio] = {
+            "bioguide_id": bio, "chamber": "Senate",
+            "name": {"first": first, "last": last, "official": official, "courtesy_title": ""},
+            "party": normalize_party(safe_text(person.find("party"))),
+            "state": safe_text(person.find("state")), "district": "",
+            "leadership": {"position": "", "source": "", "last_reviewed": "", "roles": [], "status": "unverified"},
+            "committees": committees,
+            "contact": {"status": "matched", "phone": safe_text(person.find("phone")),
+                        "office_building": "", "office_room": "", "office_zip": "",
+                        "address": safe_text(person.find("address")),
+                        "website": safe_text(person.find("website")),
+                        "email": safe_text(person.find("email"))},
+            "senate_data": {"lis_member_id": prior.get("senate_data", {}).get("lis_member_id", ""),
+                            "hometown": prior.get("senate_data", {}).get("hometown", ""),
+                            "office": prior.get("senate_data", {}).get("office", ""),
+                            "senate_class": safe_text(person.find("class"))},
+            "source": {"primary": "senate_cfm_contact_xml_fallback",
+                       "contact": "senate_cfm_contact_xml",
+                       "contact_status": "matched"},
         }
     return output, stats
 
@@ -784,8 +836,8 @@ def build_member_database(filename: str = OUTPUT_FILE, *, api_key: Optional[str]
     failures: List[str] = []
     if house_xml is None:
         failures.append("House primary roster unavailable")
-    if senate_xml is None:
-        failures.append("Senate primary roster unavailable")
+    if senate_xml is None and contact_xml is None:
+        failures.append("Senate primary roster and Senate contact fallback unavailable")
     if failures:
         atomic_write(validation_path, {"checked_at": utc_now_iso(), "published": False,
                                        "errors": failures, "sources": sources})
@@ -793,7 +845,15 @@ def build_member_database(filename: str = OUTPUT_FILE, *, api_key: Optional[str]
         return False
     assert house_xml is not None and senate_xml is not None
     house, hstats = parse_house_members(house_xml)
-    senate, sstats = parse_senate_members(senate_xml, parse_senate_contacts(contact_xml), old_members)
+    contacts = parse_senate_contacts(contact_xml)
+    if senate_xml is not None:
+        senate, sstats = parse_senate_members(senate_xml, contacts, old_members)
+    else:
+        assert contact_xml is not None
+        senate, sstats = parse_senate_members_from_contacts(contact_xml, old_members)
+        senate_meta["status"] = "fallback"
+        senate_meta["fallback_source"] = "senate_cfm_contact_xml"
+        LOGGER.warning("Using official Senate contact feed as roster fallback; prior verified committee assignments are preserved where available.")
     sources[0]["parsed_members"] = len(house)
     sources[0].update(hstats)
     sources[1]["parsed_members"] = len(senate)
