@@ -843,7 +843,7 @@ def build_member_database(filename: str = OUTPUT_FILE, *, api_key: Optional[str]
                                        "errors": failures, "sources": sources})
         LOGGER.error("Publication blocked: %s", "; ".join(failures))
         return False
-    assert house_xml is not None and senate_xml is not None
+    assert house_xml is not None
     house, hstats = parse_house_members(house_xml)
     contacts = parse_senate_contacts(contact_xml)
     if senate_xml is not None:
