@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": 3,
-    "last_updated": "2026-10-24T12:32:46.386754Z",
+    "last_updated": "2026-11-09T18:35:11.048626Z",
     "large_roster_change_explicitly_approved": false,
     "total_members": 539,
     "house_count": 439,
@@ -11,7 +11,7 @@
       {
         "name": "house_members_clerk_xml",
         "url": "https://clerk.house.gov/xml/lists/MemberData.xml",
-        "retrieved_at": "2026-10-24T12:32:42.088937Z",
+        "retrieved_at": "2026-11-09T18:35:10.181270Z",
         "status": "success",
         "error": "",
         "parsed_members": 439,
@@ -22,26 +22,26 @@
       {
         "name": "senate_cvc_member_xml",
         "url": "https://www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml",
-        "retrieved_at": "2026-10-24T12:32:42.353362Z",
-        "status": "fallback",
-        "error": "Request failed for www.senate.gov/legislative/LIS_MEMBER/cvc_member_data.xml",
-        "fallback_source": "senate_cfm_contact_xml",
+        "retrieved_at": "2026-11-09T18:35:10.402094Z",
+        "status": "success",
+        "error": "",
         "parsed_members": 100,
         "missing_bioguide": 0,
         "duplicate_bioguide": 0,
-        "preserved_committees": 100
+        "missing_contacts": 0,
+        "preserved_contacts": 0
       },
       {
         "name": "senate_cfm_contact_xml",
         "url": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
-        "retrieved_at": "2026-10-24T12:32:45.661619Z",
+        "retrieved_at": "2026-11-09T18:35:10.459226Z",
         "status": "success",
         "error": ""
       },
       {
         "name": "house_leadership_directory",
         "url": "https://clerk.house.gov/Members/ViewLeadership",
-        "retrieved_at": "2026-10-24T12:32:45.878836Z",
+        "retrieved_at": "2026-11-09T18:35:10.636272Z",
         "status": "success",
         "error": "",
         "roles": 9
@@ -49,7 +49,7 @@
       {
         "name": "senate_leadership_directory",
         "url": "https://www.senate.gov/senators/leadership.htm",
-        "retrieved_at": "2026-10-24T12:32:46.243866Z",
+        "retrieved_at": "2026-11-09T18:35:10.976695Z",
         "status": "success",
         "error": "",
         "roles": 18
@@ -57,7 +57,7 @@
     ],
     "leadership": {
       "source": "official_chamber_directories",
-      "checked_at": "2026-10-24T12:32:46.384759Z",
+      "checked_at": "2026-11-09T18:35:11.045357Z",
       "congress_gov_api_used": false,
       "api_requests": 0,
       "api_errors": [],
@@ -40120,16 +40120,16 @@
         },
         {
           "type": "committee",
-          "code": "SSEV00",
-          "name": "Committee on Environment and Public Works",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "code": "SSEV00",
+          "name": "Committee on Environment and Public Works",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40160,7 +40160,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40222,7 +40222,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40301,7 +40301,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40379,7 +40379,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40418,6 +40418,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSEG00",
+          "name": "Committee on Energy and Natural Resources",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSFI00",
           "name": "Committee on Finance",
           "rank": "",
@@ -40428,14 +40436,6 @@
           "type": "committee",
           "code": "SSFR00",
           "name": "Committee on Foreign Relations",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSEG00",
-          "name": "Committee on Energy and Natural Resources",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40458,7 +40458,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40488,16 +40488,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "code": "SLIN00",
+          "name": "Select Committee on Intelligence",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SLIN00",
-          "name": "Select Committee on Intelligence",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40536,7 +40536,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40574,14 +40574,6 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
@@ -40590,8 +40582,8 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40600,6 +40592,14 @@
           "type": "committee",
           "code": "SSVA00",
           "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40622,7 +40622,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40668,8 +40668,8 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40684,8 +40684,8 @@
         },
         {
           "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40708,7 +40708,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40738,8 +40738,8 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSEV00",
-          "name": "Committee on Environment and Public Works",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40754,8 +40754,8 @@
         },
         {
           "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "code": "SSEV00",
+          "name": "Committee on Environment and Public Works",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40786,7 +40786,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40841,16 +40841,16 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40873,7 +40873,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40903,14 +40903,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
           "rank": "",
@@ -40927,6 +40919,14 @@
         },
         {
           "type": "committee",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSEV00",
           "name": "Committee on Environment and Public Works",
           "rank": "",
@@ -40935,16 +40935,16 @@
         },
         {
           "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -40967,7 +40967,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -40997,14 +40997,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
           "rank": "",
@@ -41021,8 +41013,8 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41031,6 +41023,14 @@
           "type": "committee",
           "code": "SSRA00",
           "name": "Committee on Rules and Administration",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41053,7 +41053,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41083,14 +41083,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSEC00",
-          "name": "Joint Economic Committee",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -41099,16 +41091,24 @@
         },
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
+          "code": "JSEC00",
+          "name": "Joint Economic Committee",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41139,7 +41139,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41169,14 +41169,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSTX00",
-          "name": "Joint Committee on Taxation",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SLIA00",
           "name": "Committee on Indian Affairs",
           "rank": "",
@@ -41185,8 +41177,8 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
+          "code": "JSTX00",
+          "name": "Joint Committee on Taxation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41203,6 +41195,14 @@
           "type": "committee",
           "code": "SSEG00",
           "name": "Committee on Energy and Natural Resources",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41233,7 +41233,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41280,16 +41280,16 @@
         },
         {
           "type": "committee",
-          "code": "SSEV00",
-          "name": "Committee on Environment and Public Works",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSEV00",
+          "name": "Committee on Environment and Public Works",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41320,7 +41320,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41350,14 +41350,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSEG00",
           "name": "Committee on Energy and Natural Resources",
           "rank": "",
@@ -41368,6 +41360,14 @@
           "type": "committee",
           "code": "SSHR00",
           "name": "Committee on Health, Education, Labor, and Pensions",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41398,7 +41398,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41468,7 +41468,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41498,6 +41498,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SLET00",
+          "name": "Select Committee on Ethics",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
           "rank": "",
@@ -41514,14 +41522,6 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSSB00",
           "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
@@ -41530,8 +41530,8 @@
         },
         {
           "type": "committee",
-          "code": "SLET00",
-          "name": "Select Committee on Ethics",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41554,7 +41554,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41584,6 +41584,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SLIN00",
+          "name": "Select Committee on Intelligence",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SCNC00",
           "name": "United States Senate Caucus on International Narcotics Control",
           "rank": "",
@@ -41592,16 +41600,16 @@
         },
         {
           "type": "committee",
-          "code": "JSTX00",
-          "name": "Joint Committee on Taxation",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SLIN00",
-          "name": "Select Committee on Intelligence",
+          "code": "JSTX00",
+          "name": "Joint Committee on Taxation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41629,14 +41637,6 @@
           "rank": "",
           "leadership": "",
           "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
         }
       ],
       "contact": {
@@ -41656,7 +41656,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41695,16 +41695,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SLIA00",
-          "name": "Committee on Indian Affairs",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
+          "code": "SLIA00",
+          "name": "Committee on Indian Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41719,8 +41719,8 @@
         },
         {
           "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41743,7 +41743,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41782,14 +41782,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSEC00",
-          "name": "Joint Economic Committee",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -41800,6 +41792,14 @@
           "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JSEC00",
+          "name": "Joint Economic Committee",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41830,7 +41830,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41860,14 +41860,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSEV00",
-          "name": "Committee on Environment and Public Works",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
           "rank": "",
@@ -41878,6 +41870,14 @@
           "type": "committee",
           "code": "SSBK00",
           "name": "Committee on Banking, Housing, and Urban Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSEV00",
+          "name": "Committee on Environment and Public Works",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41908,7 +41908,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -41938,22 +41938,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSTX00",
-          "name": "Joint Committee on Taxation",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSBK00",
           "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
@@ -41964,6 +41948,22 @@
           "type": "committee",
           "code": "SSBU00",
           "name": "Committee on the Budget",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JSTX00",
+          "name": "Joint Committee on Taxation",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -41986,7 +41986,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42032,16 +42032,16 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42064,7 +42064,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42073,9 +42073,9 @@
       "bioguide_id": "C001114",
       "chamber": "Senate",
       "name": {
-        "first": "John R.",
+        "first": "John  R.",
         "last": "Curtis",
-        "official": "John R. Curtis",
+        "official": "John  R. Curtis",
         "courtesy_title": ""
       },
       "party": {
@@ -42094,16 +42094,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSEV00",
-          "name": "Committee on Environment and Public Works",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSEV00",
+          "name": "Committee on Environment and Public Works",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42142,7 +42142,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42180,6 +42180,14 @@
         },
         {
           "type": "committee",
+          "code": "SSEG00",
+          "name": "Committee on Energy and Natural Resources",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSFI00",
           "name": "Committee on Finance",
           "rank": "",
@@ -42190,14 +42198,6 @@
           "type": "committee",
           "code": "SSFR00",
           "name": "Committee on Foreign Relations",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSEG00",
-          "name": "Committee on Energy and Natural Resources",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42220,7 +42220,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42250,16 +42250,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42298,7 +42298,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42377,7 +42377,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42407,16 +42407,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42455,7 +42455,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42485,16 +42485,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42533,7 +42533,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42571,6 +42571,38 @@
         },
         {
           "type": "committee",
+          "code": "SLET00",
+          "name": "Select Committee on Ethics",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSAP00",
+          "name": "Committee on Appropriations",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSPR00",
           "name": "Joint Committee on Printing",
           "rank": "",
@@ -42587,22 +42619,6 @@
         },
         {
           "type": "committee",
-          "code": "SSAP00",
-          "name": "Committee on Appropriations",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
@@ -42611,24 +42627,8 @@
         },
         {
           "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSRA00",
           "name": "Committee on Rules and Administration",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SLET00",
-          "name": "Select Committee on Ethics",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42651,7 +42651,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42681,6 +42681,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JCSE00",
           "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
@@ -42697,8 +42705,8 @@
         },
         {
           "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42707,14 +42715,6 @@
           "type": "committee",
           "code": "SSGA00",
           "name": "Committee on Homeland Security and Governmental Affairs",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42737,7 +42737,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42815,7 +42815,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42853,6 +42853,14 @@
         },
         {
           "type": "committee",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSEV00",
           "name": "Committee on Environment and Public Works",
           "rank": "",
@@ -42863,14 +42871,6 @@
           "type": "committee",
           "code": "SSJU00",
           "name": "Committee on the Judiciary",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42893,7 +42893,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -42932,16 +42932,24 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "code": "SCNC00",
+          "name": "United States Senate Caucus on International Narcotics Control",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SCNC00",
-          "name": "United States Senate Caucus on International Narcotics Control",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -42969,14 +42977,6 @@
           "rank": "",
           "leadership": "",
           "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
         }
       ],
       "contact": {
@@ -42996,7 +42996,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43026,14 +43026,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSPR00",
-          "name": "Joint Committee on Printing",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
           "rank": "",
@@ -43042,16 +43034,24 @@
         },
         {
           "type": "committee",
-          "code": "SSFR00",
-          "name": "Committee on Foreign Relations",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "code": "JSPR00",
+          "name": "Joint Committee on Printing",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSFR00",
+          "name": "Committee on Foreign Relations",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43082,7 +43082,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43120,14 +43120,6 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSHR00",
           "name": "Committee on Health, Education, Labor, and Pensions",
           "rank": "",
@@ -43136,8 +43128,8 @@
         },
         {
           "type": "committee",
-          "code": "SSGA00",
-          "name": "Committee on Homeland Security and Governmental Affairs",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43146,6 +43138,14 @@
           "type": "committee",
           "code": "SSVA00",
           "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSGA00",
+          "name": "Committee on Homeland Security and Governmental Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43168,7 +43168,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43198,14 +43198,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSHR00",
           "name": "Committee on Health, Education, Labor, and Pensions",
           "rank": "",
@@ -43224,6 +43216,14 @@
           "type": "committee",
           "code": "SSGA00",
           "name": "Committee on Homeland Security and Governmental Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43246,7 +43246,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43276,14 +43276,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSEC00",
-          "name": "Joint Economic Committee",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
           "rank": "",
@@ -43294,6 +43286,14 @@
           "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JSEC00",
+          "name": "Joint Economic Committee",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43324,7 +43324,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43402,7 +43402,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43448,14 +43448,6 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSSB00",
           "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
@@ -43466,6 +43458,14 @@
           "type": "committee",
           "code": "SSVA00",
           "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43488,7 +43488,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43526,16 +43526,16 @@
         },
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "code": "SLIA00",
+          "name": "Committee on Indian Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SLIA00",
-          "name": "Committee on Indian Affairs",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43566,7 +43566,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43652,7 +43652,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43682,14 +43682,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSLC00",
-          "name": "Joint Committee of Congress on the Library",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
           "rank": "",
@@ -43700,6 +43692,14 @@
           "type": "committee",
           "code": "SSAF00",
           "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JSLC00",
+          "name": "Joint Committee of Congress on the Library",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43738,7 +43738,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43776,16 +43776,16 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43816,7 +43816,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43846,16 +43846,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "code": "SPAG00",
+          "name": "Special Committee on Aging",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SPAG00",
-          "name": "Special Committee on Aging",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43894,7 +43894,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -43932,8 +43932,8 @@
         },
         {
           "type": "committee",
-          "code": "SSFR00",
-          "name": "Committee on Foreign Relations",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43948,8 +43948,8 @@
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSFR00",
+          "name": "Committee on Foreign Relations",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -43972,7 +43972,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44002,14 +44002,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSEC00",
-          "name": "Joint Economic Committee",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -44026,16 +44018,24 @@
         },
         {
           "type": "committee",
-          "code": "SSEV00",
-          "name": "Committee on Environment and Public Works",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
+          "code": "JSEC00",
+          "name": "Joint Economic Committee",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSEV00",
+          "name": "Committee on Environment and Public Works",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44058,7 +44058,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44104,16 +44104,16 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44136,7 +44136,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44174,16 +44174,16 @@
         },
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44222,7 +44222,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44231,9 +44231,9 @@
       "bioguide_id": "K000383",
       "chamber": "Senate",
       "name": {
-        "first": "Angus S., Jr.",
+        "first": "Angus S.",
         "last": "King",
-        "official": "Angus S., Jr. King",
+        "official": "Angus S. King",
         "courtesy_title": ""
       },
       "party": {
@@ -44300,7 +44300,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44347,6 +44347,14 @@
         },
         {
           "type": "committee",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSEC00",
           "name": "Joint Economic Committee",
           "rank": "",
@@ -44363,14 +44371,6 @@
         },
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
@@ -44379,16 +44379,16 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44411,7 +44411,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44450,6 +44450,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SLET00",
+          "name": "Select Committee on Ethics",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -44468,14 +44476,6 @@
           "type": "committee",
           "code": "SSGA00",
           "name": "Committee on Homeland Security and Governmental Affairs",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SLET00",
-          "name": "Select Committee on Ethics",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44498,7 +44498,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44528,8 +44528,8 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSFR00",
-          "name": "Committee on Foreign Relations",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44544,16 +44544,16 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "SSFR00",
+          "name": "Committee on Foreign Relations",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44576,7 +44576,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44586,8 +44586,8 @@
       "chamber": "Senate",
       "name": {
         "first": "Ben Ray",
-        "last": "Luján",
-        "official": "Ben Ray Luján",
+        "last": "Lujan",
+        "official": "Ben Ray Lujan",
         "courtesy_title": ""
       },
       "party": {
@@ -44606,16 +44606,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "code": "SCNC00",
+          "name": "United States Senate Caucus on International Narcotics Control",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SCNC00",
-          "name": "United States Senate Caucus on International Narcotics Control",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44630,8 +44630,8 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44646,8 +44646,8 @@
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44670,7 +44670,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44700,8 +44700,8 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSEV00",
-          "name": "Committee on Environment and Public Works",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44716,8 +44716,8 @@
         },
         {
           "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "code": "SSEV00",
+          "name": "Committee on Environment and Public Works",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44740,7 +44740,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44770,16 +44770,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSEV00",
-          "name": "Committee on Environment and Public Works",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSEV00",
+          "name": "Committee on Environment and Public Works",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44818,7 +44818,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44848,16 +44848,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44872,8 +44872,8 @@
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44896,7 +44896,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -44926,22 +44926,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSPR00",
-          "name": "Joint Committee on Printing",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "JSLC00",
-          "name": "Joint Committee of Congress on the Library",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
           "rank": "",
@@ -44952,6 +44936,22 @@
           "type": "committee",
           "code": "SSAF00",
           "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JSPR00",
+          "name": "Joint Committee on Printing",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JSLC00",
+          "name": "Joint Committee of Congress on the Library",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -44982,7 +44982,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45012,14 +45012,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSEC00",
-          "name": "Joint Economic Committee",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SPAG00",
           "name": "Special Committee on Aging",
           "rank": "",
@@ -45028,8 +45020,16 @@
         },
         {
           "type": "committee",
-          "code": "SSFR00",
-          "name": "Committee on Foreign Relations",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JSEC00",
+          "name": "Joint Economic Committee",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45044,8 +45044,8 @@
         },
         {
           "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "code": "SSFR00",
+          "name": "Committee on Foreign Relations",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45068,7 +45068,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45098,16 +45098,24 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSPR00",
-          "name": "Joint Committee on Printing",
+          "code": "SSAP00",
+          "name": "Committee on Appropriations",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSAP00",
-          "name": "Committee on Appropriations",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JSPR00",
+          "name": "Joint Committee on Printing",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45135,14 +45143,6 @@
           "rank": "",
           "leadership": "",
           "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
         }
       ],
       "contact": {
@@ -45162,7 +45162,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45192,14 +45192,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSEC00",
-          "name": "Joint Economic Committee",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SPAG00",
           "name": "Special Committee on Aging",
           "rank": "",
@@ -45216,8 +45208,8 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "JSEC00",
+          "name": "Joint Economic Committee",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45234,6 +45226,14 @@
           "type": "committee",
           "code": "SSGA00",
           "name": "Committee on Homeland Security and Governmental Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45256,7 +45256,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45294,14 +45294,6 @@
         },
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -45312,6 +45304,14 @@
           "type": "committee",
           "code": "SLIA00",
           "name": "Committee on Indian Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45350,7 +45350,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45388,14 +45388,6 @@
         },
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSBK00",
           "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
@@ -45406,6 +45398,14 @@
           "type": "committee",
           "code": "SSBU00",
           "name": "Committee on the Budget",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45436,7 +45436,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45514,7 +45514,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45561,16 +45561,16 @@
         },
         {
           "type": "committee",
-          "code": "SSFR00",
-          "name": "Committee on Foreign Relations",
+          "code": "SSHR00",
+          "name": "Committee on Health, Education, Labor, and Pensions",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSHR00",
-          "name": "Committee on Health, Education, Labor, and Pensions",
+          "code": "SSFR00",
+          "name": "Committee on Foreign Relations",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45593,7 +45593,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45631,16 +45631,16 @@
         },
         {
           "type": "committee",
-          "code": "SSHR00",
-          "name": "Committee on Health, Education, Labor, and Pensions",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSHR00",
+          "name": "Committee on Health, Education, Labor, and Pensions",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45671,7 +45671,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45741,7 +45741,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45771,6 +45771,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSPR00",
           "name": "Joint Committee on Printing",
           "rank": "",
@@ -45787,14 +45795,6 @@
         },
         {
           "type": "committee",
-          "code": "SSEV00",
-          "name": "Committee on Environment and Public Works",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSEG00",
           "name": "Committee on Energy and Natural Resources",
           "rank": "",
@@ -45803,8 +45803,8 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "SSEV00",
+          "name": "Committee on Environment and Public Works",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45819,8 +45819,8 @@
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45843,7 +45843,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45873,16 +45873,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSFR00",
-          "name": "Committee on Foreign Relations",
+          "code": "SSHR00",
+          "name": "Committee on Health, Education, Labor, and Pensions",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSHR00",
-          "name": "Committee on Health, Education, Labor, and Pensions",
+          "code": "SSFR00",
+          "name": "Committee on Foreign Relations",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45921,7 +45921,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -45959,16 +45959,16 @@
         },
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -45999,7 +45999,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46077,7 +46077,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46107,22 +46107,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSEV00",
-          "name": "Committee on Environment and Public Works",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSFR00",
-          "name": "Committee on Foreign Relations",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSBK00",
           "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
@@ -46133,6 +46117,22 @@
           "type": "committee",
           "code": "SSBU00",
           "name": "Committee on the Budget",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSEV00",
+          "name": "Committee on Environment and Public Works",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSFR00",
+          "name": "Committee on Foreign Relations",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46155,7 +46155,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46164,9 +46164,9 @@
       "bioguide_id": "R000584",
       "chamber": "Senate",
       "name": {
-        "first": "James E.",
+        "first": "James  E.",
         "last": "Risch",
-        "official": "James E. Risch",
+        "official": "James  E. Risch",
         "courtesy_title": ""
       },
       "party": {
@@ -46185,8 +46185,8 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SCNC00",
-          "name": "United States Senate Caucus on International Narcotics Control",
+          "code": "SLET00",
+          "name": "Select Committee on Ethics",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46201,8 +46201,8 @@
         },
         {
           "type": "committee",
-          "code": "SSFR00",
-          "name": "Committee on Foreign Relations",
+          "code": "SCNC00",
+          "name": "United States Senate Caucus on International Narcotics Control",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46217,16 +46217,16 @@
         },
         {
           "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
+          "code": "SSFR00",
+          "name": "Committee on Foreign Relations",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SLET00",
-          "name": "Select Committee on Ethics",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46249,7 +46249,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46279,16 +46279,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46327,7 +46327,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46357,14 +46357,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
           "rank": "",
@@ -46381,14 +46373,6 @@
         },
         {
           "type": "committee",
-          "code": "SLIA00",
-          "name": "Committee on Indian Affairs",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
           "rank": "",
@@ -46399,6 +46383,22 @@
           "type": "committee",
           "code": "SSBK00",
           "name": "Committee on Banking, Housing, and Urban Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SLIA00",
+          "name": "Committee on Indian Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46421,7 +46421,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46460,8 +46460,8 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46484,8 +46484,8 @@
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46516,7 +46516,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46555,6 +46555,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SLET00",
+          "name": "Select Committee on Ethics",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSAP00",
           "name": "Committee on Appropriations",
           "rank": "",
@@ -46584,14 +46592,6 @@
           "rank": "",
           "leadership": "",
           "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SLET00",
-          "name": "Select Committee on Ethics",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
         }
       ],
       "contact": {
@@ -46611,7 +46611,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46657,16 +46657,16 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46689,7 +46689,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46719,6 +46719,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JSEC00",
           "name": "Joint Economic Committee",
           "rank": "",
@@ -46729,14 +46737,6 @@
           "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46767,7 +46767,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46846,7 +46846,94 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
+        "contact": "senate_cfm_contact_xml",
+        "contact_status": "matched"
+      }
+    },
+    "S001184": {
+      "bioguide_id": "S001184",
+      "chamber": "Senate",
+      "name": {
+        "first": "Tim",
+        "last": "Scott",
+        "official": "Tim Scott",
+        "courtesy_title": ""
+      },
+      "party": {
+        "code": "R",
+        "name": "Republican"
+      },
+      "state": "SC",
+      "district": "",
+      "leadership": {
+        "position": "Republican Senatorial Committee Chair",
+        "source": "senate_official_leadership",
+        "last_reviewed": "2026-10-18",
+        "roles": [
+          {
+            "position": "Republican Senatorial Committee Chair",
+            "congress": 119,
+            "current": true,
+            "source": "senate_official_leadership",
+            "source_url": "https://www.senate.gov/senators/leadership.htm",
+            "verified_at": "2026-10-18T12:31:41.281659Z"
+          }
+        ],
+        "status": "verified"
+      },
+      "committees": [
+        {
+          "type": "committee",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSHR00",
+          "name": "Committee on Health, Education, Labor, and Pensions",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSSB00",
+          "name": "Committee on Small Business and Entrepreneurship",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        }
+      ],
+      "contact": {
+        "status": "matched",
+        "phone": "(202) 224-6121",
+        "office_building": "",
+        "office_room": "",
+        "office_zip": "",
+        "address": "104 Hart Senate Office Building Washington DC 20510",
+        "website": "https://www.scott.senate.gov/",
+        "email": "https://www.scott.senate.gov/contact/email-me"
+      },
+      "senate_data": {
+        "lis_member_id": "S365",
+        "hometown": "Charleston",
+        "office": "104 Hart",
+        "senate_class": "Class III"
+      },
+      "source": {
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -46892,16 +46979,16 @@
         },
         {
           "type": "committee",
-          "code": "SSFR00",
-          "name": "Committee on Foreign Relations",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSFR00",
+          "name": "Committee on Foreign Relations",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -46932,94 +47019,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
-        "contact": "senate_cfm_contact_xml",
-        "contact_status": "matched"
-      }
-    },
-    "S001184": {
-      "bioguide_id": "S001184",
-      "chamber": "Senate",
-      "name": {
-        "first": "Tim",
-        "last": "Scott",
-        "official": "Tim Scott",
-        "courtesy_title": ""
-      },
-      "party": {
-        "code": "R",
-        "name": "Republican"
-      },
-      "state": "SC",
-      "district": "",
-      "leadership": {
-        "position": "Republican Senatorial Committee Chair",
-        "source": "senate_official_leadership",
-        "last_reviewed": "2026-10-18",
-        "roles": [
-          {
-            "position": "Republican Senatorial Committee Chair",
-            "congress": 119,
-            "current": true,
-            "source": "senate_official_leadership",
-            "source_url": "https://www.senate.gov/senators/leadership.htm",
-            "verified_at": "2026-10-18T12:31:41.281659Z"
-          }
-        ],
-        "status": "verified"
-      },
-      "committees": [
-        {
-          "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSHR00",
-          "name": "Committee on Health, Education, Labor, and Pensions",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSSB00",
-          "name": "Committee on Small Business and Entrepreneurship",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        }
-      ],
-      "contact": {
-        "status": "matched",
-        "phone": "(202) 224-6121",
-        "office_building": "",
-        "office_room": "",
-        "office_zip": "",
-        "address": "104 Hart Senate Office Building Washington DC 20510",
-        "website": "https://www.scott.senate.gov/",
-        "email": "https://www.scott.senate.gov/contact/email-me"
-      },
-      "senate_data": {
-        "lis_member_id": "S365",
-        "hometown": "Charleston",
-        "office": "104 Hart",
-        "senate_class": "Class III"
-      },
-      "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47049,8 +47049,8 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
+          "code": "SLET00",
+          "name": "Select Committee on Ethics",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47073,6 +47073,14 @@
         },
         {
           "type": "committee",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "SSFR00",
           "name": "Committee on Foreign Relations",
           "rank": "",
@@ -47083,14 +47091,6 @@
           "type": "committee",
           "code": "SSSB00",
           "name": "Committee on Small Business and Entrepreneurship",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SLET00",
-          "name": "Select Committee on Ethics",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47113,7 +47113,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47143,16 +47143,16 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47183,7 +47183,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47213,14 +47213,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
           "rank": "",
@@ -47229,8 +47221,8 @@
         },
         {
           "type": "committee",
-          "code": "SSGA00",
-          "name": "Committee on Homeland Security and Governmental Affairs",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47239,6 +47231,14 @@
           "type": "committee",
           "code": "SSVA00",
           "name": "Committee on Veterans' Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSGA00",
+          "name": "Committee on Homeland Security and Governmental Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47261,7 +47261,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47291,8 +47291,8 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47307,16 +47307,16 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47339,7 +47339,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47369,8 +47369,8 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSEV00",
-          "name": "Committee on Environment and Public Works",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47385,8 +47385,8 @@
         },
         {
           "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
+          "code": "SSEV00",
+          "name": "Committee on Environment and Public Works",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47417,7 +47417,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47456,14 +47456,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -47472,8 +47464,8 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47482,6 +47474,14 @@
           "type": "committee",
           "code": "SSCM00",
           "name": "Committee on Commerce, Science, and Transportation",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47504,7 +47504,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47534,6 +47534,14 @@
       "committees": [
         {
           "type": "committee",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
           "code": "JCSE00",
           "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
@@ -47550,8 +47558,8 @@
         },
         {
           "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "code": "SSVA00",
+          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47560,14 +47568,6 @@
           "type": "committee",
           "code": "SSJU00",
           "name": "Committee on the Judiciary",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
-          "code": "SSVA00",
-          "name": "Committee on Veterans' Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47590,7 +47590,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47620,14 +47620,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SPAG00",
           "name": "Special Committee on Aging",
           "rank": "",
@@ -47638,6 +47630,14 @@
           "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47676,7 +47676,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47714,14 +47714,6 @@
         },
         {
           "type": "committee",
-          "code": "SSFR00",
-          "name": "Committee on Foreign Relations",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSBK00",
           "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
@@ -47732,6 +47724,14 @@
           "type": "committee",
           "code": "SSBU00",
           "name": "Committee on the Budget",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSFR00",
+          "name": "Committee on Foreign Relations",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47754,7 +47754,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47801,14 +47801,6 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSBK00",
           "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
@@ -47817,16 +47809,24 @@
         },
         {
           "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47849,7 +47849,7 @@
         "senate_class": "Class II"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47879,14 +47879,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "SSAF00",
-          "name": "Committee on Agriculture, Nutrition, and Forestry",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SPAG00",
           "name": "Special Committee on Aging",
           "rank": "",
@@ -47895,16 +47887,24 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
+          "code": "SSBK00",
+          "name": "Committee on Banking, Housing, and Urban Affairs",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSBK00",
-          "name": "Committee on Banking, Housing, and Urban Affairs",
+          "code": "SSAF00",
+          "name": "Committee on Agriculture, Nutrition, and Forestry",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -47927,7 +47927,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -47974,14 +47974,6 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SSAS00",
           "name": "Committee on Armed Services",
           "rank": "",
@@ -47992,6 +47984,14 @@
           "type": "committee",
           "code": "SSBK00",
           "name": "Committee on Banking, Housing, and Urban Affairs",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -48014,7 +48014,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -48060,16 +48060,16 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "SSRA00",
+          "name": "Committee on Rules and Administration",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSRA00",
-          "name": "Committee on Rules and Administration",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -48092,7 +48092,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -48122,14 +48122,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SCNC00",
           "name": "United States Senate Caucus on International Narcotics Control",
           "rank": "",
@@ -48138,8 +48130,16 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -48154,16 +48154,16 @@
         },
         {
           "type": "committee",
-          "code": "SSJU00",
-          "name": "Committee on the Judiciary",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSJU00",
+          "name": "Committee on the Judiciary",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -48186,7 +48186,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -48216,14 +48216,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JCSE00",
-          "name": "Commission on Security and Cooperation in Europe",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -48232,8 +48224,16 @@
         },
         {
           "type": "committee",
-          "code": "SSEV00",
-          "name": "Committee on Environment and Public Works",
+          "code": "SSAS00",
+          "name": "Committee on Armed Services",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JCSE00",
+          "name": "Commission on Security and Cooperation in Europe",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -48248,8 +48248,8 @@
         },
         {
           "type": "committee",
-          "code": "SSAS00",
-          "name": "Committee on Armed Services",
+          "code": "SSEV00",
+          "name": "Committee on Environment and Public Works",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -48280,7 +48280,7 @@
         "senate_class": "Class I"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -48310,14 +48310,6 @@
       "committees": [
         {
           "type": "committee",
-          "code": "JSTX00",
-          "name": "Joint Committee on Taxation",
-          "rank": "",
-          "leadership": "",
-          "subcommittees": []
-        },
-        {
-          "type": "committee",
           "code": "SLIN00",
           "name": "Select Committee on Intelligence",
           "rank": "",
@@ -48326,8 +48318,16 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
+          "code": "SSBU00",
+          "name": "Committee on the Budget",
+          "rank": "",
+          "leadership": "",
+          "subcommittees": []
+        },
+        {
+          "type": "committee",
+          "code": "JSTX00",
+          "name": "Joint Committee on Taxation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -48342,8 +48342,8 @@
         },
         {
           "type": "committee",
-          "code": "SSBU00",
-          "name": "Committee on the Budget",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -48366,7 +48366,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
@@ -48404,16 +48404,16 @@
         },
         {
           "type": "committee",
-          "code": "SSFI00",
-          "name": "Committee on Finance",
+          "code": "SSCM00",
+          "name": "Committee on Commerce, Science, and Transportation",
           "rank": "",
           "leadership": "",
           "subcommittees": []
         },
         {
           "type": "committee",
-          "code": "SSCM00",
-          "name": "Committee on Commerce, Science, and Transportation",
+          "code": "SSFI00",
+          "name": "Committee on Finance",
           "rank": "",
           "leadership": "",
           "subcommittees": []
@@ -48444,7 +48444,7 @@
         "senate_class": "Class III"
       },
       "source": {
-        "primary": "senate_cfm_contact_xml_fallback",
+        "primary": "senate_cvc_member_xml",
         "contact": "senate_cfm_contact_xml",
         "contact_status": "matched"
       }
