@@ -1,0 +1,24 @@
+# Historical GeoJSON architecture recommendation
+
+**Promising with conditions.** Use direct, date-filtered GeoJSON in the lab. For Ballotics 4.0, the preferred candidate is a shared versioned archive and date index for arbitrary offline dates, with a small set of reproducible precomputed snapshots where cold-start performance matters. Physical-device performance, source rights, historical election provenance, and jurisdiction policy remain open.
+
+## Runtime filtering
+
+The Swift lab indexes archive feature byte ranges, inclusive dates, stable record identifiers and geometry counts. It validates geometry one feature at a time and releases the decoded object and original mapping after indexing. Changing dates scans the compact metadata, reopens the local mapped archive, and copies the selected original feature spans into a new temporary FeatureCollection. The active renderer holds one generation of the subset. In-flight replacement can briefly overlap the previous renderer source and the new temporary file. The map guards each source generation and discards canceled requests. The camera stays in place when the new snapshot intersects the viewport. Selection clears when source identity changes. Historical taps use rendered candidates, then verify original source-ring containment by record ID. The runtime store reads only the candidate feature spans for this check. The published path reads the selected snapshot when confirming a tap.
+
+This approach keeps a 39.90 MB source file and provides arbitrary supported dates offline. Cold index creation and warm selection are measured separately in [benchmarks](HISTORICAL_FILTER_BENCHMARKS.md). Persistent decoded polygon objects are unnecessary. The lab retains the metadata index and owns the current derived file. The Files path makes one temporary local copy for security-scoped archives. The Documents fixture path reads a stable local archive in place.
+
+## Precomputed snapshots
+
+The offline tool uses the same engine, source order and original feature bytes. The publication manifest records the civil day, source name and hash, geometry counts, output byte length and SHA-256, schema version, and filtering-rule version. The app checks the manifest and content before submitting the snapshot. A trusted catalog or signature would bind a manifest to an approved source revision at publication time. Snapshots are generated locally for this experiment.
+
+At the 2000 snapshot, the Release simulator reached a useful frame 263 ms after requesting the published file and 1,561 ms after a fresh runtime request. Both paths delivered the same output digest and comparable renderer footprint. The published path trades storage for startup time. The runtime path amortizes archive indexing across date changes. The two verified packages total about 4.94 MB of GeoJSON, plus small manifests. A complete copy for every distinct active-set interval would produce **4,520** FeatureCollections totaling **12.33 GB** of raw GeoJSON, based on an exact raw feature byte-count sweep. Reusing intervals avoids publishing the same active set for neighboring days. Sharing one archive and an interval or byte-offset catalog also avoids distributing the same geometry across thousands of overlapping active sets.
+
+A bounded store of precomputed dates makes sense for verified, frequently used reference dates. An indexed archive can handle exact transitions, exploratory days and the rest of the timeline. Treat a publication cache as a disposable derivative keyed by archive hash, schema, filter rule, and effective interval or selected day. Verify the byte-offset format and interval semantics on Android before treating a shared index as an interoperable contract. The current benchmark cache holds metadata, with snapshots generated on demand.
+
+## Ballotics 4.0 integration gates
+
+- Preserve separate fields for source record identity, source entity identity, jurisdiction type and election-result geography. Bind the date to an explicit snapshot basis and citation. For elections held over a period, store the chosen instant and applicable election intervals as separate values.
+- Compare default and 32-pixel buffers in device Release builds with a fixed route, rendered feature checks and frame presentation traces. Prioritize geography coverage, overlap resolution, seams, narrow coastlines, and selection near borders. The benchmark uses Newberry's original generalized coordinates.
+- Reproduce exact fixture outputs and boundary transitions on iOS and Android using the same source bytes, manifest fields and coverage contract. The Android viewer remains future work. Approve source rights and the shared publication contract before adding assets to Ballotics-Data.
+- A follow-up should measure decode and native allocations, frame hitches, return-to-baseline memory and long tours on representative devices. Preserve raw GeoJSON as the comparison baseline for any additional rendering strategy.

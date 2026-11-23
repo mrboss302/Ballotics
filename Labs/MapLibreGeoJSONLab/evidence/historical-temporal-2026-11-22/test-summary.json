@@ -1,0 +1,65 @@
+{
+  "release_builds": [
+    "iOS simulator",
+    "generic iOS unsigned"
+  ],
+  "full_simulator_suite": [
+    {
+      "case": "testCountiesLaunch",
+      "seconds": 21.43
+    },
+    {
+      "case": "testDistrictsLaunch",
+      "seconds": 19.022
+    },
+    {
+      "case": "testHistoricalLaunch",
+      "seconds": 23.354
+    },
+    {
+      "case": "testStatesLaunch",
+      "seconds": 16.98
+    },
+    {
+      "case": "testBundledGeometrySelectionAndNavigation",
+      "seconds": 44.591
+    },
+    {
+      "case": "testFilesImportAndRejectInvalidJSON",
+      "seconds": 25.376
+    },
+    {
+      "case": "testHistoricalDateChangesSourceAndPreservesProvenance",
+      "seconds": 32.758
+    },
+    {
+      "case": "testRapidHistoricalRequestsEndAtLatestDate",
+      "seconds": 6.525
+    }
+  ],
+  "functional_rerun_with_exact_hit_confirmation": [
+    {
+      "case": "testBundledGeometrySelectionAndNavigation",
+      "seconds": 42.361
+    },
+    {
+      "case": "testFilesImportAndRejectInvalidJSON",
+      "seconds": 24.304
+    },
+    {
+      "case": "testHistoricalDateChangesSourceAndPreservesProvenance",
+      "seconds": 33.435
+    },
+    {
+      "case": "testRapidHistoricalRequestsEndAtLatestDate",
+      "seconds": 6.923
+    }
+  ],
+  "source_timezone_checks": [
+    "Pacific/Honolulu",
+    "Pacific/Auckland"
+  ],
+  "canonical_sha256": "af037e36183c9274d8be905b966ba775b548b6ec5210360c5814a7b952133a7b",
+  "physical_device_available": false,
+  "unexpected_map_http_requests_logged": 0
+}

@@ -1,0 +1,50 @@
+{
+  "active_set_intervals": 4520,
+  "adjacent_versions": 13769,
+  "all_intervals_materialized_geojson_bytes": 12328465929,
+  "blank_fips": 1715,
+  "cross_reference_values": 16305,
+  "earliest_start": "1629-03-04",
+  "entities": 3890,
+  "entities_with_fips_value_changes": 2,
+  "entities_with_jurisdiction_changes": 1283,
+  "entities_with_multiple_versions": 2868,
+  "entities_with_name_changes": 193,
+  "entity_version_pairs": 17727,
+  "exact_geometry_pairs_active_on_a_shared_day": 48,
+  "gaps_between_versions": 68,
+  "geometries": {
+    "MultiPolygon": 1937,
+    "Polygon": 15790
+  },
+  "identical_geometries_across_all_dates": 3275,
+  "latest_end": "2000-12-31",
+  "one_day_versions": 120,
+  "overlapping_versions_of_one_entity": 0,
+  "property_presence": {
+    "AREA_SQMI": 17727,
+    "CHANGE": 17727,
+    "CITATION": 17727,
+    "CNTY_TYPE": 17727,
+    "CROSS_REF": 17727,
+    "END_DATE": 17727,
+    "END_N": 17727,
+    "FIPS": 17727,
+    "FULL_NAME": 17727,
+    "ID": 17727,
+    "ID_NUM": 17727,
+    "NAME": 17727,
+    "NAME_START": 17727,
+    "START_DATE": 17727,
+    "START_N": 17727,
+    "STATE_TERR": 17727,
+    "VERSION": 17727
+  },
+  "published_snapshots_verified": [
+    "1788-01-01",
+    "2000-01-01"
+  ],
+  "record_ids": 17727,
+  "records": 17727,
+  "source_sha256": "af037e36183c9274d8be905b966ba775b548b6ec5210360c5814a7b952133a7b"
+}

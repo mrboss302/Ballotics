@@ -46,3 +46,36 @@ The runner records three fresh app processes per layer, one camera route per lay
 For native launch-to-responsive timings, run the UI test target in Release with `-only-testing:MapLibreGeoJSONLabUITests/GeoJSONLaunchTests`. Stage the historical file in the lab’s Documents directory to include that launch case.
 
 Use a physical-device Release build and an Instruments trace to measure process launch, frame presentation and hitches, and temporary allocations separately from resident and footprint memory. See [Benchmark results](BENCHMARK_RESULTS.md) for the measured configuration and [Technical findings](TECHNICAL_FINDINGS.md) for the decision and remaining qualification gates.
+
+## Date-filtered historical counties
+
+Choose **Historical Counties** and select the original historical archive in Files if the lab has no local archive yet. For simulator testing, copy `US_HistCounties_Gen05.json` to the lab's Documents directory. Choose a research preset from the date menu, or enter a custom ISO civil date and a snapshot citation. The selected date, provenance, and validated feature count appear above and below the map. The archive covers 1629-03-04 through 2000-12-31, inclusive. When testing a covered day before 1788, use **Custom date**. The standard **Import file** path remains available for the all-history stress test.
+
+From the repository root on macOS, build the independent tests and publisher with the same engine that the app uses.
+
+```sh
+lab=Labs/MapLibreGeoJSONLab
+archive="/absolute/path/to/US_HistCounties_Gen05.json"
+work=$(mktemp -d)
+xcrun swiftc -O -module-cache-path "$work/modules" \
+  "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/Tests/HistoricalArchiveChecks.swift" \
+  -o "$work/check-history"
+"$work/check-history" "$archive"
+
+xcrun swiftc -O -module-cache-path "$work/modules" \
+  "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/Tests/PublishHistoricalSnapshots.swift" \
+  -o "$work/publish-history"
+"$work/publish-history" "$archive" "$work/published" 1788-01-01 2000-01-01
+python3 "$lab/Tests/audit-historical.py" "$archive" --published "$work/published"
+```
+
+Build the shared scheme for the simulator in Release. With the selected simulator booted, run the historical matrix against the resulting application bundle.
+
+```sh
+"$lab/Tests/benchmark-historical.sh" "$SIMULATOR_ID" "$RELEASE_APP_BUNDLE" \
+  "$archive" "$work/published" "$work/results"
+```
+
+The benchmark stages a lab-only copy of the source and the two generated snapshots in the simulator's Documents folder. Each case starts a fresh app process. The script also runs 21 warm date switches for each buffer. To reproduce the renderer hit probes, launch with `--measure --historical-date 1788-01-01 --historical-probes` or use `2000-01-01`, then repeat with `--source-option narrow-buffer`. Read `Library/Caches/benchmark.jsonl` from the lab's simulator container.
+
+See the [data audit](HISTORICAL_DATA_AUDIT.md), [historical benchmarks](HISTORICAL_FILTER_BENCHMARKS.md), and [architecture recommendation](HISTORICAL_GEOJSON_ARCHITECTURE.md).

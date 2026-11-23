@@ -1,0 +1,12 @@
+{
+  "bytes" : 4320538,
+  "date" : "2000-01-01",
+  "features" : 3139,
+  "outputSHA256" : "70d9f28be93fc9750427fdbdd424ab9cc56626a374497b32816f953ff7e40a35",
+  "parts" : 4216,
+  "positions" : 63038,
+  "ruleVersion" : "ahcb-inclusive-civil-day-v1",
+  "schemaVersion" : 1,
+  "sourceReference" : "US_HistCounties_Gen05.json",
+  "sourceSHA256" : "af037e36183c9274d8be905b966ba775b548b6ec5210360c5814a7b952133a7b"
+}
