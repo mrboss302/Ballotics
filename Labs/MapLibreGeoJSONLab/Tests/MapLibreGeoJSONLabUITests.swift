@@ -89,6 +89,72 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
     }
 
     @MainActor
+    func testHistoricalDateChangesSourceAndPreservesProvenance() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--historical-date", "1788-01-01", "--measure"]
+        app.launch()
+        waitForGeometry("332", in: app)
+        let map = app.descendants(matching: .any)["geometry-map"].firstMatch
+        let tap = map.coordinate(withNormalizedOffset: CGVector(dx: 0.75, dy: 0.5))
+        let inspection = app.buttons["inspection"]
+        tap.tap()
+        waitForSelection(inspection)
+        inspection.tap()
+        XCTAssertTrue(app.staticTexts["ID_NUM"].exists)
+        XCTAssertTrue(app.staticTexts["START_DATE"].exists)
+        XCTAssertTrue(app.staticTexts["END_DATE"].exists)
+        app.buttons["Done"].tap()
+
+        app.buttons["historical-dates"].tap()
+        app.buttons["2000-01-01"].tap()
+        waitForGeometry("3,139", in: app)
+        XCTAssertTrue(app.staticTexts["snapshot-date"].label.hasPrefix("2000-01-01"))
+        XCTAssertFalse(inspection.isEnabled)
+        tap.tap()
+        waitForSelection(inspection)
+
+        app.buttons["historical-dates"].tap()
+        app.buttons["Custom date"].tap()
+        let date = app.textFields["custom-date"]
+        date.tap()
+        date.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 10) + "1997-11-13")
+        let source = app.textFields["date-provenance"]
+        source.tap()
+        source.typeText("Miami-Dade County archive")
+        app.buttons["Apply"].tap()
+        waitForGeometry("3,139", in: app)
+        XCTAssertEqual(app.staticTexts["snapshot-date"].label, "1997-11-13 · Miami-Dade County archive")
+        tap.tap()
+        waitForSelection(inspection)
+
+        app.buttons["historical-dates"].tap()
+        app.buttons["Custom date"].tap()
+        date.tap()
+        date.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 10) + "2024-01-01")
+        app.buttons["Apply"].tap()
+        let alert = app.alerts["GeoJSON Lab"]
+        XCTAssertTrue(alert.waitForExistence(timeout: 8))
+        XCTAssertTrue(alert.staticTexts.containing(
+            NSPredicate(format: "label CONTAINS %@", "through 2000-12-31")).firstMatch.exists)
+        alert.buttons["OK"].tap()
+        waitForGeometry("3,139", in: app)
+        XCTAssertTrue(app.staticTexts["snapshot-date"].label.hasPrefix("1997-11-13"))
+        XCTAssertTrue(inspection.isEnabled)
+    }
+
+    @MainActor
+    func testRapidHistoricalRequestsEndAtLatestDate() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--historical-date", "2000-01-01", "--historical-rapid-switches", "--measure"]
+        app.launch()
+        waitForGeometry("455", in: app)
+        XCTAssertTrue(app.staticTexts["snapshot-date"].label.hasPrefix("1800-01-01"))
+        XCTAssertFalse(app.buttons["inspection"].isEnabled)
+    }
+
+    @MainActor
     private func fileInPicker(containing name: String, in app: XCUIApplication) -> XCUIElement {
         let file = app.descendants(matching: .any).matching(
             NSPredicate(format: "label CONTAINS %@", name)

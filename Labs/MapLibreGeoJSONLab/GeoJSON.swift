@@ -6,6 +6,7 @@ enum Geography: String, CaseIterable, Identifiable {
     case counties = "Counties"
     case states = "States"
     case imported = "Imported"
+    case historical = "Historical Counties"
 
     var id: String { rawValue }
 
@@ -14,7 +15,7 @@ enum Geography: String, CaseIterable, Identifiable {
         case .districts: return "cb_2024_us_cd119_5m"
         case .counties: return "cb_2024_us_county_5m"
         case .states: return "cb_2024_us_state_5m"
-        case .imported: return nil
+        case .imported, .historical: return nil
         }
     }
 
@@ -23,7 +24,7 @@ enum Geography: String, CaseIterable, Identifiable {
         case .districts: return (441, 4, "CD119FP")
         case .counties: return (3235, 5, "COUNTYFP")
         case .states: return (56, 2, nil)
-        case .imported: return nil
+        case .imported, .historical: return nil
         }
     }
 }
@@ -57,6 +58,16 @@ struct GeoJSON {
         var bounds = GeoBounds()
         var stateBounds: [String: GeoBounds] = [:]
         var selectionKey: String?
+
+        mutating func include(_ other: Self) {
+            features += other.features
+            multipart += other.multipart
+            parts += other.parts
+            rings += other.rings
+            positions += other.positions
+            bounds.include(other.bounds.west, other.bounds.south)
+            bounds.include(other.bounds.east, other.bounds.north)
+        }
     }
 
     private typealias Object = [String: Any]
@@ -86,32 +97,10 @@ struct GeoJSON {
                     }
                 }
 
-                let (geometry, polygons) = try polygonGeometry(feature)
-                summary.features += 1
-                if geometry["type"] as? String == "MultiPolygon" { summary.multipart += 1 }
-                var featureBounds = GeoBounds()
-                summary.parts += polygons.count
-                for rings in polygons {
-                    summary.rings += rings.count
-                    for ring in rings {
-                        guard ring.count >= 4, ring.first == ring.last else {
-                            throw Invalid(message: "Polygon rings must be closed with at least four positions.")
-                        }
-                        summary.positions += ring.count
-                        for position in ring {
-                            guard (2...3).contains(position.count),
-                                  position.allSatisfy(\.isFinite),
-                                  (-180...180).contains(position[0]),
-                                  (-90...90).contains(position[1]) else {
-                                throw Invalid(message: "A position is outside the WGS 84 longitude/latitude range.")
-                            }
-                            summary.bounds.include(position[0], position[1])
-                            featureBounds.include(position[0], position[1])
-                        }
-                    }
-                }
+                let details = try summarizeFeature(feature)
+                summary.include(details)
                 if geography == .states, let id = properties["GEOID"] as? String {
-                    summary.stateBounds[id] = featureBounds
+                    summary.stateBounds[id] = details.bounds
                 }
             } catch {
                 throw Invalid(message: "Feature \(index + 1). \(error.localizedDescription)")
@@ -124,20 +113,67 @@ struct GeoJSON {
         return summary
     }
 
+    static func summarizeFeature(_ feature: [String: Any]) throws -> Summary {
+        let (geometry, polygons) = try polygonGeometry(feature)
+        var summary = Summary()
+        summary.features = 1
+        summary.multipart = geometry["type"] as? String == "MultiPolygon" ? 1 : 0
+        summary.parts = polygons.count
+        for rings in polygons {
+            summary.rings += rings.count
+            for ring in rings {
+                guard ring.count >= 4, ring.first == ring.last else {
+                    throw Invalid(message: "Polygon rings must be closed with at least four positions.")
+                }
+                summary.positions += ring.count
+                for position in ring {
+                    guard (2...3).contains(position.count), position.allSatisfy(\.isFinite),
+                          (-180...180).contains(position[0]), (-90...90).contains(position[1]) else {
+                        throw Invalid(message: "A position is outside the WGS 84 longitude/latitude range.")
+                    }
+                    summary.bounds.include(position[0], position[1])
+                }
+            }
+        }
+        return summary
+    }
+
     // Only used when an import lacks stable identifiers. A renderer hit is required
     // first. Resolve the full original polygon, which can extend across many tiles.
     static func originalPolygon(in url: URL, longitude: Double, latitude: Double) throws -> Data? {
         for feature in try readFeatures(url).reversed() {
             try Task.checkCancellation()
             let (geometry, polygons) = try polygonGeometry(feature)
-            if polygons.contains(where: { rings in
-                contains(rings[0], longitude, latitude)
-                    && !rings.dropFirst().contains { contains($0, longitude, latitude) }
-            }) {
+            if containsPolygon(polygons, longitude: longitude, latitude: latitude) {
                 return try JSONSerialization.data(withJSONObject: geometry)
             }
         }
         return nil
+    }
+
+    static func containsFeature(_ feature: [String: Any], longitude: Double, latitude: Double) throws -> Bool {
+        let (_, polygons) = try polygonGeometry(feature)
+        return containsPolygon(polygons, longitude: longitude, latitude: latitude)
+    }
+
+    static func matchingHistoricalIDs(in url: URL, candidates: Set<Int>,
+                                      longitude: Double, latitude: Double) throws -> Set<Int> {
+        var matches = Set<Int>()
+        for feature in try readFeatures(url) {
+            try Task.checkCancellation()
+            if let properties = feature["properties"] as? Object, let id = properties["ID_NUM"] as? Int,
+               candidates.contains(id), try containsFeature(feature, longitude: longitude, latitude: latitude) {
+                matches.insert(id)
+            }
+        }
+        return matches
+    }
+
+    private static func containsPolygon(_ polygons: [Rings], longitude: Double, latitude: Double) -> Bool {
+        polygons.contains { rings in
+            contains(rings[0], longitude, latitude)
+                && !rings.dropFirst().contains { contains($0, longitude, latitude) }
+        }
     }
 
     private static func contains(_ ring: [[Double]], _ x: Double, _ y: Double) -> Bool {

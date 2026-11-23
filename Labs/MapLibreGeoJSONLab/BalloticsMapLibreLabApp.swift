@@ -8,6 +8,7 @@ struct Dataset {
     let summary: GeoJSON.Summary
     let requestedAt: Double
     let imported: ImportedFile?
+    var historical: HistoricalMapFile? = nil
 }
 
 struct Inspection {
@@ -32,6 +33,19 @@ final class LabState: ObservableObject {
     @Published private(set) var cameraRequest: (Int, Viewpoint) = (0, .national)
     @Published private(set) var alternateColor = false
 
+    @Published private(set) var historicalPending = false
+    @Published private(set) var historicalRequest: HistoricalRequest?
+    private var history: HistoricalStore?
+
+    static var documents: URL {
+        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+    }
+
+    var hasHistoricalArchive: Bool {
+        history != nil || FileManager.default.fileExists(
+            atPath: Self.documents.appendingPathComponent(HistoricalArchive.filename).path)
+    }
+
     private var validations: [Geography: GeoJSON.Summary] = [:]
     private var loading: Task<Void, Never>?
 
@@ -43,10 +57,18 @@ final class LabState: ObservableObject {
     func start() {
         guard dataset == nil, loading == nil else { return }
         let arguments = ProcessInfo.processInfo.arguments
-        if let index = arguments.firstIndex(of: "--dataset"),
+        if let index = arguments.firstIndex(where: { $0 == "--historical-date" || $0 == "--published-date" }),
+           let value = arguments.dropFirst(index + 1).first {
+            do {
+                let request = try HistoricalRequest(value, provenance: "Benchmark snapshot")
+                applyHistory(request, published: arguments[index] == "--published-date")
+            } catch {
+                failure = error.localizedDescription
+            }
+        } else if let index = arguments.firstIndex(of: "--dataset"),
            let name = arguments.dropFirst(index + 1).first,
            let geography = Geography.allCases.first(where: { $0.rawValue.lowercased() == name.lowercased() }),
-           geography != .imported {
+           geography.resource != nil {
             choose(geography)
         } else if arguments.contains("--historical"), let folder = FileManager.default.urls(
             for: .documentDirectory, in: .userDomainMask
@@ -58,7 +80,12 @@ final class LabState: ObservableObject {
     }
 
     func choose(_ next: Geography) {
-        guard geography != next || dataset?.geography != next else { return }
+        if next == .historical {
+            applyHistory(historicalRequest ?? HistoricalRequest.presets[0])
+            return
+        }
+        guard geography != next || dataset?.geography != next || historicalPending else { return }
+        historicalPending = false
         let requestedAt = LabLog.now
         if next == .imported {
             guard let imported else { return }
@@ -137,6 +164,7 @@ final class LabState: ObservableObject {
                 let file = try await Task.detached(priority: .userInitiated) { try ImportedFile.prepare(url) }.value
                 loading?.cancel()
                 loading = nil
+                historicalPending = false
                 imported = file
                 prepareSwitch(to: .imported)
                 var fields = MemorySample.read()?.fields("after_validation") ?? [:]
@@ -148,6 +176,86 @@ final class LabState: ObservableObject {
             } catch {
                 failure = "Could not import \(url.lastPathComponent). \(error.localizedDescription)"
             }
+        }
+    }
+
+    func importHistorical(_ result: Result<URL, Error>) {
+        do {
+            let source = try result.get()
+            let candidate = HistoricalStore(source: source, copyFromFiles: true)
+            applyHistory(historicalRequest ?? HistoricalRequest.presets[0], replacement: candidate)
+        } catch {
+            failure = error.localizedDescription
+        }
+    }
+
+    func applyHistory(_ request: HistoricalRequest, published: Bool = false,
+                      replacement: HistoricalStore? = nil) {
+        let requestedAt = LabLog.now
+        let source = Self.documents.appendingPathComponent(HistoricalArchive.filename)
+        let store = replacement ?? history ?? HistoricalStore(source: source)
+        // Keep the selected dataset and date paired until extraction succeeds.
+        loading?.cancel()
+        historicalPending = true
+        failure = nil
+        LabLog.record("historical_request", ["date": request.day.description, "provenance": request.provenance])
+        loading = Task {
+            do {
+                let (file, measurements): (HistoricalMapFile, [[String: Any]])
+                if published {
+                    let folder = Self.documents
+                    let day = request.day
+                    let result = try await Task.detached {
+                        let peak = MemorySampler()
+                        let start = LabLog.now
+                        let url = folder.appendingPathComponent("historical-\(day).geojson")
+                        let manifestURL = folder.appendingPathComponent("historical-\(day).manifest.json")
+                        let (manifest, summary) = try HistoricalArchive.loadPublished(
+                            geoJSON: url, manifestURL: manifestURL, date: day)
+                        return (HistoricalMapFile(url: url, request: request, summary: summary,
+                                                  manifest: manifest, temporary: false),
+                                [peak.finish(event: "historical_published_read", since: start)])
+                    }.value
+                    (file, measurements) = result
+                } else {
+                    (file, measurements) = try await store.snapshot(request)
+                }
+                try Task.checkCancellation()
+                if !published { history = store }
+                for var fields in measurements {
+                    guard let phase = fields.removeValue(forKey: "phase") as? String else { continue }
+                    fields["date"] = request.day.description
+                    LabLog.record(phase, fields)
+                }
+                LabLog.record("historical_snapshot", [
+                    "date": request.day.description, "provenance": request.provenance,
+                    "features": file.summary.features, "parts": file.summary.parts,
+                    "multipart": file.summary.multipart, "rings": file.summary.rings,
+                    "positions": file.summary.positions, "bytes": file.manifest.bytes,
+                    "output_sha256": file.manifest.outputSHA256, "published": published
+                ])
+                historicalPending = false
+                historicalRequest = request
+                prepareSwitch(to: .historical)
+                dataset = Dataset(geography: .historical, url: file.url, summary: file.summary,
+                                  requestedAt: requestedAt, imported: nil, historical: file)
+                loading = nil
+            } catch {
+                guard !Task.isCancelled else { return }
+                historicalPending = false
+                failure = "Could not load \(request.day). \(error.localizedDescription)"
+                loading = nil
+            }
+        }
+    }
+
+    func enterHistoricalDate(_ date: String, source: String) {
+        do {
+            let citation = source.trimmingCharacters(in: .whitespacesAndNewlines)
+            let provenance = citation.isEmpty ? "Explicit snapshot date" : citation
+            applyHistory(try HistoricalRequest(date, provenance: provenance))
+        } catch {
+            failure = error.localizedDescription
         }
     }
 
@@ -184,28 +292,66 @@ private struct LabView: View {
     @StateObject private var state = LabState()
     @State private var showImporter = false
     @State private var showProperties = false
+    @State private var importArchive = false
+    @State private var showDate = false
+    @State private var dateText = ""
+    @State private var dateSource = ""
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Ballotics GeoJSON Lab").font(.title2.bold())
-            Text("Historical boundaries · Geometry only")
-                .font(.caption).foregroundStyle(.secondary)
+            Text(verbatim: state.historicalRequest.flatMap { state.geography == .historical ? $0 : nil }
+                .map { "\($0.day.description) · \($0.provenance)" } ?? "Historical boundaries · Geometry only")
+                .font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                .accessibilityIdentifier("snapshot-date")
 
             HStack {
                 Menu {
                     ForEach(Geography.allCases) { geography in
                         if geography != .imported || state.imported != nil {
-                            Button(geography.rawValue) { state.choose(geography) }
+                            Button(geography.rawValue) {
+                                if geography == .historical && !state.hasHistoricalArchive {
+                                    importArchive = true
+                                    showImporter = true
+                                } else {
+                                    state.choose(geography)
+                                }
+                            }
                         }
                     }
                 } label: {
-                    Label(state.geography.rawValue, systemImage: "square.3.layers.3d")
+                    Label(state.geography == .historical ? "History" : state.geography.rawValue,
+                          systemImage: "square.3.layers.3d")
                         .frame(minWidth: 96)
                 }
                 .accessibilityIdentifier("datasets")
 
-                Button("Import file") { showImporter = true }
+                if state.geography == .historical {
+                    Menu {
+                        ForEach(HistoricalRequest.presets, id: \.day.number) { request in
+                            Button(request.day.description) { state.applyHistory(request) }
+                        }
+                        Button("2024 · archive ends in 2000") {}.disabled(true)
+                        Button("Custom date") {
+                            dateText = state.historicalRequest?.day.description ?? ""
+                            dateSource = ""
+                            showDate = true
+                        }
+                        Button("Load archive") {
+                            importArchive = true
+                            showImporter = true
+                        }
+                    } label: {
+                        Text("Choose date")
+                    }
+                    .accessibilityIdentifier("historical-dates")
+                } else {
+                    Button("Import file") {
+                        importArchive = false
+                        showImporter = true
+                    }
                     .disabled(state.importing)
+                }
 
                 Spacer(minLength: 0)
 
@@ -229,7 +375,8 @@ private struct LabView: View {
                 .layoutPriority(1)
 
             VStack(alignment: .leading, spacing: 4) {
-                Text(state.importing ? "Validating imported file…" : state.status)
+                Text(state.historicalPending ? "Preparing historical snapshot…" :
+                        state.importing ? "Validating imported file…" : state.status)
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .accessibilityIdentifier("load-status")
@@ -248,7 +395,31 @@ private struct LabView: View {
         .fileImporter(
             isPresented: $showImporter,
             allowedContentTypes: [.json, UTType(filenameExtension: "geojson") ?? .json]
-        ) { state.importGeoJSON($0) }
+        ) { result in
+            if importArchive { state.importHistorical(result) }
+            else { state.importGeoJSON(result) }
+        }
+        .sheet(isPresented: $showDate) {
+            NavigationStack {
+                Form {
+                    TextField("YYYY-MM-DD", text: $dateText).keyboardType(.numbersAndPunctuation).accessibilityIdentifier("custom-date")
+                    TextField("Snapshot provenance or election-date source", text: $dateSource)
+                        .accessibilityIdentifier("date-provenance")
+                }
+                .navigationTitle("Historical snapshot")
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button("Cancel") { showDate = false }
+                    }
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button("Apply") {
+                            showDate = false
+                            state.enterHistoricalDate(dateText, source: dateSource)
+                        }
+                    }
+                }
+            }
+        }
         .alert("GeoJSON Lab", isPresented: Binding(
             get: { state.failure != nil }, set: { if !$0 { state.failure = nil } }
         )) {
