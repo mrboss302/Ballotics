@@ -1,0 +1,14 @@
+{
+  "version": 8,
+  "name": "Ballotics raw GeoJSON baseline",
+  "sources": {},
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#EEF2F5"
+      }
+    }
+  ]
+}

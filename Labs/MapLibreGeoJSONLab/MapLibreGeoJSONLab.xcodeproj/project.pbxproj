@@ -1,0 +1,234 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+
+	};
+	objectVersion = 56;
+	objects = {
+		DADADADADADADADADADA0018 = {
+			isa = PBXBuildFile;
+			fileRef = DADADADADADADADADADA0007;
+		};
+		DADADADADADADADADADA0019 = {
+			isa = PBXBuildFile;
+			fileRef = DADADADADADADADADADA0008;
+		};
+		DADADADADADADADADADA001A = {
+			isa = PBXBuildFile;
+			fileRef = DADADADADADADADADADA0009;
+		};
+		DADADADADADADADADADA001B = {
+			isa = PBXBuildFile;
+			fileRef = DADADADADADADADADADA000A;
+		};
+		DADADADADADADADADADA001C = {
+			isa = PBXBuildFile;
+			fileRef = DADADADADADADADADADA000B;
+		};
+		DADADADADADADADADADA001D = {
+			isa = PBXBuildFile;
+			productRef = DADADADADADADADADADA0017;
+		};
+		DADADADADADADADADADA0007 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = BalloticsMapLibreLabApp.swift;
+			sourceTree = "<group>";
+		};
+		DADADADADADADADADADA0008 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.json;
+			path = "offline-style.json";
+			sourceTree = "<group>";
+		};
+		DADADADADADADADADADA0009 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.json;
+			path = cb_2024_us_cd119_5m.json;
+			sourceTree = "<group>";
+		};
+		DADADADADADADADADADA000A = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.json;
+			path = cb_2024_us_county_5m.json;
+			sourceTree = "<group>";
+		};
+		DADADADADADADADADADA000B = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.json;
+			path = cb_2024_us_state_5m.json;
+			sourceTree = "<group>";
+		};
+		DADADADADADADADADADA000C = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = MapLibreGeoJSONLab.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DADADADADADADADADADA000D = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (DADADADADADADADADADA0018,);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DADADADADADADADADADA000E = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (DADADADADADADADADADA0019, DADADADADADADADADADA001A, DADADADADADADADADADA001B, DADADADADADADADADADA001C,);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DADADADADADADADADADA000F = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (DADADADADADADADADADA001D,);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DADADADADADADADADADA0003 = {
+			isa = PBXGroup;
+			children = (DADADADADADADADADADA0004, DADADADADADADADADADA0005, DADADADADADADADADADA0006,);
+			sourceTree = "<group>";
+		};
+		DADADADADADADADADADA0004 = {
+			isa = PBXGroup;
+			children = (DADADADADADADADADADA0007, DADADADADADADADADADA0008,);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		DADADADADADADADADADA0005 = {
+			isa = PBXGroup;
+			children = (DADADADADADADADADADA0009, DADADADADADADADADADA000A, DADADADADADADADADADA000B,);
+			name = "Existing GeoJSON";
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		DADADADADADADADADADA0006 = {
+			isa = PBXGroup;
+			children = (DADADADADADADADADADA000C,);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DADADADADADADADADADA0002 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DADADADADADADADADADA0015;
+			buildPhases = (DADADADADADADADADADA000D, DADADADADADADADADADA000F, DADADADADADADADADADA000E,);
+			buildRules = ();
+			dependencies = ();
+			name = MapLibreGeoJSONLab;
+			packageProductDependencies = (DADADADADADADADADADA0017,);
+			productName = MapLibreGeoJSONLab;
+			productReference = DADADADADADADADADADA000C;
+			productType = "com.apple.product-type.application";
+		};
+		DADADADADADADADADADA0001 = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					DADADADADADADADADADA0002 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = DADADADADADADADADADA0014;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base,);
+			mainGroup = DADADADADADADADADADA0003;
+			packageReferences = (DADADADADADADADADADA0016,);
+			productRefGroup = DADADADADADADADADADA0006;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (DADADADADADADADADADA0002,);
+		};
+		DADADADADADADADADADA0010 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DADADADADADADADADADA0011 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		DADADADADADADADADADA0012 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ballotics.MapLibreGeoJSONLab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DADADADADADADADADADA0013 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ballotics.MapLibreGeoJSONLab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DADADADADADADADADADA0014 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (DADADADADADADADADADA0010, DADADADADADADADADADA0011,);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DADADADADADADADADADA0015 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (DADADADADADADADADADA0012, DADADADADADADADADADA0013,);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DADADADADADADADADADA0016 = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maplibre/maplibre-gl-native-distribution";
+			requirement = {
+				kind = exactVersion;
+				version = 6.31.0;
+			};
+		};
+		DADADADADADADADADADA0017 = {
+			isa = XCSwiftPackageProductDependency;
+			package = DADADADADADADADADADA0016;
+			productName = MapLibre;
+		};
+	};
+	rootObject = DADADADADADADADADADA0001;
+}
