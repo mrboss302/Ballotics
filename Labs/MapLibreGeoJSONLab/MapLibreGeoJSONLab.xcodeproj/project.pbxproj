@@ -6,6 +6,92 @@
 	};
 	objectVersion = 56;
 	objects = {
+		DADADADADADADADADADA0023 = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LabInfo.plist; sourceTree = "<group>"; };
+		DADADADADADADADADADA0030 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = Tests/MapLibreGeoJSONLabUITests.swift;
+			sourceTree = "<group>";
+		};
+		DADADADADADADADADADA0031 = {
+			isa = PBXBuildFile;
+			fileRef = DADADADADADADADADADA0030;
+		};
+		DADADADADADADADADADA0032 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DADADADADADADADADADA0037;
+			buildPhases = (DADADADADADADADADADA0034,);
+			buildRules = ();
+			dependencies = (DADADADADADADADADADA0038,);
+			name = MapLibreGeoJSONLabUITests;
+			productName = MapLibreGeoJSONLabUITests;
+			productReference = DADADADADADADADADADA0033;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		DADADADADADADADADADA0033 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			path = MapLibreGeoJSONLabUITests.xctest;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DADADADADADADADADADA0034 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (DADADADADADADADADADA0031,);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DADADADADADADADADADA0035 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ballotics.MapLibreGeoJSONLabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MapLibreGeoJSONLab;
+			};
+			name = Debug;
+		};
+		DADADADADADADADADADA0036 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ballotics.MapLibreGeoJSONLabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MapLibreGeoJSONLab;
+			};
+			name = Release;
+		};
+		DADADADADADADADADADA0037 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (DADADADADADADADADADA0035, DADADADADADADADADADA0036,);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DADADADADADADADADADA0038 = {
+			isa = PBXTargetDependency;
+			target = DADADADADADADADADADA0002;
+			targetProxy = DADADADADADADADADADA0039;
+		};
+		DADADADADADADADADADA0039 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DADADADADADADADADADA0001;
+			proxyType = 1;
+			remoteGlobalIDString = DADADADADADADADADADA0002;
+			remoteInfo = MapLibreGeoJSONLab;
+		};
+
+		DADADADADADADADADADA0022 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Benchmarks.swift; sourceTree = "<group>"; };
+		DADADADADADADADADADA0027 = {isa = PBXBuildFile; fileRef = DADADADADADADADADADA0022; };
+		DADADADADADADADADADA0021 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLibreGeometryView.swift; sourceTree = "<group>"; };
+		DADADADADADADADADADA0026 = {isa = PBXBuildFile; fileRef = DADADADADADADADADADA0021; };
+		DADADADADADADADADADA0020 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoJSON.swift; sourceTree = "<group>"; };
+		DADADADADADADADADADA0025 = {isa = PBXBuildFile; fileRef = DADADADADADADADADADA0020; };
 		DADADADADADADADADADA0018 = {
 			isa = PBXBuildFile;
 			fileRef = DADADADADADADADADADA0007;
@@ -70,7 +156,7 @@
 		DADADADADADADADADADA000D = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
-			files = (DADADADADADADADADADA0018,);
+			files = (DADADADADADADADADADA0018, DADADADADADADADADADA0027, DADADADADADADADADADA0026, DADADADADADADADADADA0025,);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DADADADADADADADADADA000E = {
@@ -92,7 +178,7 @@
 		};
 		DADADADADADADADADADA0004 = {
 			isa = PBXGroup;
-			children = (DADADADADADADADADADA0007, DADADADADADADADADADA0008,);
+			children = (DADADADADADADADADADA0023, DADADADADADADADADADA0030, DADADADADADADADADADA0007, DADADADADADADADADADA0008, DADADADADADADADADADA0022, DADADADADADADADADADA0021, DADADADADADADADADADA0020,);
 			name = Sources;
 			sourceTree = "<group>";
 		};
@@ -105,7 +191,7 @@
 		};
 		DADADADADADADADADADA0006 = {
 			isa = PBXGroup;
-			children = (DADADADADADADADADADA000C,);
+			children = (DADADADADADADADADADA000C, DADADADADADADADADADA0033,);
 			name = Products;
 			sourceTree = "<group>";
 		};
@@ -128,6 +214,7 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					DADADADADADADADADADA0032 = { TestTargetID = DADADADADADADADADADA0002; };
 					DADADADADADADADADADA0002 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -143,7 +230,7 @@
 			productRefGroup = DADADADADADADADADADA0006;
 			projectDirPath = "";
 			projectRoot = "";
-			targets = (DADADADADADADADADADA0002,);
+			targets = (DADADADADADADADADADA0002, DADADADADADADADADADA0032,);
 		};
 		DADADADADADADADADADA0010 = {
 			isa = XCBuildConfiguration;
@@ -177,6 +264,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = LabInfo.plist;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks",);
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.ballotics.MapLibreGeoJSONLab;
@@ -194,6 +283,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = LabInfo.plist;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks",);
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.ballotics.MapLibreGeoJSONLab;

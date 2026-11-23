@@ -1,261 +1,271 @@
-import SwiftUI
 import MapLibre
-import CoreLocation
+import SwiftUI
 import UniformTypeIdentifiers
 
-private enum Geography: String, CaseIterable, Identifiable {
-    case districts = "Districts"
-    case counties = "Counties"
-    case states = "States"
-    case imported = "Imported file"
-
-    var id: String { rawValue }
-
-    var resource: String? {
-        switch self {
-        case .districts: return "cb_2024_us_cd119_5m"
-        case .counties: return "cb_2024_us_county_5m"
-        case .states: return "cb_2024_us_state_5m"
-        case .imported: return nil
-        }
-    }
+struct Dataset {
+    let geography: Geography
+    let url: URL
+    let summary: GeoJSON.Summary
+    let requestedAt: Double
+    let imported: ImportedFile?
 }
 
-private final class LabState: ObservableObject {
-    @Published var geography: Geography = .districts
-    @Published var importedURL: URL?
-    @Published var status = "Loading local map style…"
-    @Published var firstIdleSeconds: Double?
-    @Published var selection = "Tap a polygon to inspect its GEOID."
-    @Published var error: String?
+struct Inspection {
+    let title: String
+    let properties: [(key: String, value: String)]
+    let stateCode: String?
+}
 
-    var currentURL: URL? {
-        if geography == .imported { return importedURL }
-        guard let name = geography.resource else { return nil }
-        return Bundle.main.url(forResource: name, withExtension: "json")
+enum Viewpoint: Equatable {
+    case national, alaska, hawaii, selectedState
+}
+
+@MainActor
+final class LabState: ObservableObject {
+    @Published private(set) var geography: Geography = .districts
+    @Published private(set) var dataset: Dataset?
+    @Published private(set) var imported: ImportedFile?
+    @Published var status = "Preparing local geometry…"
+    @Published var inspection: Inspection?
+    @Published var failure: String?
+    @Published private(set) var importing = false
+    @Published private(set) var cameraRequest: (Int, Viewpoint) = (0, .national)
+    @Published private(set) var alternateColor = false
+
+    private var validations: [Geography: GeoJSON.Summary] = [:]
+    private var loading: Task<Void, Never>?
+
+    var canZoomToSelection: Bool {
+        guard geography == .states, let stateCode = inspection?.stateCode else { return false }
+        return dataset?.summary.stateBounds[stateCode] != nil
+    }
+
+    func start() {
+        guard dataset == nil, loading == nil else { return }
+        let arguments = ProcessInfo.processInfo.arguments
+        if let index = arguments.firstIndex(of: "--dataset"),
+           let name = arguments.dropFirst(index + 1).first,
+           let geography = Geography.allCases.first(where: { $0.rawValue.lowercased() == name.lowercased() }),
+           geography != .imported {
+            choose(geography)
+        } else if arguments.contains("--historical"), let folder = FileManager.default.urls(
+            for: .documentDirectory, in: .userDomainMask
+        ).first {
+            importGeoJSON(.success(folder.appendingPathComponent("US_HistCounties_Gen05.json")))
+        } else {
+            choose(.districts)
+        }
+    }
+
+    func choose(_ next: Geography) {
+        guard geography != next || dataset?.geography != next else { return }
+        let requestedAt = LabLog.now
+        if next == .imported {
+            guard let imported else { return }
+            loading?.cancel()
+            loading = nil
+            prepareSwitch(to: next)
+            dataset = Dataset(geography: next, url: imported.url, summary: imported.summary,
+                              requestedAt: requestedAt, imported: imported)
+            return
+        }
+
+        guard let name = next.resource, let url = Bundle.main.url(forResource: name, withExtension: "json") else {
+            failure = "The bundled \(next.rawValue.lowercased()) file is missing."
+            return
+        }
+        loading?.cancel()
+        prepareSwitch(to: next)
+        if let summary = validations[next] {
+            loading = nil
+            dataset = Dataset(geography: next, url: url, summary: summary,
+                              requestedAt: requestedAt, imported: nil)
+            return
+        }
+
+        var baseline = MemorySample.read()?.fields("before_validation") ?? [:]
+        baseline["dataset"] = next.rawValue
+        LabLog.record("validation_start", baseline)
+        loading = Task {
+            let validate = Task.detached(priority: .userInitiated) { try GeoJSON.validate(url, geography: next) }
+            defer { validate.cancel() }
+            do {
+                let summary = try await withTaskCancellationHandler {
+                    try await validate.value
+                } onCancel: {
+                    validate.cancel()
+                }
+                try Task.checkCancellation()
+                validations[next] = summary
+                var fields = MemorySample.read()?.fields("after_validation") ?? [:]
+                fields["dataset"] = next.rawValue
+                fields["validation_ms"] = LabLog.milliseconds(LabLog.now - requestedAt)
+                LabLog.record("validation_end", fields)
+                dataset = Dataset(geography: next, url: url, summary: summary,
+                                  requestedAt: requestedAt, imported: nil)
+                loading = nil
+            } catch is CancellationError {
+                return
+            } catch {
+                guard !Task.isCancelled else { return }
+                status = "Dataset unavailable"
+                failure = error.localizedDescription
+                dataset = nil
+                loading = nil
+            }
+        }
     }
 
     func importGeoJSON(_ result: Result<URL, Error>) {
+        guard !importing else { return }
+        let requestedAt = LabLog.now
+        let url: URL
         do {
-            let url = try result.get()
-            let access = url.startAccessingSecurityScopedResource()
-            defer { if access { url.stopAccessingSecurityScopedResource() } }
-            let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-                .appendingPathComponent("GeoJSONImports", isDirectory: true)
-            try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
-            // Unique URL forces MapLibre to replace its source on reimport.
-            let destination = directory.appendingPathComponent(
-                UUID().uuidString + "-" + url.lastPathComponent
-            )
-            try FileManager.default.copyItem(at: url, to: destination)
-            importedURL = destination
-            error = nil
-            geography = .imported
+            url = try result.get()
         } catch {
-            self.error = error.localizedDescription
+            failure = error.localizedDescription
+            return
         }
+        importing = true
+        failure = nil
+        var fields = MemorySample.read()?.fields("before_validation") ?? [:]
+        fields["dataset"] = url.lastPathComponent
+        LabLog.record("import_start", fields)
+        Task {
+            defer { importing = false }
+            do {
+                let file = try await Task.detached(priority: .userInitiated) { try ImportedFile.prepare(url) }.value
+                loading?.cancel()
+                loading = nil
+                imported = file
+                prepareSwitch(to: .imported)
+                var fields = MemorySample.read()?.fields("after_validation") ?? [:]
+                fields["dataset"] = file.displayName
+                fields["copy_validation_ms"] = LabLog.milliseconds(file.preparationSeconds)
+                LabLog.record("import_end", fields)
+                dataset = Dataset(geography: .imported, url: file.url, summary: file.summary,
+                                  requestedAt: requestedAt, imported: file)
+            } catch {
+                failure = "Could not import \(url.lastPathComponent). \(error.localizedDescription)"
+            }
+        }
+    }
+
+    func moveCamera(_ viewpoint: Viewpoint) {
+        cameraRequest = (cameraRequest.0 + 1, viewpoint)
+    }
+
+    func recolor() { alternateColor.toggle() }
+
+    private func prepareSwitch(to next: Geography) {
+        geography = next
+        inspection = nil
+        failure = nil
+        status = "Preparing \(next.rawValue.lowercased())…"
     }
 }
 
 @main
 struct BalloticsMapLibreLabApp: App {
+    init() {
+        _ = LabLog.start
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [BlockMapHTTP.self]
+        MLNNetworkConfiguration.sharedManager.sessionConfiguration = configuration
+        LabLog.record("app_init")
+    }
+
     var body: some Scene {
-        WindowGroup {
-            LabView()
-        }
+        WindowGroup { LabView() }
     }
 }
 
 private struct LabView: View {
     @StateObject private var state = LabState()
     @State private var showImporter = false
+    @State private var showProperties = false
 
     var body: some View {
-        VStack(spacing: 12) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text("Ballotics MapLibre GeoJSON Lab").font(.headline)
-                Text("Direct GeoJSON · offline style · research only")
-                    .font(.caption).foregroundStyle(.secondary)
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
+        VStack(alignment: .leading, spacing: 10) {
+            Text("Ballotics GeoJSON Lab").font(.title2.bold())
+            Text("Historical boundaries · Geometry only")
+                .font(.caption).foregroundStyle(.secondary)
 
             HStack {
-                Picker("Geometry", selection: $state.geography) {
+                Menu {
                     ForEach(Geography.allCases) { geography in
-                        if geography != .imported || state.importedURL != nil {
-                            Text(geography.rawValue).tag(geography)
+                        if geography != .imported || state.imported != nil {
+                            Button(geography.rawValue) { state.choose(geography) }
                         }
                     }
+                } label: {
+                    Label(state.geography.rawValue, systemImage: "square.3.layers.3d")
+                        .frame(minWidth: 96)
                 }
-                .pickerStyle(.menu)
+                .accessibilityIdentifier("datasets")
+
                 Button("Import file") { showImporter = true }
-                    .buttonStyle(.bordered)
+                    .disabled(state.importing)
+
+                Spacer(minLength: 0)
+
+                Menu {
+                    Button("National") { state.moveCamera(.national) }
+                    Button("Alaska") { state.moveCamera(.alaska) }
+                    Button("Hawaii") { state.moveCamera(.hawaii) }
+                    Button("Zoom to selected state") { state.moveCamera(.selectedState) }
+                        .disabled(!state.canZoomToSelection)
+                    Button("Recolor polygons") { state.recolor() }
+                } label: {
+                    Label("Map view", systemImage: "scope").labelStyle(.iconOnly)
+                }
+                .accessibilityIdentifier("viewpoints")
             }
+            .buttonStyle(.bordered)
 
             MapLibreGeometryView(state: state)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .layoutPriority(1)
 
-            VStack(alignment: .leading, spacing: 5) {
-                Text(state.status).font(.subheadline)
-                if let seconds = state.firstIdleSeconds {
-                    Text(String(format: "Added source → first idle: %.3f s (indicative)", seconds))
-                        .font(.caption).monospacedDigit()
+            VStack(alignment: .leading, spacing: 4) {
+                Text(state.importing ? "Validating imported file…" : state.status)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .accessibilityIdentifier("load-status")
+                Button {
+                    showProperties = true
+                } label: {
+                    Text(state.inspection?.title ?? "Tap a polygon to inspect it")
+                        .font(.subheadline.weight(.semibold)).lineLimit(1)
                 }
-                Text(state.selection).font(.caption).lineLimit(3)
-                if let error = state.error {
-                    Text(error).font(.caption).foregroundStyle(.red)
-                }
-                Text("Use Xcode Instruments for actual FPS and resident memory.")
-                    .font(.caption2).foregroundStyle(.secondary)
+                .disabled(state.inspection == nil)
+                .accessibilityIdentifier("inspection")
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding()
+        .task { state.start() }
         .fileImporter(
             isPresented: $showImporter,
             allowedContentTypes: [.json, UTType(filenameExtension: "geojson") ?? .json]
         ) { state.importGeoJSON($0) }
-    }
-}
-
-private struct MapLibreGeometryView: UIViewRepresentable {
-    @ObservedObject var state: LabState
-
-    func makeCoordinator() -> Coordinator { Coordinator(state: state) }
-
-    func makeUIView(context: Context) -> MLNMapView {
-        let map = MLNMapView(
-            frame: .zero,
-            styleURL: Bundle.main.url(forResource: "offline-style", withExtension: "json")
-        )
-        map.delegate = context.coordinator
-        map.setCenter(
-            CLLocationCoordinate2D(latitude: 39.5, longitude: -97),
-            zoomLevel: 2.5,
-            animated: false
-        )
-        let tap = UITapGestureRecognizer(
-            target: context.coordinator,
-            action: #selector(Coordinator.handleTap(_:))
-        )
-        tap.cancelsTouchesInView = false
-        map.addGestureRecognizer(tap)
-        return map
-    }
-
-    func updateUIView(_ map: MLNMapView, context: Context) {
-        // Avoid publishing ObservableObject changes during SwiftUI's view update.
-        let coordinator = context.coordinator
-        DispatchQueue.main.async {
-            coordinator.applyIfNeeded(on: map)
+        .alert("GeoJSON Lab", isPresented: Binding(
+            get: { state.failure != nil }, set: { if !$0 { state.failure = nil } }
+        )) {
+            Button("OK") { state.failure = nil }
+        } message: {
+            Text(state.failure ?? "")
         }
-    }
-
-    final class Coordinator: NSObject, MLNMapViewDelegate {
-        private let sourceID = "ballotics-geojson"
-        private let fillID = "ballotics-fill"
-        private let lineID = "ballotics-border"
-        private let selectID = "ballotics-selection"
-        private let state: LabState
-        private var loadedURL: URL?
-        private var started: TimeInterval?
-
-        init(state: LabState) { self.state = state }
-
-        func mapView(_ mapView: MLNMapView, didFinishLoading style: MLNStyle) {
-            loadedURL = nil
-            applyIfNeeded(on: mapView)
-        }
-
-        func applyIfNeeded(on map: MLNMapView) {
-            guard let style = map.style else { return }
-            let url = state.currentURL
-            guard loadedURL != url else { return }
-            loadedURL = url
-            started = nil
-            state.firstIdleSeconds = nil
-            state.selection = "Tap a polygon to inspect its GEOID."
-
-            for identifier in [selectID, lineID, fillID] {
-                if let layer = style.layer(withIdentifier: identifier) {
-                    style.removeLayer(layer)
+        .sheet(isPresented: $showProperties) {
+            if let inspection = state.inspection {
+                NavigationStack {
+                    List(inspection.properties, id: \.key) { property in
+                        LabeledContent(property.key, value: property.value)
+                    }
+                    .navigationTitle(inspection.title)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbar { Button("Done") { showProperties = false } }
                 }
-            }
-            if let source = style.source(withIdentifier: sourceID) {
-                style.removeSource(source)
-            }
-            guard let url, FileManager.default.fileExists(atPath: url.path) else {
-                state.status = "No local GeoJSON file found."
-                return
-            }
-            state.status = "Loading " + url.lastPathComponent
-            started = ProcessInfo.processInfo.systemUptime
-
-            // The unmodified GeoJSON file URL is handed straight to MapLibre.
-            let source = MLNShapeSource(identifier: sourceID, url: url, options: nil)
-            style.addSource(source)
-
-            let fill = MLNFillStyleLayer(identifier: fillID, source: source)
-            fill.fillColor = NSExpression(forConstantValue: UIColor(
-                red: 0.30, green: 0.55, blue: 0.76, alpha: 1
-            ))
-            fill.fillOpacity = NSExpression(forConstantValue: 0.88)
-            style.addLayer(fill)
-
-            let line = MLNLineStyleLayer(identifier: lineID, source: source)
-            line.lineColor = NSExpression(forConstantValue: UIColor.white)
-            line.lineWidth = NSExpression(forConstantValue: 0.65)
-            style.addLayer(line)
-
-            let selected = MLNFillStyleLayer(identifier: selectID, source: source)
-            selected.fillColor = NSExpression(forConstantValue: UIColor.systemYellow)
-            selected.fillOpacity = NSExpression(forConstantValue: 0.75)
-            selected.predicate = NSPredicate(value: false)
-            style.addLayer(selected)
-
-            map.setCenter(
-                CLLocationCoordinate2D(latitude: 39.5, longitude: -97),
-                zoomLevel: 2.5,
-                animated: false
-            )
-        }
-
-        func mapViewDidBecomeIdle(_ map: MLNMapView) {
-            guard let started else { return }
-            self.started = nil
-            state.firstIdleSeconds = ProcessInfo.processInfo.systemUptime - started
-            state.status = "Map idle. Visually verify polygons, zoom and tapping."
-        }
-
-        func mapViewDidFailLoadingMap(_ map: MLNMapView, withError error: Error) {
-            started = nil
-            state.status = "Map loading failed: " + error.localizedDescription
-        }
-
-        @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
-            guard let map = recognizer.view as? MLNMapView,
-                  let selectionLayer = map.style?.layer(withIdentifier: selectID)
-                    as? MLNFillStyleLayer else { return }
-            let features = map.visibleFeatures(
-                at: recognizer.location(in: map),
-                styleLayerIdentifiers: Set([fillID])
-            )
-            guard let feature = features.first else {
-                selectionLayer.predicate = NSPredicate(value: false)
-                state.selection = "No polygon at this location."
-                return
-            }
-            let fields = ["NAME", "NAMELSAD", "GEOID", "STATEFP", "CD119FP"]
-            let parts = fields.compactMap { key -> String? in
-                guard let value = feature.attributes[key] else { return nil }
-                return key + ": " + String(describing: value)
-            }
-            state.selection = parts.isEmpty ? "Polygon found, no known properties" :
-                parts.joined(separator: " • ")
-            if let geoid = feature.attributes["GEOID"] as? String {
-                selectionLayer.predicate = NSPredicate(format: "GEOID == %@", geoid)
-            } else {
-                selectionLayer.predicate = NSPredicate(value: false)
             }
         }
     }
