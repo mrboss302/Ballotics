@@ -1,0 +1,4 @@
+{"dataset": "Districts", "event": "xctest_launch_to_responsive", "samples": [1.238181, 1.323365, 1.58988], "unit": "seconds"}
+{"dataset": "Counties", "event": "xctest_launch_to_responsive", "samples": [1.25346, 1.57266, 1.266292], "unit": "seconds"}
+{"dataset": "States", "event": "xctest_launch_to_responsive", "samples": [1.310302, 1.234415, 1.084506], "unit": "seconds"}
+{"dataset": "Historical counties", "event": "xctest_launch_to_responsive", "samples": [1.39148, 1.482958, 1.225141], "unit": "seconds"}

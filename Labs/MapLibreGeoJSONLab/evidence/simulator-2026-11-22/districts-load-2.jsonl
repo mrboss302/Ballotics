@@ -1,0 +1,8 @@
+{"app_ms":0.90000000000000002,"event":"app_init"}
+{"app_ms":126.5,"event":"style_ready","style_ready_footprint_mib":25.58087158203125,"style_ready_rss_mib":202.984375}
+{"app_ms":131.5,"before_validation_footprint_mib":25.45587158203125,"before_validation_rss_mib":203.765625,"dataset":"Districts","event":"validation_start"}
+{"after_validation_footprint_mib":48.205894470214844,"after_validation_rss_mib":230.5625,"app_ms":365,"dataset":"Districts","event":"validation_end","validation_ms":233.5}
+{"app_ms":366.10000000000002,"before_source_footprint_mib":48.221519470214844,"before_source_rss_mib":230.59375,"dataset":"Districts","event":"source_start","revision":1,"source_profile":"defaults"}
+{"app_ms":366.30000000000001,"dataset":"Districts","event":"source_submitted","revision":1,"submit_ms":0.29999999999999999}
+{"app_ms":445.60000000000002,"dataset":"Districts","event":"first_useful_frame","frame_fully_rendered":true,"request_ms":314.10000000000002,"revision":1,"source_ms":79.400000000000006,"useful_footprint_mib":66.565383911132812,"useful_rss_mib":321.75}
+{"app_ms":1056.4000000000001,"dataset":"Districts","event":"idle_with_geometry","idle_footprint_mib":66.768508911132812,"idle_rss_mib":322.328125,"request_ms":925,"revision":1,"source_ms":690.39999999999998}

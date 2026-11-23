@@ -1,40 +1,48 @@
 # Ballotics MapLibre Native GeoJSON Lab
 
-This is an isolated SwiftUI iOS research project. It does not modify Ballotics production source code.
+A standalone SwiftUI iOS experiment for the original Ballotics polygon files. The app bundles a background-only style and uses MapLibre Native 6.31.0. Build and dependency resolution may require internet access. The running map uses local files and rejects HTTP(S) in MapLibre's configured session.
 
-## Setup
+Open [MapLibreGeoJSONLab.xcodeproj](MapLibreGeoJSONLab.xcodeproj) from the research branch and run the shared `MapLibreGeoJSONLab` scheme. The app target requires iOS 17 or later. Select a signing team for a physical device.
 
-1. Check out the research/maplibre-native-geojson-lab branch from the mrboss302/Ballotics repository.
-2. Open Labs/MapLibreGeoJSONLab/MapLibreGeoJSONLab.xcodeproj in Xcode.
-3. Resolve the official MapLibre Swift package (pinned to 6.31.0).
-4. Run the MapLibreGeoJSONLab scheme on iPhone simulator, then on a physical iPhone.
-5. Choose Districts, Counties, States, or Import file. Tap polygons and pan/zoom.
+The app target references the three Census files at the repository root. Keep them in place. Tap a polygon and open its inspection panel to see its identifiers and other scalar properties. The camera menu resets to a contiguous U.S. overview, provides Alaska and Hawaii shortcuts, fits the selected state when the States layer is active, and lets you change fill paint on the current source. Pinch, pan, and double-tap use MapLibre's native gestures.
 
-The project directly references three EXISTING files at the Ballotics repository root. Xcode bundles the raw JSON resources, with no conversion to SVG, MVT or PMTiles:
+Use **Import file** to select a local `.geojson` or `.json` file in iOS Files. The lab supports Polygon, MultiPolygon, and polygon-only FeatureCollections. Failed imports leave the previous dataset active. To try historical counties, copy the original `US_HistCounties_Gen05.json` from the preserved iOS repository into Files. The historical file contains overlapping vintages and the inspector exposes their start and end dates. The Census layers describe historical geography and have no election results or verified 2026 boundary status.
 
-- cb_2024_us_cd119_5m.json (4,749,558 bytes)
-- cb_2024_us_county_5m.json (10,167,949 bytes)
-- cb_2024_us_state_5m.json (2,349,868 bytes)
+## Verification
 
-Files must remain at the repository root. If extracting this lab out of the repository, update the Xcode file references.
+From the repository root, compile and run the same validator the iOS app uses:
 
-Import file supports additional GeoJSON files from the Files app. To test the much larger historical-county asset, copy US_HistCounties_Gen05.json from the preserved iOS repository to the iPhone Files app, then select Import file.
+```sh
+lab=Labs/MapLibreGeoJSONLab
+checks=$(mktemp -d)
+xcrun swiftc -O -module-cache-path "$checks/modules" \
+  "$lab/GeoJSON.swift" "$lab/Tests/GeoJSONChecks.swift" -o "$checks/geojson-checks"
+"$checks/geojson-checks" "$PWD"  # Optional second argument is the historical file path.
+```
 
-## Test protocol
+Run the shared scheme's UI tests on a bootable iOS Simulator.
 
-- Confirm no basemap download is required: offline-style.json is a LOCAL MapLibre style with no external sources.
-- Confirm the three original GeoJSON files load and draw all expected geographic areas.
-- Tap and identify polygons by GEOID; inspect multipart coastal geometry.
-- Run the same sequence at 1x, 2x, 4x and 8x zoom, with repeated panning.
-- Cycle districts → counties → states → districts 20 times. Watch memory growth and stale geometry.
-- Use a physical device in Release configuration with Xcode Instruments Time Profiler, Allocations/VM Tracker and Core Animation to measure actual CPU, peak/resident memory and frame pacing.
-- Use a fixed device/OS/camera path and the SAME geometry when comparing against the native Ballotics Maps Lab.
-- Check accessibility separately using VoiceOver. This test app is not a production accessibility qualification.
+```sh
+xcodebuild -project "$lab/MapLibreGeoJSONLab.xcodeproj" -scheme MapLibreGeoJSONLab \
+  -destination "platform=iOS Simulator,id=$SIMULATOR_ID" -parallel-testing-enabled NO \
+  -only-testing:MapLibreGeoJSONLabUITests/MapLibreGeoJSONLabUITests test
+```
 
-The on-screen time means source addition to the first MapLibre idle callback. It is a diagnostic, NOT a trustworthy end-to-end load, frame-rate, or memory benchmark. Only the device measurements establish speed. This project has not been built or run in Xcode by the author.
+When using the Files integration test, install and open the app on the selected simulator first, then stage `US_HistCounties_Gen05.json` and an invalid JSON file named `Lab-Malformed.json` in its Documents directory. In the picker these appear under **On My iPhone → Ballotics GeoJSON Lab**. The Files test skips when these optional inputs are absent.
 
-The bundled files describe 2024 geographic boundaries. Do not treat them as validated 2026 district boundaries or election results. This experiment contains no election results.
+## Simulator timing and memory
 
-MapLibre sources:
-https://maplibre.org/maplibre-native/ios/latest/documentation/maplibre-native-for-ios/gettingstarted/
-https://maplibre.org/maplibre-native/ios/latest/documentation/maplibre-native-for-ios/geojson/
+Build the app with the Release configuration for the same simulator, then point the runner at the built `.app`. The last argument is optional.
+
+```sh
+"$lab/Tests/benchmark-simulator.sh" "$SIMULATOR_ID" "$RELEASE_APP_BUNDLE" "$OUTPUT_DIRECTORY" \
+  "/absolute/path/to/US_HistCounties_Gen05.json"
+```
+
+Set `BALLOTICS_SOURCE_SWEEP=1` and pass the historical file to compare default source options with a 32-pixel buffer, a 1.5 simplification tolerance, and a source zoom cap of 8. Apply one option at a time.
+
+The runner records three fresh app processes per layer, one camera route per layer, and 21 consecutive switches. Transitions in the four zoom windows pan and change zoom slightly about a fixed central-U.S. route. The runner repeats the 8× window once to sample memory after navigating the same tiles again. The app records diagnostics in its Caches directory only with `--measure`; use a fresh or empty `benchmark.jsonl` per run. On-device, use `--measure --dataset districts|counties|states`, `--navigation-benchmark`, or `--switch-benchmark` in the Run/Profile scheme arguments. For the historical benchmark, place the file in the lab's Documents directory and pass `--historical` instead of `--dataset`.
+
+For native launch-to-responsive timings, run the UI test target in Release with `-only-testing:MapLibreGeoJSONLabUITests/GeoJSONLaunchTests`. Stage the historical file in the lab’s Documents directory to include that launch case.
+
+Use a physical-device Release build and an Instruments trace to measure process launch, frame presentation and hitches, and temporary allocations separately from resident and footprint memory. See [Benchmark results](BENCHMARK_RESULTS.md) for the measured configuration and [Technical findings](TECHNICAL_FINDINGS.md) for the decision and remaining qualification gates.

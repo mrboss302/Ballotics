@@ -1,0 +1,8 @@
+{"app_ms":2.3999999999999999,"event":"app_init"}
+{"app_ms":253.90000000000001,"event":"style_ready","style_ready_footprint_mib":26.237098693847656,"style_ready_rss_mib":203.484375}
+{"app_ms":259.69999999999999,"before_validation_footprint_mib":26.112098693847656,"before_validation_rss_mib":204.265625,"dataset":"Counties","event":"validation_start"}
+{"after_validation_footprint_mib":62.252769470214844,"after_validation_rss_mib":237.96875,"app_ms":937.10000000000002,"dataset":"Counties","event":"validation_end","validation_ms":677.5}
+{"app_ms":942.60000000000002,"before_source_footprint_mib":62.299644470214844,"before_source_rss_mib":238.59375,"dataset":"Counties","event":"source_start","revision":1,"source_profile":"defaults"}
+{"app_ms":943.20000000000005,"dataset":"Counties","event":"source_submitted","revision":1,"submit_ms":0.69999999999999996}
+{"app_ms":1623.3,"dataset":"Counties","event":"first_useful_frame","frame_fully_rendered":true,"request_ms":1363.5999999999999,"revision":1,"source_ms":680.60000000000002,"useful_footprint_mib":231.59743499755859,"useful_rss_mib":459}
+{"app_ms":1772.4000000000001,"dataset":"Counties","event":"idle_with_geometry","idle_footprint_mib":232.34743499755859,"idle_rss_mib":422.46875,"request_ms":1512.8,"revision":1,"source_ms":829.79999999999995}

@@ -1,0 +1,8 @@
+{"app_ms":1,"event":"app_init"}
+{"app_ms":151.40000000000001,"event":"style_ready","style_ready_footprint_mib":25.643348693847656,"style_ready_rss_mib":202.546875}
+{"app_ms":155.40000000000001,"before_validation_footprint_mib":25.533973693847656,"before_validation_rss_mib":203.453125,"dataset":"States","event":"validation_start"}
+{"after_validation_footprint_mib":37.87774658203125,"after_validation_rss_mib":219.390625,"app_ms":310.89999999999998,"dataset":"States","event":"validation_end","validation_ms":155.59999999999999}
+{"app_ms":313.60000000000002,"before_source_footprint_mib":37.70587158203125,"before_source_rss_mib":219.40625,"dataset":"States","event":"source_start","revision":1,"source_profile":"defaults"}
+{"app_ms":313.89999999999998,"dataset":"States","event":"source_submitted","revision":1,"submit_ms":0.29999999999999999}
+{"app_ms":378.19999999999999,"dataset":"States","event":"first_useful_frame","frame_fully_rendered":true,"request_ms":222.69999999999999,"revision":1,"source_ms":64.400000000000006,"useful_footprint_mib":37.37774658203125,"useful_rss_mib":232.203125}
+{"app_ms":1086.5999999999999,"dataset":"States","event":"idle_with_geometry","idle_footprint_mib":37.37774658203125,"idle_rss_mib":233.125,"request_ms":931.29999999999995,"revision":1,"source_ms":772.89999999999998}

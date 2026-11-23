@@ -1,0 +1,8 @@
+{"app_ms":2,"event":"app_init"}
+{"app_ms":188.09999999999999,"event":"style_ready","style_ready_footprint_mib":25.830848693847656,"style_ready_rss_mib":202.90625}
+{"app_ms":192.30000000000001,"before_validation_footprint_mib":25.752723693847656,"before_validation_rss_mib":203.8125,"dataset":"US_HistCounties_Gen05.json","event":"import_start"}
+{"after_validation_footprint_mib":139.6123046875,"after_validation_rss_mib":322.515625,"app_ms":1269.9000000000001,"copy_validation_ms":1075.5999999999999,"dataset":"US_HistCounties_Gen05.json","event":"import_end"}
+{"app_ms":1272.9000000000001,"before_source_footprint_mib":139.6748046875,"before_source_rss_mib":322.671875,"dataset":"US_HistCounties_Gen05.json","event":"source_start","revision":1,"source_profile":"defaults"}
+{"app_ms":1273.0999999999999,"dataset":"US_HistCounties_Gen05.json","event":"source_submitted","revision":1,"submit_ms":0.29999999999999999}
+{"app_ms":2058.1999999999998,"dataset":"US_HistCounties_Gen05.json","event":"first_useful_frame","frame_fully_rendered":true,"request_ms":1864.2,"revision":1,"source_ms":783.5,"useful_footprint_mib":633.75650024414062,"useful_rss_mib":1011.46875}
+{"app_ms":2221.3000000000002,"dataset":"US_HistCounties_Gen05.json","event":"idle_with_geometry","idle_footprint_mib":641.39712524414062,"idle_rss_mib":946.171875,"request_ms":2029.0999999999999,"revision":1,"source_ms":948.39999999999998}
