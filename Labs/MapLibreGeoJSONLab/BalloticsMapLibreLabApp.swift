@@ -43,10 +43,10 @@ private final class LabState: ObservableObject {
             let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
                 .appendingPathComponent("GeoJSONImports", isDirectory: true)
             try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
-            let destination = directory.appendingPathComponent(url.lastPathComponent)
-            if FileManager.default.fileExists(atPath: destination.path) {
-                try FileManager.default.removeItem(at: destination)
-            }
+            // Unique URL forces MapLibre to replace its source on reimport.
+            let destination = directory.appendingPathComponent(
+                UUID().uuidString + "-" + url.lastPathComponent
+            )
             try FileManager.default.copyItem(at: url, to: destination)
             importedURL = destination
             error = nil
@@ -144,7 +144,11 @@ private struct MapLibreGeometryView: UIViewRepresentable {
     }
 
     func updateUIView(_ map: MLNMapView, context: Context) {
-        context.coordinator.applyIfNeeded(on: map)
+        // Avoid publishing ObservableObject changes during SwiftUI's view update.
+        let coordinator = context.coordinator
+        DispatchQueue.main.async {
+            coordinator.applyIfNeeded(on: map)
+        }
     }
 
     final class Coordinator: NSObject, MLNMapViewDelegate {
