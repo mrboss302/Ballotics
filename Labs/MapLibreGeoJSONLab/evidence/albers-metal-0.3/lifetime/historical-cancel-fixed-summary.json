@@ -1,0 +1,29 @@
+{
+  "requested_dates": [
+    "1788-01-01",
+    "1980-01-01",
+    "1860-01-01",
+    "2000-01-01"
+  ],
+  "published_meshes": [
+    {
+      "date": "1788-01-01",
+      "expected": "1788-01-01",
+      "features": 332
+    },
+    {
+      "date": "2000-01-01",
+      "expected": "2000-01-01",
+      "features": 3139
+    }
+  ],
+  "rejected_preparations": 2,
+  "terminal": {
+    "actual": "2000-01-01",
+    "app_ms": 3782,
+    "event": "metal_rapid_history_done",
+    "expected": "2000-01-01",
+    "ready": true
+  },
+  "pass": true
+}

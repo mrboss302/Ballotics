@@ -48,6 +48,7 @@ case ${METAL_BENCHMARK_MODE:-comparison} in
         ;;
     cancellation)
         run cancellation metal_rapid_history_done 70 --albers-metal --historical-date 1788-01-01 --historical-rapid-switches
+        python3 "$(dirname "$0")/summarize-metal.py" cancellation "$output/cancellation.jsonl" > "$output/cancellation-summary.json"
         ;;
     comparison)
         election=(--election-year 2024 --county-results)

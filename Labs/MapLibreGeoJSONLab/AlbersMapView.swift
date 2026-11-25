@@ -82,7 +82,10 @@ struct AlbersMapView: View {
                          thickBorders: state.thickAlbersBorders, baseline: state.baselineAlbers,
                          studyProbe: state.albersStudyProbe, metal: state.renderer == .metal,
                          active: scenePhase == .active, request: currentRequest,
-                         onStatus: { message in
+                         geometryPending: state.historicalPending || state.importing,
+                         canPublish: {
+            !state.historicalPending && !state.importing && state.dataset?.requestedAt == currentRequest
+        }, onStatus: { message in
             guard state.dataset?.requestedAt == currentRequest else { return }
             state.status = message
         }) { hits in
@@ -237,6 +240,8 @@ private struct AlbersCanvasView: UIViewRepresentable {
     let metal: Bool
     let active: Bool
     let request: Double?
+    let geometryPending: Bool
+    let canPublish: () -> Bool
     let onStatus: (String) -> Void
     let onSelect: ([Int]) -> Void
 
@@ -246,7 +251,8 @@ private struct AlbersCanvasView: UIViewRepresentable {
         canvas.update(scene: scene, selected: selected, alternateColor: alternateColor,
                       cameraRequest: cameraRequest, paint: paint, thickBorders: thickBorders,
                       studyProbe: studyProbe, metal: metal, active: active,
-                      request: request, onStatus: onStatus, onSelect: onSelect)
+                      request: request, geometryPending: geometryPending, canPublish: canPublish,
+                      onStatus: onStatus, onSelect: onSelect)
     }
 }
 
@@ -294,6 +300,7 @@ private final class AlbersCanvas: UIView {
     private var metalReady = false
     private var metalRevision: Double?
     private var active = true
+    private var canPublishMetal: (() -> Bool)?
     private var onStatus: ((String) -> Void)?
     private var insetLabels: [UILabel] = []
 
@@ -325,7 +332,7 @@ private final class AlbersCanvas: UIView {
             displayLink = nil
             routeTask?.cancel()
             stopMetal(removeSurface: true)
-        } else if metalRequested, !metalReady, meshTask == nil, !metalFailed,
+        } else if metalRequested, !metalReady, meshTask == nil, !metalFailed, canPublishMetal?() == true,
                   let scene, let revision = metalRevision {
             prepareMetal(scene, revision: revision)
         }
@@ -340,7 +347,8 @@ private final class AlbersCanvas: UIView {
     func update(scene: AlbersScene?, selected: Int?, alternateColor: Bool,
                 cameraRequest: (Int, Viewpoint), paint: AlbersPaintConfiguration,
                 thickBorders: Bool, studyProbe: Int, metal requested: Bool, active: Bool,
-                request: Double?, onStatus: @escaping (String) -> Void, onSelect: @escaping ([Int]) -> Void) {
+                request: Double?, geometryPending: Bool, canPublish: @escaping () -> Bool,
+                onStatus: @escaping (String) -> Void, onSelect: @escaping ([Int]) -> Void) {
         // The parent supplies a new generation by clearing the scene while projecting.
         let isNewScene = self.scene == nil && scene != nil
         let cameraChanged = lastCameraRequest != cameraRequest.0
@@ -350,6 +358,8 @@ private final class AlbersCanvas: UIView {
         self.active = active
         metal?.renderAllowed = active
         self.onStatus = onStatus
+        canPublishMetal = canPublish
+        if geometryPending { cancelMeshPreparation() }
         if LabLog.enabled, scene != nil, !isNewScene {
             if styleChanged {
                 pendingAppearanceMetric = (LabLog.now, "thematic_style")
@@ -385,10 +395,12 @@ private final class AlbersCanvas: UIView {
             stopMetal(removeSurface: !requested)
             metalRequested = requested
             metalRevision = request
-            if requested, let scene, let request { prepareMetal(scene, revision: request) }
             if backendChanged, !requested, let scene {
                 sendStatus("\(scene.properties.count.formatted()) features · Albers equal area")
             }
+        }
+        if requested, !geometryPending, !metalReady, !metalFailed, meshTask == nil, let scene, let request {
+            prepareMetal(scene, revision: request)
         }
         if styleChanged, metalReady {
             do { try metal?.updatePalette(featurePaint) }
@@ -560,6 +572,11 @@ private final class AlbersCanvas: UIView {
                     } onCancel: { work.cancel() }
                     try Task.checkCancellation()
                     guard let self, let surface, self.metalRequested, self.metalRevision == revision else { return }
+                    self.meshTask = nil
+                    guard self.canPublishMetal?() == true else {
+                        LabLog.record("metal_mesh_superseded", ["revision": revision - LabLog.start])
+                        return
+                    }
                     try surface.updatePalette(self.featurePaint)
                     surface.publish(buffers, layout: scene.panels)
                     surface.onFirstFrame = { [weak self] in
@@ -581,7 +598,6 @@ private final class AlbersCanvas: UIView {
                         self.routeResults?.addFrame()
                         self.drawTimes.append(duration)
                     }
-                    self.meshTask = nil
                     self.metalReady = true
                     surface.isHidden = false
                     LabLog.record("metal_mesh_ready", fields)
@@ -589,18 +605,23 @@ private final class AlbersCanvas: UIView {
                 } catch {
                     guard !Task.isCancelled, let self, self.metalRevision == revision else { return }
                     self.meshTask = nil
-                    self.failMetal(error.localizedDescription)
+                    if self.canPublishMetal?() == true { self.failMetal(error.localizedDescription) }
                 }
             }
         } catch { failMetal(error.localizedDescription) }
     }
 
+    private func cancelMeshPreparation() {
+        guard let meshTask else { return }
+        meshTask.cancel()
+        self.meshTask = nil
+        var fields: [String: Any] = [:]
+        if let revision = metalRevision { fields["revision"] = revision - LabLog.start }
+        LabLog.record("metal_mesh_cancelled", fields)
+    }
+
     private func stopMetal(removeSurface: Bool) {
-        if let meshTask {
-            meshTask.cancel()
-            LabLog.record("metal_mesh_cancelled")
-        }
-        meshTask = nil
+        cancelMeshPreparation()
         metalReady = false
         metalFailed = false
         metal?.clear()

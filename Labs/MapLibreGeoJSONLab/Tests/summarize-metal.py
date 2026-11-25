@@ -93,6 +93,29 @@ def stress(path):
     }
 
 
+def cancellation(path):
+    requests = []
+    publications = []
+    rejected = []
+    terminal = None
+    for row in read(path):
+        event = row["event"]
+        if event == "historical_request":
+            requests.append(row)
+        elif event in {"metal_mesh_cancelled", "metal_mesh_superseded"}:
+            rejected.append(row)
+        elif event == "metal_mesh_ready" and requests:
+            request = min(requests, key=lambda entry: abs(entry["app_ms"] - 1000 * row["revision"]))
+            publications.append({"date": request["date"], "expected": requests[-1]["date"],
+                                 "features": row["features"]})
+        elif event == "metal_rapid_history_done":
+            terminal = row
+    return {"requested_dates": field(requests, "date"), "published_meshes": publications,
+            "rejected_preparations": len(rejected), "terminal": terminal,
+            "pass": terminal is not None and terminal["ready"] and terminal["actual"] == terminal["expected"]
+            and bool(publications) and all(item["date"] == item["expected"] for item in publications)}
+
+
 def comparison(directory):
     configurations = collections.defaultdict(list)
     for path in sorted(directory.glob("*.jsonl")):
@@ -143,7 +166,11 @@ def comparison(directory):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=["stress", "comparison"])
+    parser.add_argument("mode", choices=["stress", "comparison", "cancellation"])
     parser.add_argument("input", type=Path)
     args = parser.parse_args()
-    print(json.dumps(stress(args.input) if args.mode == "stress" else comparison(args.input), indent=2))
+    study = {"stress": stress, "comparison": comparison, "cancellation": cancellation}
+    result = study[args.mode](args.input)
+    print(json.dumps(result, indent=2))
+    if args.mode == "cancellation" and not result["pass"]:
+        raise SystemExit(1)
