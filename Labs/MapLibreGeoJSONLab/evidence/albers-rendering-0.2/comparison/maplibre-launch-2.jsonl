@@ -1,0 +1,15 @@
+{"app_ms":1,"event":"app_init"}
+{"app_ms":168,"event":"style_ready","style_ready_footprint_mib":26.08087158203125,"style_ready_rss_mib":205.421875}
+{"app_ms":173.59999999999999,"event":"election_request","mode":"County results","year":2024}
+{"app_ms":184.19999999999999,"event":"election_task_enter","queue_ms":10.699999999999999,"year":2024}
+{"app_ms":282.19999999999999,"elapsed_ms":108.59999999999999,"event":"election_store_ready","installed":true}
+{"app_ms":520,"elapsed_ms":49.100000000000001,"event":"election_presentation_ready","year":2024}
+{"app_ms":520.60000000000002,"elapsed_ms":237.80000000000001,"event":"election_query_ready","mode":"County results","presentation_cached":false,"year":2024}
+{"app_ms":1083.0999999999999,"dataset":"Presidential Elections","decode_ms":97.299999999999997,"event":"geography_decode_validate","projected_from_same_decode":false,"validation_ms":464.60000000000002}
+{"app_ms":1083.4000000000001,"elapsed_ms":562.70000000000005,"event":"election_geography_ready","mode":"County results","reused_source":false,"year":2024}
+{"app_ms":1083.7,"elapsed_ms":910.20000000000005,"election_switch_footprint_mib":78.987213134765625,"election_switch_rss_mib":265.15625,"event":"election_switch","mode":"County results","year":2024}
+{"app_ms":1108.2,"before_source_footprint_mib":66.737213134765625,"before_source_rss_mib":270.015625,"dataset":"Presidential Elections","event":"source_start","revision":1,"source_profile":"defaults"}
+{"app_ms":1109,"dataset":"Presidential Elections","event":"source_submitted","revision":1,"submit_ms":0.80000000000000004}
+{"app_ms":1415.3,"elapsed_ms":305.89999999999998,"event":"election_maplibre_paint","mode":"County results","year":2024}
+{"app_ms":1415.5999999999999,"dataset":"Presidential Elections","event":"first_useful_frame","frame_fully_rendered":true,"request_ms":894.79999999999995,"revision":1,"source_ms":307.30000000000001,"useful_footprint_mib":115.81547546386719,"useful_rss_mib":381.671875}
+{"app_ms":2058.5999999999999,"dataset":"Presidential Elections","event":"idle_with_geometry","idle_footprint_mib":116.83110046386719,"idle_rss_mib":377.328125,"request_ms":1537.8,"revision":1,"source_ms":950.39999999999998}

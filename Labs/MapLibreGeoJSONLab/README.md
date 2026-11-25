@@ -124,3 +124,45 @@ The **Presidential Elections** dataset opens the electoral map. The **County res
 The build uses Python 3 to normalize the original Ballotics inputs and stage versioned research resources in the application bundle. SwiftData imports the national package on first election entry and county years when selected. Launch options include `--election-year 2024`, `--county-results`, `--election-maplibre` and `--measure`. Use a trusted manifest SHA-256 with `--election-package` for a versioned HTTPS research package.
 
 See the [data audit](../../ElectionData/PRESIDENTIAL_DATA_AUDIT.md), [wire contract](../../ElectionData/ELECTION_DATA_CONTRACT.md), [geography resolver](../../ElectionData/ELECTION_GEOGRAPHY_RESOLVER.md), and [measurements](PERSISTENCE_BENCHMARKS.md).
+
+## Albers Rendering Lab 0.2
+
+Use **Map view → Find geography** to search by name or source identifier and focus a selected feature. Use **Zoom to selected state** to frame the state around a selected county or congressional district, or **Clear selection** to dismiss the highlight and inspector. The map offers animated national, Alaska and Hawaii framing. For county results, **Map colors → Reported margin** uses the validated reported values while retaining the result status in the inspector. The Albers and MapLibre views are both available for the research comparison.
+
+Build the existing scheme in Release and supply an optional copy of the historical county fixture. The comparison script launches fresh processes for linear Albers, indexed Albers and MapLibre. The stress mode runs a separate 30-minute session. Use an already booted simulator and its own output directory.
+
+```sh
+lab=Labs/MapLibreGeoJSONLab
+work=$(mktemp -d)
+xcodebuild -project "$lab/MapLibreGeoJSONLab.xcodeproj" -scheme MapLibreGeoJSONLab \
+  -configuration Release -destination "platform=iOS Simulator,id=$SIMULATOR_ID" \
+  -derivedDataPath "$work/build" CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=YES build
+app="$work/build/Build/Products/Release-iphonesimulator/MapLibreGeoJSONLab.app"
+bash "$lab/Tests/benchmark-albers.sh" "$SIMULATOR_ID" "$app" "$work/comparison" "$HISTORICAL_COUNTY_ARCHIVE"
+ALBERS_STRESS_ONLY=1 bash "$lab/Tests/benchmark-albers.sh" \
+  "$SIMULATOR_ID" "$app" "$work/long-run" "$HISTORICAL_COUNTY_ARCHIVE"
+python3 "$lab/Tests/summarize-albers-stress.py" "$work/long-run/stress.jsonl"
+```
+
+To run the geographic checks from the repository root after building the lab, use the resolved county derivative from the app bundle. The build generates it from the original maps and their documented substitutes.
+
+```sh
+xcrun swiftc -O -module-cache-path "$work/modules" \
+  "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/PresidentialElection.swift" \
+  "$lab/AlbersProjection.swift" "$lab/Tests/AlbersQualification.swift" -o "$work/check-albers-02"
+"$work/check-albers-02" "$PWD" "$HISTORICAL_COUNTY_ARCHIVE" \
+  "$lab/Tests/Fixtures/albers-proj-wgs84.json" "$app/ElectionResearch/county-geometry-2024.geojson"
+```
+
+Use `python3 "$lab/Tests/albers-reference.py"` with pyproj to regenerate the projection references. Use **Time Profiler** for system CPU attribution and **Animation Hitches** on supported physical devices. Callback logs are available with `--measure`.
+
+Run the isolated CPU bitmap experiment on macOS to compare fill and outline costs at each backing scale.
+
+```sh
+xcrun swiftc -O -module-cache-path "$work/modules" \
+  "$lab/GeoJSON.swift" "$lab/AlbersProjection.swift" "$lab/Tests/AlbersRasterStudy.swift" \
+  -o "$work/albers-raster-study"
+"$work/albers-raster-study" cb_2024_us_county_5m.json > "$work/raster.jsonl"
+```
+
+[Audit](ALBERS_RENDERER_ARCHITECTURE_AUDIT.md) · [Architecture](ALBERS_RENDERING_ARCHITECTURE.md) · [Performance](ALBERS_PERFORMANCE_BENCHMARKS.md) · [Cartography](ALBERS_CARTOGRAPHIC_VALIDATION.md) · [Android study](ALBERS_CROSS_PLATFORM_STUDY.md) · [Qualification](ALBERS_QUALIFICATION_REPORT.md)

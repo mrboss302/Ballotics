@@ -1,0 +1,6 @@
+{"app_ms":1.6000000000000001,"event":"app_init"}
+{"app_ms":138,"before_validation_footprint_mib":36.752700805664062,"before_validation_rss_mib":229.5,"dataset":"States","event":"validation_start"}
+{"app_ms":377.89999999999998,"dataset":"States","decode_ms":42.299999999999997,"event":"geography_decode_validate","projected_from_same_decode":true,"validation_ms":99.700000000000003}
+{"after_validation_footprint_mib":53.705825805664062,"after_validation_rss_mib":249.25,"app_ms":378.19999999999999,"dataset":"States","event":"validation_end","validation_ms":240.19999999999999}
+{"app_ms":381.80000000000001,"cache_hit":true,"dataset":"States","decode_ms":42.299999999999997,"elapsed_ms":1.3,"event":"albers_geometry_ready","features":51,"index_layout_ms":0.14537503011524677,"positions":91908,"projection_ms":96.089541679248214}
+{"app_ms":392.39999999999998,"draw_ms":1.5,"event":"albers_first_draw","features":51,"first_draw_footprint_mib":48.643325805664062,"first_draw_rss_mib":252.453125}

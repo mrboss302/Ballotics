@@ -1,0 +1,6 @@
+{"app_ms":1.6000000000000001,"event":"app_init"}
+{"app_ms":180.80000000000001,"before_validation_footprint_mib":36.940223693847656,"before_validation_rss_mib":229.59375,"dataset":"Districts","event":"validation_start"}
+{"app_ms":775.10000000000002,"dataset":"Districts","decode_ms":99.700000000000003,"event":"geography_decode_validate","projected_from_same_decode":true,"validation_ms":276.10000000000002}
+{"after_validation_footprint_mib":68.20587158203125,"after_validation_rss_mib":263.625,"app_ms":775.5,"dataset":"Districts","event":"validation_end","validation_ms":594.70000000000005}
+{"app_ms":777.5,"cache_hit":true,"dataset":"Districts","decode_ms":99.700000000000003,"elapsed_ms":0,"event":"albers_geometry_ready","features":436,"index_layout_ms":0.21424982696771622,"positions":175196,"projection_ms":203.14229186624289}
+{"app_ms":784.89999999999998,"draw_ms":2.5,"event":"albers_first_draw","features":436,"first_draw_footprint_mib":69.94024658203125,"first_draw_rss_mib":268.5}

@@ -1,0 +1,8 @@
+{"app_ms":0.90000000000000002,"event":"app_init"}
+{"app_ms":147.40000000000001,"event":"style_ready","style_ready_footprint_mib":25.612075805664062,"style_ready_rss_mib":204.765625}
+{"app_ms":183.90000000000001,"elapsed_ms":33.200000000000003,"event":"election_store_ready","installed":true}
+{"app_ms":281.10000000000002,"elapsed_ms":96.700000000000003,"event":"election_query_ready","mode":"County results","year":2024}
+{"app_ms":739.70000000000005,"elapsed_ms":458.30000000000001,"event":"election_geography_ready","mode":"County results","reused_source":false,"year":2024}
+{"app_ms":740.10000000000002,"elapsed_ms":589.39999999999998,"election_switch_footprint_mib":50.721542358398438,"election_switch_rss_mib":273.8125,"event":"election_switch","mode":"County results","year":2024}
+{"app_ms":1176.3,"elapsed_ms":423,"event":"election_albers_projection","mode":"County results","year":2024}
+{"app_ms":1187.7,"elapsed_ms":10,"event":"election_albers_paint","mode":"County results","year":2024}

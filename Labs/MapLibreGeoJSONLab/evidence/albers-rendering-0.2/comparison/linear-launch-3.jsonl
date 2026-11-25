@@ -1,0 +1,13 @@
+{"app_ms":1.7,"event":"app_init"}
+{"app_ms":269.69999999999999,"event":"election_request","mode":"County results","year":2024}
+{"app_ms":336.80000000000001,"event":"election_task_enter","queue_ms":67.099999999999994,"year":2024}
+{"app_ms":411.60000000000002,"elapsed_ms":141.90000000000001,"event":"election_store_ready","installed":true}
+{"app_ms":618.10000000000002,"elapsed_ms":53.899999999999999,"event":"election_presentation_ready","year":2024}
+{"app_ms":618.39999999999998,"elapsed_ms":206.30000000000001,"event":"election_query_ready","mode":"County results","presentation_cached":false,"year":2024}
+{"app_ms":1134.4000000000001,"dataset":"Presidential Elections","decode_ms":108,"event":"geography_decode_validate","projected_from_same_decode":false,"validation_ms":405.80000000000001}
+{"app_ms":1136,"elapsed_ms":517.5,"event":"election_geography_ready","mode":"County results","reused_source":false,"year":2024}
+{"app_ms":1136.5,"elapsed_ms":866.79999999999995,"election_switch_footprint_mib":84.424667358398438,"election_switch_rss_mib":275.15625,"event":"election_switch","mode":"County results","year":2024}
+{"app_ms":1639.3,"cache_hit":false,"dataset":"Presidential Elections","decode_ms":122.15150007978082,"elapsed_ms":476.69999999999999,"event":"albers_geometry_ready","features":3153,"index_layout_ms":0.26229163631796837,"positions":338290,"projection_ms":353.9475416764617}
+{"app_ms":1639.5,"elapsed_ms":477,"event":"election_albers_projection","mode":"County results","year":2024}
+{"app_ms":1651.5999999999999,"elapsed_ms":11,"event":"election_albers_paint","mode":"County results","year":2024}
+{"app_ms":1652.2,"draw_ms":9.5,"event":"albers_first_draw","features":3153,"first_draw_footprint_mib":93.034065246582031,"first_draw_rss_mib":316.734375}

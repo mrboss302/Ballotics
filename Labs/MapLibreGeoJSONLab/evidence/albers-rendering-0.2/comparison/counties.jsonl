@@ -1,0 +1,6 @@
+{"app_ms":1.1000000000000001,"event":"app_init"}
+{"app_ms":141.40000000000001,"before_validation_footprint_mib":36.815223693847656,"before_validation_rss_mib":229.59375,"dataset":"Counties","event":"validation_start"}
+{"app_ms":770.29999999999995,"dataset":"Counties","decode_ms":99.599999999999994,"event":"geography_decode_validate","projected_from_same_decode":true,"validation_ms":257.5}
+{"after_validation_footprint_mib":87.549644470214844,"after_validation_rss_mib":282.8125,"app_ms":770.60000000000002,"dataset":"Counties","event":"validation_end","validation_ms":629.29999999999995}
+{"app_ms":772.10000000000002,"cache_hit":true,"dataset":"Counties","decode_ms":99.599999999999994,"elapsed_ms":0,"event":"albers_geometry_ready","features":3144,"index_layout_ms":1.4025000855326653,"positions":227438,"projection_ms":268.27262481674552}
+{"app_ms":788.29999999999995,"draw_ms":5.7999999999999998,"event":"albers_first_draw","features":3144,"first_draw_footprint_mib":90.534019470214844,"first_draw_rss_mib":290.453125}

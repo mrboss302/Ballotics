@@ -1,0 +1,29 @@
+open empty SwiftData: 244.4 ms
+national bundle import: 489.3 ms
+duplicate national import: 4.8 ms
+county 2000 activation: 388.8 ms
+county 2000 query: 406.3 ms
+county 2004 activation: 343.7 ms
+county 2004 query: 211.1 ms
+county 2008 activation: 354.5 ms
+county 2008 query: 145.4 ms
+county 2012 activation: 283.6 ms
+county 2012 query: 140.6 ms
+county 2016 activation: 338.8 ms
+county 2016 query: 184.7 ms
+county 2020 activation: 405.5 ms
+county 2020 query: 298.9 ms
+county 2024 activation: 784.9 ms
+county 2024 query: 340.4 ms
+duplicate county import: 1.4 ms
+PASS interrupted download: Failure
+PASS truncated payload: ElectionPackageError
+PASS same-size checksum mismatch: ElectionPackageError
+PASS invalid JSON with a valid checksum: DecodingError
+PASS unsupported schema: ElectionPackageError
+PASS county presentation key from the previous release: ElectionPackageError
+PASS all releases, duplicate import, rollback and version isolation
+offline reopen SwiftData: 12.1 ms
+offline 2024 election query: 132.3 ms
+offline 2024 county query: 766.9 ms
+PASS offline reopen without a package directory

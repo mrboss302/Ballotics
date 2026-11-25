@@ -1,0 +1,15 @@
+{"app_ms":1.1000000000000001,"event":"app_init"}
+{"app_ms":199.09999999999999,"event":"style_ready","style_ready_footprint_mib":26.127723693847656,"style_ready_rss_mib":205.296875}
+{"app_ms":203.69999999999999,"event":"election_request","mode":"County results","year":2024}
+{"app_ms":208.59999999999999,"event":"election_task_enter","queue_ms":4.9000000000000004,"year":2024}
+{"app_ms":252.09999999999999,"elapsed_ms":48.399999999999999,"event":"election_store_ready","installed":true}
+{"app_ms":423.10000000000002,"elapsed_ms":48.399999999999999,"event":"election_presentation_ready","year":2024}
+{"app_ms":423.39999999999998,"elapsed_ms":171,"event":"election_query_ready","mode":"County results","presentation_cached":false,"year":2024}
+{"app_ms":1035.4000000000001,"dataset":"Presidential Elections","decode_ms":105.3,"event":"geography_decode_validate","projected_from_same_decode":false,"validation_ms":506}
+{"app_ms":1035.8,"elapsed_ms":612.39999999999998,"event":"election_geography_ready","mode":"County results","reused_source":false,"year":2024}
+{"app_ms":1036.3,"elapsed_ms":832.60000000000002,"election_switch_footprint_mib":76.940315246582031,"election_switch_rss_mib":269.6875,"event":"election_switch","mode":"County results","year":2024}
+{"app_ms":1066.0999999999999,"before_source_footprint_mib":58.737190246582031,"before_source_rss_mib":273.0625,"dataset":"Presidential Elections","event":"source_start","revision":1,"source_profile":"defaults"}
+{"app_ms":1067.9000000000001,"dataset":"Presidential Elections","event":"source_submitted","revision":1,"submit_ms":1.8}
+{"app_ms":1503.9000000000001,"elapsed_ms":435.5,"event":"election_maplibre_paint","mode":"County results","year":2024}
+{"app_ms":1504.5,"dataset":"Presidential Elections","event":"first_useful_frame","frame_fully_rendered":true,"request_ms":1080.7,"revision":1,"source_ms":438.10000000000002,"useful_footprint_mib":147.28420257568359,"useful_rss_mib":385.1875}
+{"app_ms":1819.9000000000001,"dataset":"Presidential Elections","event":"idle_with_geometry","idle_footprint_mib":147.26857757568359,"idle_rss_mib":384.71875,"request_ms":1396.4000000000001,"revision":1,"source_ms":753.79999999999995}

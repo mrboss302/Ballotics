@@ -1,0 +1,11 @@
+test	status	seconds
+testAlbersMarginAndPaletteKeepGeometry	passed	33.064
+testAlbersOverviewAcrossStatesAndHistory	passed	32.388
+testAlbersSearchSelectAndRestore	passed	24.467
+testBundledGeometrySelectionAndNavigation	passed	43.880
+testContingentElectionShowsOutcomeAndAllocations	passed	8.817
+testFilesImportAndRejectInvalidJSON	skipped	19.216
+testHistoricalDateChangesSourceAndPreservesProvenance	passed	36.357
+testPresidentialCountyResultsInBothRenderers	passed	158.244
+testPresidentialElectionBoundaryPicker	passed	34.875
+testRapidHistoricalRequestsEndAtLatestDate	passed	8.010

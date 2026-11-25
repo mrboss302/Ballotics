@@ -1,0 +1,4 @@
+test	status	seconds
+testAlbersOverviewAcrossStatesAndHistory	passed	33.255
+testAlbersSearchSelectAndRestore	passed	30.431
+testAlbersMarginAndPaletteKeepGeometry	passed	64.293

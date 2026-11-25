@@ -1,0 +1,77 @@
+{
+  "terminal_event": {
+    "app_ms": 1801139,
+    "elapsed_ms": 1800391.7,
+    "event": "albers_stress_done",
+    "mismatches": 1,
+    "navigation_steps": 663,
+    "rapid_requests": 10,
+    "sources": 50,
+    "years": 100
+  },
+  "release_baseline": {
+    "app_ms": 1801139.1,
+    "before_release_footprint_mib": 136.33096313476562,
+    "before_release_rss_mib": 80.234375,
+    "event": "albers_stress_release_start",
+    "features": 3153
+  },
+  "release_end": {
+    "after_release_footprint_mib": 97.56533813476562,
+    "after_release_rss_mib": 112.46875,
+    "app_ms": 1806033,
+    "event": "albers_stress_released"
+  },
+  "committed_election_requests": 100,
+  "commits_inconsistent_with_latest_request": 0,
+  "paints_inconsistent_with_latest_commit": 0,
+  "request_to_commit_ms": {
+    "count": 100,
+    "min": 2.3,
+    "median": 3.25,
+    "p95": 8.7,
+    "max": 6526.8
+  },
+  "year_request_to_ready_observation_ms": {
+    "count": 100,
+    "min": 25.4,
+    "median": 27.4,
+    "p95": 30.3,
+    "max": 19976.4
+  },
+  "election_paint_ms": {
+    "count": 713,
+    "min": 1.5,
+    "median": 12.1,
+    "p95": 53.8,
+    "max": 363.7
+  },
+  "successful_selections": 663,
+  "selection_ms": {
+    "count": 663,
+    "min": 0,
+    "median": 0.1,
+    "p95": 1.2,
+    "max": 118.5
+  },
+  "steady_footprint_mib_after_four_minutes": {
+    "count": 89,
+    "min": 133.48721313476562,
+    "median": 135.98721313476562,
+    "p95": 136.28408813476562,
+    "max": 136.45596313476562
+  },
+  "sampled_peak": [
+    138.89346313476562,
+    "historical_extract",
+    124078.3,
+    "sampled_peak_footprint_mib"
+  ],
+  "navigation_transition_ms": {
+    "count": 92,
+    "min": 280,
+    "median": 967.5,
+    "p95": 9174.5,
+    "max": 19187.5
+  }
+}
