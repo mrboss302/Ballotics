@@ -40,6 +40,7 @@ private struct AlbersPaintConfiguration {
     let revision: Revision
     let prepare: (AlbersScene) -> [[CGColor]]?
     let votes: [String: Int]?
+    let statuses: [String:String]
     let didDraw: ((Double) -> Void)?
 }
 
@@ -177,6 +178,7 @@ struct AlbersMapView: View {
             revision: .init(data: state.electionRevision, style: theme.rawValue),
             prepare: { scene in result?.albersColors(in: scene, theme: theme) },
             votes: result?.mode == .electoralCollege ? result?.electoralVotesByGeometry : nil,
+            statuses: result?.details.compactMapValues { $0.first?.1 } ?? [:],
             didDraw: result.map { presentation in
                 { elapsed in
                     LabLog.record("election_albers_paint", ["year": presentation.year,
@@ -267,7 +269,10 @@ private struct AlbersCanvasView: UIViewRepresentable {
     }
 }
 
-private final class AlbersCanvas: UIView {
+private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        !(touch.view is UIControl || touch.view?.superview is UIControl)
+    }
     private final class Clock: NSObject {
         let tick: () -> Void
         init(tick: @escaping () -> Void) { self.tick = tick }
@@ -315,7 +320,8 @@ private final class AlbersCanvas: UIView {
     private var onStatus: ((String) -> Void)?
     private var profile: NationalMapProfile?
     private var onPresented: (() -> Void)?
-    private var labels: [(point: CGPoint, view: UILabel)] = []
+    private let labelOverlay = ElectoralLabelOverlay()
+    private var focusedRegion: AlbersRegion?
     private var insetLabels: [UILabel] = []
 
     init(baseline: Bool) {
@@ -332,6 +338,8 @@ private final class AlbersCanvas: UIView {
         let double = UITapGestureRecognizer(target: self, action: #selector(doubleTap(_:)))
         double.numberOfTapsRequired = 2
         single.require(toFail: double)
+        single.delegate = self
+        double.delegate = self
         let pan = UIPanGestureRecognizer(target: self, action: #selector(pan(_:)))
         pan.maximumNumberOfTouches = 1
         [single, double, pan, UIPinchGestureRecognizer(target: self, action: #selector(pinch(_:)))].forEach(addGestureRecognizer)
@@ -398,6 +406,7 @@ private final class AlbersCanvas: UIView {
             || self.alternateColor != alternateColor || self.thickBorders != thickBorders
             || styleChanged || cameraChanged
         if isNewScene || layoutChanged, let scene {
+            focusedRegion = nil
             centerPoint = CGPoint(x: scene.bounds.midX, y: scene.bounds.midY)
             zoom = 1
             awaitingFirstDraw = true
@@ -411,7 +420,11 @@ private final class AlbersCanvas: UIView {
         }
         if layoutChanged, metalReady, let scene { metal?.updateLayout(scene.panels) }
         self.scene = scene
-        if isNewScene || layoutChanged || styleChanged || scene == nil { rebuildLabels(votes: paint.votes) }
+        if isNewScene || layoutChanged || styleChanged || scene == nil {
+            labelOverlay.update(parent: self, scene: scene, votes: paint.votes, statuses: paint.statuses,
+                                colors: featurePaint, select: { [weak self] feature in self?.onSelect?([feature]) },
+                                ready: { [weak self] in self?.positionLabels() })
+        }
         self.selected = selected
         self.alternateColor = alternateColor
         self.thickBorders = thickBorders
@@ -462,7 +475,7 @@ private final class AlbersCanvas: UIView {
         context.translateBy(x: -centerPoint.x, y: -centerPoint.y)
         let fill = alternateColor ? UIColor(red: 0.23, green: 0.51, blue: 0.40, alpha: 1)
                                   : UIColor(red: 0.29, green: 0.49, blue: 0.68, alpha: 1)
-        for panel in scene.panels where panel.frame.intersects(visible) {
+        for panel in scene.panels where (focusedRegion == nil || focusedRegion == panel.region) && panel.frame.intersects(visible) {
             if panel.showsFrame {
                 let frame = CGPath(roundedRect: panel.frame, cornerWidth: 6 / scale, cornerHeight: 6 / scale, transform: nil)
                 context.addPath(frame)
@@ -486,8 +499,12 @@ private final class AlbersCanvas: UIView {
                         drawSplit(part.path, bounds: part.bounds, window: window, colors: paint, scale: scale, in: context)
                     }
                 }
-                context.addPath(part.path)
-                context.drawPath(using: (featurePaint?[part.feature].count ?? 0) > 1 ? .stroke : .eoFillStroke)
+                if (featurePaint?[part.feature].count ?? 0) > 1 {
+                    context.addPath(part.path)
+                    context.strokePath()
+                } else {
+                    GeographicPathDrawing.fillAndStroke(part, in: context)
+                }
             }
             if baseline {
                 candidateCount += panel.parts.count
@@ -514,7 +531,7 @@ private final class AlbersCanvas: UIView {
             metric.1(LabLog.milliseconds(LabLog.now - metric.0))
             pendingPaintMetric = nil
         }
-        for panel in scene.panels where panel.frame.intersects(visible) {
+        for panel in scene.panels where (focusedRegion == nil || focusedRegion == panel.region) && panel.frame.intersects(visible) {
             guard panel.showsFrame, let label = panel.region.insetLabel else { continue }
             let point = CGPoint(x: bounds.midX + (panel.frame.minX - centerPoint.x) * scale + 6,
                                 y: bounds.midY + (panel.frame.minY - centerPoint.y) * scale + 4)
@@ -678,46 +695,13 @@ private final class AlbersCanvas: UIView {
         setNeedsDisplay()
     }
 
-    private func rebuildLabels(votes: [String: Int]?) {
-        labels.forEach { $0.view.removeFromSuperview() }
-        labels.removeAll()
-        guard let scene, let votes else { return }
-        for panel in scene.panels.sorted(by: { $0.region != .mainland && $1.region == .mainland }) {
-            let groups = Dictionary(grouping: panel.parts, by: \.feature)
-            for feature in groups.keys.sorted() {
-                let fields = scene.properties[feature]
-                guard fields["TERR_TYPE"] == "State" || fields["TERR_TYPE"] == "District of Columbia",
-                      let code = fields["ABBR_NAME"], let key = fields["ID_NUM"],
-                      let part = groups[feature]?.max(by: { $0.bounds.width * $0.bounds.height < $1.bounds.width * $1.bounds.height }),
-                      let anchor = part.interiorAnchor else { continue }
-                let label = UILabel()
-                label.numberOfLines = 2
-                label.textAlignment = .center
-                label.font = .systemFont(ofSize: 8, weight: .bold)
-                label.text = votes[key].map { "\(code)\n\($0)" } ?? code
-                label.textColor = .white
-                label.layer.shadowColor = UIColor.black.cgColor
-                label.layer.shadowOpacity = 1
-                label.layer.shadowRadius = 1
-                label.layer.shadowOffset = .zero
-                label.sizeToFit()
-                label.isAccessibilityElement = false
-                addSubview(label)
-                labels.append((panel.world(anchor), label))
-            }
-        }
+    private var geographicCamera: GeographicCamera {
+        GeographicCamera(viewport: bounds, center: centerPoint, scale: mapScale, region: focusedRegion)
     }
 
     private func positionLabels() {
-        var occupied: [CGRect] = []
-        let scale = mapScale
-        for (anchor, label) in labels {
-            label.center = CGPoint(x: bounds.midX + (anchor.x - centerPoint.x) * scale,
-                                   y: bounds.midY + (anchor.y - centerPoint.y) * scale)
-            let frame = label.frame.insetBy(dx: -1, dy: -1)
-            label.isHidden = !bounds.contains(frame) || occupied.contains { $0.intersects(frame) }
-            if !label.isHidden { occupied.append(frame) }
-        }
+        guard let scene else { return }
+        labelOverlay.position(in: scene, camera: geographicCamera, zoom: zoom, selected: selected)
     }
 
     private func invalidateMap() {
@@ -727,10 +711,11 @@ private final class AlbersCanvas: UIView {
             return
         }
         guard let metal, metalReady, active else { return }
+        metal.focusedRegion = focusedRegion
         metal.move(center: centerPoint, scale: mapScale, stroke: thickBorders ? 1.2 : 0.48,
                    selected: selected, alternate: alternateColor)
         if let scene {
-            let insets = scene.panels.filter(\.showsFrame)
+            let insets = scene.panels.filter { $0.showsFrame && (focusedRegion == nil || focusedRegion == $0.region) }
             if insets.count != insetLabels.count {
                 insetLabels.forEach { $0.removeFromSuperview() }
                 insetLabels = insets.map { panel in
@@ -791,13 +776,11 @@ private final class AlbersCanvas: UIView {
     }
 
     private func scale(toFit frame: CGRect) -> CGFloat {
-        min(max(1, bounds.width - 24) / max(1, frame.width),
-            max(1, bounds.height - 24) / max(1, frame.height))
+        GeographicCamera.fit(frame, in: bounds)
     }
 
     private func world(_ point: CGPoint) -> CGPoint {
-        CGPoint(x: centerPoint.x + (point.x - bounds.midX) / mapScale,
-                y: centerPoint.y + (point.y - bounds.midY) / mapScale)
+        geographicCamera.world(point)
     }
 
     private func move(_ viewpoint: Viewpoint, animated: Bool) {
@@ -812,6 +795,13 @@ private final class AlbersCanvas: UIView {
             target = selected.flatMap { scene.properties[$0]["STATEFP"] }.flatMap(scene.frame(forState:))
         }
         guard let target, !target.isNull else { return }
+        switch viewpoint {
+        case .alaska: focusedRegion = .alaska
+        case .hawaii: focusedRegion = .hawaii
+        case .national: focusedRegion = nil
+        case .selectedState, .selectedFeature:
+            focusedRegion = selected.flatMap { feature in scene.panels.first { $0.parts.contains { $0.feature == feature } }?.region }
+        }
         let nextCenter = CGPoint(x: target.midX, y: target.midY)
         let nextZoom = viewpoint == .national ? 1 : min(256, max(1, scale(toFit: target.insetBy(dx: -target.width * 0.045,
                                                          dy: -target.height * 0.045)) / scale(toFit: scene.bounds)))
@@ -874,7 +864,7 @@ private final class AlbersCanvas: UIView {
 
     private func select(at point: CGPoint) {
         let start = LabLog.now
-        let hits = baseline ? (scene?.hit(point).map { [$0] } ?? []) : (scene?.hits(point) ?? [])
+        let hits = baseline ? (scene?.hit(point, region: focusedRegion).map { [$0] } ?? []) : (scene?.hits(point, region: focusedRegion) ?? [])
         onSelect?(hits)
         if featurePaint != nil || lastStudyProbe > 0 {
             LabLog.record("election_albers_selection", ["hit": !hits.isEmpty,
@@ -989,7 +979,7 @@ private final class AlbersCanvas: UIView {
                                      width: bounds.width / mapScale, height: bounds.height / mapScale)
                 var candidates: Set<Int> = []
                 var partCount = 0
-                for panel in scene.panels where panel.frame.intersects(visible) {
+                for panel in scene.panels where (focusedRegion == nil || focusedRegion == panel.region) && panel.frame.intersects(visible) {
                     let parts = panel.visible(in: panel.local(visible))
                     partCount += parts.count
                     for index in parts { candidates.insert(panel.parts[index].feature) }

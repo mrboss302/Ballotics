@@ -29,6 +29,6 @@ fi
 
 xcrun swiftc -O -I "$vendor/Include" -module-cache-path "$work/modules" \
     ${swift_flags[@]+"${swift_flags[@]}"} \
-    "$lab/GeoJSON.swift" "$lab/AlbersProjection.swift" "$lab/Benchmarks.swift" \
+    "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift"  "$lab/Benchmarks.swift" \
     "$lab/AlbersMesh.swift" "$lab/Tests/MetalMeshChecks.swift" "${objects[@]}" -o "$work/check"
 METAL_FALLBACK_FIXTURE="$lab/Tests/Fixtures/Lab-Metal-Fallback.geojson" "$work/check" "$@"

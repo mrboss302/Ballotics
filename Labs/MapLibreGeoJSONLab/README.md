@@ -16,7 +16,7 @@ From the repository root, compile and run the same validator the iOS app uses:
 lab=Labs/MapLibreGeoJSONLab
 checks=$(mktemp -d)
 xcrun swiftc -O -module-cache-path "$checks/modules" \
-  "$lab/GeoJSON.swift" "$lab/Tests/GeoJSONChecks.swift" -o "$checks/geojson-checks"
+  "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift" "$lab/Tests/GeoJSONChecks.swift" -o "$checks/geojson-checks"
 "$checks/geojson-checks" "$PWD"  # Optional second argument is the historical file path.
 ```
 
@@ -58,12 +58,12 @@ lab=Labs/MapLibreGeoJSONLab
 archive="/absolute/path/to/US_HistCounties_Gen05.json"
 work=$(mktemp -d)
 xcrun swiftc -O -module-cache-path "$work/modules" \
-  "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/Tests/HistoricalArchiveChecks.swift" \
+  "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/Tests/HistoricalArchiveChecks.swift" \
   -o "$work/check-history"
 "$work/check-history" "$archive"
 
 xcrun swiftc -O -module-cache-path "$work/modules" \
-  "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/Tests/PublishHistoricalSnapshots.swift" \
+  "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/Tests/PublishHistoricalSnapshots.swift" \
   -o "$work/publish-history"
 "$work/publish-history" "$archive" "$work/published" 1788-01-01 2000-01-01
 python3 "$lab/Tests/audit-historical.py" "$archive" --published "$work/published"
@@ -94,7 +94,7 @@ Run the standalone projection check from the repository root. The optional final
 lab=Labs/MapLibreGeoJSONLab
 work=$(mktemp -d)
 xcrun swiftc -O -module-cache-path "$work/modules" \
-  "$lab/GeoJSON.swift" "$lab/AlbersProjection.swift" "$lab/Tests/AlbersChecks.swift" \
+  "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift"  "$lab/Tests/AlbersChecks.swift" \
   -o "$work/check-albers"
 "$work/check-albers" "$PWD"
 ```
@@ -112,8 +112,8 @@ Verify all election snapshots against the archive and check the historical inset
 lab=Labs/MapLibreGeoJSONLab
 work=$(mktemp -d)
 xcrun swiftc -O -module-cache-path "$work/modules" \
-  "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/PresidentialElection.swift" \
-  "$lab/AlbersProjection.swift" "$lab/Tests/PresidentialElectionChecks.swift" -o "$work/election-checks"
+  "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/PresidentialElection.swift" \
+   "$lab/Tests/PresidentialElectionChecks.swift" -o "$work/election-checks"
 "$work/election-checks" US_HistStateTerr_Gen05.json
 ```
 
@@ -148,8 +148,8 @@ To run the geographic checks from the repository root after building the lab, us
 
 ```sh
 xcrun swiftc -O -module-cache-path "$work/modules" \
-  "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/PresidentialElection.swift" \
-  "$lab/AlbersProjection.swift" "$lab/Tests/AlbersQualification.swift" -o "$work/check-albers-02"
+  "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/PresidentialElection.swift" \
+   "$lab/Tests/AlbersQualification.swift" -o "$work/check-albers-02"
 "$work/check-albers-02" "$PWD" "$HISTORICAL_COUNTY_ARCHIVE" \
   "$lab/Tests/Fixtures/albers-proj-wgs84.json" "$app/ElectionResearch/county-geometry-2024.geojson"
 ```
@@ -160,7 +160,7 @@ Run the isolated CPU bitmap experiment on macOS to compare fill and outline cost
 
 ```sh
 xcrun swiftc -O -module-cache-path "$work/modules" \
-  "$lab/GeoJSON.swift" "$lab/AlbersProjection.swift" "$lab/Tests/AlbersRasterStudy.swift" \
+  "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift"  "$lab/Tests/AlbersRasterStudy.swift" \
   -o "$work/albers-raster-study"
 "$work/albers-raster-study" cb_2024_us_county_5m.json > "$work/raster.jsonl"
 ```
@@ -231,7 +231,7 @@ The coverage command uses the checked Census county presentation bounds and the 
 The qualification matrix uses one fresh process per workload and configuration unless a trial count is supplied. Capture simulator model, actual drawable dimensions, OS, text size and host activity alongside the JSONL. Keep the physical deadline field unavailable when there are no presentation timestamps. The host PROJ and selection commands in the 0.2 section still apply. To reproduce the 14-input mesh check from the lab directory, use the same Release app and locally authorized county archive as above.
 
 ```sh
-xcrun swiftc -O -module-cache-path "$build/modules" GeoJSON.swift HistoricalArchive.swift \
+xcrun swiftc -O -module-cache-path "$build/modules" ../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift GeoJSON.swift HistoricalArchive.swift \
   Tests/PublishHistoricalSnapshots.swift -o "$build/publish-history"
 "$build/publish-history" "$HISTORICAL_COUNTY_ARCHIVE" "$build/county-dates" \
   1788-01-01 1860-01-01 1900-01-01 1980-01-01 2000-01-01

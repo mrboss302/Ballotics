@@ -222,7 +222,7 @@ struct AlbersMesh {
         let stripeOriginX: Float
     }
 
-    struct Panel {
+    struct Panel: RegionalMeshPayload {
         let origin: CGPoint
         let vertices: [Vertex]
         let indices: [UInt32]

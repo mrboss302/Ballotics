@@ -131,6 +131,7 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
     private let inFlight = DispatchSemaphore(value: 3)
     private var generation = 0
     private var buffers: AlbersMetalBuffers?
+    var focusedRegion: AlbersRegion?
     private var layout: [AlbersScene.Panel] = []
     private let neutralStyle: MTLBuffer
     private let neutralColors: MTLBuffer
@@ -386,7 +387,7 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         encoder.setCullMode(.none)
         encoder.setFragmentBuffer(styleBuffer, offset: 0, index: 0)
         encoder.setFragmentBuffer(colorBuffer, offset: 0, index: 1)
-        for (buffer, panel) in zip(buffers.panels, layout) where panel.frame.intersects(region) {
+        for (buffer, panel) in zip(buffers.panels, layout) where (focusedRegion == nil || focusedRegion == panel.region) && panel.frame.intersects(region) {
             var camera = camera(for: buffer, panel: panel)
             encoder.setVertexBuffer(buffer.vertices, offset: 0, index: 0)
             encoder.setVertexBuffer(buffer.parts, offset: 0, index: 1)
@@ -400,7 +401,7 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         if let strokePipeline {
             encoder.setRenderPipelineState(strokePipeline)
             encoder.setDepthStencilState(strokeDepth)
-            for (buffer, panel) in zip(buffers.panels, layout) where panel.frame.intersects(region) {
+            for (buffer, panel) in zip(buffers.panels, layout) where (focusedRegion == nil || focusedRegion == panel.region) && panel.frame.intersects(region) {
                 var camera = camera(for: buffer, panel: panel)
                 encoder.setVertexBuffer(buffer.segments, offset: 0, index: 0)
                 encoder.setVertexBuffer(buffer.parts, offset: 0, index: 1)
@@ -413,7 +414,7 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
             }
             if let selected {
                 encoder.setDepthStencilState(selectionDepth)
-                for (buffer, panel) in zip(buffers.panels, layout) where panel.frame.intersects(region) {
+                for (buffer, panel) in zip(buffers.panels, layout) where (focusedRegion == nil || focusedRegion == panel.region) && panel.frame.intersects(region) {
                     guard let ranges = buffer.featureSegments[selected] else { continue }
                     var camera = camera(for: buffer, panel: panel)
                     camera.selectionPass = 1
