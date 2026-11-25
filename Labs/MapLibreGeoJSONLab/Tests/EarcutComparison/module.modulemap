@@ -1,0 +1,4 @@
+module EarcutComparison {
+    header "earcut.h"
+    export *
+}

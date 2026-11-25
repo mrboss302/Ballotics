@@ -1,0 +1,15 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"GEOID": "fixture-visible", "NAME": "Visible fixture polygon"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-105,36],[-101,36],[-101,39],[-105,39],[-105,36]]]}
+    },
+    {
+      "type": "Feature",
+      "properties": {"GEOID": "fixture-collapsed", "NAME": "Collapsed fixture polygon"},
+      "geometry": {"type": "Polygon", "coordinates": [[[-96,35],[-96,36],[-96,37],[-96,35]]]}
+    }
+  ]
+}
