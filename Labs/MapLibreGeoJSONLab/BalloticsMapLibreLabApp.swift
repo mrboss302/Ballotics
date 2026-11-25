@@ -15,6 +15,27 @@ struct Inspection {
     let title: String
     let properties: [(key: String, value: String)]
     let stateCode: String?
+
+    init(attributes: [String: Any]) {
+        let fields = attributes.compactMap { key, value -> (key: String, value: String)? in
+            if let string = value as? String { return (key, string) }
+            if let number = value as? NSNumber { return (key, number.stringValue) }
+            return nil
+        }
+        let title = ["NAMELSAD", "FULL_NAME", "NAME", "name", "GEOID"]
+            .compactMap { attributes[$0] as? String }.first(where: { !$0.isEmpty }) ?? "Selected polygon"
+        let priority = ["GEOID", "STATE_NAME", "STATE_TERR", "STUSPS", "STATEFP", "NAMELSAD", "NAME",
+                        "ID_NUM", "ID", "VERSION", "START_DATE", "END_DATE",
+                        "CD119FP", "COUNTYFP", "LSAD", "CNTY_TYPE", "FIPS", "CHANGE", "CITATION"]
+        let sorted = fields.sorted {
+            let lhs = priority.firstIndex(of: $0.key) ?? priority.count
+            let rhs = priority.firstIndex(of: $1.key) ?? priority.count
+            return lhs == rhs ? $0.key < $1.key : lhs < rhs
+        }
+        self.title = title
+        self.properties = sorted
+        self.stateCode = attributes["STATEFP"] as? String
+    }
 }
 
 enum Viewpoint: Equatable {
@@ -296,6 +317,7 @@ private struct LabView: View {
     @State private var showDate = false
     @State private var dateText = ""
     @State private var dateSource = ""
+    @State private var usesAlbers = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -356,6 +378,12 @@ private struct LabView: View {
                 Spacer(minLength: 0)
 
                 Menu {
+                    Button(usesAlbers ? "MapLibre" : "Albers equal area") {
+                        state.inspection = nil
+                        usesAlbers.toggle()
+                    }
+                    .disabled(state.geography == .imported)
+                    Divider()
                     Button("National") { state.moveCamera(.national) }
                     Button("Alaska") { state.moveCamera(.alaska) }
                     Button("Hawaii") { state.moveCamera(.hawaii) }
@@ -369,7 +397,16 @@ private struct LabView: View {
             }
             .buttonStyle(.bordered)
 
-            MapLibreGeometryView(state: state)
+            Group {
+                if usesAlbers && state.geography != .imported {
+                    AlbersMapView(state: state)
+                } else {
+                    MapLibreGeometryView(state: state)
+                }
+            }
+                .onChange(of: state.geography) { _, geography in
+                    if geography == .imported { usesAlbers = false }
+                }
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .layoutPriority(1)

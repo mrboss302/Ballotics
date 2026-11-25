@@ -79,3 +79,22 @@ Build the shared scheme for the simulator in Release. With the selected simulato
 The benchmark stages a lab-only copy of the source and the two generated snapshots in the simulator's Documents folder. Each case starts a fresh app process. The script also runs 21 warm date switches for each buffer. To reproduce the renderer hit probes, launch with `--measure --historical-date 1788-01-01 --historical-probes` or use `2000-01-01`, then repeat with `--source-option narrow-buffer`. Read `Library/Caches/benchmark.jsonl` from the lab's simulator container.
 
 See the [data audit](HISTORICAL_DATA_AUDIT.md), [historical benchmarks](HISTORICAL_FILTER_BENCHMARKS.md), and [architecture recommendation](HISTORICAL_GEOJSON_ARCHITECTURE.md).
+
+## Albers equal-area overview
+
+Choose **Map view → Albers equal area** for the national overview. Alaska and Hawaii have separate, labeled insets at the same linear scale as the lower 48. Use the **Alaska**, **Hawaii**, or **National** menu items to focus or reset the view. Tap polygons to inspect them. The view also supports pan, pinch, and double-tap zoom.
+
+The overview uses ellipsoidal Albers on WGS 84 with regional parameters. The lower 48 use standard parallels 29.5° and 45.5° and a central meridian of −96°. Alaska uses 55° and 65° at −154°, with longitudes wrapped relative to that meridian to keep the Aleutians together. Hawaii uses 8° and 18° at −157°. Translation into the insets keeps their relative areas comparable. [USGS Albers parameters](https://pubs.usgs.gov/of/1990/0539a/report.pdf) · [USGS Hawaii WGS 84 specification](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/files/LSDS-2309%20Land%20Change%20Monitoring%2C%20Assessment%2C%20and%20Projection%20%28LCMAP%29%20Hawaii%20Collection%201.0%20Data%20Format%20Control%20Book%20%28DFCB%29%20-v1.0%202021_12_14.pdf).
+
+The Albers overview supports the bundled datasets and historical date snapshots. Alaska and Hawaii insets appear when those polygons are present. A new dataset or snapshot fits its projected extent. The MapLibre view is the default and provides the full coverage of bundled territories and arbitrary imports. Use **Map view → MapLibre** to return to that renderer. Existing MapLibre benchmarks use the MapLibre view. Both views read the original local geometry or the active historical snapshot.
+
+Run the standalone projection check from the repository root. The optional final argument is a published `2000-01-01` snapshot.
+
+```sh
+lab=Labs/MapLibreGeoJSONLab
+work=$(mktemp -d)
+xcrun swiftc -O -module-cache-path "$work/modules" \
+  "$lab/GeoJSON.swift" "$lab/AlbersProjection.swift" "$lab/Tests/AlbersChecks.swift" \
+  -o "$work/check-albers"
+"$work/check-albers" "$PWD"
+```

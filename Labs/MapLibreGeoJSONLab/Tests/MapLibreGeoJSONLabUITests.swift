@@ -144,6 +144,41 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
     }
 
     @MainActor
+    func testAlbersOverviewAcrossStatesAndHistory() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--dataset", "states"]
+        app.launch()
+        waitForGeometry("56", in: app)
+        view("Albers equal area", in: app)
+        let map = app.descendants(matching: .any)["albers-map"].firstMatch
+        XCTAssertTrue(map.waitForExistence(timeout: 8))
+        func waitForAlbers(_ count: String) {
+            let ready = XCTNSPredicateExpectation(
+                predicate: NSPredicate(format: "label == %@", "\(count) features · Albers equal area"),
+                object: app.staticTexts["load-status"]
+            )
+            XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 15), .completed)
+        }
+        waitForAlbers("51")
+        let overview = XCTAttachment(screenshot: app.screenshot())
+        overview.name = "National Albers overview"
+        overview.lifetime = .keepAlways
+        add(overview)
+        view("Alaska", in: app)
+        let alaska = map.screenshot().pngRepresentation
+        view("Hawaii", in: app)
+        XCTAssertNotEqual(alaska, map.screenshot().pngRepresentation)
+        view("National", in: app)
+
+        choose("Historical Counties", in: app)
+        waitForAlbers("332")
+        XCTAssertTrue(app.staticTexts["snapshot-date"].label.hasPrefix("1788-01-01"))
+        view("MapLibre", in: app)
+        waitForGeometry("332", in: app)
+    }
+
+    @MainActor
     func testRapidHistoricalRequestsEndAtLatestDate() {
         continueAfterFailure = false
         let app = XCUIApplication()

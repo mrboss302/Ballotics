@@ -390,7 +390,7 @@ struct MapLibreGeometryView: UIViewRepresentable {
                 state.inspection = nil
                 return
             }
-            let inspection = inspect(hit)
+            let inspection = Inspection(attributes: hit.attributes)
             state.inspection = inspection
             if key != nil {
                 if LabLog.enabled {
@@ -427,26 +427,6 @@ struct MapLibreGeometryView: UIViewRepresentable {
                     state.failure = "Could not highlight this polygon. \(error.localizedDescription)"
                 }
             }
-        }
-
-        private func inspect(_ feature: MLNFeature) -> Inspection {
-            let attributes = feature.attributes
-            let fields = attributes.compactMap { key, value -> (key: String, value: String)? in
-                if let string = value as? String { return (key, string) }
-                if let number = value as? NSNumber { return (key, number.stringValue) }
-                return nil
-            }
-            let title = ["NAMELSAD", "FULL_NAME", "NAME", "name", "GEOID"]
-                .compactMap { attributes[$0] as? String }.first(where: { !$0.isEmpty }) ?? "Selected polygon"
-            let priority = ["GEOID", "STATE_NAME", "STATE_TERR", "STUSPS", "STATEFP", "NAMELSAD", "NAME",
-                            "ID_NUM", "ID", "VERSION", "START_DATE", "END_DATE",
-                            "CD119FP", "COUNTYFP", "LSAD", "CNTY_TYPE", "FIPS", "CHANGE", "CITATION"]
-            let sorted = fields.sorted {
-                let lhs = priority.firstIndex(of: $0.key) ?? priority.count
-                let rhs = priority.firstIndex(of: $1.key) ?? priority.count
-                return lhs == rhs ? $0.key < $1.key : lhs < rhs
-            }
-            return Inspection(title: title, properties: sorted, stateCode: attributes["STATEFP"] as? String)
         }
 
         private func move(_ viewpoint: Viewpoint, on map: MLNMapView, animated: Bool) {

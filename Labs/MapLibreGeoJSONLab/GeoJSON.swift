@@ -70,7 +70,7 @@ struct GeoJSON {
         }
     }
 
-    private typealias Object = [String: Any]
+    typealias Object = [String: Any]
     private typealias Rings = [[[Double]]]
 
     static func validate(_ url: URL, geography: Geography) throws -> Summary {
@@ -185,7 +185,7 @@ struct GeoJSON {
         return inside
     }
 
-    private static func readFeatures(_ url: URL) throws -> [Object] {
+    static func readFeatures(_ url: URL) throws -> [Object] {
         let data = try Data(contentsOf: url, options: .mappedIfSafe)
         guard let root = try JSONSerialization.jsonObject(with: data) as? Object else {
             throw Invalid(message: "Expected a GeoJSON object.")
@@ -203,6 +203,10 @@ struct GeoJSON {
         default:
             throw Invalid(message: "Choose a Polygon, MultiPolygon, or a collection of polygon features.")
         }
+    }
+
+    static func rings(for feature: Object) throws -> [[[[Double]]]] {
+        try polygonGeometry(feature).1
     }
 
     private static func polygonGeometry(_ feature: Object) throws -> (Object, [Rings]) {
