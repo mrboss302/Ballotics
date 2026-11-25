@@ -4,7 +4,7 @@ The published county results contain 22,073 reporting records. Of these, 22,027 
 
 | Year | Reporting rows | Polygon joins | Unmapped rows | CT county joins | AK district joins | Alaska HD99 source votes |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 2000 | 3,151 | 4,140 | 12 | 8 | 40 fallback | 0 |
+| 2000 | 3,152 | 3,140 | 12 | 8 | 40 fallback | 0 |
 | 2004 | 3,153 | 3,146 | 7 | 8 | 40 fallback | 0 |
 | 2008 | 3,153 | 3,146 | 7 | 8 | 40 fallback | 0 |
 | 2012 | 3,153 | 3,146 | 7 | 8 | 40 fallback | 0 |

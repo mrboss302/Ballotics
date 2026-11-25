@@ -1,0 +1,19 @@
+Release interaction runs on iPhone 17 Pro / iOS 26.3
+
+Test Case '-[MapLibreGeoJSONLabUITests.MapLibreGeoJSONLabUITests testAlbersOverviewAcrossStatesAndHistory]' passed (28.884 seconds).
+Test Case '-[MapLibreGeoJSONLabUITests.MapLibreGeoJSONLabUITests testBundledGeometrySelectionAndNavigation]' passed (42.489 seconds).
+Test Case '-[MapLibreGeoJSONLabUITests.MapLibreGeoJSONLabUITests testHistoricalDateChangesSourceAndPreservesProvenance]' passed (31.306 seconds).
+Test Case '-[MapLibreGeoJSONLabUITests.MapLibreGeoJSONLabUITests testRapidHistoricalRequestsEndAtLatestDate]' passed (5.656 seconds).
+Test Case '-[MapLibreGeoJSONLabUITests.MapLibreGeoJSONLabUITests testContingentElectionShowsOutcomeAndAllocations]' passed (11.106 seconds).
+Test Case '-[MapLibreGeoJSONLabUITests.MapLibreGeoJSONLabUITests testPresidentialCountyResultsInBothRenderers]' passed (132.288 seconds).
+Test Case '-[MapLibreGeoJSONLabUITests.MapLibreGeoJSONLabUITests testPresidentialElectionBoundaryPicker]' passed (28.841 seconds).
+
+Release launch and Files picker regression
+Test Case '-[MapLibreGeoJSONLabUITests.GeoJSONLaunchTests testCountiesLaunch]' passed (18.380 seconds).
+Test Case '-[MapLibreGeoJSONLabUITests.GeoJSONLaunchTests testDistrictsLaunch]' passed (19.361 seconds).
+Test Case '-[MapLibreGeoJSONLabUITests.GeoJSONLaunchTests testHistoricalLaunch]' passed (26.770 seconds).
+Test Case '-[MapLibreGeoJSONLabUITests.GeoJSONLaunchTests testStatesLaunch]' passed (16.577 seconds).
+Test Case '-[MapLibreGeoJSONLabUITests.MapLibreGeoJSONLabUITests testFilesImportAndRejectInvalidJSON]' skipped (15.403 seconds).
+
+The Files picker did not expose the staged fixture through the existing UI helper.
+The historical source and invalid geometry checks ran separately.

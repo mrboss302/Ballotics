@@ -1,0 +1,1 @@
+PASS deterministic publication, Draft 2020-12 schema, checksums, historical cases, county joins and fixtures

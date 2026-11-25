@@ -1,0 +1,11 @@
+{"app_ms":1.7,"event":"app_init"}
+{"app_ms":153.80000000000001,"event":"style_ready","style_ready_footprint_mib":25.502723693847656,"style_ready_rss_mib":204.359375}
+{"app_ms":179.30000000000001,"elapsed_ms":22.399999999999999,"event":"election_store_ready","installed":true}
+{"app_ms":279.89999999999998,"elapsed_ms":100.40000000000001,"event":"election_query_ready","mode":"County results","year":2024}
+{"app_ms":750.70000000000005,"elapsed_ms":470.39999999999998,"event":"election_geography_ready","mode":"County results","reused_source":false,"year":2024}
+{"app_ms":751.10000000000002,"elapsed_ms":594.20000000000005,"election_switch_footprint_mib":43.284065246582031,"election_switch_rss_mib":267.25,"event":"election_switch","mode":"County results","year":2024}
+{"app_ms":766.29999999999995,"before_source_footprint_mib":43.815315246582031,"before_source_rss_mib":270.28125,"dataset":"Presidential Elections","event":"source_start","revision":1,"source_profile":"defaults"}
+{"app_ms":767,"dataset":"Presidential Elections","event":"source_submitted","revision":1,"submit_ms":0.69999999999999996}
+{"app_ms":927.39999999999998,"elapsed_ms":160.09999999999999,"event":"election_maplibre_paint","mode":"County results","year":2024}
+{"app_ms":927.60000000000002,"dataset":"Presidential Elections","event":"first_useful_frame","frame_fully_rendered":true,"request_ms":647.29999999999995,"revision":1,"source_ms":161.19999999999999,"useful_footprint_mib":95.940475463867188,"useful_rss_mib":404.3125}
+{"app_ms":1702.5,"dataset":"Presidential Elections","event":"idle_with_geometry","idle_footprint_mib":96.159225463867188,"idle_rss_mib":404.625,"request_ms":1422.3,"revision":1,"source_ms":936.20000000000005}
