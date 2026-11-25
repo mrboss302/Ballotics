@@ -55,6 +55,87 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
     }
 
     @MainActor
+    func testAlbersSearchSelectAndRestore() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers", "--dataset", "counties", "--measure"]
+        app.launch()
+        let status = app.staticTexts["load-status"]
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label CONTAINS %@", "Albers equal area"),
+                                              object: status)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 20), .completed)
+        XCTAssertEqual(app.staticTexts["snapshot-date"].label, "2024 Census boundaries · Geometry only")
+        view("Find geography", in: app)
+        let search = app.searchFields["Search geography"]
+        XCTAssertTrue(search.waitForExistence(timeout: 4))
+        search.tap()
+        search.typeText("Cuyahoga")
+        let row = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "albers-feature-")).firstMatch
+        XCTAssertTrue(row.waitForExistence(timeout: 4))
+        row.tap()
+        waitForSelection(app.buttons["inspection"], named: "Cuyahoga County")
+        view("Zoom to selected state", in: app)
+        waitForSelection(app.buttons["inspection"], named: "Cuyahoga County")
+        view("Zoom to selected feature", in: app)
+        let shot = XCTAttachment(screenshot: app.screenshot())
+        shot.name = "Modern counties focused on Cuyahoga County"
+        shot.lifetime = .keepAlways
+        add(shot)
+        XCUIDevice.shared.press(.home)
+        app.activate()
+        waitForSelection(app.buttons["inspection"], named: "Cuyahoga County")
+        XCUIDevice.shared.orientation = .landscapeLeft
+        defer { XCUIDevice.shared.orientation = .portrait }
+        XCTAssertTrue(app.descendants(matching: .any)["albers-map"].firstMatch.exists)
+        waitForSelection(app.buttons["inspection"], named: "Cuyahoga County")
+        app.buttons["inspection"].tap()
+        XCTAssertTrue(app.staticTexts["GEOID"].waitForExistence(timeout: 5))
+    }
+
+    @MainActor
+    func testAlbersMarginAndPaletteKeepGeometry() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--election-year", "2024", "--county-results", "--measure"]
+        app.launch()
+        let map = app.descendants(matching: .any)["albers-map"].firstMatch
+        let status = app.staticTexts["load-status"]
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label CONTAINS %@", "Albers equal area"),
+                                              object: status)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 25), .completed)
+        let candidateMap = map.screenshot().pngRepresentation
+        app.buttons["viewpoints"].tap()
+        let colors = app.buttons["Map colors"]
+        if colors.exists { colors.tap() }
+        app.buttons["Reported margin"].tap()
+        XCTAssertTrue(app.staticTexts["albers-margin-legend"].waitForExistence(timeout: 5))
+        XCTAssertNotEqual(candidateMap, map.screenshot().pngRepresentation)
+        XCTAssertTrue(status.label.contains("3,153"))
+        XCTAssertTrue(app.staticTexts["snapshot-date"].label.contains("CT traditional counties"))
+        view("Find geography", in: app)
+        let search = app.searchFields["Search geography"]
+        search.tap()
+        search.typeText("Cuyahoga")
+        app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "albers-feature-")).firstMatch.tap()
+        waitForSelection(app.buttons["inspection"], named: "Cuyahoga County")
+        app.buttons["inspection"].tap()
+        XCTAssertTrue(app.staticTexts["Reported votes"].waitForExistence(timeout: 4))
+        app.buttons["Done"].tap()
+        view("National", in: app)
+        map.coordinate(withNormalizedOffset: CGVector(dx: 0.03, dy: 0.03)).tap()
+        XCTAssertFalse(app.buttons["inspection"].isEnabled)
+
+        app.buttons["viewpoints"].tap()
+        if colors.exists { colors.tap() }
+        app.buttons["Alternate palette"].tap()
+        XCTAssertFalse(app.staticTexts["albers-margin-legend"].exists)
+        let alternate = map.screenshot().pngRepresentation
+        view("Emphasize borders", in: app)
+        XCTAssertNotEqual(alternate, map.screenshot().pngRepresentation)
+        XCTAssertTrue(status.label.contains("3,153"))
+    }
+
+    @MainActor
     func testFilesImportAndRejectInvalidJSON() throws {
         continueAfterFailure = false
         let app = XCUIApplication()

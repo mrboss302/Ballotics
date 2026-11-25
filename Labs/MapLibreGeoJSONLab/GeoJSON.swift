@@ -75,7 +75,10 @@ struct GeoJSON {
     private typealias Rings = [[[Double]]]
 
     static func validate(_ url: URL, geography: Geography) throws -> Summary {
-        let features = try readFeatures(url)
+        try validate(readFeatures(url), geography: geography)
+    }
+
+    static func validate(_ features: [Object], geography: Geography) throws -> Summary {
         var summary = Summary()
         var candidateIDs: [String: Set<AnyHashable>] = ["GEOID": [], "ID_NUM": [], "$id": []]
         let schema = geography.censusSchema

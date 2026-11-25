@@ -95,6 +95,19 @@ enum AlbersRegion: CaseIterable {
 }
 
 struct AlbersScene {
+    struct Preparation {
+        let decodedMilliseconds: Double
+        let projectedMilliseconds: Double
+        let indexedMilliseconds: Double
+    }
+
+    struct InsetLayout {
+        var gap: CGFloat = 145_000
+        var padding: CGFloat = 100_000
+        var labelRoom: CGFloat = 285_000
+        var alaskaFirst = true
+    }
+
     struct Part {
         let feature: Int
         let path: CGPath
@@ -106,6 +119,7 @@ struct AlbersScene {
         let parts: [Part]
         let translation: CGPoint
         let frame: CGRect
+        fileprivate let index: AlbersSpatialIndex?
 
         func local(_ point: CGPoint) -> CGPoint {
             CGPoint(x: point.x - translation.x, y: point.y - translation.y)
@@ -114,14 +128,31 @@ struct AlbersScene {
         func world(_ rect: CGRect) -> CGRect {
             rect.offsetBy(dx: translation.x, dy: translation.y)
         }
+
+        // The draw order is also the selection stacking order.
+        func visible(in window: CGRect) -> [Int] {
+            if let index { return index.overlapping(window).sorted() }
+            return parts.indices.filter { parts[$0].bounds.intersects(window) }
+        }
     }
 
     let panels: [Panel]
     let properties: [[String: String]]
     let bounds: CGRect
+    let preparation: Preparation
+    private let featureFrames: [CGRect]
+    private let stateFrames: [String: CGRect]
 
-    static func load(_ url: URL) throws -> Self {
+    static func load(_ url: URL, indexed: Bool = true, layout: InsetLayout = InsetLayout()) throws -> Self {
+        let started = ProcessInfo.processInfo.systemUptime
         let features = try GeoJSON.readFeatures(url)
+        return try project(features, indexed: indexed, layout: layout,
+                           decodeMilliseconds: (ProcessInfo.processInfo.systemUptime - started) * 1_000)
+    }
+
+    static func project(_ features: [GeoJSON.Object], indexed: Bool = true,
+                        layout: InsetLayout = InsetLayout(), decodeMilliseconds: Double = 0) throws -> Self {
+        let started = ProcessInfo.processInfo.systemUptime
         let projections = Dictionary(uniqueKeysWithValues: AlbersRegion.allCases.map { ($0, $0.projection) })
         var grouped: [AlbersRegion: [Part]] = [:]
         var attributes: [[String: String]] = []
@@ -151,7 +182,26 @@ struct AlbersScene {
         guard !attributes.isEmpty else {
             throw GeoJSON.Invalid(message: "This dataset has no polygons in the Albers overview.")
         }
-        return Self(panels: layout(grouped), properties: attributes)
+        let projected = ProcessInfo.processInfo.systemUptime
+        let panels = Self.layout(grouped, using: layout, indexed: indexed)
+        var frames = Array(repeating: CGRect.null, count: attributes.count)
+        for panel in panels {
+            for part in panel.parts {
+                frames[part.feature] = frames[part.feature].union(panel.world(part.bounds))
+            }
+        }
+        var states: [String: CGRect] = [:]
+        for (index, fields) in attributes.enumerated() {
+            if let code = fields["STATEFP"] {
+                states[code] = states[code, default: .null].union(frames[index])
+            }
+        }
+        return Self(panels: panels, properties: attributes,
+                    bounds: panels.reduce(.null) { $0.union($1.frame) },
+                    preparation: Preparation(decodedMilliseconds: decodeMilliseconds,
+                                             projectedMilliseconds: (projected - started) * 1_000,
+                                             indexedMilliseconds: (ProcessInfo.processInfo.systemUptime - projected) * 1_000),
+                    featureFrames: frames, stateFrames: states)
     }
 
     func hit(_ point: CGPoint) -> Int? {
@@ -164,19 +214,25 @@ struct AlbersScene {
         return nil
     }
 
-    func frame(for feature: Int) -> CGRect {
-        panels.reduce(.null) { result, panel in
-            panel.parts.lazy.filter { $0.feature == feature }.reduce(result) {
-                $0.union(panel.world($1.bounds))
+    func hits(_ point: CGPoint) -> [Int] {
+        var seen = Set<Int>()
+        var matches: [Int] = []
+        for panel in panels where panel.frame.contains(point) {
+            let local = panel.local(point)
+            let candidates = panel.index?.containing(local).sorted(by: >) ?? Array(panel.parts.indices.reversed())
+            for candidate in candidates {
+                let part = panel.parts[candidate]
+                if part.bounds.contains(local), part.path.contains(local, using: .evenOdd),
+                   seen.insert(part.feature).inserted {
+                    matches.append(part.feature)
+                }
             }
         }
+        return matches
     }
 
-    private init(panels: [Panel], properties: [[String: String]]) {
-        self.panels = panels
-        self.properties = properties
-        bounds = panels.reduce(.null) { $0.union($1.frame) }
-    }
+    func frame(for feature: Int) -> CGRect { featureFrames[feature] }
+    func frame(forState code: String) -> CGRect? { stateFrames[code] }
 
     private static func makePath(_ polygons: [[[Double]]], projection: AlbersProjection) -> CGPath {
         let path = CGMutablePath()
@@ -202,25 +258,87 @@ struct AlbersScene {
         return path.copy() ?? path
     }
 
-    private static func layout(_ parts: [AlbersRegion: [Part]]) -> [Panel] {
-        let gap: CGFloat = 145_000
-        let insetPadding: CGFloat = 100_000
-        let labelRoom: CGFloat = 285_000
-
+    private static func layout(_ parts: [AlbersRegion: [Part]], using layout: InsetLayout, indexed: Bool) -> [Panel] {
         func panel(_ region: AlbersRegion, x: CGFloat, y: CGFloat) -> Panel? {
             guard let shapes = parts[region], !shapes.isEmpty else { return nil }
             let box = shapes.reduce(CGRect.null) { $0.union($1.bounds) }
-            let padding = region == .mainland ? 0 : insetPadding
-            let header = region == .mainland ? 0 : labelRoom
+            let padding = region == .mainland ? 0 : layout.padding
+            let header = region == .mainland ? 0 : layout.labelRoom
             let frame = CGRect(x: x, y: y, width: box.width + 2 * padding, height: box.height + padding + header)
             return Panel(region: region, parts: shapes,
-                         translation: CGPoint(x: x + padding - box.minX, y: y + header - box.minY), frame: frame)
+                         translation: CGPoint(x: x + padding - box.minX, y: y + header - box.minY), frame: frame,
+                         index: indexed ? AlbersSpatialIndex(shapes.map(\.bounds)) : nil)
         }
 
         let mainland = panel(.mainland, x: 0, y: 0)
-        let insetY = mainland.map { $0.frame.maxY + gap } ?? 0
-        let alaska = panel(.alaska, x: 0, y: insetY)
-        let hawaii = panel(.hawaii, x: alaska.map { $0.frame.maxX + gap } ?? 0, y: insetY)
-        return [mainland, alaska, hawaii].compactMap { $0 }
+        let insetY = mainland.map { $0.frame.maxY + layout.gap } ?? 0
+        let first = panel(layout.alaskaFirst ? .alaska : .hawaii, x: 0, y: insetY)
+        let second = panel(layout.alaskaFirst ? .hawaii : .alaska,
+                           x: first.map { $0.frame.maxX + layout.gap } ?? 0, y: insetY)
+        return [mainland, first, second].compactMap { $0 }
+    }
+}
+
+/// A packed, immutable bounding-volume hierarchy. Leaves refer to the original draw-order indices.
+private struct AlbersSpatialIndex {
+    struct Node {
+        let bounds: CGRect
+        let entries: Range<Int>
+        let left: Int
+        let right: Int
+    }
+
+    private var nodes: [Node] = []
+    private var order: [Int]
+    private let boxes: [CGRect]
+
+    init(_ boxes: [CGRect]) {
+        self.boxes = boxes
+        order = Array(boxes.indices)
+        build(order.indices)
+    }
+
+    @discardableResult
+    private mutating func build(_ range: Range<Int>) -> Int {
+        let bound = order[range].reduce(CGRect.null) { $0.union(boxes[$1]) }
+        let index = nodes.count
+        nodes.append(Node(bounds: bound, entries: range, left: -1, right: -1))
+        if range.count > 12 {
+            let horizontal = bound.width >= bound.height
+            let sorted = order[range].sorted {
+                horizontal ? boxes[$0].midX < boxes[$1].midX : boxes[$0].midY < boxes[$1].midY
+            }
+            order.replaceSubrange(range, with: sorted)
+            let middle = range.lowerBound + range.count / 2
+            let left = build(range.lowerBound..<middle)
+            let right = build(middle..<range.upperBound)
+            nodes[index] = Node(bounds: bound, entries: range, left: left, right: right)
+        }
+        return index
+    }
+
+    func overlapping(_ window: CGRect) -> [Int] {
+        if window.contains(nodes[0].bounds) { return Array(boxes.indices) }
+        return matching { $0.intersects(window) }
+    }
+
+    func containing(_ point: CGPoint) -> [Int] {
+        matching { $0.contains(point) }
+    }
+
+    private func matching(_ includes: (CGRect) -> Bool) -> [Int] {
+        var matches: [Int] = []
+        func visit(_ index: Int) {
+            let node = nodes[index]
+            guard includes(node.bounds) else { return }
+            if node.left < 0 {
+                for item in order[node.entries] where includes(boxes[item]) { matches.append(item) }
+            } else {
+                visit(node.left)
+                visit(node.right)
+            }
+        }
+        visit(0)
+        return matches
     }
 }

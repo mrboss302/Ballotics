@@ -158,6 +158,15 @@ actor ElectionStore {
                 try read(ElectionIdentity.self, package.id, 0, "party"))
     }
 
+    func presentationVersion(countyYear: Int?) throws -> [String] {
+        guard let national = try active(slot: 0) else { throw ElectionPackageError.missing }
+        guard let year = countyYear else { return [national.id] }
+        guard let county = try active(slot: year, version: national.version) else {
+            throw ElectionPackageError.missing
+        }
+        return [national.id, county.id]
+    }
+
     private func active(slot: Int, version: String? = nil) throws -> InstalledElectionPackage? {
         // County cache entries are scoped to the active national publication, including after rollback.
         if let version {

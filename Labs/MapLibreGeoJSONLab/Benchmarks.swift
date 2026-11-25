@@ -77,7 +77,9 @@ struct FrameSamples {
         let gaps = zip(timestamps.dropFirst(), timestamps).map { $0 - $1 }.sorted()
         if let worst = gaps.last, let first = timestamps.first, let last = timestamps.last, last > first {
             fields["callback_fps"] = Double(gaps.count) / (last - first)
+            fields["p50_gap_ms"] = LabLog.milliseconds(gaps[Int(ceil(Double(gaps.count) * 0.50)) - 1])
             fields["p95_gap_ms"] = LabLog.milliseconds(gaps[Int(ceil(Double(gaps.count) * 0.95)) - 1])
+            fields["p99_gap_ms"] = LabLog.milliseconds(gaps[Int(ceil(Double(gaps.count) * 0.99)) - 1])
             fields["worst_gap_ms"] = LabLog.milliseconds(worst)
             fields["gaps_over_25_ms"] = gaps.count { $0 > 0.025 }
         }

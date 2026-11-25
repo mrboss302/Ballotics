@@ -523,7 +523,7 @@ struct MapLibreGeometryView: UIViewRepresentable {
                 map.setCenter(CLLocationCoordinate2D(latitude: 61, longitude: -152), zoomLevel: 3.4, animated: animated)
             case .hawaii:
                 map.setCenter(CLLocationCoordinate2D(latitude: 20.7, longitude: -157.3), zoomLevel: 5.5, animated: animated)
-            case .selectedState:
+            case .selectedFeature, .selectedState:
                 guard let code = state.inspection?.stateCode, let bounds = active?.summary.stateBounds[code] else { return }
                 if code == "02" { move(.alaska, on: map, animated: animated) }
                 else if code == "15" { move(.hawaii, on: map, animated: animated) }

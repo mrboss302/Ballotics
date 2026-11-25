@@ -9,6 +9,39 @@ struct Dataset {
     let requestedAt: Double
     let imported: ImportedFile?
     var historical: HistoricalMapFile? = nil
+
+    var albersKey: AlbersCache.Key {
+        historical.map { .snapshot($0.manifest.outputSHA256) } ?? .bundled(url)
+    }
+}
+
+@MainActor
+final class AlbersCache {
+    enum Key: Equatable {
+        case bundled(URL)
+        case snapshot(String)
+    }
+
+    private var entries: [(Key, AlbersScene, Int)] = []
+    private let maximumPositions = 700_000
+
+    func take(_ key: Key) -> AlbersScene? {
+        guard let index = entries.firstIndex(where: { $0.0 == key }) else { return nil }
+        let entry = entries.remove(at: index)
+        entries.append(entry)
+        return entry.1
+    }
+
+    func put(_ scene: AlbersScene, at key: Key, positions: Int) {
+        guard positions <= maximumPositions else { return }
+        entries.removeAll { $0.0 == key }
+        entries.append((key, scene, positions))
+        while entries.count > 2 || entries.reduce(0, { $0 + $1.2 }) > maximumPositions {
+            entries.removeFirst()
+        }
+    }
+
+    func clear() { entries.removeAll() }
 }
 
 struct Inspection {
@@ -45,7 +78,7 @@ struct Inspection {
 }
 
 enum Viewpoint: Equatable {
-    case national, alaska, hawaii, selectedState
+    case national, alaska, hawaii, selectedState, selectedFeature
 }
 
 @MainActor
@@ -65,10 +98,26 @@ final class LabState: ObservableObject {
     @Published private(set) var election: PresidentialElection?
     @Published private(set) var electionPresentation: ElectionMapPresentation?
     @Published private(set) var electionRevision = 0
+    @Published private(set) var usesAlbers = ProcessInfo.processInfo.arguments.contains("--albers")
+    @Published var albersTheme: AlbersTheme = .candidates
+    @Published var thickAlbersBorders = false
+    @Published private(set) var albersStudyProbe = 0
+    @Published private(set) var dismissedStudyMap = false
+    let baselineAlbers = ProcessInfo.processInfo.arguments.contains("--albers-baseline")
+    let albersCache = AlbersCache()
     let elections = PresidentialElection.available().filter { $0.year <= 2024 }
     private var electionStoreTask: Task<ElectionStore, Error>?
     private var countySource: Dataset?
     private var attemptedRemoteNational = false
+    private struct CachedResult {
+        let year: Int
+        let mode: ElectionMapMode
+        let version: [String]
+        let record: ElectionRecord
+        let presentation: ElectionMapPresentation
+    }
+    private var cachedResults: [CachedResult] = []
+    private var optimizesAlbers: Bool { usesAlbers && !baselineAlbers }
 
     var electionMode: ElectionMapMode { electionPresentation?.mode ?? .electoralCollege }
 
@@ -127,6 +176,7 @@ final class LabState: ObservableObject {
         if let index = arguments.firstIndex(of: "--election-year"),
            let year = arguments.dropFirst(index + 1).first.flatMap(Int.init),
            let election = elections.first(where: { $0.year == year }) {
+            setAlbers(!arguments.contains("--election-maplibre"))
             applyElection(election, mode: arguments.contains("--county-results") ? .countyResults : .electoralCollege)
         } else if let index = arguments.firstIndex(where: { $0 == "--historical-date" || $0 == "--published-date" }),
            let value = arguments.dropFirst(index + 1).first {
@@ -156,6 +206,9 @@ final class LabState: ObservableObject {
             return
         }
         if next == .presidential {
+            if geography != .presidential {
+                setAlbers(!ProcessInfo.processInfo.arguments.contains("--election-maplibre"))
+            }
             if let election = election ?? elections.first { applyElection(election, mode: electionMode) }
             return
         }
@@ -189,14 +242,8 @@ final class LabState: ObservableObject {
         baseline["dataset"] = next.rawValue
         LabLog.record("validation_start", baseline)
         loading = Task {
-            let validate = Task.detached(priority: .userInitiated) { try GeoJSON.validate(url, geography: next) }
-            defer { validate.cancel() }
             do {
-                let summary = try await withTaskCancellationHandler {
-                    try await validate.value
-                } onCancel: {
-                    validate.cancel()
-                }
+                let summary = try await prepareGeometry(url, geography: next)
                 try Task.checkCancellation()
                 validations[next] = summary
                 var fields = MemorySample.read()?.fields("after_validation") ?? [:]
@@ -216,6 +263,147 @@ final class LabState: ObservableObject {
                 loading = nil
             }
         }
+    }
+
+    func setAlbers(_ enabled: Bool) {
+        guard usesAlbers != enabled else { return }
+        usesAlbers = enabled
+        inspection = nil
+        if !enabled {
+            albersCache.clear()
+            cachedResults.removeAll()
+        }
+    }
+
+    func releaseUnusedAlbersResources() {
+        albersCache.clear()
+        cachedResults.removeAll()
+    }
+
+    func runAlbersStress() async {
+        let arguments = ProcessInfo.processInfo.arguments
+        guard LabLog.enabled, arguments.contains("--albers-stress") else { return }
+        let previouslyDisabled = UIApplication.shared.isIdleTimerDisabled
+        UIApplication.shared.isIdleTimerDisabled = true
+        defer { UIApplication.shared.isIdleTimerDisabled = previouslyDisabled }
+        let seconds = arguments.firstIndex(of: "--albers-seconds")
+            .flatMap { arguments.dropFirst($0 + 1).first }.flatMap(Double.init) ?? 1800
+        let started = LabLog.now
+        var years = 0
+        var sources = 0
+        var rapid = 0
+        var mismatches = 0
+        var navigations = 0
+        var nextSample = started
+        setAlbers(true)
+        LabLog.record("albers_stress_start", ["seconds": seconds])
+        guard let first = elections.first(where: { $0.year == 2024 }),
+              let second = elections.first(where: { $0.year == 2020 }) else { return }
+        while LabLog.now - started < seconds && !Task.isCancelled {
+            let window = LabLog.now
+            if years < 100 {
+                let winner = years.isMultiple(of: 2) ? first : second
+                if years.isMultiple(of: 10) {
+                    applyElection(winner.year == first.year ? second : first, mode: .countyResults)
+                    rapid += 1
+                }
+                applyElection(winner, mode: .countyResults)
+                await awaitStudyPresentation()
+                if election?.year != winner.year || electionPresentation?.year != winner.year
+                    || electionMode != .countyResults || dataset?.geography != .presidential {
+                    mismatches += 1
+                }
+                years += 1
+                LabLog.record("albers_stress_year", ["year": winner.year,
+                    "li_ms": LabLog.milliseconds(LabLog.now - window), "mismatches": mismatches])
+            } else if sources < 50 {
+                let sourcesToTest: [Geography] = [.states, .districts, .counties, .historical]
+                let expected = sourcesToTest[sources % sourcesToTest.count]
+                if expected == .historical {
+                    let preset = HistoricalRequest.presets[sources / sourcesToTest.count % HistoricalRequest.presets.count]
+                    applyHistory(preset)
+                } else {
+                    choose(expected)
+                }
+                await awaitStudyPresentation()
+                if dataset?.geography != expected { mismatches += 1 }
+                sources += 1
+                if sources == 50 {
+                    applyElection(first, mode: .countyResults)
+                    await awaitStudyPresentation()
+                }
+            }
+            let views: [Viewpoint] = [.national, .alaska, .hawaii, .selectedState, .selectedFeature]
+            moveCamera(views[navigations % views.count])
+            albersStudyProbe += 1
+            albersTheme = AlbersTheme.allCases[navigations % AlbersTheme.allCases.count]
+            if navigations.isMultiple(of: 3) { thickAlbersBorders.toggle() }
+            if LabLog.now >= nextSample {
+                var fields = MemorySample.read()?.fields("stress") ?? [:]
+                fields["years"] = years
+                fields["sources"] = sources
+                fields["rapid_requests"] = rapid
+                fields["navigation_steps"] = navigations
+                fields["mismatches"] = mismatches
+                LabLog.record("albers_stress_checkpoint", fields)
+                nextSample = LabLog.now + 15
+            }
+            navigations += 1
+            do { try await Task.sleep(for: .milliseconds(years < 100 || sources < 50 ? 55 : 280)) }
+            catch { return }
+        }
+        LabLog.record("albers_stress_done", ["years": years, "sources": sources, "mismatches": mismatches,
+            "rapid_requests": rapid, "navigation_steps": navigations,
+            "elapsed_ms": LabLog.milliseconds(LabLog.now - started)])
+        var retained = MemorySample.read()?.fields("before_release") ?? [:]
+        retained["features"] = dataset?.summary.features ?? 0
+        LabLog.record("albers_stress_release_start", retained)
+        dismissedStudyMap = true
+        releaseUnusedAlbersResources()
+        dataset = nil
+        electionPresentation = nil
+        inspection = nil
+        try? await Task.sleep(for: .seconds(3))
+        LabLog.record("albers_stress_released", MemorySample.read()?.fields("after_release") ?? [:])
+    }
+
+    private func awaitStudyPresentation() async {
+        let deadline = LabLog.now + 15
+        while LabLog.now < deadline && !Task.isCancelled {
+            if !historicalPending && status.contains("Albers equal area") { return }
+            try? await Task.sleep(for: .milliseconds(25))
+        }
+    }
+
+    private func prepareGeometry(_ url: URL, geography: Geography) async throws -> GeoJSON.Summary {
+        let preproject = optimizesAlbers
+        let sampled = MemorySampler()
+        let preparationStarted = LabLog.now
+        let work = Task.detached(priority: .userInitiated) {
+            let start = LabLog.now
+            let features = try GeoJSON.readFeatures(url)
+            let decoded = LabLog.now
+            let summary = try GeoJSON.validate(features, geography: geography)
+            let validated = LabLog.now
+            let scene = preproject ? try AlbersScene.project(features,
+                decodeMilliseconds: LabLog.milliseconds(decoded - start)) : nil
+            return (summary, scene, LabLog.milliseconds(decoded - start), LabLog.milliseconds(validated - decoded))
+        }
+        let (summary, scene, decode, validation) = try await withTaskCancellationHandler {
+            try await work.value
+        } onCancel: {
+            work.cancel()
+        }
+        try Task.checkCancellation()
+        if let scene, optimizesAlbers {
+            albersCache.put(scene, at: .bundled(url), positions: summary.positions)
+        }
+        LabLog.record("geography_decode_validate", ["dataset": geography.rawValue,
+            "decode_ms": decode, "validation_ms": validation, "projected_from_same_decode": scene != nil])
+        if LabLog.enabled {
+            LabLog.record("geography_preparation_memory", sampled.finish(event: "validation", since: preparationStarted))
+        }
+        return summary
     }
 
     func importGeoJSON(_ result: Result<URL, Error>) {
@@ -281,10 +469,13 @@ final class LabState: ObservableObject {
         historicalPending = true
         failure = nil
         let started = LabLog.now
+        LabLog.record("election_request", ["year": election.year, "mode": mode.rawValue])
         let resources = Bundle.main.bundleURL.appendingPathComponent("ElectionResearch")
         let bundle = resources.appendingPathComponent("0.1.0")
         loading = Task {
             do {
+                LabLog.record("election_task_enter", ["year": election.year,
+                    "queue_ms": LabLog.milliseconds(LabLog.now - started)])
                 let store = try await openElectionStore()
                 let bundledManifest = try JSONDecoder().decode(ElectionManifest.self,
                     from: Data(contentsOf: bundle.appendingPathComponent("manifest.json")))
@@ -304,9 +495,6 @@ final class LabState: ObservableObject {
                 LabLog.record("election_store_ready", ["installed": installed,
                     "elapsed_ms": LabLog.milliseconds(LabLog.now - started)])
                 let queryStart = LabLog.now
-                let record = try await store.election(election.year)
-                let catalog = try await store.catalog()
-                var county: [LocalElectionRecord] = []
                 if mode == .countyResults {
                     if try await !store.isInstalled(year: election.year) {
                         let importStart = LabLog.now
@@ -323,10 +511,36 @@ final class LabState: ObservableObject {
                         LabLog.record("election_county_import", ["year": election.year,
                             "elapsed_ms": LabLog.milliseconds(LabLog.now - importStart)])
                     }
-                    county = try await store.county(election.year)
+                }
+                let version = optimizesAlbers
+                    ? try await store.presentationVersion(countyYear: mode == .countyResults ? election.year : nil)
+                    : []
+                let cached = cachedResults.first {
+                    optimizesAlbers && $0.year == election.year && $0.mode == mode && $0.version == version
+                }
+                let record: ElectionRecord
+                let presentation: ElectionMapPresentation
+                if let cached {
+                    record = cached.record
+                    presentation = cached.presentation
+                } else {
+                    record = try await store.election(election.year)
+                    let catalog = try await store.catalog()
+                    let county = mode == .countyResults ? try await store.county(election.year) : []
+                    let paintStart = LabLog.now
+                    presentation = ElectionMapPresentation.make(election: record, mode: mode, catalog: catalog, county: county)
+                    LabLog.record("election_presentation_ready", ["year": election.year,
+                        "elapsed_ms": LabLog.milliseconds(LabLog.now - paintStart)])
+                }
+                try Task.checkCancellation()
+                if optimizesAlbers {
+                    cachedResults.removeAll { $0.year == election.year && $0.mode == mode }
+                    cachedResults.append(CachedResult(year: election.year, mode: mode, version: version,
+                                                      record: record, presentation: presentation))
+                    if cachedResults.count > 2 { cachedResults.removeFirst() }
                 }
                 LabLog.record("election_query_ready", ["year": election.year, "mode": mode.rawValue,
-                    "elapsed_ms": LabLog.milliseconds(LabLog.now - queryStart)])
+                    "elapsed_ms": LabLog.milliseconds(LabLog.now - queryStart), "presentation_cached": cached != nil])
                 let previous = self.dataset
                 let resolved: Dataset
                 let geometryStart = LabLog.now
@@ -335,7 +549,7 @@ final class LabState: ObservableObject {
                         resolved = countySource
                     } else {
                         let url = resources.appendingPathComponent("county-geometry-2024.geojson")
-                        let summary = try await Task.detached { try GeoJSON.validate(url, geography: .presidential) }.value
+                        let summary = try await prepareGeometry(url, geography: .presidential)
                         resolved = Dataset(geography: .presidential, url: url, summary: summary,
                                            requestedAt: geometryStart, imported: nil)
                         countySource = resolved
@@ -356,7 +570,6 @@ final class LabState: ObservableObject {
                 }
                 try Task.checkCancellation()
                 let reused = resolved.requestedAt == previous?.requestedAt
-                let presentation = ElectionMapPresentation.make(election: record, mode: mode, catalog: catalog, county: county)
                 LabLog.record("election_geography_ready", ["year": election.year, "mode": mode.rawValue,
                     "reused_source": reused, "elapsed_ms": LabLog.milliseconds(LabLog.now - geometryStart)])
                 if !reused {
@@ -484,6 +697,7 @@ struct BalloticsMapLibreLabApp: App {
 }
 
 private struct LabView: View {
+    @Environment(\.scenePhase) private var scenePhase
     @StateObject private var state = LabState()
     @State private var showImporter = false
     @State private var showProperties = false
@@ -492,7 +706,7 @@ private struct LabView: View {
     @State private var dateText = ""
     @State private var dateSource = ""
     @State private var showElection = false
-    @State private var usesAlbers = false
+    @State private var showGeographySearch = false
     @State private var showElectionResults = false
 
     private var snapshotDescription: String {
@@ -502,6 +716,8 @@ private struct LabView: View {
         if state.geography == .historical, let request = state.historicalRequest {
             return "\(request.day) · \(request.provenance)"
         }
+        if state.geography.censusSchema != nil { return "2024 Census boundaries · Geometry only" }
+        if state.geography == .imported { return "Imported boundaries · Geometry only" }
         return "Historical boundaries · Geometry only"
     }
 
@@ -579,17 +795,34 @@ private struct LabView: View {
                 Spacer(minLength: 0)
 
                 Menu {
-                    Button(usesAlbers ? "MapLibre" : "Albers equal area") {
-                        state.inspection = nil
-                        usesAlbers.toggle()
+                    Button(state.usesAlbers ? "MapLibre" : "Albers equal area") {
+                        state.setAlbers(!state.usesAlbers)
                     }
                     .disabled(state.geography == .imported)
                     Divider()
                     Button("National") { state.moveCamera(.national) }
                     Button("Alaska") { state.moveCamera(.alaska) }
                     Button("Hawaii") { state.moveCamera(.hawaii) }
-                    Button("Zoom to selected state") { state.moveCamera(.selectedState) }
-                        .disabled(!state.canZoomToSelection)
+                    if state.usesAlbers {
+                        Button("Zoom to selected feature") { state.moveCamera(.selectedFeature) }
+                            .disabled(state.inspection == nil)
+                        Button("Zoom to selected state") { state.moveCamera(.selectedState) }
+                            .disabled(state.inspection?.stateCode == nil)
+                        Button("Find geography") { showGeographySearch = true }
+                        Toggle("Emphasize borders", isOn: $state.thickAlbersBorders)
+                        if state.geography == .presidential {
+                            Picker("Map colors", selection: $state.albersTheme) {
+                                Text("Candidates").tag(AlbersTheme.candidates)
+                                Text("Alternate palette").tag(AlbersTheme.alternate)
+                                if state.electionMode == .countyResults {
+                                    Text("Reported margin").tag(AlbersTheme.margin)
+                                }
+                            }
+                        }
+                    } else {
+                        Button("Zoom to selected state") { state.moveCamera(.selectedState) }
+                            .disabled(!state.canZoomToSelection)
+                    }
                     Button("Recolor polygons") { state.recolor() }.disabled(state.geography == .presidential)
                 } label: {
                     Label("Map view", systemImage: "scope").labelStyle(.iconOnly)
@@ -617,20 +850,27 @@ private struct LabView: View {
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(.primary)
                     .accessibilityIdentifier("presidential-winner")
+                if state.usesAlbers, state.electionMode == .countyResults, state.albersTheme == .margin {
+                    Text("Reported margin · darker blue means a larger lead")
+                        .font(.caption)
+                        .accessibilityIdentifier("albers-margin-legend")
+                }
             }
 
             Group {
-                if usesAlbers && state.geography != .imported {
-                    AlbersMapView(state: state)
+                if state.dismissedStudyMap {
+                    Text("Albers study finished")
+                } else if state.usesAlbers && state.geography != .imported {
+                    AlbersMapView(state: state, showGeographySearch: $showGeographySearch)
                 } else {
                     MapLibreGeometryView(state: state)
                 }
             }
                 .onChange(of: state.geography) { _, geography in
-                    if geography == .imported { usesAlbers = false }
-                    if geography == .presidential {
-                        usesAlbers = !ProcessInfo.processInfo.arguments.contains("--election-maplibre")
-                    }
+                    if geography == .imported { state.setAlbers(false) }
+                }
+                .onChange(of: state.electionMode) { _, mode in
+                    if mode != .countyResults && state.albersTheme == .margin { state.albersTheme = .candidates }
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -654,13 +894,19 @@ private struct LabView: View {
         }
         .padding()
         .task {
-            if ProcessInfo.processInfo.arguments.contains("--election-year") {
-                usesAlbers = !ProcessInfo.processInfo.arguments.contains("--election-maplibre")
-            }
             state.start()
+            await state.runAlbersStress()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didReceiveMemoryWarningNotification)) { _ in
+            state.releaseUnusedAlbersResources()
+        }
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .background { state.releaseUnusedAlbersResources() }
         }
         .sheet(isPresented: $showElectionResults) {
-            if let result = state.electionPresentation { ElectionResultsPanel(result: result) }
+            if let result = state.electionPresentation {
+                ElectionResultsPanel(result: result, theme: state.usesAlbers ? state.albersTheme : .candidates)
+            }
         }
         .fileImporter(
             isPresented: $showImporter,

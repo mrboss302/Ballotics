@@ -52,6 +52,7 @@ struct ElectionStoreChecks {
         try check(split.geography.snapshotDate == "2000-11-07", "State fallback")
         let initiallyInstalled = try await store.isInstalled(year: 2024)
         try check(!initiallyInstalled, "County installs are lazy")
+        let originalNationalKey = try await store.presentationVersion(countyYear: nil)
         let counts = [3152, 3153, 3153, 3153, 3153, 3155, 3154]
         let base = URL(string: "https://fixture.invalid/0.1.0")!
         for (year, count) in zip(ElectionManifest.countyYears, counts) {
@@ -72,7 +73,12 @@ struct ElectionStoreChecks {
             try check(alaska.filter { $0.geometryKey != nil }.count == 40, "AK district count")
             try check(alaska.first { $0.name == "District 99" }?.geometryKey == nil, "District 99 has no polygon")
         }
+        let originalCountyKey = try await store.presentationVersion(countyYear: 2024)
+        try check(originalCountyKey.count == 2 && originalCountyKey.first == originalNationalKey.first,
+                  "County presentation key includes both active releases")
         try await measure("duplicate county import") { try await store.importBundled(directory, year: 2024) }
+        let duplicateCountyKey = try await store.presentationVersion(countyYear: 2024)
+        try check(duplicateCountyKey == originalCountyKey, "Duplicate activation preserves presentation key")
         try await reject("interrupted download") {
             try await store.downloadPackage(from: base, manifestSHA256: ElectionPayloadValidation.hash(manifestData),
                                             year: nil) { url in
@@ -111,9 +117,16 @@ struct ElectionStoreChecks {
         try await store.activate(validReplacement, year: nil, data: national)
         let wrongCountyVersion = try await store.isInstalled(year: 2024)
         try check(!wrongCountyVersion, "County versions never mix")
+        let replacementNationalKey = try await store.presentationVersion(countyYear: nil)
+        try check(replacementNationalKey != originalNationalKey, "Replacement invalidates cached presentations")
+        try await reject("county presentation key from the previous release") {
+            _ = try await store.presentationVersion(countyYear: 2024)
+        }
         try await store.activate(manifest, year: nil, data: national)
         let countyFromRetainedRelease = try await store.isInstalled(year: 2024)
         try check(countyFromRetainedRelease, "Previously installed county data restored with its national version")
+        let restoredKey = try await store.presentationVersion(countyYear: 2024)
+        try check(restoredKey == originalCountyKey, "Rollback restores presentation key")
         print("PASS all releases, duplicate import, rollback and version isolation")
     }
 

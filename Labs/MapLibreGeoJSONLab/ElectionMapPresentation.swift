@@ -19,6 +19,7 @@ struct ElectionMapPresentation {
     let totals: String
     let legend: [Legend]
     let fills: [String: [String]]
+    let margins: [String: Double]
     let details: [String: [(String, String)]]
     let unmapped: [LocalElectionRecord]
     let hasSplit: Bool
@@ -47,6 +48,7 @@ struct ElectionMapPresentation {
         let method = election.decision == "houseContingent" ? " · elected by the House" : ""
         var legend: [Legend] = []
         var fills: [String: [String]] = [:]
+        var margins: [String: Double] = [:]
         var details: [String: [(String, String)]] = [:]
         let totals: String
         let unmapped: [LocalElectionRecord]
@@ -101,10 +103,13 @@ struct ElectionMapPresentation {
                 guard let key = result.geometryKey else { continue }
                 fills[key] = [countyColor(result, colors: colors)]
                 details[key] = countyDetails(result, names: names, parties: parties)
+                if result.status == "reported", let margin = result.marginVotes, result.totalVotes > 0 {
+                    margins[key] = Double(margin) / Double(result.totalVotes)
+                }
             }
         }
         return Self(year: election.year, mode: mode, winner: declaredWinner + method, totals: totals,
-                    legend: legend, fills: fills, details: details, unmapped: unmapped,
+                    legend: legend, fills: fills, margins: margins, details: details, unmapped: unmapped,
                     hasSplit: fills.values.contains { $0.count > 1 },
                     reviewNotes: mode == .electoralCollege ? election.reviewNotes : [],
                     unmappedAllocations: mode == .electoralCollege
@@ -206,6 +211,7 @@ extension UIColor {
 
 struct ElectionResultsPanel: View {
     let result: ElectionMapPresentation
+    var theme: AlbersTheme = .candidates
 
     var body: some View {
         NavigationStack {
@@ -213,12 +219,24 @@ struct ElectionResultsPanel: View {
                 Section("Presidential outcome") { Text(result.winner) }
                 Section(result.mode.rawValue) {
                     Text(result.totals)
-                    ForEach(result.legend) { entry in
+                    if theme == .margin, result.mode == .countyResults {
                         HStack {
-                            Circle().fill(Color(uiColor: UIColor(electionHex: entry.color))).frame(width: 12, height: 12)
-                            Text(entry.title)
-                            Spacer()
-                            if let votes = entry.votes { Text(votes.formatted()).monospacedDigit() }
+                            Text("0 points")
+                            LinearGradient(colors: [0.0, 1.0].map { Color(uiColor: AlbersTheme.marginColor($0)) },
+                                           startPoint: .leading, endPoint: .trailing)
+                                .frame(height: 12)
+                                .accessibilityHidden(true)
+                            Text("100 points")
+                        }
+                        .accessibilityLabel("Reported margin from 0 to 100 percentage points")
+                    } else {
+                        ForEach(result.legend) { entry in
+                            HStack {
+                                Circle().fill(Color(uiColor: theme.color(entry.color))).frame(width: 12, height: 12)
+                                Text(entry.title)
+                                Spacer()
+                                if let votes = entry.votes { Text(votes.formatted()).monospacedDigit() }
+                            }
                         }
                     }
                     if result.hasSplit { Text("Striped fill · multiple reported allocations") }
