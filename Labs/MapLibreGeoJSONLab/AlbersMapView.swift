@@ -103,6 +103,9 @@ struct AlbersMapView: View {
             showGeographySearch = false
         }
         .onChange(of: state.electionRevision) { _, _ in selected = nil }
+        .onChange(of: state.inspection == nil) { _, isClear in
+            if isClear { selected = nil }
+        }
         .task(id: state.dataset?.requestedAt) {
             scene = nil
             selected = nil

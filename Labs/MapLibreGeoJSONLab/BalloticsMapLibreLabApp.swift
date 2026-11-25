@@ -808,6 +808,8 @@ private struct LabView: View {
                             .disabled(state.inspection == nil)
                         Button("Zoom to selected state") { state.moveCamera(.selectedState) }
                             .disabled(state.inspection?.stateCode == nil)
+                        Button("Clear selection") { state.inspection = nil }
+                            .disabled(state.inspection == nil)
                         Button("Find geography") { showGeographySearch = true }
                         Toggle("Emphasize borders", isOn: $state.thickAlbersBorders)
                         if state.geography == .presidential {

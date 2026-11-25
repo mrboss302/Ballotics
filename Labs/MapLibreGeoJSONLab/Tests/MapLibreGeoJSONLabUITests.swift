@@ -121,8 +121,7 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
         app.buttons["inspection"].tap()
         XCTAssertTrue(app.staticTexts["Reported votes"].waitForExistence(timeout: 4))
         app.buttons["Done"].tap()
-        view("National", in: app)
-        map.coordinate(withNormalizedOffset: CGVector(dx: 0.03, dy: 0.03)).tap()
+        view("Clear selection", in: app)
         XCTAssertFalse(app.buttons["inspection"].isEnabled)
 
         app.buttons["viewpoints"].tap()
