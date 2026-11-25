@@ -1,0 +1,73 @@
+{
+  "preserved_commit": "4d9f44c355b9b0047d23eb7fa33c82d5a9747c3d",
+  "two_x": {
+    "LabelAdjustment": {
+      "relative_path": "Ballotics/Screens/Elections/Components/LabelAdjustment.swift",
+      "sha256": "e8cd7a45292429e5ef788fca27ca84d22a5a55c5534c9e151cd0b3b711fb7321",
+      "local_2_4_observed_sha256_prefix": "e8cd7a452924"
+    },
+    "PresElectionResultsMap": {
+      "relative_path": "Ballotics/Screens/Elections/Map/President/State/PresElectionResultsMap.swift",
+      "sha256": "c13f7715ddad246e21f3e58ae1b91cf417f47a6380759bbe75ec1749be51199f",
+      "local_2_4_observed_sha256_prefix": "c13f7715ddad"
+    },
+    "StateMapKey": {
+      "relative_path": "Ballotics/Screens/Elections/Components/StateMapKey.swift",
+      "sha256": "d9f1bb9d3d5483bf2e6dfb05f1c8d5c008a46c4c0fccac58345434c99c8c3318",
+      "local_2_4_observed_sha256_prefix": "d9f1bb9d3d54"
+    },
+    "StateMapKeyLarge": {
+      "relative_path": "Ballotics/Screens/Elections/Components/StateMapKeyLarge.swift",
+      "sha256": "df8bb5c86c65dcd222adce148e4e0d503a87f10df69f37541e4b21b5d896d0b5",
+      "local_2_4_observed_sha256_prefix": "df8bb5c86c65"
+    },
+    "InteractiveMap": {
+      "relative_path": "Ballotics/Screens/Interactive Map/Map/InteractiveMap.swift",
+      "sha256": "abf58efb5d359a60257646fe1e2c6f5920534add58ade776e8a3e0808bf34b3b",
+      "local_2_4_observed_sha256_prefix": "abf58efb5d35"
+    },
+    "ElectoralVoteCache": {
+      "relative_path": "Ballotics/Screens/Elections/Map/President/State/ElectoralVoteCache.swift",
+      "sha256": "b09d0ed60a9fe1a8180a814d9a82e808c82bca62a342135f7f1bd92e4c93f3dc",
+      "local_2_4_observed_sha256_prefix": "b09d0ed60a9f"
+    },
+    "ContingentElectionHistoricalMap": {
+      "relative_path": "Ballotics/Screens/Elections/Map/President/State/ContingentElectionHistoricalMap.swift",
+      "sha256": "0de9c7d34d8a207a84e3c3444cbb0c16a9a2c670089614fbf3a46161aea1465f",
+      "local_2_4_observed_sha256_prefix": "0de9c7d34d8a"
+    },
+    "SplitVoteKeyShape": {
+      "relative_path": "Ballotics/Screens/Elections/Map/President/State/SplitVoteKeyShape.swift",
+      "sha256": "92776be036d92d0dea360e48d8304b30ff0db4ad73b827042e100b8c2ceca60e",
+      "local_2_4_observed_sha256_prefix": "92776be036d9"
+    },
+    "SplitVoteKeyView": {
+      "relative_path": "Ballotics/Screens/Interactive Map/Map/SplitVoteKeyView.swift",
+      "sha256": "94ea4049630d3fcc3769efcc60764dacae54515cbf0d17ea179af53e62bb0ea4",
+      "local_2_4_observed_sha256_prefix": "94ea4049630d"
+    },
+    "SmallStates": {
+      "relative_path": "Ballotics/Screens/Interactive Map/Components/SmallStates.swift",
+      "sha256": "682a75c4588f42cd83e7f8147e8e9a03a434535bffededa2c3fab7863baf89bb",
+      "local_2_4_observed_sha256_prefix": "682a75c4588f"
+    }
+  },
+  "consolidated_three": {
+    "InteractiveMapLabel+Helpers": {
+      "relative_path": "Ballotics/Ballotics/Features/InteractiveMap/InteractiveMapLabel+Helpers.swift",
+      "sha256": "59cebca929cb2713bdddcd73f464d9b8e2cbac3299f016e8820f15e74d8ab6b6"
+    },
+    "InteractiveMap": {
+      "relative_path": "Ballotics/Ballotics/Features/InteractiveMap/InteractiveMap.swift",
+      "sha256": "d29ac1fdfbd647c32e3bfd28ad4081b8164ab02fdecc32c67662e5f762267125"
+    },
+    "ElectionsScreen": {
+      "relative_path": "Ballotics/Ballotics/Features/Elections/ElectionsScreen.swift",
+      "sha256": "a3f0bc0f6bc923a8d77c5ab2dbc428a33782de2201842a85c6ffdd7187e9da3b"
+    },
+    "ContingentElectionMap": {
+      "relative_path": "Ballotics/Ballotics/Features/InteractiveMap/Components/ContingentElectionMap.swift",
+      "sha256": "d1c558500946e43d73cb527c229a398ab9d89262474099f28180c5f12ce29ec5"
+    }
+  }
+}
