@@ -8,5 +8,5 @@ let package = Package(
                .executable(name: "DistrictAtlas", targets: ["DistrictAtlas"])],
     targets: [.target(name: "BalloticsGeoKit"),
               .executableTarget(name: "DistrictAtlas", dependencies: ["BalloticsGeoKit"]),
-              .testTarget(name: "BalloticsGeoKitTests", dependencies: ["BalloticsGeoKit"])]
+              .testTarget(name: "BalloticsGeoKitTests", dependencies: ["BalloticsGeoKit"], resources: [.copy("Fixtures")])]
 )

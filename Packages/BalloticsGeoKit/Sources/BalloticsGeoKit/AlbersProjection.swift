@@ -225,7 +225,8 @@ public struct AlbersScene {
     }
 
     public static func project(_ features: [PolygonSource.Object], indexed: Bool = true,
-                        layout: InsetLayout = InsetLayout(), decodeMilliseconds: Double = 0) throws -> Self {
+                        layout: InsetLayout = InsetLayout(), decodeMilliseconds: Double = 0,
+                        regionFor: ([String:Any], [[Double]]) -> AlbersRegion? = AlbersRegion.locate) throws -> Self {
         let started = ProcessInfo.processInfo.systemUptime
         let projections = Dictionary(uniqueKeysWithValues: AlbersRegion.allCases.map { ($0, $0.projection) })
         var grouped: [AlbersRegion: [Part]] = [:]
@@ -239,7 +240,7 @@ public struct AlbersScene {
                 guard rings.allSatisfy({ ring in ring.allSatisfy { $0.count >= 2 } }) else {
                     throw PolygonSource.Invalid(message: "A projected polygon has an incomplete position.")
                 }
-                guard let outer = rings.first, let region = AlbersRegion.locate(properties: original, outer: outer),
+                guard let outer = rings.first, let region = regionFor(original, outer),
                       let projection = projections[region] else { continue }
                 let path = makePath(rings, projection: projection)
                 grouped[region, default: []].append(Part(feature: attributes.count, path: path,

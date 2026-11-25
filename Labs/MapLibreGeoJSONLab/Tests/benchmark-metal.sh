@@ -90,6 +90,10 @@ case ${METAL_BENCHMARK_MODE:-comparison} in
             done
         done
         ;;
+    label-overlay)
+        run labels albers_route_done 120 --election-year 2024 --albers-metal --albers-route --label-metrics
+        run focus albers_region_route_done 60 --election-year 1976 --albers-metal --albers-region-route --label-metrics
+        ;;
     quality-visual)
         run counties-cg albers_first_draw 45 --albers --dataset counties
         sleep 1
@@ -134,7 +138,7 @@ case ${METAL_BENCHMARK_MODE:-comparison} in
         xcrun simctl io "$device" screenshot "$output/counties-metal-1x.png"
         ;;
     *)
-        echo "Choose ownership, regions, qualification, quality-visual, quality, comparison, stress, cancellation, or visual." >&2
+        echo "Choose ownership, regions, qualification, label-overlay, quality-visual, quality, comparison, stress, cancellation, or visual." >&2
         exit 2
         ;;
 esac

@@ -1,0 +1,8 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type":"Feature","properties":{"id":"west"},"geometry":{"type":"Polygon","coordinates":[[[-102,35],[-98,35],[-98,39],[-102,39],[-102,35]]]}},
+    {"type":"Feature","properties":{"id":"east"},"geometry":{"type":"Polygon","coordinates":[[[-98,35],[-94,35],[-94,39],[-98,39],[-98,35]]]}},
+    {"type":"Feature","properties":{"id":"overlap"},"geometry":{"type":"Polygon","coordinates":[[[-102,35],[-98,35],[-98,39],[-102,39],[-102,35]]]}}
+  ]
+}

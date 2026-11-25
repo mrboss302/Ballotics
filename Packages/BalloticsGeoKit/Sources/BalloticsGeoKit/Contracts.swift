@@ -64,6 +64,7 @@ public enum GeographicPathDrawing {
 public struct GeographicRecords {
     public let ids: [GeographicFeatureID]
     private let offsets: [GeographicFeatureID:Int]
+    private let canonical: GeographicAnchorCache
     public init(scene: AlbersScene, revision: GeographicRevision, key: ([String:String])->String?) throws {
         var values: [GeographicFeatureID] = [], index: [GeographicFeatureID:Int] = [:]
         for fields in scene.properties {
@@ -73,12 +74,14 @@ public struct GeographicRecords {
             index[id] = values.count
             values.append(id)
         }
+        canonical = scene.labelCache
         ids = values
         offsets = index
     }
     public func index(of id: GeographicFeatureID) -> Int? { offsets[id] }
     public func hits(in scene: AlbersScene, at world: CGPoint, region: AlbersRegion? = nil) -> [GeographicFeatureID] {
-        scene.hits(world,region:region).map { ids[$0] }
+        guard scene.labelCache === canonical else { return [] }
+        return scene.hits(world,region:region).map { ids[$0] }
     }
 }
 
@@ -87,4 +90,38 @@ public protocol RegionalMeshPayload {
     var origin: CGPoint { get }
     var uniqueSegmentIndices: [UInt32] { get }
     var indices: [UInt32] { get }
+}
+
+
+public struct GeographicCoordinate: Hashable, Codable {
+    public let longitude: Double
+    public let latitude: Double
+    public init?(longitude: Double, latitude: Double) {
+        guard (-180...180).contains(longitude), (-90...90).contains(latitude) else { return nil }
+        self.longitude = longitude
+        self.latitude = latitude
+    }
+}
+
+public struct GeographicPolygon {
+    public let id: GeographicPartID
+    public let exterior: [GeographicCoordinate]
+    public let holes: [[GeographicCoordinate]]
+    public static func decode(feature: PolygonSource.Object, identity: GeographicFeatureID) throws -> [Self] {
+        try PolygonSource.rings(for:feature).enumerated().map { index, polygon in
+            let rings = try polygon.map { ring in try ring.map { value in
+                guard let coordinate = GeographicCoordinate(longitude:value[0],latitude:value[1]) else {
+                    throw PolygonSource.Invalid(message:"Invalid WGS 84 position.")
+                }
+                return coordinate
+            } }
+            return Self(id:.init(feature:identity,polygon:index),exterior:rings[0],holes:Array(rings.dropFirst()))
+        }
+    }
+}
+
+public extension AlbersProjection {
+    func project(_ coordinate: GeographicCoordinate) -> CGPoint {
+        project(longitude:coordinate.longitude,latitude:coordinate.latitude)
+    }
 }

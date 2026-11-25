@@ -119,7 +119,9 @@ final class ElectoralLabelOverlay {
         guard !anchors.isEmpty else { return }
         let start = LabLog.now
         let keyVisible = camera.region == nil && zoom < 2 && specs.contains(where: \.external)
-        let obstacles = keyVisible ? [CGRect(x:camera.viewport.minX,y:camera.viewport.maxY-25,width:camera.viewport.width,height:25)] : []
+        let keyTop = min(camera.viewport.maxY-24, max(camera.viewport.minY,
+            camera.screen(CGPoint(x:scene.bounds.midX,y:scene.bounds.maxY)).y+5))
+        let obstacles = keyVisible ? [CGRect(x:camera.viewport.minX,y:keyTop,width:camera.viewport.width,height:21)] : []
         let decisions = LabelResolver.resolve(specs, anchors:anchors,sizes:sizes,scene:scene,camera:camera,zoom:zoom,selected:selected,obstacles:obstacles,previous:previous)
         let external = Set(decisions.filter { $0.mode == .tile }.map(\.id))
         parent?.isAccessibilityElement = external.isEmpty
@@ -132,7 +134,7 @@ final class ElectoralLabelOverlay {
             tile?.accessibilityElementsHidden = d.mode != .tile
             tile?.isAccessibilityElement = d.mode == .tile
             if let index = order.firstIndex(of:d.id) {
-                tile?.frame = CGRect(x:camera.viewport.midX-w*CGFloat(order.count)/2+CGFloat(index)*w,y:camera.viewport.maxY-24,width:w-1,height:20)
+                tile?.frame = CGRect(x:camera.viewport.midX-w*CGFloat(order.count)/2+CGFloat(index)*w,y:keyTop,width:w-1,height:20)
                 tile?.layer.borderWidth = selected.map(spec.features.contains) == true ? 2 : 0
                 tile?.layer.borderColor = UIColor.systemOrange.cgColor
                 tile?.accessibilityTraits = selected.map(spec.features.contains) == true ? [.button,.selected] : [.button]

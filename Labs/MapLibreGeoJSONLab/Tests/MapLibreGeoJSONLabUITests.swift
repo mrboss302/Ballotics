@@ -323,6 +323,57 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
     }
 
     @MainActor
+    func testGeoKitOwnerReviewAndExternalSelection() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        defer { XCUIDevice.shared.orientation = .portrait }
+        XCUIDevice.shared.orientation = .portrait
+        func capture(_ name: String) {
+            RunLoop.current.run(until: Date().addingTimeInterval(0.8))
+            let item = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            item.name = "GeoKit-"+name
+            item.lifetime = .keepAlways
+            add(item)
+        }
+        for year in [1788, 1860, 1976, 2024] {
+            app.launchArguments = ["--albers-metal","--measure","--election-year",String(year)]
+            app.launch()
+            let key = app.buttons["geokit-tile-MA"]
+            XCTAssertTrue(key.waitForExistence(timeout: 30), app.debugDescription)
+            capture(String(year))
+        }
+        let massachusetts = app.buttons["geokit-tile-MA"]
+        massachusetts.tap()
+        waitForSelection(app.buttons["inspection"], named:"Massachusetts")
+        view("Clear selection", in: app)
+        for region in ["Alaska","Hawaii"] {
+            view(region,in:app)
+            capture(region)
+            XCTAssertFalse(app.buttons["geokit-tile-MA"].isHittable)
+        }
+        view("National",in:app)
+        XCUIDevice.shared.orientation = .landscapeLeft
+        capture("landscape")
+    }
+
+    @MainActor
+    func testGeoKitLandscapeScreen() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        defer { XCUIDevice.shared.orientation = .portrait }
+        XCUIDevice.shared.orientation = .landscapeLeft
+        app.launchArguments = ["--albers-metal","--measure","--election-year","2024"]
+        app.launch()
+        XCTAssertTrue(app.buttons["geokit-tile-MA"].waitForExistence(timeout:30))
+        let map = app.descendants(matching:.any)["albers-map"].firstMatch
+        XCTAssertGreaterThan(map.frame.width,map.frame.height)
+        let item = XCTAttachment(screenshot:XCUIScreen.main.screenshot())
+        item.name = "GeoKit-landscape"
+        item.lifetime = .keepAlways
+        add(item)
+    }
+
+    @MainActor
     func testNationalInsetPickingAcrossRenderers() {
         continueAfterFailure = false
         let app = XCUIApplication()

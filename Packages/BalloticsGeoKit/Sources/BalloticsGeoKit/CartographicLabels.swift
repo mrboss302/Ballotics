@@ -7,6 +7,8 @@ public struct MapLabel {
     public var primary, secondary, accessibilityText: String
     public var style = "map"
     public var minimumZoom = 0.0, maximumZoom = Double.infinity
+    public var preferred: LabelMode?
+    public var typeScale = 1.0
     public var priority = 0
     public var external = false, allowCallout = false
     public init(id: String, features: [Int], primary: String, secondary: String = "", accessibilityText: String = "") {
@@ -54,12 +56,15 @@ public enum LabelResolver {
             guard let points = anchors[spec.id]?.candidates, !points.isEmpty else { return result(.suppressed,"no interior anchor") }
             let visible = points.indices.filter { camera.region == nil || points[$0].region == camera.region }
             guard !visible.isEmpty else { return result(.suppressed,"regional focus") }
+            if spec.preferred == .suppressed { return result(.suppressed,"editorial suppression") }
             if spec.external && camera.region == nil && zoom < 2 { return result(.tile,"external key") }
             guard let size = sizes[spec.id] else { return result(.suppressed,"missing measurement") }
             var order = visible
             if let last = previous[spec.id], let i = order.firstIndex(of:last) { order.remove(at:i); order.insert(last,at:0) }
             var reason = "interior too small"
-            for mode in [LabelMode.full,.compact,.callout] {
+            let modes: [LabelMode] = spec.preferred == .compact ? [.compact,.full,.callout] :
+                spec.preferred == .callout ? [.callout,.full,.compact] : [.full,.compact,.callout]
+            for mode in modes {
                 if mode == .compact && spec.secondary.isEmpty || mode == .callout && !spec.allowCallout { continue }
                 let text = mode == .compact ? size.compact : size.full
                 guard text.width > 0, text.height > 0 else { continue }
@@ -115,5 +120,19 @@ extension GroupAnchors {
         }
         return GroupAnchors(candidates:valid+candidates, averageInside:averageInside,
                             centroidInside:centroidInside, baselineInside:baselineInside)
+    }
+}
+
+public extension MapLabel {
+    /// Apply before measuring. The consumer measures its typography token at the returned scale.
+    func applying(_ entry: EditorialRules.Entry) -> Self {
+        guard entry.id == id else { return self }
+        var label = self
+        label.priority = entry.priority ?? priority
+        label.preferred = entry.preferred
+        if let factor = entry.typeScale, factor.isFinite, factor > 0 { label.typeScale = factor }
+        if entry.preferred == .tile { label.external = true }
+        if entry.preferred == .callout { label.allowCallout = true }
+        return label
     }
 }
