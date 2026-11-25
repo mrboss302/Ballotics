@@ -1,0 +1,891 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ballotics.example/contracts/presidential/v1",
+  "title": "Ballotics presidential research payloads",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/DatasetManifest"
+    },
+    {
+      "$ref": "#/$defs/NationalPackage"
+    },
+    {
+      "$ref": "#/$defs/CountyPackage"
+    }
+  ],
+  "$defs": {
+    "Candidate": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "PoliticalParty": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "GeographicSource": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "vintage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "id",
+        "file",
+        "vintage",
+        "sha256"
+      ],
+      "additionalProperties": false
+    },
+    "ElectionGeographyReference": {
+      "type": "object",
+      "properties": {
+        "sourceID": {
+          "type": "string",
+          "minLength": 1
+        },
+        "snapshotDate": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "status": {
+          "enum": [
+            "dated",
+            "fallback"
+          ]
+        }
+      },
+      "required": [
+        "sourceID",
+        "snapshotDate",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "NationalElectionResult": {
+      "type": "object",
+      "properties": {
+        "candidateID": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "partyID": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sourceParty": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceStyle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "candidate",
+            "uncast",
+            "aggregate"
+          ]
+        },
+        "electoralVotes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "popularVotes": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sourcePopularVotes": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "winner": {
+          "type": "boolean"
+        },
+        "sourceIndex": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "candidateID",
+        "name",
+        "partyID",
+        "sourceParty",
+        "sourceStyle",
+        "kind",
+        "electoralVotes",
+        "popularVotes",
+        "sourcePopularVotes",
+        "winner",
+        "sourceIndex"
+      ],
+      "additionalProperties": false
+    },
+    "ElectoralVoteAllocation": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdictionID": {
+          "type": "string",
+          "pattern": "^state:[0-9]{2}$"
+        },
+        "stateName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceLabel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceName": {
+          "type": "string"
+        },
+        "sourceStyle": {
+          "type": "string",
+          "minLength": 1
+        },
+        "candidateID": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "partyID": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "electoralVotes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "enum": [
+            "statewide",
+            "atLarge",
+            "congressionalDistrict",
+            "historicalSplit"
+          ]
+        },
+        "part": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[1-4]$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "enum": [
+            "reported",
+            "unresolved",
+            "nonparticipating"
+          ]
+        },
+        "sourceLine": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "geometryKey": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9]+$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "jurisdictionID",
+        "stateName",
+        "sourceLabel",
+        "sourceName",
+        "sourceStyle",
+        "candidateID",
+        "partyID",
+        "electoralVotes",
+        "kind",
+        "part",
+        "status",
+        "sourceLine",
+        "geometryKey"
+      ],
+      "additionalProperties": false
+    },
+    "ReviewNote": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdiction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "votes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "kind",
+        "text",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "ReportingJurisdiction": {
+      "type": "object",
+      "properties": {
+        "jurisdictionID": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stateCode": {
+          "type": "string",
+          "pattern": "^[0-9]{2}$"
+        },
+        "stateName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceCode": {
+          "type": "string",
+          "pattern": "^[0-9]+$"
+        },
+        "kind": {
+          "enum": [
+            "stateHouseDistrict",
+            "traditionalCounty",
+            "countyOrEquivalent",
+            "nonGeographic",
+            "overlappingReportingJurisdiction",
+            "unclassified",
+            "federalOverseasAbsentee"
+          ]
+        }
+      },
+      "required": [
+        "jurisdictionID",
+        "stateCode",
+        "stateName",
+        "name",
+        "sourceCode",
+        "kind"
+      ],
+      "additionalProperties": false
+    },
+    "LocalVote": {
+      "type": "object",
+      "properties": {
+        "candidateID": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "partyID": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sourceParty": {
+          "type": "string",
+          "minLength": 1
+        },
+        "votes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sourceShare": {
+          "type": "number"
+        },
+        "sourceRank": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sourceMargin": {
+          "type": "number"
+        },
+        "share": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "candidateID",
+        "name",
+        "partyID",
+        "sourceParty",
+        "votes",
+        "sourceShare",
+        "sourceRank",
+        "sourceMargin",
+        "share"
+      ],
+      "additionalProperties": false
+    },
+    "Payload": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string",
+          "pattern": "^(national|county-[0-9]{4})[.]json$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 24000000
+        },
+        "records": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "year": {
+          "anyOf": [
+            {
+              "enum": [
+                2000,
+                2004,
+                2008,
+                2012,
+                2016,
+                2020,
+                2024
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "file",
+        "sha256",
+        "bytes",
+        "records",
+        "year"
+      ],
+      "additionalProperties": false
+    },
+    "PresidentialElection": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2024
+        },
+        "winnerID": {
+          "type": "string",
+          "minLength": 1
+        },
+        "decision": {
+          "enum": [
+            "houseContingent",
+            "electoralCollege"
+          ]
+        },
+        "rules": {
+          "enum": [
+            "twoUndifferentiatedVotes",
+            "separatePresidentialBallot"
+          ]
+        },
+        "reportedMajority": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "totals": {
+          "type": "object",
+          "properties": {
+            "allocationRows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "nationalRows": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "reported": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "allocationRows",
+            "nationalRows",
+            "reported"
+          ],
+          "additionalProperties": false
+        },
+        "geography": {
+          "$ref": "#/$defs/ElectionGeographyReference"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/NationalElectionResult"
+          }
+        },
+        "allocations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ElectoralVoteAllocation"
+          }
+        },
+        "reviewNotes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ReviewNote"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "year",
+        "winnerID",
+        "decision",
+        "rules",
+        "reportedMajority",
+        "totals",
+        "geography",
+        "results",
+        "allocations",
+        "reviewNotes"
+      ],
+      "additionalProperties": false
+    },
+    "LocalElectionResult": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jurisdictionID": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stateCode": {
+          "type": "string",
+          "pattern": "^[0-9]{2}$"
+        },
+        "stateName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceCode": {
+          "type": "string",
+          "pattern": "^[0-9]+$"
+        },
+        "kind": {
+          "enum": [
+            "stateHouseDistrict",
+            "traditionalCounty",
+            "countyOrEquivalent",
+            "nonGeographic",
+            "overlappingReportingJurisdiction",
+            "unclassified",
+            "federalOverseasAbsentee"
+          ]
+        },
+        "geometryKey": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "geographySourceID": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "joinStatus": {
+          "enum": [
+            "nonGeographic",
+            "classificationUnresolved",
+            "matched",
+            "traditional",
+            "fallback",
+            "overlappingReportingJurisdiction",
+            "boundaryChange",
+            "missingGeometry",
+            "nameConflict",
+            "federalOverseasAbsentee"
+          ]
+        },
+        "status": {
+          "enum": [
+            "reported",
+            "noData",
+            "tied",
+            "unresolved"
+          ]
+        },
+        "winnerID": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "totalVotes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "listedVotes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "marginVotes": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/LocalVote"
+          }
+        },
+        "reportingReview": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "source": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "reportedVotes": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "required": [
+                "source",
+                "reportedVotes"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "jurisdictionID",
+        "stateCode",
+        "stateName",
+        "name",
+        "sourceCode",
+        "kind",
+        "geometryKey",
+        "geographySourceID",
+        "joinStatus",
+        "status",
+        "winnerID",
+        "totalVotes",
+        "listedVotes",
+        "marginVotes",
+        "results",
+        "reportingReview"
+      ],
+      "additionalProperties": false
+    },
+    "NationalPackage": {
+      "type": "object",
+      "properties": {
+        "candidates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Candidate"
+          }
+        },
+        "parties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PoliticalParty"
+          }
+        },
+        "elections": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PresidentialElection"
+          },
+          "minItems": 60,
+          "maxItems": 60
+        }
+      },
+      "required": [
+        "candidates",
+        "parties",
+        "elections"
+      ],
+      "additionalProperties": false
+    },
+    "CountyPackage": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "enum": [
+            2000,
+            2004,
+            2008,
+            2012,
+            2016,
+            2020,
+            2024
+          ]
+        },
+        "localResults": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/LocalElectionResult"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "year",
+        "localResults"
+      ],
+      "additionalProperties": false
+    },
+    "DatasetManifest": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1
+        },
+        "datasetVersion": {
+          "type": "string",
+          "pattern": "^[0-9]+[.][0-9]+[.][0-9]+$"
+        },
+        "payloads": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Payload"
+          },
+          "minItems": 8,
+          "maxItems": 8
+        },
+        "geographySources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/GeographicSource"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "inputHashes": {
+          "type": "object",
+          "properties": {
+            "PresElectionData.json": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "PresElectionStateData.csv": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "pres_election_county_data.json": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "PresElectionData.json",
+            "PresElectionStateData.csv",
+            "pres_election_county_data.json"
+          ],
+          "additionalProperties": false
+        },
+        "countySourceMetadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "datasetVersion",
+        "payloads",
+        "geographySources",
+        "inputHashes",
+        "countySourceMetadata"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

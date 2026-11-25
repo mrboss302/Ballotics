@@ -1,0 +1,47 @@
+{
+  "year": 2024,
+  "localResults": [
+    {
+      "id": "fixture:2024:01001",
+      "jurisdictionID": "countyOrEquivalent:01:01001:example",
+      "stateCode": "01",
+      "stateName": "Example State",
+      "name": "Example",
+      "sourceCode": 1001,
+      "kind": "countyOrEquivalent",
+      "geometryKey": "census-county-2024:01001",
+      "geographySourceID": "census-county-2024",
+      "joinStatus": "matched",
+      "status": "tied",
+      "winnerID": null,
+      "totalVotes": 20,
+      "listedVotes": 20,
+      "marginVotes": null,
+      "results": [
+        {
+          "candidateID": "candidate-1",
+          "name": "Candidate 1",
+          "partyID": "party-1",
+          "sourceParty": "Party 1",
+          "votes": 10,
+          "sourceShare": 0.5,
+          "sourceRank": 1,
+          "sourceMargin": 0,
+          "share": 0.5
+        },
+        {
+          "candidateID": "candidate-2",
+          "name": "Candidate 2",
+          "partyID": "party-2",
+          "sourceParty": "Party 2",
+          "votes": 10,
+          "sourceShare": 0.5,
+          "sourceRank": 2,
+          "sourceMargin": 0,
+          "share": 0.5
+        }
+      ],
+      "reportingReview": null
+    }
+  ]
+}

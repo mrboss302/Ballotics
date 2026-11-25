@@ -1,0 +1,295 @@
+{
+  "1796": {
+    "Maryland": {
+      "basis": "electorAppointments",
+      "csv": 11,
+      "reference": 10
+    }
+  },
+  "1808": {
+    "Kentucky": {
+      "basis": "presidentialVotes",
+      "csv": 5,
+      "reference": 7
+    }
+  },
+  "1820": {
+    "Alabama": {
+      "basis": "presidentialVotes",
+      "csv": 5,
+      "reference": 3
+    },
+    "Connecticut": {
+      "basis": "presidentialVotes",
+      "csv": 8,
+      "reference": 9
+    }
+  },
+  "1824": {
+    "South Carolina": {
+      "basis": "presidentialVotes",
+      "csv": 9,
+      "reference": 11
+    }
+  },
+  "1836": {
+    "Illinois": {
+      "basis": "presidentialVotes",
+      "csv": 9,
+      "reference": 5
+    }
+  },
+  "1856": {
+    "Virginia": {
+      "basis": "presidentialVotes",
+      "csv": 13,
+      "reference": 15
+    }
+  },
+  "1860": {
+    "Virginia": {
+      "basis": "presidentialVotes",
+      "csv": 13,
+      "reference": 15
+    }
+  },
+  "1868": {
+    "Arkansas": {
+      "basis": "presidentialVotes",
+      "csv": 0,
+      "reference": 5
+    }
+  },
+  "1872": {
+    "Arkansas": {
+      "basis": "presidentialVotes",
+      "csv": 6,
+      "reference": 0
+    },
+    "Georgia": {
+      "basis": "presidentialVotes",
+      "csv": 11,
+      "reference": 8
+    },
+    "Louisiana": {
+      "basis": "presidentialVotes",
+      "csv": 8,
+      "reference": 0
+    }
+  },
+  "1896": {
+    "New Jersey": {
+      "basis": "presidentialVotes",
+      "csv": 14,
+      "reference": 10
+    }
+  },
+  "1904": {
+    "Idaho": {
+      "basis": "presidentialVotes",
+      "csv": 4,
+      "reference": 3
+    }
+  },
+  "1908": {
+    "Nevada": {
+      "basis": "presidentialVotes",
+      "csv": 6,
+      "reference": 3
+    }
+  },
+  "1912": {
+    "Rhode Island": {
+      "basis": "presidentialVotes",
+      "csv": 4,
+      "reference": 5
+    }
+  },
+  "1916": {
+    "Kentucky": {
+      "basis": "presidentialVotes",
+      "csv": 10,
+      "reference": 13
+    },
+    "Rhode Island": {
+      "basis": "presidentialVotes",
+      "csv": 4,
+      "reference": 5
+    }
+  },
+  "1920": {
+    "Rhode Island": {
+      "basis": "presidentialVotes",
+      "csv": 4,
+      "reference": 5
+    }
+  },
+  "1928": {
+    "Arizona": {
+      "basis": "presidentialVotes",
+      "csv": 9,
+      "reference": 3
+    }
+  },
+  "1932": {
+    "Alabama": {
+      "basis": "presidentialVotes",
+      "csv": 9,
+      "reference": 11
+    }
+  },
+  "1948": {
+    "Tennessee": {
+      "basis": "presidentialVotes",
+      "csv": 11,
+      "reference": 12
+    }
+  },
+  "1956": {
+    "Alabama": {
+      "basis": "presidentialVotes",
+      "csv": 10,
+      "reference": 11
+    }
+  },
+  "1960": {
+    "Maine": {
+      "basis": "presidentialVotes",
+      "csv": 4,
+      "reference": 5
+    },
+    "Oregon": {
+      "basis": "presidentialVotes",
+      "csv": 7,
+      "reference": 6
+    }
+  },
+  "1968": {
+    "North Carolina": {
+      "basis": "presidentialVotes",
+      "csv": 12,
+      "reference": 13
+    }
+  },
+  "1972": {
+    "Virginia": {
+      "basis": "presidentialVotes",
+      "csv": 11,
+      "reference": 12
+    }
+  },
+  "1976": {
+    "Washington": {
+      "basis": "presidentialVotes",
+      "csv": 8,
+      "reference": 9
+    }
+  },
+  "1980": {
+    "South Dakota": {
+      "basis": "presidentialVotes",
+      "csv": 3,
+      "reference": 4
+    }
+  },
+  "1988": {
+    "Missouri": {
+      "basis": "presidentialVotes",
+      "csv": 10,
+      "reference": 11
+    },
+    "West Virginia": {
+      "basis": "presidentialVotes",
+      "csv": 5,
+      "reference": 6
+    }
+  },
+  "2000": {
+    "Washington, D.C.": {
+      "basis": "presidentialVotes",
+      "csv": 3,
+      "reference": 2
+    }
+  },
+  "2004": {
+    "Minnesota": {
+      "basis": "presidentialVotes",
+      "csv": 9,
+      "reference": 10
+    }
+  },
+  "2016": {
+    "Texas": {
+      "basis": "presidentialVotes",
+      "csv": 36,
+      "reference": 38
+    }
+  },
+  "2024": {
+    "California": {
+      "basis": "presidentialVotes",
+      "csv": 55,
+      "reference": 54
+    },
+    "Colorado": {
+      "basis": "presidentialVotes",
+      "csv": 9,
+      "reference": 10
+    },
+    "Florida": {
+      "basis": "presidentialVotes",
+      "csv": 29,
+      "reference": 30
+    },
+    "Illinois": {
+      "basis": "presidentialVotes",
+      "csv": 20,
+      "reference": 19
+    },
+    "Michigan": {
+      "basis": "presidentialVotes",
+      "csv": 16,
+      "reference": 15
+    },
+    "Montana": {
+      "basis": "presidentialVotes",
+      "csv": 3,
+      "reference": 4
+    },
+    "New York": {
+      "basis": "presidentialVotes",
+      "csv": 29,
+      "reference": 28
+    },
+    "North Carolina": {
+      "basis": "presidentialVotes",
+      "csv": 15,
+      "reference": 16
+    },
+    "Ohio": {
+      "basis": "presidentialVotes",
+      "csv": 18,
+      "reference": 17
+    },
+    "Oregon": {
+      "basis": "presidentialVotes",
+      "csv": 7,
+      "reference": 8
+    },
+    "Pennsylvania": {
+      "basis": "presidentialVotes",
+      "csv": 20,
+      "reference": 19
+    },
+    "Texas": {
+      "basis": "presidentialVotes",
+      "csv": 38,
+      "reference": 40
+    },
+    "West Virginia": {
+      "basis": "presidentialVotes",
+      "csv": 5,
+      "reference": 4
+    }
+  }
+}

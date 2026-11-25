@@ -1,0 +1,67 @@
+{
+  "1788": [
+    {"kind":"ballotRules","text":"The state allocation file represents 69 elector appointments. Each elector could cast two undifferentiated votes. National rows include both votes and group some recipients.","source":"https://www.archives.gov/electoral-college/1789"},
+    {"kind":"uncast","jurisdiction":"New York","text":"New York did not appoint electors in time for the first election.","source":"https://www.archives.gov/electoral-college/1789"}
+  ],
+  "1792": [
+    {"kind":"ballotRules","text":"The state CSV counts 132 elector appointments. The national rows include 264 votes under the original two-vote rule.","source":"https://www.archives.gov/electoral-college/1792"}
+  ],
+  "1796": [
+    {"kind":"ballotRules","text":"The state CSV and the national rows represent different ballot quantities under the original two-vote rule. The official reference reports 138 electors and the Ballotics state rows sum to 139.","source":"https://www.archives.gov/electoral-college/1796"}
+  ],
+  "1800": [
+    {"kind":"houseContingent","text":"Jefferson and Burr each received 73 electoral votes. State delegations in the House chose Jefferson, 10 to 4, with two delegations making no choice. The state CSV omits the second vote and the national rows omit John Jay’s vote.","source":"https://www.archives.gov/electoral-college/1800"}
+  ],
+  "1816": [
+    {"kind":"uncast","jurisdiction":"Delaware","votes":1,"text":"One appointed Delaware elector did not vote.","source":"https://www.archives.gov/electoral-college/1816"},
+    {"kind":"uncast","jurisdiction":"Maryland","votes":3,"text":"Three appointed Maryland electors did not vote.","source":"https://www.archives.gov/electoral-college/1816"},
+    {"kind":"boundaryTiming","jurisdiction":"Indiana","votes":3,"text":"Indiana’s three counted votes have no state polygon on the lab’s scheduled-vote snapshot. The active file still describes Indiana as a territory.","source":"https://www.archives.gov/electoral-college/1816"}
+  ],
+  "1820": [
+    {"kind":"uncast","text":"One elector each from Mississippi, Pennsylvania and Tennessee died before voting. The official count is 232 votes cast by 235 appointed electors.","votes":3,"source":"https://www.archives.gov/electoral-college/1820"}
+  ],
+  "1824": [
+    {"kind":"houseContingent","text":"Jackson led the electoral vote with 99. The House chose Adams with 13 state delegations. Seven voted for Jackson and four for Crawford. The state CSV accounts for 259 of 261 electoral votes.","source":"https://www.archives.gov/electoral-college/1824"}
+  ],
+  "1836": [
+    {"kind":"senateContingent","text":"The Senate chose Richard M. Johnson as vice president. Martin Van Buren won the presidential election in the Electoral College.","source":"https://www.archives.gov/electoral-college/1836"}
+  ],
+  "1864": [
+    {"kind":"partyTicket","text":"Lincoln headed the National Union ticket, a coalition of Republicans and War Democrats. Ballotics lists his affiliation as Republican.","source":"https://www.loc.gov/resource/lprbscsm.scsm0744/"},
+    {"kind":"nonparticipation","text":"The states in rebellion did not participate. The 233 counted electoral votes went to Lincoln and McClellan.","source":"https://www.archives.gov/electoral-college/1864"}
+  ],
+  "1872": [
+    {"kind":"rejected","jurisdiction":"Georgia","votes":3,"text":"Congress excluded three votes for Horace Greeley after his death. Georgia had eight counted presidential votes, six for B. Gratz Brown and two for Charles J. Jenkins.","source":"https://www.archives.gov/electoral-college/1872"},
+    {"kind":"notCounted","jurisdiction":"Arkansas","text":"Arkansas did not submit votes to be counted.","source":"https://www.archives.gov/electoral-college/1872"},
+    {"kind":"notCounted","jurisdiction":"Louisiana","text":"Louisiana did not submit votes to be counted.","source":"https://www.archives.gov/electoral-college/1872"},
+    {"kind":"sourceDiscrepancy","text":"The CSV groups several states under Greeley. The Archives record several recipients of those presidential votes. The candidate aggregate and original rows are preserved.","source":"https://www.archives.gov/electoral-college/1872"}
+  ],
+  "1960": [
+    {"kind":"unpledgedElectors","jurisdiction":"Alabama","votes":6,"text":"Alabama cast five votes for Kennedy and six for Harry F. Byrd.","source":"https://www.archives.gov/electoral-college/1960"},
+    {"kind":"faithless","jurisdiction":"Oklahoma","votes":1,"text":"One Oklahoma elector voted for Harry F. Byrd.","source":"https://www.archives.gov/electoral-college/1960"},
+    {"kind":"unpledgedElectors","jurisdiction":"Mississippi","votes":8,"text":"Mississippi cast eight votes for Harry F. Byrd.","source":"https://www.archives.gov/electoral-college/1960"}
+  ],
+  "1972": [
+    {"kind":"faithless","jurisdiction":"Virginia","votes":1,"text":"One Virginia elector voted for John Hospers. Nixon received the other eleven votes.","source":"https://www.archives.gov/electoral-college/1972"}
+  ],
+  "1976": [
+    {"kind":"faithless","jurisdiction":"Washington","votes":1,"text":"One Washington elector voted for Ronald Reagan. Ford received the other eight votes.","source":"https://www.archives.gov/electoral-college/1976"}
+  ],
+  "1988": [
+    {"kind":"faithless","jurisdiction":"West Virginia","votes":1,"text":"One West Virginia elector voted for Lloyd Bentsen for president. Dukakis received the other five votes.","source":"https://www.archives.gov/electoral-college/1988"}
+  ],
+  "2000": [
+    {"kind":"uncast","jurisdiction":"Washington, D.C.","votes":1,"text":"Two of D.C.’s three appointed electors cast presidential votes for Gore. One did not cast a vote.","source":"https://www.archives.gov/electoral-college/2000"}
+  ],
+  "2004": [
+    {"kind":"faithless","jurisdiction":"Minnesota","votes":1,"text":"Nine Minnesota electors voted for Kerry. One voted for John Edwards, whose vote is absent from the Ballotics rows.","source":"https://www.archives.gov/electoral-college/2004"}
+  ],
+  "2016": [
+    {"kind":"faithless","jurisdiction":"Hawaii","votes":1,"text":"Three Hawaii electors voted for Clinton and one for Bernie Sanders.","source":"https://www.archives.gov/electoral-college/2016"},
+    {"kind":"faithless","jurisdiction":"Texas","votes":2,"text":"Thirty-six Texas electors voted for Trump. Ron Paul and John Kasich received one vote each.","source":"https://www.archives.gov/electoral-college/2016"},
+    {"kind":"faithless","jurisdiction":"Washington","votes":4,"text":"Eight Washington electors voted for Clinton, three for Colin Powell, and one for Faith Spotted Eagle.","source":"https://www.archives.gov/electoral-college/2016"}
+  ],
+  "2024": [
+    {"kind":"sourceDiscrepancy","text":"The state CSV sums to 538 using several obsolete apportionment counts. State inspection gives the Archives counts where they differ from the CSV.","source":"https://www.archives.gov/electoral-college/2024"}
+  ]
+}
