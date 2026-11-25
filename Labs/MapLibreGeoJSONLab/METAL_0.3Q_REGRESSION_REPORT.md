@@ -64,7 +64,7 @@ All 100 observed year changes reused one published county mesh. Every logged pro
 | Source request to observed ready, ms | 317.20 | 527.30 | 1,448.10 | 1,448.10 |
 | Completed camera transition, ms | 282.20 | 289.80 | 295.50 | 297.60 |
 
-The highest sampled mesh-preparation footprint was 150.58 MiB. Final dismissal reduced the sampled process footprint from 150.36 to 92.66 MiB after three seconds. The 0.3 steady median/P95 was 119.47/128.00 MiB on a different simulator model and route. This run establishes the observed range for this build and workload. The physical-device memory ceiling remains open.
+The highest sampled mesh-preparation footprint was 150.58 MiB. Final dismissal reduced the sampled process footprint from 150.36 to 92.66 MiB after three seconds. The 0.3 steady median/P95 was 119.47/128.00 MiB on a different simulator model and route. The median footprint was 142.39 MiB during minutes 4–10, 144.25 MiB during minutes 15–20 and 144.37 MiB during minutes 25–30. The midpoint map reopen separates the earlier and later plateaus. The physical-device memory ceiling remains open.
 
 ## Simulator interaction, accessibility and owner review
 

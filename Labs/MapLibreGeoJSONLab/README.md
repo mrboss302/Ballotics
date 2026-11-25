@@ -228,7 +228,19 @@ python3 Tests/qualify-metal-coverage.py "$build/quality-visual" evidence/albers-
 
 The coverage command uses the checked Census county presentation bounds and the 3× iPhone portrait capture.
 
-The qualification matrix uses one fresh process per workload and configuration unless a trial count is supplied. Capture simulator model, actual drawable dimensions, OS, text size and host activity alongside the JSONL. Keep the physical deadline field unavailable when there are no presentation timestamps. The host mesh and PROJ commands in the 0.2/0.3 sections still apply. For the 14-input run, append the five county and five state snapshot paths listed in the [regression report](METAL_0.3Q_REGRESSION_REPORT.md).
+The qualification matrix uses one fresh process per workload and configuration unless a trial count is supplied. Capture simulator model, actual drawable dimensions, OS, text size and host activity alongside the JSONL. Keep the physical deadline field unavailable when there are no presentation timestamps. The host PROJ and selection commands in the 0.2 section still apply. To reproduce the 14-input mesh check from the lab directory, use the same Release app and locally authorized county archive as above.
+
+```sh
+xcrun swiftc -O -module-cache-path "$build/modules" GeoJSON.swift HistoricalArchive.swift \
+  Tests/PublishHistoricalSnapshots.swift -o "$build/publish-history"
+"$build/publish-history" "$HISTORICAL_COUNTY_ARCHIVE" "$build/county-dates" \
+  1788-01-01 1860-01-01 1900-01-01 1980-01-01 2000-01-01
+"$build/publish-history" ../../US_HistStateTerr_Gen05.json "$build/state-dates" \
+  1789-02-04 1860-11-06 1900-11-06 1980-11-04 2000-11-07
+bash Tests/check-metal-mesh.sh ../../cb_2024_us_county_5m.json \
+  "$app/ElectionResearch/county-geometry-2024.geojson" ../../cb_2024_us_state_5m.json \
+  ../../cb_2024_us_cd119_5m.json "$build"/county-dates/*.geojson "$build"/state-dates/*.geojson
+```
 
 Run the opt-in 30-minute XCTest separately with an installed app and the historical archive already staged by the script. Select the same simulator and build directory. The test performs real orientation changes and a Home/foreground cycle while the in-app route drives election changes, selections, profile changes and dismissal. Ordinary test runs skip this long test. The per-process cache log also contains earlier launches when an existing app container is reused. Start the evidence slice at the `app_init` immediately before the tested `albers_stress_start` and include its `albers_stress_released`.
 
