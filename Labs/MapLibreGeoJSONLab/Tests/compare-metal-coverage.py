@@ -23,7 +23,9 @@ def crop(image, region):
 
 def fill_mask(image):
     red, green, blue = np.moveaxis(np.asarray(image, dtype=np.int16), -1, 0)
-    return (red >= 55) & (blue <= 235) & (blue - red >= 35) & (blue - green >= 12)
+    # The slate inset text has at most an 18-level blue/green separation.
+    # Requiring 24 classifies land and avoids treating the lettering as geography.
+    return (red >= 55) & (blue <= 235) & (blue - red >= 35) & (blue - green >= 24)
 
 
 def grow(mask):

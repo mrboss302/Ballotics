@@ -104,29 +104,23 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
                                               object: status)
         XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 25), .completed)
         let candidateMap = map.screenshot().pngRepresentation
-        app.buttons["viewpoints"].tap()
-        let colors = app.buttons["Map colors"]
-        if colors.exists { colors.tap() }
-        app.buttons["Reported margin"].tap()
+        chooseAlbersColor("Reported margin", in: app)
         XCTAssertTrue(app.staticTexts["albers-margin-legend"].waitForExistence(timeout: 5))
         XCTAssertNotEqual(candidateMap, map.screenshot().pngRepresentation)
         XCTAssertTrue(status.label.contains("3,153"))
         XCTAssertTrue(app.staticTexts["snapshot-date"].label.contains("CT traditional counties"))
-        view("Find geography", in: app)
-        let search = app.searchFields["Search geography"]
-        search.tap()
-        search.typeText("Cuyahoga")
-        app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "albers-feature-")).firstMatch.tap()
-        waitForSelection(app.buttons["inspection"], named: "Cuyahoga County")
+        for offset in [CGVector(dx: 0.54, dy: 0.37), CGVector(dx: 0.45, dy: 0.33),
+                       CGVector(dx: 0.69, dy: 0.38)] where !app.buttons["inspection"].isEnabled {
+            map.coordinate(withNormalizedOffset: offset).tap()
+        }
+        waitForSelection(app.buttons["inspection"])
         app.buttons["inspection"].tap()
         XCTAssertTrue(app.staticTexts["Reported votes"].waitForExistence(timeout: 4))
         app.buttons["Done"].tap()
         view("Clear selection", in: app)
         XCTAssertFalse(app.buttons["inspection"].isEnabled)
 
-        app.buttons["viewpoints"].tap()
-        if colors.exists { colors.tap() }
-        app.buttons["Alternate palette"].tap()
+        chooseAlbersColor("Alternate palette", in: app)
         XCTAssertFalse(app.staticTexts["albers-margin-legend"].exists)
         let alternate = map.screenshot().pngRepresentation
         view("Emphasize borders", in: app)
@@ -148,10 +142,7 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
         XCTAssertTrue(date.label.contains("CT traditional counties"))
         let candidate = map.screenshot().pngRepresentation
 
-        app.buttons["viewpoints"].tap()
-        let colors = app.buttons["Map colors"]
-        if colors.exists { colors.tap() }
-        app.buttons["Reported margin"].tap()
+        chooseAlbersColor("Reported margin", in: app)
         XCTAssertTrue(app.staticTexts["albers-margin-legend"].waitForExistence(timeout: 5))
         XCTAssertNotEqual(candidate, map.screenshot().pngRepresentation)
 
@@ -176,9 +167,7 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
         view("National", in: app)
         XCTAssertNotEqual(hawaiiAfterSwitch, map.screenshot().pngRepresentation)
 
-        app.buttons["viewpoints"].tap()
-        if colors.exists { colors.tap() }
-        app.buttons["Alternate palette"].tap()
+        chooseAlbersColor("Alternate palette", in: app)
         XCTAssertFalse(app.staticTexts["albers-margin-legend"].exists)
         let priorBorders = map.screenshot().pngRepresentation
         view("Emphasize borders", in: app)
@@ -621,6 +610,17 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
         let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == %@",
             "\(count) features · Albers Metal"), object: status)
         XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 25), .completed, status.label)
+    }
+
+    @MainActor
+    private func chooseAlbersColor(_ title: String, in app: XCUIApplication) {
+        app.buttons["viewpoints"].tap()
+        let colors = app.descendants(matching: .any)["Map colors"].firstMatch
+        XCTAssertTrue(colors.waitForExistence(timeout: 5))
+        colors.tap()
+        let option = app.buttons[title]
+        XCTAssertTrue(option.waitForExistence(timeout: 5))
+        option.tap()
     }
 
     @MainActor

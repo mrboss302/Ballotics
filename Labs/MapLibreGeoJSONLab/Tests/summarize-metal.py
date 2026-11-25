@@ -132,16 +132,25 @@ def comparison(directory):
             first_events = {row["event"]: row for row in reversed(rows)}
             for event, key in [
                 ("election_switch", "elapsed_ms"), ("albers_geometry_ready", "projection_ms"),
+                ("geography_decode_validate", "decode_ms"), ("geography_decode_validate", "validation_ms"),
                 ("albers_first_draw", "geometry_request_ms"), ("metal_geometry_submit", "geometry_request_ms"),
                 ("metal_mesh_ready", "prepare_ms"), ("metal_mesh_ready", "tessellation_ms"),
                 ("metal_mesh_ready", "upload_ms"), ("metal_pipeline", "elapsed_ms"),
                 ("metal_first_submit", "app_ms"), ("metal_first_complete", "app_ms"),
+                ("metal_first_complete", "gpu_ms"),
                 ("metal_first_submit", "first_submit_footprint_mib"),
                 ("maplibre_geometry_decode", "decode_ms"), ("first_useful_frame", "request_ms"),
                 ("idle_with_geometry", "request_ms"),
             ]:
                 if event in first_events and key in first_events[event]:
                     metrics[event + "." + key].append(first_events[event][key])
+            first_draw = next((first_events[name] for name in
+                               ("metal_first_submit", "albers_first_draw", "first_useful_frame")
+                               if name in first_events), None)
+            if first_draw and "election_request" in first_events:
+                metrics["election_request_to_first_render_signal_ms"].append(
+                    first_draw["app_ms"] - first_events["election_request"]["app_ms"]
+                )
             windows = [row for row in rows if row["event"] in {"albers_navigation", "navigation"}]
             for i, row in enumerate(windows):
                 zooms[str(row["zoom_multiplier"]) + (" repeated" if i == 5 else "")].append(row)

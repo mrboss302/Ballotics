@@ -84,7 +84,8 @@ struct AlbersMapView: View {
                          active: scenePhase == .active, request: currentRequest,
                          geometryPending: state.historicalPending || state.importing,
                          canPublish: {
-            !state.historicalPending && !state.importing && state.dataset?.requestedAt == currentRequest
+            state.renderer == .metal && !state.dismissedStudyMap && !state.historicalPending
+                && !state.importing && state.dataset?.requestedAt == currentRequest
         }, onStatus: { message in
             guard state.dataset?.requestedAt == currentRequest else { return }
             state.status = message
@@ -340,7 +341,8 @@ private final class AlbersCanvas: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        metal?.frame = bounds
+        guard let metal, metal.frame != bounds else { return }
+        metal.frame = bounds
         invalidateMap()
     }
 
@@ -412,7 +414,7 @@ private final class AlbersCanvas: UIView {
         }
         if lastCameraRequest != nil, cameraChanged { move(cameraRequest.1, animated: !isNewScene) }
         lastCameraRequest = cameraRequest.0
-        if baseline || changed || backendChanged || activityChanged { invalidateMap() }
+        if baseline || changed || backendChanged || (requested && activityChanged) { invalidateMap() }
         if studyProbe != lastStudyProbe, studyProbe > 0 {
             lastStudyProbe = studyProbe
             // Defer the callback until after UIViewRepresentable's state update.

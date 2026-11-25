@@ -888,11 +888,13 @@ private struct LabView: View {
                         Button("Find geography") { showGeographySearch = true }
                         Toggle("Emphasize borders", isOn: $state.thickAlbersBorders)
                         if state.geography == .presidential {
-                            Picker("Map colors", selection: $state.albersTheme) {
-                                Text("Candidates").tag(AlbersTheme.candidates)
-                                Text("Alternate palette").tag(AlbersTheme.alternate)
-                                if state.electionMode == .countyResults {
-                                    Text("Reported margin").tag(AlbersTheme.margin)
+                            Menu("Map colors") {
+                                Picker("Map colors", selection: $state.albersTheme) {
+                                    Text("Candidates").tag(AlbersTheme.candidates)
+                                    Text("Alternate palette").tag(AlbersTheme.alternate)
+                                    if state.electionMode == .countyResults {
+                                        Text("Reported margin").tag(AlbersTheme.margin)
+                                    }
                                 }
                             }
                         }
