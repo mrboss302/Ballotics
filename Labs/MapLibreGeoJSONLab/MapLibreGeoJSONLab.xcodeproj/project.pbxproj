@@ -6,6 +6,25 @@
 	};
 	objectVersion = 56;
 	objects = {
+		DADADADADADADADADADA0050 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectionPackage.swift; sourceTree = "<group>"; };
+		DADADADADADADADADADA0058 = {isa = PBXBuildFile; fileRef = DADADADADADADADADADA0050; };
+		DADADADADADADADADADA0051 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectionStore.swift; sourceTree = "<group>"; };
+		DADADADADADADADADADA0059 = {isa = PBXBuildFile; fileRef = DADADADADADADADADADA0051; };
+		DADADADADADADADADADA0052 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectionGeographyResolver.swift; sourceTree = "<group>"; };
+		DADADADADADADADADADA005A = {isa = PBXBuildFile; fileRef = DADADADADADADADADADA0052; };
+		DADADADADADADADADADA0053 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectionMapPresentation.swift; sourceTree = "<group>"; };
+		DADADADADADADADADADA005B = {isa = PBXBuildFile; fileRef = DADADADADADADADADADA0053; };
+		DADADADADADADADADADA0060 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = ();
+			inputPaths = ("$(SRCROOT)/../../ElectionData/tools/bundle.sh", "$(SRCROOT)/../../ElectionData/tools/normalize.py", "$(SRCROOT)/../../ElectionData/tools/aliases.json", "$(SRCROOT)/../../ElectionData/tools/candidate-ids.json", "$(SRCROOT)/../../ElectionData/tools/historical-review.json", "$(SRCROOT)/../../ElectionData/tools/electoral-count-review.json", "$(SRCROOT)/../../PresElectionData.json", "$(SRCROOT)/../../PresElectionStateData.csv", "$(SRCROOT)/../../pres_election_county_data.json", "$(SRCROOT)/../../US_HistStateTerr_Gen05.json", "$(SRCROOT)/../../cb_2024_us_county_5m.json", "$(SRCROOT)/../../Counties_Connecticut.json", "$(SRCROOT)/../../Legislative_Districts_Alaska.json",);
+			name = "Generate local election research resources";
+			outputPaths = ("$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ElectionResearch/county-geometry-2024.geojson", "$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ElectionResearch/0.1.0/manifest.json", "$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ElectionResearch/0.1.0/national.json", "$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ElectionResearch/0.1.0/county-2000.json", "$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ElectionResearch/0.1.0/county-2004.json", "$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ElectionResearch/0.1.0/county-2008.json", "$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ElectionResearch/0.1.0/county-2012.json", "$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ElectionResearch/0.1.0/county-2016.json", "$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ElectionResearch/0.1.0/county-2020.json", "$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/ElectionResearch/0.1.0/county-2024.json",);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/bin/sh \"$SRCROOT/../../ElectionData/tools/bundle.sh\"";
+		};
 		DADADADADADADADADADA0040 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresidentialElection.swift; sourceTree = "<group>"; };
 		DADADADADADADADADADA0041 = {isa = PBXBuildFile; fileRef = DADADADADADADADADADA0040; };
 		DADADADADADADADADADA0042 = {isa = PBXFileReference; lastKnownFileType = text.json; path = US_HistStateTerr_Gen05.json; sourceTree = "<group>"; };
@@ -168,7 +187,7 @@
 		DADADADADADADADADADA000D = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
-			files = (DADADADADADADADADADA0018, DADADADADADADADADADA0041, DADADADADADADADADADA002F, DADADADADADADADADADA002D, DADADADADADADADADADA002B, DADADADADADADADADADA0029, DADADADADADADADADADA0027, DADADADADADADADADADA0026, DADADADADADADADADADA0025,);
+			files = (DADADADADADADADADADA0058, DADADADADADADADADADA0059, DADADADADADADADADADA005A, DADADADADADADADADADA005B, DADADADADADADADADADA0018, DADADADADADADADADADA0041, DADADADADADADADADADA002F, DADADADADADADADADADA002D, DADADADADADADADADADA002B, DADADADADADADADADADA0029, DADADADADADADADADADA0027, DADADADADADADADADADA0026, DADADADADADADADADADA0025,);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DADADADADADADADADADA000E = {
@@ -190,7 +209,7 @@
 		};
 		DADADADADADADADADADA0004 = {
 			isa = PBXGroup;
-			children = (DADADADADADADADADADA0023, DADADADADADADADADADA0040, DADADADADADADADADADA002E, DADADADADADADADADADA002C, DADADADADADADADADADA002A, DADADADADADADADADADA0028, DADADADADADADADADADA0030, DADADADADADADADADADA0007, DADADADADADADADADADA0008, DADADADADADADADADADA0022, DADADADADADADADADADA0021, DADADADADADADADADADA0020,);
+			children = (DADADADADADADADADADA0050, DADADADADADADADADADA0051, DADADADADADADADADADA0052, DADADADADADADADADADA0053, DADADADADADADADADADA0023, DADADADADADADADADADA0040, DADADADADADADADADADA002E, DADADADADADADADADADA002C, DADADADADADADADADADA002A, DADADADADADADADADADA0028, DADADADADADADADADADA0030, DADADADADADADADADADA0007, DADADADADADADADADADA0008, DADADADADADADADADADA0022, DADADADADADADADADADA0021, DADADADADADADADADADA0020,);
 			name = Sources;
 			sourceTree = "<group>";
 		};
@@ -210,7 +229,7 @@
 		DADADADADADADADADADA0002 = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DADADADADADADADADADA0015;
-			buildPhases = (DADADADADADADADADADA000D, DADADADADADADADADADA000F, DADADADADADADADADADA000E,);
+			buildPhases = (DADADADADADADADADADA000D, DADADADADADADADADADA000F, DADADADADADADADADADA000E, DADADADADADADADADADA0060,);
 			buildRules = ();
 			dependencies = ();
 			name = MapLibreGeoJSONLab;

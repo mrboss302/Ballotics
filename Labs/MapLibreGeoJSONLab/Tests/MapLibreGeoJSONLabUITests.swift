@@ -218,7 +218,8 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
         searchForYear(2004)
         XCTAssertEqual(years.label, "Election year 2004")
         XCTAssertEqual(date.label, "Election 2004-11-02 · 2000 boundaries (2000-11-07)")
-        XCTAssertEqual(map.screenshot().pngRepresentation, alaska)
+        XCTAssertTrue(map.exists)
+        XCTAssertEqual(app.staticTexts["presidential-winner"].label, "George W. Bush")
 
         searchForYear(1788)
         let firstElection = XCTNSPredicateExpectation(
@@ -239,6 +240,97 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
         inspection.tap()
         XCTAssertTrue(app.staticTexts["TERR_TYPE"].exists)
         XCTAssertTrue(app.staticTexts["ID_NUM"].exists)
+    }
+
+    @MainActor
+    func testPresidentialCountyResultsInBothRenderers() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--election-year", "2024", "--county-results", "--measure"]
+        app.launch()
+        let albers = app.descendants(matching: .any)["albers-map"].firstMatch
+        XCTAssertTrue(albers.waitForExistence(timeout: 12))
+        let status = app.staticTexts["load-status"]
+        let projected = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label CONTAINS %@",
+            "features · Albers equal area"), object: status)
+        XCTAssertEqual(XCTWaiter.wait(for: [projected], timeout: 18), .completed, status.label)
+        XCTAssertTrue(app.staticTexts["snapshot-date"].label.contains("CT traditional counties"))
+        XCTAssertEqual(app.staticTexts["presidential-winner"].label, "Donald J. Trump")
+        let resultButton = app.buttons["election-results"]
+        resultButton.tap()
+        XCTAssertTrue(app.staticTexts["District 99, Alaska"].waitForExistence(timeout: 3))
+        app.staticTexts["District 99, Alaska"].tap()
+        XCTAssertTrue(app.navigationBars["District 99"].waitForExistence(timeout: 5))
+        let official = app.descendants(matching: .any)["district-official-votes"].firstMatch
+        XCTAssertTrue(official.waitForExistence(timeout: 5))
+        XCTAssertTrue(official.label.contains("401"))
+        app.navigationBars.buttons["BackButton"].tap()
+        app.buttons["Done"].tap()
+        view("National", in: app)
+        let national = albers.screenshot().pngRepresentation
+        let albersAttachment = XCTAttachment(screenshot: app.screenshot())
+        albersAttachment.name = "Albers county results"
+        albersAttachment.lifetime = .keepAlways
+        add(albersAttachment)
+        view("Alaska", in: app)
+        XCTAssertNotEqual(national, albers.screenshot().pngRepresentation)
+        view("National", in: app)
+        for offset in [CGVector(dx: 0.54, dy: 0.37), CGVector(dx: 0.45, dy: 0.33),
+                       CGVector(dx: 0.69, dy: 0.38)] where !app.buttons["inspection"].isEnabled {
+            albers.coordinate(withNormalizedOffset: offset).tap()
+        }
+        waitForSelection(app.buttons["inspection"])
+        app.buttons["inspection"].tap()
+        XCTAssertTrue(app.staticTexts["Reported votes"].waitForExistence(timeout: 4))
+        app.buttons["Done"].tap()
+
+        func selectYear(_ year: Int) {
+            app.buttons["election-years"].tap()
+            let search = app.searchFields["Search election years"]
+            search.tap()
+            search.typeText(String(year))
+            app.buttons["election-year-\(year)"].tap()
+            let picked = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == %@",
+                "Election year \(year)"), object: app.buttons["election-years"])
+            XCTAssertEqual(XCTWaiter.wait(for: [picked], timeout: 12), .completed)
+        }
+        for year in [2020, 2024, 2020] {
+            selectYear(year)
+            view("Hawaii", in: app)
+            view("National", in: app)
+        }
+        XCTAssertTrue(app.staticTexts["snapshot-date"].label.contains("fallback"))
+
+        view("MapLibre", in: app)
+        waitForGeometry("3,153", in: app)
+        let map = app.descendants(matching: .any)["geometry-map"].firstMatch
+        map.coordinate(withNormalizedOffset: CGVector(dx: 0.47, dy: 0.50)).tap()
+        waitForSelection(app.buttons["inspection"])
+        app.buttons["inspection"].tap()
+        XCTAssertTrue(app.staticTexts["Reported votes"].waitForExistence(timeout: 4))
+        app.buttons["Done"].tap()
+        for year in [2024, 2020, 2024] {
+            selectYear(year)
+            view("Alaska", in: app)
+            view("National", in: app)
+        }
+        let attachment = XCTAttachment(screenshot: app.screenshot())
+        attachment.name = "MapLibre county results after repeated switches"
+        attachment.lifetime = .keepAlways
+        add(attachment)
+    }
+
+    @MainActor
+    func testContingentElectionShowsOutcomeAndAllocations() {
+        let app = XCUIApplication()
+        app.launchArguments = ["--election-year", "1824", "--election-maplibre", "--measure"]
+        app.launch()
+        XCTAssertTrue(app.buttons["election-results"].waitForExistence(timeout: 15))
+        XCTAssertEqual(app.staticTexts["presidential-winner"].label, "John Quincy Adams · elected by the House")
+        app.buttons["election-results"].tap()
+        XCTAssertTrue(app.staticTexts["Andrew Jackson · Democratic-Republican"].waitForExistence(timeout: 4))
+        XCTAssertTrue(app.staticTexts["99"].exists)
+        XCTAssertTrue(app.staticTexts["Striped fill · multiple reported allocations"].exists)
     }
 
     @MainActor

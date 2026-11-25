@@ -16,6 +16,12 @@ struct Inspection {
     let properties: [(key: String, value: String)]
     let stateCode: String?
 
+    init(title: String, properties: [(String, String)], stateCode: String?) {
+        self.title = title
+        self.properties = properties
+        self.stateCode = stateCode
+    }
+
     init(attributes: [String: Any]) {
         let fields = attributes.compactMap { key, value -> (key: String, value: String)? in
             if let string = value as? String { return (key, string) }
@@ -57,7 +63,44 @@ final class LabState: ObservableObject {
     @Published private(set) var historicalPending = false
     @Published private(set) var historicalRequest: HistoricalRequest?
     @Published private(set) var election: PresidentialElection?
-    let elections = PresidentialElection.available()
+    @Published private(set) var electionPresentation: ElectionMapPresentation?
+    @Published private(set) var electionRevision = 0
+    let elections = PresidentialElection.available().filter { $0.year <= 2024 }
+    private var electionStoreTask: Task<ElectionStore, Error>?
+    private var countySource: Dataset?
+    private var attemptedRemoteNational = false
+
+    var electionMode: ElectionMapMode { electionPresentation?.mode ?? .electoralCollege }
+
+    func inspect(_ attributes: [String: Any]) {
+        inspection = geography == .presidential
+            ? electionPresentation?.inspection(attributes) ?? Inspection(attributes: attributes)
+            : Inspection(attributes: attributes)
+    }
+
+    private var remotePackage: (URL, String)? {
+        let arguments = ProcessInfo.processInfo.arguments
+        guard let flag = arguments.firstIndex(of: "--election-package"),
+              let resource = arguments.dropFirst(flag + 1).first,
+              let sha = arguments.dropFirst(flag + 2).first,
+              let url = URL(string: resource), url.scheme == "https" else { return nil }
+        return (url, sha)
+    }
+
+    private func openElectionStore() async throws -> ElectionStore {
+        if let electionStoreTask { return try await electionStoreTask.value }
+        let url = Self.documents.appendingPathComponent("PresidentialResearch-v1-0.1.sqlite")
+        let work = Task.detached(priority: .userInitiated) {
+            try FileManager.default.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
+            return try ElectionStore.open(at: url)
+        }
+        electionStoreTask = work
+        do { return try await work.value }
+        catch {
+            electionStoreTask = nil
+            throw error
+        }
+    }
     private var history: HistoricalStore?
     private var electionHistory: HistoricalStore?
 
@@ -81,7 +124,11 @@ final class LabState: ObservableObject {
     func start() {
         guard dataset == nil, loading == nil else { return }
         let arguments = ProcessInfo.processInfo.arguments
-        if let index = arguments.firstIndex(where: { $0 == "--historical-date" || $0 == "--published-date" }),
+        if let index = arguments.firstIndex(of: "--election-year"),
+           let year = arguments.dropFirst(index + 1).first.flatMap(Int.init),
+           let election = elections.first(where: { $0.year == year }) {
+            applyElection(election, mode: arguments.contains("--county-results") ? .countyResults : .electoralCollege)
+        } else if let index = arguments.firstIndex(where: { $0 == "--historical-date" || $0 == "--published-date" }),
            let value = arguments.dropFirst(index + 1).first {
             do {
                 let request = try HistoricalRequest(value, provenance: "Benchmark snapshot")
@@ -109,7 +156,7 @@ final class LabState: ObservableObject {
             return
         }
         if next == .presidential {
-            if let election = election ?? elections.first { applyElection(election) }
+            if let election = election ?? elections.first { applyElection(election, mode: electionMode) }
             return
         }
         guard geography != next || dataset?.geography != next || historicalPending else { return }
@@ -225,31 +272,123 @@ final class LabState: ObservableObject {
     }
 
     func applyElection(_ election: PresidentialElection) {
-        let request = election.boundaries
-        if geography == .presidential, dataset?.geography == .presidential,
-           dataset?.historical?.request.day == request.day {
-            // Later elections reuse the active 2000 source and camera.
-            loading?.cancel()
-            loading = nil
-            historicalPending = false
-            failure = nil
-            self.election = election
-            return
+        let mode = ElectionManifest.countyYears.contains(election.year) ? electionMode : .electoralCollege
+        applyElection(election, mode: mode)
+    }
+
+    func applyElection(_ election: PresidentialElection, mode: ElectionMapMode) {
+        loading?.cancel()
+        historicalPending = true
+        failure = nil
+        let started = LabLog.now
+        let resources = Bundle.main.bundleURL.appendingPathComponent("ElectionResearch")
+        let bundle = resources.appendingPathComponent("0.1.0")
+        loading = Task {
+            do {
+                let store = try await openElectionStore()
+                let bundledManifest = try JSONDecoder().decode(ElectionManifest.self,
+                    from: Data(contentsOf: bundle.appendingPathComponent("manifest.json")))
+                let installed = try await store.isInstalled(year: nil)
+                try await store.importBundled(bundle, year: nil)
+                if let (remote, sha) = remotePackage, !attemptedRemoteNational {
+                    do {
+                        try await store.downloadPackage(from: remote, manifestSHA256: sha, year: nil,
+                                                        geometry: bundledManifest.geographySources)
+                        attemptedRemoteNational = true
+                    } catch is CancellationError { throw CancellationError() }
+                    catch {
+                        attemptedRemoteNational = true
+                        LabLog.record("election_update_rejected", ["scope": "national"])
+                    }
+                }
+                LabLog.record("election_store_ready", ["installed": installed,
+                    "elapsed_ms": LabLog.milliseconds(LabLog.now - started)])
+                let queryStart = LabLog.now
+                let record = try await store.election(election.year)
+                let catalog = try await store.catalog()
+                var county: [LocalElectionRecord] = []
+                if mode == .countyResults {
+                    if try await !store.isInstalled(year: election.year) {
+                        let importStart = LabLog.now
+                        if let (remote, sha) = remotePackage {
+                            do {
+                                try await store.downloadPackage(from: remote, manifestSHA256: sha, year: election.year,
+                                                                geometry: bundledManifest.geographySources)
+                            }
+                            catch is CancellationError { throw CancellationError() }
+                            catch { try await store.importBundled(bundle, year: election.year) }
+                        } else {
+                            try await store.importBundled(bundle, year: election.year)
+                        }
+                        LabLog.record("election_county_import", ["year": election.year,
+                            "elapsed_ms": LabLog.milliseconds(LabLog.now - importStart)])
+                    }
+                    county = try await store.county(election.year)
+                }
+                LabLog.record("election_query_ready", ["year": election.year, "mode": mode.rawValue,
+                    "elapsed_ms": LabLog.milliseconds(LabLog.now - queryStart)])
+                let previous = self.dataset
+                let resolved: Dataset
+                let geometryStart = LabLog.now
+                if mode == .countyResults {
+                    if let countySource {
+                        resolved = countySource
+                    } else {
+                        let url = resources.appendingPathComponent("county-geometry-2024.geojson")
+                        let summary = try await Task.detached { try GeoJSON.validate(url, geography: .presidential) }.value
+                        resolved = Dataset(geography: .presidential, url: url, summary: summary,
+                                           requestedAt: geometryStart, imported: nil)
+                        countySource = resolved
+                    }
+                } else {
+                    let request = try ElectionGeographyResolver.resolveState(election, record: record)
+                    if let previous, previous.geography == .presidential, previous.historical?.request.day == request.day {
+                        resolved = previous
+                    } else {
+                        guard let url = Bundle.main.url(forResource: PresidentialElection.archiveResource,
+                                                        withExtension: "json") else { throw ElectionPackageError.missing }
+                        let history = electionHistory ?? HistoricalStore(source: url)
+                        let (file, _) = try await history.snapshot(request)
+                        electionHistory = history
+                        resolved = Dataset(geography: .presidential, url: file.url, summary: file.summary,
+                                           requestedAt: geometryStart, imported: nil, historical: file)
+                    }
+                }
+                try Task.checkCancellation()
+                let reused = resolved.requestedAt == previous?.requestedAt
+                let presentation = ElectionMapPresentation.make(election: record, mode: mode, catalog: catalog, county: county)
+                LabLog.record("election_geography_ready", ["year": election.year, "mode": mode.rawValue,
+                    "reused_source": reused, "elapsed_ms": LabLog.milliseconds(LabLog.now - geometryStart)])
+                if !reused {
+                    prepareSwitch(to: .presidential)
+                    moveCamera(.national)
+                }
+                self.election = election
+                electionPresentation = presentation
+                electionRevision += 1
+                inspection = nil
+                dataset = resolved
+                historicalPending = false
+                loading = nil
+                var fields = MemorySample.read()?.fields("election_switch") ?? [:]
+                fields["year"] = election.year
+                fields["mode"] = mode.rawValue
+                fields["elapsed_ms"] = LabLog.milliseconds(LabLog.now - started)
+                LabLog.record("election_switch", fields)
+            } catch {
+                guard !Task.isCancelled else { return }
+                historicalPending = false
+                failure = error.localizedDescription
+                loading = nil
+            }
         }
-        guard let source = Bundle.main.url(forResource: PresidentialElection.archiveResource, withExtension: "json") else {
-            failure = "The bundled historical state and territory archive is missing."
-            return
-        }
-        let store = electionHistory ?? HistoricalStore(source: source)
-        applySnapshot(request, store: store, election: election)
     }
 
     private func applySnapshot(_ request: HistoricalRequest, store: HistoricalStore,
-                               published: Bool = false, election: PresidentialElection? = nil) {
+                               published: Bool = false) {
         let requestedAt = LabLog.now
-        let next: Geography = election == nil ? .historical : .presidential
-        var context: [String: Any] = ["date": request.day.description, "dataset": next.rawValue]
-        if let election { context["election_year"] = election.year }
+        let next: Geography = .historical
+        let context: [String: Any] = ["date": request.day.description, "dataset": next.rawValue]
         // Keep the selected dataset and date paired until extraction succeeds.
         loading?.cancel()
         historicalPending = true
@@ -277,14 +416,8 @@ final class LabState: ObservableObject {
                     (file, measurements) = try await store.snapshot(request)
                 }
                 try Task.checkCancellation()
-                if let election {
-                    electionHistory = store
-                    self.election = election
-                    moveCamera(.national)
-                } else {
-                    if !published { history = store }
-                    historicalRequest = request
-                }
+                if !published { history = store }
+                historicalRequest = request
                 for var fields in measurements {
                     guard let phase = fields.removeValue(forKey: "phase") as? String else { continue }
                     fields.merge(context) { _, new in new }
@@ -360,9 +493,12 @@ private struct LabView: View {
     @State private var dateSource = ""
     @State private var showElection = false
     @State private var usesAlbers = false
+    @State private var showElectionResults = false
 
     private var snapshotDescription: String {
-        if state.geography == .presidential, let election = state.election { return election.snapshotDescription }
+        if state.geography == .presidential, let election = state.election {
+            return ElectionGeographyResolver.description(for: election, mode: state.electionMode)
+        }
         if state.geography == .historical, let request = state.historicalRequest {
             return "\(request.day) · \(request.provenance)"
         }
@@ -381,7 +517,8 @@ private struct LabView: View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Ballotics GeoJSON Lab").font(.title2.bold())
             Text(verbatim: snapshotDescription)
-                .font(.caption).foregroundStyle(.secondary).lineLimit(state.geography == .presidential ? 2 : 1)
+                .font(.caption).foregroundStyle(.secondary).lineLimit(state.geography == .presidential ? 3 : 1)
+                .fixedSize(horizontal: false, vertical: state.geography == .presidential)
                 .accessibilityIdentifier("snapshot-date")
 
             HStack {
@@ -453,13 +590,34 @@ private struct LabView: View {
                     Button("Hawaii") { state.moveCamera(.hawaii) }
                     Button("Zoom to selected state") { state.moveCamera(.selectedState) }
                         .disabled(!state.canZoomToSelection)
-                    Button("Recolor polygons") { state.recolor() }
+                    Button("Recolor polygons") { state.recolor() }.disabled(state.geography == .presidential)
                 } label: {
                     Label("Map view", systemImage: "scope").labelStyle(.iconOnly)
                 }
                 .accessibilityIdentifier("viewpoints")
             }
             .buttonStyle(.bordered)
+
+            if state.geography == .presidential, let election = state.election, let result = state.electionPresentation {
+                HStack {
+                    Picker("Result mode", selection: Binding(get: { state.electionMode },
+                            set: { state.applyElection(election, mode: $0) })) {
+                        Text(ElectionMapMode.electoralCollege.rawValue).tag(ElectionMapMode.electoralCollege)
+                        if ElectionManifest.countyYears.contains(election.year) {
+                            Text(ElectionMapMode.countyResults.rawValue).tag(ElectionMapMode.countyResults)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                    .accessibilityIdentifier("election-mode")
+                    Button("Results") { showElectionResults = true }
+                        .buttonStyle(.bordered)
+                        .accessibilityIdentifier("election-results")
+                }
+                Text(result.winner)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.primary)
+                    .accessibilityIdentifier("presidential-winner")
+            }
 
             Group {
                 if usesAlbers && state.geography != .imported {
@@ -470,7 +628,9 @@ private struct LabView: View {
             }
                 .onChange(of: state.geography) { _, geography in
                     if geography == .imported { usesAlbers = false }
-                    if geography == .presidential { usesAlbers = true }
+                    if geography == .presidential {
+                        usesAlbers = !ProcessInfo.processInfo.arguments.contains("--election-maplibre")
+                    }
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -493,7 +653,15 @@ private struct LabView: View {
             }
         }
         .padding()
-        .task { state.start() }
+        .task {
+            if ProcessInfo.processInfo.arguments.contains("--election-year") {
+                usesAlbers = !ProcessInfo.processInfo.arguments.contains("--election-maplibre")
+            }
+            state.start()
+        }
+        .sheet(isPresented: $showElectionResults) {
+            if let result = state.electionPresentation { ElectionResultsPanel(result: result) }
+        }
         .fileImporter(
             isPresented: $showImporter,
             allowedContentTypes: [.json, UTType(filenameExtension: "geojson") ?? .json]
@@ -536,7 +704,7 @@ private struct LabView: View {
         .sheet(isPresented: $showProperties) {
             if let inspection = state.inspection {
                 NavigationStack {
-                    List(inspection.properties, id: \.key) { property in
+                    List(Array(inspection.properties.enumerated()), id: \.offset) { _, property in
                         LabeledContent(property.key, value: property.value)
                     }
                     .navigationTitle(inspection.title)

@@ -4,20 +4,30 @@ import UIKit
 struct AlbersMapView: View {
     @ObservedObject var state: LabState
     @State private var scene: AlbersScene?
+    @State private var sceneRequest: Double?
     @State private var selected: Int?
 
     var body: some View {
-        AlbersCanvasView(scene: scene, selected: selected, alternateColor: state.alternateColor,
-                         cameraRequest: state.cameraRequest) { index in
+        let currentScene = sceneRequest == state.dataset?.requestedAt ? scene : nil
+        AlbersCanvasView(scene: currentScene, selected: selected, alternateColor: state.alternateColor,
+                         cameraRequest: state.cameraRequest,
+                         result: state.geography == .presidential ? state.electionPresentation : nil,
+                         resultRevision: state.electionRevision) { index in
             guard !state.historicalPending, state.dataset?.geography == state.geography else { return }
             selected = index
-            state.inspection = index.flatMap { scene?.properties[$0] }.map { Inspection(attributes: $0) }
+            if let index, let attributes = currentScene?.properties[index] {
+                state.inspect(attributes)
+            } else {
+                state.inspection = nil
+            }
         }
+        .onChange(of: state.electionRevision) { _, _ in selected = nil }
         .task(id: state.dataset?.requestedAt) {
             scene = nil
             selected = nil
             guard let dataset = state.dataset else { return }
             state.status = "Projecting local geometry…"
+            let start = LabLog.now
             // Capture the dataset as well as its URL so a temporary snapshot stays alive.
             let work = Task.detached(priority: .userInitiated) {
                 try withExtendedLifetime(dataset) { try AlbersScene.load(dataset.url) }
@@ -31,6 +41,11 @@ struct AlbersMapView: View {
                 try Task.checkCancellation()
                 guard state.dataset?.requestedAt == dataset.requestedAt else { return }
                 scene = projected
+                sceneRequest = dataset.requestedAt
+                if dataset.geography == .presidential {
+                    LabLog.record("election_albers_projection", ["year": state.election?.year ?? 0,
+                       "mode": state.electionMode.rawValue, "elapsed_ms": LabLog.milliseconds(LabLog.now - start)])
+                }
                 state.status = "\(projected.properties.count.formatted()) features · Albers equal area"
             } catch {
                 guard !Task.isCancelled else { return }
@@ -46,19 +61,24 @@ private struct AlbersCanvasView: UIViewRepresentable {
     let selected: Int?
     let alternateColor: Bool
     let cameraRequest: (Int, Viewpoint)
+    let result: ElectionMapPresentation?
+    let resultRevision: Int
     let onSelect: (Int?) -> Void
 
     func makeUIView(context: Context) -> AlbersCanvas { AlbersCanvas() }
 
     func updateUIView(_ canvas: AlbersCanvas, context: Context) {
         canvas.update(scene: scene, selected: selected, alternateColor: alternateColor,
-                      cameraRequest: cameraRequest, onSelect: onSelect)
+                      cameraRequest: cameraRequest, result: result, resultRevision: resultRevision, onSelect: onSelect)
     }
 }
 
 private final class AlbersCanvas: UIView {
     private var scene: AlbersScene?
     private var selected: Int?
+    private var electionPaint: [[CGColor]]?
+    private var paintedRevision = 0
+    private var pendingPaintMetric: (Double, Int, String)?
     private var alternateColor = false
     private var onSelect: ((Int?) -> Void)?
     private var lastCameraRequest: Int?
@@ -85,11 +105,33 @@ private final class AlbersCanvas: UIView {
     required init?(coder: NSCoder) { nil }
 
     func update(scene: AlbersScene?, selected: Int?, alternateColor: Bool,
-                cameraRequest: (Int, Viewpoint), onSelect: @escaping (Int?) -> Void) {
+                cameraRequest: (Int, Viewpoint), result: ElectionMapPresentation?, resultRevision: Int,
+                onSelect: @escaping (Int?) -> Void) {
         // The parent supplies a new generation by clearing the scene while projecting.
-        if self.scene == nil, let scene {
+        let isNewScene = self.scene == nil && scene != nil
+        if isNewScene, let scene {
             centerPoint = CGPoint(x: scene.bounds.midX, y: scene.bounds.midY)
             zoom = 1
+        }
+        if isNewScene || paintedRevision != resultRevision {
+            let start = LabLog.now
+            if let scene, let result {
+                let field = result.mode == .countyResults ? "GEOID" : "ID_NUM"
+                let colors = Dictionary(uniqueKeysWithValues: Set(result.fills.values.flatMap { $0 }).map {
+                    ($0, UIColor(electionHex: $0).cgColor)
+                })
+                electionPaint = scene.properties.map { props in
+                    if let key = props[field], let fill = result.fills[key] { return fill.compactMap { colors[$0] } }
+                    let nonparticipant = result.mode == .electoralCollege && props["TERR_TYPE"] != "State"
+                        && props["TERR_TYPE"] != "District of Columbia"
+                    return [UIColor(electionHex: nonparticipant ? ElectionMapPresentation.nonparticipating
+                                                                 : ElectionMapPresentation.noData).cgColor]
+                }
+                pendingPaintMetric = (start, result.year, result.mode.rawValue)
+            } else {
+                electionPaint = nil
+            }
+            paintedRevision = resultRevision
         }
         self.scene = scene
         self.selected = selected
@@ -128,8 +170,12 @@ private final class AlbersCanvas: UIView {
             context.setStrokeColor(UIColor(white: 0.96, alpha: 0.85).cgColor)
             context.setLineWidth(0.48 / scale)
             for part in panel.parts where part.bounds.intersects(window) {
+                if let paint = electionPaint?[part.feature], let base = paint.first {
+                    context.setFillColor(base)
+                    if paint.count > 1 { drawSplit(part.path, bounds: part.bounds, colors: paint, scale: scale, in: context) }
+                }
                 context.addPath(part.path)
-                context.drawPath(using: .eoFillStroke)
+                context.drawPath(using: (electionPaint?[part.feature].count ?? 0) > 1 ? .stroke : .eoFillStroke)
             }
             if let selected {
                 context.setFillColor(UIColor(red: 1, green: 0.76, blue: 0.29, alpha: 1).cgColor)
@@ -137,13 +183,18 @@ private final class AlbersCanvas: UIView {
                 context.setLineWidth(1.5 / scale)
                 for part in panel.parts where part.feature == selected && part.bounds.intersects(window) {
                     context.addPath(part.path)
-                    context.drawPath(using: .eoFillStroke)
+                    context.drawPath(using: electionPaint == nil ? .eoFillStroke : .stroke)
                 }
             }
             context.restoreGState()
         }
         context.restoreGState()
 
+        if let metric = pendingPaintMetric {
+            LabLog.record("election_albers_paint", ["year": metric.1, "mode": metric.2,
+                "elapsed_ms": LabLog.milliseconds(LabLog.now - metric.0)])
+            pendingPaintMetric = nil
+        }
         for panel in scene.panels where panel.frame.intersects(visible) {
             guard let label = panel.region.insetLabel else { continue }
             let point = CGPoint(x: bounds.midX + (panel.frame.minX - centerPoint.x) * scale + 6,
@@ -153,6 +204,25 @@ private final class AlbersCanvas: UIView {
                 .foregroundColor: UIColor(red: 0.18, green: 0.29, blue: 0.36, alpha: 1)
             ])
         }
+    }
+
+    private func drawSplit(_ path: CGPath, bounds: CGRect, colors: [CGColor], scale: CGFloat, in context: CGContext) {
+        context.saveGState()
+        context.addPath(path)
+        context.clip(using: .evenOdd)
+        // Tile stripes in screen pixels while preserving the projected polygon and its holes.
+        let width = 5 / scale
+        let tile = width * CGFloat(colors.count)
+        context.setFillColor(colors[0])
+        context.fill(bounds)
+        for (index, color) in colors.enumerated().dropFirst() {
+            context.setFillColor(color)
+            let start = bounds.minX + CGFloat(index) * width
+            for x in stride(from: start, to: bounds.maxX, by: tile) {
+                context.fill(CGRect(x: x, y: bounds.minY, width: width, height: bounds.height))
+            }
+        }
+        context.restoreGState()
     }
 
     private var mapScale: CGFloat {
@@ -204,7 +274,13 @@ private final class AlbersCanvas: UIView {
     }
 
     @objc private func selectPolygon(_ gesture: UITapGestureRecognizer) {
-        onSelect?(scene?.hit(world(gesture.location(in: self))))
+        let start = LabLog.now
+        let hit = scene?.hit(world(gesture.location(in: self)))
+        onSelect?(hit)
+        if electionPaint != nil {
+            LabLog.record("election_albers_selection", ["hit": hit != nil,
+                "elapsed_ms": LabLog.milliseconds(LabLog.now - start)])
+        }
     }
 
     @objc private func doubleTap(_ gesture: UITapGestureRecognizer) {

@@ -116,3 +116,11 @@ xcrun swiftc -O -module-cache-path "$work/modules" \
   "$lab/AlbersProjection.swift" "$lab/Tests/PresidentialElectionChecks.swift" -o "$work/election-checks"
 "$work/election-checks" US_HistStateTerr_Gen05.json
 ```
+
+## Presidential results research 0.1
+
+The **Presidential Elections** dataset opens the electoral map. The **County results** mode is available in 2000–2024. Tap a shape and open its inspector for the reported allocations or local candidate returns. **Results** opens the presidential outcome, legend, election totals, historical review and unjoined reporting units. The two renderers share the result presentation. Albers opens by default, with MapLibre available from **Map view**.
+
+The build uses Python 3 to normalize the original Ballotics inputs and stage versioned research resources in the application bundle. SwiftData imports the national package on first election entry and county years when selected. Launch options include `--election-year 2024`, `--county-results`, `--election-maplibre` and `--measure`. Use a trusted manifest SHA-256 with `--election-package` for a versioned HTTPS research package.
+
+See the [data audit](../../ElectionData/PRESIDENTIAL_DATA_AUDIT.md), [wire contract](../../ElectionData/ELECTION_DATA_CONTRACT.md), [geography resolver](../../ElectionData/ELECTION_GEOGRAPHY_RESOLVER.md), and [measurements](PERSISTENCE_BENCHMARKS.md).

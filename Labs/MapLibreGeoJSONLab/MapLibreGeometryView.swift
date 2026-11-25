@@ -40,6 +40,9 @@ struct MapLibreGeometryView: UIViewRepresentable {
         private var active: Dataset?
         private var nextRevision = 0
         private var layers: Layers?
+        private var electionPaintRevision: Int?
+        private var splitLayers: [(layer: String, image: String)] = []
+        private var pendingElectionPaint: (Double, Int, String)?
         private var lastCameraRequest = 0
         private var didApplyCamera = false
         private var selectionTask: Task<Void, Never>?
@@ -155,6 +158,8 @@ struct MapLibreGeometryView: UIViewRepresentable {
                 route?.cancel()
                 frameSamples = nil
                 endLoad(reason: "replaced")
+                removeSplitPaint(from: style)
+                electionPaintRevision = nil
                 if let layers {
                     removeOverlay(layers, from: style)
                     for id in [layers.highlightBorder, layers.highlight, layers.border, layers.fill] {
@@ -184,11 +189,78 @@ struct MapLibreGeometryView: UIViewRepresentable {
                 lastCameraRequest = requestID
                 move(viewpoint, on: map, animated: true)
             }
-            if let layers,
-               let fill = style.layer(withIdentifier: layers.fill) as? MLNFillStyleLayer {
-                let color = NSExpression(forConstantValue: baseColor)
-                if fill.fillColor != color { fill.fillColor = color }
+            if let layers, let fill = style.layer(withIdentifier: layers.fill) as? MLNFillStyleLayer {
+                if active?.geography == .presidential, let result = state.electionPresentation {
+                    if electionPaintRevision != state.electionRevision {
+                        applyElectionPaint(result, to: fill, style: style, layers: layers)
+                    }
+                } else {
+                    let color = NSExpression(forConstantValue: baseColor)
+                    if fill.fillColor != color { fill.fillColor = color }
+                }
             }
+        }
+
+        private func removeSplitPaint(from style: MLNStyle) {
+            for entry in splitLayers {
+                if let layer = style.layer(withIdentifier: entry.layer) { style.removeLayer(layer) }
+                style.removeImage(forName: entry.image)
+            }
+            splitLayers.removeAll()
+        }
+
+        private func applyElectionPaint(_ result: ElectionMapPresentation, to fill: MLNFillStyleLayer,
+                                        style: MLNStyle, layers: Layers) {
+            let start = LabLog.now
+            electionPaintRevision = state.electionRevision
+            removeSplitPaint(from: style)
+            let county = result.mode == .countyResults
+            let field = county ? "GEOID" : "ID_NUM"
+            var colorGroups: [String: [Any]] = [:]
+            for (key, paint) in result.fills.sorted(by: { $0.key < $1.key }) {
+                if let color = paint.first {
+                    let id: Any = county ? key as Any : (Int(key) ?? -1)
+                    colorGroups[color, default: []].append(id)
+                }
+            }
+            let fallback: Any = county ? ElectionMapPresentation.noData : [
+                "match", ["get", "TERR_TYPE"], ["State", "District of Columbia"], ElectionMapPresentation.noData,
+                ElectionMapPresentation.nonparticipating
+            ] as [Any]
+            var match: [Any] = ["match", ["get", field]]
+            for (color, ids) in colorGroups.sorted(by: { $0.key < $1.key }) {
+                match.append(ids.count == 1 ? ids[0] : ids)
+                match.append(color)
+            }
+            match.append(fallback)
+            fill.fillColor = NSExpression(mglJSONObject: colorGroups.isEmpty ? fallback : match)
+            if let source = style.source(withIdentifier: layers.source) as? MLNShapeSource,
+               let border = style.layer(withIdentifier: layers.border) {
+                for (key, colors) in result.fills.sorted(by: { $0.key < $1.key }) where colors.count > 1 {
+                    guard let id = Int(key) else { continue }
+                    let identifier = "\(layers.fill)-split-\(key)"
+                    let format = UIGraphicsImageRendererFormat()
+                    format.scale = 1
+                    let image = UIGraphicsImageRenderer(size: CGSize(width: 32, height: 8), format: format).image { ctx in
+                        for (index, color) in colors.enumerated() {
+                            let left = CGFloat(32 * index / colors.count)
+                            let right = CGFloat(32 * (index + 1) / colors.count)
+                            ctx.cgContext.setFillColor(UIColor(electionHex: color).cgColor)
+                            ctx.fill(CGRect(x: left, y: 0, width: right - left, height: 8))
+                        }
+                    }
+                    style.setImage(image, forName: identifier)
+                    let stripe = MLNFillStyleLayer(identifier: identifier, source: source)
+                    stripe.fillPattern = NSExpression(forConstantValue: identifier)
+                    stripe.predicate = NSPredicate(format: "%K == %@", field, NSNumber(value: id))
+                    style.insertLayer(stripe, below: border)
+                    splitLayers.append((identifier, identifier))
+                }
+            }
+            for id in [layers.highlight, layers.highlightBorder] {
+                style.layer(withIdentifier: id)?.isVisible = false
+            }
+            pendingElectionPaint = (start, result.year, result.mode.rawValue)
         }
 
         private var baseColor: UIColor {
@@ -237,7 +309,7 @@ struct MapLibreGeometryView: UIViewRepresentable {
                                   visible: Bool, to style: MLNStyle) {
             let fill = MLNFillStyleLayer(identifier: fillID, source: source)
             fill.fillColor = NSExpression(forConstantValue: UIColor(red: 1, green: 0.76, blue: 0.29, alpha: 1))
-            fill.fillOpacity = NSExpression(forConstantValue: 0.72)
+            fill.fillOpacity = NSExpression(forConstantValue: active?.geography == .presidential ? 0.08 : 0.72)
             fill.isVisible = visible
             style.addLayer(fill)
             let border = MLNLineStyleLayer(identifier: borderID, source: source)
@@ -255,6 +327,11 @@ struct MapLibreGeometryView: UIViewRepresentable {
         }
 
         func mapViewDidFinishRenderingFrame(_ mapView: MLNMapView, fullyRendered: Bool) {
+            if fullyRendered, let metric = pendingElectionPaint {
+                LabLog.record("election_maplibre_paint", ["year": metric.1, "mode": metric.2,
+                    "elapsed_ms": LabLog.milliseconds(LabLog.now - metric.0)])
+                pendingElectionPaint = nil
+            }
             frameSamples?.addFrame()
             guard let active, active.geography == state.geography,
                   active.requestedAt == state.dataset?.requestedAt, !state.historicalPending,
@@ -336,6 +413,7 @@ struct MapLibreGeometryView: UIViewRepresentable {
                   let active, active.requestedAt == state.dataset?.requestedAt,
                   active.geography == state.geography, !state.historicalPending, let style, let layers else { return }
             selectionTask?.cancel()
+            let selectionStart = LabLog.now
             removeOverlay(layers, from: style)
             let point = recognizer.location(in: map)
             let hits = map.visibleFeatures(at: point, styleLayerIdentifiers: [layers.fill])
@@ -357,6 +435,7 @@ struct MapLibreGeometryView: UIViewRepresentable {
                             ($0.attributes["ID_NUM"] as? NSNumber).map { matches.contains($0.intValue) } ?? false
                         }
                         applyTap(hit, active: active, coordinate: coordinate, style: style, layers: layers)
+                        logElectionSelection(active, since: selectionStart)
                     } catch {
                         guard !Task.isCancelled else { return }
                         state.failure = "Could not inspect the historical boundary. \(error.localizedDescription)"
@@ -364,7 +443,13 @@ struct MapLibreGeometryView: UIViewRepresentable {
                 }
             } else {
                 applyTap(hits.first, active: active, coordinate: coordinate, style: style, layers: layers)
+                logElectionSelection(active, since: selectionStart)
             }
+        }
+
+        private func logElectionSelection(_ dataset: Dataset, since start: Double) {
+            guard dataset.geography == .presidential else { return }
+            LabLog.record("election_maplibre_selection", ["elapsed_ms": LabLog.milliseconds(LabLog.now - start)])
         }
 
         private func applyTap(_ hit: MLNFeature?, active: Dataset, coordinate: CLLocationCoordinate2D,
@@ -390,8 +475,8 @@ struct MapLibreGeometryView: UIViewRepresentable {
                 state.inspection = nil
                 return
             }
-            let inspection = Inspection(attributes: hit.attributes)
-            state.inspection = inspection
+            state.inspect(hit.attributes)
+            let inspection = state.inspection ?? Inspection(attributes: hit.attributes)
             if key != nil {
                 if LabLog.enabled {
                     var fields: [String: Any] = ["dataset": datasetName, "title": inspection.title,
