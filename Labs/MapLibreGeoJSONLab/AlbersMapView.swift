@@ -39,6 +39,7 @@ private struct AlbersPaintConfiguration {
 
     let revision: Revision
     let prepare: (AlbersScene) -> [[CGColor]]?
+    let votes: [String: Int]?
     let didDraw: ((Double) -> Void)?
 }
 
@@ -77,17 +78,23 @@ struct AlbersMapView: View {
     var body: some View {
         let currentRequest = sceneRequest
         let currentScene = currentRequest == state.dataset?.requestedAt ? scene : nil
-        AlbersCanvasView(scene: currentScene, selected: selected, alternateColor: state.alternateColor,
+        let receipt = state.expectedMetalReceipt
+        AlbersCanvasView(scene: currentScene, profile: state.nationalProfile, onPresented: {
+            guard state.expectedMetalReceipt == receipt, state.dataset?.requestedAt == currentRequest,
+                  state.renderer == .metal, !state.dismissedStudyMap, !state.historicalPending, !state.importing,
+                  state.dataset?.geography == state.geography else { return }
+            state.metalReceipt = receipt
+        }, selected: selected, alternateColor: state.alternateColor,
                          cameraRequest: state.cameraRequest, paint: paintConfiguration,
                          thickBorders: state.thickAlbersBorders, baseline: state.baselineAlbers,
                          studyProbe: state.albersStudyProbe, metal: state.renderer == .metal,
                          active: scenePhase == .active, request: currentRequest,
-                         geometryPending: state.historicalPending || state.importing,
+                         geometryPending: state.historicalPending || state.importing || state.dataset?.geography != state.geography,
                          canPublish: {
             state.renderer == .metal && !state.dismissedStudyMap && !state.historicalPending
-                && !state.importing && state.dataset?.requestedAt == currentRequest
+                && !state.importing && state.dataset?.geography == state.geography && state.dataset?.requestedAt == currentRequest
         }, onStatus: { message in
-            guard state.dataset?.requestedAt == currentRequest else { return }
+            guard state.dataset?.geography == state.geography, state.dataset?.requestedAt == currentRequest else { return }
             state.status = message
         }) { hits in
             guard !state.historicalPending, let currentRequest,
@@ -169,6 +176,7 @@ struct AlbersMapView: View {
         return AlbersPaintConfiguration(
             revision: .init(data: state.electionRevision, style: theme.rawValue),
             prepare: { scene in result?.albersColors(in: scene, theme: theme) },
+            votes: result?.mode == .electoralCollege ? result?.electoralVotesByGeometry : nil,
             didDraw: result.map { presentation in
                 { elapsed in
                     LabLog.record("election_albers_paint", ["year": presentation.year,
@@ -179,7 +187,7 @@ struct AlbersMapView: View {
 
     private func select(_ index: Int?, in scene: AlbersScene?) {
         selected = index
-        if let index, let attributes = scene?.properties[index] { state.inspect(attributes) }
+        if let index, let scene, scene.properties.indices.contains(index) { state.inspect(scene.properties[index]) }
         else { state.inspection = nil }
     }
 }
@@ -231,6 +239,8 @@ private struct AlbersFeaturePicker: View {
 
 private struct AlbersCanvasView: UIViewRepresentable {
     let scene: AlbersScene?
+    let profile: NationalMapProfile
+    let onPresented: () -> Void
     let selected: Int?
     let alternateColor: Bool
     let cameraRequest: (Int, Viewpoint)
@@ -249,7 +259,7 @@ private struct AlbersCanvasView: UIViewRepresentable {
     func makeUIView(context: Context) -> AlbersCanvas { AlbersCanvas(baseline: baseline) }
 
     func updateUIView(_ canvas: AlbersCanvas, context: Context) {
-        canvas.update(scene: scene, selected: selected, alternateColor: alternateColor,
+        canvas.update(source: scene, profile: profile, onPresented: onPresented, selected: selected, alternateColor: alternateColor,
                       cameraRequest: cameraRequest, paint: paint, thickBorders: thickBorders,
                       studyProbe: studyProbe, metal: metal, active: active,
                       request: request, geometryPending: geometryPending, canPublish: canPublish,
@@ -303,12 +313,16 @@ private final class AlbersCanvas: UIView {
     private var active = true
     private var canPublishMetal: (() -> Bool)?
     private var onStatus: ((String) -> Void)?
+    private var profile: NationalMapProfile?
+    private var onPresented: (() -> Void)?
+    private var labels: [(point: CGPoint, view: UILabel)] = []
     private var insetLabels: [UILabel] = []
 
     init(baseline: Bool) {
         self.baseline = baseline
         super.init(frame: .zero)
         backgroundColor = UIColor(red: 0.93, green: 0.95, blue: 0.96, alpha: 1)
+        clipsToBounds = true
         contentMode = .redraw
         isAccessibilityElement = true
         accessibilityIdentifier = "albers-map"
@@ -339,20 +353,27 @@ private final class AlbersCanvas: UIView {
         }
     }
 
+    private var lastLayoutSize = CGSize.zero
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        guard let metal, metal.frame != bounds else { return }
-        metal.frame = bounds
+        guard lastLayoutSize != bounds.size else { return }
+        lastLayoutSize = bounds.size
+        metal?.frame = bounds
         invalidateMap()
     }
 
-    func update(scene: AlbersScene?, selected: Int?, alternateColor: Bool,
+    func update(source: AlbersScene?, profile: NationalMapProfile, onPresented: @escaping () -> Void, selected incomingSelection: Int?, alternateColor: Bool,
                 cameraRequest: (Int, Viewpoint), paint: AlbersPaintConfiguration,
                 thickBorders: Bool, studyProbe: Int, metal requested: Bool, active: Bool,
                 request: Double?, geometryPending: Bool, canPublish: @escaping () -> Bool,
                 onStatus: @escaping (String) -> Void, onSelect: @escaping ([Int]) -> Void) {
-        // The parent supplies a new generation by clearing the scene while projecting.
-        let isNewScene = self.scene == nil && scene != nil
+        let isNewScene = source != nil && (self.scene == nil || metalRevision != request)
+        let layoutChanged = self.profile != profile
+        self.profile = profile
+        self.onPresented = onPresented
+        let scene = source == nil ? nil : (isNewScene || layoutChanged ? source?.composed(profile) : self.scene)
+        let selected = incomingSelection.flatMap { scene?.properties.indices.contains($0) == true && !isNewScene ? $0 : nil }
         let cameraChanged = lastCameraRequest != cameraRequest.0
         let styleChanged = paintedRevision != paint.revision
         let backendChanged = metalRequested != requested
@@ -373,10 +394,10 @@ private final class AlbersCanvas: UIView {
                 pendingAppearanceMetric = (LabLog.now, "palette")
             }
         }
-        let changed = isNewScene || (self.scene != nil && scene == nil) || self.selected != selected
+        let changed = layoutChanged || isNewScene || (self.scene != nil && scene == nil) || self.selected != selected
             || self.alternateColor != alternateColor || self.thickBorders != thickBorders
             || styleChanged || cameraChanged
-        if isNewScene, let scene {
+        if isNewScene || layoutChanged, let scene {
             centerPoint = CGPoint(x: scene.bounds.midX, y: scene.bounds.midY)
             zoom = 1
             awaitingFirstDraw = true
@@ -388,7 +409,9 @@ private final class AlbersCanvas: UIView {
             pendingPaintMetric = featurePaint == nil ? nil : paint.didDraw.map { (start, $0) }
             paintedRevision = paint.revision
         }
+        if layoutChanged, metalReady, let scene { metal?.updateLayout(scene.panels) }
         self.scene = scene
+        if isNewScene || layoutChanged || styleChanged || scene == nil { rebuildLabels(votes: paint.votes) }
         self.selected = selected
         self.alternateColor = alternateColor
         self.thickBorders = thickBorders
@@ -408,6 +431,7 @@ private final class AlbersCanvas: UIView {
             do { try metal?.updatePalette(featurePaint) }
             catch { failMetal(error.localizedDescription) }
         }
+        if metalReady, styleChanged || layoutChanged { metal?.expectPresentation(onPresented) }
         if let pending = pendingAppearanceMetric, metalReady {
             metal?.markAppearance(pending.1, at: pending.0)
             pendingAppearanceMetric = nil
@@ -439,7 +463,7 @@ private final class AlbersCanvas: UIView {
         let fill = alternateColor ? UIColor(red: 0.23, green: 0.51, blue: 0.40, alpha: 1)
                                   : UIColor(red: 0.29, green: 0.49, blue: 0.68, alpha: 1)
         for panel in scene.panels where panel.frame.intersects(visible) {
-            if panel.region.insetLabel != nil {
+            if panel.showsFrame {
                 let frame = CGPath(roundedRect: panel.frame, cornerWidth: 6 / scale, cornerHeight: 6 / scale, transform: nil)
                 context.addPath(frame)
                 context.setFillColor(UIColor(red: 0.89, green: 0.93, blue: 0.95, alpha: 1).cgColor)
@@ -449,7 +473,9 @@ private final class AlbersCanvas: UIView {
             }
             context.saveGState()
             context.translateBy(x: panel.translation.x, y: panel.translation.y)
-            let window = visible.offsetBy(dx: -panel.translation.x, dy: -panel.translation.y)
+            context.scaleBy(x: panel.scale, y: panel.scale)
+            let scale = scale * panel.scale
+            let window = panel.local(visible)
             context.setFillColor(fill.cgColor)
             context.setStrokeColor(UIColor(white: 0.96, alpha: 0.85).cgColor)
             context.setLineWidth((thickBorders ? 1.2 : 0.48) / scale)
@@ -489,7 +515,7 @@ private final class AlbersCanvas: UIView {
             pendingPaintMetric = nil
         }
         for panel in scene.panels where panel.frame.intersects(visible) {
-            guard let label = panel.region.insetLabel else { continue }
+            guard panel.showsFrame, let label = panel.region.insetLabel else { continue }
             let point = CGPoint(x: bounds.midX + (panel.frame.minX - centerPoint.x) * scale + 6,
                                 y: bounds.midY + (panel.frame.minY - centerPoint.y) * scale + 4)
             (label as NSString).draw(at: point, withAttributes: [
@@ -525,8 +551,9 @@ private final class AlbersCanvas: UIView {
 
     private func sendStatus(_ message: String) {
         let revision = metalRevision
+        let surface = metal
         Task { [weak self] in
-            guard let self, self.metalRevision == revision else { return }
+            guard let self, self.metalRevision == revision, self.metal === surface else { return }
             self.onStatus?(message)
         }
     }
@@ -540,11 +567,12 @@ private final class AlbersCanvas: UIView {
                 surface.renderAllowed = active
                 surface.frame = bounds
                 surface.isHidden = true
-                addSubview(surface)
+                insertSubview(surface, at: 0)
             }
             guard let device = surface.device else {
                 throw GeoJSON.Invalid(message: "Metal device became unavailable.")
             }
+            LabLog.record("metal_mesh_preparing", ["revision": revision - LabLog.start])
             let work = Task.detached(priority: .userInitiated) {
                 let sampler = MemorySampler()
                 let start = LabLog.now
@@ -559,6 +587,8 @@ private final class AlbersCanvas: UIView {
                 fields["upload_ms"] = LabLog.milliseconds(LabLog.now - prepared)
                 fields["features"] = scene.properties.count
                 fields["revision"] = revision - LabLog.start
+                fields["vertex_buffers"] = buffers.panels.count
+                fields["index_buffers"] = buffers.panels.count
                 fields["parts"] = mesh.statistics.parts
                 fields["vertices"] = mesh.statistics.vertices
                 fields["triangles"] = mesh.statistics.triangles
@@ -580,10 +610,11 @@ private final class AlbersCanvas: UIView {
                         return
                     }
                     try surface.updatePalette(self.featurePaint)
-                    surface.publish(buffers, layout: scene.panels)
+                    surface.publish(buffers, layout: self.scene?.panels ?? scene.panels)
+                    if let acknowledge = self.onPresented { surface.expectPresentation(acknowledge) }
                     surface.onFirstFrame = { [weak self] in
-                        guard let self else { return }
-                        LabLog.record("metal_geometry_submit", ["features": scene.properties.count,
+                        guard let self, self.canPublishMetal?() == true else { return }
+                        LabLog.record("metal_geometry_complete", ["features": scene.properties.count,
                             "geometry_request_ms": LabLog.milliseconds(LabLog.now - revision),
                             "revision": revision - LabLog.start])
                         self.sendStatus("\(scene.properties.count.formatted()) features · Albers Metal")
@@ -624,6 +655,7 @@ private final class AlbersCanvas: UIView {
 
     private func stopMetal(removeSurface: Bool) {
         cancelMeshPreparation()
+        pendingAppearanceMetric = nil
         metalReady = false
         metalFailed = false
         metal?.clear()
@@ -646,7 +678,50 @@ private final class AlbersCanvas: UIView {
         setNeedsDisplay()
     }
 
+    private func rebuildLabels(votes: [String: Int]?) {
+        labels.forEach { $0.view.removeFromSuperview() }
+        labels.removeAll()
+        guard let scene, let votes else { return }
+        for panel in scene.panels.sorted(by: { $0.region != .mainland && $1.region == .mainland }) {
+            let groups = Dictionary(grouping: panel.parts, by: \.feature)
+            for feature in groups.keys.sorted() {
+                let fields = scene.properties[feature]
+                guard fields["TERR_TYPE"] == "State" || fields["TERR_TYPE"] == "District of Columbia",
+                      let code = fields["ABBR_NAME"], let key = fields["ID_NUM"],
+                      let part = groups[feature]?.max(by: { $0.bounds.width * $0.bounds.height < $1.bounds.width * $1.bounds.height }),
+                      let anchor = part.interiorAnchor else { continue }
+                let label = UILabel()
+                label.numberOfLines = 2
+                label.textAlignment = .center
+                label.font = .systemFont(ofSize: 8, weight: .bold)
+                label.text = votes[key].map { "\(code)\n\($0)" } ?? code
+                label.textColor = .white
+                label.layer.shadowColor = UIColor.black.cgColor
+                label.layer.shadowOpacity = 1
+                label.layer.shadowRadius = 1
+                label.layer.shadowOffset = .zero
+                label.sizeToFit()
+                label.isAccessibilityElement = false
+                addSubview(label)
+                labels.append((panel.world(anchor), label))
+            }
+        }
+    }
+
+    private func positionLabels() {
+        var occupied: [CGRect] = []
+        let scale = mapScale
+        for (anchor, label) in labels {
+            label.center = CGPoint(x: bounds.midX + (anchor.x - centerPoint.x) * scale,
+                                   y: bounds.midY + (anchor.y - centerPoint.y) * scale)
+            let frame = label.frame.insetBy(dx: -1, dy: -1)
+            label.isHidden = !bounds.contains(frame) || occupied.contains { $0.intersects(frame) }
+            if !label.isHidden { occupied.append(frame) }
+        }
+    }
+
     private func invalidateMap() {
+        positionLabels()
         if !metalRequested || metalFailed {
             setNeedsDisplay()
             return
@@ -655,8 +730,9 @@ private final class AlbersCanvas: UIView {
         metal.move(center: centerPoint, scale: mapScale, stroke: thickBorders ? 1.2 : 0.48,
                    selected: selected, alternate: alternateColor)
         if let scene {
-            let insets = scene.panels.filter { $0.region.insetLabel != nil }
+            let insets = scene.panels.filter(\.showsFrame)
             if insets.count != insetLabels.count {
+                insetLabels.forEach { $0.removeFromSuperview() }
                 insetLabels = insets.map { panel in
                     let label = UILabel()
                     label.text = panel.region.insetLabel
@@ -677,7 +753,10 @@ private final class AlbersCanvas: UIView {
     }
 
     private func startRouteIfNeeded() {
-        if !routeStarted, LabLog.enabled, ProcessInfo.processInfo.arguments.contains("--albers-route") {
+        if !routeStarted, LabLog.enabled, ProcessInfo.processInfo.arguments.contains("--albers-region-route") {
+            routeStarted = true
+            routeTask = Task { [weak self] in await self?.runRegionRoute() }
+        } else if !routeStarted, LabLog.enabled, ProcessInfo.processInfo.arguments.contains("--albers-route") {
             routeStarted = true
             routeTask = Task { [weak self] in await self?.runRoute() }
         }
@@ -734,7 +813,7 @@ private final class AlbersCanvas: UIView {
         }
         guard let target, !target.isNull else { return }
         let nextCenter = CGPoint(x: target.midX, y: target.midY)
-        let nextZoom = min(16, max(1, scale(toFit: target.insetBy(dx: -target.width * 0.045,
+        let nextZoom = viewpoint == .national ? 1 : min(256, max(1, scale(toFit: target.insetBy(dx: -target.width * 0.045,
                                                          dy: -target.height * 0.045)) / scale(toFit: scene.bounds)))
         if animated, !baseline, !UIAccessibility.isReduceMotionEnabled, window != nil, routeResults == nil {
             animation = CameraTransition(start: LabLog.now, center: centerPoint, zoom: zoom,
@@ -775,7 +854,7 @@ private final class AlbersCanvas: UIView {
         guard scene != nil else { return }
         animation = nil
         let before = world(anchor)
-        zoom = min(16, max(1, zoom * factor))
+        zoom = min(256, max(1, zoom * factor))
         let after = world(anchor)
         centerPoint.x += before.x - after.x
         centerPoint.y += before.y - after.y
@@ -804,9 +883,16 @@ private final class AlbersCanvas: UIView {
     }
 
     private func sampleSelection() {
-        guard let scene, let panel = scene.panels.first(where: { $0.region == .mainland }) else { return }
-        let wgs84 = panel.region.projection.project(longitude: -78.491, latitude: 38.032)
-        select(at: CGPoint(x: wgs84.x + panel.translation.x, y: -wgs84.y + panel.translation.y))
+        guard let scene, !scene.panels.isEmpty else { return }
+        let panel = scene.panels[lastStudyProbe % scene.panels.count]
+        let location: (Double, Double)
+        switch panel.region {
+        case .mainland: location = (-78.491, 38.032)
+        case .alaska: location = (-149.9003, 61.2181)
+        case .hawaii: location = (-157.8583, 21.3069)
+        }
+        let projected = panel.region.projection.project(longitude: location.0, latitude: location.1)
+        select(at: panel.world(CGPoint(x: projected.x, y: -projected.y)))
     }
 
     @objc private func doubleTap(_ gesture: UITapGestureRecognizer) {
@@ -828,6 +914,47 @@ private final class AlbersCanvas: UIView {
         constrainCenter()
         gesture.setTranslation(.zero, in: self)
         invalidateMap()
+    }
+
+    private func runRegionRoute() async {
+        guard let scene else { return }
+        for region in [AlbersRegion.alaska, .hawaii, .mainland] {
+            guard region == .mainland || scene.panels.contains(where: { $0.region == region }) else { continue }
+            let target: Viewpoint = region == .alaska ? .alaska : region == .hawaii ? .hawaii : .national
+            metal?.beginWindow()
+            let start = LabLog.now
+            move(target, animated: true)
+            routeResults = FrameSamples()
+            repeat {
+                do { try await Task.sleep(for: .milliseconds(16)) } catch { return }
+            } while animation != nil
+            var fields = routeResults?.fields() ?? [:]
+            fields["elapsed_ms"] = LabLog.milliseconds(LabLog.now - start)
+            fields["region"] = String(describing: region)
+            fields["zoom"] = zoom
+            if let metal { fields.merge(metal.finishWindow()) { _, new in new } }
+            LabLog.record("albers_region_transition", fields)
+            routeResults = nil
+            guard region != .mainland else { continue }
+            let origin = centerPoint
+            let baseZoom = zoom
+            let started = LabLog.now
+            routeResults = FrameSamples()
+            metal?.beginWindow()
+            while LabLog.now - started < 3 {
+                let phase = (LabLog.now - started) * 2 * .pi / 3
+                zoom = baseZoom * (1.25 - 0.25 * cos(phase))
+                centerPoint.x = origin.x + bounds.width / mapScale * 0.08 * sin(phase)
+                invalidateMap()
+                do { try await Task.sleep(for: .milliseconds(16)) } catch { return }
+            }
+            var navigation = routeResults?.fields() ?? [:]
+            navigation["region"] = String(describing: region)
+            if let metal { navigation.merge(metal.finishWindow()) { _, new in new } }
+            LabLog.record("albers_region_navigation", navigation)
+            routeResults = nil
+        }
+        LabLog.record("albers_region_route_done")
     }
 
     private func runRoute() async {
@@ -863,7 +990,7 @@ private final class AlbersCanvas: UIView {
                 var candidates: Set<Int> = []
                 var partCount = 0
                 for panel in scene.panels where panel.frame.intersects(visible) {
-                    let parts = panel.visible(in: visible.offsetBy(dx: -panel.translation.x, dy: -panel.translation.y))
+                    let parts = panel.visible(in: panel.local(visible))
                     partCount += parts.count
                     for index in parts { candidates.insert(panel.parts[index].feature) }
                 }

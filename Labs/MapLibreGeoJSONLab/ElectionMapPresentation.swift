@@ -19,6 +19,7 @@ struct ElectionMapPresentation {
     let totals: String
     let legend: [Legend]
     let fills: [String: [String]]
+    let electoralVotesByGeometry: [String: Int]
     let margins: [String: Double]
     let details: [String: [(String, String)]]
     let unmapped: [LocalElectionRecord]
@@ -48,6 +49,7 @@ struct ElectionMapPresentation {
         let method = election.decision == "houseContingent" ? " · elected by the House" : ""
         var legend: [Legend] = []
         var fills: [String: [String]] = [:]
+        var electoralVotesByGeometry: [String: Int] = [:]
         var margins: [String: Double] = [:]
         var details: [String: [(String, String)]] = [:]
         let totals: String
@@ -81,6 +83,9 @@ struct ElectionMapPresentation {
                     status = ids.count > 1 ? "Split electoral allocation" : "Reported electoral allocation"
                     paint = ids.compactMap { colors[$0] }
                 }
+                if !positive.isEmpty, !group.contains(where: { $0.status == "unresolved" }) {
+                    electoralVotesByGeometry[key] = positive.reduce(0) { $0 + $1.electoralVotes }
+                }
                 fills[key] = paint
                 details[key] = [("Result", status)] + group.map { row in
                     let name = row.candidateID.flatMap { names[$0] } ?? "Unassigned"
@@ -109,7 +114,7 @@ struct ElectionMapPresentation {
             }
         }
         return Self(year: election.year, mode: mode, winner: declaredWinner + method, totals: totals,
-                    legend: legend, fills: fills, margins: margins, details: details, unmapped: unmapped,
+                    legend: legend, fills: fills, electoralVotesByGeometry: electoralVotesByGeometry, margins: margins, details: details, unmapped: unmapped,
                     hasSplit: fills.values.contains { $0.count > 1 },
                     reviewNotes: mode == .electoralCollege ? election.reviewNotes : [],
                     unmappedAllocations: mode == .electoralCollege

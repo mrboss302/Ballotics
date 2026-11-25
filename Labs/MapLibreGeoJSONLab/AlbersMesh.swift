@@ -148,6 +148,9 @@ struct ProjectedTriangles {
 enum AlbersTessellation {
     static func triangles(_ polygon: ProjectedPolygon) throws -> ProjectedTriangles {
         let points = polygon.points
+        guard points.count <= Int(Int32.max) else {
+            throw GeoJSON.Invalid(message: "Polygon exceeds the libtess2 signed index range.")
+        }
         let origin = points[0]
         guard let tess = tessNewTess(nil) else {
             throw GeoJSON.Invalid(message: "libtess2 allocation failed.")
@@ -257,7 +260,7 @@ struct AlbersMesh {
         var totals = Statistics()
         var panels: [Panel] = []
         for panel in scene.panels {
-            let localFrame = panel.frame.offsetBy(dx: -panel.translation.x, dy: -panel.translation.y)
+            let localFrame = panel.researchLocalFrame
             let origin = CGPoint(x: localFrame.midX, y: localFrame.midY)
             let offset = SIMD2(Double(origin.x), Double(origin.y))
             var vertices: [Vertex] = []
@@ -299,6 +302,11 @@ struct AlbersMesh {
                     let triangles = try AlbersTessellation.triangles(polygon)
                     totals.tessellationSeconds += ProcessInfo.processInfo.systemUptime - start
                     _ = try AlbersTessellation.verifiedArea(of: triangles, in: polygon)
+                    guard triangles.vertices.count <= Int(UInt32.max) - vertices.count,
+                          polygon.points.count <= Int(UInt32.max) - segments.count,
+                          parts.count < Int(UInt32.max), part.feature < Int(UInt32.max) else {
+                        throw GeoJSON.Invalid(message: "Regional mesh exceeds the UInt32 index range.")
+                    }
                     let base = UInt32(vertices.count)
                     let index = UInt32(parts.count)
                     parts.append(Part(feature: UInt32(part.feature),

@@ -41,6 +41,7 @@ final class AlbersCache {
         }
     }
 
+    var count: Int { entries.count }
     func clear() { entries.removeAll() }
 }
 
@@ -113,6 +114,17 @@ final class LabState: ObservableObject {
     @Published private(set) var renderer = LabRenderer.initial
     var usesAlbers: Bool { renderer != .mapLibre }
     @Published var albersTheme: AlbersTheme = .candidates
+    @Published var nationalProfile: NationalMapProfile = ProcessInfo.processInfo.arguments.contains("--equal-scale") ? .research : .thematic
+    struct MetalReceipt: Equatable {
+        let geography: Double
+        let election: Int
+        let profile: NationalMapProfile
+        let theme: AlbersTheme
+    }
+    var metalReceipt: MetalReceipt?
+    var expectedMetalReceipt: MetalReceipt? {
+        dataset.map { MetalReceipt(geography: $0.requestedAt, election: electionRevision, profile: nationalProfile, theme: albersTheme) }
+    }
     @Published var thickAlbersBorders = false
     @Published private(set) var albersStudyProbe = 0
     @Published private(set) var dismissedStudyMap = false
@@ -216,6 +228,12 @@ final class LabState: ObservableObject {
         }
     }
 
+    private func cancelSourceLoad() {
+        loading?.cancel()
+        loading = nil
+        importing = false
+    }
+
     func choose(_ next: Geography) {
         if next == .historical {
             applyHistory(historicalRequest ?? HistoricalRequest.presets[0])
@@ -228,13 +246,12 @@ final class LabState: ObservableObject {
             if let election = election ?? elections.first { applyElection(election, mode: electionMode) }
             return
         }
-        guard geography != next || dataset?.geography != next || historicalPending else { return }
+        guard geography != next || dataset?.geography != next || historicalPending || importing else { return }
         historicalPending = false
         let requestedAt = LabLog.now
         if next == .imported {
             guard let imported else { return }
-            loading?.cancel()
-            loading = nil
+            cancelSourceLoad()
             prepareSwitch(to: next)
             dataset = Dataset(geography: next, url: imported.url, summary: imported.summary,
                               requestedAt: requestedAt, imported: imported)
@@ -245,7 +262,7 @@ final class LabState: ObservableObject {
             failure = "The bundled \(next.rawValue.lowercased()) file is missing."
             return
         }
-        loading?.cancel()
+        cancelSourceLoad()
         prepareSwitch(to: next)
         if let summary = validations[next] {
             loading = nil
@@ -288,6 +305,7 @@ final class LabState: ObservableObject {
 
     func setRenderer(_ renderer: LabRenderer) {
         guard self.renderer != renderer else { return }
+        metalReceipt = nil
         self.renderer = renderer
         inspection = nil
         if renderer == .mapLibre {
@@ -343,6 +361,8 @@ final class LabState: ObservableObject {
                 let sourcesToTest: [Geography] = [.states, .districts, .counties, .historical]
                 let expected = sourcesToTest[sources % sourcesToTest.count]
                 if expected == .historical {
+                    applyHistory(HistoricalRequest.presets[2])
+                    await Task.yield()
                     let preset = HistoricalRequest.presets[sources / sourcesToTest.count % HistoricalRequest.presets.count]
                     applyHistory(preset)
                 } else {
@@ -361,6 +381,7 @@ final class LabState: ObservableObject {
             }
             if seconds >= 120, !attemptedReopen, sources >= 50, LabLog.now - started > seconds / 2 {
                 attemptedReopen = true
+                metalReceipt = nil
                 dismissedStudyMap = true
                 releaseUnusedAlbersResources()
                 LabLog.record("albers_stress_dismiss")
@@ -375,9 +396,11 @@ final class LabState: ObservableObject {
             moveCamera(views[navigations % views.count])
             albersStudyProbe += 1
             albersTheme = AlbersTheme.allCases[navigations % AlbersTheme.allCases.count]
+            if navigations.isMultiple(of: 7) { nationalProfile = nationalProfile == .research ? .thematic : .research }
             if navigations.isMultiple(of: 3) { thickAlbersBorders.toggle() }
             if LabLog.now >= nextSample {
                 var fields = MemorySample.read()?.fields("stress") ?? [:]
+                fields["geographic_cache_entries"] = albersCache.count
                 fields["years"] = years
                 fields["sources"] = sources
                 fields["rapid_requests"] = rapid
@@ -407,6 +430,18 @@ final class LabState: ObservableObject {
     }
 
     func runMetalHistoricalSupersessionProbe() async {
+        if LabLog.enabled, ProcessInfo.processInfo.arguments.contains("--metal-import-supersession"),
+           let url = Bundle.main.url(forResource: "cb_2024_us_county_5m", withExtension: "json") {
+            importGeoJSON(.success(url))
+            await Task.yield()
+            choose(.states)
+            let ready = await awaitStudyPresentation()
+            // Give a rejected late importer time to finish its file copy.
+            try? await Task.sleep(for: .seconds(2))
+            LabLog.record("metal_import_supersession_done", ["pass": ready && geography == .states &&
+                dataset?.geography == .states && imported == nil && !importing])
+            return
+        }
         guard LabLog.enabled, renderer == .metal,
               ProcessInfo.processInfo.arguments.contains("--historical-rapid-switches"),
               await awaitStudyPresentation() else { return }
@@ -431,9 +466,9 @@ final class LabState: ObservableObject {
     private func awaitStudyPresentation() async -> Bool {
         let deadline = LabLog.now + 15
         while LabLog.now < deadline && !Task.isCancelled {
-            let ready = renderer == .metal ? status.contains("features · Albers Metal")
+            let ready = renderer == .metal ? metalReceipt != nil && metalReceipt == expectedMetalReceipt
                 : status.contains("Albers equal area")
-            if !historicalPending && ready { return true }
+            if !historicalPending && !importing && dataset?.geography == geography && ready { return true }
             if status.hasPrefix("Core Graphics fallback") { return false }
             try? await Task.sleep(for: .milliseconds(25))
         }
@@ -483,18 +518,24 @@ final class LabState: ObservableObject {
             failure = error.localizedDescription
             return
         }
+        cancelSourceLoad()
+        historicalPending = false
         importing = true
         failure = nil
         var fields = MemorySample.read()?.fields("before_validation") ?? [:]
         fields["dataset"] = url.lastPathComponent
         LabLog.record("import_start", fields)
-        Task {
-            defer { importing = false }
+        loading = Task {
+            defer {
+                if !Task.isCancelled {
+                    importing = false
+                    loading = nil
+                }
+            }
             do {
-                let file = try await Task.detached(priority: .userInitiated) { try ImportedFile.prepare(url) }.value
-                loading?.cancel()
-                loading = nil
-                historicalPending = false
+                let worker = Task.detached(priority: .userInitiated) { try ImportedFile.prepare(url) }
+                let file = try await withTaskCancellationHandler { try await worker.value } onCancel: { worker.cancel() }
+                try Task.checkCancellation()
                 imported = file
                 prepareSwitch(to: .imported)
                 var fields = MemorySample.read()?.fields("after_validation") ?? [:]
@@ -504,6 +545,7 @@ final class LabState: ObservableObject {
                 dataset = Dataset(geography: .imported, url: file.url, summary: file.summary,
                                   requestedAt: requestedAt, imported: file)
             } catch {
+                guard !Task.isCancelled else { return }
                 failure = "Could not import \(url.lastPathComponent). \(error.localizedDescription)"
             }
         }
@@ -532,7 +574,7 @@ final class LabState: ObservableObject {
     }
 
     func applyElection(_ election: PresidentialElection, mode: ElectionMapMode) {
-        loading?.cancel()
+        cancelSourceLoad()
         historicalPending = true
         failure = nil
         let started = LabLog.now
@@ -670,7 +712,7 @@ final class LabState: ObservableObject {
         let next: Geography = .historical
         let context: [String: Any] = ["date": request.day.description, "dataset": next.rawValue]
         // Keep the selected dataset and date paired until extraction succeeds.
-        loading?.cancel()
+        cancelSourceLoad()
         historicalPending = true
         failure = nil
         LabLog.record("historical_request", context.merging(["provenance": request.provenance]) { _, new in new })
@@ -741,6 +783,7 @@ final class LabState: ObservableObject {
     func recolor() { alternateColor.toggle() }
 
     private func prepareSwitch(to next: Geography) {
+        metalReceipt = nil
         geography = next
         inspection = nil
         failure = nil
@@ -886,6 +929,11 @@ private struct LabView: View {
                         Button("Clear selection") { state.inspection = nil }
                             .disabled(state.inspection == nil)
                         Button("Find geography") { showGeographySearch = true }
+                        Menu("National composition") {
+                            Picker("National composition", selection: $state.nationalProfile) {
+                                ForEach(NationalMapProfile.allCases, id: \.self) { Text($0.rawValue).tag($0) }
+                            }
+                        }
                         Toggle("Emphasize borders", isOn: $state.thickAlbersBorders)
                         if state.geography == .presidential {
                             Menu("Map colors") {

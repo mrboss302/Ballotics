@@ -5,7 +5,8 @@ struct AlbersMetalConfiguration {
     let samples: Int
     let boundaries: Bool
 
-    static let launch = Self(samples: ProcessInfo.processInfo.arguments.contains("--metal-samples-1") ? 1 : 4,
+    static let launch = Self(samples: ProcessInfo.processInfo.arguments.contains("--metal-samples-1") ? 1 :
+        ProcessInfo.processInfo.arguments.contains("--metal-samples-2") ? 2 : 4,
                              boundaries: !ProcessInfo.processInfo.arguments.contains("--metal-fill-only"))
 }
 
@@ -73,7 +74,8 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         let selected: UInt32
         let hasTheme: UInt32
         var selectionPass: UInt32
-        let reserved: SIMD2<UInt32> = .zero
+        let showsFrame: UInt32
+        let reserved: UInt32 = 0
         let baseColor: SIMD4<Float>
     }
 
@@ -147,6 +149,7 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
     private var submissions = 0
     private var sceneBytes = 0
     private var submittedFirst = false
+    private var announcedReady = false
     private var presentedFirst = false
     private var appearance: (start: Double, name: String)?
     var onFirstFrame: (() -> Void)?
@@ -164,16 +167,30 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         let started = LabLog.now
         guard let device = MTLCreateSystemDefaultDevice(),
               device.supportsTextureSampleCount(configuration.samples),
-              let queue = device.makeCommandQueue(),
-              let sourceURL = Bundle.main.url(forResource: "AlbersShaders", withExtension: "msl") else {
-            throw GeoJSON.Invalid(message: "The requested Metal device, shader or sample count is unavailable.")
+              let queue = device.makeCommandQueue() else {
+            throw GeoJSON.Invalid(message: "The requested Metal device or sample count is unavailable.")
         }
         config = configuration
         self.queue = queue
-        let library = try device.makeLibrary(source: String(contentsOf: sourceURL, encoding: .utf8), options: nil)
+        let library: MTLLibrary
+        let runtime = ProcessInfo.processInfo.arguments.contains("--metal-runtime-library")
+        let libraryStart = LabLog.now
+        if runtime {
+            guard let url = Bundle.main.url(forResource: "AlbersShaders", withExtension: "msl") else {
+                throw GeoJSON.Invalid(message: "Runtime shader comparison source is missing.")
+            }
+            library = try device.makeLibrary(source: String(contentsOf: url, encoding: .utf8), options: nil)
+        } else {
+            library = try device.makeDefaultLibrary(bundle: .main)
+        }
+        let pipelineStart = LabLog.now
         let pipeline = MTLRenderPipelineDescriptor()
         pipeline.label = "Albers polygon fills"
-        pipeline.vertexFunction = library.makeFunction(name: "albers_fill_vertex")
+        let fillName = ProcessInfo.processInfo.arguments.contains("--metal-pipeline-failure") ? "missing_probe" : "albers_fill_vertex"
+        guard let fillVertex = library.makeFunction(name: fillName) else {
+            throw GeoJSON.Invalid(message: "Metal library is missing the polygon vertex function.")
+        }
+        pipeline.vertexFunction = fillVertex
         pipeline.fragmentFunction = library.makeFunction(name: "albers_fill_fragment")
         pipeline.colorAttachments[0].pixelFormat = .bgra8Unorm
         pipeline.depthAttachmentPixelFormat = .depth32Float
@@ -187,6 +204,7 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         } else {
             strokePipeline = nil
         }
+        let pipelineEnd = LabLog.now
         let depth = MTLDepthStencilDescriptor()
         depth.depthCompareFunction = .less
         depth.isDepthWriteEnabled = true
@@ -221,6 +239,8 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         accessibilityElementsHidden = true
         delegate = self
         LabLog.record("metal_pipeline", ["samples": configuration.samples, "boundaries": configuration.boundaries,
+            "library": runtime ? "runtime" : "compiled", "library_ms": LabLog.milliseconds(pipelineStart - libraryStart),
+            "pipeline_ms": LabLog.milliseconds(pipelineEnd - pipelineStart),
             "elapsed_ms": LabLog.milliseconds(LabLog.now - started)])
     }
 
@@ -245,11 +265,27 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         sceneBytes = buffers.byteCounts.values.reduce(0, +)
         self.layout = layout
         submittedFirst = false
+        announcedReady = false
         presentedFirst = false
         appearance = nil
     }
 
+    func updateLayout(_ panels: [AlbersScene.Panel]) {
+        layout = panels
+        LabLog.record("metal_layout", ["generation": generation, "mesh_bytes": sceneBytes, "commands_in_flight": activeCommands])
+    }
+
+    // Only a successful command with the current presentation ticket can acknowledge this appearance.
+    private var presentationTicket = 0
+    private var acknowledge: (() -> Void)?
+    func expectPresentation(_ completion: @escaping () -> Void) {
+        presentationTicket += 1
+        acknowledge = completion
+    }
+
     func clear() {
+        presentationTicket += 1
+        acknowledge = nil
         generation += 1
         let releasedBytes = sceneBytes
         sceneBytes = 0
@@ -279,6 +315,9 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         var styles: [Style] = []
         var colors: [SIMD4<Float>] = []
         for feature in palette {
+            guard feature.count <= Int(UInt32.max) - colors.count else {
+                throw GeoJSON.Invalid(message: "Palette exceeds the UInt32 style range.")
+            }
             styles.append(Style(offset: UInt32(colors.count), count: UInt32(feature.count)))
             for color in feature {
                 let rgba = color.converted(to: space, intent: .defaultIntent, options: nil)?.components ?? []
@@ -293,7 +332,7 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         styleBuffer = newStyle
         colorBuffer = newColors
         hasTheme = true
-        LabLog.record("metal_style_upload", ["style_bytes": newStyle.length + newColors.length,
+        LabLog.record("metal_style_upload", ["allocated_buffers": 2, "style_bytes": newStyle.length + newColors.length,
             "prepare_ms": LabLog.milliseconds(prepared - start), "copy_ms": LabLog.milliseconds(LabLog.now - prepared)])
     }
 
@@ -393,6 +432,7 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
             }
         }
         encoder.endEncoding()
+        let ticket = presentationTicket
         let stamp = generation
         let first = !submittedFirst
         let operation = appearance
@@ -429,7 +469,18 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
                 self.activeCommands -= 1
                 if self.dirty { self.requestDraw() }
                 guard self.generation == stamp else { return }
-                if let failed { self.onFailure?(failed); return }
+                if let failed {
+                    if self.presentationTicket == ticket { self.onFailure?(failed) }
+                    return
+                }
+                if self.presentationTicket == ticket, let completion = self.acknowledge {
+                    self.acknowledge = nil
+                    completion()
+                    if !self.announcedReady {
+                        self.announcedReady = true
+                        self.onFirstFrame?()
+                    }
+                }
                 if measuring, self.measurementID == windowID, let gpu { self.measurements?.gpu.append(gpu) }
                 if first {
                     var fields: [String: Any] = ["submitted_indices": submittedIndices]
@@ -461,10 +512,11 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
                 "resolve_color_bytes_estimate": pixels * 4, "depth_bytes_estimate": pixels * 4 * config.samples,
                 "multisample_color_bytes_estimate": config.samples > 1 ? pixels * 4 * config.samples : 0]) { _, new in new }
             LabLog.record("metal_first_submit", fields)
-            onFirstFrame?()
         }
         if let operation {
             LabLog.record("metal_appearance_submit", ["operation": operation.name,
+                "cpu_ms": duration, "drawable_ms": acquired, "encode_ms": encode,
+                "before_draw_ms": LabLog.milliseconds(start - operation.start),
                 "elapsed_ms": LabLog.milliseconds(LabLog.now - operation.start)])
         }
         onFrame?(duration)
@@ -473,9 +525,9 @@ final class AlbersMetalSurface: MTKView, MTKViewDelegate {
     private func camera(for buffer: AlbersMetalBuffers.Panel, panel: AlbersScene.Panel) -> Camera {
         let local = panel.local(mapCenter)
         return Camera(center: SIMD2(Float(local.x - buffer.origin.x), Float(local.y - buffer.origin.y)),
-                      viewSize: SIMD2(Float(bounds.width), Float(bounds.height)), scale: Float(scale),
+                      viewSize: SIMD2(Float(bounds.width), Float(bounds.height)), scale: Float(scale * panel.scale),
                       depthScale: 1 / Float(buffer.partCount + 1), strokeWidth: Float(stroke),
-                      selected: selected.map(UInt32.init) ?? .max, hasTheme: hasTheme ? 1 : 0, selectionPass: 0,
+                      selected: selected.map(UInt32.init) ?? .max, hasTheme: hasTheme ? 1 : 0, selectionPass: 0, showsFrame: panel.showsFrame ? 1 : 0,
                       baseColor: useAlternate ? SIMD4(0.23, 0.51, 0.40, 1) : SIMD4(0.29, 0.49, 0.68, 1))
     }
 

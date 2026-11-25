@@ -94,6 +94,18 @@ enum AlbersRegion: CaseIterable {
     }
 }
 
+enum NationalMapProfile: String, CaseIterable {
+    case thematic = "Thematic National"
+    case research = "Equal-Scale Research"
+}
+
+struct NationalInsetComposition {
+    var alaskaScale: CGFloat = 0.32
+    var hawaiiScale: CGFloat = 1.05
+    var westernMargin: CGFloat = 0.025
+    var separation: CGFloat = 0.012
+}
+
 struct AlbersScene {
     struct Preparation {
         let decodedMilliseconds: Double
@@ -112,21 +124,75 @@ struct AlbersScene {
         let feature: Int
         let path: CGPath
         let bounds: CGRect
+
+        // Clip each projected edge to the horizontal strip before finding its southernmost point.
+        // A distant corner of a state's bounding box can otherwise push an island out of the composition.
+        func lowerEdge(in band: ClosedRange<CGFloat>) -> CGFloat? {
+            var previous = CGPoint.zero
+            var first = CGPoint.zero
+            var bottom: CGFloat?
+            func edge(to next: CGPoint) {
+                defer { previous = next }
+                guard max(previous.x, next.x) >= band.lowerBound, min(previous.x, next.x) <= band.upperBound else { return }
+                let dx = next.x - previous.x
+                if dx == 0 { bottom = max(bottom ?? -.infinity, previous.y, next.y); return }
+                let a = min(1, max(0, (band.lowerBound - previous.x) / dx))
+                let b = min(1, max(0, (band.upperBound - previous.x) / dx))
+                bottom = max(bottom ?? -.infinity, previous.y + (next.y - previous.y) * a,
+                             previous.y + (next.y - previous.y) * b)
+            }
+            path.applyWithBlock { pointer in
+                let item = pointer.pointee
+                switch item.type {
+                case .moveToPoint: first = item.points[0]; previous = first
+                case .addLineToPoint: edge(to: item.points[0])
+                case .closeSubpath: edge(to: first)
+                default: break
+                }
+            }
+            return bottom
+        }
+
+        // Search from the box center outward and verify the original even–odd path, including holes.
+        var interiorAnchor: CGPoint? {
+            for radius in 0...8 {
+                for y in -radius...radius {
+                    for x in -radius...radius where max(abs(x), abs(y)) == radius {
+                        let point = CGPoint(x: bounds.midX + CGFloat(x) * bounds.width / 17,
+                                            y: bounds.midY + CGFloat(y) * bounds.height / 17)
+                        if path.contains(point, using: .evenOdd) { return point }
+                    }
+                }
+            }
+            return nil
+        }
     }
 
     struct Panel {
         let region: AlbersRegion
         let parts: [Part]
-        let translation: CGPoint
-        let frame: CGRect
+        var translation: CGPoint
+        var frame: CGRect
+        let geographicBounds: CGRect
+        let researchLocalFrame: CGRect
+        var scale: CGFloat = 1
+        var showsFrame: Bool
         fileprivate let index: AlbersSpatialIndex?
 
         func local(_ point: CGPoint) -> CGPoint {
-            CGPoint(x: point.x - translation.x, y: point.y - translation.y)
+            CGPoint(x: (point.x - translation.x) / scale, y: (point.y - translation.y) / scale)
+        }
+
+        func local(_ rect: CGRect) -> CGRect {
+            CGRect(origin: local(rect.origin), size: CGSize(width: rect.width / scale, height: rect.height / scale))
+        }
+
+        func world(_ point: CGPoint) -> CGPoint {
+            CGPoint(x: point.x * scale + translation.x, y: point.y * scale + translation.y)
         }
 
         func world(_ rect: CGRect) -> CGRect {
-            rect.offsetBy(dx: translation.x, dy: translation.y)
+            CGRect(origin: world(rect.origin), size: CGSize(width: rect.width * scale, height: rect.height * scale))
         }
 
         // The draw order is also the selection stacking order.
@@ -184,6 +250,46 @@ struct AlbersScene {
         }
         let projected = ProcessInfo.processInfo.systemUptime
         let panels = Self.layout(grouped, using: layout, indexed: indexed)
+        return assembled(panels, attributes, Preparation(decodedMilliseconds: decodeMilliseconds,
+            projectedMilliseconds: (projected - started) * 1_000,
+            indexedMilliseconds: (ProcessInfo.processInfo.systemUptime - projected) * 1_000))
+    }
+
+    // Compose from the cached research scene. Paths and spatial indexes use copy-on-write storage.
+    func composed(_ profile: NationalMapProfile, using config: NationalInsetComposition = .init()) -> Self {
+        guard profile == .thematic else { return self }
+        let mainland = panels.first { $0.region == .mainland }
+        let width = mainland?.frame.width ?? panels.map { $0.geographicBounds.width }.max() ?? 1
+        let height = mainland?.frame.height ?? 0
+        var x = mainland == nil ? 0 : width * config.westernMargin
+        let gap = width * config.separation
+        var result = panels
+        for i in result.indices where result[i].region != .mainland {
+            let alaska = result[i].region == .alaska
+            let factor = alaska ? config.alaskaScale : config.hawaiiScale
+            let box = result[i].geographicBounds
+            var top = height * (alaska ? 0.78 : 0.89)
+            // Clear even unusual historical coastlines. Only parts in the inset's horizontal band matter.
+            if let mainland {
+                let band = CGRect(x: x, y: mainland.frame.minY, width: box.width * factor, height: height)
+                let localBand = mainland.local(band)
+                for j in mainland.visible(in: localBand) {
+                    let part = mainland.parts[j]
+                    guard mainland.world(part.bounds).maxY + gap > top,
+                          let bottom = part.lowerEdge(in: localBand.minX...localBand.maxX) else { continue }
+                    top = max(top, mainland.world(CGPoint(x: 0, y: bottom)).y + gap)
+                }
+            }
+            result[i].scale = factor
+            result[i].translation = CGPoint(x: x - box.minX * factor, y: top - box.minY * factor)
+            result[i].frame = result[i].world(box)
+            result[i].showsFrame = false
+            x = result[i].frame.maxX + gap
+        }
+        return Self.assembled(result, properties, preparation)
+    }
+
+    private static func assembled(_ panels: [Panel], _ attributes: [[String: String]], _ preparation: Preparation) -> Self {
         var frames = Array(repeating: CGRect.null, count: attributes.count)
         for panel in panels {
             for part in panel.parts {
@@ -198,9 +304,7 @@ struct AlbersScene {
         }
         return Self(panels: panels, properties: attributes,
                     bounds: panels.reduce(.null) { $0.union($1.frame) },
-                    preparation: Preparation(decodedMilliseconds: decodeMilliseconds,
-                                             projectedMilliseconds: (projected - started) * 1_000,
-                                             indexedMilliseconds: (ProcessInfo.processInfo.systemUptime - projected) * 1_000),
+                    preparation: preparation,
                     featureFrames: frames, stateFrames: states)
     }
 
@@ -267,7 +371,8 @@ struct AlbersScene {
             let frame = CGRect(x: x, y: y, width: box.width + 2 * padding, height: box.height + padding + header)
             return Panel(region: region, parts: shapes,
                          translation: CGPoint(x: x + padding - box.minX, y: y + header - box.minY), frame: frame,
-                         index: indexed ? AlbersSpatialIndex(shapes.map(\.bounds)) : nil)
+                         geographicBounds: box, researchLocalFrame: CGRect(x: box.minX - padding, y: box.minY - header,
+                            width: frame.width, height: frame.height), showsFrame: region != .mainland, index: indexed ? AlbersSpatialIndex(shapes.map(\.bounds)) : nil)
         }
 
         let mainland = panel(.mainland, x: 0, y: 0)
