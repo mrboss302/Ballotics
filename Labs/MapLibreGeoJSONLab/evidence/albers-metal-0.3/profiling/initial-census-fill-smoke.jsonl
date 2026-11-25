@@ -1,0 +1,10 @@
+{"app_ms":1.5,"event":"app_init"}
+{"app_ms":373.80000000000001,"before_validation_footprint_mib":36.065200805664062,"before_validation_rss_mib":228.75,"dataset":"Counties","event":"validation_start"}
+{"app_ms":1530.5,"dataset":"Counties","decode_ms":277.5,"event":"geography_decode_validate","projected_from_same_decode":true,"validation_ms":365.5}
+{"after_footprint_mib":87.09649658203125,"after_rss_mib":281.734375,"app_ms":1530.8,"before_footprint_mib":36.112075805664062,"before_rss_mib":228.921875,"elapsed_ms":1155,"event":"geography_preparation_memory","phase":"validation","sampled_peak_footprint_mib":87.09649658203125,"sampled_peak_rss_mib":281.734375}
+{"after_validation_footprint_mib":87.11212158203125,"after_validation_rss_mib":281.75,"app_ms":1530.9000000000001,"dataset":"Counties","event":"validation_end","validation_ms":1157.0999999999999}
+{"app_ms":1533.2,"cache_hit":true,"dataset":"Counties","decode_ms":277.5,"elapsed_ms":0.80000000000000004,"event":"albers_geometry_ready","features":3144,"index_layout_ms":4.461625125259161,"positions":227438,"projection_ms":506.31912495009601}
+{"app_ms":2520.8000000000002,"boundaries":false,"elapsed_ms":986.60000000000002,"event":"metal_pipeline","samples":1}
+{"after_footprint_mib":101.11214447021484,"after_rss_mib":269.96875,"app_ms":2727.6999999999998,"before_footprint_mib":77.83087158203125,"before_rss_mib":246.90625,"boundary_bytes":5799592,"elapsed_ms":205.5,"event":"metal_mesh_ready","features":3144,"index_bytes":2565000,"max_float_error_m":0.13459246874469707,"part_bytes":27592,"parts":3446,"phase":"metal_mesh","prepare_ms":202,"sampled_peak_footprint_mib":101.11214447021484,"sampled_peak_rss_mib":269.96875,"segments":220600,"tessellation_ms":129.59999999999999,"triangles":213746,"unique_segments":126298,"upload_ms":4.0999999999999996,"vertex_bytes":3529600,"vertices":220592}
+{"app_ms":2737.9000000000001,"cpu_ms":2.6000000000000001,"draw_calls":3,"encode_ms":0.10000000000000001,"event":"metal_first_submit","submitted_indices":641250}
+{"app_ms":2746.8000000000002,"event":"metal_first_complete","gpu_ms":7.7000000000000002,"submitted_indices":641250}

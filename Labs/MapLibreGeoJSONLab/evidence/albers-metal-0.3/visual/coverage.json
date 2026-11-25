@@ -1,0 +1,44 @@
+{
+  "all": {
+    "cg_fill_pixels": 333876,
+    "metal_fill_pixels": 354808,
+    "intersection_over_union": 0.9379296566123854,
+    "cg_beyond_3px_percent": 0.0005990247876457127,
+    "metal_beyond_3px_percent": 0.0011273702960474398
+  },
+  "mainland": {
+    "cg_fill_pixels": 268233,
+    "metal_fill_pixels": 288146,
+    "intersection_over_union": 0.9277683264440618,
+    "cg_beyond_3px_percent": 0.00037281020605220086,
+    "metal_beyond_3px_percent": 0.00034704628903403135
+  },
+  "alaska": {
+    "cg_fill_pixels": 65041,
+    "metal_fill_pixels": 66041,
+    "intersection_over_union": 0.9820067739204065,
+    "cg_beyond_3px_percent": 0.001537491735981919,
+    "metal_beyond_3px_percent": 0.004542632607016853
+  },
+  "hawaii": {
+    "cg_fill_pixels": 602,
+    "metal_fill_pixels": 621,
+    "intersection_over_union": 0.9662379421221865,
+    "cg_beyond_3px_percent": 0.0,
+    "metal_beyond_3px_percent": 0.0
+  },
+  "mainland_unique_colors": {
+    "cg": 1225,
+    "metal_1x": 23,
+    "metal_4x": 29
+  },
+  "detail": {
+    "width": 1074,
+    "height": 1732,
+    "selected_cg_pixels": 11998,
+    "selected_metal_pixels": 12075,
+    "selected_mask_iou": 0.9926330601771377,
+    "exact_rgb_fraction": 0.9693334150463829,
+    "rgb_difference_at_most_8_fraction": 0.9836095449443276
+  }
+}

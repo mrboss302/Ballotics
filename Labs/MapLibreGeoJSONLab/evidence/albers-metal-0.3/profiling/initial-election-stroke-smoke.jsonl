@@ -1,0 +1,17 @@
+{"app_ms":5.4000000000000004,"event":"app_init"}
+{"app_ms":149.69999999999999,"event":"election_request","mode":"County results","year":2024}
+{"app_ms":151.09999999999999,"event":"election_task_enter","queue_ms":1.3999999999999999,"year":2024}
+{"app_ms":201.30000000000001,"elapsed_ms":51.5,"event":"election_store_ready","installed":true}
+{"app_ms":397.5,"elapsed_ms":50.399999999999999,"event":"election_presentation_ready","year":2024}
+{"app_ms":397.80000000000001,"elapsed_ms":196.30000000000001,"event":"election_query_ready","mode":"County results","presentation_cached":false,"year":2024}
+{"app_ms":1161.9000000000001,"dataset":"Presidential Elections","decode_ms":107.59999999999999,"event":"geography_decode_validate","projected_from_same_decode":true,"validation_ms":326.60000000000002}
+{"after_footprint_mib":101.39341735839844,"after_rss_mib":306.375,"app_ms":1162.4000000000001,"before_footprint_mib":50.721473693847656,"before_rss_mib":253.75,"elapsed_ms":764.29999999999995,"event":"geography_preparation_memory","phase":"validation","sampled_peak_footprint_mib":101.39341735839844,"sampled_peak_rss_mib":306.375}
+{"app_ms":1162.5,"elapsed_ms":764.70000000000005,"event":"election_geography_ready","mode":"County results","reused_source":false,"year":2024}
+{"app_ms":1162.7,"elapsed_ms":1013,"election_switch_footprint_mib":101.39341735839844,"election_switch_rss_mib":306.375,"event":"election_switch","mode":"County results","year":2024}
+{"app_ms":1195.2,"cache_hit":true,"dataset":"Presidential Elections","decode_ms":107.59999999999999,"elapsed_ms":1.8999999999999999,"event":"albers_geometry_ready","features":3153,"index_layout_ms":2.0004583057016134,"positions":338290,"projection_ms":327.28425017558038}
+{"app_ms":1195.5,"elapsed_ms":2.1000000000000001,"event":"election_albers_projection","mode":"County results","year":2024}
+{"app_ms":1519.5999999999999,"boundaries":true,"elapsed_ms":322.69999999999999,"event":"metal_pipeline","samples":4}
+{"app_ms":1717.5,"copy_ms":0.20000000000000001,"event":"metal_style_upload","prepare_ms":4.9000000000000004,"style_bytes":75672}
+{"after_footprint_mib":113.31533813476562,"after_rss_mib":318.203125,"app_ms":1717.9000000000001,"before_footprint_mib":84.940315246582031,"before_rss_mib":282.078125,"boundary_bytes":8958376,"elapsed_ms":192,"event":"metal_mesh_ready","features":3153,"index_bytes":3919944,"max_float_error_m":0.13459246874469707,"part_bytes":31112,"parts":3886,"phase":"metal_mesh","prepare_ms":188.40000000000001,"sampled_peak_footprint_mib":113.31533813476562,"sampled_peak_rss_mib":318.203125,"segments":334394,"tessellation_ms":134.30000000000001,"triangles":326658,"unique_segments":233230,"upload_ms":4,"vertex_bytes":5350288,"vertices":334385}
+{"app_ms":1724.4000000000001,"cpu_ms":2.6000000000000001,"draw_calls":6,"encode_ms":0.10000000000000001,"event":"metal_first_submit","submitted_indices":979986,"submitted_segments":233230}
+{"app_ms":1786.4000000000001,"event":"metal_first_complete","gpu_ms":13.699999999999999,"submitted_indices":979986}

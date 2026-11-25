@@ -1,0 +1,19 @@
+{
+  "scope": "Samples during the steady 30-minute route, outside the matched benchmark cohort",
+  "metal_system_trace": {
+    "requested_seconds": 8,
+    "unattributed_command_completion_rows": 15002,
+    "application_submission_rows": 0,
+    "presented_handler_rows": 0,
+    "current_allocated_size_rows": 0
+  },
+  "time_profiler": {
+    "requested_seconds": 5,
+    "sample_rows": 790,
+    "main_thread_sample_rows": 640,
+    "main_thread_rows_with_AlbersMetalSurface_in_stack": 231,
+    "main_thread_rows_with_CA_transaction_in_stack": 92,
+    "sample_period_ms": 1,
+    "stack_categories_can_overlap": true
+  }
+}

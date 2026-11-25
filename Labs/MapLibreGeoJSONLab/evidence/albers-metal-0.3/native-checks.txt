@@ -1,0 +1,17 @@
+Xcode 26.3 (17C529), Release
+Host Apple M4, macOS 15.6
+Simulator runtime iOS 26.3.1 (23D8133)
+
+Native test flow results
+PASS Metal Census navigation, resize, background/foreground and selection (iPhone 17e)
+PASS Metal county candidate and margin styling, CT/AK inspection, and 2020/2024 mesh reuse (iPhone 17 Pro final palette check)
+PASS Metal whole-scene fallback and selected-feature inspection using the bundled synthetic fixture (iPhone 17e)
+PASS Metal historical election boundaries, 2000 reuse, and historical county date switching (iPhone 17e)
+PASS MapLibre bundled geometry navigation and selection control (iPhone 17e)
+PASS Core Graphics margin, geographic hit/inspection and palette control (iPhone 17 Pro final palette check)
+
+The earlier Files-picker attempt skipped when XCTest recreated the simulator data container. The bundled fixture uses the ordinary importer and passed.
+An earlier Core Graphics control attempt lost software-keyboard focus. The palette control now uses geographic picking for inspector validation. The separate Metal navigation and result flows exercise accessible search.
+A subsequent compact-menu check found that the new renderer row pushed Reported margin out of view in the inline palette. The Map colors submenu passed the final Core Graphics and Metal palette tests.
+Both paired physical devices were unavailable. Presented frame timing, VoiceOver and system Reduce Motion on physical hardware remain open.
+PASS exact final simulator Release build and unsigned device Release build

@@ -1,0 +1,7 @@
+{"app_ms":19.899999999999999,"event":"app_init"}
+{"app_ms":596.29999999999995,"before_validation_footprint_mib":36.112075805664062,"before_validation_rss_mib":228.8125,"dataset":"Lab-Metal-Fallback.geojson","event":"import_start"}
+{"after_validation_footprint_mib":36.252700805664062,"after_validation_rss_mib":229.65625,"app_ms":604.5,"copy_validation_ms":2.2999999999999998,"dataset":"Lab-Metal-Fallback.geojson","event":"import_end"}
+{"app_ms":631.5,"cache_hit":false,"dataset":"Imported","decode_ms":0.25120819918811321,"elapsed_ms":5.5,"event":"albers_geometry_ready","features":2,"index_layout_ms":0.025124987587332726,"positions":9,"projection_ms":2.9413751326501369}
+{"app_ms":660.5,"boundaries":true,"elapsed_ms":27.199999999999999,"event":"metal_pipeline","samples":4}
+{"app_ms":666.70000000000005,"event":"metal_fallback","reason":"Feature fixture-collapsed, part 2. libtess2 produced no valid triangles (status 0)."}
+{"app_ms":670,"draw_ms":0.40000000000000002,"event":"albers_first_draw","features":2,"first_draw_footprint_mib":31.612075805664062,"first_draw_rss_mib":200.109375,"geometry_request_ms":73.799999999999997}

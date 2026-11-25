@@ -166,3 +166,38 @@ xcrun swiftc -O -module-cache-path "$work/modules" \
 ```
 
 [Audit](ALBERS_RENDERER_ARCHITECTURE_AUDIT.md) · [Architecture](ALBERS_RENDERING_ARCHITECTURE.md) · [Performance](ALBERS_PERFORMANCE_BENCHMARKS.md) · [Cartography](ALBERS_CARTOGRAPHIC_VALIDATION.md) · [Android study](ALBERS_CROSS_PLATFORM_STUDY.md) · [Qualification](ALBERS_QUALIFICATION_REPORT.md)
+
+## Albers Metal Rendering Lab 0.3
+
+Choose **Map view → Albers Metal**. The menu retains **Albers Core Graphics** and **MapLibre** as controls. The Metal backend uses the existing regional projection and camera, geographic search, inspector, electoral and county coloring, and historical snapshot selection. It uses 4× multisampling by default. An optional renderer switch lets you inspect imported geometry with the Metal lab; MapLibre remains the default for imports from the original renderers. A Metal preparation failure displays the original projected paths and identifies the reason in the status line.
+
+Build the same Release scheme used for 0.2. Run each measurement serially on an already booted iPhone simulator. The comparison and visual modes use the app bundle built from this branch. Supply your locally authorized historical archive to include the historical source changes in the stress route.
+
+```sh
+lab=Labs/MapLibreGeoJSONLab
+bash "$lab/Tests/benchmark-metal.sh" "$SIMULATOR_ID" "$app" "$work/metal-comparison"
+METAL_BENCHMARK_MODE=visual bash "$lab/Tests/benchmark-metal.sh" \
+  "$SIMULATOR_ID" "$app" "$work/metal-visual"
+METAL_BENCHMARK_MODE=stress bash "$lab/Tests/benchmark-metal.sh" \
+  "$SIMULATOR_ID" "$app" "$work/metal-stress" "$HISTORICAL_COUNTY_ARCHIVE"
+METAL_BENCHMARK_MODE=cancellation bash "$lab/Tests/benchmark-metal.sh" \
+  "$SIMULATOR_ID" "$app" "$work/metal-cancellation" "$HISTORICAL_COUNTY_ARCHIVE"
+python3 "$lab/Tests/summarize-metal.py" comparison "$work/metal-comparison"
+python3 "$lab/Tests/summarize-metal.py" stress "$work/metal-stress/stress.jsonl"
+python3 "$lab/Tests/compare-metal-coverage.py" "$work/metal-visual/counties-cg.png" \
+  "$work/metal-visual/counties-metal.png" "$work/metal-visual/counties-metal-1x.png"
+```
+
+Use Pillow and NumPy for the screenshot comparison. The primary cohort defaults to three fresh processes for each of five draw configurations. `METAL_TRIALS` changes that repetition count. The stress run defaults to 1,800 seconds. The route measures callback and command timings independently of presentation and logs to the standalone app's Caches directory. On physical hardware, a Release build with `--measure --albers-metal --election-year 2024 --county-results --albers-route` records real drawable presentation timestamps when available. `--metal-fill-only` and `--metal-samples-1` isolate the boundary and antialiasing costs.
+
+Run the host tessellation checks on a Mac from the repository root. Append locally generated historical snapshots to the arguments. Use the existing temporal publishing script to generate the dates listed in the cartographic report. To compare Earcut as well, set `METAL_EARCUT_ROOT` to a clean checkout of the revision listed in the tessellation report.
+
+```sh
+bash "$lab/Tests/check-metal-mesh.sh" cb_2024_us_county_5m.json \
+  "$app/ElectionResearch/county-geometry-2024.geojson" \
+  cb_2024_us_state_5m.json cb_2024_us_cd119_5m.json
+```
+
+For native simulator tests, install the Release lab first, then stage your historical archive in its Documents folder. Use the standalone `MapLibreGeoJSONLab` scheme. The bundled `--albers-metal --metal-fallback-probe` fixture checks that an identified collapsed polygon causes a whole-scene fallback and keeps another polygon selectable.
+
+[Tessellation](METAL_TESSELLATION_STUDY.md) · [Architecture](METAL_RENDERER_ARCHITECTURE.md) · [Benchmarks](METAL_PERFORMANCE_BENCHMARKS.md) · [Cartography](METAL_CARTOGRAPHIC_VALIDATION.md) · [Lifetime](METAL_RESOURCE_LIFETIME.md) · [Android](METAL_CROSS_PLATFORM_STUDY.md) · [Qualification](METAL_QUALIFICATION_REPORT.md)

@@ -1,0 +1,9 @@
+{
+  "width": 1074,
+  "height": 1732,
+  "selected_cg_pixels": 11998,
+  "selected_metal_pixels": 12075,
+  "selected_mask_iou": 0.9926330601771377,
+  "exact_rgb_fraction": 0.9693334150463829,
+  "rgb_difference_at_most_8_fraction": 0.9836095449443276
+}

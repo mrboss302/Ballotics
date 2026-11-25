@@ -1,0 +1,15 @@
+{"app_ms":1.2,"event":"app_init"}
+{"app_ms":356.69999999999999,"before_validation_footprint_mib":36.174598693847656,"before_validation_rss_mib":227.953125,"dataset":"Counties","event":"validation_start"}
+{"app_ms":1428.3,"dataset":"Counties","decode_ms":151.5,"event":"geography_decode_validate","projected_from_same_decode":true,"validation_ms":422.69999999999999}
+{"after_footprint_mib":86.877769470214844,"after_rss_mib":279.265625,"app_ms":1428.5,"before_footprint_mib":36.205848693847656,"before_rss_mib":228.125,"elapsed_ms":1069.5999999999999,"event":"geography_preparation_memory","phase":"validation","sampled_peak_footprint_mib":86.877769470214844,"sampled_peak_rss_mib":279.265625}
+{"after_validation_footprint_mib":86.893394470214844,"after_validation_rss_mib":279.28125,"app_ms":1428.5999999999999,"dataset":"Counties","event":"validation_end","validation_ms":1071.9000000000001}
+{"app_ms":1434,"cache_hit":true,"dataset":"Counties","decode_ms":151.5,"elapsed_ms":1.5,"event":"albers_geometry_ready","features":3144,"index_layout_ms":4.2462500277906656,"positions":227438,"projection_ms":490.09912484325469}
+{"app_ms":1456.7,"boundaries":true,"elapsed_ms":19.699999999999999,"event":"metal_pipeline","samples":4}
+{"after_footprint_mib":100.22154235839844,"after_rss_mib":270.1875,"app_ms":1690.9000000000001,"before_footprint_mib":77.034019470214844,"before_rss_mib":237.46875,"boundary_bytes":5799592,"elapsed_ms":232.90000000000001,"event":"metal_mesh_ready","features":3144,"index_bytes":2565000,"max_float_error_m":0.13459246874469707,"part_bytes":27592,"parts":3446,"phase":"metal_mesh","prepare_ms":229.59999999999999,"revision":0.35670812497846782,"sampled_peak_footprint_mib":100.22154235839844,"sampled_peak_rss_mib":270.1875,"segments":220600,"tessellation_ms":142.5,"triangles":213746,"unique_segments":126298,"upload_ms":3.8999999999999999,"vertex_bytes":3529600,"vertices":220592}
+{"acquire_ms":2.6000000000000001,"app_ms":1696.3,"cpu_ms":2.7000000000000002,"depth_bytes_estimate":28291680,"draw_calls":6,"drawable_height":1593,"drawable_width":1110,"encode_ms":0.10000000000000001,"event":"metal_first_submit","first_submit_footprint_mib":89.049667358398438,"first_submit_rss_mib":260.671875,"multisample_color_bytes_estimate":28291680,"referenced_vertices":220600,"resolve_color_bytes_estimate":7072920,"samples":4,"submitted_indices":641250,"submitted_segments":126298}
+{"app_ms":1696.5,"event":"metal_geometry_submit","features":3144,"geometry_request_ms":1339.8,"revision":0.35670812497846782}
+{"app_ms":1723.2,"event":"metal_first_complete","gpu_ms":9,"submitted_indices":641250}
+{"active":false,"app_ms":8381.8999999999996,"event":"metal_scene_activity","submissions":1}
+{"active":true,"app_ms":16004.700000000001,"event":"metal_scene_activity","submissions":1}
+{"active":false,"app_ms":21989.299999999999,"event":"metal_scene_activity","submissions":2}
+{"active":true,"app_ms":31638.200000000001,"event":"metal_scene_activity","submissions":2}
