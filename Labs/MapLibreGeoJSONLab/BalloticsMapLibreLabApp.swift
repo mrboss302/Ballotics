@@ -89,7 +89,7 @@ final class LabState: ObservableObject {
 
     private func openElectionStore() async throws -> ElectionStore {
         if let electionStoreTask { return try await electionStoreTask.value }
-        let url = Self.documents.appendingPathComponent("PresidentialResearch-v1-0.1.sqlite")
+        let url = Self.documents.appendingPathComponent("PresidentialResults.sqlite")
         let work = Task.detached(priority: .userInitiated) {
             try FileManager.default.createDirectory(at: url.deletingLastPathComponent(), withIntermediateDirectories: true)
             return try ElectionStore.open(at: url)

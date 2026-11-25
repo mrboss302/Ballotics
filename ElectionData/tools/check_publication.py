@@ -52,6 +52,8 @@ def main():
                 ct = [r for r in value["localResults"] if r["stateCode"] == "09" and r["geometryKey"]]
                 ak = [r for r in value["localResults"] if r["stateCode"] == "02"]
                 assert len(ct) == 8 and len(ak) == 41 and sum(r["geometryKey"] is not None for r in ak) == 40
+                jackson = next(r for r in value["localResults"] if r["sourceCode"] == "29095")
+                assert jackson["geometryKey"] is None and jackson["joinStatus"] == "overlappingReportingJurisdiction"
                 district99 = next(r for r in ak if r["sourceCode"] == "02099")
                 assert district99["geometryKey"] is None
                 if year >= 2016:

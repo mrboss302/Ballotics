@@ -282,7 +282,8 @@ def county_join(year, state, name, code, index):
         key = f"connecticut-traditional:{code}"
         require(key in index, f"Connecticut polygon {name}")
         return key, "traditional"
-    if state == "29" and name == "Kansas City":
+    # The two Jackson County election boards report separately. The county polygon covers both areas.
+    if state == "29" and (name == "Kansas City" or code == "29095"):
         return None, "overlappingReportingJurisdiction"
     if year < WITHHOLD_BEFORE.get(code, 0):
         return None, "boundaryChange"
