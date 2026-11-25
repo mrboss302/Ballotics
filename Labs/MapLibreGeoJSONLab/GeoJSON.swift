@@ -7,6 +7,7 @@ enum Geography: String, CaseIterable, Identifiable {
     case states = "States"
     case imported = "Imported"
     case historical = "Historical Counties"
+    case presidential = "Presidential Elections"
 
     var id: String { rawValue }
 
@@ -15,7 +16,7 @@ enum Geography: String, CaseIterable, Identifiable {
         case .districts: return "cb_2024_us_cd119_5m"
         case .counties: return "cb_2024_us_county_5m"
         case .states: return "cb_2024_us_state_5m"
-        case .imported, .historical: return nil
+        case .imported, .historical, .presidential: return nil
         }
     }
 
@@ -24,7 +25,7 @@ enum Geography: String, CaseIterable, Identifiable {
         case .districts: return (441, 4, "CD119FP")
         case .counties: return (3235, 5, "COUNTYFP")
         case .states: return (56, 2, nil)
-        case .imported, .historical: return nil
+        case .imported, .historical, .presidential: return nil
         }
     }
 }

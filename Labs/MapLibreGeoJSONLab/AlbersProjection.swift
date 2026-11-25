@@ -74,7 +74,7 @@ enum AlbersRegion: CaseIterable {
     }
 
     static func locate(properties: [String: Any], outer: [[Double]]) -> Self? {
-        let jurisdiction = (properties["STATE_TERR"] as? String ?? "").lowercased()
+        let jurisdiction = (properties["STATE_TERR"] as? String ?? properties["NAME"] as? String ?? "").lowercased()
         switch properties["STATEFP"] as? String {
         case "02": return .alaska
         case "15": return .hawaii
@@ -84,6 +84,7 @@ enum AlbersRegion: CaseIterable {
         }
         if jurisdiction.contains("alaska") { return .alaska }
         if jurisdiction.contains("hawai") { return .hawaii }
+        if properties["TERR_TYPE"] != nil { return .mainland }
         // Preserve geographic placement for historical territorial records
         // whose jurisdiction strings predate statehood.
         guard let point = outer.first else { return .mainland }

@@ -33,7 +33,11 @@ struct HistoricalRequest: Equatable, Sendable {
     let provenance: String
 
     init(_ date: String, provenance: String = "Research snapshot") throws {
-        day = try HistoricalDay(date)
+        self.init(day: try HistoricalDay(date), provenance: provenance)
+    }
+
+    init(day: HistoricalDay, provenance: String) {
+        self.day = day
         self.provenance = provenance
     }
 

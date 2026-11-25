@@ -74,7 +74,7 @@ actor HistoricalStore {
         let start = LabLog.now
         let snapshot = try index.snapshot(on: request.day)
         guard snapshot.summary.features > 0 else {
-            throw GeoJSON.Invalid(message: "No county boundaries are recorded for \(request.day).")
+            throw GeoJSON.Invalid(message: "No boundaries are recorded for \(request.day).")
         }
         let destination = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString + ".geojson")
         try snapshot.data.write(to: destination, options: .atomic)

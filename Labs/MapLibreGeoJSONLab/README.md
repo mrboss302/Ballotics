@@ -86,7 +86,7 @@ Choose **Map view → Albers equal area** for the national overview. Alaska and 
 
 The overview uses ellipsoidal Albers on WGS 84 with regional parameters. The lower 48 use standard parallels 29.5° and 45.5° and a central meridian of −96°. Alaska uses 55° and 65° at −154°, with longitudes wrapped relative to that meridian to keep the Aleutians together. Hawaii uses 8° and 18° at −157°. Translation into the insets keeps their relative areas comparable. [USGS Albers parameters](https://pubs.usgs.gov/of/1990/0539a/report.pdf) · [USGS Hawaii WGS 84 specification](https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/files/LSDS-2309%20Land%20Change%20Monitoring%2C%20Assessment%2C%20and%20Projection%20%28LCMAP%29%20Hawaii%20Collection%201.0%20Data%20Format%20Control%20Book%20%28DFCB%29%20-v1.0%202021_12_14.pdf).
 
-The Albers overview supports the bundled datasets and historical date snapshots. Alaska and Hawaii insets appear when those polygons are present. A new dataset or snapshot fits its projected extent. The MapLibre view is the default and provides the full coverage of bundled territories and arbitrary imports. Use **Map view → MapLibre** to return to that renderer. Existing MapLibre benchmarks use the MapLibre view. Both views read the original local geometry or the active historical snapshot.
+The Albers overview supports the bundled datasets and historical date snapshots. Alaska and Hawaii insets appear when those polygons are present. A new dataset or snapshot fits its projected extent. The MapLibre view opens by default for the census datasets and provides the full coverage of bundled territories and arbitrary imports. Use **Map view → MapLibre** to return to that renderer. Existing MapLibre benchmarks use the MapLibre view. Both views read the original local geometry or the active historical snapshot.
 
 Run the standalone projection check from the repository root. The optional final argument is a published `2000-01-01` snapshot.
 
@@ -97,4 +97,22 @@ xcrun swiftc -O -module-cache-path "$work/modules" \
   "$lab/GeoJSON.swift" "$lab/AlbersProjection.swift" "$lab/Tests/AlbersChecks.swift" \
   -o "$work/check-albers"
 "$work/check-albers" "$PWD"
+```
+
+## Presidential election boundaries
+
+Choose **Presidential Elections** from the dataset menu. The lab opens the latest election in Albers. Tap the year to browse or search presidential elections from 1788 onward. The map shows every state, territory, and other jurisdiction that the source records as active on the displayed boundary date. Tap a polygon to inspect its name, jurisdiction type, source ID, validity dates, and citation. [Ballotics state and territory archive](https://github.com/mrboss302/Ballotics/blob/master/US_HistStateTerr_Gen05.json) · [Newberry Atlas national data](https://publications.newberry.org/ahcb/pages/United_States.html).
+
+- **1788** uses February 4, 1789, the day Congress scheduled the electors to vote in the first presidential election. **1792–1844** use the scheduled Electoral College voting day, the first Wednesday in December. [September 1788 resolution](https://tile.loc.gov/storage-services/service/rbc/bdsdcc/2410h/2410h.pdf) · [1792 election law](https://www.govinfo.gov/content/pkg/STATUTE-1/pdf/STATUTE-1-Pg239.pdf).
+- **1848–2000** use federal Election Day, the first Tuesday after the first Monday in November. **2004 onward** show the chosen Election Day and reuse the November 7, 2000 geometry. [1845 law establishing a uniform federal Election Day](https://www.govinfo.gov/content/pkg/STATUTE-5/pdf/STATUTE-5-Pg721.pdf).
+
+Verify all election snapshots against the archive and check the historical insets from the repository root.
+
+```sh
+lab=Labs/MapLibreGeoJSONLab
+work=$(mktemp -d)
+xcrun swiftc -O -module-cache-path "$work/modules" \
+  "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/PresidentialElection.swift" \
+  "$lab/AlbersProjection.swift" "$lab/Tests/PresidentialElectionChecks.swift" -o "$work/election-checks"
+"$work/election-checks" US_HistStateTerr_Gen05.json
 ```

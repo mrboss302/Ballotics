@@ -179,6 +179,69 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
     }
 
     @MainActor
+    func testPresidentialElectionBoundaryPicker() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--dataset", "states", "--measure"]
+        app.launch()
+        waitForGeometry("56", in: app)
+        choose("Presidential Elections", in: app)
+
+        let map = app.descendants(matching: .any)["albers-map"].firstMatch
+        XCTAssertTrue(map.waitForExistence(timeout: 8))
+        let date = app.staticTexts["snapshot-date"]
+        let years = app.buttons["election-years"]
+        func searchForYear(_ year: Int) {
+            years.tap()
+            let search = app.searchFields["Search election years"]
+            search.tap()
+            search.typeText(String(year))
+            app.buttons["election-year-\(year)"].tap()
+        }
+        func capture(_ name: String) {
+            let attachment = XCTAttachment(screenshot: app.screenshot())
+            attachment.name = name
+            attachment.lifetime = .keepAlways
+            add(attachment)
+        }
+        let ready = XCTNSPredicateExpectation(
+            predicate: NSPredicate(format: "label == %@", "51 features · Albers equal area"),
+            object: app.staticTexts["load-status"])
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 8), .completed)
+        if years.label != "Election year 2024" { searchForYear(2024) }
+        XCTAssertEqual(years.label, "Election year 2024")
+        XCTAssertEqual(date.label, "Election 2024-11-05 · 2000 boundaries (2000-11-07)")
+        capture("2024 using 2000 boundaries")
+
+        view("Alaska", in: app)
+        let alaska = map.screenshot().pngRepresentation
+        searchForYear(2004)
+        XCTAssertEqual(years.label, "Election year 2004")
+        XCTAssertEqual(date.label, "Election 2004-11-02 · 2000 boundaries (2000-11-07)")
+        XCTAssertEqual(map.screenshot().pngRepresentation, alaska)
+
+        searchForYear(1788)
+        let firstElection = XCTNSPredicateExpectation(
+            predicate: NSPredicate(format: "label == %@", "16 features · Albers equal area"),
+            object: app.staticTexts["load-status"])
+        XCTAssertEqual(XCTWaiter.wait(for: [firstElection], timeout: 8), .completed)
+        XCTAssertEqual(years.label, "Election year 1788")
+        XCTAssertEqual(date.label, "1789-02-04 · Scheduled Electoral College vote")
+        XCTAssertNotEqual(map.screenshot().pngRepresentation, alaska)
+        capture("1788 using February 1789 boundaries")
+
+        view("MapLibre", in: app)
+        waitForGeometry("16", in: app)
+        let mercator = app.descendants(matching: .any)["geometry-map"].firstMatch
+        mercator.coordinate(withNormalizedOffset: CGVector(dx: 0.75, dy: 0.5)).tap()
+        let inspection = app.buttons["inspection"]
+        waitForSelection(inspection)
+        inspection.tap()
+        XCTAssertTrue(app.staticTexts["TERR_TYPE"].exists)
+        XCTAssertTrue(app.staticTexts["ID_NUM"].exists)
+    }
+
+    @MainActor
     func testRapidHistoricalRequestsEndAtLatestDate() {
         continueAfterFailure = false
         let app = XCUIApplication()

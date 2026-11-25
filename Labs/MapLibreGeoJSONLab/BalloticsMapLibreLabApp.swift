@@ -25,7 +25,7 @@ struct Inspection {
         let title = ["NAMELSAD", "FULL_NAME", "NAME", "name", "GEOID"]
             .compactMap { attributes[$0] as? String }.first(where: { !$0.isEmpty }) ?? "Selected polygon"
         let priority = ["GEOID", "STATE_NAME", "STATE_TERR", "STUSPS", "STATEFP", "NAMELSAD", "NAME",
-                        "ID_NUM", "ID", "VERSION", "START_DATE", "END_DATE",
+                        "TERR_TYPE", "ID_NUM", "ID", "VERSION", "START_DATE", "END_DATE",
                         "CD119FP", "COUNTYFP", "LSAD", "CNTY_TYPE", "FIPS", "CHANGE", "CITATION"]
         let sorted = fields.sorted {
             let lhs = priority.firstIndex(of: $0.key) ?? priority.count
@@ -56,7 +56,10 @@ final class LabState: ObservableObject {
 
     @Published private(set) var historicalPending = false
     @Published private(set) var historicalRequest: HistoricalRequest?
+    @Published private(set) var election: PresidentialElection?
+    let elections = PresidentialElection.available()
     private var history: HistoricalStore?
+    private var electionHistory: HistoricalStore?
 
     static var documents: URL {
         FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -103,6 +106,10 @@ final class LabState: ObservableObject {
     func choose(_ next: Geography) {
         if next == .historical {
             applyHistory(historicalRequest ?? HistoricalRequest.presets[0])
+            return
+        }
+        if next == .presidential {
+            if let election = election ?? elections.first { applyElection(election) }
             return
         }
         guard geography != next || dataset?.geography != next || historicalPending else { return }
@@ -212,14 +219,42 @@ final class LabState: ObservableObject {
 
     func applyHistory(_ request: HistoricalRequest, published: Bool = false,
                       replacement: HistoricalStore? = nil) {
-        let requestedAt = LabLog.now
         let source = Self.documents.appendingPathComponent(HistoricalArchive.filename)
         let store = replacement ?? history ?? HistoricalStore(source: source)
+        applySnapshot(request, store: store, published: published)
+    }
+
+    func applyElection(_ election: PresidentialElection) {
+        let request = election.boundaries
+        if geography == .presidential, dataset?.geography == .presidential,
+           dataset?.historical?.request.day == request.day {
+            // Later elections reuse the active 2000 source and camera.
+            loading?.cancel()
+            loading = nil
+            historicalPending = false
+            failure = nil
+            self.election = election
+            return
+        }
+        guard let source = Bundle.main.url(forResource: PresidentialElection.archiveResource, withExtension: "json") else {
+            failure = "The bundled historical state and territory archive is missing."
+            return
+        }
+        let store = electionHistory ?? HistoricalStore(source: source)
+        applySnapshot(request, store: store, election: election)
+    }
+
+    private func applySnapshot(_ request: HistoricalRequest, store: HistoricalStore,
+                               published: Bool = false, election: PresidentialElection? = nil) {
+        let requestedAt = LabLog.now
+        let next: Geography = election == nil ? .historical : .presidential
+        var context: [String: Any] = ["date": request.day.description, "dataset": next.rawValue]
+        if let election { context["election_year"] = election.year }
         // Keep the selected dataset and date paired until extraction succeeds.
         loading?.cancel()
         historicalPending = true
         failure = nil
-        LabLog.record("historical_request", ["date": request.day.description, "provenance": request.provenance])
+        LabLog.record("historical_request", context.merging(["provenance": request.provenance]) { _, new in new })
         loading = Task {
             do {
                 let (file, measurements): (HistoricalMapFile, [[String: Any]])
@@ -242,23 +277,29 @@ final class LabState: ObservableObject {
                     (file, measurements) = try await store.snapshot(request)
                 }
                 try Task.checkCancellation()
-                if !published { history = store }
+                if let election {
+                    electionHistory = store
+                    self.election = election
+                    moveCamera(.national)
+                } else {
+                    if !published { history = store }
+                    historicalRequest = request
+                }
                 for var fields in measurements {
                     guard let phase = fields.removeValue(forKey: "phase") as? String else { continue }
-                    fields["date"] = request.day.description
+                    fields.merge(context) { _, new in new }
                     LabLog.record(phase, fields)
                 }
-                LabLog.record("historical_snapshot", [
-                    "date": request.day.description, "provenance": request.provenance,
+                LabLog.record("historical_snapshot", context.merging([
+                    "provenance": request.provenance,
                     "features": file.summary.features, "parts": file.summary.parts,
                     "multipart": file.summary.multipart, "rings": file.summary.rings,
                     "positions": file.summary.positions, "bytes": file.manifest.bytes,
                     "output_sha256": file.manifest.outputSHA256, "published": published
-                ])
+                ]) { _, new in new })
                 historicalPending = false
-                historicalRequest = request
-                prepareSwitch(to: .historical)
-                dataset = Dataset(geography: .historical, url: file.url, summary: file.summary,
+                prepareSwitch(to: next)
+                dataset = Dataset(geography: next, url: file.url, summary: file.summary,
                                   requestedAt: requestedAt, imported: nil, historical: file)
                 loading = nil
             } catch {
@@ -317,14 +358,30 @@ private struct LabView: View {
     @State private var showDate = false
     @State private var dateText = ""
     @State private var dateSource = ""
+    @State private var showElection = false
     @State private var usesAlbers = false
+
+    private var snapshotDescription: String {
+        if state.geography == .presidential, let election = state.election { return election.snapshotDescription }
+        if state.geography == .historical, let request = state.historicalRequest {
+            return "\(request.day) · \(request.provenance)"
+        }
+        return "Historical boundaries · Geometry only"
+    }
+
+    private var datasetLabel: String {
+        switch state.geography {
+        case .historical: return "History"
+        case .presidential: return "Elections"
+        default: return state.geography.rawValue
+        }
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Ballotics GeoJSON Lab").font(.title2.bold())
-            Text(verbatim: state.historicalRequest.flatMap { state.geography == .historical ? $0 : nil }
-                .map { "\($0.day.description) · \($0.provenance)" } ?? "Historical boundaries · Geometry only")
-                .font(.caption).foregroundStyle(.secondary).lineLimit(1)
+            Text(verbatim: snapshotDescription)
+                .font(.caption).foregroundStyle(.secondary).lineLimit(state.geography == .presidential ? 2 : 1)
                 .accessibilityIdentifier("snapshot-date")
 
             HStack {
@@ -342,8 +399,7 @@ private struct LabView: View {
                         }
                     }
                 } label: {
-                    Label(state.geography == .historical ? "History" : state.geography.rawValue,
-                          systemImage: "square.3.layers.3d")
+                    Label(datasetLabel, systemImage: "square.3.layers.3d")
                         .frame(minWidth: 96)
                 }
                 .accessibilityIdentifier("datasets")
@@ -367,6 +423,14 @@ private struct LabView: View {
                         Text("Choose date")
                     }
                     .accessibilityIdentifier("historical-dates")
+                } else if state.geography == .presidential, let election = state.election {
+                    Button {
+                        showElection = true
+                    } label: {
+                        Label(String(election.year), systemImage: "calendar")
+                    }
+                    .accessibilityLabel(Text(verbatim: "Election year \(election.year)"))
+                    .accessibilityIdentifier("election-years")
                 } else {
                     Button("Import file") {
                         importArchive = false
@@ -406,6 +470,7 @@ private struct LabView: View {
             }
                 .onChange(of: state.geography) { _, geography in
                     if geography == .imported { usesAlbers = false }
+                    if geography == .presidential { usesAlbers = true }
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -435,6 +500,10 @@ private struct LabView: View {
         ) { result in
             if importArchive { state.importHistorical(result) }
             else { state.importGeoJSON(result) }
+        }
+        .sheet(isPresented: $showElection) {
+            ElectionYearPicker(elections: state.elections, selected: state.election?.year,
+                               onSelect: state.applyElection)
         }
         .sheet(isPresented: $showDate) {
             NavigationStack {
@@ -473,6 +542,45 @@ private struct LabView: View {
                     .navigationTitle(inspection.title)
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar { Button("Done") { showProperties = false } }
+                }
+            }
+        }
+    }
+}
+
+private struct ElectionYearPicker: View {
+    let elections: [PresidentialElection]
+    let selected: Int?
+    let onSelect: (PresidentialElection) -> Void
+
+    @Environment(\.dismiss) private var dismiss
+    @State private var query = ""
+
+    var body: some View {
+        NavigationStack {
+            List(elections.filter { query.isEmpty || String($0.year).contains(query) }) { election in
+                Button {
+                    dismiss()
+                    onSelect(election)
+                } label: {
+                    HStack {
+                        Text(verbatim: String(election.year))
+                        Spacer()
+                        if selected == election.year {
+                            Image(systemName: "checkmark").accessibilityHidden(true)
+                        }
+                    }
+                }
+                .accessibilityIdentifier("election-year-\(election.year)")
+                .accessibilityAddTraits(selected == election.year ? .isSelected : [])
+            }
+            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always),
+                        prompt: "Search election years")
+            .navigationTitle("Presidential election")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { dismiss() }
                 }
             }
         }
