@@ -102,6 +102,19 @@ def stress(path):
     }
 
 
+def reduced_motion(path):
+    rows = read(path)
+    start = max(i for i, row in enumerate(rows) if row["event"] == "app_init")
+    session = rows[start:]
+    transitions = [{"region": row["region"], "frames": row["frames"], "elapsed_ms": row["elapsed_ms"]}
+                   for row in session if row["event"] == "albers_region_transition"]
+    complete = any(row["event"] == "albers_region_route_done" for row in session)
+    animated = sum(row["event"] == "albers_camera_transition" for row in session)
+    return {"transitions": transitions, "animated_camera_transitions": animated, "complete": complete,
+            "pass": complete and animated == 0 and field(transitions, "region") == ["alaska", "hawaii", "mainland"]
+            and all(row["frames"] == 1 for row in transitions)}
+
+
 def cancellation(path):
     requests = []
     publications = []
@@ -188,11 +201,11 @@ def comparison(directory):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=["stress", "comparison", "cancellation"])
+    parser.add_argument("mode", choices=["stress", "comparison", "cancellation", "reduced-motion"])
     parser.add_argument("input", type=Path)
     args = parser.parse_args()
-    study = {"stress": stress, "comparison": comparison, "cancellation": cancellation}
+    study = {"stress": stress, "comparison": comparison, "cancellation": cancellation, "reduced-motion": reduced_motion}
     result = study[args.mode](args.input)
     print(json.dumps(result, indent=2))
-    if args.mode == "cancellation" and not result["pass"]:
+    if "pass" in result and not result["pass"]:
         raise SystemExit(1)

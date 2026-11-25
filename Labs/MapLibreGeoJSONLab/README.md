@@ -201,3 +201,57 @@ bash "$lab/Tests/check-metal-mesh.sh" cb_2024_us_county_5m.json \
 For native simulator tests, install the Release lab first, then stage your historical archive in its Documents folder. Use the standalone `MapLibreGeoJSONLab` scheme. The bundled `--albers-metal --metal-fallback-probe` fixture checks that an identified collapsed polygon causes a whole-scene fallback and keeps another polygon selectable.
 
 [Tessellation](METAL_TESSELLATION_STUDY.md) · [Architecture](METAL_RENDERER_ARCHITECTURE.md) · [Benchmarks](METAL_PERFORMANCE_BENCHMARKS.md) · [Cartography](METAL_CARTOGRAPHIC_VALIDATION.md) · [Lifetime](METAL_RESOURCE_LIFETIME.md) · [Android](METAL_CROSS_PLATFORM_STUDY.md) · [Qualification](METAL_QUALIFICATION_REPORT.md)
+
+## Geographic Engine 0.3Q
+
+**Map view → National composition** switches both Albers renderers between Thematic National and Equal-Scale Research. Electoral labels use the selected historical source and current allocation data. **Find geography**, **Alaska**, **Hawaii**, **Zoom to selected feature**, and **National** use the same geographic scene. See the [composition specification](NATIONAL_MAP_COMPOSITION.md) and [qualification decision](METAL_0.3Q_QUALIFICATION_REPORT.md).
+
+Use Xcode with its Metal toolchain installed. The ordinary build compiles `AlbersShaders.metal` into the SDK-specific default library. `--metal-runtime-library` tests the bundled source alias, `--metal-samples-1` and `--metal-samples-2` request lower sample counts, and `--equal-scale` selects the research comparison. Four samples and visible boundaries are the full-quality Metal defaults.
+
+From the lab directory, use an already booted simulator, a new output directory, and your locally authorized county archive. The cached-package option is optional when normal package resolution is available.
+
+```sh
+build=$(mktemp -d)
+xcodebuild -project MapLibreGeoJSONLab.xcodeproj -scheme MapLibreGeoJSONLab \
+  -configuration Release -destination "platform=iOS Simulator,id=$SIMULATOR_ID" \
+  -derivedDataPath "$build" CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=YES build-for-testing
+app="$build/Build/Products/Release-iphonesimulator/MapLibreGeoJSONLab.app"
+for mode in ownership cancellation regions qualification quality quality-visual; do
+  METAL_BENCHMARK_MODE="$mode" bash Tests/benchmark-metal.sh \
+    "$SIMULATOR_ID" "$app" "$build/$mode" "$HISTORICAL_COUNTY_ARCHIVE"
+done
+METAL_WORKLOAD=election-counties METAL_TRIALS=3 METAL_BENCHMARK_MODE=qualification \
+  bash Tests/benchmark-metal.sh "$SIMULATOR_ID" "$app" "$build/dense" "$HISTORICAL_COUNTY_ARCHIVE"
+python3 Tests/summarize-metal.py comparison "$build/qualification"
+python3 Tests/qualify-metal-coverage.py "$build/quality-visual" evidence/albers-metal-0.3q/county-frames.json
+```
+
+The coverage command uses the checked Census county presentation bounds and the 3× iPhone portrait capture.
+
+The qualification matrix uses one fresh process per workload and configuration unless a trial count is supplied. Capture simulator model, actual drawable dimensions, OS, text size and host activity alongside the JSONL. Keep the physical deadline field unavailable when there are no presentation timestamps. The host mesh and PROJ commands in the 0.2/0.3 sections still apply. For the 14-input run, append the five county and five state snapshot paths listed in the [regression report](METAL_0.3Q_REGRESSION_REPORT.md).
+
+Run the opt-in 30-minute XCTest separately with an installed app and the historical archive already staged by the script. Select the same simulator and build directory. The test performs real orientation changes and a Home/foreground cycle while the in-app route drives election changes, selections, profile changes and dismissal. Ordinary test runs skip this long test. The per-process cache log also contains earlier launches when an existing app container is reused. Start the evidence slice at the `app_init` immediately before the tested `albers_stress_start` and include its `albers_stress_released`.
+
+```sh
+TEST_RUNNER_METAL_LONG_QUALIFICATION=1 xcodebuild \
+  -project MapLibreGeoJSONLab.xcodeproj -scheme MapLibreGeoJSONLab -configuration Release \
+  -destination "platform=iOS Simulator,id=$SIMULATOR_ID" -derivedDataPath "$build" \
+  -parallel-testing-enabled NO -test-timeouts-enabled NO \
+  -only-testing:MapLibreGeoJSONLabUITests/MapLibreGeoJSONLabUITests/testThirtyMinuteMetalLifecycle \
+  -resultBundlePath "$build/lifecycle.xcresult" test-without-building
+container=$(xcrun simctl get_app_container "$SIMULATOR_ID" org.ballotics.MapLibreGeoJSONLab data)
+python3 Tests/verify-qualification-stress.py "$container/Library/Caches/benchmark.jsonl" "$build/verified-stress"
+```
+
+For system Reduce Motion on a disposable simulator, run `testSystemReducedMotionRegionalCamera` with `TEST_RUNNER_METAL_MOTION_QUALIFICATION=1` using the same XCTest command. The test enables the setting in iOS Settings, runs the regional map route and restores the prior switch value. Run `python3 Tests/summarize-metal.py reduced-motion "$container/Library/Caches/benchmark.jsonl"` before launching a different process. It checks the three one-frame transitions and the absence of timed camera animations. The other accessibility checks are `testElectoralInsetTextInspector`, `testNationalInsetPickingAcrossRenderers` and `testHistoricalOverlapOnThematicMetalMap`. Repeat search and inspection at an accessibility text size.
+
+The visual test is `testCompositionReview`. Export its attachments locally with `xcrun xcresulttool export attachments --test-id 'MapLibreGeoJSONLabUITests/testCompositionReview()' --path RESULT.xcresult --output-path LOCAL_REVIEW_FOLDER`. XCTest landscape crops can include EXIF orientation. Use an orientation-aware viewer. Keep the owner's design and rights-unverified historical/election images local.
+
+### Physical-device protocol
+
+1. Pair a supported iPhone or iPad, select a development team for the isolated lab, and build **Release** for its device ID. Verify the signed app contains `default.metallib` and the libtess2 notice. Record model, OS, active refresh rate, text size, Low Power Mode and initial thermal state.
+2. Install with `xcrun devicectl device install app --device "$DEVICE" "$SIGNED_APP"`. Run three fresh launches per renderer. Use the same election package and the same camera, orientation and screen settings. Run once from a cold launch, then repeat with warm package storage. Record first-use conditions separately from navigation.
+3. For the full-quality route, launch with `xcrun devicectl device process launch --device "$DEVICE" --terminate-existing org.ballotics.MapLibreGeoJSONLab --measure --albers-metal --election-year 2024 --county-results --albers-route`. Repeat with `--equal-scale`, then Core Graphics and MapLibre using the flags in the matrix script. Use `--albers-region-route` to exercise both insets and return. Inspect borders and islands at 1× and 8×.
+4. Collect actual drawable presentation events and command timestamps alongside Instruments Metal System Trace, Animation Hitches, memory and thermal measurements. Count presentation gaps against the measured display period. Record memory warnings, process footprint, sampled preparation peaks, any thermal transitions and post-dismissal release. Keep heavy Instruments recordings separate from the uninstrumented navigation cohort.
+5. Exercise 2020/2024 recoloring, historical source supersession, repeated layout switches, search, pinch/pan, rotation, foregrounding and dismissal. Repeat on representative older hardware. Verify VoiceOver focus, both inset search results, inspector text, and actual system Reduce Motion.
+6. Export `Library/Caches/benchmark.jsonl` using `xcrun devicectl device copy from --device "$DEVICE" --domain-type appDataContainer --domain-identifier org.ballotics.MapLibreGeoJSONLab --source Library/Caches/benchmark.jsonl --destination "$OUTPUT"`. Retain all observations, including timeouts, fallback events, long gaps and unavailable timestamps. Compare approximately 60 presented fps only on hardware with corresponding refresh and motion conditions.

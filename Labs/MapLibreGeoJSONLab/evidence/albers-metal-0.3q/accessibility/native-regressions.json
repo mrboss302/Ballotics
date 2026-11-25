@@ -1,0 +1,207 @@
+{
+  "distinct_cases": 14,
+  "distinct_cases_with_passing_execution": 14,
+  "runs": [
+    {
+      "run": "small-ui",
+      "device": "iPhone 16e",
+      "notes": "Preliminary UI pass. The dataset menu was queried while the portrait transition was still settling.",
+      "tests": [
+        {
+          "test": "testAlbersSearchSelectAndRestore",
+          "result": "passed",
+          "seconds": 33.122
+        },
+        {
+          "test": "testCompositionReview",
+          "result": "passed",
+          "seconds": 69.173
+        },
+        {
+          "test": "testContingentElectionShowsOutcomeAndAllocations",
+          "result": "passed",
+          "seconds": 8.427
+        },
+        {
+          "test": "testMetalCensusNavigationLifecycleAndSelection",
+          "result": "failed",
+          "seconds": 31.768
+        },
+        {
+          "test": "testMetalCountyStylingAndElectionReuse",
+          "result": "passed",
+          "seconds": 61.249
+        },
+        {
+          "test": "testMetalFallsBackForAnIdentifiedCollapsedPolygon",
+          "result": "passed",
+          "seconds": 16.443
+        },
+        {
+          "test": "testMetalHistoricalBoundariesAnd2000Reuse",
+          "result": "passed",
+          "seconds": 23.405
+        },
+        {
+          "test": "testMissingShaderFallsBackToSelectableGeography",
+          "result": "passed",
+          "seconds": 14.205
+        }
+      ]
+    },
+    {
+      "run": "owner-ui",
+      "device": "iPhone 17 Pro",
+      "notes": "Standard text size. The original historical overlap tap landed too close to a boundary at national scale.",
+      "tests": [
+        {
+          "test": "testAlbersSearchSelectAndRestore",
+          "result": "passed",
+          "seconds": 30.276
+        },
+        {
+          "test": "testCompositionReview",
+          "result": "passed",
+          "seconds": 67.801
+        },
+        {
+          "test": "testContingentElectionShowsOutcomeAndAllocations",
+          "result": "passed",
+          "seconds": 7.068
+        },
+        {
+          "test": "testHistoricalOverlapOnThematicMetalMap",
+          "result": "failed",
+          "seconds": 11.338
+        },
+        {
+          "test": "testLiveCompositionSwitchPreservesSelection",
+          "result": "passed",
+          "seconds": 30.659
+        },
+        {
+          "test": "testMetalCensusNavigationLifecycleAndSelection",
+          "result": "passed",
+          "seconds": 79.606
+        },
+        {
+          "test": "testMetalCountyStylingAndElectionReuse",
+          "result": "passed",
+          "seconds": 62.173
+        },
+        {
+          "test": "testMetalFallsBackForAnIdentifiedCollapsedPolygon",
+          "result": "passed",
+          "seconds": 15.919
+        },
+        {
+          "test": "testMetalHistoricalBoundariesAnd2000Reuse",
+          "result": "passed",
+          "seconds": 25.353
+        },
+        {
+          "test": "testMissingShaderFallsBackToSelectableGeography",
+          "result": "passed",
+          "seconds": 14.309
+        },
+        {
+          "test": "testNationalInsetPickingAcrossRenderers",
+          "result": "passed",
+          "seconds": 15.368
+        }
+      ]
+    },
+    {
+      "run": "accessibility",
+      "device": "iPhone 17 Pro",
+      "notes": "Accessibility Medium. The first inspector query and Settings switch interaction did not resolve the intended AX elements.",
+      "tests": [
+        {
+          "test": "testElectoralInsetTextInspector",
+          "result": "failed",
+          "seconds": 18.868
+        },
+        {
+          "test": "testSystemReducedMotionRegionalCamera",
+          "result": "failed",
+          "seconds": 24.92
+        }
+      ]
+    },
+    {
+      "run": "access-recheck",
+      "device": "iPhone 17 Pro",
+      "notes": "Accessibility Medium. Corrected inspector and historical overlap probes passed. The motion route completed with one-frame transitions, but the test failed to restore the switch on this attempt.",
+      "tests": [
+        {
+          "test": "testElectoralInsetTextInspector",
+          "result": "passed",
+          "seconds": 28.186
+        },
+        {
+          "test": "testHistoricalOverlapOnThematicMetalMap",
+          "result": "passed",
+          "seconds": 17.425
+        },
+        {
+          "test": "testSystemReducedMotionRegionalCamera",
+          "result": "failed",
+          "seconds": 33.156
+        }
+      ]
+    },
+    {
+      "run": "final-motion",
+      "device": "iPhone 17 Pro",
+      "notes": "Setup retry encountered insufficient simulator installation storage. The preference was restored before retrying.",
+      "tests": [
+        {
+          "test": "testSystemReducedMotionRegionalCamera",
+          "result": "failed",
+          "seconds": 11.158
+        }
+      ]
+    },
+    {
+      "run": "restored-motion",
+      "device": "iPhone 17 Pro",
+      "notes": "Accessibility Medium. The Settings toggle, regional route, test teardown and restoration succeeded.",
+      "tests": [
+        {
+          "test": "testSystemReducedMotionRegionalCamera",
+          "result": "passed",
+          "seconds": 40.075
+        }
+      ]
+    },
+    {
+      "run": "reviewed-soak",
+      "device": "iPhone 16e",
+      "notes": "Final corrected executable. The full duration, foreground, rotation and dismissal checks completed.",
+      "tests": [
+        {
+          "test": "testThirtyMinuteMetalLifecycle",
+          "result": "passed",
+          "seconds": 1830.401
+        }
+      ]
+    },
+    {
+      "run": "small-final",
+      "device": "iPhone 16e",
+      "notes": "Final smaller-screen visual captures and historical overlap check.",
+      "tests": [
+        {
+          "test": "testCompositionReview",
+          "result": "passed",
+          "seconds": 67.851
+        },
+        {
+          "test": "testHistoricalOverlapOnThematicMetalMap",
+          "result": "passed",
+          "seconds": 17.472
+        }
+      ]
+    }
+  ]
+}

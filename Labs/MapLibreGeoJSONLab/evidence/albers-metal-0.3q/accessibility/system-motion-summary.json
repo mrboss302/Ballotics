@@ -1,0 +1,22 @@
+{
+  "transitions": [
+    {
+      "region": "alaska",
+      "frames": 1,
+      "elapsed_ms": 18.1
+    },
+    {
+      "region": "hawaii",
+      "frames": 1,
+      "elapsed_ms": 17.3
+    },
+    {
+      "region": "mainland",
+      "frames": 1,
+      "elapsed_ms": 18.1
+    }
+  ],
+  "animated_camera_transitions": 0,
+  "complete": true,
+  "pass": true
+}

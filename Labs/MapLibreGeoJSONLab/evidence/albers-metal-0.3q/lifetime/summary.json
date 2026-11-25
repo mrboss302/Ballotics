@@ -1,0 +1,183 @@
+{
+  "terminal_event": {
+    "app_ms": 1800928.4,
+    "elapsed_ms": 1800230.9,
+    "event": "albers_stress_done",
+    "mismatches": 0,
+    "navigation_steps": 6225,
+    "rapid_requests": 10,
+    "sources": 50,
+    "timeouts": 0,
+    "years": 100
+  },
+  "election_requests": 111,
+  "election_commits": 101,
+  "superseded_commits": 0,
+  "stale_style_events": 0,
+  "mesh_publications_during_county_election_year_phase": 1,
+  "style_uploads_during_county_election_year_phase": 198,
+  "mesh_publications": 53,
+  "mesh_cancellations": 0,
+  "layout_changes": 890,
+  "geographic_preparations": 53,
+  "published_vertex_buffers": 147,
+  "published_index_buffers": 147,
+  "allocated_style_and_color_buffers": 12554,
+  "cache_entries": {
+    "count": 119,
+    "median": 1,
+    "p95": 2,
+    "p99": 2,
+    "max": 2
+  },
+  "appearance_outliers_over_one_second": [],
+  "fallbacks": [],
+  "selection_attempts": 6225,
+  "selection_hits": 6225,
+  "selection_ms": {
+    "count": 6225,
+    "median": 0.1,
+    "p95": 0.3,
+    "p99": 0.4,
+    "max": 3.1
+  },
+  "warm_year_commit_ms": {
+    "count": 100,
+    "median": 3.75,
+    "p95": 6.9,
+    "p99": 23,
+    "max": 186.4
+  },
+  "cold_year_commit_ms": 1151.2,
+  "main_actor_queue_ms": {
+    "count": 111,
+    "median": 0.4,
+    "p95": 2.9,
+    "p99": 4,
+    "max": 4
+  },
+  "year_observed_ready_ms": {
+    "count": 100,
+    "median": 27.3,
+    "p95": 79.6,
+    "p99": 249.6,
+    "max": 1533.1
+  },
+  "gpu_style_copy_ms": {
+    "count": 6277,
+    "median": 0.4,
+    "p95": 0.7,
+    "p99": 0.9,
+    "max": 3.6
+  },
+  "gpu_style_prepare_ms": {
+    "count": 6277,
+    "median": 10.1,
+    "p95": 11.3,
+    "p99": 11.8,
+    "max": 23
+  },
+  "appearance_update_to_submit_ms": {
+    "clear_selection": {
+      "count": 102,
+      "median": 1.1,
+      "p95": 6.4,
+      "p99": 11.4,
+      "max": 15.7
+    },
+    "highlight": {
+      "count": 6206,
+      "median": 4.7,
+      "p95": 12.7,
+      "p99": 15.3,
+      "max": 172
+    },
+    "thematic_style": {
+      "count": 5854,
+      "median": 20.2,
+      "p95": 25.3,
+      "p99": 27.5,
+      "max": 550.7
+    }
+  },
+  "source_observed_ready_ms": {
+    "count": 50,
+    "median": 317.20000000000005,
+    "p95": 527.3,
+    "p99": 1448.1,
+    "max": 1448.1
+  },
+  "frame_transition_ms": {
+    "count": 244,
+    "median": 282.2,
+    "p95": 289.8,
+    "p99": 295.5,
+    "max": 297.6
+  },
+  "steady_footprint_mib": {
+    "count": 103,
+    "median": 144.2685317993164,
+    "p95": 150.2841567993164,
+    "p99": 150.3466567993164,
+    "max": 150.4872817993164
+  },
+  "reopen": [
+    {
+      "app_ms": 903677.3,
+      "event": "albers_stress_reopen",
+      "ready": true
+    }
+  ],
+  "background_transitions": [
+    {
+      "active": false,
+      "app_ms": 153829.6,
+      "event": "metal_scene_activity",
+      "submissions": 7754
+    },
+    {
+      "active": true,
+      "app_ms": 159326.1,
+      "event": "metal_scene_activity",
+      "submissions": 7754
+    }
+  ],
+  "release_phase": [
+    {
+      "app_ms": 1800928.9,
+      "before_release_footprint_mib": 150.3622817993164,
+      "before_release_rss_mib": 213.9375,
+      "event": "albers_stress_release_start",
+      "features": 3153
+    },
+    {
+      "after_release_footprint_mib": 92.65911102294922,
+      "after_release_rss_mib": 210.1875,
+      "app_ms": 1804085.4,
+      "event": "albers_stress_released"
+    }
+  ],
+  "mesh_releases": 53,
+  "releases_with_commands_in_flight": 5,
+  "maximum_sampled_footprint": [
+    153.2060317993164,
+    "albers_stress_checkpoint",
+    93510.8,
+    "stress_footprint_mib"
+  ],
+  "release_drop_mib": 57.70317077636719,
+  "max_observed_in_flight": 3,
+  "assertions": {
+    "duration": true,
+    "years_sources_selections": true,
+    "current_requests": true,
+    "complete_sources": true,
+    "current_mesh_on_layout": true,
+    "year_phase_reuses_one_mesh": true,
+    "bounded_cache": true,
+    "active_and_inactive": true,
+    "reopened": true,
+    "released": true,
+    "no_fallback": true
+  }
+}

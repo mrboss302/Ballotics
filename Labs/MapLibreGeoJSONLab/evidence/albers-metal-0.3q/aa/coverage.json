@@ -106,5 +106,14 @@
         "pixels_differing_from_4x_by_more_than_8": 0
       }
     }
+  },
+  "selection_detail": {
+    "width": 1110,
+    "height": 1778,
+    "selected_cg_pixels": 423355,
+    "selected_metal_pixels": 423686,
+    "selected_mask_iou": 0.9991102383947473,
+    "exact_rgb_fraction": 0.9929483476727571,
+    "rgb_difference_at_most_8_fraction": 0.9962155068454281
   }
 }

@@ -388,7 +388,10 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
             searchAlbers(region, in: app)
             waitForSelection(app.buttons["inspection"], named: region)
             app.buttons["inspection"].tap()
-            XCTAssertTrue(app.staticTexts["Reported electoral allocation"].waitForExistence(timeout: 5))
+            let outcome = app.descendants(matching: .any).matching(
+                NSPredicate(format: "label CONTAINS[c] %@ OR value CONTAINS[c] %@",
+                            "Reported electoral allocation", "Reported electoral allocation")).firstMatch
+            XCTAssertTrue(outcome.waitForExistence(timeout: 5), app.debugDescription)
             app.buttons["Done"].tap()
         }
     }
@@ -405,20 +408,36 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
             guard item.isHittable else { throw NSError(domain: "Settings navigation: " + title, code: 1) }
             item.tap()
         }
-        try open("Accessibility")
-        try open("Motion")
-        let toggle = settings.switches["Reduce Motion"].firstMatch
-        XCTAssertTrue(toggle.waitForExistence(timeout: 5))
+        let toggle = settings.switches["REDUCE_MOTION"].firstMatch
+        func locateSwitch() throws {
+            if !toggle.exists {
+                if !settings.staticTexts["Motion"].isHittable { try open("Accessibility") }
+                try open("Motion")
+            }
+            guard toggle.waitForExistence(timeout: 5) else { throw NSError(domain: "Reduce Motion switch", code: 1) }
+        }
+        try locateSwitch()
+        func setSwitch(_ on: Bool) -> Bool {
+            let expected = on ? "1" : "0"
+            if toggle.value as? String == expected { return true }
+            toggle.coordinate(withNormalizedOffset: CGVector(dx: 0.92, dy: 0.5)).tap()
+            return XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: NSPredicate(format: "value == %@", expected),
+                                                                   object: toggle)], timeout: 5) == .completed
+        }
         let previouslyEnabled = toggle.value as? String == "1"
-        if !previouslyEnabled { toggle.tap() }
+        let app = XCUIApplication()
         defer {
-            if !previouslyEnabled {
-                settings.activate()
-                if toggle.value as? String == "1" { toggle.tap() }
+            app.terminate()
+            settings.terminate()
+            settings.launch()
+            do {
+                try locateSwitch()
+                XCTAssertTrue(setSwitch(previouslyEnabled), settings.debugDescription)
+            } catch {
+                XCTFail("Could not restore Reduce Motion: \(error)")
             }
         }
-        XCTAssertEqual(toggle.value as? String, "1")
-        let app = XCUIApplication()
+        guard setSwitch(true) else { throw NSError(domain: "Reduce Motion setting did not enable", code: 1) }
         app.launchArguments = ["--measure", "--albers-metal", "--dataset", "states", "--albers-region-route"]
         app.launch()
         waitForMetal("51", in: app)

@@ -28,3 +28,5 @@ Historical preparation still checks cancellation before publication. The live-st
 * The style builder still converts colors and constructs immutable tables on the main actor. The route measures its cost. A production extraction needs allocation and scheduling budgets for representative devices.
 * Panel-level culling submits the entire visible region. This limits how much work deep zoom can eliminate on the mainland.
 * A CADisplayLink drives camera interpolation, while the UI's state and rendering callbacks can coalesce across frames. The tests cover inverse transforms, overlap membership, direct touches and animated endpoints. Physical gesture latency remains open.
+* Source-size limits also need a product policy. Index-width guards protect representation integrity, while decoding, triangulation and shared-buffer staging still consume memory proportional to the source. The measured envelope covers the named workloads.
+* A composition must be derived from the cached canonical scene. The lab follows that contract. A separate engine module should enforce the distinction between projected input and composed output in its API.
