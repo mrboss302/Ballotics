@@ -68,6 +68,7 @@ private extension ElectionMapPresentation {
 struct AlbersMapView: View {
     @ObservedObject var state: LabState
     @Binding var showGeographySearch: Bool
+    @Environment(\.scenePhase) private var scenePhase
     @State private var scene: AlbersScene?
     @State private var sceneRequest: Double?
     @State private var selected: Int?
@@ -79,7 +80,12 @@ struct AlbersMapView: View {
         AlbersCanvasView(scene: currentScene, selected: selected, alternateColor: state.alternateColor,
                          cameraRequest: state.cameraRequest, paint: paintConfiguration,
                          thickBorders: state.thickAlbersBorders, baseline: state.baselineAlbers,
-                         studyProbe: state.albersStudyProbe) { hits in
+                         studyProbe: state.albersStudyProbe, metal: state.renderer == .metal,
+                         active: scenePhase == .active, request: currentRequest,
+                         onStatus: { message in
+            guard state.dataset?.requestedAt == currentRequest else { return }
+            state.status = message
+        }) { hits in
             guard !state.historicalPending, let currentRequest,
                   state.dataset?.requestedAt == currentRequest, state.dataset?.geography == state.geography else { return }
             if hits.count > 1 {
@@ -143,7 +149,8 @@ struct AlbersMapView: View {
                     LabLog.record("election_albers_projection", ["year": state.election?.year ?? 0,
                        "mode": state.electionMode.rawValue, "elapsed_ms": LabLog.milliseconds(LabLog.now - start)])
                 }
-                state.status = "\(projected.properties.count.formatted()) features · Albers equal area"
+                state.status = state.renderer == .metal ? "Preparing geographic mesh…"
+                    : "\(projected.properties.count.formatted()) features · Albers equal area"
             } catch {
                 guard !Task.isCancelled else { return }
                 state.status = "Albers view unavailable"
@@ -227,6 +234,10 @@ private struct AlbersCanvasView: UIViewRepresentable {
     let thickBorders: Bool
     let baseline: Bool
     let studyProbe: Int
+    let metal: Bool
+    let active: Bool
+    let request: Double?
+    let onStatus: (String) -> Void
     let onSelect: ([Int]) -> Void
 
     func makeUIView(context: Context) -> AlbersCanvas { AlbersCanvas(baseline: baseline) }
@@ -234,7 +245,8 @@ private struct AlbersCanvasView: UIViewRepresentable {
     func updateUIView(_ canvas: AlbersCanvas, context: Context) {
         canvas.update(scene: scene, selected: selected, alternateColor: alternateColor,
                       cameraRequest: cameraRequest, paint: paint, thickBorders: thickBorders,
-                      studyProbe: studyProbe, onSelect: onSelect)
+                      studyProbe: studyProbe, metal: metal, active: active,
+                      request: request, onStatus: onStatus, onSelect: onSelect)
     }
 }
 
@@ -275,6 +287,15 @@ private final class AlbersCanvas: UIView {
     private var routeCandidates = 0
     private var lastStudyProbe = 0
     private var awaitingFirstDraw = false
+    private var metal: AlbersMetalSurface?
+    private var meshTask: Task<Void, Never>?
+    private var metalRequested = false
+    private var metalFailed = false
+    private var metalReady = false
+    private var metalRevision: Double?
+    private var active = true
+    private var onStatus: ((String) -> Void)?
+    private var insetLabels: [UILabel] = []
 
     init(baseline: Bool) {
         self.baseline = baseline
@@ -303,16 +324,32 @@ private final class AlbersCanvas: UIView {
             displayLink?.invalidate()
             displayLink = nil
             routeTask?.cancel()
+            stopMetal(removeSurface: true)
+        } else if metalRequested, !metalReady, meshTask == nil, !metalFailed,
+                  let scene, let revision = metalRevision {
+            prepareMetal(scene, revision: revision)
         }
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        metal?.frame = bounds
+        invalidateMap()
     }
 
     func update(scene: AlbersScene?, selected: Int?, alternateColor: Bool,
                 cameraRequest: (Int, Viewpoint), paint: AlbersPaintConfiguration,
-                thickBorders: Bool, studyProbe: Int, onSelect: @escaping ([Int]) -> Void) {
+                thickBorders: Bool, studyProbe: Int, metal requested: Bool, active: Bool,
+                request: Double?, onStatus: @escaping (String) -> Void, onSelect: @escaping ([Int]) -> Void) {
         // The parent supplies a new generation by clearing the scene while projecting.
         let isNewScene = self.scene == nil && scene != nil
         let cameraChanged = lastCameraRequest != cameraRequest.0
         let styleChanged = paintedRevision != paint.revision
+        let backendChanged = metalRequested != requested
+        let activityChanged = self.active != active
+        self.active = active
+        metal?.renderAllowed = active
+        self.onStatus = onStatus
         if LabLog.enabled, scene != nil, !isNewScene {
             if styleChanged {
                 pendingAppearanceMetric = (LabLog.now, "thematic_style")
@@ -320,6 +357,8 @@ private final class AlbersCanvas: UIView {
                 pendingAppearanceMetric = (LabLog.now, "border_width")
             } else if self.selected != selected {
                 pendingAppearanceMetric = (LabLog.now, selected == nil ? "clear_selection" : "highlight")
+            } else if self.alternateColor != alternateColor {
+                pendingAppearanceMetric = (LabLog.now, "palette")
             }
         }
         let changed = isNewScene || (self.scene != nil && scene == nil) || self.selected != selected
@@ -342,9 +381,26 @@ private final class AlbersCanvas: UIView {
         self.alternateColor = alternateColor
         self.thickBorders = thickBorders
         self.onSelect = onSelect
+        if backendChanged || metalRevision != request || (isNewScene && requested) || scene == nil && metalReady {
+            stopMetal(removeSurface: !requested)
+            metalRequested = requested
+            metalRevision = request
+            if requested, let scene, let request { prepareMetal(scene, revision: request) }
+            if backendChanged, !requested, let scene {
+                sendStatus("\(scene.properties.count.formatted()) features · Albers equal area")
+            }
+        }
+        if styleChanged, metalReady {
+            do { try metal?.updatePalette(featurePaint) }
+            catch { failMetal(error.localizedDescription) }
+        }
+        if let pending = pendingAppearanceMetric, metalReady {
+            metal?.markAppearance(pending.1, at: pending.0)
+            pendingAppearanceMetric = nil
+        }
         if lastCameraRequest != nil, cameraChanged { move(cameraRequest.1, animated: !isNewScene) }
         lastCameraRequest = cameraRequest.0
-        if baseline || changed { setNeedsDisplay() }
+        if baseline || changed || backendChanged || activityChanged { invalidateMap() }
         if studyProbe != lastStudyProbe, studyProbe > 0 {
             lastStudyProbe = studyProbe
             // Defer the callback until after UIViewRepresentable's state update.
@@ -353,6 +409,7 @@ private final class AlbersCanvas: UIView {
     }
 
     override func draw(_ rect: CGRect) {
+        guard !metalRequested || metalFailed else { return }
         guard let scene, let context = UIGraphicsGetCurrentContext() else { return }
         let measure = LabLog.enabled
         let drawStart = measure ? LabLog.now : 0
@@ -438,6 +495,9 @@ private final class AlbersCanvas: UIView {
                 var fields = MemorySample.read()?.fields("first_draw") ?? [:]
                 fields["features"] = scene.properties.count
                 fields["draw_ms"] = duration
+                if let request = metalRevision {
+                    fields["geometry_request_ms"] = LabLog.milliseconds(LabLog.now - request)
+                }
                 LabLog.record("albers_first_draw", fields)
             }
             if let metric = pendingAppearanceMetric {
@@ -445,10 +505,158 @@ private final class AlbersCanvas: UIView {
                 LabLog.record("albers_appearance_draw", ["operation": metric.1, "draw_ms": duration,
                     "update_to_draw_ms": LabLog.milliseconds(LabLog.now - metric.0)])
             }
-            if !routeStarted, ProcessInfo.processInfo.arguments.contains("--albers-route") {
-                routeStarted = true
-                routeTask = Task { [weak self] in await self?.runRoute() }
+            startRouteIfNeeded()
+        }
+    }
+
+    private func sendStatus(_ message: String) {
+        let revision = metalRevision
+        Task { [weak self] in
+            guard let self, self.metalRevision == revision else { return }
+            self.onStatus?(message)
+        }
+    }
+
+    private func prepareMetal(_ scene: AlbersScene, revision: Double) {
+        sendStatus("Preparing geographic mesh…")
+        do {
+            let surface = try metal ?? AlbersMetalSurface(configuration: .launch)
+            if metal == nil {
+                metal = surface
+                surface.renderAllowed = active
+                surface.frame = bounds
+                surface.isHidden = true
+                addSubview(surface)
             }
+            guard let device = surface.device else {
+                throw GeoJSON.Invalid(message: "Metal device became unavailable.")
+            }
+            let work = Task.detached(priority: .userInitiated) {
+                let sampler = MemorySampler()
+                let start = LabLog.now
+                let mesh = try AlbersMesh.prepare(scene)
+                let prepared = LabLog.now
+                try Task.checkCancellation()
+                let buffers = try AlbersMetalBuffers(mesh, device: device)
+                var fields = sampler.finish(event: "metal_mesh", since: start)
+                fields.merge(buffers.byteCounts) { _, new in new }
+                fields["prepare_ms"] = LabLog.milliseconds(prepared - start)
+                fields["tessellation_ms"] = LabLog.milliseconds(mesh.statistics.tessellationSeconds)
+                fields["upload_ms"] = LabLog.milliseconds(LabLog.now - prepared)
+                fields["features"] = scene.properties.count
+                fields["revision"] = revision - LabLog.start
+                fields["parts"] = mesh.statistics.parts
+                fields["vertices"] = mesh.statistics.vertices
+                fields["triangles"] = mesh.statistics.triangles
+                fields["segments"] = mesh.statistics.segments
+                fields["unique_segments"] = mesh.statistics.uniqueSegments
+                fields["max_float_error_m"] = mesh.statistics.maxFloatError
+                return (buffers, fields)
+            }
+            meshTask = Task { [weak self, weak surface] in
+                do {
+                    let (buffers, fields) = try await withTaskCancellationHandler {
+                        try await work.value
+                    } onCancel: { work.cancel() }
+                    try Task.checkCancellation()
+                    guard let self, let surface, self.metalRequested, self.metalRevision == revision else { return }
+                    try surface.updatePalette(self.featurePaint)
+                    surface.publish(buffers, layout: scene.panels)
+                    surface.onFirstFrame = { [weak self] in
+                        guard let self else { return }
+                        LabLog.record("metal_geometry_submit", ["features": scene.properties.count,
+                            "geometry_request_ms": LabLog.milliseconds(LabLog.now - revision),
+                            "revision": revision - LabLog.start])
+                        self.sendStatus("\(scene.properties.count.formatted()) features · Albers Metal")
+                        self.startRouteIfNeeded()
+                    }
+                    surface.onFailure = { [weak self] error in self?.failMetal(error) }
+                    surface.onFrame = { [weak self] duration in
+                        guard let self else { return }
+                        if let metric = self.pendingPaintMetric {
+                            self.pendingPaintMetric = nil
+                            metric.1(LabLog.milliseconds(LabLog.now - metric.0))
+                        }
+                        guard self.routeResults != nil else { return }
+                        self.routeResults?.addFrame()
+                        self.drawTimes.append(duration)
+                    }
+                    self.meshTask = nil
+                    self.metalReady = true
+                    surface.isHidden = false
+                    LabLog.record("metal_mesh_ready", fields)
+                    self.invalidateMap()
+                } catch {
+                    guard !Task.isCancelled, let self, self.metalRevision == revision else { return }
+                    self.meshTask = nil
+                    self.failMetal(error.localizedDescription)
+                }
+            }
+        } catch { failMetal(error.localizedDescription) }
+    }
+
+    private func stopMetal(removeSurface: Bool) {
+        if let meshTask {
+            meshTask.cancel()
+            LabLog.record("metal_mesh_cancelled")
+        }
+        meshTask = nil
+        metalReady = false
+        metalFailed = false
+        metal?.clear()
+        metal?.isHidden = true
+        metal?.onFirstFrame = nil
+        metal?.onFrame = nil
+        insetLabels.forEach { $0.removeFromSuperview() }
+        insetLabels.removeAll()
+        if removeSurface {
+            metal?.removeFromSuperview()
+            metal = nil
+        }
+    }
+
+    private func failMetal(_ reason: String) {
+        stopMetal(removeSurface: true)
+        metalFailed = true
+        LabLog.record("metal_fallback", ["reason": reason])
+        sendStatus("Core Graphics fallback · \(reason)")
+        setNeedsDisplay()
+    }
+
+    private func invalidateMap() {
+        if !metalRequested || metalFailed {
+            setNeedsDisplay()
+            return
+        }
+        guard let metal, metalReady, active else { return }
+        metal.move(center: centerPoint, scale: mapScale, stroke: thickBorders ? 1.2 : 0.48,
+                   selected: selected, alternate: alternateColor)
+        if let scene {
+            let insets = scene.panels.filter { $0.region.insetLabel != nil }
+            if insets.count != insetLabels.count {
+                insetLabels = insets.map { panel in
+                    let label = UILabel()
+                    label.text = panel.region.insetLabel
+                    label.font = .systemFont(ofSize: 10, weight: .semibold)
+                    label.textColor = UIColor(red: 0.18, green: 0.29, blue: 0.36, alpha: 1)
+                    label.sizeToFit()
+                    label.isUserInteractionEnabled = false
+                    label.isAccessibilityElement = false
+                    addSubview(label)
+                    return label
+                }
+            }
+            for (panel, label) in zip(insets, insetLabels) {
+                label.frame.origin = CGPoint(x: bounds.midX + (panel.frame.minX - centerPoint.x) * mapScale + 6,
+                                             y: bounds.midY + (panel.frame.minY - centerPoint.y) * mapScale + 4)
+            }
+        }
+    }
+
+    private func startRouteIfNeeded() {
+        if !routeStarted, LabLog.enabled, ProcessInfo.processInfo.arguments.contains("--albers-route") {
+            routeStarted = true
+            routeTask = Task { [weak self] in await self?.runRoute() }
         }
     }
 
@@ -518,7 +726,7 @@ private final class AlbersCanvas: UIView {
             animation = nil
             centerPoint = nextCenter
             zoom = nextZoom
-            setNeedsDisplay()
+            invalidateMap()
         }
     }
 
@@ -533,7 +741,7 @@ private final class AlbersCanvas: UIView {
         centerPoint = CGPoint(x: animation.center.x + (animation.goalCenter.x - animation.center.x) * eased,
                               y: animation.center.y + (animation.goalCenter.y - animation.center.y) * eased)
         zoom = animation.zoom * pow(animation.goalZoom / animation.zoom, eased)
-        setNeedsDisplay()
+        invalidateMap()
         if t == 1 {
             self.animation = nil
             LabLog.record("albers_camera_transition", ["elapsed_ms": LabLog.milliseconds(LabLog.now - animation.start)])
@@ -549,7 +757,7 @@ private final class AlbersCanvas: UIView {
         centerPoint.x += before.x - after.x
         centerPoint.y += before.y - after.y
         constrainCenter()
-        setNeedsDisplay()
+        invalidateMap()
     }
 
     private func constrainCenter() {
@@ -596,34 +804,52 @@ private final class AlbersCanvas: UIView {
         centerPoint.y -= movement.y / mapScale
         constrainCenter()
         gesture.setTranslation(.zero, in: self)
-        setNeedsDisplay()
+        invalidateMap()
     }
 
     private func runRoute() async {
         guard let scene, let mainland = scene.panels.first(where: { $0.region == .mainland }) else { return }
         let projection = mainland.region.projection
-        let anchor = projection.project(longitude: -97, latitude: 39)
-        let x = anchor.x + mainland.translation.x
-        let y = -anchor.y + mainland.translation.y
-        for level in [1, 2, 4, 8, 16, 8] {
+        for level in CountyCameraRoute.levels {
             if Task.isCancelled { return }
             zoom = CGFloat(level)
             routeResults = FrameSamples()
             drawTimes = []
             routeCandidates = 0
-            let end = LabLog.now + 3
+            metal?.beginWindow()
+            let started = LabLog.now
+            let end = started + CountyCameraRoute.duration
             var step = 0
             while LabLog.now < end && !Task.isCancelled {
-                let angle = Double(step) * 0.075
-                centerPoint = CGPoint(x: x + cos(angle) * 620_000 / zoom, y: y + sin(angle) * 260_000 / zoom)
-                setNeedsDisplay()
+                let location = CountyCameraRoute.center(elapsed: LabLog.now - started, level: level)
+                let point = projection.project(longitude: location.longitude, latitude: location.latitude)
+                centerPoint = CGPoint(x: point.x + mainland.translation.x, y: -point.y + mainland.translation.y)
+                invalidateMap()
                 do { try await Task.sleep(for: .milliseconds(16)) }
                 catch { return }
                 step += 1
             }
             var fields = routeResults?.fields() ?? [:]
+            if metalReady, let metal {
+                // Commands already submitted can finish outside the camera window.
+                try? await Task.sleep(for: .milliseconds(50))
+                fields.merge(metal.finishWindow()) { _, new in new }
+                let visible = CGRect(x: centerPoint.x - bounds.width / (2 * mapScale),
+                                     y: centerPoint.y - bounds.height / (2 * mapScale),
+                                     width: bounds.width / mapScale, height: bounds.height / mapScale)
+                var candidates: Set<Int> = []
+                var partCount = 0
+                for panel in scene.panels where panel.frame.intersects(visible) {
+                    let parts = panel.visible(in: visible.offsetBy(dx: -panel.translation.x, dy: -panel.translation.y))
+                    partCount += parts.count
+                    for index in parts { candidates.insert(panel.parts[index].feature) }
+                }
+                fields["visible_part_candidates_last_camera"] = partCount
+                fields["visible_feature_candidates_last_camera"] = candidates.count
+            }
             fields["zoom_multiplier"] = level
             fields["baseline"] = baseline
+            fields["renderer"] = metalReady ? "metal" : "core_graphics"
             fields["camera_updates"] = step
             fields["cull_candidates"] = routeCandidates
             let timings = drawTimes.sorted()

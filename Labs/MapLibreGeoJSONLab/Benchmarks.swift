@@ -87,6 +87,17 @@ struct FrameSamples {
     }
 }
 
+enum CountyCameraRoute {
+    static let levels = [1, 2, 4, 8, 16, 8]
+    static let duration = 3.0
+
+    static func center(elapsed: Double, level: Int) -> (longitude: Double, latitude: Double) {
+        let angle = elapsed * 4.5
+        let magnification = Double(level)
+        return (-97 + cos(angle) * 7.12 / magnification, 39 - sin(angle) * 2.34 / magnification)
+    }
+}
+
 final class BlockMapHTTP: URLProtocol {
     override class func canInit(with request: URLRequest) -> Bool {
         ["http", "https"].contains(request.url?.scheme?.lowercased() ?? "")

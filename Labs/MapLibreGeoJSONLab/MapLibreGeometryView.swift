@@ -53,6 +53,7 @@ struct MapLibreGeometryView: UIViewRepresentable {
         private var completedLoads = 0
         private var switchCount = 0
         private var nationalZoom: Double?
+        private let matchedCountyRoute = ProcessInfo.processInfo.arguments.contains("--metal-matched-route")
         private let measureRoute = ProcessInfo.processInfo.arguments.contains("--navigation-benchmark")
         private let measureSwitches = ProcessInfo.processInfo.arguments.contains("--switch-benchmark")
         private let sourceProfile = SourceProfile.fromArguments
@@ -388,8 +389,9 @@ struct MapLibreGeometryView: UIViewRepresentable {
                 continueHistoricalSwitches()
             } else if measureSwitches {
                 continueSwitchBenchmark()
-            } else if measureRoute, completedRoutes == 0 {
-                runNavigation(on: mapView)
+            } else if completedRoutes == 0 {
+                if matchedCountyRoute { runCountyNavigation(on: mapView) }
+                else if measureRoute { runNavigation(on: mapView) }
             }
         }
 
@@ -611,6 +613,44 @@ struct MapLibreGeometryView: UIViewRepresentable {
             let next = HistoricalRequest.presets[sequence[switchCount % sequence.count]]
             switchCount += 1
             Task { state.applyHistory(next) }
+        }
+
+        private func runCountyNavigation(on map: MLNMapView) {
+            completedRoutes += 1
+            move(.national, on: map, animated: false)
+            let normal = nationalZoom ?? map.zoomLevel
+            route = Task { [weak map] in
+                guard let map else { return }
+                for (pass, level) in CountyCameraRoute.levels.enumerated() {
+                    let zoom = normal + log2(Double(level))
+                    let started = LabLog.now
+                    let end = started + CountyCameraRoute.duration
+                    var steps = 0
+                    frameSamples = FrameSamples()
+                    while LabLog.now < end {
+                        let point = CountyCameraRoute.center(elapsed: LabLog.now - started, level: level)
+                        map.setCenter(CLLocationCoordinate2D(latitude: point.latitude, longitude: point.longitude),
+                                      zoomLevel: zoom, animated: false)
+                        do { try await Task.sleep(for: .milliseconds(16)) }
+                        catch { frameSamples = nil; return }
+                        steps += 1
+                    }
+                    var fields = frameSamples?.fields() ?? [:]
+                    frameSamples = nil
+                    fields["dataset"] = datasetName
+                    fields["zoom_multiplier"] = level
+                    fields["pass"] = pass == 5 ? 2 : 1
+                    fields["base_zoom"] = zoom
+                    fields["camera_updates"] = steps
+                    fields["renderer"] = "maplibre"
+                    if let sample = MemorySample.read() {
+                        fields.merge(sample.fields("after_navigation")) { _, new in new }
+                    }
+                    LabLog.record("navigation", fields)
+                }
+                LabLog.record("navigation_benchmark_done", ["dataset": datasetName])
+                state.status = "Navigation benchmark finished"
+            }
         }
 
         private func runNavigation(on map: MLNMapView) {

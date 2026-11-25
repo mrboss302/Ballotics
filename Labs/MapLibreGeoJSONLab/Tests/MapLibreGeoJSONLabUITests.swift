@@ -135,6 +135,154 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
     }
 
     @MainActor
+    func testMetalCountyStylingAndElectionReuse() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers-metal", "--election-year", "2024", "--county-results", "--measure"]
+        app.launch()
+        waitForMetal("3,153", in: app)
+        let map = app.descendants(matching: .any)["albers-map"].firstMatch
+        let winner = app.staticTexts["presidential-winner"]
+        let date = app.staticTexts["snapshot-date"]
+        XCTAssertEqual(winner.label, "Donald J. Trump")
+        XCTAssertTrue(date.label.contains("CT traditional counties"))
+        let candidate = map.screenshot().pngRepresentation
+
+        app.buttons["viewpoints"].tap()
+        let colors = app.buttons["Map colors"]
+        if colors.exists { colors.tap() }
+        app.buttons["Reported margin"].tap()
+        XCTAssertTrue(app.staticTexts["albers-margin-legend"].waitForExistence(timeout: 5))
+        XCTAssertNotEqual(candidate, map.screenshot().pngRepresentation)
+
+        for (query, name) in [("connecticut-traditional:09001", "Fairfield County"),
+                              ("alaska-house-2024:02001", "State House District 1")] {
+            searchAlbers(query, in: app)
+            waitForSelection(app.buttons["inspection"], named: name)
+            app.buttons["inspection"].tap()
+            XCTAssertTrue(app.staticTexts["Reported votes"].waitForExistence(timeout: 4))
+            app.buttons["Done"].tap()
+        }
+
+        view("Hawaii", in: app)
+        let hawaii = map.screenshot().pngRepresentation
+        searchElectionYear(2020, in: app)
+        let switched = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label CONTAINS %@", "Biden"), object: winner)
+        XCTAssertEqual(XCTWaiter.wait(for: [switched], timeout: 12), .completed)
+        waitForMetal("3,153", in: app)
+        XCTAssertTrue(date.label.contains("fallback"))
+        XCTAssertNotEqual(hawaii, map.screenshot().pngRepresentation)
+        let hawaiiAfterSwitch = map.screenshot().pngRepresentation
+        view("National", in: app)
+        XCTAssertNotEqual(hawaiiAfterSwitch, map.screenshot().pngRepresentation)
+
+        app.buttons["viewpoints"].tap()
+        if colors.exists { colors.tap() }
+        app.buttons["Alternate palette"].tap()
+        XCTAssertFalse(app.staticTexts["albers-margin-legend"].exists)
+        let priorBorders = map.screenshot().pngRepresentation
+        view("Emphasize borders", in: app)
+        XCTAssertNotEqual(priorBorders, map.screenshot().pngRepresentation)
+    }
+
+    @MainActor
+    func testMetalCensusNavigationLifecycleAndSelection() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers-metal", "--dataset", "states", "--measure"]
+        app.launch()
+        waitForMetal("51", in: app)
+        let map = app.descendants(matching: .any)["albers-map"].firstMatch
+        let national = map.screenshot().pngRepresentation
+        searchAlbers("Alaska", in: app)
+        waitForSelection(app.buttons["inspection"], named: "Alaska")
+        XCTAssertNotEqual(national, map.screenshot().pngRepresentation)
+        let alaskan = map.screenshot().pngRepresentation
+        view("Hawaii", in: app)
+        XCTAssertNotEqual(alaskan, map.screenshot().pngRepresentation)
+        map.pinch(withScale: 1.7, velocity: 1)
+        map.swipeLeft(velocity: .slow)
+        map.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5)).doubleTap()
+        XCUIDevice.shared.press(.home)
+        app.activate()
+        waitForSelection(app.buttons["inspection"], named: "Alaska")
+        XCUIDevice.shared.orientation = .landscapeLeft
+        waitForSelection(app.buttons["inspection"], named: "Alaska")
+        XCTAssertTrue(map.exists)
+        XCUIDevice.shared.orientation = .portrait
+        choose("Districts", in: app)
+        waitForMetal("436", in: app)
+        searchAlbers("3911", in: app)
+        waitForSelection(app.buttons["inspection"])
+        choose("Counties", in: app)
+        waitForMetal("3,144", in: app)
+        searchAlbers("Cuyahoga", in: app)
+        waitForSelection(app.buttons["inspection"], named: "Cuyahoga County")
+        view("Zoom to selected feature", in: app)
+        let detail = XCTAttachment(screenshot: map.screenshot())
+        detail.name = "Census county detail in Metal"
+        detail.lifetime = .keepAlways
+        add(detail)
+
+        view("Albers Core Graphics", in: app)
+        let status = app.staticTexts["load-status"]
+        let cg = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label CONTAINS %@", "Albers equal area"), object: status)
+        XCTAssertEqual(XCTWaiter.wait(for: [cg], timeout: 8), .completed)
+        searchAlbers("Cuyahoga", in: app)
+        waitForSelection(app.buttons["inspection"], named: "Cuyahoga County")
+        view("Zoom to selected feature", in: app)
+        let control = XCTAttachment(screenshot: map.screenshot())
+        control.name = "Census county detail in Core Graphics"
+        control.lifetime = .keepAlways
+        add(control)
+        view("Albers Metal", in: app)
+        waitForMetal("3,144", in: app)
+    }
+
+    @MainActor
+    func testMetalHistoricalBoundariesAnd2000Reuse() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers-metal", "--election-year", "2024", "--measure"]
+        app.launch()
+        waitForMetal("51", in: app)
+        let date = app.staticTexts["snapshot-date"]
+        XCTAssertTrue(date.label.hasSuffix("2000 boundaries (2000-11-07)"))
+        searchElectionYear(2004, in: app)
+        let reused = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label CONTAINS %@", "2004-11-02"),
+                                               object: date)
+        XCTAssertEqual(XCTWaiter.wait(for: [reused], timeout: 12), .completed)
+        XCTAssertTrue(date.label.hasSuffix("2000 boundaries (2000-11-07)"))
+        waitForMetal("51", in: app)
+        searchElectionYear(1788, in: app)
+        waitForMetal("16", in: app)
+        XCTAssertEqual(date.label, "1789-02-04 · Scheduled Electoral College vote")
+        choose("Historical Counties", in: app)
+        waitForMetal("332", in: app)
+        let dates = app.buttons["historical-dates"]
+        dates.tap()
+        app.buttons["2000-01-01"].tap()
+        waitForMetal("3,139", in: app)
+    }
+
+    @MainActor
+    func testMetalFallsBackForAnIdentifiedCollapsedPolygon() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers-metal", "--metal-fallback-probe", "--measure"]
+        app.launch()
+        let status = app.staticTexts["load-status"]
+        let fallback = NSPredicate(format: "label CONTAINS %@ AND label CONTAINS %@",
+                                   "Core Graphics fallback", "fixture-collapsed")
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: fallback, object: status)],
+                                      timeout: 20), .completed, status.label)
+        searchAlbers("fixture-visible", in: app)
+        waitForSelection(app.buttons["inspection"], named: "Visible fixture polygon")
+        app.buttons["inspection"].tap()
+        XCTAssertTrue(app.staticTexts["GEOID"].waitForExistence(timeout: 5))
+    }
+
+    @MainActor
     func testFilesImportAndRejectInvalidJSON() throws {
         continueAfterFailure = false
         let app = XCUIApplication()
@@ -230,7 +378,7 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
         app.launchArguments = ["--dataset", "states"]
         app.launch()
         waitForGeometry("56", in: app)
-        view("Albers equal area", in: app)
+        view("Albers Core Graphics", in: app)
         let map = app.descendants(matching: .any)["albers-map"].firstMatch
         XCTAssertTrue(map.waitForExistence(timeout: 8))
         func waitForAlbers(_ count: String) {
@@ -465,6 +613,35 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
             context?.draw(pixel, in: CGRect(x: 0, y: 0, width: 1, height: 1))
         }
         XCTAssertGreaterThan(Int(rgba[0]), Int(rgba[2]) + 35, "Expected amber selection at the tap, got \(rgba)")
+    }
+
+    @MainActor
+    private func waitForMetal(_ count: String, in app: XCUIApplication) {
+        let status = app.staticTexts["load-status"]
+        let ready = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label == %@",
+            "\(count) features · Albers Metal"), object: status)
+        XCTAssertEqual(XCTWaiter.wait(for: [ready], timeout: 25), .completed, status.label)
+    }
+
+    @MainActor
+    private func searchAlbers(_ query: String, in app: XCUIApplication) {
+        view("Find geography", in: app)
+        let search = app.searchFields["Search geography"]
+        XCTAssertTrue(search.waitForExistence(timeout: 5))
+        search.tap()
+        search.typeText(query)
+        let row = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "albers-feature-")).firstMatch
+        XCTAssertTrue(row.waitForExistence(timeout: 5))
+        row.tap()
+    }
+
+    @MainActor
+    private func searchElectionYear(_ year: Int, in app: XCUIApplication) {
+        app.buttons["election-years"].tap()
+        let search = app.searchFields["Search election years"]
+        search.tap()
+        search.typeText(String(year))
+        app.buttons["election-year-\(year)"].tap()
     }
 
     @MainActor
