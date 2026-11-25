@@ -69,6 +69,15 @@ def stress(path):
         ),
         "mesh_publications": len(groups["metal_mesh_ready"]),
         "mesh_cancellations": len(groups["metal_mesh_cancelled"]),
+        "layout_changes": len(groups["metal_layout"]),
+        "geographic_preparations": len(groups["metal_mesh_preparing"]),
+        "published_vertex_buffers": sum(row.get("vertex_buffers", 0) for row in groups["metal_mesh_ready"]),
+        "published_index_buffers": sum(row.get("index_buffers", 0) for row in groups["metal_mesh_ready"]),
+        "allocated_style_and_color_buffers": sum(row.get("allocated_buffers", 0) for row in groups["metal_style_upload"]),
+        "cache_entries": distribution(field(groups["albers_stress_checkpoint"], "geographic_cache_entries")),
+        "appearance_outliers_over_one_second": [
+            row for row in groups["metal_appearance_submit"] if row["elapsed_ms"] > 1000
+        ],
         "fallbacks": groups["metal_fallback"],
         "selection_attempts": len(groups["election_albers_selection"]),
         "selection_hits": sum(row["hit"] for row in groups["election_albers_selection"]),
@@ -118,8 +127,10 @@ def cancellation(path):
 
 def comparison(directory):
     configurations = collections.defaultdict(list)
-    for path in sorted(directory.glob("*.jsonl")):
-        config, separator, trial = path.stem.rpartition("-")
+    inputs = {path.name.removesuffix(".gz"): path for path in directory.glob("*.jsonl.gz")}
+    inputs.update({path.name: path for path in directory.glob("*.jsonl")})
+    for filename, path in sorted(inputs.items()):
+        config, separator, trial = Path(filename).stem.rpartition("-")
         if separator and trial.isdecimal():
             configurations[config].append((int(trial), read(path)))
     results = {}
@@ -136,6 +147,8 @@ def comparison(directory):
                 ("albers_first_draw", "geometry_request_ms"), ("metal_geometry_submit", "geometry_request_ms"),
                 ("metal_mesh_ready", "prepare_ms"), ("metal_mesh_ready", "tessellation_ms"),
                 ("metal_mesh_ready", "upload_ms"), ("metal_pipeline", "elapsed_ms"),
+                ("metal_pipeline", "library_ms"), ("metal_pipeline", "pipeline_ms"),
+                ("metal_geometry_complete", "geometry_request_ms"),
                 ("metal_first_submit", "app_ms"), ("metal_first_complete", "app_ms"),
                 ("metal_first_complete", "gpu_ms"),
                 ("metal_first_submit", "first_submit_footprint_mib"),

@@ -350,6 +350,102 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
     }
 
     @MainActor
+    func testHistoricalOverlapOnThematicMetalMap() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers-metal", "--historical-date", "1808-01-01"]
+        app.launch()
+        waitForMetal("603", in: app)
+        let map = app.descendants(matching: .any)["albers-map"].firstMatch
+        let size = map.frame.size
+        let fit = min((size.width - 24) / 4585928.42, (size.height - 24) / 3244441.44)
+        // A source-verified interior point shared by Concordia county and parish.
+        map.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+            .withOffset(CGVector(dx: (2749899.19 - 4585928.42 / 2) * fit,
+                                 dy: (2977204.64 - 3244441.44 / 2) * fit)).tap()
+        XCTAssertTrue(app.navigationBars["Overlapping boundaries"].waitForExistence(timeout: 6))
+        let rows = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "albers-feature-"))
+        XCTAssertEqual(rows.count, 2)
+        for key in ["6860", "12250"] {
+            XCTAssertTrue(rows.matching(NSPredicate(format: "label CONTAINS %@", key)).firstMatch.exists)
+        }
+        rows.firstMatch.tap()
+        waitForSelection(app.buttons["inspection"], named: "Concordia")
+    }
+
+    @MainActor
+    func testElectoralInsetTextInspector() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers-metal", "--election-year", "2024"]
+        app.launch()
+        waitForMetal("51", in: app)
+        for region in ["Alaska", "Hawaii"] {
+            searchAlbers(region, in: app)
+            waitForSelection(app.buttons["inspection"], named: region)
+            app.buttons["inspection"].tap()
+            XCTAssertTrue(app.staticTexts["Reported electoral allocation"].waitForExistence(timeout: 5))
+            app.buttons["Done"].tap()
+        }
+    }
+
+    @MainActor
+    func testSystemReducedMotionRegionalCamera() throws {
+        try XCTSkipUnless(ProcessInfo.processInfo.environment["METAL_MOTION_QUALIFICATION"] == "1",
+                          "Opt in to changing and restoring the simulator's Reduce Motion setting.")
+        let settings = XCUIApplication(bundleIdentifier: "com.apple.Preferences")
+        settings.launch()
+        func open(_ title: String) throws {
+            let item = settings.staticTexts[title].firstMatch
+            for _ in 0..<5 where !item.isHittable { settings.swipeUp() }
+            guard item.isHittable else { throw NSError(domain: "Settings navigation: " + title, code: 1) }
+            item.tap()
+        }
+        try open("Accessibility")
+        try open("Motion")
+        let toggle = settings.switches["Reduce Motion"].firstMatch
+        XCTAssertTrue(toggle.waitForExistence(timeout: 5))
+        let previouslyEnabled = toggle.value as? String == "1"
+        if !previouslyEnabled { toggle.tap() }
+        defer {
+            if !previouslyEnabled {
+                settings.activate()
+                if toggle.value as? String == "1" { toggle.tap() }
+            }
+        }
+        XCTAssertEqual(toggle.value as? String, "1")
+        let app = XCUIApplication()
+        app.launchArguments = ["--measure", "--albers-metal", "--dataset", "states", "--albers-region-route"]
+        app.launch()
+        waitForMetal("51", in: app)
+        RunLoop.current.run(until: Date().addingTimeInterval(9))
+    }
+
+    @MainActor
+    func testLiveCompositionSwitchPreservesSelection() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--measure", "--albers-metal", "--dataset", "states"]
+        app.launch()
+        waitForMetal("51", in: app)
+        searchAlbers("Hawaii", in: app)
+        waitForSelection(app.buttons["inspection"], named: "Hawaii")
+        view("National", in: app)
+        let map = app.descendants(matching: .any)["albers-map"].firstMatch
+        RunLoop.current.run(until: Date().addingTimeInterval(0.5))
+        let thematic = map.screenshot().pngRepresentation
+        for profile in ["Equal-Scale Research", "Thematic National"] {
+            view("National composition", in: app)
+            app.buttons[profile].tap()
+            waitForSelection(app.buttons["inspection"], named: "Hawaii")
+            RunLoop.current.run(until: Date().addingTimeInterval(0.5))
+            if profile == "Equal-Scale Research" {
+                XCTAssertNotEqual(thematic, map.screenshot().pngRepresentation)
+            }
+        }
+    }
+
+    @MainActor
     func testMissingShaderFallsBackToSelectableGeography() {
         let app = XCUIApplication()
         app.launchArguments = ["--albers-metal", "--dataset", "states", "--metal-pipeline-failure"]

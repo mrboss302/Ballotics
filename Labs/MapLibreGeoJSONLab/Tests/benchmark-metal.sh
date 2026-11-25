@@ -64,26 +64,46 @@ case ${METAL_BENCHMARK_MODE:-comparison} in
         done
         ;;
     qualification)
-        for workload in election-counties census-counties states districts counties-1788 counties-2000 electoral-states; do
-            case "$workload" in
-                election-counties) args=(--election-year 2024 --county-results) ;;
-                census-counties) args=(--dataset counties) ;;
-                states|districts) args=(--dataset "$workload") ;;
-                counties-1788) args=(--historical-date 1788-01-01) ;;
-                counties-2000) args=(--historical-date 2000-01-01) ;;
-                electoral-states) args=(--election-year 2024) ;;
-            esac
-            for config in cg research thematic maplibre; do
-                marker=albers_route_done
-                case "$config" in
-                    cg) flags=(--albers --albers-route) ;;
-                    research) flags=(--albers-metal --albers-route --equal-scale) ;;
-                    thematic) flags=(--albers-metal --albers-route) ;;
-                    maplibre) flags=(--election-maplibre --metal-matched-route); marker=navigation_benchmark_done ;;
+        workloads=(election-counties census-counties states districts counties-1788 counties-2000 electoral-states)
+        if [[ -n ${METAL_WORKLOAD:-} ]]; then workloads=("$METAL_WORKLOAD"); fi
+        for trial in $(seq 1 "${METAL_TRIALS:-1}"); do
+            for workload in "${workloads[@]}"; do
+                case "$workload" in
+                    election-counties) args=(--election-year 2024 --county-results) ;;
+                    census-counties) args=(--dataset counties) ;;
+                    states|districts) args=(--dataset "$workload") ;;
+                    counties-1788) args=(--historical-date 1788-01-01) ;;
+                    counties-2000) args=(--historical-date 2000-01-01) ;;
+                    electoral-states) args=(--election-year 2024) ;;
+                    *) echo "Unknown workload: $workload" >&2; exit 2 ;;
                 esac
-                run "$workload-$config-1" "$marker" 120 "${args[@]}" "${flags[@]}"
+                for config in cg research thematic maplibre; do
+                    marker=albers_route_done
+                    case "$config" in
+                        cg) flags=(--albers --albers-route) ;;
+                        research) flags=(--albers-metal --albers-route --equal-scale) ;;
+                        thematic) flags=(--albers-metal --albers-route) ;;
+                        maplibre) flags=(--election-maplibre --metal-matched-route); marker=navigation_benchmark_done ;;
+                    esac
+                    run "$workload-$config-$trial" "$marker" 120 "${args[@]}" "${flags[@]}"
+                done
             done
         done
+        ;;
+    quality-visual)
+        run counties-cg albers_first_draw 45 --albers --dataset counties
+        sleep 1
+        xcrun simctl io "$device" screenshot "$output/counties-cg.png"
+        for samples in 1 2 4; do
+            name="counties-metal-${samples}x"
+            run "$name" 'metal_\(first_complete\|fallback\)' 45 --albers-metal --dataset counties "--metal-samples-$samples"
+            if grep -q '"event":"metal_fallback"' "$output/$name.jsonl"; then continue; fi
+            sleep 1
+            xcrun simctl io "$device" screenshot "$output/$name.png"
+        done
+        run research-counties metal_first_complete 45 --albers-metal --equal-scale --dataset counties
+        sleep 1
+        xcrun simctl io "$device" screenshot "$output/research-counties.png"
         ;;
     quality)
         for trial in $(seq 1 "${METAL_TRIALS:-3}"); do
@@ -114,7 +134,7 @@ case ${METAL_BENCHMARK_MODE:-comparison} in
         xcrun simctl io "$device" screenshot "$output/counties-metal-1x.png"
         ;;
     *)
-        echo "Choose ownership, regions, qualification, quality, comparison, stress, cancellation, or visual." >&2
+        echo "Choose ownership, regions, qualification, quality-visual, quality, comparison, stress, cancellation, or visual." >&2
         exit 2
         ;;
 esac
