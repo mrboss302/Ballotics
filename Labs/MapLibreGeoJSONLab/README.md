@@ -267,3 +267,37 @@ The visual test is `testCompositionReview`. Export its attachments locally with 
 4. Collect actual drawable presentation events and command timestamps alongside Instruments Metal System Trace, Animation Hitches, memory and thermal measurements. Count presentation gaps against the measured display period. Record memory warnings, process footprint, sampled preparation peaks, any thermal transitions and post-dismissal release. Keep heavy Instruments recordings separate from the uninstrumented navigation cohort.
 5. Exercise 2020/2024 recoloring, historical source supersession, repeated layout switches, search, pinch/pan, rotation, foregrounding and dismissal. Repeat on representative older hardware. Verify VoiceOver focus, both inset search results, inspector text, and actual system Reduce Motion.
 6. Export `Library/Caches/benchmark.jsonl` using `xcrun devicectl device copy from --device "$DEVICE" --domain-type appDataContainer --domain-identifier org.ballotics.MapLibreGeoJSONLab --source Library/Caches/benchmark.jsonl --destination "$OUTPUT"`. Retain all observations, including timeouts, fallback events, long gaps and unavailable timestamps. Compare approximately 60 presented fps only on hardware with corresponding refresh and motion conditions.
+
+## BalloticsGeoKit 0.4A
+
+Run the following from the research lab directory on a Mac with Xcode, its Metal toolchain, the authorized historical county archive and the existing lab build resources. The standalone package and district viewer need no election package.
+
+```sh
+kit=../../Packages/BalloticsGeoKit
+work=$(mktemp -d)
+swift test --package-path "$kit" --scratch-path "$work/package" -c release
+swift run --package-path "$kit" --scratch-path "$work/package" -c release DistrictAtlas ../../cb_2024_us_cd119_5m.json
+# Headless national or detail capture
+"$work/package/release/DistrictAtlas" ../../cb_2024_us_cd119_5m.json --district TX-18 --render "$work/tx18.png"
+xcodebuild -project MapLibreGeoJSONLab.xcodeproj -scheme MapLibreGeoJSONLab -configuration Release \
+  -destination "platform=iOS Simulator,id=$SIMULATOR_ID" -derivedDataPath "$work/ios" \
+  CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=YES build-for-testing
+app="$work/ios/Build/Products/Release-iphonesimulator/MapLibreGeoJSONLab.app"
+bash Tests/check-geokit-geography.sh "$HISTORICAL_COUNTY_ARCHIVE" "$app/ElectionResearch/county-geometry-2024.geojson" "$work/geography"
+xcrun swiftc -O -module-cache-path "$work/modules" "$kit"/Sources/BalloticsGeoKit/*.swift GeoJSON.swift \
+  HistoricalArchive.swift ElectoralCartography.swift Tests/GeoKitLabelStudy.swift -o "$work/study"
+"$work/study" ../../US_HistStateTerr_Gen05.json "$app/ElectionResearch/0.1.0/national.json" > "$work/labels.jsonl"
+for workload in districts electoral-states election-counties; do
+  trials=1
+  if [ "$workload" = election-counties ]; then trials=3; fi
+  METAL_BENCHMARK_MODE=qualification METAL_WORKLOAD="$workload" METAL_TRIALS="$trials" \
+    bash Tests/benchmark-metal.sh "$SIMULATOR_ID" "$app" "$work/$workload" "$HISTORICAL_COUNTY_ARCHIVE"
+done
+for mode in regions label-overlay; do
+  METAL_BENCHMARK_MODE="$mode" bash Tests/benchmark-metal.sh "$SIMULATOR_ID" "$app" "$work/$mode" "$HISTORICAL_COUNTY_ARCHIVE"
+done
+METAL_BENCHMARK_MODE=stress METAL_STRESS_SECONDS=120 bash Tests/benchmark-metal.sh \
+  "$SIMULATOR_ID" "$app" "$work/lifetime" "$HISTORICAL_COUNTY_ARCHIVE"
+```
+
+The 0.3Q section provides the ten dated inputs for the 14-input tessellation check, optional 30-minute route and signed-device protocol. An optional third argument to the compiled label study writes the 1976 geographic-anchor diagram. Review historical and electoral images locally. For native screenshots run `testGeoKitOwnerReviewAndExternalSelection` and `testGeoKitLandscapeScreen` with the existing Release scheme on each viewport. On iPad the landscape fixture simulates device rotation. Export the named attachments with xcresulttool. Run testGeoKitElectoralContentSwitch to verify a same-revision content change. The label summary command is `python3 Tests/summarize-metal.py labels PATH_TO_LABELS_JSONL`. For portable test input see the package’s `Tests/BalloticsGeoKitTests/Fixtures` directory. [0.4A architecture](GEOKIT_0.4A_ARCHITECTURE.md) · [Qualification](GEOKIT_0.4A_QUALIFICATION_REPORT.md)

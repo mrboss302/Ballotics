@@ -1,0 +1,151 @@
+{
+  "terminal_event": {
+    "app_ms": 120321.7,
+    "elapsed_ms": 120157,
+    "event": "albers_stress_done",
+    "mismatches": 0,
+    "navigation_steps": 443,
+    "rapid_requests": 10,
+    "sources": 50,
+    "timeouts": 0,
+    "years": 100
+  },
+  "election_requests": 111,
+  "election_commits": 101,
+  "superseded_commits": 0,
+  "stale_style_events": 0,
+  "mesh_publications_during_county_election_year_phase": 1,
+  "style_uploads_during_county_election_year_phase": 198,
+  "mesh_publications": 53,
+  "mesh_cancellations": 0,
+  "layout_changes": 64,
+  "geographic_preparations": 53,
+  "published_vertex_buffers": 147,
+  "published_index_buffers": 147,
+  "allocated_style_and_color_buffers": 990,
+  "cache_entries": {
+    "count": 8,
+    "median": 1.0,
+    "p95": 2,
+    "p99": 2,
+    "max": 2
+  },
+  "appearance_outliers_over_one_second": [],
+  "fallbacks": [],
+  "selection_attempts": 443,
+  "selection_hits": 233,
+  "selection_ms": {
+    "count": 443,
+    "median": 0.1,
+    "p95": 0.2,
+    "p99": 0.3,
+    "max": 1.9
+  },
+  "warm_year_commit_ms": {
+    "count": 100,
+    "median": 3.6,
+    "p95": 6.2,
+    "p99": 7.6,
+    "max": 153.9
+  },
+  "cold_year_commit_ms": 1195.3,
+  "main_actor_queue_ms": {
+    "count": 111,
+    "median": 0.4,
+    "p95": 2,
+    "p99": 2.8,
+    "max": 3.3
+  },
+  "year_observed_ready_ms": {
+    "count": 100,
+    "median": 27.1,
+    "p95": 52.9,
+    "p99": 191.6,
+    "max": 1506.6
+  },
+  "gpu_style_copy_ms": {
+    "count": 495,
+    "median": 0.3,
+    "p95": 0.5,
+    "p99": 0.7,
+    "max": 1.1
+  },
+  "gpu_style_prepare_ms": {
+    "count": 495,
+    "median": 5.8,
+    "p95": 10.4,
+    "p99": 11.1,
+    "max": 11.9
+  },
+  "appearance_update_to_submit_ms": {
+    "clear_selection": {
+      "count": 134,
+      "median": 2.8,
+      "p95": 11.6,
+      "p99": 15.4,
+      "max": 16.9
+    },
+    "highlight": {
+      "count": 233,
+      "median": 4.9,
+      "p95": 13.3,
+      "p99": 15.7,
+      "max": 17.4
+    },
+    "thematic_style": {
+      "count": 414,
+      "median": 15.55,
+      "p95": 20.4,
+      "p99": 21.6,
+      "max": 24.4
+    }
+  },
+  "source_observed_ready_ms": {
+    "count": 50,
+    "median": 320.25,
+    "p95": 603.4,
+    "p99": 1355.8,
+    "max": 1355.8
+  },
+  "frame_transition_ms": {
+    "count": 77,
+    "median": 292.2,
+    "p95": 305.6,
+    "p99": 318.7,
+    "max": 318.7
+  },
+  "steady_footprint_mib": {
+    "count": 0
+  },
+  "reopen": [
+    {
+      "app_ms": 63275.8,
+      "event": "albers_stress_reopen",
+      "ready": true
+    }
+  ],
+  "background_transitions": [],
+  "release_phase": [
+    {
+      "app_ms": 120322.2,
+      "before_release_footprint_mib": 122.33100891113281,
+      "before_release_rss_mib": 178.359375,
+      "event": "albers_stress_release_start",
+      "features": 3153
+    },
+    {
+      "after_release_footprint_mib": 78.54975891113281,
+      "after_release_rss_mib": 177.5625,
+      "app_ms": 123444.2,
+      "event": "albers_stress_released"
+    }
+  ],
+  "mesh_releases": 53,
+  "releases_with_commands_in_flight": 3,
+  "maximum_sampled_footprint": [
+    135.9403839111328,
+    "metal_mesh_ready",
+    63220.4,
+    "sampled_peak_footprint_mib"
+  ]
+}

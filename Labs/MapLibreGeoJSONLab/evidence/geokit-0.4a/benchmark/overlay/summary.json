@@ -1,0 +1,86 @@
+{
+  "labels": {
+    "layout_ms": {
+      "count": 1017,
+      "median": 0.3,
+      "p95": 0.5,
+      "p99": 0.6,
+      "max": 4.8
+    },
+    "layout_over_4_ms": 1,
+    "layout_with_key_ms": {
+      "count": 172,
+      "median": 0.4,
+      "p95": 0.6,
+      "p99": 0.7,
+      "max": 0.9
+    },
+    "layout_without_key_ms": {
+      "count": 845,
+      "median": 0.3,
+      "p95": 0.5,
+      "p99": 0.6,
+      "max": 4.8
+    },
+    "anchor_ready": [
+      {
+        "app_ms": 395.3,
+        "elapsed_ms": 22,
+        "event": "geokit_anchors_ready",
+        "groups": 51
+      }
+    ],
+    "content_update": [
+      {
+        "app_ms": 379.4,
+        "cached_texts": 89,
+        "elapsed_ms": 6,
+        "event": "geokit_label_content",
+        "labels": 51
+      }
+    ],
+    "geographic_mesh_publications": 1
+  },
+  "focus": {
+    "layout_ms": {
+      "count": 396,
+      "median": 0.2,
+      "p95": 0.3,
+      "p99": 0.6,
+      "max": 0.7
+    },
+    "layout_over_4_ms": 0,
+    "layout_with_key_ms": {
+      "count": 10,
+      "median": 0.45,
+      "p95": 0.7,
+      "p99": 0.7,
+      "max": 0.7
+    },
+    "layout_without_key_ms": {
+      "count": 386,
+      "median": 0.2,
+      "p95": 0.3,
+      "p99": 0.4,
+      "max": 0.5
+    },
+    "anchor_ready": [
+      {
+        "app_ms": 443.7,
+        "elapsed_ms": 21,
+        "event": "geokit_anchors_ready",
+        "groups": 51
+      }
+    ],
+    "content_update": [
+      {
+        "app_ms": 427.8,
+        "cached_texts": 101,
+        "elapsed_ms": 5.2,
+        "event": "geokit_label_content",
+        "labels": 51
+      }
+    ],
+    "geographic_mesh_publications": 1
+  }
+}

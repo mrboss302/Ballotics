@@ -1,0 +1,61 @@
+{
+  "core_and_lab_runtime_commit": "3f2bf50",
+  "toolchain": "Xcode 26.3 (17C529)",
+  "simulator_runtime": "iOS/iPadOS 26.3.1",
+  "physical_targets_at_discovery": {
+    "iPhone": "offline",
+    "iPad": "offline"
+  },
+  "targets": {
+    "iphonesimulator": {
+      "code_signing": "disabled",
+      "executable_sha256": "be41fb515f33a4fff1558f635216feed402a3f07c067c4ee94bb47fbe2e8502b",
+      "metallib_sha256": "e07898d85eccde388d50a50caab4673a12c57a2b59317430117e25eba7a9f08a"
+    },
+    "iphoneos": {
+      "code_signing": "disabled",
+      "executable_sha256": "7a91514a541a18435292642ac5e02969c14da387c0b343eb0a17252ae66106a4",
+      "metallib_sha256": "3b4d9302aee88edc66d7b03530bcd7985da9996248b8910c7395f476fb6e030a"
+    }
+  },
+  "package_release_tests": [
+    "testExternalPlacementPrioritiesOverridesAndCamera",
+    "testMembershipRevisionAndIsolation",
+    "testPortableFixtureAndStableResolution",
+    "testRectangleMustClearHolesAndNarrowParts"
+  ],
+  "iPhone_16e_regression_suite": [
+    "testGeoKitOwnerReviewAndExternalSelection",
+    "testHistoricalOverlapOnThematicMetalMap",
+    "testLiveCompositionSwitchPreservesSelection",
+    "testMetalCountyStylingAndElectionReuse",
+    "testMetalFallsBackForAnIdentifiedCollapsedPolygon",
+    "testMissingShaderFallsBackToSelectableGeography",
+    "testNationalInsetPickingAcrossRenderers"
+  ],
+  "iPhone_16e_updated_key": [
+    "testGeoKitOwnerReviewAndExternalSelection"
+  ],
+  "iPhone_16e_landscape": [
+    "testGeoKitLandscapeScreen"
+  ],
+  "iPhone_16e_electoral_switch": [
+    "testGeoKitElectoralContentSwitch"
+  ],
+  "iPhone_17_Pro_visuals": [
+    "testGeoKitLandscapeScreen",
+    "testGeoKitOwnerReviewAndExternalSelection"
+  ],
+  "iPad_A16_portrait": [
+    "testGeoKitOwnerReviewAndExternalSelection"
+  ],
+  "iPad_A16_landscape": [
+    "testGeoKitLandscapeScreen"
+  ],
+  "timing_cohort": {
+    "app_binary_sha256": "61d369173f134f6400672bfd0f6067fa61fea18c625e6249b4765605ee519324",
+    "scope": "Dense, comparison, overlay, regional and lifetime routes preceded the final Codable coordinate validation. Those routes load GeoJSON through PolygonSource. The electoral content-switch UI trace used the final library."
+  },
+  "package_release_tests_passed": 4,
+  "native_orientation_note": "Portrait-only preliminary captures were superseded. The windowed iPad declined an application-requested landscape orientation. The initial iPad key tap timed out under disk pressure. The isolated rerun retained the same app binary."
+}
