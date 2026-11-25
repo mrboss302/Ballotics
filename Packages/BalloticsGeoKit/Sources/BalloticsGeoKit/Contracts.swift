@@ -101,6 +101,17 @@ public struct GeographicCoordinate: Hashable, Codable {
         self.longitude = longitude
         self.latitude = latitude
     }
+
+    public init(from decoder: Decoder) throws {
+        let fields = try decoder.container(keyedBy: CodingKeys.self)
+        let longitude = try fields.decode(Double.self, forKey: .longitude)
+        let latitude = try fields.decode(Double.self, forKey: .latitude)
+        guard let coordinate = Self(longitude: longitude, latitude: latitude) else {
+            throw DecodingError.dataCorrupted(.init(codingPath: decoder.codingPath,
+                debugDescription: "Position is outside WGS 84 longitude or latitude bounds."))
+        }
+        self = coordinate
+    }
 }
 
 public struct GeographicPolygon {

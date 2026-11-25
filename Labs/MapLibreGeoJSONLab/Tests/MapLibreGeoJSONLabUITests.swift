@@ -352,8 +352,22 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
             XCTAssertFalse(app.buttons["geokit-tile-MA"].isHittable)
         }
         view("National",in:app)
-        XCUIDevice.shared.orientation = .landscapeLeft
-        capture("landscape")
+        XCTAssertTrue(massachusetts.isHittable)
+    }
+
+    @MainActor
+    func testGeoKitElectoralContentSwitch() {
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers-metal", "--measure", "--election-year", "2024"]
+        app.launch()
+        let key = app.buttons["geokit-tile-MA"]
+        XCTAssertTrue(key.waitForExistence(timeout: 30))
+        searchElectionYear(2020, in: app)
+        let winner = app.staticTexts["presidential-winner"]
+        let changed = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label CONTAINS %@", "Biden"), object: winner)
+        XCTAssertEqual(XCTWaiter.wait(for: [changed], timeout: 15), .completed)
+        key.tap()
+        waitForSelection(app.buttons["inspection"], named: "Massachusetts")
     }
 
     @MainActor
@@ -361,12 +375,15 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
         continueAfterFailure = false
         let app = XCUIApplication()
         defer { XCUIDevice.shared.orientation = .portrait }
-        XCUIDevice.shared.orientation = .landscapeLeft
-        app.launchArguments = ["--albers-metal","--measure","--election-year","2024"]
+        XCUIDevice.shared.orientation = .portrait
+        app.launchArguments = ["--albers-metal","--measure","--election-year","2024","--review-landscape"]
         app.launch()
         XCTAssertTrue(app.buttons["geokit-tile-MA"].waitForExistence(timeout:30))
         let map = app.descendants(matching:.any)["albers-map"].firstMatch
-        XCTAssertGreaterThan(map.frame.width,map.frame.height)
+        let wide = XCTNSPredicateExpectation(predicate: NSPredicate { _,_ in
+            map.frame.width > map.frame.height
+        },object:nil)
+        XCTAssertEqual(XCTWaiter.wait(for:[wide],timeout:12),.completed,app.debugDescription)
         let item = XCTAttachment(screenshot:XCUIScreen.main.screenshot())
         item.name = "GeoKit-landscape"
         item.lifetime = .keepAlways

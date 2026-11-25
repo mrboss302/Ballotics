@@ -102,6 +102,21 @@ def stress(path):
     }
 
 
+def label_overlay(path):
+    rows = read(path)
+    layouts = [row for row in rows if row["event"] == "geokit_label_layout"]
+    times = field(layouts, "elapsed_ms")
+    return {
+        "layout_ms": distribution(times),
+        "layout_over_4_ms": sum(value > 4 for value in times),
+        "layout_with_key_ms": distribution(row["elapsed_ms"] for row in layouts if row["external"]),
+        "layout_without_key_ms": distribution(row["elapsed_ms"] for row in layouts if not row["external"]),
+        "anchor_ready": [row for row in rows if row["event"] == "geokit_anchors_ready"],
+        "content_update": [row for row in rows if row["event"] == "geokit_label_content"],
+        "geographic_mesh_publications": sum(row["event"] == "metal_mesh_ready" for row in rows),
+    }
+
+
 def reduced_motion(path):
     rows = read(path)
     start = max(i for i, row in enumerate(rows) if row["event"] == "app_init")
@@ -201,10 +216,10 @@ def comparison(directory):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=["stress", "comparison", "cancellation", "reduced-motion"])
+    parser.add_argument("mode", choices=["stress", "comparison", "cancellation", "reduced-motion", "labels"])
     parser.add_argument("input", type=Path)
     args = parser.parse_args()
-    study = {"stress": stress, "comparison": comparison, "cancellation": cancellation, "reduced-motion": reduced_motion}
+    study = {"labels": label_overlay, "stress": stress, "comparison": comparison, "cancellation": cancellation, "reduced-motion": reduced_motion}
     result = study[args.mode](args.input)
     print(json.dumps(result, indent=2))
     if "pass" in result and not result["pass"]:

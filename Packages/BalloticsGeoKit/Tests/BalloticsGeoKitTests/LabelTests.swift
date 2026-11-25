@@ -84,6 +84,10 @@ final class LabelTests: XCTestCase {
         XCTAssertEqual(shape[0].exterior.count,5)
         XCTAssertTrue(shape[0].holes.isEmpty)
         XCTAssertNil(GeographicCoordinate(longitude:181,latitude:0))
+        let invalid = Data(#"{"longitude":181,"latitude":0}"#.utf8)
+        XCTAssertThrowsError(try JSONDecoder().decode(GeographicCoordinate.self, from: invalid))
+        let valid = try XCTUnwrap(GeographicCoordinate(longitude: -180, latitude: 90))
+        XCTAssertEqual(try JSONDecoder().decode(GeographicCoordinate.self, from: JSONEncoder().encode(valid)), valid)
     }
 
     func testExternalPlacementPrioritiesOverridesAndCamera() throws {

@@ -324,6 +324,17 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
     private var focusedRegion: AlbersRegion?
     private var insetLabels: [UILabel] = []
 
+    private func requestReviewOrientation() {
+        guard ProcessInfo.processInfo.arguments.contains("--review-landscape"),
+              let scene = window?.windowScene else { return }
+        // Reproduce a landscape viewport even when the simulator ignores virtual accelerometer events.
+        DispatchQueue.main.async {
+            scene.requestGeometryUpdate(.iOS(interfaceOrientations: .landscape)) { error in
+                LabLog.record("geokit_review_orientation_error", ["reason": error.localizedDescription])
+            }
+        }
+    }
+
     init(baseline: Bool) {
         self.baseline = baseline
         super.init(frame: .zero)
@@ -349,6 +360,7 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
 
     override func didMoveToWindow() {
         super.didMoveToWindow()
+        requestReviewOrientation()
         if window == nil {
             animation = nil
             displayLink?.invalidate()

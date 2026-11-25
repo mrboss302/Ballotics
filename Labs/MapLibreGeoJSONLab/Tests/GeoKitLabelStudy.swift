@@ -41,6 +41,7 @@ struct GeoKitLabelStudy {
         let national = try JSONSerialization.jsonObject(with:data) as! [String:Any]
         let elections = national["elections"] as! [[String:Any]]
         var lastDate = "", previousScene: AlbersScene?
+        var referenceAnchors: [String:[String:LabelAnchor]] = [:]
         let font = NSFont.monospacedDigitSystemFont(ofSize:8,weight:.medium)
         func measure(_ text: String) -> CGSize {
             let r = (text as NSString).boundingRect(with:CGSize(width:500,height:100),options:[.usesLineFragmentOrigin,.usesFontLeading],attributes:[.font:font])
@@ -54,6 +55,7 @@ struct GeoKitLabelStudy {
                 let snap = try archive.snapshot(on: HistoricalDay(date))
                 let collection = try JSONSerialization.jsonObject(with:snap.data) as! [String:Any]
                 previousScene = try AlbersScene.project(collection["features"] as! [[String:Any]]).composed(.thematic)
+                referenceAnchors.removeAll()
                 lastDate = date
             }
             let scene = previousScene!
@@ -74,6 +76,22 @@ struct GeoKitLabelStudy {
             let anchorMS = (clock()-t)*1000, m = clock()
             let sizes = Dictionary(uniqueKeysWithValues:specs.map { ($0.id,LabelMeasurements(full:measure([$0.primary,$0.secondary].filter { !$0.isEmpty }.joined(separator:"\n")),compact:measure($0.primary))) })
             let measureMS = (clock()-m)*1000
+            // Comparison-only anchors are outside the measured preparation/layout interval.
+            for spec in specs where referenceAnchors[spec.id] == nil {
+                let parts=scene.panels.flatMap { panel in
+                    panel.parts.filter { spec.features.contains($0.feature) }.map { (panel.region,$0) }
+                }
+                let ranked=parts.map { ($0.0,LabelPolygon($0.1)) }
+                var refs:[String:LabelAnchor]=[:]
+                if let (region,shape)=ranked.max(by:{ $0.1.area < $1.1.area }) {
+                    refs["legacy"]=shape.anchor(shape.average,region:region)
+                    refs["centroid"]=shape.anchor(shape.centroid,region:region)
+                    if let pole=shape.candidates().first { refs["pole"]=shape.anchor(pole,region:region) }
+                }
+                if let (region,part)=parts.max(by:{ $0.1.bounds.width*$0.1.bounds.height < $1.1.bounds.width*$1.1.bounds.height }),
+                   let pt=part.interiorAnchor { refs["baseline"]=LabelPolygon(part).anchor(pt,region:region) }
+                referenceAnchors[spec.id]=refs
+            }
             if year == 1976 && args.count == 4 { try renderAnchors(scene,groups:anchors,to:args[3]) }
             for (width,height) in [(350,450),(370,380),(850,620),(680,135)] {
                 let vp = CGRect(x:0,y:0,width:width,height:height)
@@ -97,7 +115,18 @@ struct GeoKitLabelStudy {
                     collisions += inside.dropFirst(i+1).filter { $0.frame.intersects(rect) }.count
                 }
                 let reasons = Dictionary(grouping:placed.filter { $0.mode == .suppressed },by:\.reason).mapValues(\.count)
-                let record:[String:Any] = ["year":year,"revision":date,"viewport":[width,height],"requested":specs.count,"valid":anchors.values.filter { !$0.candidates.isEmpty }.count,
+                var fitCounts=["legacy":0,"centroid":0,"baseline":0,"pole":0,"multiple":0]
+                let panels=Dictionary(uniqueKeysWithValues:scene.panels.map { ($0.region,$0) })
+                for spec in specs where !spec.external {
+                    let size=sizes[spec.id]!.full
+                    func fits(_ anchor: LabelAnchor) -> Bool {
+                        let scale=camera.scale*panels[anchor.region]!.scale
+                        return anchor.fits(width:(size.width+1)/scale,height:(size.height+1)/scale)
+                    }
+                    for (method,a) in referenceAnchors[spec.id]! where fits(a) { fitCounts[method,default:0] += 1 }
+                    if anchors[spec.id]!.candidates.contains(where:fits) { fitCounts["multiple",default:0] += 1 }
+                }
+                let record:[String:Any] = ["geometry_full_fit":fitCounts,"year":year,"revision":date,"viewport":[width,height],"requested":specs.count,"valid":anchors.values.filter { !$0.candidates.isEmpty }.count,
                     "legacy_valid":anchors.values.filter(\.averageInside).count,"centroid_valid":anchors.values.filter(\.centroidInside).count,"baseline_valid":anchors.values.filter(\.baselineInside).count,
                     "full":placed.filter { $0.mode == .full }.count,"compact":placed.filter { $0.mode == .compact }.count,"external":placed.filter { $0.mode == .tile }.count,"suppressed":reasons.values.reduce(0,+),"reasons":reasons,
                     "overlaps":collisions,"outside":outside,"overrides":0,"anchor_ms":anchorMS,"new_groups":scene.labelCache.count-before,"measurement_ms":measureMS,"resolve_ms":elapsed]
