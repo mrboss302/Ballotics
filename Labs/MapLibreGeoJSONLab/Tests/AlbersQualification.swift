@@ -148,6 +148,20 @@ struct AlbersQualification {
 
     private static func checkInsetLayout(_ url: URL) throws {
         let normal = try AlbersScene.load(url)
+        let themed = normal.composed(.thematic)
+        let ak = themed.panels.first { $0.region == .alaska }!
+        let hi = themed.panels.first { $0.region == .hawaii }!
+        precondition(ak.scale < 1 && hi.frame.minX > ak.frame.maxX && hi.frame.minY > ak.frame.minY)
+        precondition(themed.panels.allSatisfy { !$0.showsFrame })
+        for (a, b) in zip(normal.panels, themed.panels) {
+            precondition(zip(a.parts, b.parts).allSatisfy { $0.path === $1.path })
+            for part in b.parts {
+                guard let local = part.interiorAnchor else { continue }
+                let point = b.world(local)
+                precondition(hypot(b.local(point).x - local.x, b.local(point).y - local.y) < 1e-7)
+                precondition(themed.hits(point) == normal.hits(a.world(local)))
+            }
+        }
         let reversed = try AlbersScene.load(url, layout: .init(gap: 185_000, alaskaFirst: false))
         precondition(reversed.panels.map(\.region) == [.mainland, .hawaii, .alaska])
         precondition(reversed.panels[1].frame.maxX < reversed.panels[2].frame.minX)
@@ -186,7 +200,7 @@ struct AlbersQualification {
     private static func world(_ scene: AlbersScene, _ region: AlbersRegion, _ lon: Double, _ lat: Double) -> CGPoint {
         let panel = scene.panels.first { $0.region == region }!
         let point = region.projection.project(longitude: lon, latitude: lat)
-        return CGPoint(x: point.x + panel.translation.x, y: -point.y + panel.translation.y)
+        return panel.world(CGPoint(x: point.x, y: -point.y))
     }
 
     private static func checkHolesAndOverlap() throws {
@@ -212,8 +226,13 @@ struct AlbersQualification {
         precondition(scene.hits(world(scene, .mainland, -95.99, 40.01)) == [0])
         precondition(scene.hits(world(scene, .mainland, -98.01, 38.5)) == [0])
         precondition(scene.hits(world(scene, .mainland, -97.99, 38.5)) == [2])
-        for longitude in [179.95, -179.95] {
-            precondition(scene.hits(world(scene, .alaska, longitude, 52)) == [3])
+        for profile in NationalMapProfile.allCases {
+            let map = scene.composed(profile)
+            precondition(map.hits(world(map, .mainland, -100, 39)).isEmpty)
+            precondition(map.hits(world(map, .mainland, -99, 40.5)) == [1, 0])
+            for longitude in [179.95, -179.95] {
+                precondition(map.hits(world(map, .alaska, longitude, 52)) == [3])
+            }
         }
     }
 }

@@ -199,6 +199,9 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
         waitForSelection(app.buttons["inspection"], named: "Alaska")
         XCTAssertTrue(map.exists)
         XCUIDevice.shared.orientation = .portrait
+        let portrait = NSPredicate { _, _ in app.frame.height > app.frame.width }
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: portrait, object: app)],
+                                      timeout: 8), .completed)
         choose("Districts", in: app)
         waitForMetal("436", in: app)
         searchAlbers("3911", in: app)
@@ -252,6 +255,111 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
         dates.tap()
         app.buttons["2000-01-01"].tap()
         waitForMetal("3,139", in: app)
+    }
+
+    @MainActor
+    func testThirtyMinuteMetalLifecycle() throws {
+        try XCTSkipUnless(ProcessInfo.processInfo.environment["METAL_LONG_QUALIFICATION"] == "1",
+                          "Set TEST_RUNNER_METAL_LONG_QUALIFICATION=1 for the 30-minute Release route.")
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--measure", "--albers-metal", "--albers-stress", "--albers-seconds", "1800"]
+        let start = Date()
+        app.launch()
+        XCTAssertTrue(app.descendants(matching: .any)["albers-map"].firstMatch.waitForExistence(timeout: 30))
+        // Exercise real lifecycle events while the app's qualification driver owns year/source changes.
+        RunLoop.current.run(until: start.addingTimeInterval(150))
+        XCUIDevice.shared.orientation = .landscapeLeft
+        RunLoop.current.run(until: Date().addingTimeInterval(4))
+        XCUIDevice.shared.press(.home)
+        RunLoop.current.run(until: Date().addingTimeInterval(5))
+        app.activate()
+        XCUIDevice.shared.orientation = .portrait
+        RunLoop.current.run(until: start.addingTimeInterval(1790))
+        XCTAssertTrue(app.staticTexts["Albers study finished"].waitForExistence(timeout: 160))
+        RunLoop.current.run(until: Date().addingTimeInterval(5))
+    }
+
+    @MainActor
+    func testCompositionReview() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        let map = app.descendants(matching: .any)["albers-map"].firstMatch
+        func launch(_ args: [String], features: String) {
+            app.launchArguments = ["--albers-metal", "--measure"] + args
+            app.launch()
+            waitForMetal(features, in: app)
+        }
+        func capture(_ name: String) {
+            // Let the 280 ms camera transition and orientation layout settle before sampling pixels.
+            RunLoop.current.run(until: Date().addingTimeInterval(0.7))
+            let attachment = XCTAttachment(screenshot: map.screenshot())
+            attachment.name = name
+            attachment.lifetime = .keepAlways
+            add(attachment)
+        }
+        XCUIDevice.shared.orientation = .portrait
+        launch(["--dataset", "states", "--equal-scale"], features: "51")
+        capture("Q01-research-states")
+        launch(["--dataset", "states"], features: "51")
+        capture("Q02-thematic-states")
+        launch(["--election-year", "2024"], features: "51")
+        capture("Q03-electoral-2024")
+        for (region, name) in [("Alaska", "Q04-alaska"), ("Hawaii", "Q05-hawaii")] {
+            view(region, in: app)
+            capture(name)
+            searchAlbers(region, in: app)
+            waitForSelection(app.buttons["inspection"], named: region)
+            view("Clear selection", in: app)
+            view("National", in: app)
+        }
+        XCUIDevice.shared.orientation = .landscapeLeft
+        capture("Q06-landscape")
+        XCUIDevice.shared.orientation = .portrait
+        launch(["--election-year", "1788"], features: "16")
+        capture("Q07-electoral-1788")
+        launch(["--dataset", "counties"], features: "3,144")
+        capture("Q08-national-counties")
+    }
+
+    @MainActor
+    func testNationalInsetPickingAcrossRenderers() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        defer { XCUIDevice.shared.orientation = .portrait }
+        for (renderer, orientation) in [("--albers-metal", UIDeviceOrientation.portrait),
+                                        ("--albers", UIDeviceOrientation.landscapeLeft)] {
+            XCUIDevice.shared.orientation = orientation
+            app.launchArguments = [renderer, "--dataset", "states"]
+            app.launch()
+            let ready = NSPredicate(format: "label CONTAINS %@", "51 features")
+            XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: ready,
+                object: app.staticTexts["load-status"])], timeout: 25), .completed)
+            let map = app.descendants(matching: .any)["albers-map"].firstMatch
+            let size = map.frame.size
+            // 2024 Census fixture: interior points at 152.4 W, 64.7 N and 155.5 W, 19.62 N.
+            let fit = min((size.width - 24) / 4614313.92, (size.height - 24) / 3029240.19)
+            for (name, point) in [("Alaska", CGPoint(x: 833544.71, y: 2500296.57)),
+                                  ("Hawaii", CGPoint(x: 1863174.18, y: 2947156.34))] {
+                map.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+                    .withOffset(CGVector(dx: (point.x - 4614313.92 / 2) * fit,
+                                         dy: (point.y - 3029240.19 / 2) * fit)).tap()
+                waitForSelection(app.buttons["inspection"], named: name)
+            }
+        }
+    }
+
+    @MainActor
+    func testMissingShaderFallsBackToSelectableGeography() {
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers-metal", "--dataset", "states", "--metal-pipeline-failure"]
+        app.launch()
+        let status = app.staticTexts["load-status"]
+        let failure = NSPredicate(format: "label CONTAINS %@", "missing the polygon vertex function")
+        XCTAssertEqual(XCTWaiter.wait(for: [XCTNSPredicateExpectation(predicate: failure, object: status)],
+                                      timeout: 20), .completed, status.label)
+        searchAlbers("Hawaii", in: app)
+        waitForSelection(app.buttons["inspection"], named: "Hawaii")
     }
 
     @MainActor
@@ -654,8 +762,11 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
 
     @MainActor
     private func choose(_ dataset: String, in app: XCUIApplication) {
-        app.buttons["datasets"].tap()
-        app.buttons[dataset].tap()
+        let menu = app.buttons["datasets"]
+        let choice = app.buttons[dataset]
+        menu.tap()
+        if !choice.waitForExistence(timeout: 2) { menu.tap() }
+        choice.tap()
     }
 
     @MainActor

@@ -50,6 +50,48 @@ case ${METAL_BENCHMARK_MODE:-comparison} in
         run cancellation metal_rapid_history_done 70 --albers-metal --historical-date 1788-01-01 --historical-rapid-switches
         python3 "$(dirname "$0")/summarize-metal.py" cancellation "$output/cancellation.jsonl" > "$output/cancellation-summary.json"
         ;;
+    ownership)
+        run import-supersession metal_import_supersession_done 60 --albers-metal --dataset districts --metal-import-supersession
+        ;;
+    regions)
+        for config in cg research thematic; do
+            case "$config" in
+                cg) flags=(--albers) ;;
+                research) flags=(--albers-metal --equal-scale) ;;
+                thematic) flags=(--albers-metal) ;;
+            esac
+            run "regions-$config" albers_region_route_done 60 --election-year 2024 --county-results --albers-region-route "${flags[@]}"
+        done
+        ;;
+    qualification)
+        for workload in election-counties census-counties states districts counties-1788 counties-2000 electoral-states; do
+            case "$workload" in
+                election-counties) args=(--election-year 2024 --county-results) ;;
+                census-counties) args=(--dataset counties) ;;
+                states|districts) args=(--dataset "$workload") ;;
+                counties-1788) args=(--historical-date 1788-01-01) ;;
+                counties-2000) args=(--historical-date 2000-01-01) ;;
+                electoral-states) args=(--election-year 2024) ;;
+            esac
+            for config in cg research thematic maplibre; do
+                marker=albers_route_done
+                case "$config" in
+                    cg) flags=(--albers --albers-route) ;;
+                    research) flags=(--albers-metal --albers-route --equal-scale) ;;
+                    thematic) flags=(--albers-metal --albers-route) ;;
+                    maplibre) flags=(--election-maplibre --metal-matched-route); marker=navigation_benchmark_done ;;
+                esac
+                run "$workload-$config-1" "$marker" 120 "${args[@]}" "${flags[@]}"
+            done
+        done
+        ;;
+    quality)
+        for trial in $(seq 1 "${METAL_TRIALS:-3}"); do
+            for mode in samples-1 samples-2 samples-4 runtime-library; do
+                run "$mode-$trial" albers_route_done 120 --albers-metal --albers-route --election-year 2024 --county-results "--metal-$mode"
+            done
+        done
+        ;;
     comparison)
         election=(--election-year 2024 --county-results)
         for trial in $(seq 1 "${METAL_TRIALS:-3}"); do
@@ -72,7 +114,7 @@ case ${METAL_BENCHMARK_MODE:-comparison} in
         xcrun simctl io "$device" screenshot "$output/counties-metal-1x.png"
         ;;
     *)
-        echo "Choose comparison, stress, cancellation, or visual." >&2
+        echo "Choose ownership, regions, qualification, quality, comparison, stress, cancellation, or visual." >&2
         exit 2
         ;;
 esac
