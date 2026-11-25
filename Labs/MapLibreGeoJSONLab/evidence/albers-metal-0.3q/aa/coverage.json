@@ -1,0 +1,110 @@
+{
+  "drawable": [
+    1110,
+    1593
+  ],
+  "samples": {
+    "counties-cg": {
+      "all": {
+        "cg_land_pixels": 297011,
+        "land_pixels": 297011,
+        "iou": 1.0,
+        "cg_far_pct": 0.0,
+        "other_far_pct": 0.0,
+        "pixels_differing_from_4x_by_more_than_8": 92293
+      },
+      "alaska": {
+        "cg_land_pixels": 5885,
+        "land_pixels": 5885,
+        "iou": 1.0,
+        "cg_far_pct": 0.0,
+        "other_far_pct": 0.0,
+        "pixels_differing_from_4x_by_more_than_8": 1752
+      },
+      "hawaii": {
+        "cg_land_pixels": 728,
+        "land_pixels": 728,
+        "iou": 1.0,
+        "cg_far_pct": 0.0,
+        "other_far_pct": 0.0,
+        "pixels_differing_from_4x_by_more_than_8": 201
+      },
+      "mainland": {
+        "cg_land_pixels": 290398,
+        "land_pixels": 290398,
+        "iou": 1.0,
+        "cg_far_pct": 0.0,
+        "other_far_pct": 0.0,
+        "pixels_differing_from_4x_by_more_than_8": 90340
+      }
+    },
+    "counties-metal-1x": {
+      "all": {
+        "cg_land_pixels": 297011,
+        "land_pixels": 303038,
+        "iou": 0.950389395948722,
+        "cg_far_pct": 0.0,
+        "other_far_pct": 0.000989974854638692,
+        "pixels_differing_from_4x_by_more_than_8": 88333
+      },
+      "alaska": {
+        "cg_land_pixels": 5885,
+        "land_pixels": 5935,
+        "iou": 0.9644341033737743,
+        "cg_far_pct": 0.0,
+        "other_far_pct": 0.016849199663016005,
+        "pixels_differing_from_4x_by_more_than_8": 1409
+      },
+      "hawaii": {
+        "cg_land_pixels": 728,
+        "land_pixels": 715,
+        "iou": 0.9794238683127572,
+        "cg_far_pct": 0.0,
+        "other_far_pct": 0.0,
+        "pixels_differing_from_4x_by_more_than_8": 188
+      },
+      "mainland": {
+        "cg_land_pixels": 290398,
+        "land_pixels": 296388,
+        "iou": 0.9500382174071982,
+        "cg_far_pct": 0.0,
+        "other_far_pct": 0.0006747911521384132,
+        "pixels_differing_from_4x_by_more_than_8": 86736
+      }
+    },
+    "counties-metal-4x": {
+      "all": {
+        "cg_land_pixels": 297011,
+        "land_pixels": 317996,
+        "iou": 0.9310876452616672,
+        "cg_far_pct": 0.0,
+        "other_far_pct": 0.0018868161863671241,
+        "pixels_differing_from_4x_by_more_than_8": 0
+      },
+      "alaska": {
+        "cg_land_pixels": 5885,
+        "land_pixels": 6165,
+        "iou": 0.9517330741820538,
+        "cg_far_pct": 0.0,
+        "other_far_pct": 0.04866180048661801,
+        "pixels_differing_from_4x_by_more_than_8": 0
+      },
+      "hawaii": {
+        "cg_land_pixels": 728,
+        "land_pixels": 751,
+        "iou": 0.9693741677762983,
+        "cg_far_pct": 0.0,
+        "other_far_pct": 0.0,
+        "pixels_differing_from_4x_by_more_than_8": 0
+      },
+      "mainland": {
+        "cg_land_pixels": 290398,
+        "land_pixels": 311080,
+        "iou": 0.9305862263763353,
+        "cg_far_pct": 0.0,
+        "other_far_pct": 0.0009643821525009644,
+        "pixels_differing_from_4x_by_more_than_8": 0
+      }
+    }
+  }
+}

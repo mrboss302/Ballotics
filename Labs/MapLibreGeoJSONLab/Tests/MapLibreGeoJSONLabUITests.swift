@@ -356,21 +356,25 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
         app.launchArguments = ["--albers-metal", "--historical-date", "1808-01-01"]
         app.launch()
         waitForMetal("603", in: app)
+        searchAlbers("6860", in: app)
+        waitForSelection(app.buttons["inspection"])
+        RunLoop.current.run(until: Date().addingTimeInterval(0.5))
         let map = app.descendants(matching: .any)["albers-map"].firstMatch
         let size = map.frame.size
-        let fit = min((size.width - 24) / 4585928.42, (size.height - 24) / 3244441.44)
-        // A source-verified interior point shared by Concordia county and parish.
+        // Focused feature bounds and a shared point at least 16 km inside both source polygons.
+        let fit = min((size.width - 24) / (60603.35 * 1.09), (size.height - 24) / (106792.25 * 1.09))
         map.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
-            .withOffset(CGVector(dx: (2749899.19 - 4585928.42 / 2) * fit,
-                                 dy: (2977204.64 - 3244441.44 / 2) * fit)).tap()
+            .withOffset(CGVector(dx: (2736263.44 - 2749899.19) * fit,
+                                 dy: 0)).tap()
         XCTAssertTrue(app.navigationBars["Overlapping boundaries"].waitForExistence(timeout: 6))
         let rows = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH %@", "albers-feature-"))
         XCTAssertEqual(rows.count, 2)
         for key in ["6860", "12250"] {
             XCTAssertTrue(rows.matching(NSPredicate(format: "label CONTAINS %@", key)).firstMatch.exists)
         }
-        rows.firstMatch.tap()
-        waitForSelection(app.buttons["inspection"], named: "Concordia")
+        rows.matching(NSPredicate(format: "label CONTAINS %@", "12250")).firstMatch.tap()
+        waitForSelection(app.buttons["inspection"])
+        XCTAssertTrue(app.buttons["inspection"].label.localizedCaseInsensitiveContains("Concordia"))
     }
 
     @MainActor

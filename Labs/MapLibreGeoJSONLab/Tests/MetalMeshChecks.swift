@@ -128,6 +128,20 @@ struct MetalMeshChecks {
         precondition(MemoryLayout<AlbersMesh.Part>.stride == 8)
         precondition(MemoryLayout<AlbersMesh.Segment>.stride == 24)
         let mesh = try AlbersMesh.prepare(scene)
+        let thematic = try AlbersMesh.prepare(scene.composed(.thematic))
+        precondition(mesh.panels.count == thematic.panels.count)
+        // These three POD records have explicit layout and verified strides above.
+        func samePayload<T>(_ a: [T], _ b: [T]) -> Bool {
+            a.withUnsafeBytes { left in b.withUnsafeBytes { right in left.elementsEqual(right) } }
+        }
+        for (original, composed) in zip(mesh.panels, thematic.panels) {
+            precondition(original.origin == composed.origin && original.indices == composed.indices)
+            precondition(samePayload(original.vertices, composed.vertices))
+            precondition(samePayload(original.parts, composed.parts))
+            precondition(samePayload(original.segments, composed.segments))
+            precondition(original.uniqueSegmentIndices == composed.uniqueSegmentIndices)
+            precondition(original.featureSegments == composed.featureSegments)
+        }
         var maxRelative = 0.0
         var maxAbsolute = 0.0
         for (panel, projected) in zip(mesh.panels, scene.panels) {
@@ -162,7 +176,7 @@ struct MetalMeshChecks {
             precondition(start == indices.count)
             precondition(Set(panel.featureSegments.keys) == Set(projected.parts.map(\.feature)))
         }
-        emit(["test": "buffer-layout", "dataset": dataset, "vertices": mesh.statistics.vertices,
+        emit(["test": "buffer-layout", "profile_payloads_identical": true, "dataset": dataset, "vertices": mesh.statistics.vertices,
               "triangles": mesh.statistics.triangles, "max_float_vertex_error_m": mesh.statistics.maxFloatError,
               "max_float_area_error_m2": maxAbsolute, "max_float_area_relative_error": maxRelative,
               "original_segments": mesh.statistics.segments, "unique_segments": mesh.statistics.uniqueSegments,

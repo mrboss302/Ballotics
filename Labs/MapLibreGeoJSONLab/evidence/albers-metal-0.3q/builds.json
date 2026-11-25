@@ -1,0 +1,24 @@
+{
+  "candidate_runtime_commit": "ff793b8",
+  "Xcode": "26.3 (17C529)",
+  "macOS": "15.6 (24G84)",
+  "host": "Apple M4, 24 GiB",
+  "simulator_runtime": "iOS 26.3.1",
+  "metal_compiler": "32023.864",
+  "physical_iphone": "offline",
+  "physical_ipad": "offline",
+  "targets": {
+    "Release-simulator-arm64": {
+      "app_binary_sha256": "a0dfd44a78e7614245962bdf574d994e440a6c880a1c8cea43831746fad2f031",
+      "default_metallib_sha256": "e07898d85eccde388d50a50caab4673a12c57a2b59317430117e25eba7a9f08a",
+      "licence_matches_vendor": true,
+      "runtime_source_matches_compiled_input": true
+    },
+    "Release-device-unsigned": {
+      "app_binary_sha256": "eb41d2d258ae3284424f3d23ddc59184bbf59193f4fe72a30908ac90ec236321",
+      "default_metallib_sha256": "3b4d9302aee88edc66d7b03530bcd7985da9996248b8910c7395f476fb6e030a",
+      "licence_matches_vendor": true,
+      "runtime_source_matches_compiled_input": true
+    }
+  }
+}
