@@ -379,6 +379,9 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
         app.launchArguments = ["--albers-metal","--measure","--election-year","2024","--review-landscape"]
         app.launch()
         XCTAssertTrue(app.buttons["geokit-tile-MA"].waitForExistence(timeout:30))
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            XCUIDevice.shared.orientation = .landscapeLeft
+        }
         let map = app.descendants(matching:.any)["albers-map"].firstMatch
         let wide = XCTNSPredicateExpectation(predicate: NSPredicate { _,_ in
             map.frame.width > map.frame.height
