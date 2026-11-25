@@ -162,6 +162,32 @@ struct AlbersQualification {
                 precondition(themed.hits(point) == normal.hits(a.world(local)))
             }
         }
+        for (panel, lon, lat) in [(ak, -152.4, 64.7), (hi, -155.5, 19.62)] {
+            let meters = panel.region.projection.project(longitude: lon, latitude: lat)
+            let local = CGPoint(x: meters.x, y: -meters.y)
+            let expected = themed.hits(panel.world(local))
+            precondition(!expected.isEmpty)
+            for size in [CGSize(width: 358, height: 497), CGSize(width: 718, height: 112)] {
+                let fit = min((size.width - 24) / themed.bounds.width, (size.height - 24) / themed.bounds.height)
+                let focus = min((size.width - 24) / (panel.frame.width * 1.09),
+                                (size.height - 24) / (panel.frame.height * 1.09))
+                for t in [0.0, 0.1, 0.25, 0.5, 0.75, 0.9, 1.0] {
+                    let eased = t * t * (3 - 2 * t)
+                    let scale = fit * pow(focus / fit, eased)
+                    let cx = themed.bounds.midX + (panel.frame.midX - themed.bounds.midX) * eased
+                    let cy = themed.bounds.midY + (panel.frame.midY - themed.bounds.midY) * eased
+                    let transform = CGAffineTransform(translationX: size.width / 2, y: size.height / 2)
+                        .scaledBy(x: scale, y: scale).translatedBy(x: -cx, y: -cy)
+                        .translatedBy(x: panel.translation.x, y: panel.translation.y)
+                        .scaledBy(x: panel.scale, y: panel.scale)
+                    let screen = local.applying(transform)
+                    let world = CGPoint(x: cx + (screen.x - size.width / 2) / scale,
+                                        y: cy + (screen.y - size.height / 2) / scale)
+                    precondition(themed.hits(world) == expected)
+                }
+            }
+        }
+        print("Inset camera round trips · 2 regions × 2 viewports × 7 transition positions")
         let reversed = try AlbersScene.load(url, layout: .init(gap: 185_000, alaskaFirst: false))
         precondition(reversed.panels.map(\.region) == [.mainland, .hawaii, .alaska])
         precondition(reversed.panels[1].frame.maxX < reversed.panels[2].frame.minX)

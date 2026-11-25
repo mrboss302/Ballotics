@@ -1,0 +1,1 @@
+Albers reference coordinates, antimeridian, insets, and polygon hits passed.

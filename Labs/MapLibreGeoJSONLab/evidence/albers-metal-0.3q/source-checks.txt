@@ -1,0 +1,5 @@
+Districts features=441 multipart=58 parts=762 rings=770 positions=175196 bounds=[-179.14734,-14.552549,179.77847,71.352561] id=GEOID
+Counties features=3235 multipart=109 parts=3557 rings=3580 positions=227438 bounds=[-179.14734,-14.552549,179.77847,71.352561] id=GEOID
+States features=56 multipart=24 parts=350 rings=350 positions=91908 bounds=[-179.14734,-14.552549,179.77847,71.352561] id=GEOID
+Historical counties features=17727 multipart=1937 parts=37017 rings=37681 positions=742895 bounds=[-179.1294344170885,18.912276801111968,-66.94992613102356,71.3896121384969] id=ID_NUM
+GeoJSON checks passed.
