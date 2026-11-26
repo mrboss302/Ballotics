@@ -1,4 +1,5 @@
 import BalloticsGeoKitApple
+import Metal
 import SwiftUI
 import UIKit
 
@@ -38,11 +39,36 @@ private struct AlbersPaintConfiguration {
     let prepare: (AlbersScene) -> [[CGColor]]?
     let votes: [String: Int]?
     let statuses: [String:String]
+    let annotations: [String: ElectoralAnnotation]
+    let annotationColor: (String) -> UIColor
     let didDraw: ((Double) -> Void)?
 }
 
+private enum SplitFillTreatment: String {
+    case stripes, dominant, neutral
+
+    static let researchSelection: Self = {
+        let args = ProcessInfo.processInfo.arguments
+        guard let index = args.firstIndex(of: "--allocation-fill"), args.indices.contains(index + 1) else { return .stripes }
+        return Self(rawValue: args[index + 1]) ?? .stripes
+    }()
+
+    func colors(_ colors: [String], annotation: ElectoralAnnotation?) -> [String] {
+        guard colors.count > 1, let annotation, annotation.matchesCountingBasis else { return colors }
+        switch self {
+        case .stripes: return colors
+        case .neutral: return [ElectionMapPresentation.nonparticipating]
+        case .dominant:
+            let ranked = annotation.groupedQuantities.filter { $0.unit.color != nil }.sorted { $0.quantity > $1.quantity }
+            guard let first = ranked.first, let fill = first.unit.color,
+                  ranked.count < 2 || first.quantity > ranked[1].quantity else { return [ElectionMapPresentation.nonparticipating] }
+            return [fill]
+        }
+    }
+}
+
 private extension ElectionMapPresentation {
-    func albersColors(in scene: AlbersScene, theme: AlbersTheme) -> [[CGColor]] {
+    func albersColors(in scene: AlbersScene, theme: AlbersTheme, treatment: SplitFillTreatment) -> [[CGColor]] {
         let field = mode == .countyResults ? "GEOID" : "ID_NUM"
         let colors = Dictionary(uniqueKeysWithValues: Set(fills.values.flatMap { $0 }).map {
             ($0, theme.color($0).cgColor)
@@ -54,6 +80,9 @@ private extension ElectionMapPresentation {
                 if theme == .margin, mode == .countyResults {
                     if let margin = margins[key] { return [AlbersTheme.marginScale.color(margin)] }
                     return fill.map { theme.color($0).cgColor }
+                }
+                if treatment != .stripes && mode == .electoralCollege {
+                    return treatment.colors(fill, annotation: annotations[key]).map { theme.color($0).cgColor }
                 }
                 return fill.compactMap { colors[$0] }
             }
@@ -192,10 +221,14 @@ struct AlbersMapView: View {
         let result = state.geography == .presidential ? state.electionPresentation : nil
         let theme = state.albersTheme
         return AlbersPaintConfiguration(
-            revision: .init(data: state.electionRevision, style: theme.rawValue),
-            prepare: { scene in result?.albersColors(in: scene, theme: theme) },
+            revision: .init(data: state.electionRevision, style: theme.rawValue + ":"
+                + (state.editorialLabels ? SplitFillTreatment.researchSelection : .stripes).rawValue),
+            prepare: { scene in result?.albersColors(in: scene, theme: theme,
+                treatment: state.editorialLabels ? .researchSelection : .stripes) },
             votes: result?.mode == .electoralCollege ? result?.electoralVotesByGeometry : nil,
             statuses: result?.details.compactMapValues { $0.first?.1 } ?? [:],
+            annotations: result?.annotations ?? [:],
+            annotationColor: theme.color,
             didDraw: result.map { presentation in
                 { elapsed in
                     LabLog.record("election_albers_paint", ["year": presentation.year,
@@ -310,11 +343,20 @@ private final class AlbersCanvas: GeographicInteractionView {
         presentation?.policy ?? (editorial ? .nationalEditorial : .nationalExploratory)
     }
 
+    private let paperColor = MTLClearColor(red: 0.965, green: 0.95, blue: 0.912, alpha: 1)
+    private let defaultWaterColor = MTLClearColor(red: 0.93, green: 0.95, blue: 0.96, alpha: 1)
     private var reservesExternalAnnotations = false
+    private var waterColor: MTLClearColor { editorial && reservesExternalAnnotations ? paperColor : defaultWaterColor }
+    private func applyWaterColor() {
+        let color = waterColor
+        backgroundColor = UIColor(red: color.red, green: color.green, blue: color.blue, alpha: color.alpha)
+        metal?.clearColor = color
+    }
     private var mapLayout: GeographicMapLayout {
         let reserve = reservesExternalAnnotations && (editorial || bounds.height <= 240)
         let aspect = reserve && editorial ? scene.map { $0.bounds.width / max(1, $0.bounds.height) } : nil
-        return GeographicMapLayout(bounds: bounds, externalHeight: reserve ? 24 : 0, idealMapAspect: aspect)
+        let height = editorial ? labelOverlay.externalHeight(width: bounds.width, height: bounds.height) : 24
+        return GeographicMapLayout(bounds: bounds, externalHeight: reserve ? height : 0, idealMapAspect: aspect)
     }
     override var interactionViewport: CGRect { mapLayout.viewport }
 
@@ -445,7 +487,10 @@ private final class AlbersCanvas: GeographicInteractionView {
         self.editorial = editorial
         self.group = group
         self.contextLayer = contextLayer
-        reservesExternalAnnotations = paint.votes != nil
+        if reservesExternalAnnotations != (paint.votes != nil) || cartographyChanged {
+            reservesExternalAnnotations = paint.votes != nil
+            applyWaterColor()
+        }
         let viewportChanged = previousViewport != mapLayout.viewport
         if viewportChanged { metal?.frame = mapLayout.viewport }
         self.profile = profile
@@ -513,8 +558,10 @@ private final class AlbersCanvas: GeographicInteractionView {
         }
         if isNewScene || layoutChanged || styleChanged || cartographyChanged || scene == nil {
             labelOverlay.update(parent: self, scene: scene, votes: paint.votes, statuses: paint.statuses,
-                                colors: featurePaint, editorial: editorial, select: { [weak self] feature in self?.onSelect?([feature]) },
-                                ready: { [weak self] in self?.positionLabels() })
+                                annotations: paint.annotations, colors: featurePaint,
+                                unitColor: paint.annotationColor, editorial: editorial, select: { [weak self] feature in self?.onSelect?([feature]) },
+                                ready: { [weak self] in self?.invalidateMap() })
+            if previousViewport != mapLayout.viewport { metal?.frame = mapLayout.viewport }
         }
         self.selected = selected
         self.alternateColor = alternateColor
@@ -647,6 +694,7 @@ private final class AlbersCanvas: GeographicInteractionView {
             if metal == nil {
                 metal = surface
                 surface.renderAllowed = active
+                surface.clearColor = waterColor
                 surface.frame = mapLayout.viewport
                 surface.isHidden = true
                 insertSubview(surface, at: 0)
@@ -775,7 +823,8 @@ private final class AlbersCanvas: GeographicInteractionView {
     }
 
     private func updateCartographicOverlay() {
-        cartographicOverlay.isHidden = !debugCartography && (contextLayer == nil || presentation?.region != .mainland)
+        cartographicOverlay.isHidden = !debugCartography && !labelOverlay.hasSeparatorsOrLeaders
+            && (contextLayer == nil || presentation?.region != .mainland)
         if !cartographicOverlay.isHidden { cartographicOverlay.setNeedsDisplay() }
     }
 
@@ -790,6 +839,7 @@ private final class AlbersCanvas: GeographicInteractionView {
                 LabLog.record("cartography_context_draw", ["parts": count, "elapsed_ms": LabLog.milliseconds(LabLog.now - start)])
             }
         }
+        labelOverlay.drawLeaders(in: context)
         if debugCartography {
             labelOverlay.drawDiagnostics(in: context, scene: scene, camera: camera)
             context.setStrokeColor(UIColor.systemTeal.cgColor)
@@ -871,6 +921,7 @@ private final class AlbersCanvas: GeographicInteractionView {
             target = selected.flatMap { scene.properties[$0]["STATEFP"] }.flatMap(scene.frame(forState:))
         }
         guard let target, !target.isNull else { return }
+        let previousRegion = focusedRegion
         switch viewpoint {
         case .alaska: focusedRegion = .alaska
         case .hawaii: focusedRegion = .hawaii
@@ -878,6 +929,10 @@ private final class AlbersCanvas: GeographicInteractionView {
         case .stateFocus: focusedRegion = presentation?.region
         case .selectedState, .selectedFeature:
             focusedRegion = selected.flatMap { feature in scene.panels.first { $0.parts.contains { $0.feature == feature } }?.region }
+        }
+        if previousRegion != focusedRegion {
+            positionLabels()
+            updateCartographicOverlay()
         }
         let nextCenter = CGPoint(x: target.midX, y: target.midY)
         let fitted = presentation?.frame == target ? target

@@ -399,6 +399,71 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
     }
 
     @MainActor
+    func testElectoralEditorialKeyAccessibility() {
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers-metal", "--measure", "--election-year", "1976"]
+        app.launch()
+        let order = ["VT", "NH", "MA", "RI", "CT", "NJ", "DE", "MD", "DC"]
+        let ids = order.map { "geokit-tile-" + $0 }
+        let first = app.buttons[ids[0]]
+        XCTAssertTrue(first.waitForExistence(timeout: 30))
+        let keys = app.buttons.matching(NSPredicate(format: "identifier IN %@", ids)).allElementsBoundByIndex
+        XCTAssertEqual(keys.map(\.identifier), ids)
+        for key in keys {
+            XCTAssertGreaterThanOrEqual(key.frame.width, 43.5)
+            XCTAssertGreaterThanOrEqual(key.frame.height, 43.5)
+            XCTAssertTrue(key.label.contains("source rows"))
+        }
+        let massachusetts = app.buttons["geokit-tile-MA"]
+        massachusetts.tap()
+        waitForSelection(app.buttons["inspection"], named: "Massachusetts")
+        XCTAssertTrue(massachusetts.isSelected)
+        view("Clear selection", in: app)
+        XCTAssertFalse(massachusetts.isSelected)
+        view("Alaska", in: app)
+        let hidden = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+            !massachusetts.exists || !massachusetts.isHittable
+        }, object: nil)
+        XCTAssertEqual(XCTWaiter.wait(for: [hidden], timeout: 5), .completed)
+        view("National", in: app)
+        XCTAssertTrue(massachusetts.waitForExistence(timeout: 5))
+        XCTAssertTrue(massachusetts.isHittable)
+        let snapshot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        snapshot.name = "Electoral-Key-Accessibility"
+        snapshot.lifetime = .keepAlways
+        add(snapshot)
+    }
+
+    @MainActor
+    func testElectoralAnnotationFixtureUpdatesOnSameGeography() {
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers-metal", "--measure", "--election-year", "2020", "--annotation-fixture"]
+        app.launch()
+        let art = app.buttons.matching(NSPredicate(format: "identifier IN %@",
+            ["geokit-allocation-ME", "geokit-tile-ME"])).firstMatch
+        XCTAssertTrue(art.waitForExistence(timeout: 30))
+        XCTAssertTrue(app.staticTexts["presidential-winner"].label.contains("Synthetic"))
+        XCTAssertTrue(art.label.contains("4 in source rows"))
+        XCTAssertTrue(art.label.contains("At large"))
+        art.tap()
+        waitForSelection(app.buttons["inspection"], named: "Maine")
+        func capture(_ name: String) {
+            let shot = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+            shot.name = name
+            shot.lifetime = .keepAlways
+            add(shot)
+        }
+        capture("Synthetic-Maine-4")
+        app.buttons["update-annotation-fixture"].tap()
+        let updated = XCTNSPredicateExpectation(predicate: NSPredicate(format: "label CONTAINS %@", "5 in source rows"),
+                                                 object: art)
+        XCTAssertEqual(XCTWaiter.wait(for: [updated], timeout: 15), .completed)
+        XCTAssertTrue(art.label.contains("Faithless"))
+        XCTAssertTrue(art.label.contains("Cedar"))
+        capture("Synthetic-Maine-5")
+    }
+
+    @MainActor
     func testGeoKitElectoralContentSwitch() {
         let app = XCUIApplication()
         app.launchArguments = ["--albers-metal", "--measure", "--election-year", "2024"]

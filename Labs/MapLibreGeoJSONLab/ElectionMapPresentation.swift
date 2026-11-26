@@ -38,6 +38,7 @@ struct ElectionMapPresentation {
     let legend: [Legend]
     let fills: [String: [String]]
     let electoralVotesByGeometry: [String: Int]
+    let annotations: [String: ElectoralAnnotation]
     let margins: [String: Double]
     let details: [String: [(String, String)]]
     let unmapped: [LocalElectionRecord]
@@ -63,7 +64,10 @@ struct ElectionMapPresentation {
         let orderedCandidates = election.results.compactMap(\.candidateID)
         let candidates = orderedCandidates + Set(county.compactMap(\.winnerID)).subtracting(orderedCandidates).sorted()
         let colors = candidateColors(candidates, affiliations: affiliations)
-        let declaredWinner = names[election.winnerID] ?? election.winnerID
+        let annotations = mode == .electoralCollege
+            ? ElectoralAnnotation.from(election, names: names, parties: parties, colors: colors) : [:]
+        let declaredWinner = election.decision == "syntheticFixture" ? "Synthetic allocation fixture"
+            : names[election.winnerID] ?? election.winnerID
         let method = election.decision == "houseContingent" ? " · elected by the House" : ""
         var legend: [Legend] = []
         var electoralKey: [ElectoralKeyEntry] = []
@@ -147,7 +151,7 @@ struct ElectionMapPresentation {
                                 reportedVotes: rows.filter { $0.status == "reported" }.reduce(0) { $0 + $1.totalVotes })
         }.sorted { $0.name < $1.name }
         return Self(states: states, electoralKey: electoralKey.sorted { $0.jurisdiction < $1.jurisdiction }, year: election.year, mode: mode, winner: declaredWinner + method, totals: totals,
-                    legend: legend, fills: fills, electoralVotesByGeometry: electoralVotesByGeometry, margins: margins, details: details, unmapped: unmapped,
+                    legend: legend, fills: fills, electoralVotesByGeometry: electoralVotesByGeometry, annotations: annotations, margins: margins, details: details, unmapped: unmapped,
                     hasSplit: fills.values.contains { $0.count > 1 },
                     reviewNotes: mode == .electoralCollege ? election.reviewNotes : [],
                     unmappedAllocations: mode == .electoralCollege
@@ -160,8 +164,10 @@ struct ElectionMapPresentation {
         let fallback = mode == .electoralCollege
             && attributes["TERR_TYPE"] as? String != "State"
             && attributes["TERR_TYPE"] as? String != "District of Columbia" ? "Nonparticipating territory" : "No joined result"
-        return Inspection(title: base.title, properties: (key.flatMap { details[$0] } ?? [("Result", fallback)])
-                          + base.properties, stateCode: base.stateCode)
+        let annotation = key.flatMap { annotations[$0] }
+        let annotationDetails = annotation.map { [("Allocation", $0.accessibilityDescription)] } ?? []
+        return Inspection(title: base.title, properties: annotationDetails
+            + (key.flatMap { details[$0] } ?? [("Result", fallback)]) + base.properties, stateCode: base.stateCode)
     }
 
     static func countyDetails(_ row: LocalElectionRecord, names: [String: String] = [:],
@@ -282,12 +288,26 @@ struct ElectionResultsPanel: View {
                     Section("Electoral vote key") {
                         ForEach(result.electoralKey) { entry in
                             NavigationLink {
-                                List(Array((result.details[entry.id] ?? []).enumerated()), id: \.offset) { _, field in
-                                    LabeledContent(field.0, value: field.1)
+                                List {
+                                    if let allocation = result.annotations[entry.id] {
+                                        Section(allocation.basis.rawValue) {
+                                            Text(allocation.accessibilityDescription)
+                                        }
+                                    }
+                                    ForEach(Array((result.details[entry.id] ?? []).enumerated()), id: \.offset) { _, field in
+                                        LabeledContent(field.0, value: field.1)
+                                    }
                                 }
                                 .navigationTitle(entry.jurisdiction)
                             } label: {
-                                LabeledContent(entry.jurisdiction, value: entry.votes.map { "\($0) EV" } ?? entry.status)
+                                let allocation = result.annotations[entry.id]
+                                let value = allocation.flatMap { record in
+                                    if record.matchesCountingBasis {
+                                        return record.reported.map { "\($0) \(record.basis.countSuffix)" }
+                                    }
+                                    return record.assigned.map { "\($0) assigned · unresolved" }
+                                }
+                                LabeledContent(entry.jurisdiction, value: value ?? entry.status)
                             }
                         }
                     }

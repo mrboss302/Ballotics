@@ -9,6 +9,17 @@ final class ElectoralLabelOverlay {
     private var byID: [String:MapLabel] = [:]
     private var labels: [String:UILabel] = [:]
     private var tiles: [String:UIButton] = [:]
+    private var editorialTiles: [String: ElectoralAnnotationView] = [:]
+    private var artworkViews: [String: ElectoralAnnotationView] = [:]
+    private var allocations: [String: ElectoralAnnotation] = [:]
+    private var keyIDs: [String] = []
+    private var artworkSpecs: [MapLabel] = []
+    private var calloutGeometry: AnnotationCallouts?
+    private var calloutPanels: [CGRect] = []
+    private var leaders: [AnnotationCallouts.Placement] = []
+    var hasSeparatorsOrLeaders: Bool { separator != nil || !leaders.isEmpty }
+    private var separator: CGRect?
+    private var diagnosticAnnotationFrames: [CGRect] = []
     private var sizes: [String:LabelMeasurements] = [:]
     private var paintedText: [String:String] = [:]
     private var anchors: [String:GroupAnchors] = [:]
@@ -19,6 +30,7 @@ final class ElectoralLabelOverlay {
     private weak var parent: UIView?
     private var logged = false
     private var editorial = true
+    private let measureLayout = ProcessInfo.processInfo.arguments.contains("--label-metrics")
     private let diagnostics = ProcessInfo.processInfo.arguments.contains("--cartography-debug")
     private var diagnosticDecisions: [LabelPlacement] = []
 
@@ -44,39 +56,79 @@ final class ElectoralLabelOverlay {
         return size
     }
 
-    private func ink(_ fill: UIColor) -> UIColor {
-        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
-        guard fill.getRed(&r,green:&g,blue:&b,alpha:&a) else { return .label }
-        func linear(_ v: CGFloat) -> CGFloat { v <= 0.04045 ? v/12.92 : pow((v+0.055)/1.055,2.4) }
-        return 0.2126*linear(r)+0.7152*linear(g)+0.0722*linear(b) > 0.179 ? .black : .white
+    func externalHeight(width: CGFloat, height: CGFloat) -> CGFloat {
+        guard !specs.isEmpty else { return 0 }
+        return ElectoralEditorialLayout.reservedHeight(count: keyIDs.count, width: width, height: height)
     }
 
-    func update(parent: UIView, scene: AlbersScene?, votes: [String:Int]?, statuses: [String:String],
-                colors: [[CGColor]]?, editorial: Bool, select: @escaping (Int)->Void, ready: @escaping ()->Void) {
+    private func makeAnnotation(on parent: UIView, id: String, kind: String) -> ElectoralAnnotationView {
+        let view = ElectoralAnnotationView(frame: .zero)
+        view.isHidden = true
+        view.accessibilityIdentifier = "geokit-\(kind)-\(id)"
+        view.addAction(UIAction { [weak self] _ in
+            guard let self, let index = self.byID[id]?.features.first else { return }
+            self.select?(index)
+        }, for: .touchUpInside)
+        parent.addSubview(view)
+        return view
+    }
+
+    func update(parent: UIView, scene: AlbersScene?, votes: [String:Int]?, statuses: [String:String], annotations: [String: ElectoralAnnotation],
+                colors: [[CGColor]]?, unitColor: (String) -> UIColor, editorial: Bool, select: @escaping (Int)->Void, ready: @escaping ()->Void) {
         let start = LabLog.now
         let typographyChanged = self.editorial != editorial
         self.editorial = editorial
         if diagnostics { diagnosticDecisions = [] }
         self.select = select
         self.parent = parent
+        let panels = scene?.panels.map(\.frame) ?? []
+        if votes != nil && editorial {
+            if calloutGeometry == nil || cache !== scene?.labelCache || calloutPanels != panels {
+                calloutGeometry = scene.map(AnnotationCallouts.init)
+                calloutPanels = panels
+            }
+        } else {
+            calloutGeometry = nil
+            calloutPanels = []
+            leaders.removeAll()
+            separator = nil
+        }
         parent.isAccessibilityElement = true
         specs = scene.flatMap { geo in votes.map { ElectoralCartography.specifications(scene:geo,votes:$0,statuses:statuses) } } ?? []
+        allocations.removeAll(keepingCapacity: true)
+        artworkSpecs.removeAll(keepingCapacity: true)
+        if editorial, let scene {
+            (specs, allocations) = ElectoralEditorialLayout.content(scene: scene, specifications: specs, records: annotations)
+        }
+        keyIDs = ElectoralCartography.keyOrder.filter { code in specs.contains { $0.id == code && $0.external } }
         byID = Dictionary(uniqueKeysWithValues: specs.map { ($0.id,$0) })
         let ids = Set(byID.keys)
         for id in labels.keys.filter({ !ids.contains($0) }) { labels.removeValue(forKey:id)?.removeFromSuperview() }
         for id in tiles.keys.filter({ !ids.contains($0) }) { tiles.removeValue(forKey:id)?.removeFromSuperview() }
+        for id in editorialTiles.keys.filter({ !ids.contains($0) || !editorial }) {
+            editorialTiles.removeValue(forKey: id)?.removeFromSuperview()
+        }
+        for id in artworkViews.keys.filter({ allocations[$0]?.allocationArtwork != true || !editorial }) {
+            artworkViews.removeValue(forKey: id)?.removeFromSuperview()
+        }
         if typographyChanged || cache !== scene?.labelCache || specs.isEmpty {
             worker?.cancel()
             worker = nil
             cache = scene?.labelCache
             labels.values.forEach { $0.isHidden = true }
             tiles.values.forEach { $0.isHidden = true }
+            editorialTiles.values.forEach { $0.isHidden = true }
+            artworkViews.values.forEach { $0.isHidden = true }
             anchors.removeAll()
             previous.removeAll()
         }
-        guard let scene, !specs.isEmpty else { return }
+        guard let scene, !specs.isEmpty else {
+            parent.accessibilityElements = nil
+            return
+        }
         sizes.removeAll(keepingCapacity:true)
         paintedText.removeAll(keepingCapacity: true)
+        var artworkMilliseconds = 0.0
         for spec in specs {
             let view = labels[spec.id] ?? UILabel()
             if view.superview == nil {
@@ -91,8 +143,9 @@ final class ElectoralLabelOverlay {
             let i = spec.features[0]
             let paints = colors.flatMap { $0.indices.contains(i) ? $0[i] : nil } ?? []
             let fill = paints.first.map(UIColor.init(cgColor:)) ?? .darkGray
-            view.textColor = paints.count > 1 ? .black : ink(fill)
-            view.backgroundColor = paints.count > 1 ? UIColor.white.withAlphaComponent(0.86) : .clear
+            view.textColor = paints.count > 1 ? .black : fill.annotationInk
+            view.backgroundColor = paints.count > 1
+                ? UIColor(red: 0.98, green: 0.97, blue: 0.93, alpha: 0.94) : .clear
             view.layer.cornerRadius = 2
             view.clipsToBounds = true
             let typography = UIFont.monospacedDigitSystemFont(ofSize: min(13, max(8, 8 * spec.typeScale)), weight: .medium)
@@ -100,7 +153,26 @@ final class ElectoralLabelOverlay {
             sizes[spec.id] = .init(full: measure(spec.text(for: .stacked), typography: typography),
                                    compact: measure(spec.primary, typography: typography),
                                    inline: spec.secondary.isEmpty ? nil : measure(spec.text(for: .inline), typography: typography))
-            if spec.external {
+            if editorial {
+                let artworkStart = LabLog.enabled ? LabLog.now : 0
+                tiles[spec.id]?.isHidden = true
+                let allocation = allocations[spec.id]
+                let count = allocation?.displayCount ?? (spec.secondary.isEmpty ? nil : spec.secondary)
+                if spec.external || allocation?.allocationArtwork == true || !spec.secondary.isEmpty {
+                    let button = editorialTiles[spec.id] ?? makeAnnotation(on: parent, id: spec.id, kind: "tile")
+                    editorialTiles[spec.id] = button
+                    button.configure(code: spec.primary, count: count, fill: fill, ink: fill.annotationInk,
+                                     allocation: allocation, artwork: true, compact: false, unitColor: unitColor)
+                }
+                if allocation?.allocationArtwork == true, allocation?.squares != nil, !spec.external {
+                    let artwork = artworkViews[spec.id] ?? makeAnnotation(on: parent, id: spec.id, kind: "allocation")
+                    artworkViews[spec.id] = artwork
+                    artwork.configure(code: spec.primary, count: count, fill: fill, ink: fill.annotationInk,
+                                      allocation: allocation, artwork: true, compact: true, unitColor: unitColor)
+                    artworkSpecs.append(spec)
+                }
+                if LabLog.enabled { artworkMilliseconds += LabLog.milliseconds(LabLog.now - artworkStart) }
+            } else if spec.external {
                 let button = tiles[spec.id] ?? UIButton(type:.custom)
                 if button.superview == nil {
                     button.titleLabel?.font = font
@@ -116,13 +188,17 @@ final class ElectoralLabelOverlay {
                     tiles[spec.id] = button
                 }
                 button.backgroundColor = fill
-                button.setTitleColor(ink(fill),for:.normal)
+                button.setTitleColor(fill.annotationInk,for:.normal)
                 button.setTitle(spec.primary+" "+(spec.secondary.isEmpty ? "?" : spec.secondary)+(paints.count > 1 ? " ◧" : ""),for:.normal)
                 button.accessibilityLabel = spec.accessibilityText
             } else { tiles[spec.id]?.isHidden = true }
         }
         logged = false
-        if LabLog.enabled { LabLog.record("geokit_label_content",["labels":specs.count,"cached_texts":measurements.count,"elapsed_ms":LabLog.milliseconds(LabLog.now-start)]) }
+        if diagnostics {
+            LabLog.record("annotation_content", ["requested": allocations.count,
+                "allocation_artwork": artworkSpecs.map(\.id), "geographic_features": scene.properties.count])
+        }
+        if LabLog.enabled { LabLog.record("geokit_label_content",["labels":specs.count,"cached_texts":measurements.count,"annotation_artwork_ms":artworkMilliseconds,"elapsed_ms":LabLog.milliseconds(LabLog.now-start)]) }
         guard anchors.isEmpty, worker == nil else { return }
         let groups = specs.map { ($0.id,$0.features) }
         let task = Task.detached(priority:.userInitiated) {
@@ -189,7 +265,15 @@ final class ElectoralLabelOverlay {
             }
             if let index = d.candidate { previous[d.id] = index }
         }
-        if LabLog.enabled && (!logged || ProcessInfo.processInfo.arguments.contains("--label-metrics")) {
+        if editorial {
+            for tile in tiles.values { tile.isHidden = true }
+            layoutEditorial(decisions, anchors: anchors, scene: scene, camera: camera, zoom: zoom,
+                            selection: selected, region: externalAnnotations, policy: policy)
+        } else {
+            leaders.removeAll()
+            parent?.accessibilityElements = nil
+        }
+        if LabLog.enabled && (!logged || measureLayout) {
             LabLog.record("geokit_label_layout",["labels":decisions.count,"external":external.count,
                 "separate_external_region": externalAnnotations != nil,
                 "internal":decisions.filter { $0.mode == .full || $0.mode == .compact }.count,
@@ -197,10 +281,88 @@ final class ElectoralLabelOverlay {
             logged = true
         }
     }
+    private func layoutEditorial(_ decisions: [LabelPlacement], anchors: [String: GroupAnchors], scene: AlbersScene,
+                                 camera: GeographicCamera, zoom: CGFloat, selection: Int?, region: CGRect?,
+                                 policy: CartographicPolicy) {
+        var accessible: [ElectoralAnnotationView] = []
+        diagnosticAnnotationFrames.removeAll(keepingCapacity: true)
+        leaders.removeAll(keepingCapacity: true)
+        separator = nil
+        let visible = policy == .nationalEditorial && camera.region == nil
+        if visible, let region {
+            let measure = LabLog.enabled && (!logged || measureLayout)
+            let started = measure ? LabLog.now : 0
+            let layout = ElectoralEditorialLayout.resolve(decisions, specs: byID, artworkSpecs: artworkSpecs,
+                allocations: allocations, anchors: anchors, callouts: calloutGeometry, scene: scene, camera: camera,
+                region: region, zoom: zoom)
+            separator = layout.separator
+            for item in layout.artwork {
+                guard let view = artworkViews[item.id] else { continue }
+                view.frame = item.frame
+                view.isSelected = selection.map { byID[item.id]?.features.contains($0) == true } ?? false
+                labels[item.id]?.isHidden = true
+                accessible.append(view)
+                if let leader = item.leader { leaders.append(leader) }
+            }
+            for item in layout.tiles {
+                placeTile(item.id, frame: item.frame, selection: selection, using: &accessible)
+            }
+            if diagnostics || measure {
+                LabLog.record("annotation_layout", ["artwork": layout.artwork.map(\.id),
+                    "elapsed_ms": measure ? LabLog.milliseconds(LabLog.now - started) : 0,
+                    "tiles": layout.tiles.map(\.id), "leaders": leaders.count,
+                    "viewport_width": camera.viewport.width, "viewport_height": camera.viewport.height])
+            }
+        }
+        let shown = Set(accessible.map(ObjectIdentifier.init))
+        for group in [editorialTiles.values, artworkViews.values] {
+            for view in group {
+                let visible = shown.contains(ObjectIdentifier(view))
+                view.isHidden = !visible
+                view.isAccessibilityElement = visible
+                view.accessibilityElementsHidden = !visible
+            }
+        }
+        parent?.isAccessibilityElement = accessible.isEmpty
+        parent?.accessibilityElements = accessible.isEmpty ? nil : accessible
+        if diagnostics, let region {
+            diagnosticAnnotationFrames = [region] + accessible.map(\.frame)
+        }
+    }
+
+    private func placeTile(_ id: String, frame: CGRect, selection: Int?, using views: inout [ElectoralAnnotationView]) {
+        guard let tile = editorialTiles[id] else { return }
+        tile.frame = frame
+        tile.isSelected = selection.map { byID[id]?.features.contains($0) == true } ?? false
+        views.append(tile)
+    }
+
+    func drawLeaders(in context: CGContext) {
+        context.saveGState()
+        defer { context.restoreGState() }
+        context.setStrokeColor(UIColor(red: 0.31, green: 0.29, blue: 0.24, alpha: 0.64).cgColor)
+        context.setLineWidth(0.65)
+        if let separator {
+            context.setFillColor(UIColor(red: 0.31, green: 0.29, blue: 0.24, alpha: 0.25).cgColor)
+            context.fill(separator)
+        }
+        for leader in leaders {
+            context.move(to: leader.origin)
+            context.addLine(to: leader.end)
+            context.strokePath()
+        }
+    }
+
     func drawDiagnostics(in context: CGContext, scene: AlbersScene, camera: GeographicCamera) {
         context.saveGState()
         defer { context.restoreGState() }
+        context.setStrokeColor(UIColor.systemBlue.cgColor)
+        for frame in diagnosticAnnotationFrames { context.stroke(frame.insetBy(dx: 0.5, dy: 0.5)) }
         context.clip(to: camera.viewport)
+        context.setFillColor(UIColor.systemBlue.cgColor)
+        for leader in leaders {
+            context.fillEllipse(in: CGRect(x: leader.origin.x - 2, y: leader.origin.y - 2, width: 4, height: 4))
+        }
         for decision in diagnosticDecisions {
             if let candidates = anchors[decision.id]?.candidates {
                 for (index, anchor) in candidates.prefix(7).enumerated() {

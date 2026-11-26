@@ -107,6 +107,15 @@ final class LabState: ObservableObject {
     @Published private(set) var cameraRequest: (Int, Viewpoint) = (0, .national)
     @Published private(set) var alternateColor = false
     @Published private(set) var focusedCountyState: String?
+    let usesAnnotationFixture = ProcessInfo.processInfo.arguments.contains("--annotation-fixture")
+    private var updatedAnnotationFixture = false
+
+    func updateAnnotationFixture() {
+        guard usesAnnotationFixture, let election else { return }
+        updatedAnnotationFixture.toggle()
+        applyElection(election, mode: .electoralCollege)
+    }
+
     @Published var editorialLabels = !ProcessInfo.processInfo.arguments.contains("--exploratory-labels")
 
     @Published private(set) var historicalPending = false
@@ -697,7 +706,14 @@ final class LabState: ObservableObject {
                     }
                 }
                 self.election = election
-                electionPresentation = presentation
+                if usesAnnotationFixture, mode == .electoralCollege,
+                   let (fixture, candidates, parties) = ElectoralAnnotationFixture.make(from: record, updated: updatedAnnotationFixture) {
+                    electionPresentation = ElectionMapPresentation.make(election: fixture, mode: mode,
+                        catalog: (candidates, parties), county: [])
+                    LabLog.record("annotation_fixture", ["reported": fixture.totals.reported, "reused_source": reused])
+                } else {
+                    electionPresentation = presentation
+                }
                 electionRevision += 1
                 inspection = nil
                 dataset = resolved
@@ -862,6 +878,25 @@ private struct LabView: View {
             && state.geography == .presidential && state.electionMode == .electoralCollege
     }
 
+    @ViewBuilder
+    private func electionModeControl(for election: PresidentialElection) -> some View {
+        if state.usesAnnotationFixture {
+            Button("Update fixture") { state.updateAnnotationFixture() }
+                .buttonStyle(.bordered)
+                .accessibilityIdentifier("update-annotation-fixture")
+        } else {
+            Picker("Result mode", selection: Binding(get: { state.electionMode },
+                    set: { state.applyElection(election, mode: $0) })) {
+                Text(ElectionMapMode.electoralCollege.rawValue).tag(ElectionMapMode.electoralCollege)
+                if ElectionManifest.countyYears.contains(election.year) {
+                    Text(ElectionMapMode.countyResults.rawValue).tag(ElectionMapMode.countyResults)
+                }
+            }
+            .pickerStyle(.segmented)
+            .accessibilityIdentifier("election-mode")
+        }
+    }
+
     var body: some View {
         let compact = compactElectoralLayout
         let provenance = Text(verbatim: snapshotDescription)
@@ -1009,15 +1044,7 @@ private struct LabView: View {
                     .accessibilityIdentifier("presidential-winner")
                 HStack {
                     if compact { winner.lineLimit(1) }
-                    Picker("Result mode", selection: Binding(get: { state.electionMode },
-                            set: { state.applyElection(election, mode: $0) })) {
-                        Text(ElectionMapMode.electoralCollege.rawValue).tag(ElectionMapMode.electoralCollege)
-                        if ElectionManifest.countyYears.contains(election.year) {
-                            Text(ElectionMapMode.countyResults.rawValue).tag(ElectionMapMode.countyResults)
-                        }
-                    }
-                    .pickerStyle(.segmented)
-                    .accessibilityIdentifier("election-mode")
+                    electionModeControl(for: election)
                     Button("Results") { showElectionResults = true }
                         .buttonStyle(.bordered)
                         .accessibilityIdentifier("election-results")

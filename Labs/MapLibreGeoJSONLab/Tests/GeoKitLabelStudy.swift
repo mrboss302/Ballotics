@@ -43,6 +43,7 @@ struct GeoKitLabelStudy {
         var lastDate = "", previousScene: AlbersScene?
         var referenceAnchors: [String:[String:LabelAnchor]] = [:]
         let editorial = ProcessInfo.processInfo.environment["GEOKIT_EDITORIAL_LABELS"] == "1"
+        let includeDecisions = ProcessInfo.processInfo.environment["GEOKIT_LABEL_DETAILS"] == "1"
         let policy: CartographicPolicy = editorial ? .nationalEditorial : .nationalExploratory
         let font = NSFont.monospacedDigitSystemFont(ofSize:8,weight:.medium)
         func measure(_ text: String) -> CGSize {
@@ -134,7 +135,7 @@ struct GeoKitLabelStudy {
                     if anchors[spec.id]!.candidates.contains(where:fits) { fitCounts["multiple",default:0] += 1 }
                 }
                 let available = Set(specs.filter { !$0.secondary.isEmpty }.map(\.id))
-                let record:[String:Any] = ["policy": editorial ? "editorial" : "exploratory",
+                var record:[String:Any] = ["policy": editorial ? "editorial" : "exploratory",
                     "available_values": available.count,
                     "unavailable_values": specs.count - available.count,
                     "full_values": placed.filter { $0.mode == .full && available.contains($0.id) }.count,
@@ -145,6 +146,10 @@ struct GeoKitLabelStudy {
                     "legacy_valid":anchors.values.filter(\.averageInside).count,"centroid_valid":anchors.values.filter(\.centroidInside).count,"baseline_valid":anchors.values.filter(\.baselineInside).count,
                     "full":placed.filter { $0.mode == .full }.count,"compact":placed.filter { $0.mode == .compact }.count,"external":placed.filter { $0.mode == .tile }.count,"suppressed":reasons.values.reduce(0,+),"reasons":reasons,
                     "overlaps":collisions,"outside":outside,"overrides":0,"anchor_ms":anchorMS,"new_groups":scene.labelCache.count-before,"measurement_ms":measureMS,"resolve_ms":elapsed]
+                if includeDecisions {
+                    record["omitted"] = placed.filter { $0.mode == .suppressed }.map(\.id)
+                    record["visible_ids"] = placed.filter { $0.mode == .full || $0.mode == .tile }.map(\.id)
+                }
                 print(String(decoding:try JSONSerialization.data(withJSONObject:record,options:[.sortedKeys]),as:UTF8.self))
                 precondition(outside==0 && collisions==0 && placed.count==specs.count)
             }
