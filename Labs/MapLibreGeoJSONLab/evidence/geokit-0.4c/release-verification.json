@@ -1,0 +1,58 @@
+{
+  "configuration": "Release",
+  "testedBuilds": [
+    "macOS package",
+    "DistrictAtlas arm64",
+    "iOS arm64 unsigned",
+    "iOS arm64 Simulator"
+  ],
+  "macOSPackageTests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "standaloneIOSRenderingTests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "uiScenariosPassed": {
+    "final-testCartographicStateAndLocalInspection": [
+      "testCartographicStateAndLocalInspection"
+    ],
+    "final-testCartographicAlaskaDistrictInspection": [
+      "testCartographicAlaskaDistrictInspection"
+    ],
+    "final-regression": [
+      "testGeoKitElectoralContentSwitch",
+      "testHistoricalOverlapOnThematicMetalMap",
+      "testMetalFallsBackForAnIdentifiedCollapsedPolygon"
+    ],
+    "final-landscape-iPhone16e": [
+      "testGeoKitLandscapeScreen"
+    ],
+    "final-landscape-iPhone17": [
+      "testGeoKitLandscapeScreen"
+    ],
+    "owner-final-Alabama": [
+      "testCartographicStateAndLocalInspection"
+    ]
+  },
+  "resizableMacOSWindows": [
+    [
+      800,
+      550
+    ],
+    [
+      1050,
+      570
+    ]
+  ],
+  "iPadLandscape": {
+    "result": "open",
+    "observedAppViewport": [
+      820,
+      1180
+    ],
+    "reason": "Simulator windowed app remained in portrait after simulated rotation."
+  },
+  "signedPhysicalDevice": "Pending. Both paired test devices were unavailable."
+}

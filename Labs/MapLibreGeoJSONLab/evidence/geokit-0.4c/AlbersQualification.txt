@@ -1,0 +1,17 @@
+PROJ 9.3.0 · 14 coordinates · max error 1.002123112493755e-08 m · max area error 7.203187046833648e-09
+{"dataset":"states","decode_ms":246.22900000031223,"features":51,"hits":1813,"index_layout_ms":0.074624998887884431,"indexed_ms":135.68158333328029,"linear_ms":114.0481666661799,"probes":5000,"project_ms":514.86791666684439}
+{"dataset":"districts","decode_ms":71.606166666242643,"features":436,"hits":1813,"index_layout_ms":0.20254166702216025,"indexed_ms":65.870791666384321,"linear_ms":88.253374999112566,"probes":5000,"project_ms":451.37016666740237}
+{"dataset":"counties","decode_ms":189.42420833263895,"features":3144,"hits":1813,"index_layout_ms":4.3992500013700919,"indexed_ms":34.18170833356271,"linear_ms":199.1817500002071,"probes":5000,"project_ms":979.9067499989178}
+{"dataset":"county-results","decode_ms":357.14537500098231,"features":3153,"hits":1809,"index_layout_ms":1.5064583330968162,"indexed_ms":38.7904166655062,"linear_ms":209.53312500023458,"probes":5000,"project_ms":1229.1203333334124}
+Inset camera round trips · 2 regions × 2 viewports × 7 transition positions
+{"dataset":"historical-county-1788","decode_ms":7.2545416660432238,"features":332,"hits":2324,"index_layout_ms":0.17829166608862579,"indexed_ms":11.622624999290565,"linear_ms":38.433083333075047,"probes":5000,"project_ms":37.063499999931082}
+{"dataset":"historical-county-1860","decode_ms":20.278749998396961,"features":2181,"hits":2886,"index_layout_ms":1.0698333335312782,"indexed_ms":6.0070416675443994,"linear_ms":89.53220833245723,"probes":5000,"project_ms":93.113000000812463}
+{"dataset":"historical-county-1900","decode_ms":28.302333332248963,"features":2845,"hits":1870,"index_layout_ms":1.575958332978189,"indexed_ms":6.896416667586891,"linear_ms":69.767249999131309,"probes":5000,"project_ms":128.69649999993271}
+{"dataset":"historical-county-1980","decode_ms":27.262708334092167,"features":3143,"hits":1870,"index_layout_ms":1.7443333344999701,"indexed_ms":4.4137083350506146,"linear_ms":84.894958332370152,"probes":5000,"project_ms":179.87420833196666}
+{"dataset":"historical-county-2000","decode_ms":41.519833332131384,"features":3139,"hits":1871,"index_layout_ms":1.6703333349141758,"indexed_ms":3.614749999542255,"linear_ms":74.30841666609922,"probes":5000,"project_ms":132.23362499957148}
+Historical overlap · Concordia county and parish · IDs 6860 and 12250
+{"dataset":"historical-state-1788","decode_ms":1.2473750011849916,"features":16,"hits":2324,"index_layout_ms":0.054166666814126074,"indexed_ms":14.136249999864958,"linear_ms":19.734166666239616,"probes":5000,"project_ms":6.8015416673006257}
+{"dataset":"historical-state-1860","decode_ms":2.8059166670573177,"features":41,"hits":2886,"index_layout_ms":0.15729166625533253,"indexed_ms":9.5301666679006303,"linear_ms":27.478833331770147,"probes":5000,"project_ms":15.32187500015425}
+{"dataset":"historical-state-1900","decode_ms":3.7672083326469874,"features":52,"hits":1870,"index_layout_ms":0.21308333452907391,"indexed_ms":7.9545416665496305,"linear_ms":20.890291665637051,"probes":5000,"project_ms":22.224124999411288}
+{"dataset":"historical-state-1980","decode_ms":3.7533750000875443,"features":51,"hits":1870,"index_layout_ms":0.20795833370357286,"indexed_ms":7.6520833335962379,"linear_ms":22.570291666852427,"probes":5000,"project_ms":20.963124999980209}
+{"dataset":"historical-state-2000","decode_ms":3.8978333341219695,"features":51,"hits":1870,"index_layout_ms":0.20620833311113529,"indexed_ms":16.294833332722192,"linear_ms":31.776750000062748,"probes":5000,"project_ms":22.777708332796465}

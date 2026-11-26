@@ -330,3 +330,20 @@ The macOS and iOS Xcode products embed the Apple adapter's compiled package bund
 Build the iOS lab using the Release command in the 0.4A section. Follow the 0.3Q archive preparation instructions to assemble the same ten dated sources. Run the updated `check-metal-mesh.sh` with the 14 inputs. For a directly comparable 0.4A run, set `METAL_BASELINE_ROOT` to a checkout at `617ef28b6768c47b6ea08a83cfa262d5f4668053` and pass the same 14 inputs. Compare the `buffer-layout` records, including their per-region SHA-256 and sorted selection-range hashes. Run `check-geokit-geography.sh` and the host label study with the same sources as in 0.4A.
 
 Run the 30-minute XCTest and verifier in the 0.3Q section. For matched Release navigation use `METAL_CONFIGS=thematic METAL_BENCHMARK_MODE=qualification`, with `METAL_TRIALS=3` for `METAL_WORKLOAD=election-counties`. Use the same simulator and run one cohort at a time. Supported historical selections include `states-1788`, `states-2000`, `counties-1788` and `counties-2000`. Use `regions`, `label-overlay`, `cancellation` and `ownership` for the remaining targeted probes. Keep the device protocol from 0.3Q as the hardware production gate. The signed build should contain the Apple target bundle's `default.metallib` and the mesh target bundle's `LICENSE-libtess2.txt`.
+
+## BalloticsGeoKit 0.4C
+
+[Qualification](GEOKIT_0.4C_QUALIFICATION_REPORT.md) · [Presentation architecture](GEOKIT_CARTOGRAPHIC_PRESENTATION_ARCHITECTURE.md) · [Editorial labels](GEOKIT_EDITORIAL_LABEL_STUDY.md) · [State focus](GEOKIT_STATE_FOCUS_STUDY.md) · [Theme inputs](GEOKIT_THEMATIC_STYLE_CONTRACT.md) · [Legacy audit](LEGACY_COUNTY_MAP_AUDIT.md) · [Benchmarks](GEOKIT_0.4C_BENCHMARKS.md) · [Regressions](GEOKIT_0.4C_REGRESSION_REPORT.md)
+
+Use the 0.4B Release and host reproduction commands. The electoral Albers view opens in National Editorial. Switch the label policy in **Map view**, or launch with `--exploratory-labels` for the exploratory control. County results expose **State focus** in **Map view**. Choose **National** to restore the full country and retain the current feature inspection. The **Results** panel includes an electoral vote key for values omitted from internal and external labels.
+
+```sh
+xcrun simctl launch "$SIMULATOR_ID" org.ballotics.MapLibreGeoJSONLab \
+  --albers-metal --measure --election-year 2004 --county-results --state-focus 01
+xcrun simctl launch "$SIMULATOR_ID" org.ballotics.MapLibreGeoJSONLab \
+  --albers-metal --election-year 1976 --cartography-debug
+```
+
+For the host label study in the 0.4A instructions, set `GEOKIT_EDITORIAL_LABELS=1`. Leave it unset for the exploratory control. Use the same archive and normalized national JSON. The lab's state-context trace is opt-in with `--measure --cartography-metrics`. Run the Release UI tests `testCartographicStateAndLocalInspection` and `testCartographicAlaskaDistrictInspection` for the focused inspection paths. Keep the original owner reference assets, election screenshots and XCTest attachments in local storage.
+
+In DistrictAtlas, enter `TX` for state focus and `TX-18` for district inspection. The state outlines load from the companion Census states file alongside the congressional file. The command `DistrictAtlas CENSUS_DISTRICTS --verify-policy` prints a current GPU completion for each policy transition and checks mesh identity across the route.
