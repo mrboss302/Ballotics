@@ -1038,7 +1038,7 @@ private struct LabView: View {
                         .accessibilityIdentifier("statewide-inspection")
                         Spacer()
                         if item.id != "02", item.id != "15" {
-                            Text("Context · 2024 Census state outlines").foregroundStyle(.secondary)
+                            Text("2024 Census context").foregroundStyle(.secondary)
                         }
                     }
                     .font(.caption)

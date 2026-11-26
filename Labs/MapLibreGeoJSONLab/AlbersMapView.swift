@@ -312,8 +312,9 @@ private final class AlbersCanvas: GeographicInteractionView {
 
     private var reservesExternalAnnotations = false
     private var mapLayout: GeographicMapLayout {
-        GeographicMapLayout(bounds: bounds,
-            externalHeight: reservesExternalAnnotations && (editorial || bounds.height <= 240) ? 24 : 0)
+        let reserve = reservesExternalAnnotations && (editorial || bounds.height <= 240)
+        let aspect = reserve && editorial ? scene.map { $0.bounds.width / max(1, $0.bounds.height) } : nil
+        return GeographicMapLayout(bounds: bounds, externalHeight: reserve ? 24 : 0, idealMapAspect: aspect)
     }
     override var interactionViewport: CGRect { mapLayout.viewport }
 
@@ -808,6 +809,7 @@ private final class AlbersCanvas: GeographicInteractionView {
             return
         }
         guard let metal, metalReady, active else { return }
+        if metal.frame != mapLayout.viewport { metal.frame = mapLayout.viewport }
         metal.move(camera: geographicCamera, boundary: .init(width: thickBorders ? 1.2 : 0.48),
                    selected: selected, alternate: alternateColor)
         if let scene {

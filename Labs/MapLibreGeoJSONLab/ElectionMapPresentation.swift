@@ -349,11 +349,11 @@ struct CountyMarginLegend: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 3) {
             HStack {
-                Text("Dem. +100")
+                Text("Dem. +100 pp")
                 Spacer()
                 Text("0")
                 Spacer()
-                Text("Rep. +100")
+                Text("Rep. +100 pp")
             }
             LinearGradient(colors: [-1.0, 0, 1].map { Color(cgColor: AlbersTheme.marginScale.color($0)) },
                            startPoint: .leading, endPoint: .trailing)

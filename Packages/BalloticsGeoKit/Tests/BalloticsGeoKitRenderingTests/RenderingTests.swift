@@ -94,6 +94,13 @@ final class RenderingTests: XCTestCase {
         XCTAssertEqual(layout.viewport.maxY, external.minY)
         XCTAssertTrue(layout.viewport.intersection(external).isEmpty)
         XCTAssertEqual(layout.viewport.union(external), bounds)
+
+        let portrait = CGRect(x: 0, y: 0, width: 360, height: 400)
+        let compactMap = GeographicMapLayout(bounds: portrait, externalHeight: 24, idealMapAspect: 2)
+        let key = compactMap.externalAnnotations!
+        XCTAssertEqual(compactMap.viewport.height, 192)
+        XCTAssertEqual(compactMap.viewport.maxY, key.minY)
+        XCTAssertTrue(portrait.contains(compactMap.viewport.union(key)))
     }
 
     func testCoreGraphicsReferenceDrawsTheSameRegionalScene() throws {
