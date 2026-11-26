@@ -21,15 +21,11 @@ enum AlbersTheme: String, CaseIterable {
                        saturation: saturation, brightness: brightness, alpha: 1)
     }
 
-    static func marginColor(_ fraction: Double) -> UIColor {
-        let strength = min(1, max(0, fraction))
-        return UIColor(red: 0.85 - 0.72 * strength, green: 0.91 - 0.61 * strength,
-                       blue: 0.98 - 0.37 * strength, alpha: 1)
-    }
+    static let marginScale = DivergingThematicScale(
+        negative: SIMD3(0.14, 0.32, 0.54), neutral: SIMD3(0.88, 0.88, 0.85),
+        positive: SIMD3(0.67, 0.18, 0.20))
 
-    func missingMarginColor(_ hex: String) -> CGColor {
-        UIColor(electionHex: Self.statusColors.contains(hex) ? hex : ElectionMapPresentation.noData).cgColor
-    }
+
 }
 
 private struct AlbersPaintConfiguration {
@@ -56,8 +52,8 @@ private extension ElectionMapPresentation {
         return scene.properties.map { props in
             if let key = props[field], let fill = fills[key] {
                 if theme == .margin, mode == .countyResults {
-                    if let margin = margins[key] { return [AlbersTheme.marginColor(margin).cgColor] }
-                    return fill.map(theme.missingMarginColor)
+                    if let margin = margins[key] { return [AlbersTheme.marginScale.color(margin)] }
+                    return fill.map { theme.color($0).cgColor }
                 }
                 return fill.compactMap { colors[$0] }
             }
@@ -76,12 +72,16 @@ struct AlbersMapView: View {
     @State private var sceneRequest: Double?
     @State private var selected: Int?
     @State private var overlapping: [Int] = []
+    @State private var contextLayer: GeographicContextLayer?
+
+    private var group: String? { state.electionMode == .countyResults ? state.focusedCountyState : nil }
 
     var body: some View {
         let currentRequest = sceneRequest
         let currentScene = currentRequest == state.dataset?.requestedAt ? scene : nil
         let receipt = state.expectedMetalReceipt
-        AlbersCanvasView(scene: currentScene, profile: state.nationalProfile, onPresented: {
+        AlbersCanvasView(scene: currentScene, profile: state.nationalProfile, editorial: state.editorialLabels,
+                         group: group, contextLayer: contextLayer, onPresented: {
             guard state.expectedMetalReceipt == receipt, state.dataset?.requestedAt == currentRequest,
                   state.renderer == .metal, !state.dismissedStudyMap, !state.historicalPending, !state.importing,
                   state.dataset?.geography == state.geography else { return }
@@ -110,11 +110,27 @@ struct AlbersMapView: View {
         }
         .sheet(isPresented: $showGeographySearch, onDismiss: { overlapping = [] }) {
             if let currentScene {
-                AlbersFeaturePicker(properties: currentScene.properties, overlapping: overlapping) { index in
+                AlbersFeaturePicker(properties: currentScene.properties, overlapping: overlapping, group: group) { index in
                     guard state.dataset?.requestedAt == currentRequest, !state.historicalPending else { return }
                     select(index, in: currentScene)
                     state.moveCamera(.selectedFeature)
                 }
+            }
+        }
+        .task(id: group != nil) {
+            guard group != nil, contextLayer == nil,
+                  let url = Bundle.main.url(forResource: "cb_2024_us_state_5m", withExtension: "json") else { return }
+            let start = LabLog.now
+            let work = Task.detached(priority: .utility) { try AlbersScene.load(url) }
+            do {
+                let outlines = try await withTaskCancellationHandler { try await work.value } onCancel: { work.cancel() }
+                try Task.checkCancellation()
+                contextLayer = GeographicContextLayer(scene: outlines, provenance: "2024 Census 5m state boundaries")
+                LabLog.record("cartography_context_ready", ["elapsed_ms": LabLog.milliseconds(LabLog.now - start)])
+            } catch is CancellationError {
+                return
+            } catch {
+                LabLog.record("cartography_context_failed", ["reason": error.localizedDescription])
             }
         }
         .onChange(of: state.dataset?.requestedAt) { _, _ in
@@ -198,6 +214,7 @@ struct AlbersMapView: View {
 private struct AlbersFeaturePicker: View {
     let properties: [[String: String]]
     let overlapping: [Int]
+    let group: String?
     let onSelect: (Int) -> Void
     @Environment(\.dismiss) private var dismiss
     @State private var query = ""
@@ -216,7 +233,8 @@ private struct AlbersFeaturePicker: View {
     var body: some View {
         let candidates = overlapping.isEmpty ? Array(properties.indices) : overlapping
         let matches = candidates.filter {
-            query.isEmpty || title($0).localizedStandardContains(query) || detail($0).localizedStandardContains(query)
+            (group == nil || properties[$0]["STATEFP"] == group)
+                && (query.isEmpty || title($0).localizedStandardContains(query) || detail($0).localizedStandardContains(query))
         }
         NavigationStack {
             List(matches, id: \.self) { index in
@@ -243,6 +261,9 @@ private struct AlbersFeaturePicker: View {
 private struct AlbersCanvasView: UIViewRepresentable {
     let scene: AlbersScene?
     let profile: NationalMapProfile
+    let editorial: Bool
+    let group: String?
+    let contextLayer: GeographicContextLayer?
     let onPresented: () -> Void
     let selected: Int?
     let alternateColor: Bool
@@ -262,7 +283,7 @@ private struct AlbersCanvasView: UIViewRepresentable {
     func makeUIView(context: Context) -> AlbersCanvas { AlbersCanvas(baseline: baseline) }
 
     func updateUIView(_ canvas: AlbersCanvas, context: Context) {
-        canvas.update(source: scene, profile: profile, onPresented: onPresented, selected: selected, alternateColor: alternateColor,
+        canvas.update(source: scene, profile: profile, editorial: editorial, group: group, contextLayer: contextLayer, onPresented: onPresented, selected: selected, alternateColor: alternateColor,
                       cameraRequest: cameraRequest, paint: paint, thickBorders: thickBorders,
                       studyProbe: studyProbe, metal: metal, active: active,
                       request: request, geometryPending: geometryPending, canPublish: canPublish,
@@ -270,11 +291,29 @@ private struct AlbersCanvasView: UIViewRepresentable {
     }
 }
 
+private final class CartographicOverlayView: UIView {
+    var drawing: ((CGContext) -> Void)?
+    override func draw(_ rect: CGRect) {
+        if let context = UIGraphicsGetCurrentContext() { drawing?(context) }
+    }
+}
+
 private final class AlbersCanvas: GeographicInteractionView {
+    private let cartographicOverlay = CartographicOverlayView()
+    private let measureCartography = ProcessInfo.processInfo.arguments.contains("--cartography-metrics")
+    private let debugCartography = ProcessInfo.processInfo.arguments.contains("--cartography-debug")
+    private var contextLayer: GeographicContextLayer?
+    private var group: String?
+    private var editorial = true
+    private var presentation: CartographicPresentation?
+    private var policy: CartographicPolicy {
+        presentation?.policy ?? (editorial ? .nationalEditorial : .nationalExploratory)
+    }
+
     private var reservesExternalAnnotations = false
     private var mapLayout: GeographicMapLayout {
         GeographicMapLayout(bounds: bounds,
-            externalHeight: reservesExternalAnnotations && bounds.height <= 240 ? 24 : 0)
+            externalHeight: reservesExternalAnnotations && (editorial || bounds.height <= 240) ? 24 : 0)
     }
     override var interactionViewport: CGRect { mapLayout.viewport }
 
@@ -349,6 +388,13 @@ private final class AlbersCanvas: GeographicInteractionView {
         isAccessibilityElement = true
         accessibilityIdentifier = "albers-map"
         accessibilityLabel = "Albers equal-area map"
+        cartographicOverlay.backgroundColor = .clear
+        cartographicOverlay.isOpaque = false
+        cartographicOverlay.isUserInteractionEnabled = false
+        cartographicOverlay.isAccessibilityElement = false
+        cartographicOverlay.isHidden = true
+        cartographicOverlay.drawing = { [weak self] context in self?.drawCartography(in: context) }
+        addSubview(cartographicOverlay)
         accessibilityHint = "Use Find geography in Map view to select a shape by name."
     }
 
@@ -376,10 +422,17 @@ private final class AlbersCanvas: GeographicInteractionView {
         guard lastLayoutSize != bounds.size else { return }
         lastLayoutSize = bounds.size
         metal?.frame = mapLayout.viewport
+        cartographicOverlay.frame = bounds
+        if let presentation, animation == nil {
+            let target = presentation.camera(in: mapLayout.viewport)
+            centerPoint = target.center
+            zoom = target.scale / max(scale(toFit: scene?.bounds ?? presentation.frame), .leastNormalMagnitude)
+        }
         invalidateMap()
     }
 
-    func update(source: AlbersScene?, profile: NationalMapProfile, onPresented: @escaping () -> Void, selected incomingSelection: Int?, alternateColor: Bool,
+    func update(source: AlbersScene?, profile: NationalMapProfile, editorial: Bool, group: String?,
+                contextLayer: GeographicContextLayer?, onPresented: @escaping () -> Void, selected incomingSelection: Int?, alternateColor: Bool,
                 cameraRequest: (Int, Viewpoint), paint: AlbersPaintConfiguration,
                 thickBorders: Bool, studyProbe: Int, metal requested: Bool, active: Bool,
                 request: Double?, geometryPending: Bool, canPublish: @escaping () -> Bool,
@@ -387,6 +440,10 @@ private final class AlbersCanvas: GeographicInteractionView {
         let isNewScene = source != nil && (self.scene == nil || metalRevision != request)
         let layoutChanged = self.profile != profile
         let previousViewport = mapLayout.viewport
+        let cartographyChanged = self.editorial != editorial || self.group != group
+        self.editorial = editorial
+        self.group = group
+        self.contextLayer = contextLayer
         reservesExternalAnnotations = paint.votes != nil
         let viewportChanged = previousViewport != mapLayout.viewport
         if viewportChanged { metal?.frame = mapLayout.viewport }
@@ -416,7 +473,7 @@ private final class AlbersCanvas: GeographicInteractionView {
         }
         let changed = layoutChanged || isNewScene || (self.scene != nil && scene == nil) || self.selected != selected
             || self.alternateColor != alternateColor || self.thickBorders != thickBorders
-            || styleChanged || cameraChanged
+            || styleChanged || cameraChanged || cartographyChanged
         if isNewScene || layoutChanged, let scene {
             focusedRegion = nil
             centerPoint = CGPoint(x: scene.bounds.midX, y: scene.bounds.midY)
@@ -435,9 +492,27 @@ private final class AlbersCanvas: GeographicInteractionView {
             catch { failMetal(error.localizedDescription) }
         }
         self.scene = scene
-        if isNewScene || layoutChanged || styleChanged || scene == nil {
+        let nextPolicy: CartographicPolicy?
+        if cameraRequest.1 == .selectedFeature, let selected {
+            nextPolicy = .localInspection(feature: selected, within: group)
+        } else {
+            nextPolicy = group.map { .stateFocus(group: $0) }
+        }
+        let localSelectionChanged = cameraRequest.1 == .selectedFeature && self.selected != selected
+        if isNewScene || layoutChanged || cartographyChanged || cameraChanged || localSelectionChanged {
+            let start = LabLog.now
+            presentation = scene.flatMap { scene in
+                nextPolicy.flatMap { CartographicPresentation(policy: $0, scene: scene, groupKey: "STATEFP") }
+            }
+            metal?.setVisibleFeatures(presentation?.visibleFeatures)
+            if cartographyChanged || (group != nil && (isNewScene || layoutChanged || cameraChanged)) {
+                LabLog.record("cartography_policy", ["policy": String(describing: policy), "members": presentation?.visibleFeatures?.count ?? scene?.properties.count ?? 0,
+                    "elapsed_ms": LabLog.milliseconds(LabLog.now - start)])
+            }
+        }
+        if isNewScene || layoutChanged || styleChanged || cartographyChanged || scene == nil {
             labelOverlay.update(parent: self, scene: scene, votes: paint.votes, statuses: paint.statuses,
-                                colors: featurePaint, select: { [weak self] feature in self?.onSelect?([feature]) },
+                                colors: featurePaint, editorial: editorial, select: { [weak self] feature in self?.onSelect?([feature]) },
                                 ready: { [weak self] in self?.positionLabels() })
         }
         self.selected = selected
@@ -464,7 +539,12 @@ private final class AlbersCanvas: GeographicInteractionView {
             metal?.markAppearance(pending.1, at: pending.0)
             pendingAppearanceMetric = nil
         }
-        if lastCameraRequest != nil, cameraChanged { move(cameraRequest.1, animated: !isNewScene) }
+        if let presentation, isNewScene || layoutChanged {
+            move(.stateFocus(presentation.group ?? ""), animated: false)
+        } else if lastCameraRequest != nil, cameraChanged {
+            move(cameraRequest.1, animated: !isNewScene)
+        }
+        updateCartographicOverlay()
         lastCameraRequest = cameraRequest.0
         if baseline || changed || viewportChanged || backendChanged || (requested && activityChanged) { invalidateMap() }
         if studyProbe != lastStudyProbe, studyProbe > 0 {
@@ -487,7 +567,8 @@ private final class AlbersCanvas: GeographicInteractionView {
         context.clip(to: viewport)
         let candidateCount = AlbersCoreGraphics.draw(scene, camera: geographicCamera,
             palette: featurePaint, boundary: .init(width: thickBorders ? 1.2 : 0.48),
-            selected: selected, alternate: alternateColor, indexed: !baseline, in: context)
+            selected: selected, alternate: alternateColor, indexed: !baseline,
+            visibleFeatures: presentation?.visibleFeatures, in: context)
 
         if let metric = pendingPaintMetric {
             metric.1(LabLog.milliseconds(LabLog.now - metric.0))
@@ -609,7 +690,8 @@ private final class AlbersCanvas: GeographicInteractionView {
                         LabLog.record("metal_mesh_superseded", ["revision": revision - LabLog.start])
                         return
                     }
-                    try surface.publish(buffers, scene: self.scene ?? scene, palette: self.featurePaint)
+                    try surface.publish(buffers, scene: self.scene ?? scene, palette: self.featurePaint,
+                                        visibleFeatures: self.presentation?.visibleFeatures)
                     if let acknowledge = self.onPresented { surface.expectPresentation(acknowledge) }
                     surface.onFirstFrame = { [weak self] in
                         guard let self, self.canPublishMetal?() == true else { return }
@@ -688,11 +770,39 @@ private final class AlbersCanvas: GeographicInteractionView {
     private func positionLabels() {
         guard let scene else { return }
         labelOverlay.position(in: scene, camera: geographicCamera, zoom: zoom, selected: selected,
-                              externalAnnotations: mapLayout.externalAnnotations)
+                              externalAnnotations: mapLayout.externalAnnotations, policy: policy)
+    }
+
+    private func updateCartographicOverlay() {
+        cartographicOverlay.isHidden = !debugCartography && (contextLayer == nil || presentation?.region != .mainland)
+        if !cartographicOverlay.isHidden { cartographicOverlay.setNeedsDisplay() }
+    }
+
+    private func drawCartography(in context: CGContext) {
+        guard let scene else { return }
+        let camera = geographicCamera
+        if let presentation, let contextLayer {
+            let start = LabLog.now
+            let count = contextLayer.draw(in: context, camera: camera, alignedTo: scene,
+                                          excluding: presentation.group, groupKey: "STATEFP")
+            if measureCartography || debugCartography || routeResults != nil {
+                LabLog.record("cartography_context_draw", ["parts": count, "elapsed_ms": LabLog.milliseconds(LabLog.now - start)])
+            }
+        }
+        if debugCartography {
+            labelOverlay.drawDiagnostics(in: context, scene: scene, camera: camera)
+            context.setStrokeColor(UIColor.systemTeal.cgColor)
+            context.stroke(camera.viewport.insetBy(dx: 1, dy: 1))
+            if let frame = presentation?.frame {
+                context.stroke(CGRect(origin: camera.screen(frame.origin),
+                    size: CGSize(width: frame.width * camera.scale, height: frame.height * camera.scale)))
+            }
+        }
     }
 
     private func invalidateMap() {
         positionLabels()
+        updateCartographicOverlay()
         if !metalRequested || metalFailed {
             setNeedsDisplay()
             return
@@ -753,7 +863,8 @@ private final class AlbersCanvas: GeographicInteractionView {
         case .national: target = scene.bounds
         case .alaska: target = scene.panels.first { $0.region == .alaska }?.frame
         case .hawaii: target = scene.panels.first { $0.region == .hawaii }?.frame
-        case .selectedFeature: target = selected.map(scene.frame(for:))
+        case .stateFocus: target = presentation?.frame
+        case .selectedFeature: target = presentation?.frame ?? selected.map(scene.frame(for:))
         case .selectedState:
             target = selected.flatMap { scene.properties[$0]["STATEFP"] }.flatMap(scene.frame(forState:))
         }
@@ -762,12 +873,14 @@ private final class AlbersCanvas: GeographicInteractionView {
         case .alaska: focusedRegion = .alaska
         case .hawaii: focusedRegion = .hawaii
         case .national: focusedRegion = nil
+        case .stateFocus: focusedRegion = presentation?.region
         case .selectedState, .selectedFeature:
             focusedRegion = selected.flatMap { feature in scene.panels.first { $0.parts.contains { $0.feature == feature } }?.region }
         }
         let nextCenter = CGPoint(x: target.midX, y: target.midY)
-        let nextZoom = viewpoint == .national ? 1 : min(256, max(1, scale(toFit: target.insetBy(dx: -target.width * 0.045,
-                                                         dy: -target.height * 0.045)) / scale(toFit: scene.bounds)))
+        let fitted = presentation?.frame == target ? target
+            : target.insetBy(dx: -target.width * 0.045, dy: -target.height * 0.045)
+        let nextZoom = viewpoint == .national ? 1 : min(256, max(1, scale(toFit: fitted) / scale(toFit: scene.bounds)))
         if animated, !baseline, !UIAccessibility.isReduceMotionEnabled, window != nil, routeResults == nil {
             animation = CameraTransition(start: LabLog.now, center: centerPoint, zoom: zoom,
                                          goalCenter: nextCenter, goalZoom: nextZoom)
@@ -825,7 +938,8 @@ private final class AlbersCanvas: GeographicInteractionView {
 
     private func select(at point: CGPoint) {
         let start = LabLog.now
-        let hits = baseline ? (scene?.hit(point, region: focusedRegion).map { [$0] } ?? []) : (scene?.hits(point, region: focusedRegion) ?? [])
+        let matches = baseline ? (scene?.hit(point, region: focusedRegion).map { [$0] } ?? []) : (scene?.hits(point, region: focusedRegion) ?? [])
+        let hits = presentation?.visibleFeatures.map { matches.filter($0.contains) } ?? matches
         onSelect?(hits)
         if featurePaint != nil || lastStudyProbe > 0 {
             LabLog.record("election_albers_selection", ["hit": !hits.isEmpty,

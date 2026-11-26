@@ -7,7 +7,7 @@ public enum AlbersCoreGraphics {
     @discardableResult
     public static func draw(_ scene: AlbersScene, camera: GeographicCamera, palette: [[CGColor]]? = nil,
                             boundary: GeographicBoundaryStyle = .init(), selected: Int? = nil,
-                            alternate: Bool = false, indexed: Bool = true, in context: CGContext) -> Int {
+                            alternate: Bool = false, indexed: Bool = true, visibleFeatures: Set<Int>? = nil, in context: CGContext) -> Int {
         let visible = camera.worldBounds
         let scale = camera.scale
         let fill = alternate ? CGColor(red: 0.23, green: 0.51, blue: 0.40, alpha: 1)
@@ -37,6 +37,7 @@ public enum AlbersCoreGraphics {
             context.setStrokeColor(CGColor(gray: 0.96, alpha: 0.85))
             context.setLineWidth(boundary.width / scale)
             func render(_ part: AlbersScene.Part) {
+                guard visibleFeatures?.contains(part.feature) != false else { return }
                 let colors = styles?[part.feature] ?? []
                 context.setFillColor(colors.first ?? fill)
                 if colors.count > 1 {
@@ -60,7 +61,7 @@ public enum AlbersCoreGraphics {
                 candidateCount += panel.parts.count
                 for part in panel.parts where part.bounds.intersects(window) { render(part) }
             }
-            if let selected {
+            if let selected, visibleFeatures?.contains(selected) != false {
                 context.setFillColor(CGColor(red: 1, green: 0.76, blue: 0.29, alpha: 1))
                 context.setStrokeColor(CGColor(red: 0.36, green: 0.21, blue: 0.06, alpha: 1))
                 context.setLineWidth(1.5 / scale)

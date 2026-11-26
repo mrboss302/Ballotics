@@ -79,3 +79,22 @@ enum RenderTiming {
     static var now: Double { ProcessInfo.processInfo.systemUptime }
     static func milliseconds(_ interval: Double) -> Double { (interval * 10_000).rounded() / 10 }
 }
+
+/// Caller-supplied color endpoints on a signed, normalized domain.
+public struct DivergingThematicScale {
+    public let negative: SIMD3<Double>
+    public let neutral: SIMD3<Double>
+    public let positive: SIMD3<Double>
+
+    public init(negative: SIMD3<Double>, neutral: SIMD3<Double>, positive: SIMD3<Double>) {
+        self.negative = negative
+        self.neutral = neutral
+        self.positive = positive
+    }
+
+    public func color(_ value: Double) -> CGColor {
+        let signed = value.isFinite ? min(1, max(-1, value)) : 0
+        let color = neutral + ((signed < 0 ? negative : positive) - neutral) * abs(signed)
+        return CGColor(red: color.x, green: color.y, blue: color.z, alpha: 1)
+    }
+}

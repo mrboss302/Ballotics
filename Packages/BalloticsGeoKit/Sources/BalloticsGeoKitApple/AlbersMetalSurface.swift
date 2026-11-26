@@ -14,6 +14,7 @@ public struct AlbersMetalPreparedScene {
         let segments: MTLBuffer
         let uniqueSegments: MTLBuffer
         let uniqueSegmentCount: Int
+        let featureTriangles: [Int: [Range<Int>]]
         let featureSegments: [Int: [Range<Int>]]
     }
 
@@ -64,6 +65,7 @@ public struct AlbersMetalPreparedScene {
                       segments: Self.buffer(panel.segments, on: device, label: "Geographic ring segments"),
                       uniqueSegments: Self.buffer(panel.uniqueSegmentIndices, on: device, label: "Unique edge indices"),
                       uniqueSegmentCount: panel.uniqueSegmentIndices.count,
+                      featureTriangles: Self.triangleRanges(panel),
                       featureSegments: panel.featureSegments)
         }
         try Task.checkCancellation()
@@ -73,10 +75,25 @@ public struct AlbersMetalPreparedScene {
         regionalCount = panels.count
         cpuMeshBytes = mesh.payloadBytes
         metadataBytes = panels.reduce(0) { sum, panel in
-            sum + panel.featureSegments.values.reduce(0) { $0 + $1.count * MemoryLayout<Range<Int>>.stride }
+            sum + (panel.featureSegments.values.reduce(0) { $0 + $1.count }
+                + panel.featureTriangles.values.reduce(0) { $0 + $1.count }) * MemoryLayout<Range<Int>>.stride
         }
         self.preparationMilliseconds = preparationMilliseconds
         allocationMilliseconds = RenderTiming.milliseconds(RenderTiming.now - start)
+    }
+
+    private static func triangleRanges(_ panel: AlbersMesh.Panel) -> [Int: [Range<Int>]] {
+        var ranges: [Int: [Range<Int>]] = [:]
+        var start = 0
+        while start < panel.indices.count {
+            let part = panel.vertices[Int(panel.indices[start])].part
+            var end = start + 3
+            while end < panel.indices.count, panel.vertices[Int(panel.indices[end])].part == part { end += 3 }
+            let feature = panel.parts[Int(part)].feature
+            if feature != .max { ranges[Int(feature), default: []].append(start..<end) }
+            start = end
+        }
+        return ranges
     }
 
     public var byteCounts: [String: Int] {
@@ -198,6 +215,8 @@ public final class AlbersMetalSurface: MTKView, MTKViewDelegate {
     private var hasTheme = false
     private var mapCenter = CGPoint.zero
     private var viewport = CGRect.zero
+    private var visibleFeatures: Set<Int>?
+    private var focusRanges: [(triangles: [Range<Int>], strokes: [Range<Int>])]?
     private var scale: CGFloat = 1
     private var stroke: CGFloat = 0.48
     private var selected: Int?
@@ -359,7 +378,8 @@ public final class AlbersMetalSurface: MTKView, MTKViewDelegate {
     }
 
     /// Install immutable geometry and its initial style table as one main-actor operation.
-    public func publish(_ buffers: AlbersMetalPreparedScene, scene: AlbersScene, palette: [[CGColor]]?) throws {
+    public func publish(_ buffers: AlbersMetalPreparedScene, scene: AlbersScene, palette: [[CGColor]]?,
+                        visibleFeatures: Set<Int>? = nil) throws {
         guard buffers.identity.matches(scene), buffers.panels.first?.vertices.device === device else {
             throw GeographicRenderError(message: "Prepared Metal buffers belong to a different scene or device.")
         }
@@ -369,6 +389,8 @@ public final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         acknowledge = nil
         selected = nil
         self.buffers = buffers
+        self.visibleFeatures = visibleFeatures
+        rebuildFocusRanges()
         sceneBytes = buffers.byteCounts.values.reduce(0, +)
         layout = scene.panels
         submittedFirst = false
@@ -415,6 +437,8 @@ public final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         hasTheme = false
         selected = nil
         buffers = nil
+        visibleFeatures = nil
+        focusRanges = nil
         layout = []
         dirty = false
         appearanceMetric = nil
@@ -473,10 +497,41 @@ public final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         appearanceMetric = (start, name)
     }
 
+    /// Change the submitted parts while retaining the active mesh and all geographic GPU buffers.
+    public func setVisibleFeatures(_ features: Set<Int>?) {
+        guard features != visibleFeatures else { return }
+        visibleFeatures = features
+        rebuildFocusRanges()
+        advanceAppearance()
+        requestDraw()
+    }
+
+    private func rebuildFocusRanges() {
+        focusRanges = visibleFeatures.flatMap { features in
+            buffers?.panels.map { panel in
+                (Self.ranges(for: features, in: panel.featureTriangles),
+                 Self.ranges(for: features, in: panel.featureSegments))
+            }
+        }
+    }
+
+    private static func ranges(for features: Set<Int>, in table: [Int: [Range<Int>]]) -> [Range<Int>] {
+        let ranges = features.flatMap { table[$0] ?? [] }.sorted { $0.lowerBound < $1.lowerBound }
+        var merged: [Range<Int>] = []
+        for range in ranges {
+            if let last = merged.last, last.upperBound == range.lowerBound {
+                merged[merged.count - 1] = last.lowerBound..<range.upperBound
+            } else {
+                merged.append(range)
+            }
+        }
+        return merged
+    }
+
     public func move(camera: GeographicCamera, boundary: GeographicBoundaryStyle = .init(),
                      selected: Int? = nil, alternate: Bool = false) {
         let selection = selected.flatMap { index in
-            buffers.map { (0..<$0.featureCount).contains(index) } == true ? index : nil
+            buffers.map { (0..<$0.featureCount).contains(index) } == true && visibleFeatures?.contains(index) != false ? index : nil
         }
         if viewport != camera.viewport || focusedRegion != camera.region || stroke != boundary.width
             || self.selected != selection || useAlternate != alternate {
@@ -535,32 +590,55 @@ public final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         encoder.setCullMode(.none)
         encoder.setFragmentBuffer(styleBuffer, offset: 0, index: 0)
         encoder.setFragmentBuffer(colorBuffer, offset: 0, index: 1)
-        for (buffer, panel) in zip(buffers.panels, layout) where (focusedRegion == nil || focusedRegion == panel.region) && panel.frame.intersects(region) {
+        for (panelIndex, pair) in zip(buffers.panels, layout).enumerated() where (focusedRegion == nil || focusedRegion == pair.1.region) && pair.1.frame.intersects(region) {
+            let (buffer, panel) = pair
             var camera = camera(for: buffer, panel: panel)
             encoder.setVertexBuffer(buffer.vertices, offset: 0, index: 0)
             encoder.setVertexBuffer(buffer.parts, offset: 0, index: 1)
             setCamera(&camera, on: encoder)
-            encoder.drawIndexedPrimitives(type: .triangle, indexCount: buffer.indexCount,
-                                          indexType: .uint32, indexBuffer: buffer.indices, indexBufferOffset: 0)
-            calls += 1
-            submittedIndices += buffer.indexCount
+            if let ranges = focusRanges?[panelIndex].triangles {
+                for range in ranges {
+                    encoder.drawIndexedPrimitives(type: .triangle, indexCount: range.count, indexType: .uint32,
+                        indexBuffer: buffer.indices, indexBufferOffset: range.lowerBound * MemoryLayout<UInt32>.stride)
+                    calls += 1
+                    submittedIndices += range.count
+                }
+            } else {
+                encoder.drawIndexedPrimitives(type: .triangle, indexCount: buffer.indexCount,
+                                              indexType: .uint32, indexBuffer: buffer.indices, indexBufferOffset: 0)
+                calls += 1
+                submittedIndices += buffer.indexCount
+            }
             referencedVertices += buffer.vertices.length / MemoryLayout<AlbersMesh.Vertex>.stride
         }
         if let strokePipeline {
             encoder.setRenderPipelineState(strokePipeline)
             encoder.setDepthStencilState(strokeDepth)
-            for (buffer, panel) in zip(buffers.panels, layout) where (focusedRegion == nil || focusedRegion == panel.region) && panel.frame.intersects(region) {
+            for (panelIndex, pair) in zip(buffers.panels, layout).enumerated() where (focusedRegion == nil || focusedRegion == pair.1.region) && pair.1.frame.intersects(region) {
+                let (buffer, panel) = pair
                 var camera = camera(for: buffer, panel: panel)
                 encoder.setVertexBuffer(buffer.segments, offset: 0, index: 0)
                 encoder.setVertexBuffer(buffer.parts, offset: 0, index: 1)
                 encoder.setVertexBuffer(buffer.uniqueSegments, offset: 0, index: 3)
-                setCamera(&camera, on: encoder)
-                encoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 6,
-                                       instanceCount: buffer.uniqueSegmentCount)
-                calls += 1
-                submittedSegments += buffer.uniqueSegmentCount
+                if let ranges = focusRanges?[panelIndex].strokes {
+                    camera.selectionPass = 2
+                    setCamera(&camera, on: encoder)
+                    for range in ranges where !range.isEmpty {
+                        encoder.setVertexBuffer(buffer.segments,
+                            offset: range.lowerBound * MemoryLayout<AlbersMesh.Segment>.stride, index: 0)
+                        encoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 6, instanceCount: range.count)
+                        calls += 1
+                        submittedSegments += range.count
+                    }
+                } else {
+                    setCamera(&camera, on: encoder)
+                    encoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 6,
+                                           instanceCount: buffer.uniqueSegmentCount)
+                    calls += 1
+                    submittedSegments += buffer.uniqueSegmentCount
+                }
             }
-            if let selected {
+            if let selected, visibleFeatures?.contains(selected) != false {
                 encoder.setDepthStencilState(selectionDepth)
                 for (buffer, panel) in zip(buffers.panels, layout) where (focusedRegion == nil || focusedRegion == panel.region) && panel.frame.intersects(region) {
                     guard let ranges = buffer.featureSegments[selected] else { continue }

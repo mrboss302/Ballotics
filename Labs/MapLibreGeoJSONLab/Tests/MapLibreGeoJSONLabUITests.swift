@@ -129,6 +129,49 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
     }
 
     @MainActor
+    func testCartographicStateAndLocalInspection() {
+        continueAfterFailure = false
+        XCUIDevice.shared.orientation = .portrait
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers-metal", "--election-year", "2004", "--county-results", "--state-focus", "01",
+                               "--measure", "--cartography-metrics"]
+        app.launch()
+        waitForMetal("3,153", in: app)
+        XCTAssertTrue(app.buttons["statewide-inspection"].waitForExistence(timeout: 15))
+        XCTAssertTrue(app.staticTexts["snapshot-date"].label.contains("2024"))
+        let overview = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        overview.name = "Alabama-2004-state-focus"
+        overview.lifetime = .keepAlways
+        add(overview)
+        searchAlbers("Autauga County", in: app)
+        waitForSelection(app.buttons["inspection"], named: "Autauga County")
+        RunLoop.current.run(until: Date().addingTimeInterval(0.5))
+        let local = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        local.name = "Alabama-Autauga-local-inspection"
+        local.lifetime = .keepAlways
+        add(local)
+        view("National", in: app)
+        waitForSelection(app.buttons["inspection"], named: "Autauga County")
+    }
+
+    @MainActor
+    func testCartographicAlaskaDistrictInspection() {
+        continueAfterFailure = false
+        let app = XCUIApplication()
+        app.launchArguments = ["--albers-metal", "--election-year", "2024", "--county-results", "--state-focus", "02",
+                               "--measure", "--cartography-metrics"]
+        app.launch()
+        waitForMetal("3,153", in: app)
+        searchAlbers("State House District 1", in: app)
+        waitForSelection(app.buttons["inspection"], named: "State House District 1")
+        RunLoop.current.run(until: Date().addingTimeInterval(0.5))
+        let image = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
+        image.name = "Alaska-State-House-District-1"
+        image.lifetime = .keepAlways
+        add(image)
+    }
+
+    @MainActor
     func testMetalCountyStylingAndElectionReuse() {
         continueAfterFailure = false
         let app = XCUIApplication()

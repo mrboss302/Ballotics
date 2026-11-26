@@ -80,6 +80,7 @@ struct Inspection {
 
 enum Viewpoint: Equatable {
     case national, alaska, hawaii, selectedState, selectedFeature
+    case stateFocus(String)
 }
 
 enum LabRenderer: String, CaseIterable {
@@ -105,6 +106,8 @@ final class LabState: ObservableObject {
     @Published private(set) var importing = false
     @Published private(set) var cameraRequest: (Int, Viewpoint) = (0, .national)
     @Published private(set) var alternateColor = false
+    @Published private(set) var focusedCountyState: String?
+    @Published var editorialLabels = !ProcessInfo.processInfo.arguments.contains("--exploratory-labels")
 
     @Published private(set) var historicalPending = false
     @Published private(set) var historicalRequest: HistoricalRequest?
@@ -206,6 +209,10 @@ final class LabState: ObservableObject {
            let election = elections.first(where: { $0.year == year }) {
             setAlbers(!arguments.contains("--election-maplibre"))
             applyElection(election, mode: arguments.contains("--county-results") ? .countyResults : .electoralCollege)
+            if let flag = arguments.firstIndex(of: "--state-focus"), let code = arguments.dropFirst(flag + 1).first {
+                albersTheme = .margin
+                moveCamera(.stateFocus(code))
+            }
         } else if let index = arguments.firstIndex(where: { $0 == "--historical-date" || $0 == "--published-date" }),
            let value = arguments.dropFirst(index + 1).first {
             do {
@@ -683,7 +690,11 @@ final class LabState: ObservableObject {
                     "reused_source": reused, "elapsed_ms": LabLog.milliseconds(LabLog.now - geometryStart)])
                 if !reused {
                     prepareSwitch(to: .presidential)
-                    moveCamera(.national)
+                    if mode == .countyResults, let focus = focusedCountyState {
+                        moveCamera(.stateFocus(focus))
+                    } else {
+                        moveCamera(.national)
+                    }
                 }
                 self.election = election
                 electionPresentation = presentation
@@ -777,6 +788,11 @@ final class LabState: ObservableObject {
     }
 
     func moveCamera(_ viewpoint: Viewpoint) {
+        switch viewpoint {
+        case .stateFocus(let code): focusedCountyState = code
+        case .national, .alaska, .hawaii: focusedCountyState = nil
+        case .selectedState, .selectedFeature: break
+        }
         cameraRequest = (cameraRequest.0 + 1, viewpoint)
     }
 
@@ -784,6 +800,7 @@ final class LabState: ObservableObject {
 
     private func prepareSwitch(to next: Geography) {
         metalReceipt = nil
+        if next != .presidential { focusedCountyState = nil }
         geography = next
         inspection = nil
         failure = nil
@@ -953,6 +970,16 @@ private struct LabView: View {
                         }
                         Toggle("Emphasize borders", isOn: $state.thickAlbersBorders)
                         if state.geography == .presidential {
+                            if state.electionMode == .electoralCollege {
+                                Toggle("National editorial labels", isOn: $state.editorialLabels)
+                            }
+                            if state.electionMode == .countyResults, let result = state.electionPresentation {
+                                Menu("State focus") {
+                                    ForEach(result.states) { item in
+                                        Button(item.name) { state.moveCamera(.stateFocus(item.id)) }
+                                    }
+                                }
+                            }
                             Menu("Map colors") {
                                 Picker("Map colors", selection: $state.albersTheme) {
                                     Text("Candidates").tag(AlbersTheme.candidates)
@@ -996,10 +1023,28 @@ private struct LabView: View {
                         .accessibilityIdentifier("election-results")
                 }
                 if !compact { winner }
+                if state.usesAlbers, state.electionMode == .countyResults,
+                   let stateCode = state.focusedCountyState, let item = result.states.first(where: { $0.id == stateCode }) {
+                    HStack {
+                        Button("\(item.name) statewide") {
+                            state.inspection = Inspection(title: item.name, properties: [
+                                ("Reported records", item.records.formatted()),
+                                ("Records joined to geography", item.joined.formatted()),
+                                ("Votes across reported local records", item.reportedVotes.formatted()),
+                                ("Geography", snapshotDescription)
+                            ], stateCode: item.id)
+                            showProperties = true
+                        }
+                        .accessibilityIdentifier("statewide-inspection")
+                        Spacer()
+                        if item.id != "02", item.id != "15" {
+                            Text("Context · 2024 Census state outlines").foregroundStyle(.secondary)
+                        }
+                    }
+                    .font(.caption)
+                }
                 if state.usesAlbers, state.electionMode == .countyResults, state.albersTheme == .margin {
-                    Text("Reported margin · darker blue means a larger lead")
-                        .font(.caption)
-                        .accessibilityIdentifier("albers-margin-legend")
+                    CountyMarginLegend()
                 }
             }
 

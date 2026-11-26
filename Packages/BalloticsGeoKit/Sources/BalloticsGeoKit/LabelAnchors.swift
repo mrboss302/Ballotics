@@ -7,7 +7,7 @@ public struct LabelAnchor {
     public let region: AlbersRegion
     public let feature: Int
     public let clearance: CGFloat
-    let envelopes: [CGSize]
+    public let envelopes: [CGSize]
 
     public func fits(width: CGFloat, height: CGFloat) -> Bool {
         envelopes.contains { width < $0.width && height < $0.height }
@@ -101,7 +101,7 @@ struct LabelPolygon {
     }
 
     /// Bounded best-first pole search. Highly detailed coastlines share the same evaluation budget.
-    func candidates() -> [CGPoint] {
+    func candidates(editorial: Bool = false) -> [CGPoint] {
         struct Cell { let point: CGPoint; let radius, distance, upper: CGFloat }
         let box = part.bounds
         func cell(_ point: CGPoint, _ radius: CGFloat) -> Cell {
@@ -129,6 +129,16 @@ struct LabelPolygon {
             if points.count >= 7 { break }
             if points.allSatisfy({ hypot($0.x-c.point.x,$0.y-c.point.y) > radius/6 }) { points.append(c.point) }
         }
+        if editorial {
+            // Retain the pole first. Evaluate a bounded set of interior finalists with the
+            // envelope metric, which rewards space for a tall stack or short inline row.
+            let finalists = alternatives.sorted { $0.distance > $1.distance }.prefix(18)
+            for aspect: CGFloat in [0.65, 2.7] {
+                let optimum = finalists.map { ($0.point, distance($0.point, aspect: aspect)) }
+                    .max { $0.1 < $1.1 }?.0
+                if let optimum, !points.contains(optimum) { points.append(optimum) }
+            }
+        }
         return points
     }
 }
@@ -142,7 +152,7 @@ public struct GroupAnchors {
         self.centroidInside = centroidInside
         self.baselineInside = baselineInside
     }
-    public init(scene: AlbersScene, features: [Int]) {
+    public init(scene: AlbersScene, features: [Int], editorial: Bool = false) {
         let members = Set(features)
         // Bound work on archipelagos. Rank by actual area among the greatest bounding areas.
         let parts = scene.panels.flatMap { panel in
@@ -154,7 +164,7 @@ public struct GroupAnchors {
         baselineInside = parts.first?.1.interiorAnchor != nil
         candidates = ranked.prefix(3).flatMap { region, shape in
             var seen: [CGPoint] = []
-            return shape.candidates().compactMap { point -> LabelAnchor? in
+            return shape.candidates(editorial: editorial).compactMap { point -> LabelAnchor? in
                 guard !seen.contains(point) else { return nil }
                 seen.append(point)
                 return shape.anchor(point, region: region)
@@ -167,14 +177,18 @@ public struct GroupAnchors {
 public final class GeographicAnchorCache {
     package let geometryID = UUID()
     private let lock = NSLock()
-    private var groups: [[Int]: GroupAnchors] = [:]
+    private struct Key: Hashable {
+        let features: [Int]
+        let editorial: Bool
+    }
+    private var groups: [Key: GroupAnchors] = [:]
     public init() {}
-    public func anchors(in scene: AlbersScene, features: [Int]) -> GroupAnchors {
-        let key = features.sorted()
+    public func anchors(in scene: AlbersScene, features: [Int], editorial: Bool = false) -> GroupAnchors {
+        let key = Key(features: features.sorted(), editorial: editorial)
         lock.lock()
         defer { lock.unlock() }
         if let cached = groups[key] { return cached }
-        let prepared = GroupAnchors(scene: scene, features: key)
+        let prepared = GroupAnchors(scene: scene, features: key.features, editorial: editorial)
         groups[key] = prepared
         return prepared
     }

@@ -20,9 +20,23 @@ public struct MapLabel {
     }
 }
 
+public enum LabelArrangement: String, Codable { case stacked, inline }
+
+public extension MapLabel {
+    func text(for arrangement: LabelArrangement, compact: Bool = false) -> String {
+        guard !compact, !secondary.isEmpty else { return primary }
+        return primary + (arrangement == .inline ? " " : "\n") + secondary
+    }
+}
+
 public struct LabelMeasurements {
     public let full, compact: CGSize
-    public init(full: CGSize, compact: CGSize) { self.full = full; self.compact = compact }
+    public let inline: CGSize?
+    public init(full: CGSize, compact: CGSize, inline: CGSize? = nil) {
+        self.full = full
+        self.compact = compact
+        self.inline = inline
+    }
 }
 
 public enum LabelMode: String, Codable { case full, compact, callout, tile, suppressed }
@@ -34,13 +48,14 @@ public struct LabelPlacement {
     public let candidate: Int?
     public let leader: CGPoint?
     public let reason: String
+    public let arrangement: LabelArrangement
 }
 
 public enum LabelResolver {
     public static func resolve(_ labels: [MapLabel], anchors: [String:GroupAnchors],
                                sizes: [String:LabelMeasurements], scene: AlbersScene, camera: GeographicCamera,
                                zoom: CGFloat, selected: Int? = nil, obstacles: [CGRect] = [],
-                               previous: [String:Int] = [:]) -> [LabelPlacement] {
+                               previous: [String:Int] = [:], policy: CartographicPolicy = .nationalExploratory) -> [LabelPlacement] {
         let panels = Dictionary(uniqueKeysWithValues: scene.panels.map { ($0.region,$0) })
         func isSelected(_ spec: MapLabel) -> Bool { selected.map(spec.features.contains) ?? false }
         var occupied = obstacles
@@ -48,16 +63,19 @@ public enum LabelResolver {
             if isSelected(a) != isSelected(b) { return isSelected(a) }
             return a.priority == b.priority ? a.id < b.id : a.priority > b.priority
         }.map { spec in
-            func result(_ mode: LabelMode, _ reason: String, rect: CGRect = .null, index: Int? = nil, leader: CGPoint? = nil) -> LabelPlacement {
-                LabelPlacement(id: spec.id, mode: mode, frame: rect, candidate: index, leader: leader, reason: reason)
+            func result(_ mode: LabelMode, _ reason: String, rect: CGRect = .null, index: Int? = nil,
+                        leader: CGPoint? = nil, arrangement: LabelArrangement = .stacked) -> LabelPlacement {
+                LabelPlacement(id: spec.id, mode: mode, frame: rect, candidate: index, leader: leader,
+                               reason: reason, arrangement: arrangement)
             }
+            if case .stateFocus = policy, !isSelected(spec) { return result(.suppressed, "state overview policy") }
             guard !spec.primary.isEmpty else { return result(.suppressed,"missing content") }
             guard (spec.minimumZoom...max(spec.minimumZoom,spec.maximumZoom)).contains(zoom) else { return result(.suppressed,"zoom") }
             guard let points = anchors[spec.id]?.candidates, !points.isEmpty else { return result(.suppressed,"no interior anchor") }
             let visible = points.indices.filter { camera.region == nil || points[$0].region == camera.region }
             guard !visible.isEmpty else { return result(.suppressed,"regional focus") }
             if spec.preferred == .suppressed { return result(.suppressed,"editorial suppression") }
-            if spec.external && camera.region == nil && zoom < 2 { return result(.tile,"external key") }
+            if spec.external && camera.region == nil && (policy == .nationalEditorial || zoom < 2) { return result(.tile,"external key") }
             guard let size = sizes[spec.id] else { return result(.suppressed,"missing measurement") }
             var order = visible
             if let last = previous[spec.id], let i = order.firstIndex(of:last) { order.remove(at:i); order.insert(last,at:0) }
@@ -66,20 +84,24 @@ public enum LabelResolver {
                 spec.preferred == .callout ? [.callout,.full,.compact] : [.full,.compact,.callout]
             for mode in modes {
                 if mode == .compact && spec.secondary.isEmpty || mode == .callout && !spec.allowCallout { continue }
-                let text = mode == .compact ? size.compact : size.full
-                guard text.width > 0, text.height > 0 else { continue }
-                for i in order {
-                    let anchor = points[i]
-                    guard let panel = panels[anchor.region] else { continue }
-                    let scale = camera.scale * panel.scale
-                    let center = camera.screen(panel.world(anchor.point))
-                    if mode != .callout && !anchor.fits(width:(text.width+1)/scale,height:(text.height+1)/scale) { continue }
-                    let rect = CGRect(x:center.x + (mode == .callout ? 8 : -text.width/2),
-                                      y:center.y-text.height/2, width:text.width,height:text.height)
-                    guard camera.viewport.contains(rect), camera.viewport.contains(center) else { reason = "viewport"; continue }
-                    guard !occupied.contains(where: { $0.intersects(rect) }) else { reason = "collision"; continue }
-                    occupied.append(rect.insetBy(dx:-1,dy:-1))
-                    return result(mode,"placed",rect:rect,index:i,leader:mode == .callout ? center : nil)
+                var variants: [(LabelArrangement, CGSize)] = [(.stacked, mode == .compact ? size.compact : size.full)]
+                if policy == .nationalEditorial, mode == .full, let inline = size.inline, !spec.secondary.isEmpty {
+                    variants.append((.inline, inline))
+                }
+                for (arrangement, text) in variants where text.width > 0 && text.height > 0 {
+                    for i in order {
+                        let anchor = points[i]
+                        guard let panel = panels[anchor.region] else { continue }
+                        let scale = camera.scale * panel.scale
+                        let center = camera.screen(panel.world(anchor.point))
+                        if mode != .callout && !anchor.fits(width:(text.width+1)/scale,height:(text.height+1)/scale) { continue }
+                        let rect = CGRect(x:center.x + (mode == .callout ? 8 : -text.width/2),
+                                          y:center.y-text.height/2, width:text.width,height:text.height)
+                        guard camera.viewport.contains(rect), camera.viewport.contains(center) else { reason = "viewport"; continue }
+                        guard !occupied.contains(where: { $0.intersects(rect) }) else { reason = "collision"; continue }
+                        occupied.append(rect.insetBy(dx:-1,dy:-1))
+                        return result(mode,"placed",rect:rect,index:i,leader:mode == .callout ? center : nil, arrangement: arrangement)
+                    }
                 }
             }
             return result(.suppressed,reason)

@@ -95,7 +95,7 @@ vertex StrokeVertex albers_stroke_vertex(uint vertexID [[vertex_id]],
                                          const device uint *order [[buffer(3)]]) {
     Segment edge = segments[camera.selectionPass ? instanceID : order[instanceID]];
     bool decoration = parts[edge.part].feature == 0xffffffffu;
-    float radius = 0.5f * (camera.selectionPass ? 1.5f : decoration ? 1.0f : camera.strokeWidth);
+    float radius = 0.5f * (camera.selectionPass == 1u ? 1.5f : decoration ? 1.0f : camera.strokeWidth);
     float2 delta = (edge.end - edge.start) * camera.scale;
     float segmentLength = length(delta);
     float2 direction = segmentLength > 0.0f ? delta / segmentLength : float2(1.0f, 0.0f);
@@ -112,7 +112,7 @@ vertex StrokeVertex albers_stroke_vertex(uint vertexID [[vertex_id]],
 fragment float4 albers_stroke_fragment(StrokeVertex v [[stage_in]], constant Camera &camera [[buffer(2)]]) {
     float longitudinal = max(0.0f, max(-v.uv.x, v.uv.x - v.segmentLength));
     if (dot(float2(longitudinal, v.uv.y), float2(longitudinal, v.uv.y)) > v.radius * v.radius) discard_fragment();
-    if (camera.selectionPass) return float4(0.36f, 0.21f, 0.06f, 1.0f);
+    if (camera.selectionPass == 1u) return float4(0.36f, 0.21f, 0.06f, 1.0f);
     if (v.decoration && !camera.showsFrame) discard_fragment();
     if (v.decoration) return float4(0.72f, 0.79f, 0.83f, 1.0f);
     return float4(0.91f, 0.92f, 0.93f, 1.0f);

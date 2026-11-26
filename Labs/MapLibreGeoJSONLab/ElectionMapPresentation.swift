@@ -1,3 +1,4 @@
+import BalloticsGeoKitApple
 import SwiftUI
 
 struct ElectionMapPresentation {
@@ -13,6 +14,23 @@ struct ElectionMapPresentation {
     static let unresolved = "#a58f7c"
     static let tied = "#706383"
 
+    struct StateSummary: Identifiable {
+        let id: String
+        let name: String
+        let records: Int
+        let joined: Int
+        let reportedVotes: Int
+    }
+
+    struct ElectoralKeyEntry: Identifiable {
+        let id: String
+        let jurisdiction: String
+        let votes: Int?
+        let status: String
+    }
+
+    let states: [StateSummary]
+    let electoralKey: [ElectoralKeyEntry]
     let year: Int
     let mode: ElectionMapMode
     let winner: String
@@ -48,6 +66,7 @@ struct ElectionMapPresentation {
         let declaredWinner = names[election.winnerID] ?? election.winnerID
         let method = election.decision == "houseContingent" ? " · elected by the House" : ""
         var legend: [Legend] = []
+        var electoralKey: [ElectoralKeyEntry] = []
         var fills: [String: [String]] = [:]
         var electoralVotesByGeometry: [String: Int] = [:]
         var margins: [String: Double] = [:]
@@ -83,8 +102,11 @@ struct ElectionMapPresentation {
                     status = ids.count > 1 ? "Split electoral allocation" : "Reported electoral allocation"
                     paint = ids.compactMap { colors[$0] }
                 }
-                if !positive.isEmpty, !group.contains(where: { $0.status == "unresolved" }) {
+                if !positive.isEmpty, status != "Unresolved allocation" {
                     electoralVotesByGeometry[key] = positive.reduce(0) { $0 + $1.electoralVotes }
+                }
+                if let name = group.first?.stateName {
+                    electoralKey.append(.init(id: key, jurisdiction: name, votes: electoralVotesByGeometry[key], status: status))
                 }
                 fills[key] = paint
                 details[key] = [("Result", status)] + group.map { row in
@@ -109,11 +131,22 @@ struct ElectionMapPresentation {
                 fills[key] = [countyColor(result, colors: colors)]
                 details[key] = countyDetails(result, names: names, parties: parties)
                 if result.status == "reported", let margin = result.marginVotes, result.totalVotes > 0 {
-                    margins[key] = Double(margin) / Double(result.totalVotes)
+                    let share = Double(margin) / Double(result.totalVotes)
+                    switch result.winnerID.flatMap({ affiliations[$0] }) {
+                    case "democrat": margins[key] = -share
+                    case "republican": margins[key] = share
+                    default: break
+                    }
                 }
             }
         }
-        return Self(year: election.year, mode: mode, winner: declaredWinner + method, totals: totals,
+        let states = Dictionary(grouping: county, by: \.stateCode).compactMap { code, rows -> StateSummary? in
+            guard let name = rows.first?.stateName, !code.isEmpty else { return nil }
+            return StateSummary(id: code, name: name, records: rows.count,
+                                joined: rows.filter { $0.geometryKey != nil }.count,
+                                reportedVotes: rows.filter { $0.status == "reported" }.reduce(0) { $0 + $1.totalVotes })
+        }.sorted { $0.name < $1.name }
+        return Self(states: states, electoralKey: electoralKey.sorted { $0.jurisdiction < $1.jurisdiction }, year: election.year, mode: mode, winner: declaredWinner + method, totals: totals,
                     legend: legend, fills: fills, electoralVotesByGeometry: electoralVotesByGeometry, margins: margins, details: details, unmapped: unmapped,
                     hasSplit: fills.values.contains { $0.count > 1 },
                     reviewNotes: mode == .electoralCollege ? election.reviewNotes : [],
@@ -225,15 +258,7 @@ struct ElectionResultsPanel: View {
                 Section(result.mode.rawValue) {
                     Text(result.totals)
                     if theme == .margin, result.mode == .countyResults {
-                        HStack {
-                            Text("0 points")
-                            LinearGradient(colors: [0.0, 1.0].map { Color(uiColor: AlbersTheme.marginColor($0)) },
-                                           startPoint: .leading, endPoint: .trailing)
-                                .frame(height: 12)
-                                .accessibilityHidden(true)
-                            Text("100 points")
-                        }
-                        .accessibilityLabel("Reported margin from 0 to 100 percentage points")
+                        CountyMarginLegend()
                     } else {
                         ForEach(result.legend) { entry in
                             HStack {
@@ -251,6 +276,20 @@ struct ElectionResultsPanel: View {
                         statusKey("Nonparticipating", color: ElectionMapPresentation.nonparticipating)
                     } else {
                         statusKey("Tied", color: ElectionMapPresentation.tied)
+                    }
+                }
+                if !result.electoralKey.isEmpty {
+                    Section("Electoral vote key") {
+                        ForEach(result.electoralKey) { entry in
+                            NavigationLink {
+                                List(Array((result.details[entry.id] ?? []).enumerated()), id: \.offset) { _, field in
+                                    LabeledContent(field.0, value: field.1)
+                                }
+                                .navigationTitle(entry.jurisdiction)
+                            } label: {
+                                LabeledContent(entry.jurisdiction, value: entry.votes.map { "\($0) EV" } ?? entry.status)
+                            }
+                        }
                     }
                 }
                 if !result.reviewNotes.isEmpty {
@@ -303,4 +342,27 @@ struct ElectionResultsPanel: View {
 private struct CloseElectionResults: View {
     @Environment(\.dismiss) private var dismiss
     var body: some View { Button("Done") { dismiss() } }
+}
+
+
+struct CountyMarginLegend: View {
+    var body: some View {
+        VStack(alignment: .leading, spacing: 3) {
+            HStack {
+                Text("Dem. +100")
+                Spacer()
+                Text("0")
+                Spacer()
+                Text("Rep. +100")
+            }
+            LinearGradient(colors: [-1.0, 0, 1].map { Color(cgColor: AlbersTheme.marginScale.color($0)) },
+                           startPoint: .leading, endPoint: .trailing)
+                .frame(height: 7)
+                .clipShape(Capsule())
+        }
+        .font(.caption2)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Reported leader to runner-up margin as a share of reported total votes. Democratic and Republican colors. Other winners remain categorical.")
+        .accessibilityIdentifier("albers-margin-legend")
+    }
 }

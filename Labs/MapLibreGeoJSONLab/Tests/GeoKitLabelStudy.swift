@@ -42,9 +42,16 @@ struct GeoKitLabelStudy {
         let elections = national["elections"] as! [[String:Any]]
         var lastDate = "", previousScene: AlbersScene?
         var referenceAnchors: [String:[String:LabelAnchor]] = [:]
+        let editorial = ProcessInfo.processInfo.environment["GEOKIT_EDITORIAL_LABELS"] == "1"
+        let policy: CartographicPolicy = editorial ? .nationalEditorial : .nationalExploratory
         let font = NSFont.monospacedDigitSystemFont(ofSize:8,weight:.medium)
         func measure(_ text: String) -> CGSize {
-            let r = (text as NSString).boundingRect(with:CGSize(width:500,height:100),options:[.usesLineFragmentOrigin,.usesFontLeading],attributes:[.font:font])
+            let paragraph = NSMutableParagraphStyle()
+            paragraph.alignment = .center
+            if editorial { paragraph.minimumLineHeight = 9; paragraph.maximumLineHeight = 9 }
+            let options: NSString.DrawingOptions = editorial ? [.usesLineFragmentOrigin] : [.usesLineFragmentOrigin,.usesFontLeading]
+            let r = (text as NSString).boundingRect(with: CGSize(width:500,height:100), options: options,
+                                                    attributes: [.font:font, .paragraphStyle:paragraph])
             return CGSize(width:ceil(r.width)+2,height:ceil(r.height)+1)
         }
         let clock = { ProcessInfo.processInfo.systemUptime }
@@ -72,9 +79,9 @@ struct GeoKitLabelStudy {
             let specs = ElectoralCartography.specifications(scene:scene,votes:votes,statuses:statuses)
             let before = scene.labelCache.count
             let t = clock()
-            let anchors = Dictionary(uniqueKeysWithValues:specs.map { ($0.id,scene.labelCache.anchors(in:scene,features:$0.features)) })
+            let anchors = Dictionary(uniqueKeysWithValues:specs.map { ($0.id,scene.labelCache.anchors(in:scene,features:$0.features,editorial:editorial)) })
             let anchorMS = (clock()-t)*1000, m = clock()
-            let sizes = Dictionary(uniqueKeysWithValues:specs.map { ($0.id,LabelMeasurements(full:measure([$0.primary,$0.secondary].filter { !$0.isEmpty }.joined(separator:"\n")),compact:measure($0.primary))) })
+            let sizes = Dictionary(uniqueKeysWithValues:specs.map { ($0.id,LabelMeasurements(full:measure($0.text(for: .stacked)),compact:measure($0.primary),inline:measure($0.text(for: .inline)))) })
             let measureMS = (clock()-m)*1000
             // Comparison-only anchors are outside the measured preparation/layout interval.
             for spec in specs where referenceAnchors[spec.id] == nil {
@@ -99,7 +106,7 @@ struct GeoKitLabelStudy {
                 let keyTop = min(vp.maxY-24,max(vp.minY,camera.screen(CGPoint(x:scene.bounds.midX,y:scene.bounds.maxY)).y+5))
                 let obstacles = specs.contains(where: \.external) ? [CGRect(x:0,y:keyTop,width:vp.width,height:21)] : []
                 let l = clock()
-                let placed = LabelResolver.resolve(specs,anchors:anchors,sizes:sizes,scene:scene,camera:camera,zoom:1,obstacles:obstacles)
+                let placed = LabelResolver.resolve(specs,anchors:anchors,sizes:sizes,scene:scene,camera:camera,zoom:1,obstacles:editorial ? [] : obstacles,policy:policy)
                 let elapsed = (clock()-l)*1000
                 var outside=0, collisions=0
                 let inside = placed.filter { $0.mode == .full || $0.mode == .compact }
@@ -126,7 +133,15 @@ struct GeoKitLabelStudy {
                     for (method,a) in referenceAnchors[spec.id]! where fits(a) { fitCounts[method,default:0] += 1 }
                     if anchors[spec.id]!.candidates.contains(where:fits) { fitCounts["multiple",default:0] += 1 }
                 }
-                let record:[String:Any] = ["geometry_full_fit":fitCounts,"year":year,"revision":date,"viewport":[width,height],"requested":specs.count,"valid":anchors.values.filter { !$0.candidates.isEmpty }.count,
+                let available = Set(specs.filter { !$0.secondary.isEmpty }.map(\.id))
+                let record:[String:Any] = ["policy": editorial ? "editorial" : "exploratory",
+                    "available_values": available.count,
+                    "unavailable_values": specs.count - available.count,
+                    "full_values": placed.filter { $0.mode == .full && available.contains($0.id) }.count,
+                    "external_values": placed.filter { $0.mode == .tile && available.contains($0.id) }.count,
+                    "inline": placed.filter { $0.mode == .full && $0.arrangement == .inline }.count,
+                    "result_key_values": placed.filter { $0.mode != .full && $0.mode != .tile && available.contains($0.id) }.count,
+                    "geometry_full_fit":fitCounts,"year":year,"revision":date,"viewport":[width,height],"requested":specs.count,"valid":anchors.values.filter { !$0.candidates.isEmpty }.count,
                     "legacy_valid":anchors.values.filter(\.averageInside).count,"centroid_valid":anchors.values.filter(\.centroidInside).count,"baseline_valid":anchors.values.filter(\.baselineInside).count,
                     "full":placed.filter { $0.mode == .full }.count,"compact":placed.filter { $0.mode == .compact }.count,"external":placed.filter { $0.mode == .tile }.count,"suppressed":reasons.values.reduce(0,+),"reasons":reasons,
                     "overlaps":collisions,"outside":outside,"overrides":0,"anchor_ms":anchorMS,"new_groups":scene.labelCache.count-before,"measurement_ms":measureMS,"resolve_ms":elapsed]

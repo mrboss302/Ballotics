@@ -34,13 +34,19 @@ final class DistrictMap: NSView {
     private let labels = DistrictLabels()
     private let configuration: AlbersMetalConfiguration
     private let palette: [[CGColor]]
+    private let contextLayer: GeographicContextLayer?
+    private var presentation: CartographicPresentation?
+    private var nationalPolicy: CartographicPolicy = .nationalEditorial
     private var requestedMetal = true
     private var metal: AlbersMetalSurface?
     private var preparation: Task<Void, Never>?
     private var metalReady = false
     var selectionChanged: ((String)->Void)?
     override var isFlipped: Bool { true }
-    init(url: URL, configuration: AlbersMetalConfiguration = .init()) throws {
+    init(url: URL, contextURL: URL?, configuration: AlbersMetalConfiguration = .init()) throws {
+        contextLayer = try contextURL.map { url in
+            GeographicContextLayer(scene: try AlbersScene.load(url), provenance: "2024 Census 5m state boundaries")
+        }
         self.configuration = configuration
         let raw = try PolygonSource.readFeatures(url)
         let ids = raw.compactMap { ($0["properties"] as? [String:Any])?["GEOID"] as? String }
@@ -70,8 +76,40 @@ final class DistrictMap: NSView {
     var camera: GeographicCamera {
         GeographicCamera(viewport:bounds,center:CGPoint(x:target.midX,y:target.midY),scale:GeographicCamera.fit(target,in:bounds),region:focus)
     }
+    private var policy: CartographicPolicy { presentation?.policy ?? nationalPolicy }
+
+    func setNationalPolicy(editorial: Bool) {
+        nationalPolicy = editorial ? .nationalEditorial : .nationalExploratory
+        apply(nationalPolicy)
+    }
+
+    private func apply(_ policy: CartographicPolicy) {
+        guard let updated = CartographicPresentation(policy: policy, scene: scene, groupKey: "STATEFP") else { return }
+        presentation = updated
+        focus = updated.region
+        target = updated.frame
+        refresh()
+    }
+
+    @discardableResult
+    func focusState(_ code: String) -> Bool {
+        guard scene.properties.contains(where: { $0["STATEFP"] == code }) else { return false }
+        if let selected, scene.properties[selected]["STATEFP"] != code {
+            select(nil, frame: false)
+        }
+        apply(.stateFocus(group: code))
+        selectionChanged?(selectionDescription)
+        return true
+    }
+
     var selectionDescription: String {
-        guard let selected else { return "Select a district" }
+        guard let selected else {
+            if let group = presentation?.group {
+                let name = Self.abbreviations[group] ?? group
+                return "\(name) statewide · \(presentation?.visibleFeatures?.count ?? 0) districts"
+            }
+            return "Select a district"
+        }
         return (scene.properties[selected]["NAMELSAD"] ?? "District") + " · GEOID " + records.ids[selected].record
     }
 
@@ -79,14 +117,14 @@ final class DistrictMap: NSView {
         selected = index
         selectionChanged?(selectionDescription)
         if let index, frame {
-            let box = scene.frame(for: index)
-            target = box.insetBy(dx: -box.width * 0.15, dy: -box.height * 0.15)
-            focus = scene.panels.first { $0.parts.contains { $0.feature == index } }?.region
+            let group = presentation?.group == scene.properties[index]["STATEFP"] ? presentation?.group : nil
+            apply(.localInspection(feature: index, within: group))
         }
         refresh()
     }
     func search(_ query:String) -> Bool {
         let q = query.trimmingCharacters(in:.whitespacesAndNewlines).uppercased()
+        if let code = Self.abbreviations.first(where: { $0.value == q })?.key { return focusState(code) }
         let index = records.index(of:.init(revision:revision,record:q)) ?? scene.properties.firstIndex {
             guard let code = Self.abbreviations[$0["STATEFP"] ?? ""], let cd = $0["CD119FP"] else { return false }
             return code+"-"+cd == q
@@ -94,8 +132,10 @@ final class DistrictMap: NSView {
         guard let index else { return false }; select(index,frame:true); return true
     }
     func frameRegion(_ region:AlbersRegion?) {
+        guard let region else { apply(nationalPolicy); return }
+        presentation = nil
         focus = region
-        target = region.flatMap { r in scene.panels.first { $0.region==r }?.frame } ?? scene.bounds
+        target = scene.panels.first { $0.region == region }?.frame ?? scene.bounds
         refresh()
     }
     override func magnify(with event: NSEvent) { zoom(by: 1 / max(0.1, 1 + event.magnification)) }
@@ -107,8 +147,9 @@ final class DistrictMap: NSView {
     }
 
     override func mouseUp(with event:NSEvent) {
-        let ids = records.hits(in:scene,at:camera.world(convert(event.locationInWindow,from:nil)),region:focus)
-        select(ids.first.flatMap(records.index(of:)),frame:event.clickCount==2)
+        let point = camera.world(convert(event.locationInWindow, from: nil))
+        let hits = presentation?.hits(in: scene, at: point) ?? scene.hits(point, region: focus)
+        select(hits.first, frame: event.clickCount == 2)
     }
     override func scrollWheel(with event:NSEvent) {
         let c = camera
@@ -169,7 +210,8 @@ final class DistrictMap: NSView {
                                                                                   records: records, device: device)
                     try Task.checkCancellation()
                     guard let self, let surface, self.metal === surface else { return }
-                    try surface.publish(prepared, scene: self.scene, palette: self.palette)
+                    try surface.publish(prepared, scene: self.scene, palette: self.palette,
+                                        visibleFeatures: self.presentation?.visibleFeatures)
                     self.preparation = nil
                     self.metalReady = true
                     surface.isHidden = false
@@ -205,10 +247,11 @@ final class DistrictMap: NSView {
             do { try metal?.updateLayout(scene) }
             catch { fallback(error.localizedDescription) }
         }
-        frameRegion(focus)
+        if let presentation { apply(presentation.policy) } else { frameRegion(focus) }
     }
 
     private func refresh() {
+        metal?.setVisibleFeatures(presentation?.visibleFeatures)
         metal?.move(camera: camera, selected: selected)
         labels.needsDisplay = true
         needsDisplay = true
@@ -222,11 +265,15 @@ final class DistrictMap: NSView {
         guard !metalReady, let ctx = NSGraphicsContext.current?.cgContext else { return }
         ctx.setFillColor(CGColor(red: 0.93, green: 0.95, blue: 0.96, alpha: 1))
         ctx.fill(bounds)
-        AlbersCoreGraphics.draw(scene, camera: camera, palette: palette, selected: selected, in: ctx)
+        AlbersCoreGraphics.draw(scene, camera: camera, palette: palette, selected: selected,
+                                visibleFeatures: presentation?.visibleFeatures, in: ctx)
     }
 
     private func drawLabels() {
         let c = camera
+        if let group = presentation?.group, let ctx = NSGraphicsContext.current?.cgContext {
+            contextLayer?.draw(in: ctx, camera: c, alignedTo: scene, excluding: group, groupKey: "STATEFP")
+        }
         for panel in scene.panels where panel.showsFrame && (focus == nil || focus == panel.region) {
             guard let name = panel.region.insetLabel else { continue }
             let point = c.screen(panel.frame.origin)
@@ -238,13 +285,17 @@ final class DistrictMap: NSView {
         var visible = Set<Int>()
         for panel in scene.panels where focus == nil || focus == panel.region {
             for index in panel.visible(in: panel.local(c.worldBounds)) {
-                visible.insert(panel.parts[index].feature)
+                let feature = panel.parts[index].feature
+                if presentation?.visibleFeatures?.contains(feature) != false { visible.insert(feature) }
             }
         }
         if showLabels {
             let font=NSFont.systemFont(ofSize:10,weight:.medium)
             // Limit preparation to the visible detail workload; national scale offers search.
-            let specs=visible.sorted().filter { visible.count <= 55 || $0==selected }.map { i in
+            let specs=visible.sorted().filter { feature in
+                if policy == .nationalEditorial { return feature == selected || visible.count <= 24 }
+                return visible.count <= 55 || feature == selected
+            }.map { i in
                 let f=scene.properties[i]
                 return MapLabel(id:records.ids[i].record,features:[i],primary:(Self.abbreviations[f["STATEFP"] ?? ""] ?? "")+"-"+(f["CD119FP"] ?? ""))
             }
@@ -253,13 +304,35 @@ final class DistrictMap: NSView {
                 let size=($0.primary as NSString).size(withAttributes:[.font:font])
                 return ($0.id,LabelMeasurements(full:size,compact:size))
             })
-            let placements=LabelResolver.resolve(specs,anchors:anchors,sizes:sizes,scene:scene,camera:c,zoom:c.scale/GeographicCamera.fit(scene.bounds,in:bounds))
+            let placements=LabelResolver.resolve(specs,anchors:anchors,sizes:sizes,scene:scene,camera:c,zoom:c.scale/GeographicCamera.fit(scene.bounds,in:bounds),selected:selected,policy:policy)
             for p in placements where p.mode == .full {
                 let text=specs.first { $0.id==p.id }!.primary
                 (text as NSString).draw(in:p.frame,withAttributes:[.font:font,.foregroundColor:NSColor.black])
             }
         }
     }
+    func verifyPolicyReuse() async throws {
+        guard let metal, let identity = metal.meshIdentity else {
+            throw GeographicRenderError(message: "DistrictAtlas has no active Metal mesh.")
+        }
+        let steps: [(String, () -> Bool)] = [
+            ("national editorial", { self.setNationalPolicy(editorial: true); return true }),
+            ("national exploratory", { self.setNationalPolicy(editorial: false); return true }),
+            ("Texas state focus", { self.focusState("48") }),
+            ("TX-18 local inspection", { self.search("TX-18") }),
+            ("return to national", { self.frameRegion(nil); return true })
+        ]
+        for (name, apply) in steps {
+            guard apply(), metal.meshIdentity == identity else {
+                throw GeographicRenderError(message: "\(name) did not retain the active mesh.")
+            }
+            await withCheckedContinuation { continuation in
+                metal.expectPresentation { continuation.resume() }
+            }
+            print("\(name): current GPU completion, same mesh, \(presentation?.visibleFeatures?.count ?? records.ids.count) eligible districts")
+        }
+    }
+
     func export(_ path:String) throws {
         guard let image=bitmapImageRepForCachingDisplay(in:bounds) else { throw PolygonSource.Invalid(message:"Could not create bitmap.") }
         cacheDisplay(in:bounds,to:image)
@@ -281,16 +354,17 @@ final class Controller: NSObject, NSSearchFieldDelegate {
     }
     @objc func labels(_ sender:NSButton) { map.showLabels = sender.state == .on }
     @objc func renderer(_ sender: NSPopUpButton) { map.useMetal(sender.indexOfSelectedItem == 0) }
+    @objc func policy(_ sender: NSPopUpButton) { map.setNationalPolicy(editorial: sender.indexOfSelectedItem == 0) }
     @objc func profile(_ sender: NSPopUpButton) { map.setProfile(sender.indexOfSelectedItem == 0 ? .thematic : .research) }
     func run() {
         let window=NSWindow(contentRect:NSRect(x:0,y:0,width:900,height:650),styleMask:[.titled,.closable,.resizable],backing:.buffered,defer:false)
         window.title="119th Congress · Census districts"
         let stack=NSStackView();stack.orientation = .vertical;stack.alignment = .leading;stack.spacing=8
         let bar=NSStackView()
-        search.placeholderString="District GEOID or TX-18";search.target=self;search.action=#selector(searchDistrict)
-        bar.addArrangedSubview(search);search.widthAnchor.constraint(equalToConstant:200).isActive=true
+        search.placeholderString="TX or TX-18";search.target=self;search.action=#selector(searchDistrict)
+        bar.addArrangedSubview(search);search.widthAnchor.constraint(equalToConstant:150).isActive=true
         for s in ["National","Alaska","Hawaii"] { bar.addArrangedSubview(NSButton(title:s,target:self,action:#selector(region(_:)))) }
-        let detail = NSButton(checkboxWithTitle: "Detail labels", target: self, action: #selector(labels(_:)))
+        let detail = NSButton(checkboxWithTitle: "Labels", target: self, action: #selector(labels(_:)))
         detail.state = map.showLabels ? .on : .off
         bar.addArrangedSubview(detail)
         let backend = NSPopUpButton()
@@ -299,16 +373,21 @@ final class Controller: NSObject, NSSearchFieldDelegate {
         backend.action = #selector(renderer(_:))
         bar.addArrangedSubview(backend)
         let composition = NSPopUpButton()
-        composition.addItems(withTitles: ["Thematic National", "Equal-Scale Research"])
+        composition.addItems(withTitles: ["Thematic", "Equal Scale"])
         composition.target = self
         composition.action = #selector(profile(_:))
         bar.addArrangedSubview(composition)
+        let labelPolicy = NSPopUpButton()
+        labelPolicy.addItems(withTitles: ["Editorial", "Exploratory"])
+        labelPolicy.target = self
+        labelPolicy.action = #selector(policy(_:))
+        bar.addArrangedSubview(labelPolicy)
         for v in [bar,map,status,rendererStatus,NSTextField(labelWithString:"Synthetic categories · Three-region coverage · Option-scroll to zoom")] { stack.addArrangedSubview(v) }
         status.stringValue = map.selectionDescription
         map.selectionChanged = { [weak self] in self?.status.stringValue = $0 }
         map.rendererChanged = { [weak self] message in
             self?.rendererStatus.stringValue = message
-            if CommandLine.arguments.contains("--verify-metal"), message.hasPrefix("Core Graphics fallback") {
+            if (CommandLine.arguments.contains("--verify-metal") || CommandLine.arguments.contains("--verify-policy")), message.hasPrefix("Core Graphics fallback") {
                 FileHandle.standardError.write(Data((message + "\n").utf8))
                 exit(1)
             }
@@ -331,7 +410,27 @@ do {
     } else {
         shaders = .package
     }
-    let map = try DistrictMap(url: URL(fileURLWithPath: args[1]), configuration: .init(shaders: shaders))
+    let url = URL(fileURLWithPath: args[1])
+    let companion = url.deletingLastPathComponent().appendingPathComponent("cb_2024_us_state_5m.json")
+    let context = FileManager.default.fileExists(atPath: companion.path) ? companion : nil
+    let map = try DistrictMap(url: url, contextURL: context, configuration: .init(shaders: shaders))
+    if let i = args.firstIndex(of: "--state"), args.indices.contains(i+1), !map.search(args[i+1]) {
+        throw PolygonSource.Invalid(message: "Unknown state.")
+    }
+    if args.contains("--exploratory") { map.setNationalPolicy(editorial: false) }
+    if args.contains("--verify-policy") {
+        map.firstMetalFrame = { [weak map] in
+            guard let map else { return }
+            Task {
+                do { try await map.verifyPolicyReuse(); exit(0) }
+                catch {
+                    FileHandle.standardError.write(Data((error.localizedDescription + "\n").utf8))
+                    exit(1)
+                }
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 30) { exit(1) }
+    }
     if args.contains("--verify-metal") {
         let cycles = 10
         var completed = 0

@@ -43,6 +43,48 @@ final class RenderingTests: XCTestCase {
         }
     }
 
+    func testPoliciesShareSceneAndKeepContextOutOfPicking() throws {
+        let near = [[-87.0, 32.0], [-86, 32], [-86, 33], [-87, 33], [-87, 32]]
+        let far = near.map { [$0[0] + 2, $0[1]] }
+        let source: [PolygonSource.Object] = [near, far].enumerated().map { index, ring in
+            ["type": "Feature", "properties": ["group": String(index)],
+             "geometry": ["type": "Polygon", "coordinates": [ring]]]
+        }
+        let scene = try AlbersScene.project(source)
+        let national = try XCTUnwrap(CartographicPresentation(policy: .nationalEditorial, scene: scene, groupKey: "group"))
+        let state = try XCTUnwrap(CartographicPresentation(policy: .stateFocus(group: "0"), scene: scene, groupKey: "group"))
+        let local = try XCTUnwrap(CartographicPresentation(policy: .localInspection(feature: 0, within: "0"),
+                                                           scene: scene, groupKey: "group"))
+        XCTAssertNil(national.visibleFeatures)
+        XCTAssertEqual(state.visibleFeatures, [0])
+        XCTAssertEqual(local.visibleFeatures, state.visibleFeatures)
+        XCTAssertNil(CartographicPresentation(policy: .localInspection(feature: 1, within: "0"),
+                                              scene: scene, groupKey: "group"))
+        let farBounds = scene.frame(for: 1)
+        let point = CGPoint(x: farBounds.midX, y: farBounds.midY)
+        XCTAssertEqual(national.hits(in: scene, at: point), [1])
+        XCTAssertTrue(state.hits(in: scene, at: point).isEmpty)
+        let center = CGPoint(x: state.frame.midX, y: state.frame.midY)
+        XCTAssertEqual(state.hits(in: scene, at: center), [0])
+        XCTAssertTrue(state.hits(in: try AlbersScene.project(source), at: center).isEmpty)
+    }
+
+    func testEditorialFitsMeasuredInlineVariant() throws {
+        let scene = try scene()
+        var label = MapLabel(id: "A", features: [0], primary: "AA", secondary: "4")
+        label.priority = 5
+        let anchors = scene.labelCache.anchors(in: scene, features: [0], editorial: true)
+        let view = CGRect(x: 0, y: 0, width: 100, height: 80)
+        let target = try XCTUnwrap(CartographicPresentation(policy: .nationalEditorial, scene: scene, groupKey: "group"))
+        let sizes = LabelMeasurements(full: CGSize(width: 200, height: 200),
+                                      compact: CGSize(width: 8, height: 8), inline: CGSize(width: 20, height: 8))
+        let result = LabelResolver.resolve([label], anchors: ["A": anchors], sizes: ["A": sizes],
+            scene: scene, camera: target.camera(in: view), zoom: 1, policy: .nationalEditorial)
+        XCTAssertEqual(result.first?.mode, .full)
+        XCTAssertEqual(result.first?.arrangement, .inline)
+        XCTAssertEqual(label.text(for: .inline), "AA 4")
+    }
+
     func testExternalAnnotationsUseSeparateSpaceInShallowBounds() {
         let bounds = CGRect(x: 0, y: 0, width: 680, height: 135)
         let layout = GeographicMapLayout(bounds: bounds, externalHeight: 24)
@@ -111,6 +153,10 @@ final class RenderingTests: XCTestCase {
         XCTAssertGreaterThan(surface.resources.geographicBufferBytes, 0)
         let composition = first.composed(.thematic)
         try surface.updateLayout(composition)
+        surface.setVisibleFeatures([0])
+        XCTAssertEqual(surface.meshIdentity, initial.mesh)
+        XCTAssertEqual(surface.resources.activeMeshGenerations, 1)
+        surface.setVisibleFeatures(nil)
         try surface.updatePalette([[CGColor(gray: 0.5, alpha: 1)]])
         surface.move(camera: .init(viewport: CGRect(x: 0, y: 0, width: 600, height: 300),
                                    center: .zero, scale: 0.001, region: .mainland), selected: 0)
