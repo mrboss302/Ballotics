@@ -54,6 +54,29 @@ final class RenderingTests: XCTestCase {
         XCTAssertEqual(layout.viewport.union(external), bounds)
     }
 
+    func testCoreGraphicsReferenceDrawsTheSameRegionalScene() throws {
+        let scene = try scene()
+        let viewport = CGRect(x: 0, y: 0, width: 64, height: 64)
+        var camera = GeographicCamera(viewport: viewport,
+            center: CGPoint(x: scene.bounds.midX, y: scene.bounds.midY),
+            scale: GeographicCamera.fit(scene.bounds, in: viewport), region: .mainland)
+        let colors = [[CGColor(red: 1, green: 0, blue: 0, alpha: 1)]]
+        let context = try XCTUnwrap(CGContext(data: nil, width: 64, height: 64, bitsPerComponent: 8,
+            bytesPerRow: 256, space: CGColorSpaceCreateDeviceRGB(),
+            bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue))
+        context.clear(viewport)
+        let centerOffset = 32 * context.bytesPerRow + 32 * 4
+        let pixels = try XCTUnwrap(context.data).assumingMemoryBound(to: UInt8.self)
+
+        camera.region = .hawaii
+        XCTAssertEqual(AlbersCoreGraphics.draw(scene, camera: camera, palette: colors, in: context), 0)
+        XCTAssertEqual(pixels[centerOffset + 3], 0)
+        camera.region = .mainland
+        XCTAssertEqual(AlbersCoreGraphics.draw(scene, camera: camera, palette: colors, in: context), 1)
+        XCTAssertEqual(pixels[centerOffset], 255)
+        XCTAssertEqual(pixels[centerOffset + 3], 255)
+    }
+
     @MainActor
     func testMetalInitializationFailures() async throws {
         guard MTLCreateSystemDefaultDevice() != nil else { throw XCTSkip("No Metal device.") }
@@ -65,6 +88,8 @@ final class RenderingTests: XCTestCase {
                                                                           polygonVertexFunction: "missing_probe"))) {
             XCTAssertTrue($0.localizedDescription.contains("missing the polygon vertex function"))
         }
+        XCTAssertThrowsError(try AlbersMetalSurface(configuration: .init(shaders: configuration.shaders,
+                                                                          polygonVertexFunction: "albers_fill_fragment")))
         XCTAssertNoThrow(try AlbersMetalSurface(configuration: .init(samples: 1, shaders: configuration.shaders)))
     }
 

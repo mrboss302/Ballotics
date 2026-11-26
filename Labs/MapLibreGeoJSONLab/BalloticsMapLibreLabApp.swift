@@ -808,6 +808,7 @@ struct BalloticsMapLibreLabApp: App {
 
 private struct LabView: View {
     @Environment(\.scenePhase) private var scenePhase
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
     @StateObject private var state = LabState()
     @State private var showImporter = false
     @State private var showProperties = false
@@ -839,13 +840,29 @@ private struct LabView: View {
         }
     }
 
+    private var compactElectoralLayout: Bool {
+        verticalSizeClass == .compact && state.usesAlbers
+            && state.geography == .presidential && state.electionMode == .electoralCollege
+    }
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Text("Ballotics GeoJSON Lab").font(.title2.bold())
-            Text(verbatim: snapshotDescription)
-                .font(.caption).foregroundStyle(.secondary).lineLimit(state.geography == .presidential ? 3 : 1)
-                .fixedSize(horizontal: false, vertical: state.geography == .presidential)
-                .accessibilityIdentifier("snapshot-date")
+        let compact = compactElectoralLayout
+        let provenance = Text(verbatim: snapshotDescription)
+            .font(.caption).foregroundStyle(.secondary)
+            .lineLimit(compact ? 1 : state.geography == .presidential ? 3 : 1)
+            .fixedSize(horizontal: false, vertical: state.geography == .presidential)
+            .accessibilityIdentifier("snapshot-date")
+        VStack(alignment: .leading, spacing: compact ? 4 : 10) {
+            if compact {
+                HStack {
+                    Text("Ballotics GeoJSON Lab").font(.headline)
+                    provenance
+                    Spacer(minLength: 0)
+                }
+            } else {
+                Text("Ballotics GeoJSON Lab").font(.title2.bold())
+                provenance
+            }
 
             HStack {
                 Menu {
@@ -959,7 +976,12 @@ private struct LabView: View {
             .buttonStyle(.bordered)
 
             if state.geography == .presidential, let election = state.election, let result = state.electionPresentation {
+                let winner = Text(result.winner)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.primary)
+                    .accessibilityIdentifier("presidential-winner")
                 HStack {
+                    if compact { winner.lineLimit(1) }
                     Picker("Result mode", selection: Binding(get: { state.electionMode },
                             set: { state.applyElection(election, mode: $0) })) {
                         Text(ElectionMapMode.electoralCollege.rawValue).tag(ElectionMapMode.electoralCollege)
@@ -973,10 +995,7 @@ private struct LabView: View {
                         .buttonStyle(.bordered)
                         .accessibilityIdentifier("election-results")
                 }
-                Text(result.winner)
-                    .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(.primary)
-                    .accessibilityIdentifier("presidential-winner")
+                if !compact { winner }
                 if state.usesAlbers, state.electionMode == .countyResults, state.albersTheme == .margin {
                     Text("Reported margin · darker blue means a larger lead")
                         .font(.caption)
@@ -1003,7 +1022,9 @@ private struct LabView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .layoutPriority(1)
 
-            VStack(alignment: .leading, spacing: 4) {
+            let statusLayout = compact ? AnyLayout(HStackLayout(spacing: 12))
+                : AnyLayout(VStackLayout(alignment: .leading, spacing: 4))
+            statusLayout {
                 Text(state.historicalPending ? "Preparing historical snapshot…" :
                         state.importing ? "Validating imported file…" : state.status)
                     .font(.caption)
@@ -1019,7 +1040,8 @@ private struct LabView: View {
                 .accessibilityIdentifier("inspection")
             }
         }
-        .padding()
+        .padding(.horizontal)
+        .padding(.vertical, compact ? 4 : nil)
         .task {
             state.start()
             await state.runAlbersStress()

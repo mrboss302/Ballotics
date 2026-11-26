@@ -264,16 +264,27 @@ public final class AlbersMetalSurface: MTKView, MTKViewDelegate {
         guard let fillVertex = library.makeFunction(name: configuration.polygonVertexFunction) else {
             throw GeographicRenderError(message: "Metal library is missing the polygon vertex function.")
         }
+        guard fillVertex.functionType == .vertex,
+              let fillFragment = library.makeFunction(name: "albers_fill_fragment"),
+              fillFragment.functionType == .fragment else {
+            throw GeographicRenderError(message: "Metal polygon shader functions have invalid or missing stages.")
+        }
         pipeline.vertexFunction = fillVertex
-        pipeline.fragmentFunction = library.makeFunction(name: "albers_fill_fragment")
+        pipeline.fragmentFunction = fillFragment
         pipeline.colorAttachments[0].pixelFormat = .bgra8Unorm
         pipeline.depthAttachmentPixelFormat = .depth32Float
         pipeline.rasterSampleCount = configuration.samples
         fillPipeline = try device.makeRenderPipelineState(descriptor: pipeline)
         if configuration.boundaries {
             pipeline.label = "Screen-space geographic strokes"
-            pipeline.vertexFunction = library.makeFunction(name: "albers_stroke_vertex")
-            pipeline.fragmentFunction = library.makeFunction(name: "albers_stroke_fragment")
+            guard let strokeVertex = library.makeFunction(name: "albers_stroke_vertex"),
+                  strokeVertex.functionType == .vertex,
+                  let strokeFragment = library.makeFunction(name: "albers_stroke_fragment"),
+                  strokeFragment.functionType == .fragment else {
+                throw GeographicRenderError(message: "Metal boundary shader functions have invalid or missing stages.")
+            }
+            pipeline.vertexFunction = strokeVertex
+            pipeline.fragmentFunction = strokeFragment
             strokePipeline = try device.makeRenderPipelineState(descriptor: pipeline)
         } else {
             strokePipeline = nil

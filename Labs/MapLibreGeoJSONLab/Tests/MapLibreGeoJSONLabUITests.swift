@@ -387,6 +387,7 @@ final class MapLibreGeoJSONLabUITests: XCTestCase {
             map.frame.width > map.frame.height
         },object:nil)
         XCTAssertEqual(XCTWaiter.wait(for:[wide],timeout:12),.completed,app.debugDescription)
+        XCTAssertGreaterThan(map.frame.height, 100, "Keep a visible map above the separate electoral key in landscape.")
         let item = XCTAttachment(screenshot:XCUIScreen.main.screenshot())
         item.name = "GeoKit-landscape"
         item.lifetime = .keepAlways
