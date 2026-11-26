@@ -61,16 +61,27 @@ The 2024 route exercises native labels during navigation. The 1976 route runs Al
 
 [Fresh-process JSONL traces and regional comparisons](evidence/geokit-0.4b/benchmark) · [Host mesh and geography checks](GEOKIT_0.4B_MESH_PARITY.md)
 
+## Interleaved final-binary check
+
+Two alternating launches per version repeated the dense 2024 county and 2000 historical county workloads on the iPhone 17 Pro. The final iPhone 16e lifecycle run continued in the background through both cohorts. These values are supplemental to the iPhone 16e comparison above.
+
+| Workload | Request to GPU completion 0.4A range (ms) | Final 0.4B range (ms) | 1× callbacks/s 0.4A → final 0.4B | 8× callbacks/s 0.4A → final 0.4B |
+| --- | ---: | ---: | ---: | ---: |
+| counties-2000 | 2,775.6–3,914.7 | 3,554.7–4,062.8 | 58.88 → 58.67 | 58.81 → 58.58 |
+| election-counties | 1,168.2–2,087.6 | 1,556.2–1,660.3 | 58.53 → 59.21 | 58.90 → 58.83 |
+
+The 2000 historical startup remained variable, with a higher 0.4B median in both cohorts. The interleaved timing ranges overlap. Treat historical startup as a preparation follow-up and preserve the individual stages and outliers. Sustained navigation remained near 59 callbacks/s. [Interleaved raw traces](evidence/geokit-0.4b/benchmark/interleaved)
+
 ## Lifecycle interaction timings
 
 Median / P95 / P99 / maximum, in milliseconds.
 
-| Interaction | iPad A16 · extraction build |
-| --- | ---: |
-| Geographic selection | 0.10 / 0.20 / 0.40 / 11.00 |
-| Warm election commit | 7.45 / 16.80 / 23.10 / 599.60 |
-| Style CPU preparation | 9.50 / 10.60 / 11.00 / 54.60 |
-| GPU style-buffer allocation and copy | 0.30 / 0.50 / 0.70 / 20.10 |
-| Requested source to observed completion | 330.25 / 686.60 / 2,194.70 / 2,194.70 |
+| Interaction | iPad A16 · extraction build | iPhone 16e · final build |
+| --- | ---: | ---: |
+| Geographic selection | 0.10 / 0.20 / 0.40 / 11.00 | 0.10 / 0.20 / 0.40 / 11.00 |
+| Warm election commit | 7.45 / 16.80 / 23.10 / 599.60 | 4.55 / 7.60 / 13.30 / 297.90 |
+| Style CPU preparation | 9.50 / 10.60 / 11.00 / 54.60 | 9.30 / 10.10 / 10.60 / 13.20 |
+| GPU style-buffer allocation and copy | 0.30 / 0.50 / 0.70 / 20.10 | 0.30 / 0.60 / 0.70 / 2.90 |
+| Requested source to observed completion | 330.25 / 686.60 / 2,194.70 / 2,194.70 | 357.85 / 709.10 / 1,588.30 / 1,588.30 |
 
 [Full resource results and traces](GEOKIT_0.4B_RESOURCE_LIFETIME.md)

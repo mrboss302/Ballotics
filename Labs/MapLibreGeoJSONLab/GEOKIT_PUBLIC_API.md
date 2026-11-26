@@ -45,9 +45,9 @@ A large source replacement should run in a cancellable task tied to the consumer
 ```swift
 // Hit positions are local points in the geographic viewport.
 let selected = records.hits(in: scene, at: camera.world(tap), region: camera.region).first
-surface.move(camera: camera, boundary: .init(width: 1.2),
-             selected: selected.flatMap(records.index(of:)))
-surface.move(camera: camera, selected: nil) // Clear selection.
+let boundary = GeographicBoundaryStyle(width: 1.2)
+surface.move(camera: camera, boundary: boundary, selected: selected.flatMap(records.index(of:)))
+surface.move(camera: camera, boundary: boundary, selected: nil) // Clear selection.
 
 try surface.updatePalette(newPalette)
 try surface.updateLayout(scene.composed(.research))

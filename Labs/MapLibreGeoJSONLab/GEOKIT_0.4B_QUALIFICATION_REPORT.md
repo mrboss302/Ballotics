@@ -26,3 +26,4 @@ For 0.4C, limit label work to owner-approved high-value historical and compact c
 ## Long-session evidence
 
 - iPad A16 · extraction build completed 1,800.27 seconds, 100 year changes, 50 source changes and 2,969 successful picks. The verifier recorded zero mismatches or timeouts. [Trace and summary](evidence/geokit-0.4b/lifecycle/iPad-A16)
+- iPhone 16e · final build completed 1,800.03 seconds, 100 year changes, 50 source changes and 2,962 successful picks. The verifier recorded zero mismatches or timeouts. [Trace and summary](evidence/geokit-0.4b/lifecycle/iPhone-16e-final)

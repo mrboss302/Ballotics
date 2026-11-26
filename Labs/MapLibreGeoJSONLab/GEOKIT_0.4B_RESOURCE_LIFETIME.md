@@ -18,23 +18,23 @@ The ten-cycle independent DistrictAtlas route used 4× sampling and showed a GPU
 
 The opt-in Release route exercises rotation, Home and foreground, year recoloring, direct source changes, geographic selection, camera and profile changes, dismissal and reopening. Each accepted session passed every assertion in the stress verifier.
 
-| Measurement | iPad A16 · extraction build |
-| --- | ---: |
-| Duration (s) | 1,800.27 |
-| Year changes / source changes / successful selections | 100 / 50 / 2,969 |
-| Rapid requests / navigation steps | 10 / 6,193 |
-| Mismatches / timeouts / fallbacks | 0 / 0 / 0 |
-| Superseded commits / stale paints | 0 / 0 |
-| Geographic mesh publications in same-source year phase | 1 |
-| Layout changes / mesh publications / releases | 885 / 53 / 53 |
-| Maximum projected cache entries | 2 |
-| Maximum observed in-flight commands at layout/release | 1 |
-| Release callbacks with commands still in flight | 3 |
-| Peak sampled process footprint (MiB) | 167.60 |
-| Steady process footprint median / P95 / P99 / max (MiB) | 153.14 / 163.86 / 163.91 / 163.92 |
-| Process footprint after dismissal (MiB) | 105.00 |
-| Observed footprint drop on dismissal (MiB) | 48.14 |
+| Measurement | iPad A16 · extraction build | iPhone 16e · final build |
+| --- | ---: | ---: |
+| Duration (s) | 1,800.27 | 1,800.03 |
+| Year changes / source changes / successful selections | 100 / 50 / 2,969 | 100 / 50 / 2,962 |
+| Rapid requests / navigation steps | 10 / 6,193 | 10 / 6,178 |
+| Mismatches / timeouts / fallbacks | 0 / 0 / 0 | 0 / 0 / 0 |
+| Superseded commits / stale paints | 0 / 0 | 0 / 0 |
+| Geographic mesh publications in same-source year phase | 1 | 1 |
+| Layout changes / mesh publications / releases | 885 / 53 / 53 | 883 / 53 / 53 |
+| Maximum projected cache entries | 2 | 2 |
+| Maximum observed in-flight commands at layout/release | 1 | 1 |
+| Release callbacks with commands still in flight | 3 | 2 |
+| Peak sampled process footprint (MiB) | 167.60 | 157.42 |
+| Steady process footprint median / P95 / P99 / max (MiB) | 153.14 / 163.86 / 163.91 / 163.92 | 143.69 / 149.89 / 150.02 / 150.05 |
+| Process footprint after dismissal (MiB) | 105.00 | 100.36 |
+| Observed footprint drop on dismissal (MiB) | 48.14 | 43.14 |
 
 Projected cache size and mesh retirement met the verifier over the full routes. The footprint numbers come from process sampling. Device memory pressure and physical residency require the hardware protocol.
 
-[iPad A16 · extraction build summary and raw trace](evidence/geokit-0.4b/lifecycle/iPad-A16)
+[iPad A16 · extraction build summary and raw trace](evidence/geokit-0.4b/lifecycle/iPad-A16) · [iPhone 16e · final build summary and raw trace](evidence/geokit-0.4b/lifecycle/iPhone-16e-final)

@@ -21,4 +21,16 @@ Baseline `617ef28b6768c47b6ea08a83cfa262d5f4668053` matches the research checkou
 
 ## Resulting application dependencies
 
+```mermaid
+flowchart TD
+    Lab["Ballotics GeoJSON Lab"] --> Apple["BalloticsGeoKitApple"]
+    Lab --> Controls["MapLibre and election services"]
+    DistrictAtlas --> Apple
+    Apple --> GeoKit["BalloticsGeoKit"]
+    Apple --> Mesh["BalloticsGeoKitMesh"]
+    Mesh --> GeoKit
+    Mesh --> Tess["LibTess2"]
+    Smoke["Independent iOS smoke target"] --> Apple
+```
+
 The package imports no election, political, MapLibre Native, SwiftData, XCTest or lab module in its production targets. The lab keeps its request gate, result-oriented UI, placement of the external electoral key, accessibility, memory sampling, launch flags and benchmark routes. Its runtime shader comparison points to the package shader source. DistrictAtlas links the standalone package and validates the 441 Census records directly. Census schema keys and U.S. region policy in the geographic core remain useful boundaries for a future general geographic product.

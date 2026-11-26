@@ -162,5 +162,7 @@
   "sample_count_4": "pass",
   "runtime_comparison_shader": "pass",
   "final_MapLibre_bundled_navigation": "pass",
-  "final_system_reduce_motion": "pass: one frame per regional move and no timed camera transitions"
+  "final_system_reduce_motion": "pass: one frame per regional move and no timed camera transitions",
+  "final_release_source_commit": "172d92b15b0edda0a4d9093fe01fe2310368d213",
+  "final_30_minute_lifecycle_trace": "all verifier assertions passed"
 }

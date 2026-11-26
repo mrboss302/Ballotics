@@ -1,0 +1,221 @@
+{
+  "terminal_event": {
+    "app_ms": 1800960.5,
+    "elapsed_ms": 1800034.4,
+    "event": "albers_stress_done",
+    "mismatches": 0,
+    "navigation_steps": 6178,
+    "rapid_requests": 10,
+    "sources": 50,
+    "timeouts": 0,
+    "years": 100
+  },
+  "election_requests": 111,
+  "election_commits": 101,
+  "superseded_commits": 0,
+  "stale_style_events": 0,
+  "mesh_publications_during_county_election_year_phase": 1,
+  "style_uploads_during_county_election_year_phase": 198,
+  "mesh_publications": 53,
+  "mesh_cancellations": 0,
+  "layout_changes": 883,
+  "geographic_preparations": 53,
+  "published_vertex_buffers": 147,
+  "published_index_buffers": 147,
+  "allocated_style_and_color_buffers": 12460,
+  "cache_entries": {
+    "count": 119,
+    "median": 1,
+    "p95": 2,
+    "p99": 2,
+    "max": 2
+  },
+  "appearance_outliers_over_one_second": [
+    {
+      "app_ms": 211251.7,
+      "before_draw_ms": 7.6,
+      "cpu_ms": 1003.9,
+      "drawable_ms": 1003.8,
+      "elapsed_ms": 1011.4,
+      "encode_ms": 0,
+      "event": "metal_appearance_submit",
+      "operation": "highlight"
+    },
+    {
+      "app_ms": 212275.5,
+      "before_draw_ms": 16.1,
+      "cpu_ms": 1003.4,
+      "drawable_ms": 1003.3,
+      "elapsed_ms": 1019.4,
+      "encode_ms": 0,
+      "event": "metal_appearance_submit",
+      "operation": "thematic_style"
+    },
+    {
+      "app_ms": 508347.1,
+      "before_draw_ms": 16,
+      "cpu_ms": 1591.8,
+      "drawable_ms": 1591.8,
+      "elapsed_ms": 1607.9,
+      "encode_ms": 0,
+      "event": "metal_appearance_submit",
+      "operation": "thematic_style"
+    }
+  ],
+  "fallbacks": [],
+  "selection_attempts": 6178,
+  "selection_hits": 2962,
+  "selection_ms": {
+    "count": 6178,
+    "median": 0.1,
+    "p95": 0.2,
+    "p99": 0.4,
+    "max": 11
+  },
+  "warm_year_commit_ms": {
+    "count": 100,
+    "median": 4.55,
+    "p95": 7.6,
+    "p99": 13.3,
+    "max": 297.9
+  },
+  "cold_year_commit_ms": 1547.6,
+  "main_actor_queue_ms": {
+    "count": 111,
+    "median": 0.4,
+    "p95": 3.3,
+    "p99": 4.1,
+    "max": 4.3
+  },
+  "year_observed_ready_ms": {
+    "count": 100,
+    "median": 27.2,
+    "p95": 53.6,
+    "p99": 339.9,
+    "max": 1943.6
+  },
+  "gpu_style_copy_ms": {
+    "count": 6230,
+    "median": 0.3,
+    "p95": 0.6,
+    "p99": 0.7,
+    "max": 2.9
+  },
+  "gpu_style_prepare_ms": {
+    "count": 6230,
+    "median": 9.3,
+    "p95": 10.1,
+    "p99": 10.6,
+    "max": 13.2
+  },
+  "appearance_update_to_submit_ms": {
+    "border_width": {
+      "count": 1,
+      "median": 4.6,
+      "p95": 4.6,
+      "p99": 4.6,
+      "max": 4.6
+    },
+    "clear_selection": {
+      "count": 1706,
+      "median": 4.7,
+      "p95": 11.4,
+      "p99": 13.8,
+      "max": 24.5
+    },
+    "highlight": {
+      "count": 2941,
+      "median": 4.5,
+      "p95": 11.7,
+      "p99": 14.5,
+      "max": 1011.4
+    },
+    "thematic_style": {
+      "count": 5774,
+      "median": 18.1,
+      "p95": 23.8,
+      "p99": 27.5,
+      "max": 1607.9
+    }
+  },
+  "source_observed_ready_ms": {
+    "count": 50,
+    "median": 357.85,
+    "p95": 709.1,
+    "p99": 1588.3,
+    "max": 1588.3
+  },
+  "frame_transition_ms": {
+    "count": 1264,
+    "median": 291.1,
+    "p95": 310,
+    "p99": 321.7,
+    "max": 2228.8
+  },
+  "steady_footprint_mib": {
+    "count": 103,
+    "median": 143.6904296875,
+    "p95": 149.8935546875,
+    "p99": 150.0185546875,
+    "max": 150.0498046875
+  },
+  "reopen": [
+    {
+      "app_ms": 904618.9,
+      "event": "albers_stress_reopen",
+      "ready": true
+    }
+  ],
+  "background_transitions": [
+    {
+      "active": false,
+      "app_ms": 188815.5,
+      "event": "metal_scene_activity",
+      "submissions": 7507
+    },
+    {
+      "active": true,
+      "app_ms": 201901,
+      "event": "metal_scene_activity",
+      "submissions": 7507
+    }
+  ],
+  "release_phase": [
+    {
+      "app_ms": 1800960.9,
+      "before_release_footprint_mib": 143.5029296875,
+      "before_release_rss_mib": 152.78125,
+      "event": "albers_stress_release_start",
+      "features": 3153
+    },
+    {
+      "after_release_footprint_mib": 100.36225891113281,
+      "after_release_rss_mib": 144.5625,
+      "app_ms": 1804131,
+      "event": "albers_stress_released"
+    }
+  ],
+  "mesh_releases": 53,
+  "releases_with_commands_in_flight": 2,
+  "maximum_sampled_footprint": [
+    157.4248046875,
+    "albers_stress_checkpoint",
+    109115.3,
+    "stress_footprint_mib"
+  ],
+  "release_drop_mib": 43.14067077636719,
+  "max_observed_in_flight": 1,
+  "assertions": {
+    "duration": true,
+    "years_sources_selections": true,
+    "current_requests": true,
+    "complete_sources": true,
+    "current_mesh_on_layout": true,
+    "year_phase_reuses_one_mesh": true,
+    "bounded_cache": true,
+    "active_and_inactive": true,
+    "reopened": true,
+    "released": true,
+    "no_fallback": true
+  }
+}
