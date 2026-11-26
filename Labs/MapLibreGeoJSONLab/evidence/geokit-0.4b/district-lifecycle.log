@@ -1,0 +1,60 @@
+metal_pipeline {"boundaries":true,"elapsed_ms":15.9,"library":"compiled","library_ms":3.2000000000000002,"pipeline_ms":4.2999999999999998,"samples":4}
+metal_style_upload {"allocated_buffers":2,"copy_ms":0,"prepare_ms":2,"style_bytes":10464}
+metal_first_submit {"acquire_ms":3,"active_mesh_generations":1,"commands_in_flight":1,"cpu_ms":3.3999999999999999,"depth_bytes_estimate":31564800,"draw_calls":6,"drawable_height":1096,"drawable_width":1800,"encode_ms":0,"multisample_color_bytes_estimate":31564800,"referenced_vertices":173349,"resolve_color_bytes_estimate":7891200,"retired_mesh_generations":0,"samples":4,"submitted_indices":515715,"submitted_segments":102673}
+Metal GPU completion 1/10 · 436 projected districts
+metal_first_complete {"gpu_ms":5,"submitted_indices":515715}
+metal_release {"active_mesh_generations":0,"commands_in_flight":0,"generation":2,"retired_mesh_generations":0,"scene_bytes":9413384,"surface_submissions":1}
+metal_pipeline {"boundaries":true,"elapsed_ms":1.3999999999999999,"library":"compiled","library_ms":0.20000000000000001,"pipeline_ms":0.29999999999999999,"samples":4}
+metal_style_upload {"allocated_buffers":2,"copy_ms":0,"prepare_ms":1.8,"style_bytes":10464}
+metal_first_submit {"acquire_ms":1.7,"active_mesh_generations":1,"commands_in_flight":1,"cpu_ms":1.8,"depth_bytes_estimate":31564800,"draw_calls":6,"drawable_height":1096,"drawable_width":1800,"encode_ms":0,"multisample_color_bytes_estimate":31564800,"referenced_vertices":173349,"resolve_color_bytes_estimate":7891200,"retired_mesh_generations":0,"samples":4,"submitted_indices":515715,"submitted_segments":102673}
+Metal GPU completion 2/10 · 436 projected districts
+metal_first_complete {"gpu_ms":9.0999999999999996,"submitted_indices":515715}
+metal_release {"active_mesh_generations":0,"commands_in_flight":0,"generation":2,"retired_mesh_generations":0,"scene_bytes":9413384,"surface_submissions":1}
+metal_pipeline {"boundaries":true,"elapsed_ms":1.2,"library":"compiled","library_ms":0.20000000000000001,"pipeline_ms":0.29999999999999999,"samples":4}
+metal_style_upload {"allocated_buffers":2,"copy_ms":0,"prepare_ms":1.8,"style_bytes":10464}
+metal_first_submit {"acquire_ms":0.69999999999999996,"active_mesh_generations":1,"commands_in_flight":1,"cpu_ms":0.69999999999999996,"depth_bytes_estimate":31564800,"draw_calls":6,"drawable_height":1096,"drawable_width":1800,"encode_ms":0,"multisample_color_bytes_estimate":31564800,"referenced_vertices":173349,"resolve_color_bytes_estimate":7891200,"retired_mesh_generations":0,"samples":4,"submitted_indices":515715,"submitted_segments":102673}
+Metal GPU completion 3/10 · 436 projected districts
+metal_first_complete {"gpu_ms":2.3999999999999999,"submitted_indices":515715}
+metal_release {"active_mesh_generations":0,"commands_in_flight":0,"generation":2,"retired_mesh_generations":0,"scene_bytes":9413384,"surface_submissions":1}
+metal_pipeline {"boundaries":true,"elapsed_ms":1.3999999999999999,"library":"compiled","library_ms":0.20000000000000001,"pipeline_ms":0.29999999999999999,"samples":4}
+metal_style_upload {"allocated_buffers":2,"copy_ms":0,"prepare_ms":1.8,"style_bytes":10464}
+metal_first_submit {"acquire_ms":0.40000000000000002,"active_mesh_generations":1,"commands_in_flight":1,"cpu_ms":0.40000000000000002,"depth_bytes_estimate":31564800,"draw_calls":6,"drawable_height":1096,"drawable_width":1800,"encode_ms":0,"multisample_color_bytes_estimate":31564800,"referenced_vertices":173349,"resolve_color_bytes_estimate":7891200,"retired_mesh_generations":0,"samples":4,"submitted_indices":515715,"submitted_segments":102673}
+Metal GPU completion 4/10 · 436 projected districts
+metal_first_complete {"gpu_ms":6.4000000000000004,"submitted_indices":515715}
+metal_release {"active_mesh_generations":0,"commands_in_flight":0,"generation":2,"retired_mesh_generations":0,"scene_bytes":9413384,"surface_submissions":1}
+metal_pipeline {"boundaries":true,"elapsed_ms":1.2,"library":"compiled","library_ms":0.20000000000000001,"pipeline_ms":0.29999999999999999,"samples":4}
+metal_style_upload {"allocated_buffers":2,"copy_ms":0,"prepare_ms":1.8,"style_bytes":10464}
+metal_first_submit {"acquire_ms":0.40000000000000002,"active_mesh_generations":1,"commands_in_flight":1,"cpu_ms":0.5,"depth_bytes_estimate":31564800,"draw_calls":6,"drawable_height":1096,"drawable_width":1800,"encode_ms":0,"multisample_color_bytes_estimate":31564800,"referenced_vertices":173349,"resolve_color_bytes_estimate":7891200,"retired_mesh_generations":0,"samples":4,"submitted_indices":515715,"submitted_segments":102673}
+Metal GPU completion 5/10 · 436 projected districts
+metal_first_complete {"gpu_ms":5.2999999999999998,"submitted_indices":515715}
+metal_release {"active_mesh_generations":0,"commands_in_flight":0,"generation":2,"retired_mesh_generations":0,"scene_bytes":9413384,"surface_submissions":1}
+metal_pipeline {"boundaries":true,"elapsed_ms":1.2,"library":"compiled","library_ms":0.20000000000000001,"pipeline_ms":0.29999999999999999,"samples":4}
+metal_style_upload {"allocated_buffers":2,"copy_ms":0,"prepare_ms":1.8,"style_bytes":10464}
+metal_first_submit {"acquire_ms":0.5,"active_mesh_generations":1,"commands_in_flight":1,"cpu_ms":0.5,"depth_bytes_estimate":31564800,"draw_calls":6,"drawable_height":1096,"drawable_width":1800,"encode_ms":0,"multisample_color_bytes_estimate":31564800,"referenced_vertices":173349,"resolve_color_bytes_estimate":7891200,"retired_mesh_generations":0,"samples":4,"submitted_indices":515715,"submitted_segments":102673}
+Metal GPU completion 6/10 · 436 projected districts
+metal_first_complete {"gpu_ms":4.5,"submitted_indices":515715}
+metal_release {"active_mesh_generations":0,"commands_in_flight":0,"generation":2,"retired_mesh_generations":0,"scene_bytes":9413384,"surface_submissions":1}
+metal_pipeline {"boundaries":true,"elapsed_ms":1.3,"library":"compiled","library_ms":0.20000000000000001,"pipeline_ms":0.29999999999999999,"samples":4}
+metal_style_upload {"allocated_buffers":2,"copy_ms":0,"prepare_ms":1.8,"style_bytes":10464}
+metal_first_submit {"acquire_ms":0.80000000000000004,"active_mesh_generations":1,"commands_in_flight":1,"cpu_ms":0.80000000000000004,"depth_bytes_estimate":31564800,"draw_calls":6,"drawable_height":1096,"drawable_width":1800,"encode_ms":0,"multisample_color_bytes_estimate":31564800,"referenced_vertices":173349,"resolve_color_bytes_estimate":7891200,"retired_mesh_generations":0,"samples":4,"submitted_indices":515715,"submitted_segments":102673}
+Metal GPU completion 7/10 · 436 projected districts
+metal_first_complete {"gpu_ms":8.5,"submitted_indices":515715}
+metal_release {"active_mesh_generations":0,"commands_in_flight":0,"generation":2,"retired_mesh_generations":0,"scene_bytes":9413384,"surface_submissions":1}
+metal_pipeline {"boundaries":true,"elapsed_ms":1.3999999999999999,"library":"compiled","library_ms":0.20000000000000001,"pipeline_ms":0.40000000000000002,"samples":4}
+metal_style_upload {"allocated_buffers":2,"copy_ms":0,"prepare_ms":1.8,"style_bytes":10464}
+metal_first_submit {"acquire_ms":0.5,"active_mesh_generations":1,"commands_in_flight":1,"cpu_ms":0.5,"depth_bytes_estimate":31564800,"draw_calls":6,"drawable_height":1096,"drawable_width":1800,"encode_ms":0,"multisample_color_bytes_estimate":31564800,"referenced_vertices":173349,"resolve_color_bytes_estimate":7891200,"retired_mesh_generations":0,"samples":4,"submitted_indices":515715,"submitted_segments":102673}
+Metal GPU completion 8/10 · 436 projected districts
+metal_first_complete {"gpu_ms":6.9000000000000004,"submitted_indices":515715}
+metal_release {"active_mesh_generations":0,"commands_in_flight":0,"generation":2,"retired_mesh_generations":0,"scene_bytes":9413384,"surface_submissions":1}
+metal_pipeline {"boundaries":true,"elapsed_ms":1.3,"library":"compiled","library_ms":0.20000000000000001,"pipeline_ms":0.29999999999999999,"samples":4}
+metal_style_upload {"allocated_buffers":2,"copy_ms":0,"prepare_ms":1.8,"style_bytes":10464}
+metal_first_submit {"acquire_ms":0.40000000000000002,"active_mesh_generations":1,"commands_in_flight":1,"cpu_ms":0.5,"depth_bytes_estimate":31564800,"draw_calls":6,"drawable_height":1096,"drawable_width":1800,"encode_ms":0,"multisample_color_bytes_estimate":31564800,"referenced_vertices":173349,"resolve_color_bytes_estimate":7891200,"retired_mesh_generations":0,"samples":4,"submitted_indices":515715,"submitted_segments":102673}
+Metal GPU completion 9/10 · 436 projected districts
+metal_first_complete {"gpu_ms":4.7000000000000002,"submitted_indices":515715}
+metal_release {"active_mesh_generations":0,"commands_in_flight":0,"generation":2,"retired_mesh_generations":0,"scene_bytes":9413384,"surface_submissions":1}
+metal_pipeline {"boundaries":true,"elapsed_ms":1.1000000000000001,"library":"compiled","library_ms":0.10000000000000001,"pipeline_ms":0.29999999999999999,"samples":4}
+metal_style_upload {"allocated_buffers":2,"copy_ms":0,"prepare_ms":1.8,"style_bytes":10464}
+metal_first_submit {"acquire_ms":0.40000000000000002,"active_mesh_generations":1,"commands_in_flight":1,"cpu_ms":0.40000000000000002,"depth_bytes_estimate":31564800,"draw_calls":6,"drawable_height":1096,"drawable_width":1800,"encode_ms":0,"multisample_color_bytes_estimate":31564800,"referenced_vertices":173349,"resolve_color_bytes_estimate":7891200,"retired_mesh_generations":0,"samples":4,"submitted_indices":515715,"submitted_segments":102673}
+Metal GPU completion 10/10 · 436 projected districts
+metal_first_complete {"gpu_ms":6.7000000000000002,"submitted_indices":515715}
+metal_release {"active_mesh_generations":0,"commands_in_flight":0,"generation":2,"retired_mesh_generations":0,"scene_bytes":9413384,"surface_submissions":1}

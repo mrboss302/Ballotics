@@ -1,0 +1,166 @@
+{
+  "toolchain": "Xcode 26.3 (17C529)",
+  "target_configuration": "Release",
+  "simulator_runtime": "iOS 26.3.1 (23D8133)",
+  "macOS_package": [
+    {
+      "test": "testExternalPlacementPrioritiesOverridesAndCamera",
+      "result": "passed"
+    },
+    {
+      "test": "testMembershipRevisionAndIsolation",
+      "result": "passed"
+    },
+    {
+      "test": "testPortableFixtureAndStableResolution",
+      "result": "passed"
+    },
+    {
+      "test": "testRectangleMustClearHolesAndNarrowParts",
+      "result": "passed"
+    },
+    {
+      "test": "testCancelledPreparationCannotProduceAMesh",
+      "result": "passed"
+    },
+    {
+      "test": "testCoreGraphicsReferenceDrawsTheSameRegionalScene",
+      "result": "passed"
+    },
+    {
+      "test": "testExternalAnnotationsUseSeparateSpaceInShallowBounds",
+      "result": "passed"
+    },
+    {
+      "test": "testMeshIdentityAndFeatureAssociation",
+      "result": "passed"
+    },
+    {
+      "test": "testMetalInitializationFailures",
+      "result": "passed"
+    },
+    {
+      "test": "testReplacementPaletteLayoutAndRelease",
+      "result": "passed"
+    }
+  ],
+  "iOS_package_smoke": [
+    {
+      "test": "testCancelledPreparationCannotProduceAMesh",
+      "result": "passed"
+    },
+    {
+      "test": "testCoreGraphicsReferenceDrawsTheSameRegionalScene",
+      "result": "passed"
+    },
+    {
+      "test": "testExternalAnnotationsUseSeparateSpaceInShallowBounds",
+      "result": "passed"
+    },
+    {
+      "test": "testMeshIdentityAndFeatureAssociation",
+      "result": "passed"
+    },
+    {
+      "test": "testMetalInitializationFailures",
+      "result": "passed"
+    },
+    {
+      "test": "testReplacementPaletteLayoutAndRelease",
+      "result": "passed"
+    }
+  ],
+  "lab_UI": [
+    {
+      "test": "testElectoralInsetTextInspector",
+      "result": "passed"
+    },
+    {
+      "test": "testGeoKitElectoralContentSwitch",
+      "result": "passed"
+    },
+    {
+      "test": "testHistoricalOverlapOnThematicMetalMap",
+      "result": "passed"
+    },
+    {
+      "test": "testLiveCompositionSwitchPreservesSelection",
+      "result": "passed"
+    },
+    {
+      "test": "testMetalCensusNavigationLifecycleAndSelection",
+      "result": "passed"
+    },
+    {
+      "test": "testMetalCountyStylingAndElectionReuse",
+      "result": "passed"
+    },
+    {
+      "test": "testMetalFallsBackForAnIdentifiedCollapsedPolygon",
+      "result": "passed"
+    },
+    {
+      "test": "testMetalHistoricalBoundariesAnd2000Reuse",
+      "result": "passed"
+    },
+    {
+      "test": "testMissingShaderFallsBackToSelectableGeography",
+      "result": "passed"
+    },
+    {
+      "test": "testNationalInsetPickingAcrossRenderers",
+      "result": "passed"
+    }
+  ],
+  "0.4A_matched_visual": [
+    {
+      "test": "testCompositionReview",
+      "result": "passed"
+    },
+    {
+      "test": "testGeoKitLandscapeScreen",
+      "result": "passed"
+    },
+    {
+      "test": "testGeoKitOwnerReviewAndExternalSelection",
+      "result": "passed"
+    }
+  ],
+  "0.4B_matched_visual": [
+    {
+      "test": "testCompositionReview",
+      "result": "passed"
+    },
+    {
+      "test": "testGeoKitLandscapeScreen",
+      "result": "passed"
+    },
+    {
+      "test": "testGeoKitOwnerReviewAndExternalSelection",
+      "result": "passed"
+    }
+  ],
+  "compact_landscape": [
+    {
+      "test": "testGeoKitLandscapeScreen",
+      "result": "passed"
+    }
+  ],
+  "builds": {
+    "macOS_DistrictAtlas": "pass",
+    "iOS_simulator_lab_and_UI_tests": "pass",
+    "unsigned_iOS_device_lab": "pass"
+  },
+  "final_missing_shader_UI": {
+    "first_attempt": "SwiftUI pop-up was not exposed to XCTest after the orientation test",
+    "standalone_retry": "pass"
+  },
+  "final_electoral_content_switch_UI": "pass",
+  "final_iPhone_17_Pro_landscape": "pass",
+  "sample_count_1": "pass",
+  "sample_count_2": "unsupported on this simulator, controlled Core Graphics fallback",
+  "sample_count_4": "pass",
+  "runtime_comparison_shader": "pass",
+  "final_MapLibre_bundled_navigation": "pass",
+  "final_system_reduce_motion": "pass: one frame per regional move and no timed camera transitions"
+}

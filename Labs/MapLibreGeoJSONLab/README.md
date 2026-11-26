@@ -15,7 +15,7 @@ From the repository root, compile and run the same validator the iOS app uses:
 ```sh
 lab=Labs/MapLibreGeoJSONLab
 checks=$(mktemp -d)
-xcrun swiftc -O -module-cache-path "$checks/modules" \
+xcrun swiftc -O -package-name BalloticsGeoKit -module-cache-path "$checks/modules" \
   "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift" "$lab/Tests/GeoJSONChecks.swift" -o "$checks/geojson-checks"
 "$checks/geojson-checks" "$PWD"  # Optional second argument is the historical file path.
 ```
@@ -57,12 +57,12 @@ From the repository root on macOS, build the independent tests and publisher wit
 lab=Labs/MapLibreGeoJSONLab
 archive="/absolute/path/to/US_HistCounties_Gen05.json"
 work=$(mktemp -d)
-xcrun swiftc -O -module-cache-path "$work/modules" \
+xcrun swiftc -O -package-name BalloticsGeoKit -module-cache-path "$work/modules" \
   "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/Tests/HistoricalArchiveChecks.swift" \
   -o "$work/check-history"
 "$work/check-history" "$archive"
 
-xcrun swiftc -O -module-cache-path "$work/modules" \
+xcrun swiftc -O -package-name BalloticsGeoKit -module-cache-path "$work/modules" \
   "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/Tests/PublishHistoricalSnapshots.swift" \
   -o "$work/publish-history"
 "$work/publish-history" "$archive" "$work/published" 1788-01-01 2000-01-01
@@ -93,7 +93,7 @@ Run the standalone projection check from the repository root. The optional final
 ```sh
 lab=Labs/MapLibreGeoJSONLab
 work=$(mktemp -d)
-xcrun swiftc -O -module-cache-path "$work/modules" \
+xcrun swiftc -O -package-name BalloticsGeoKit -module-cache-path "$work/modules" \
   "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift"  "$lab/Tests/AlbersChecks.swift" \
   -o "$work/check-albers"
 "$work/check-albers" "$PWD"
@@ -111,7 +111,7 @@ Verify all election snapshots against the archive and check the historical inset
 ```sh
 lab=Labs/MapLibreGeoJSONLab
 work=$(mktemp -d)
-xcrun swiftc -O -module-cache-path "$work/modules" \
+xcrun swiftc -O -package-name BalloticsGeoKit -module-cache-path "$work/modules" \
   "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/PresidentialElection.swift" \
    "$lab/Tests/PresidentialElectionChecks.swift" -o "$work/election-checks"
 "$work/election-checks" US_HistStateTerr_Gen05.json
@@ -147,7 +147,7 @@ python3 "$lab/Tests/summarize-albers-stress.py" "$work/long-run/stress.jsonl"
 To run the geographic checks from the repository root after building the lab, use the resolved county derivative from the app bundle. The build generates it from the original maps and their documented substitutes.
 
 ```sh
-xcrun swiftc -O -module-cache-path "$work/modules" \
+xcrun swiftc -O -package-name BalloticsGeoKit -module-cache-path "$work/modules" \
   "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift" "$lab/HistoricalArchive.swift" "$lab/PresidentialElection.swift" \
    "$lab/Tests/AlbersQualification.swift" -o "$work/check-albers-02"
 "$work/check-albers-02" "$PWD" "$HISTORICAL_COUNTY_ARCHIVE" \
@@ -159,7 +159,7 @@ Use `python3 "$lab/Tests/albers-reference.py"` with pyproj to regenerate the pro
 Run the isolated CPU bitmap experiment on macOS to compare fill and outline costs at each backing scale.
 
 ```sh
-xcrun swiftc -O -module-cache-path "$work/modules" \
+xcrun swiftc -O -package-name BalloticsGeoKit -module-cache-path "$work/modules" \
   "$lab"/../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift "$lab/GeoJSON.swift"  "$lab/Tests/AlbersRasterStudy.swift" \
   -o "$work/albers-raster-study"
 "$work/albers-raster-study" cb_2024_us_county_5m.json > "$work/raster.jsonl"
@@ -231,7 +231,7 @@ The coverage command uses the checked Census county presentation bounds and the 
 The qualification matrix uses one fresh process per workload and configuration unless a trial count is supplied. Capture simulator model, actual drawable dimensions, OS, text size and host activity alongside the JSONL. Keep the physical deadline field unavailable when there are no presentation timestamps. The host PROJ and selection commands in the 0.2 section still apply. To reproduce the 14-input mesh check from the lab directory, use the same Release app and locally authorized county archive as above.
 
 ```sh
-xcrun swiftc -O -module-cache-path "$build/modules" ../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift GeoJSON.swift HistoricalArchive.swift \
+xcrun swiftc -O -package-name BalloticsGeoKit -module-cache-path "$build/modules" ../../Packages/BalloticsGeoKit/Sources/BalloticsGeoKit/*.swift GeoJSON.swift HistoricalArchive.swift \
   Tests/PublishHistoricalSnapshots.swift -o "$build/publish-history"
 "$build/publish-history" "$HISTORICAL_COUNTY_ARCHIVE" "$build/county-dates" \
   1788-01-01 1860-01-01 1900-01-01 1980-01-01 2000-01-01
@@ -284,7 +284,7 @@ xcodebuild -project MapLibreGeoJSONLab.xcodeproj -scheme MapLibreGeoJSONLab -con
   CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=YES build-for-testing
 app="$work/ios/Build/Products/Release-iphonesimulator/MapLibreGeoJSONLab.app"
 bash Tests/check-geokit-geography.sh "$HISTORICAL_COUNTY_ARCHIVE" "$app/ElectionResearch/county-geometry-2024.geojson" "$work/geography"
-xcrun swiftc -O -module-cache-path "$work/modules" "$kit"/Sources/BalloticsGeoKit/*.swift GeoJSON.swift \
+xcrun swiftc -O -package-name BalloticsGeoKit -module-cache-path "$work/modules" "$kit"/Sources/BalloticsGeoKit/*.swift GeoJSON.swift \
   HistoricalArchive.swift ElectoralCartography.swift Tests/GeoKitLabelStudy.swift -o "$work/study"
 "$work/study" ../../US_HistStateTerr_Gen05.json "$app/ElectionResearch/0.1.0/national.json" > "$work/labels.jsonl"
 for workload in districts electoral-states election-counties; do
@@ -301,3 +301,32 @@ METAL_BENCHMARK_MODE=stress METAL_STRESS_SECONDS=120 bash Tests/benchmark-metal.
 ```
 
 The 0.3Q section provides the ten dated inputs for the 14-input tessellation check, optional 30-minute route and signed-device protocol. An optional third argument to the compiled label study writes the 1976 geographic-anchor diagram. Review historical and electoral images locally. For native screenshots run `testGeoKitOwnerReviewAndExternalSelection` and `testGeoKitLandscapeScreen` with the existing Release scheme on each viewport. On iPad the landscape fixture simulates device rotation. Export the named attachments with xcresulttool. Run testGeoKitElectoralContentSwitch to verify a same-revision content change. The label summary command is `python3 Tests/summarize-metal.py labels PATH_TO_LABELS_JSONL`. For portable test input see the package’s `Tests/BalloticsGeoKitTests/Fixtures` directory. [0.4A architecture](GEOKIT_0.4A_ARCHITECTURE.md) · [Qualification](GEOKIT_0.4A_QUALIFICATION_REPORT.md)
+
+## BalloticsGeoKit 0.4B
+
+[Qualification](GEOKIT_0.4B_QUALIFICATION_REPORT.md) · [Architecture](GEOKIT_APPLE_RENDERING_ARCHITECTURE.md) · [Public API](GEOKIT_PUBLIC_API.md) · [Dependencies](GEOKIT_0.4B_DEPENDENCY_AUDIT.md) · [Mesh parity](GEOKIT_0.4B_MESH_PARITY.md) · [Regression checks](GEOKIT_0.4B_REGRESSION_REPORT.md) · [Benchmarks](GEOKIT_0.4B_BENCHMARKS.md) · [Resource lifetime](GEOKIT_0.4B_RESOURCE_LIFETIME.md)
+
+Run from the research lab directory with an Xcode installation that includes the Metal toolchain. Keep generated election output, the locally authorized historical county archive and owner-review screenshots outside the tracked source tree.
+
+```sh
+root=$(cd ../.. && pwd)
+kit="$root/Packages/BalloticsGeoKit"
+work=$(mktemp -d)
+(cd "$kit" && xcodebuild -scheme DistrictAtlas -configuration Release -destination 'platform=macOS' \
+  -derivedDataPath "$work/macos" CODE_SIGNING_ALLOWED=NO build)
+product="$work/macos/Build/Products/Release"
+"$product/DistrictAtlas" "$root/cb_2024_us_cd119_5m.json"
+"$product/DistrictAtlas" "$root/cb_2024_us_cd119_5m.json" --verify-metal
+"$product/DistrictAtlas" "$root/cb_2024_us_cd119_5m.json" --district TX-18 --render "$work/tx18-cg.png"
+GEOKIT_METALLIB="$product/BalloticsGeoKit_BalloticsGeoKitApple.bundle/Contents/Resources/default.metallib" \
+  swift test --package-path "$kit" --scratch-path "$work/package" -c release
+xcodebuild -project "$kit/Tests/iOSSmoke/GeoKitSmoke.xcodeproj" -scheme GeoKitSmoke \
+  -configuration Release -destination "platform=iOS Simulator,id=$SIMULATOR_ID" \
+  -derivedDataPath "$work/ios-smoke" CODE_SIGNING_ALLOWED=NO -parallel-testing-enabled NO test
+```
+
+The macOS and iOS Xcode products embed the Apple adapter's compiled package bundle. The SwiftPM CLI copies package shader source with this toolchain. A CLI-built DistrictAtlas can use `--shader-library PATH_TO_COMPILED_METALLIB` to test the compiled library from the Xcode output. The default renderer reports Core Graphics fallback if its package library is unavailable.
+
+Build the iOS lab using the Release command in the 0.4A section. Follow the 0.3Q archive preparation instructions to assemble the same ten dated sources. Run the updated `check-metal-mesh.sh` with the 14 inputs. For a directly comparable 0.4A run, set `METAL_BASELINE_ROOT` to a checkout at `617ef28b6768c47b6ea08a83cfa262d5f4668053` and pass the same 14 inputs. Compare the `buffer-layout` records, including their per-region SHA-256 and sorted selection-range hashes. Run `check-geokit-geography.sh` and the host label study with the same sources as in 0.4A.
+
+Run the 30-minute XCTest and verifier in the 0.3Q section. For matched Release navigation use `METAL_CONFIGS=thematic METAL_BENCHMARK_MODE=qualification`, with `METAL_TRIALS=3` for `METAL_WORKLOAD=election-counties`. Use the same simulator and run one cohort at a time. Supported historical selections include `states-1788`, `states-2000`, `counties-1788` and `counties-2000`. Use `regions`, `label-overlay`, `cancellation` and `ownership` for the remaining targeted probes. Keep the device protocol from 0.3Q as the hardware production gate. The signed build should contain the Apple target bundle's `default.metallib` and the mesh target bundle's `LICENSE-libtess2.txt`.

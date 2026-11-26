@@ -1,0 +1,201 @@
+{
+  "terminal_event": {
+    "app_ms": 1800989.5,
+    "elapsed_ms": 1800268.3,
+    "event": "albers_stress_done",
+    "mismatches": 0,
+    "navigation_steps": 6193,
+    "rapid_requests": 10,
+    "sources": 50,
+    "timeouts": 0,
+    "years": 100
+  },
+  "election_requests": 111,
+  "election_commits": 101,
+  "superseded_commits": 0,
+  "stale_style_events": 0,
+  "mesh_publications_during_county_election_year_phase": 1,
+  "style_uploads_during_county_election_year_phase": 198,
+  "mesh_publications": 53,
+  "mesh_cancellations": 0,
+  "layout_changes": 885,
+  "geographic_preparations": 53,
+  "published_vertex_buffers": 147,
+  "published_index_buffers": 147,
+  "allocated_style_and_color_buffers": 12490,
+  "cache_entries": {
+    "count": 119,
+    "median": 1,
+    "p95": 2,
+    "p99": 2,
+    "max": 2
+  },
+  "appearance_outliers_over_one_second": [
+    {
+      "app_ms": 1006854.7,
+      "before_draw_ms": 18.9,
+      "cpu_ms": 1006.1,
+      "drawable_ms": 1006,
+      "elapsed_ms": 1025,
+      "encode_ms": 0,
+      "event": "metal_appearance_submit",
+      "operation": "thematic_style"
+    }
+  ],
+  "fallbacks": [],
+  "selection_attempts": 6193,
+  "selection_hits": 2969,
+  "selection_ms": {
+    "count": 6193,
+    "median": 0.1,
+    "p95": 0.2,
+    "p99": 0.4,
+    "max": 11
+  },
+  "warm_year_commit_ms": {
+    "count": 100,
+    "median": 7.449999999999999,
+    "p95": 16.8,
+    "p99": 23.1,
+    "max": 599.6
+  },
+  "cold_year_commit_ms": 1712.8,
+  "main_actor_queue_ms": {
+    "count": 111,
+    "median": 0.4,
+    "p95": 3,
+    "p99": 8.4,
+    "max": 14.3
+  },
+  "year_observed_ready_ms": {
+    "count": 100,
+    "median": 27.85,
+    "p95": 68.4,
+    "p99": 650.4,
+    "max": 2361.6
+  },
+  "gpu_style_copy_ms": {
+    "count": 6245,
+    "median": 0.3,
+    "p95": 0.5,
+    "p99": 0.7,
+    "max": 20.1
+  },
+  "gpu_style_prepare_ms": {
+    "count": 6245,
+    "median": 9.5,
+    "p95": 10.6,
+    "p99": 11,
+    "max": 54.6
+  },
+  "appearance_update_to_submit_ms": {
+    "border_width": {
+      "count": 1,
+      "median": 5.8,
+      "p95": 5.8,
+      "p99": 5.8,
+      "max": 5.8
+    },
+    "clear_selection": {
+      "count": 1718,
+      "median": 5.0,
+      "p95": 12.4,
+      "p99": 15.1,
+      "max": 163
+    },
+    "highlight": {
+      "count": 2958,
+      "median": 4.9,
+      "p95": 12.2,
+      "p99": 15,
+      "max": 27.5
+    },
+    "thematic_style": {
+      "count": 5718,
+      "median": 18.05,
+      "p95": 24,
+      "p99": 28.1,
+      "max": 1025
+    }
+  },
+  "source_observed_ready_ms": {
+    "count": 50,
+    "median": 330.25,
+    "p95": 686.6,
+    "p99": 2194.7,
+    "max": 2194.7
+  },
+  "frame_transition_ms": {
+    "count": 1332,
+    "median": 290.2,
+    "p95": 309.1,
+    "p99": 318.9,
+    "max": 512.9
+  },
+  "steady_footprint_mib": {
+    "count": 103,
+    "median": 153.14362335205078,
+    "p95": 163.86237335205078,
+    "p99": 163.90924835205078,
+    "max": 163.92487335205078
+  },
+  "reopen": [
+    {
+      "app_ms": 903840,
+      "event": "albers_stress_reopen",
+      "ready": true
+    }
+  ],
+  "background_transitions": [
+    {
+      "active": false,
+      "app_ms": 144990.9,
+      "event": "metal_scene_activity",
+      "submissions": 5654
+    },
+    {
+      "active": true,
+      "app_ms": 150541.4,
+      "event": "metal_scene_activity",
+      "submissions": 5654
+    }
+  ],
+  "release_phase": [
+    {
+      "app_ms": 1800990.4,
+      "before_release_footprint_mib": 153.14362335205078,
+      "before_release_rss_mib": 147.40625,
+      "event": "albers_stress_release_start",
+      "features": 3153
+    },
+    {
+      "after_release_footprint_mib": 105.0029525756836,
+      "after_release_rss_mib": 149.640625,
+      "app_ms": 1804082,
+      "event": "albers_stress_released"
+    }
+  ],
+  "mesh_releases": 53,
+  "releases_with_commands_in_flight": 3,
+  "maximum_sampled_footprint": [
+    167.5967025756836,
+    "albers_stress_checkpoint",
+    109099.7,
+    "stress_footprint_mib"
+  ],
+  "release_drop_mib": 48.14067077636719,
+  "max_observed_in_flight": 1,
+  "assertions": {
+    "duration": true,
+    "years_sources_selections": true,
+    "current_requests": true,
+    "complete_sources": true,
+    "current_mesh_on_layout": true,
+    "year_phase_reuses_one_mesh": true,
+    "bounded_cache": true,
+    "active_and_inactive": true,
+    "reopened": true,
+    "released": true,
+    "no_fallback": true
+  }
+}
