@@ -1,0 +1,30 @@
+{
+  "configuration": "Release",
+  "hostPackageTests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "nativeChecks": {
+    "allocation update": "passed",
+    "key interaction": "passed",
+    "Accessibility Medium": "passed",
+    "Extra Extra Large text": "passed",
+    "Reduce Motion UI": "passed",
+    "electoral year change": "passed",
+    "Alabama local inspection": "passed",
+    "Alaska local inspection": "passed",
+    "compact phone landscape": "passed",
+    "large phone landscape": "passed",
+    "iPad landscape": "passed"
+  },
+  "iPadLandscapeDrawablePixels": [
+    2296,
+    839
+  ],
+  "signedPhysicalDevice": "Open; both paired devices were unavailable.",
+  "built": [
+    "arm64 iOS Simulator",
+    "unsigned arm64 iOS",
+    "macOS Swift package and DistrictAtlas"
+  ]
+}

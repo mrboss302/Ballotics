@@ -1,0 +1,74 @@
+{
+  "terminal_event": {
+    "app_ms": 90542.8,
+    "elapsed_ms": 90144.7,
+    "event": "albers_stress_done",
+    "mismatches": 0,
+    "navigation_steps": 261,
+    "rapid_requests": 10,
+    "sources": 50,
+    "timeouts": 0,
+    "years": 100
+  },
+  "release_baseline": {
+    "app_ms": 90543.1,
+    "before_release_footprint_mib": 143.2529067993164,
+    "before_release_rss_mib": 200.046875,
+    "event": "albers_stress_release_start",
+    "features": 3153
+  },
+  "release_end": {
+    "after_release_footprint_mib": 79.78413391113281,
+    "after_release_rss_mib": 195.46875,
+    "app_ms": 93719.3,
+    "event": "albers_stress_released"
+  },
+  "committed_election_requests": 101,
+  "commits_inconsistent_with_latest_request": 0,
+  "paints_inconsistent_with_latest_commit": 0,
+  "request_to_commit_ms": {
+    "count": 101,
+    "min": 4,
+    "median": 8.8,
+    "p95": 16.5,
+    "max": 2254.5
+  },
+  "year_request_to_ready_observation_ms": {
+    "count": 100,
+    "min": 25.6,
+    "median": 54.9,
+    "p95": 70,
+    "max": 3095
+  },
+  "election_paint_ms": {
+    "count": 312,
+    "min": 7.6,
+    "median": 16.0,
+    "p95": 26.3,
+    "max": 604.5
+  },
+  "successful_selections": 144,
+  "selection_ms": {
+    "count": 261,
+    "min": 0,
+    "median": 0.1,
+    "p95": 0.3,
+    "max": 0.7
+  },
+  "steady_footprint_mib_after_four_minutes": {
+    "count": 0
+  },
+  "sampled_peak": [
+    143.0966567993164,
+    "albers_stress_checkpoint",
+    85280.4,
+    "stress_footprint_mib"
+  ],
+  "navigation_transition_ms": {
+    "count": 54,
+    "min": 280.3,
+    "median": 291.4,
+    "p95": 330.1,
+    "max": 498.7
+  }
+}

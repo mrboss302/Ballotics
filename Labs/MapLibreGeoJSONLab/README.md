@@ -347,3 +347,23 @@ xcrun simctl launch "$SIMULATOR_ID" org.ballotics.MapLibreGeoJSONLab \
 For the host label study in the 0.4A instructions, set `GEOKIT_EDITORIAL_LABELS=1`. Leave it unset for the exploratory control. Use the same archive and normalized national JSON. The lab's state-context trace is opt-in with `--measure --cartography-metrics`. Run the Release UI tests `testCartographicStateAndLocalInspection` and `testCartographicAlaskaDistrictInspection` for the focused inspection paths. Keep the original owner reference assets, election screenshots and XCTest attachments in local storage.
 
 In DistrictAtlas, enter `TX` for state focus and `TX-18` for district inspection. The state outlines load from the companion Census states file alongside the congressional file. The command `DistrictAtlas CENSUS_DISTRICTS --verify-policy` prints a current GPU completion for each policy transition and checks mesh identity across the route.
+
+## BalloticsGeoKit 0.4D
+
+[Qualification](GEOKIT_0.4D_QUALIFICATION_REPORT.md) · [Annotation architecture](GEOKIT_ELECTORAL_ANNOTATION_ARCHITECTURE.md) · [Legacy audit](LEGACY_ELECTORAL_ANNOTATION_AUDIT.md) · [Small-state key](GEOKIT_SMALL_STATE_KEY_STUDY.md) · [Split allocations](GEOKIT_SPLIT_ALLOCATION_STUDY.md) · [Editorial refinement](GEOKIT_EDITORIAL_REFINEMENT_STUDY.md) · [Benchmarks](GEOKIT_0.4D_BENCHMARKS.md) · [Regressions](GEOKIT_0.4D_REGRESSION_REPORT.md)
+
+Use the Release and geographic reproduction commands above. Launch the Albers lab in the electoral view for 1976, or choose another supported election. Select a square or split graphic to use the shared jurisdiction inspector. Use Results for additional allocation detail. Launch with **--exploratory-labels** for the exploratory control, **--cartography-debug** for anchor and annotation diagnostics, or **--allocation-fill neutral|dominant** to compare the split fill with the default stripes. Launch with **--election-year 2020 --annotation-fixture** for the clearly labeled synthetic case and use **Update fixture** to change its allocation without replacing the geometry.
+
+From the repository root, compile and run the portable 60-election annotation and synthetic checks. Use the normalized national payload from the same Release app.
+
+    lab=Labs/MapLibreGeoJSONLab
+    kit=Packages/BalloticsGeoKit
+    work=$(mktemp -d)
+    xcrun swiftc -O -whole-module-optimization -package-name BalloticsGeoKit \
+      -module-cache-path "$work/modules" "$kit"/Sources/BalloticsGeoKit/*.swift \
+      "$kit/Sources/BalloticsGeoKitApple/GeographicMapLayout.swift" \
+      "$lab"/{GeoJSON,HistoricalArchive,ElectionPackage,ElectoralAnnotation,ElectoralCartography,ElectoralEditorialLayout}.swift \
+      "$lab/Tests/GeoKitElectoralAnnotationChecks.swift" -o "$work/annotation-check"
+    "$work/annotation-check" US_HistStateTerr_Gen05.json "$app/ElectionResearch/0.1.0/national.json" > "$work/annotations.jsonl"
+
+Use **GEOKIT_EDITORIAL_LABELS=1 GEOKIT_LABEL_DETAILS=1** with the earlier host label-study executable built from this checkout to report the 0.4C omission IDs. In Release UI tests, run **testElectoralEditorialKeyAccessibility**, **testElectoralAnnotationFixtureUpdatesOnSameGeography**, **testGeoKitElectoralContentSwitch**, and **testGeoKitLandscapeScreen**. Use actual application and drawable dimensions for landscape. On a test simulator repeat the key test with Accessibility Medium and the system Reduce Motion setting. Keep visual references and XCTest screenshots in local owner review.
