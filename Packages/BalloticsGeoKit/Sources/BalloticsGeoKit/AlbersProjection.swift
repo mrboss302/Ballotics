@@ -129,6 +129,7 @@ public struct AlbersScene {
 
     public struct Part {
         public let feature: Int
+        public let polygon: Int
         public let path: CGPath
         public let bounds: CGRect
 
@@ -209,6 +210,7 @@ public struct AlbersScene {
         }
     }
 
+    package var geometryID: UUID { labelCache.geometryID }
     public let labelCache: GeographicAnchorCache
     public let panels: [Panel]
     public let properties: [[String: String]]
@@ -236,14 +238,14 @@ public struct AlbersScene {
             let original = feature["properties"] as? [String: Any] ?? [:]
             let polygons = try PolygonSource.rings(for: feature)
             var included = false
-            for rings in polygons {
+            for (ordinal, rings) in polygons.enumerated() {
                 guard rings.allSatisfy({ ring in ring.allSatisfy { $0.count >= 2 } }) else {
                     throw PolygonSource.Invalid(message: "A projected polygon has an incomplete position.")
                 }
                 guard let outer = rings.first, let region = regionFor(original, outer),
                       let projection = projections[region] else { continue }
                 let path = makePath(rings, projection: projection)
-                grouped[region, default: []].append(Part(feature: attributes.count, path: path,
+                grouped[region, default: []].append(Part(feature: attributes.count, polygon: ordinal, path: path,
                                                          bounds: path.boundingBoxOfPath))
                 included = true
             }

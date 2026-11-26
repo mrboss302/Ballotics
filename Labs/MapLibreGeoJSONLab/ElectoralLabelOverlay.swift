@@ -115,18 +115,21 @@ final class ElectoralLabelOverlay {
         }
     }
 
-    func position(in scene: AlbersScene, camera: GeographicCamera, zoom: CGFloat, selected: Int?) {
+    func position(in scene: AlbersScene, camera: GeographicCamera, zoom: CGFloat, selected: Int?,
+                  externalAnnotations: CGRect?) {
         guard !anchors.isEmpty else { return }
         let start = LabLog.now
         let keyVisible = camera.region == nil && zoom < 2 && specs.contains(where: \.external)
-        let keyTop = min(camera.viewport.maxY-24, max(camera.viewport.minY,
+        let keyTop = externalAnnotations.map { $0.minY + 2 } ?? min(camera.viewport.maxY-24, max(camera.viewport.minY,
             camera.screen(CGPoint(x:scene.bounds.midX,y:scene.bounds.maxY)).y+5))
-        let obstacles = keyVisible ? [CGRect(x:camera.viewport.minX,y:keyTop,width:camera.viewport.width,height:21)] : []
+        let obstacles = keyVisible && externalAnnotations == nil
+            ? [CGRect(x:camera.viewport.minX,y:keyTop,width:camera.viewport.width,height:21)] : []
         let decisions = LabelResolver.resolve(specs, anchors:anchors,sizes:sizes,scene:scene,camera:camera,zoom:zoom,selected:selected,obstacles:obstacles,previous:previous)
         let external = Set(decisions.filter { $0.mode == .tile }.map(\.id))
         parent?.isAccessibilityElement = external.isEmpty
         let order = ElectoralCartography.keyOrder.filter(external.contains)
-        let w = min(33,(camera.viewport.width-8)/CGFloat(max(1,order.count)))
+        let keyWidth = externalAnnotations?.width ?? camera.viewport.width
+        let w = min(33,max(0,keyWidth-8)/CGFloat(max(1,order.count)))
         for d in decisions {
             guard let label = labels[d.id], let spec = byID[d.id] else { continue }
             let tile = tiles[d.id]
@@ -149,6 +152,7 @@ final class ElectoralLabelOverlay {
         }
         if LabLog.enabled && (!logged || ProcessInfo.processInfo.arguments.contains("--label-metrics")) {
             LabLog.record("geokit_label_layout",["labels":decisions.count,"external":external.count,
+                "separate_external_region": externalAnnotations != nil,
                 "internal":decisions.filter { $0.mode == .full || $0.mode == .compact }.count,
                 "elapsed_ms":LabLog.milliseconds(LabLog.now-start)])
             logged = true

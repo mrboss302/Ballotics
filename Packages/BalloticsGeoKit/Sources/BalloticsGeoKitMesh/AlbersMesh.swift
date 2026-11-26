@@ -1,23 +1,24 @@
 import CoreGraphics
 import Foundation
 import LibTess2
+import BalloticsGeoKit
 
 /// The contours are the densified regional paths already used for Core Graphics and picking.
-struct ProjectedPolygon {
+package struct ProjectedPolygon {
     struct Edge {
         let start: SIMD2<Double>
         let end: SIMD2<Double>
     }
 
     let rings: [[SIMD2<Double>]]
-    var points: [SIMD2<Double>] { rings.flatMap { $0 } }
+    package var points: [SIMD2<Double>] { rings.flatMap { $0 } }
     var edges: [Edge] {
         rings.flatMap { ring in
             ring.indices.map { Edge(start: ring[$0], end: ring[($0 + 1) % ring.count]) }
         }
     }
 
-    init(_ path: CGPath) throws {
+    package init(_ path: CGPath) throws {
         var contours: [[SIMD2<Double>]] = []
         var invalid = false
         path.applyWithBlock { pointer in
@@ -43,7 +44,7 @@ struct ProjectedPolygon {
         guard !invalid, !contours.isEmpty, contours.allSatisfy({ ring in
             ring.count >= 3 && ring.allSatisfy { $0.x.isFinite && $0.y.isFinite }
         }) else {
-            throw GeoJSON.Invalid(message: "A projected part has an invalid or collapsed contour.")
+            throw GeographicMeshError(message: "A projected part has an invalid or collapsed contour.")
         }
         rings = contours
     }
@@ -52,9 +53,9 @@ struct ProjectedPolygon {
         abs(a.x - b.x) < 1e-7 && abs(a.y - b.y) < 1e-7
     }
 
-    static func cross(_ a: SIMD2<Double>, _ b: SIMD2<Double>) -> Double { a.x * b.y - a.y * b.x }
+    package static func cross(_ a: SIMD2<Double>, _ b: SIMD2<Double>) -> Double { a.x * b.y - a.y * b.x }
 
-    var contourArea: Double {
+    package var contourArea: Double {
         let origin = rings[0][0]
         return rings.enumerated().reduce(0) { sum, entry in
             let (index, ring) = entry
@@ -89,7 +90,7 @@ struct ProjectedPolygon {
         return area
     }
 
-    func crossingElevations() -> [Double] {
+    package func crossingElevations() -> [Double] {
         let ordered = edges.map { edge in
             (edge, min(edge.start.x, edge.end.x), max(edge.start.x, edge.end.x))
         }.sorted { $0.1 < $1.1 }
@@ -117,11 +118,16 @@ struct ProjectedPolygon {
     }
 }
 
-struct ProjectedTriangles {
-    let vertices: [SIMD2<Double>]
-    let indices: [UInt32]
+package struct ProjectedTriangles {
+    package let vertices: [SIMD2<Double>]
+    package let indices: [UInt32]
 
-    var area: Double {
+    package init(vertices: [SIMD2<Double>], indices: [UInt32]) {
+        self.vertices = vertices
+        self.indices = indices
+    }
+
+    package var area: Double {
         stride(from: 0, to: indices.count, by: 3).reduce(0) { sum, i in
             let a = vertices[Int(indices[i])]
             let b = vertices[Int(indices[i + 1])]
@@ -130,7 +136,7 @@ struct ProjectedTriangles {
         }
     }
 
-    func contains(_ point: SIMD2<Double>) -> Bool {
+    package func contains(_ point: SIMD2<Double>) -> Bool {
         for i in stride(from: 0, to: indices.count, by: 3) {
             let a = vertices[Int(indices[i])]
             let b = vertices[Int(indices[i + 1])]
@@ -145,21 +151,21 @@ struct ProjectedTriangles {
     }
 }
 
-enum AlbersTessellation {
-    static func triangles(_ polygon: ProjectedPolygon) throws -> ProjectedTriangles {
+package enum AlbersTessellation {
+    package static func triangles(_ polygon: ProjectedPolygon) throws -> ProjectedTriangles {
         let points = polygon.points
         guard points.count <= Int(Int32.max) else {
-            throw GeoJSON.Invalid(message: "Polygon exceeds the libtess2 signed index range.")
+            throw GeographicMeshError(message: "Polygon exceeds the libtess2 signed index range.")
         }
         let origin = points[0]
         guard let tess = tessNewTess(nil) else {
-            throw GeoJSON.Invalid(message: "libtess2 allocation failed.")
+            throw GeographicMeshError(message: "libtess2 allocation failed.")
         }
         defer { tessDeleteTess(tess) }
         for ring in polygon.rings {
             let local = ring.map { SIMD2<Float>($0 - origin) }
             guard local.allSatisfy({ max(abs($0.x), abs($0.y)) <= 8_388_608 }) else {
-                throw GeoJSON.Invalid(message: "A contour exceeds the libtess2 coordinate range.")
+                throw GeographicMeshError(message: "A contour exceeds the libtess2 coordinate range.")
             }
             local.withUnsafeBytes { bytes in
                 tessAddContour(tess, 2, bytes.baseAddress, Int32(MemoryLayout<SIMD2<Float>>.stride), Int32(local.count))
@@ -172,7 +178,7 @@ enum AlbersTessellation {
         guard success != 0, vertexCount >= 3, indexCount >= 3,
               let coordinates = tessGetVertices(tess), let inputIndices = tessGetVertexIndices(tess),
               let triangles = tessGetElements(tess) else {
-            throw GeoJSON.Invalid(message: "libtess2 produced no valid triangles (status \(tessGetStatus(tess).rawValue)).")
+            throw GeographicMeshError(message: "libtess2 produced no valid triangles (status \(tessGetStatus(tess).rawValue)).")
         }
         let vertices = (0..<vertexCount).map { i -> SIMD2<Double> in
             let sourceIndex = Int(inputIndices[i])
@@ -181,18 +187,18 @@ enum AlbersTessellation {
         }
         let rawIndices = UnsafeBufferPointer(start: triangles, count: indexCount)
         guard rawIndices.allSatisfy({ $0 >= 0 && Int($0) < vertexCount }) else {
-            throw GeoJSON.Invalid(message: "libtess2 returned an invalid triangle index.")
+            throw GeographicMeshError(message: "libtess2 returned an invalid triangle index.")
         }
         return ProjectedTriangles(vertices: vertices, indices: rawIndices.map(UInt32.init))
     }
 
-    static func verifiedArea(of triangles: ProjectedTriangles, in polygon: ProjectedPolygon) throws -> Double {
+    package static func verifiedArea(of triangles: ProjectedTriangles, in polygon: ProjectedPolygon) throws -> Double {
         let actual = triangles.area
         let simple = polygon.contourArea
         if agrees(actual, simple) { return simple }
         let exact = polygon.evenOddArea(crossings: polygon.crossingElevations())
         guard agrees(actual, exact) else {
-            throw GeoJSON.Invalid(message: "Mesh area \(actual) differs from the projected even–odd area \(exact).")
+            throw GeographicMeshError(message: "Mesh area \(actual) differs from the projected even–odd area \(exact).")
         }
         return exact
     }
@@ -203,47 +209,64 @@ enum AlbersTessellation {
 }
 
 /// A backend-neutral, interleavable buffer layout. Positions are regional meters relative to origin.
-struct AlbersMesh {
-    struct Vertex {
-        let position: SIMD2<Float>
-        let part: UInt32
+public struct AlbersMesh {
+    public struct Vertex {
+        public let position: SIMD2<Float>
+        public let part: UInt32
         let reserved: UInt32 = 0
     }
 
-    struct Segment {
-        let start: SIMD2<Float>
-        let end: SIMD2<Float>
-        let part: UInt32
+    public struct Segment {
+        public let start: SIMD2<Float>
+        public let end: SIMD2<Float>
+        public let part: UInt32
         let reserved: UInt32 = 0
     }
 
-    struct Part {
-        let feature: UInt32
-        let stripeOriginX: Float
+    public struct Part {
+        public let feature: UInt32
+        public let stripeOriginX: Float
     }
 
-    struct Panel: RegionalMeshPayload {
-        let origin: CGPoint
-        let vertices: [Vertex]
-        let indices: [UInt32]
-        let parts: [Part]
-        let segments: [Segment]
-        let uniqueSegmentIndices: [UInt32]
-        let featureSegments: [Int: [Range<Int>]]
+    public struct Panel: RegionalMeshPayload {
+        public let region: AlbersRegion
+        public let origin: CGPoint
+        public let vertices: [Vertex]
+        public let indices: [UInt32]
+        public let parts: [Part]
+        public let segments: [Segment]
+        public let uniqueSegmentIndices: [UInt32]
+        public let featureSegments: [Int: [Range<Int>]]
+        /// Geographic identities in paint order. GPU part zero is reserved for the inset decoration.
+        public let geographicParts: [GeographicPartID]
     }
 
-    struct Statistics {
-        var parts = 0
-        var vertices = 0
-        var triangles = 0
-        var segments = 0
-        var uniqueSegments = 0
-        var maxFloatError = 0.0
-        var tessellationSeconds = 0.0
+    public struct Statistics {
+        public fileprivate(set) var parts = 0
+        public fileprivate(set) var vertices = 0
+        public fileprivate(set) var triangles = 0
+        public fileprivate(set) var segments = 0
+        public fileprivate(set) var uniqueSegments = 0
+        public fileprivate(set) var maxFloatError = 0.0
+        public fileprivate(set) var tessellationSeconds = 0.0
     }
 
-    let panels: [Panel]
-    let statistics: Statistics
+    public let panels: [Panel]
+    public let statistics: Statistics
+
+    public let identity: GeographicMeshIdentity
+    public let featureIDs: [GeographicFeatureID]
+
+    /// Logical bytes of the contiguous render payload, excluding allocation overhead.
+    public var payloadBytes: Int {
+        panels.reduce(0) { sum, panel in
+            sum + panel.vertices.count * MemoryLayout<Vertex>.stride
+                + panel.indices.count * MemoryLayout<UInt32>.stride
+                + panel.parts.count * MemoryLayout<Part>.stride
+                + panel.segments.count * MemoryLayout<Segment>.stride
+                + panel.uniqueSegmentIndices.count * MemoryLayout<UInt32>.stride
+        }
+    }
 
     private struct SegmentKey: Hashable {
         let first: SIMD2<Float>
@@ -256,10 +279,20 @@ struct AlbersMesh {
         }
     }
 
-    static func prepare(_ scene: AlbersScene) throws -> Self {
+    /// Prepare off the main actor for large sources. Cancellation is checked between parts.
+    public static func prepare(_ scene: AlbersScene, revision: GeographicRevision,
+                               records: GeographicRecords? = nil) throws -> Self {
+        let identity = GeographicMeshIdentity(revision: revision, scene: scene)
+        if let records, !records.matches(scene, revision: revision) {
+            throw GeographicMeshError(message: "Feature identities belong to a different geographic scene or revision.")
+        }
+        let featureIDs = records?.ids ?? scene.properties.indices.map {
+            GeographicFeatureID(revision: revision, record: String($0))
+        }
         var totals = Statistics()
         var panels: [Panel] = []
         for panel in scene.panels {
+            try Task.checkCancellation()
             let localFrame = panel.researchLocalFrame
             let origin = CGPoint(x: localFrame.midX, y: localFrame.midY)
             let offset = SIMD2(Double(origin.x), Double(origin.y))
@@ -305,7 +338,7 @@ struct AlbersMesh {
                     guard triangles.vertices.count <= Int(UInt32.max) - vertices.count,
                           polygon.points.count <= Int(UInt32.max) - segments.count,
                           parts.count < Int(UInt32.max), part.feature < Int(UInt32.max) else {
-                        throw GeoJSON.Invalid(message: "Regional mesh exceeds the UInt32 index range.")
+                        throw GeographicMeshError(message: "Regional mesh exceeds the UInt32 index range.")
                     }
                     let base = UInt32(vertices.count)
                     let index = UInt32(parts.count)
@@ -325,7 +358,7 @@ struct AlbersMesh {
                         return ProjectedPolygon.cross(b - a, c - a) != 0
                     }
                     guard renderable else {
-                        throw GeoJSON.Invalid(message: "The projected part collapsed at GPU precision.")
+                        throw GeographicMeshError(message: "The projected part collapsed at GPU precision.")
                     }
                     indices.append(contentsOf: triangles.indices.map { base + $0 })
                     let startOfPart = segments.count
@@ -339,17 +372,21 @@ struct AlbersMesh {
                 } catch {
                     let attributes = scene.properties[part.feature]
                     let identifier = attributes["GEOID"] ?? attributes["ID_NUM"] ?? attributes["NAME"] ?? String(part.feature)
-                    throw GeoJSON.Invalid(message: "Feature \(identifier), part \(parts.count). \(error.localizedDescription)")
+                    throw GeographicMeshError(message: "Feature \(identifier), part \(parts.count). \(error.localizedDescription)")
                 }
             }
             totals.segments += segments.count
             totals.uniqueSegments += segmentIndices.count
-            panels.append(Panel(origin: origin, vertices: vertices, indices: indices, parts: parts,
-                                segments: segments, uniqueSegmentIndices: segmentIndices, featureSegments: selection))
+            panels.append(Panel(region: panel.region, origin: origin, vertices: vertices, indices: indices, parts: parts,
+                                segments: segments, uniqueSegmentIndices: segmentIndices, featureSegments: selection,
+                                geographicParts: panel.parts.map {
+                                    GeographicPartID(feature: featureIDs[$0.feature], polygon: $0.polygon)
+                                }))
         }
         guard totals.maxFloatError < 0.5 else {
-            throw GeoJSON.Invalid(message: "Regional floating point conversion exceeded the half-meter precision guard.")
+            throw GeographicMeshError(message: "Regional floating point conversion exceeded the half-meter precision guard.")
         }
-        return Self(panels: panels, statistics: totals)
+        try Task.checkCancellation()
+        return Self(panels: panels, statistics: totals, identity: identity, featureIDs: featureIDs)
     }
 }

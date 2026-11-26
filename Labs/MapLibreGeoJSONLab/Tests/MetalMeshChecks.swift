@@ -1,4 +1,9 @@
 import CoreGraphics
+import CryptoKit
+#if GEOKIT_PACKAGE
+import BalloticsGeoKit
+import BalloticsGeoKitMesh
+#endif
 import Foundation
 #if COMPARE_EARCUT
 import EarcutComparison
@@ -6,6 +11,14 @@ import EarcutComparison
 
 @main
 struct MetalMeshChecks {
+    private static func prepare(_ scene: AlbersScene) throws -> AlbersMesh {
+        #if GEOKIT_PACKAGE
+        return try AlbersMesh.prepare(scene, revision: .init(source: "qualification", version: "1"))
+        #else
+        return try AlbersMesh.prepare(scene)
+        #endif
+    }
+
     static func main() throws {
         var candidates: [(String, (ProjectedPolygon) throws -> ProjectedTriangles)] = [
             ("libtess2", AlbersTessellation.triangles)
@@ -55,11 +68,15 @@ struct MetalMeshChecks {
 
         if let fixture = ProcessInfo.processInfo.environment["METAL_FALLBACK_FIXTURE"] {
             let url = URL(fileURLWithPath: fixture)
+            #if GEOKIT_PACKAGE
+            precondition(try! PolygonSource.readFeatures(url).count == 2)
+            #else
             precondition(try! GeoJSON.validate(url, geography: .imported).features == 2)
+            #endif
             let scene = try AlbersScene.load(url)
             precondition(scene.properties.count == 2)
             do {
-                _ = try AlbersMesh.prepare(scene)
+                _ = try prepare(scene)
                 preconditionFailure("The collapsed fixture should require the original-path fallback.")
             } catch {
                 precondition(error.localizedDescription.contains("fixture-collapsed"))
@@ -127,8 +144,8 @@ struct MetalMeshChecks {
         precondition(MemoryLayout<AlbersMesh.Vertex>.stride == 16)
         precondition(MemoryLayout<AlbersMesh.Part>.stride == 8)
         precondition(MemoryLayout<AlbersMesh.Segment>.stride == 24)
-        let mesh = try AlbersMesh.prepare(scene)
-        let thematic = try AlbersMesh.prepare(scene.composed(.thematic))
+        let mesh = try prepare(scene)
+        let thematic = try prepare(scene.composed(.thematic))
         precondition(mesh.panels.count == thematic.panels.count)
         // These three POD records have explicit layout and verified strides above.
         func samePayload<T>(_ a: [T], _ b: [T]) -> Bool {
@@ -142,6 +159,10 @@ struct MetalMeshChecks {
             precondition(original.uniqueSegmentIndices == composed.uniqueSegmentIndices)
             precondition(original.featureSegments == composed.featureSegments)
         }
+        func hash<T>(_ values: [T]) -> String {
+            values.withUnsafeBytes { SHA256.hash(data: Data($0)).map { String(format: "%02x", $0) }.joined() }
+        }
+        var payloads: [[String: Any]] = []
         var maxRelative = 0.0
         var maxAbsolute = 0.0
         for (panel, projected) in zip(mesh.panels, scene.panels) {
@@ -175,12 +196,31 @@ struct MetalMeshChecks {
             }
             precondition(start == indices.count)
             precondition(Set(panel.featureSegments.keys) == Set(projected.parts.map(\.feature)))
+            #if GEOKIT_PACKAGE
+            precondition(panel.region == projected.region)
+            for (partID, part) in zip(panel.geographicParts, projected.parts) {
+                precondition(partID.feature == mesh.featureIDs[part.feature] && partID.polygon == part.polygon)
+            }
+            precondition(mesh.identity == thematic.identity)
+            #endif
+            let ranges = panel.featureSegments.keys.sorted().flatMap { feature in
+                panel.featureSegments[feature, default: []].flatMap {
+                    [Int64(feature), Int64($0.lowerBound), Int64($0.upperBound)]
+                }
+            }
+            payloads.append([
+                "region": projected.region.rawValue, "origin": [panel.origin.x, panel.origin.y],
+                "index_count": panel.indices.count, "part_count": projected.parts.count,
+                "vertices_sha256": hash(panel.vertices), "indices_sha256": hash(panel.indices),
+                "parts_sha256": hash(panel.parts), "segments_sha256": hash(panel.segments),
+                "deduplicated_indices_sha256": hash(panel.uniqueSegmentIndices), "selection_ranges_sha256": hash(ranges)
+            ])
         }
         emit(["test": "buffer-layout", "profile_payloads_identical": true, "dataset": dataset, "vertices": mesh.statistics.vertices,
               "triangles": mesh.statistics.triangles, "max_float_vertex_error_m": mesh.statistics.maxFloatError,
               "max_float_area_error_m2": maxAbsolute, "max_float_area_relative_error": maxRelative,
               "original_segments": mesh.statistics.segments, "unique_segments": mesh.statistics.uniqueSegments,
-              "region_count": scene.panels.count, "pass": true])
+              "region_count": scene.panels.count, "regional_payloads": payloads, "pass": true])
     }
 
     private static func agreement(path: CGPath, mesh: ProjectedTriangles, bounds: CGRect, sampleCount: Int) -> Int {
@@ -213,17 +253,22 @@ struct MetalMeshChecks {
     }
 
     #if COMPARE_EARCUT
+    private struct ComparisonError: LocalizedError {
+        let message: String
+        var errorDescription: String? { message }
+    }
+
     private static func earcut(_ polygon: ProjectedPolygon) throws -> ProjectedTriangles {
         let points = polygon.points
         let coordinates = points.flatMap { [$0.x, $0.y] }
         let lengths = polygon.rings.map { Int32($0.count) }
         var output: UnsafeMutablePointer<UInt32>?
         let count = comparison_earcut(coordinates, lengths, Int32(lengths.count), &output)
-        guard count >= 3, let output else { throw GeoJSON.Invalid(message: "Earcut produced no triangles.") }
+        guard count >= 3, let output else { throw ComparisonError(message: "Earcut produced no triangles.") }
         defer { free(output) }
         let indices = Array(UnsafeBufferPointer(start: output, count: Int(count)))
         guard indices.allSatisfy({ Int($0) < points.count }) else {
-            throw GeoJSON.Invalid(message: "Earcut returned an invalid triangle index.")
+            throw ComparisonError(message: "Earcut returned an invalid triangle index.")
         }
         return ProjectedTriangles(vertices: points, indices: indices)
     }

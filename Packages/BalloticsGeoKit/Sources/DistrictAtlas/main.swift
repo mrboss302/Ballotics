@@ -1,5 +1,13 @@
 import AppKit
 import BalloticsGeoKit
+import BalloticsGeoKitApple
+
+final class DistrictLabels: NSView {
+    var drawing: (() -> Void)?
+    override var isFlipped: Bool { true }
+    override func hitTest(_ point: NSPoint) -> NSView? { nil }
+    override func draw(_ dirtyRect: NSRect) { drawing?() }
+}
 
 final class DistrictMap: NSView {
     // Postal abbreviations from the companion 2024 Census state file.
@@ -13,16 +21,27 @@ final class DistrictMap: NSView {
         "47":"TN", "48":"TX", "49":"UT", "50":"VT", "51":"VA", "53":"WA", "54":"WV",
         "55":"WI", "56":"WY", "60":"AS", "66":"GU", "69":"MP", "72":"PR", "78":"VI",
     ]
-    let scene: AlbersScene
+    private(set) var scene: AlbersScene
     let records: GeographicRecords
     let revision = GeographicRevision(source:"Census congressional districts",version:"2024-CD119-5m")
     var selected: Int?
     var focus: AlbersRegion?
     var target: CGRect
-    var showLabels = false
+    var showLabels = false { didSet { labels.needsDisplay = true } }
+    var rendererChanged: ((String) -> Void)?
+    var firstMetalFrame: (() -> Void)?
+    var diagnostics: ((GeographicRenderDiagnostic) -> Void)?
+    private let labels = DistrictLabels()
+    private let configuration: AlbersMetalConfiguration
+    private let palette: [[CGColor]]
+    private var requestedMetal = true
+    private var metal: AlbersMetalSurface?
+    private var preparation: Task<Void, Never>?
+    private var metalReady = false
     var selectionChanged: ((String)->Void)?
     override var isFlipped: Bool { true }
-    init(url: URL) throws {
+    init(url: URL, configuration: AlbersMetalConfiguration = .init()) throws {
+        self.configuration = configuration
         let raw = try PolygonSource.readFeatures(url)
         let ids = raw.compactMap { ($0["properties"] as? [String:Any])?["GEOID"] as? String }
         guard raw.count == 441, Set(ids).count == raw.count,
@@ -34,24 +53,37 @@ final class DistrictMap: NSView {
         scene = try AlbersScene.project(raw).composed(.thematic)
         records = try GeographicRecords(scene:scene,revision:revision) { $0["GEOID"] }
         target = scene.bounds
+        let hexColors: [Int] = [0x54859B, 0xA7B695, 0x93BCC3, 0xD4B791, 0x839BA6]
+        let colors = hexColors.map { color in
+            let red = CGFloat((color >> 16) & 255) / 255
+            let green = CGFloat((color >> 8) & 255) / 255
+            let blue = CGFloat(color & 255) / 255
+            return CGColor(red: red, green: green, blue: blue, alpha: 1)
+        }
+        palette = records.ids.map { [colors[(Int($0.record) ?? 0) % colors.count]] }
         super.init(frame:CGRect(x:0,y:0,width:900,height:560))
+        labels.drawing = { [weak self] in self?.drawLabels() }
+        addSubview(labels)
+        setAccessibilityLabel("Albers congressional district map")
     }
     required init?(coder:NSCoder) { nil }
     var camera: GeographicCamera {
         GeographicCamera(viewport:bounds,center:CGPoint(x:target.midX,y:target.midY),scale:GeographicCamera.fit(target,in:bounds),region:focus)
     }
+    var selectionDescription: String {
+        guard let selected else { return "Select a district" }
+        return (scene.properties[selected]["NAMELSAD"] ?? "District") + " · GEOID " + records.ids[selected].record
+    }
+
     func select(_ index: Int?, frame: Bool) {
         selected = index
-        if let index {
-            let f = scene.properties[index]
-            selectionChanged?((f["NAMELSAD"] ?? "District")+" · GEOID "+records.ids[index].record)
-            if frame {
-                let box = scene.frame(for:index)
-                target = box.insetBy(dx:-box.width*0.15,dy:-box.height*0.15)
-                focus = scene.panels.first { $0.parts.contains { $0.feature == index } }?.region
-            }
+        selectionChanged?(selectionDescription)
+        if let index, frame {
+            let box = scene.frame(for: index)
+            target = box.insetBy(dx: -box.width * 0.15, dy: -box.height * 0.15)
+            focus = scene.panels.first { $0.parts.contains { $0.feature == index } }?.region
         }
-        needsDisplay = true
+        refresh()
     }
     func search(_ query:String) -> Bool {
         let q = query.trimmingCharacters(in:.whitespacesAndNewlines).uppercased()
@@ -64,8 +96,16 @@ final class DistrictMap: NSView {
     func frameRegion(_ region:AlbersRegion?) {
         focus = region
         target = region.flatMap { r in scene.panels.first { $0.region==r }?.frame } ?? scene.bounds
-        needsDisplay = true
+        refresh()
     }
+    override func magnify(with event: NSEvent) { zoom(by: 1 / max(0.1, 1 + event.magnification)) }
+
+    private func zoom(by factor: CGFloat) {
+        let next = target.insetBy(dx: target.width * (1 - factor) / 2, dy: target.height * (1 - factor) / 2)
+        if next.width > 250 && next.width < scene.bounds.width * 2 { target = next }
+        refresh()
+    }
+
     override func mouseUp(with event:NSEvent) {
         let ids = records.hits(in:scene,at:camera.world(convert(event.locationInWindow,from:nil)),region:focus)
         select(ids.first.flatMap(records.index(of:)),frame:event.clickCount==2)
@@ -74,30 +114,132 @@ final class DistrictMap: NSView {
         let c = camera
         if event.modifierFlags.contains(.option) {
             let factor = exp(max(-0.3,min(0.3,event.scrollingDeltaY/70)))
-            let next = target.insetBy(dx:target.width*(1-factor)/2,dy:target.height*(1-factor)/2)
-            if next.width > 250 && next.width < scene.bounds.width*2 { target=next }
+            zoom(by: factor)
+            return
         } else { target = target.offsetBy(dx:-event.scrollingDeltaX/c.scale,dy:-event.scrollingDeltaY/c.scale) }
-        needsDisplay=true
+        refresh()
     }
-    override func draw(_ dirtyRect:NSRect) {
-        guard let ctx = NSGraphicsContext.current?.cgContext else { return }
+    func useMetal(_ requested: Bool) {
+        requestedMetal = requested
+        if requested && window != nil {
+            startMetal()
+        } else {
+            stopMetal()
+            rendererChanged?("Core Graphics")
+        }
+    }
+
+    override func viewDidMoveToWindow() {
+        super.viewDidMoveToWindow()
+        if window == nil { stopMetal() }
+        else if requestedMetal { startMetal() }
+    }
+
+    override func layout() {
+        super.layout()
+        metal?.frame = bounds
+        labels.frame = bounds
+        refresh()
+    }
+
+    private func startMetal() {
+        guard metal == nil else { return }
+        do {
+            let surface = try AlbersMetalSurface(configuration: configuration, diagnostics: diagnostics)
+            guard let device = surface.device else {
+                throw GeographicRenderError(message: "Metal device became unavailable.")
+            }
+            metal = surface
+            surface.frame = bounds
+            surface.isHidden = true
+            surface.onFailure = { [weak self] reason in self?.fallback(reason) }
+            let samples = surface.sampleCount
+            surface.onFirstFrame = { [weak self] in
+                self?.rendererChanged?("Metal · \(samples)× samples")
+                self?.firstMetalFrame?()
+            }
+            addSubview(surface, positioned: .below, relativeTo: labels)
+            rendererChanged?("Preparing geographic mesh…")
+            let scene = self.scene
+            let revision = self.revision
+            let records = self.records
+            preparation = Task { [weak self, weak surface] in
+                do {
+                    let prepared = try await AlbersMetalPreparedScene.prepareAsync(scene, revision: revision,
+                                                                                  records: records, device: device)
+                    try Task.checkCancellation()
+                    guard let self, let surface, self.metal === surface else { return }
+                    try surface.publish(prepared, scene: self.scene, palette: self.palette)
+                    self.preparation = nil
+                    self.metalReady = true
+                    surface.isHidden = false
+                    self.refresh()
+                } catch {
+                    guard !Task.isCancelled, let self, let surface, self.metal === surface else { return }
+                    self.fallback(error.localizedDescription)
+                }
+            }
+        } catch { fallback(error.localizedDescription) }
+    }
+
+    private func stopMetal() {
+        preparation?.cancel()
+        preparation = nil
+        metalReady = false
+        metal?.onFirstFrame = nil
+        metal?.onFailure = nil
+        metal?.clear()
+        metal?.removeFromSuperview()
+        metal = nil
+        refresh()
+    }
+
+    private func fallback(_ reason: String) {
+        stopMetal()
+        rendererChanged?("Core Graphics fallback · \(reason)")
+    }
+
+    func setProfile(_ profile: NationalMapProfile) {
+        scene = scene.composed(profile)
+        if metalReady {
+            do { try metal?.updateLayout(scene) }
+            catch { fallback(error.localizedDescription) }
+        }
+        frameRegion(focus)
+    }
+
+    private func refresh() {
+        metal?.move(camera: camera, selected: selected)
+        labels.needsDisplay = true
+        needsDisplay = true
+    }
+
+    override func hitTest(_ point: NSPoint) -> NSView? {
+        super.hitTest(point) == nil ? nil : self
+    }
+
+    override func draw(_ dirtyRect: NSRect) {
+        guard !metalReady, let ctx = NSGraphicsContext.current?.cgContext else { return }
+        ctx.setFillColor(CGColor(red: 0.93, green: 0.95, blue: 0.96, alpha: 1))
+        ctx.fill(bounds)
+        AlbersCoreGraphics.draw(scene, camera: camera, palette: palette, selected: selected, in: ctx)
+    }
+
+    private func drawLabels() {
         let c = camera
-        ctx.setFillColor(CGColor(gray:0.97,alpha:1)); ctx.fill(bounds)
-        let window = CGRect(origin:c.world(bounds.origin),size:CGSize(width:bounds.width/c.scale,height:bounds.height/c.scale))
-        let palette=[0x54859B,0xA7B695,0x93BCC3,0xD4B791,0x839BA6]
+        for panel in scene.panels where panel.showsFrame && (focus == nil || focus == panel.region) {
+            guard let name = panel.region.insetLabel else { continue }
+            let point = c.screen(panel.frame.origin)
+            (name as NSString).draw(at: CGPoint(x: point.x + 6, y: point.y + 4),
+                                     withAttributes: [.font: NSFont.systemFont(ofSize: 10, weight: .semibold),
+                                                      .foregroundColor: NSColor.darkGray])
+        }
+        guard showLabels else { return }
         var visible = Set<Int>()
         for panel in scene.panels where focus == nil || focus == panel.region {
-            ctx.saveGState()
-            let origin=c.screen(panel.world(.zero as CGPoint))
-            ctx.translateBy(x:origin.x,y:origin.y);ctx.scaleBy(x:c.scale*panel.scale,y:c.scale*panel.scale)
-            ctx.setLineWidth(0.5/(c.scale*panel.scale));ctx.setStrokeColor(CGColor(gray:1,alpha:1))
-            for i in panel.visible(in:panel.local(window)) {
-                let part=panel.parts[i], key=records.ids[part.feature].record
-                let color=selected==part.feature ? 0xD78135 : palette[(Int(key) ?? 0)%palette.count]
-                ctx.setFillColor(CGColor(red:CGFloat(color>>16)/255,green:CGFloat((color>>8)&255)/255,blue:CGFloat(color&255)/255,alpha:1))
-                GeographicPathDrawing.fillAndStroke(part,in:ctx); visible.insert(part.feature)
+            for index in panel.visible(in: panel.local(c.worldBounds)) {
+                visible.insert(panel.parts[index].feature)
             }
-            ctx.restoreGState()
         }
         if showLabels {
             let font=NSFont.systemFont(ofSize:10,weight:.medium)
@@ -128,6 +270,7 @@ final class DistrictMap: NSView {
 final class Controller: NSObject, NSSearchFieldDelegate {
     let map: DistrictMap
     let status=NSTextField(labelWithString:"Select a district")
+    let rendererStatus = NSTextField(labelWithString: "Preparing geographic mesh…")
     let search=NSSearchField()
     init(_ map:DistrictMap) { self.map=map }
     @objc func searchDistrict() {
@@ -136,7 +279,9 @@ final class Controller: NSObject, NSSearchFieldDelegate {
     @objc func region(_ sender:NSButton) {
         map.frameRegion(["Alaska":AlbersRegion.alaska,"Hawaii":.hawaii][sender.title])
     }
-    @objc func labels(_ sender:NSButton) { map.showLabels=sender.state == .on; map.needsDisplay=true }
+    @objc func labels(_ sender:NSButton) { map.showLabels = sender.state == .on }
+    @objc func renderer(_ sender: NSPopUpButton) { map.useMetal(sender.indexOfSelectedItem == 0) }
+    @objc func profile(_ sender: NSPopUpButton) { map.setProfile(sender.indexOfSelectedItem == 0 ? .thematic : .research) }
     func run() {
         let window=NSWindow(contentRect:NSRect(x:0,y:0,width:900,height:650),styleMask:[.titled,.closable,.resizable],backing:.buffered,defer:false)
         window.title="119th Congress · Census districts"
@@ -145,19 +290,73 @@ final class Controller: NSObject, NSSearchFieldDelegate {
         search.placeholderString="District GEOID or TX-18";search.target=self;search.action=#selector(searchDistrict)
         bar.addArrangedSubview(search);search.widthAnchor.constraint(equalToConstant:200).isActive=true
         for s in ["National","Alaska","Hawaii"] { bar.addArrangedSubview(NSButton(title:s,target:self,action:#selector(region(_:)))) }
-        bar.addArrangedSubview(NSButton(checkboxWithTitle:"Detail labels",target:self,action:#selector(labels(_:))))
-        for v in [bar,map,status,NSTextField(labelWithString:"Synthetic categories · Three-region coverage · Option-scroll to zoom")] { stack.addArrangedSubview(v) }
-        map.selectionChanged = { [weak self] in self?.status.stringValue=$0 }
+        let detail = NSButton(checkboxWithTitle: "Detail labels", target: self, action: #selector(labels(_:)))
+        detail.state = map.showLabels ? .on : .off
+        bar.addArrangedSubview(detail)
+        let backend = NSPopUpButton()
+        backend.addItems(withTitles: ["Metal", "Core Graphics"])
+        backend.target = self
+        backend.action = #selector(renderer(_:))
+        bar.addArrangedSubview(backend)
+        let composition = NSPopUpButton()
+        composition.addItems(withTitles: ["Thematic National", "Equal-Scale Research"])
+        composition.target = self
+        composition.action = #selector(profile(_:))
+        bar.addArrangedSubview(composition)
+        for v in [bar,map,status,rendererStatus,NSTextField(labelWithString:"Synthetic categories · Three-region coverage · Option-scroll to zoom")] { stack.addArrangedSubview(v) }
+        status.stringValue = map.selectionDescription
+        map.selectionChanged = { [weak self] in self?.status.stringValue = $0 }
+        map.rendererChanged = { [weak self] message in
+            self?.rendererStatus.stringValue = message
+            if CommandLine.arguments.contains("--verify-metal"), message.hasPrefix("Core Graphics fallback") {
+                FileHandle.standardError.write(Data((message + "\n").utf8))
+                exit(1)
+            }
+        }
         window.contentView=stack;map.widthAnchor.constraint(equalTo:stack.widthAnchor).isActive=true
-        window.center();window.makeKeyAndOrderFront(nil);NSApp.activate(ignoringOtherApps:true);NSApp.run()
+        window.center()
+        window.makeKeyAndOrderFront(nil)
+        NSApp.activate(ignoringOtherApps: true)
+        withExtendedLifetime(window) { NSApp.run() }
     }
 }
 
 do {
     let args=CommandLine.arguments
-    guard args.count>=2 else { throw PolygonSource.Invalid(message:"DistrictAtlas GEOJSON [--render PNG] [--district GEOID]") }
+    guard args.count>=2 else { throw PolygonSource.Invalid(message:"DistrictAtlas GEOJSON [--render PNG] [--district GEOID] [--shader-library PATH] [--verify-metal]") }
     let app=NSApplication.shared
-    let map=try DistrictMap(url:URL(fileURLWithPath:args[1]))
+    let shaders: AlbersMetalConfiguration.Shaders
+    if let i = args.firstIndex(of: "--shader-library"), args.indices.contains(i + 1) {
+        shaders = .compiledFile(URL(fileURLWithPath: args[i + 1]))
+    } else {
+        shaders = .package
+    }
+    let map = try DistrictMap(url: URL(fileURLWithPath: args[1]), configuration: .init(shaders: shaders))
+    if args.contains("--verify-metal") {
+        let cycles = 10
+        var completed = 0
+        map.diagnostics = { event in
+            guard let data = try? JSONSerialization.data(withJSONObject: event.fields, options: [.sortedKeys]) else { return }
+            print(event.kind.rawValue, String(decoding: data, as: UTF8.self))
+        }
+        map.firstMetalFrame = { [weak map] in
+            guard let map else { return }
+            completed += 1
+            print("Metal GPU completion \(completed)/\(cycles) · \(map.records.ids.count) projected districts")
+            DispatchQueue.main.async {
+                if completed == cycles {
+                    map.useMetal(false)
+                    exit(0)
+                }
+                map.useMetal(false)
+                map.useMetal(true)
+            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 45) {
+            FileHandle.standardError.write(Data("DistrictAtlas Metal verification timed out.\n".utf8))
+            exit(1)
+        }
+    }
     if let i=args.firstIndex(of:"--district"), args.indices.contains(i+1) {
         guard map.search(args[i+1]) else { throw PolygonSource.Invalid(message:"Unknown district.") }
         map.showLabels=true

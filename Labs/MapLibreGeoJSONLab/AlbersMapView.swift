@@ -1,3 +1,4 @@
+import BalloticsGeoKitApple
 import SwiftUI
 import UIKit
 
@@ -269,10 +270,14 @@ private struct AlbersCanvasView: UIViewRepresentable {
     }
 }
 
-private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        !(touch.view is UIControl || touch.view?.superview is UIControl)
+private final class AlbersCanvas: GeographicInteractionView {
+    private var reservesExternalAnnotations = false
+    private var mapLayout: GeographicMapLayout {
+        GeographicMapLayout(bounds: bounds,
+            externalHeight: reservesExternalAnnotations && bounds.height <= 240 ? 24 : 0)
     }
+    override var interactionViewport: CGRect { mapLayout.viewport }
+
     private final class Clock: NSObject {
         let tick: () -> Void
         init(tick: @escaping () -> Void) { self.tick = tick }
@@ -345,15 +350,6 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
         accessibilityIdentifier = "albers-map"
         accessibilityLabel = "Albers equal-area map"
         accessibilityHint = "Use Find geography in Map view to select a shape by name."
-        let single = UITapGestureRecognizer(target: self, action: #selector(selectPolygon(_:)))
-        let double = UITapGestureRecognizer(target: self, action: #selector(doubleTap(_:)))
-        double.numberOfTapsRequired = 2
-        single.require(toFail: double)
-        single.delegate = self
-        double.delegate = self
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(pan(_:)))
-        pan.maximumNumberOfTouches = 1
-        [single, double, pan, UIPinchGestureRecognizer(target: self, action: #selector(pinch(_:)))].forEach(addGestureRecognizer)
     }
 
     required init?(coder: NSCoder) { nil }
@@ -379,7 +375,7 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
         super.layoutSubviews()
         guard lastLayoutSize != bounds.size else { return }
         lastLayoutSize = bounds.size
-        metal?.frame = bounds
+        metal?.frame = mapLayout.viewport
         invalidateMap()
     }
 
@@ -390,6 +386,10 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
                 onStatus: @escaping (String) -> Void, onSelect: @escaping ([Int]) -> Void) {
         let isNewScene = source != nil && (self.scene == nil || metalRevision != request)
         let layoutChanged = self.profile != profile
+        let previousViewport = mapLayout.viewport
+        reservesExternalAnnotations = paint.votes != nil
+        let viewportChanged = previousViewport != mapLayout.viewport
+        if viewportChanged { metal?.frame = mapLayout.viewport }
         self.profile = profile
         self.onPresented = onPresented
         let scene = source == nil ? nil : (isNewScene || layoutChanged ? source?.composed(profile) : self.scene)
@@ -430,7 +430,10 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
             pendingPaintMetric = featurePaint == nil ? nil : paint.didDraw.map { (start, $0) }
             paintedRevision = paint.revision
         }
-        if layoutChanged, metalReady, let scene { metal?.updateLayout(scene.panels) }
+        if layoutChanged, metalReady, let scene {
+            do { try metal?.updateLayout(scene) }
+            catch { failMetal(error.localizedDescription) }
+        }
         self.scene = scene
         if isNewScene || layoutChanged || styleChanged || scene == nil {
             labelOverlay.update(parent: self, scene: scene, votes: paint.votes, statuses: paint.statuses,
@@ -463,7 +466,7 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
         }
         if lastCameraRequest != nil, cameraChanged { move(cameraRequest.1, animated: !isNewScene) }
         lastCameraRequest = cameraRequest.0
-        if baseline || changed || backendChanged || (requested && activityChanged) { invalidateMap() }
+        if baseline || changed || viewportChanged || backendChanged || (requested && activityChanged) { invalidateMap() }
         if studyProbe != lastStudyProbe, studyProbe > 0 {
             lastStudyProbe = studyProbe
             // Defer the callback until after UIViewRepresentable's state update.
@@ -476,68 +479,15 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
         guard let scene, let context = UIGraphicsGetCurrentContext() else { return }
         let measure = LabLog.enabled
         let drawStart = measure ? LabLog.now : 0
-        var candidateCount = 0
         let scale = mapScale
-        let visible = CGRect(x: centerPoint.x - bounds.width / (2 * scale),
-                             y: centerPoint.y - bounds.height / (2 * scale),
-                             width: bounds.width / scale, height: bounds.height / scale)
+        let visible = geographicCamera.worldBounds
+        let viewport = mapLayout.viewport
         context.saveGState()
-        context.translateBy(x: bounds.midX, y: bounds.midY)
-        context.scaleBy(x: scale, y: scale)
-        context.translateBy(x: -centerPoint.x, y: -centerPoint.y)
-        let fill = alternateColor ? UIColor(red: 0.23, green: 0.51, blue: 0.40, alpha: 1)
-                                  : UIColor(red: 0.29, green: 0.49, blue: 0.68, alpha: 1)
-        for panel in scene.panels where (focusedRegion == nil || focusedRegion == panel.region) && panel.frame.intersects(visible) {
-            if panel.showsFrame {
-                let frame = CGPath(roundedRect: panel.frame, cornerWidth: 6 / scale, cornerHeight: 6 / scale, transform: nil)
-                context.addPath(frame)
-                context.setFillColor(UIColor(red: 0.89, green: 0.93, blue: 0.95, alpha: 1).cgColor)
-                context.setStrokeColor(UIColor(red: 0.72, green: 0.79, blue: 0.83, alpha: 1).cgColor)
-                context.setLineWidth(1 / scale)
-                context.drawPath(using: .fillStroke)
-            }
-            context.saveGState()
-            context.translateBy(x: panel.translation.x, y: panel.translation.y)
-            context.scaleBy(x: panel.scale, y: panel.scale)
-            let scale = scale * panel.scale
-            let window = panel.local(visible)
-            context.setFillColor(fill.cgColor)
-            context.setStrokeColor(UIColor(white: 0.96, alpha: 0.85).cgColor)
-            context.setLineWidth((thickBorders ? 1.2 : 0.48) / scale)
-            func render(_ part: AlbersScene.Part) {
-                if let paint = featurePaint?[part.feature], let base = paint.first {
-                    context.setFillColor(base)
-                    if paint.count > 1 {
-                        drawSplit(part.path, bounds: part.bounds, window: window, colors: paint, scale: scale, in: context)
-                    }
-                }
-                if (featurePaint?[part.feature].count ?? 0) > 1 {
-                    context.addPath(part.path)
-                    context.strokePath()
-                } else {
-                    GeographicPathDrawing.fillAndStroke(part, in: context)
-                }
-            }
-            if baseline {
-                candidateCount += panel.parts.count
-                for part in panel.parts where part.bounds.intersects(window) { render(part) }
-            } else {
-                let visible = panel.visible(in: window)
-                candidateCount += visible.count
-                for index in visible { render(panel.parts[index]) }
-            }
-            if let selected {
-                context.setFillColor(UIColor(red: 1, green: 0.76, blue: 0.29, alpha: 1).cgColor)
-                context.setStrokeColor(UIColor(red: 0.36, green: 0.21, blue: 0.06, alpha: 1).cgColor)
-                context.setLineWidth(1.5 / scale)
-                for part in panel.parts where part.feature == selected && part.bounds.intersects(window) {
-                    context.addPath(part.path)
-                    context.drawPath(using: featurePaint == nil ? .eoFillStroke : .stroke)
-                }
-            }
-            context.restoreGState()
-        }
-        context.restoreGState()
+        defer { context.restoreGState() }
+        context.clip(to: viewport)
+        let candidateCount = AlbersCoreGraphics.draw(scene, camera: geographicCamera,
+            palette: featurePaint, boundary: .init(width: thickBorders ? 1.2 : 0.48),
+            selected: selected, alternate: alternateColor, indexed: !baseline, in: context)
 
         if let metric = pendingPaintMetric {
             metric.1(LabLog.milliseconds(LabLog.now - metric.0))
@@ -545,8 +495,8 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
         }
         for panel in scene.panels where (focusedRegion == nil || focusedRegion == panel.region) && panel.frame.intersects(visible) {
             guard panel.showsFrame, let label = panel.region.insetLabel else { continue }
-            let point = CGPoint(x: bounds.midX + (panel.frame.minX - centerPoint.x) * scale + 6,
-                                y: bounds.midY + (panel.frame.minY - centerPoint.y) * scale + 4)
+            let point = CGPoint(x: viewport.midX + (panel.frame.minX - centerPoint.x) * scale + 6,
+                                y: viewport.midY + (panel.frame.minY - centerPoint.y) * scale + 4)
             (label as NSString).draw(at: point, withAttributes: [
                 .font: UIFont.systemFont(ofSize: 10, weight: .semibold),
                 .foregroundColor: UIColor(red: 0.18, green: 0.29, blue: 0.36, alpha: 1)
@@ -590,11 +540,32 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
     private func prepareMetal(_ scene: AlbersScene, revision: Double) {
         sendStatus("Preparing geographic mesh…")
         do {
-            let surface = try metal ?? AlbersMetalSurface(configuration: .launch)
+            let args = ProcessInfo.processInfo.arguments
+            let shaders: AlbersMetalConfiguration.Shaders
+            if args.contains("--metal-runtime-library") {
+                guard let url = Bundle.main.url(forResource: "AlbersShaders", withExtension: "msl") else {
+                    throw GeographicRenderError(message: "Runtime shader comparison source is missing.")
+                }
+                shaders = .runtimeSource(url)
+            } else {
+                shaders = .package
+            }
+            let config = AlbersMetalConfiguration(
+                samples: args.contains("--metal-samples-1") ? 1 : args.contains("--metal-samples-2") ? 2 : 4,
+                boundaries: !args.contains("--metal-fill-only"), shaders: shaders,
+                polygonVertexFunction: args.contains("--metal-pipeline-failure") ? "missing_probe" : "albers_fill_vertex")
+            let surface = try metal ?? AlbersMetalSurface(configuration: config,
+                diagnostics: LabLog.enabled ? { event in
+                    var fields = event.fields
+                    if event.kind == .firstSubmit, let sample = MemorySample.read() {
+                        fields.merge(sample.fields("first_submit")) { _, new in new }
+                    }
+                    LabLog.record(event.kind.rawValue, fields)
+                } : nil, diagnosticTimeOrigin: LabLog.enabled ? LabLog.start : nil)
             if metal == nil {
                 metal = surface
                 surface.renderAllowed = active
-                surface.frame = bounds
+                surface.frame = mapLayout.viewport
                 surface.isHidden = true
                 insertSubview(surface, at: 0)
             }
@@ -605,25 +576,25 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
             let work = Task.detached(priority: .userInitiated) {
                 let sampler = MemorySampler()
                 let start = LabLog.now
-                let mesh = try AlbersMesh.prepare(scene)
-                let prepared = LabLog.now
-                try Task.checkCancellation()
-                let buffers = try AlbersMetalBuffers(mesh, device: device)
+                let buffers = try AlbersMetalPreparedScene.prepare(scene,
+                    revision: .init(source: "research-lab", version: String(revision)), device: device)
                 var fields = sampler.finish(event: "metal_mesh", since: start)
                 fields.merge(buffers.byteCounts) { _, new in new }
-                fields["prepare_ms"] = LabLog.milliseconds(prepared - start)
-                fields["tessellation_ms"] = LabLog.milliseconds(mesh.statistics.tessellationSeconds)
-                fields["upload_ms"] = LabLog.milliseconds(LabLog.now - prepared)
+                fields["cpu_mesh_bytes"] = buffers.cpuMeshBytes
+                fields["selection_range_bytes"] = buffers.metadataBytes
+                fields["prepare_ms"] = buffers.preparationMilliseconds
+                fields["tessellation_ms"] = LabLog.milliseconds(buffers.statistics.tessellationSeconds)
+                fields["upload_ms"] = buffers.allocationMilliseconds
                 fields["features"] = scene.properties.count
                 fields["revision"] = revision - LabLog.start
-                fields["vertex_buffers"] = buffers.panels.count
-                fields["index_buffers"] = buffers.panels.count
-                fields["parts"] = mesh.statistics.parts
-                fields["vertices"] = mesh.statistics.vertices
-                fields["triangles"] = mesh.statistics.triangles
-                fields["segments"] = mesh.statistics.segments
-                fields["unique_segments"] = mesh.statistics.uniqueSegments
-                fields["max_float_error_m"] = mesh.statistics.maxFloatError
+                fields["vertex_buffers"] = buffers.regionalCount
+                fields["index_buffers"] = buffers.regionalCount
+                fields["parts"] = buffers.statistics.parts
+                fields["vertices"] = buffers.statistics.vertices
+                fields["triangles"] = buffers.statistics.triangles
+                fields["segments"] = buffers.statistics.segments
+                fields["unique_segments"] = buffers.statistics.uniqueSegments
+                fields["max_float_error_m"] = buffers.statistics.maxFloatError
                 return (buffers, fields)
             }
             meshTask = Task { [weak self, weak surface] in
@@ -638,8 +609,7 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
                         LabLog.record("metal_mesh_superseded", ["revision": revision - LabLog.start])
                         return
                     }
-                    try surface.updatePalette(self.featurePaint)
-                    surface.publish(buffers, layout: self.scene?.panels ?? scene.panels)
+                    try surface.publish(buffers, scene: self.scene ?? scene, palette: self.featurePaint)
                     if let acknowledge = self.onPresented { surface.expectPresentation(acknowledge) }
                     surface.onFirstFrame = { [weak self] in
                         guard let self, self.canPublishMetal?() == true else { return }
@@ -649,7 +619,11 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
                         self.sendStatus("\(scene.properties.count.formatted()) features · Albers Metal")
                         self.startRouteIfNeeded()
                     }
-                    surface.onFailure = { [weak self] error in self?.failMetal(error) }
+                    surface.onFailure = { [weak self, weak surface] error in
+                        guard let self, let surface, self.metal === surface, self.metalRevision == revision,
+                              self.canPublishMetal?() == true else { return }
+                        self.failMetal(error)
+                    }
                     surface.onFrame = { [weak self] duration in
                         guard let self else { return }
                         if let metric = self.pendingPaintMetric {
@@ -708,12 +682,13 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
     }
 
     private var geographicCamera: GeographicCamera {
-        GeographicCamera(viewport: bounds, center: centerPoint, scale: mapScale, region: focusedRegion)
+        GeographicCamera(viewport: mapLayout.viewport, center: centerPoint, scale: mapScale, region: focusedRegion)
     }
 
     private func positionLabels() {
         guard let scene else { return }
-        labelOverlay.position(in: scene, camera: geographicCamera, zoom: zoom, selected: selected)
+        labelOverlay.position(in: scene, camera: geographicCamera, zoom: zoom, selected: selected,
+                              externalAnnotations: mapLayout.externalAnnotations)
     }
 
     private func invalidateMap() {
@@ -723,8 +698,7 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
             return
         }
         guard let metal, metalReady, active else { return }
-        metal.focusedRegion = focusedRegion
-        metal.move(center: centerPoint, scale: mapScale, stroke: thickBorders ? 1.2 : 0.48,
+        metal.move(camera: geographicCamera, boundary: .init(width: thickBorders ? 1.2 : 0.48),
                    selected: selected, alternate: alternateColor)
         if let scene {
             let insets = scene.panels.filter { $0.showsFrame && (focusedRegion == nil || focusedRegion == $0.region) }
@@ -743,8 +717,8 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
                 }
             }
             for (panel, label) in zip(insets, insetLabels) {
-                label.frame.origin = CGPoint(x: bounds.midX + (panel.frame.minX - centerPoint.x) * mapScale + 6,
-                                             y: bounds.midY + (panel.frame.minY - centerPoint.y) * mapScale + 4)
+                label.frame.origin = CGPoint(x: mapLayout.viewport.midX + (panel.frame.minX - centerPoint.x) * mapScale + 6,
+                                             y: mapLayout.viewport.midY + (panel.frame.minY - centerPoint.y) * mapScale + 4)
             }
         }
     }
@@ -759,36 +733,13 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
         }
     }
 
-    private func drawSplit(_ path: CGPath, bounds: CGRect, window: CGRect,
-                           colors: [CGColor], scale: CGFloat, in context: CGContext) {
-        context.saveGState()
-        context.addPath(path)
-        context.clip(using: .evenOdd)
-        // Tile stripes in screen pixels while preserving the projected polygon and its holes.
-        let width = 5 / scale
-        let tile = width * CGFloat(colors.count)
-        context.setFillColor(colors[0])
-        context.fill(bounds)
-        for (index, color) in colors.enumerated().dropFirst() {
-            context.setFillColor(color)
-            let origin = bounds.minX + CGFloat(index) * width
-            let start = origin + max(0, floor((window.minX - origin) / tile)) * tile
-            let end = min(bounds.maxX, window.maxX)
-            guard start < end else { continue }
-            for x in stride(from: start, to: end, by: tile) {
-                context.fill(CGRect(x: x, y: bounds.minY, width: width, height: bounds.height))
-            }
-        }
-        context.restoreGState()
-    }
-
     private var mapScale: CGFloat {
         guard let scene else { return 1 }
         return scale(toFit: scene.bounds) * zoom
     }
 
     private func scale(toFit frame: CGRect) -> CGFloat {
-        GeographicCamera.fit(frame, in: bounds)
+        GeographicCamera.fit(frame, in: mapLayout.viewport)
     }
 
     private func world(_ point: CGPoint) -> CGPoint {
@@ -870,9 +821,7 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
         centerPoint.y = min(box.maxY, max(box.minY, centerPoint.y))
     }
 
-    @objc private func selectPolygon(_ gesture: UITapGestureRecognizer) {
-        select(at: world(gesture.location(in: self)))
-    }
+    override func selectMap(at point: CGPoint) { select(at: world(point)) }
 
     private func select(at point: CGPoint) {
         let start = LabLog.now
@@ -897,24 +846,16 @@ private final class AlbersCanvas: UIView, UIGestureRecognizerDelegate {
         select(at: panel.world(CGPoint(x: projected.x, y: -projected.y)))
     }
 
-    @objc private func doubleTap(_ gesture: UITapGestureRecognizer) {
-        magnify(by: 2, anchor: gesture.location(in: self))
+    override func zoomMap(by factor: CGFloat, at point: CGPoint) {
+        magnify(by: factor, anchor: point)
     }
 
-    @objc private func pinch(_ gesture: UIPinchGestureRecognizer) {
-        guard gesture.state == .changed else { return }
-        magnify(by: gesture.scale, anchor: gesture.location(in: self))
-        gesture.scale = 1
-    }
-
-    @objc private func pan(_ gesture: UIPanGestureRecognizer) {
-        guard scene != nil, gesture.state == .changed else { return }
+    override func panMap(by delta: CGPoint) {
+        guard scene != nil else { return }
         animation = nil
-        let movement = gesture.translation(in: self)
-        centerPoint.x -= movement.x / mapScale
-        centerPoint.y -= movement.y / mapScale
+        centerPoint.x -= delta.x / mapScale
+        centerPoint.y -= delta.y / mapScale
         constrainCenter()
-        gesture.setTranslation(.zero, in: self)
         invalidateMap()
     }
 

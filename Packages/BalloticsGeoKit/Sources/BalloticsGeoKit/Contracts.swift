@@ -1,7 +1,7 @@
 import Foundation
 import CoreGraphics
 
-public struct GeographicRevision: Hashable, Codable {
+public struct GeographicRevision: Hashable, Codable, Sendable {
     public let source: String
     public let version: String
     public init(source: String, version: String) {
@@ -44,6 +44,10 @@ public struct GeographicCamera {
         min(max(1, viewport.width - 24) / max(1, frame.width),
             max(1, viewport.height - 24) / max(1, frame.height))
     }
+    public var worldBounds: CGRect {
+        CGRect(origin: world(viewport.origin),
+               size: CGSize(width: viewport.width / scale, height: viewport.height / scale))
+    }
     public func screen(_ world: CGPoint) -> CGPoint {
         CGPoint(x: viewport.midX + (world.x - center.x) * scale, y: viewport.midY + (world.y - center.y) * scale)
     }
@@ -63,6 +67,7 @@ public enum GeographicPathDrawing {
 /// Source adapters choose stable record keys. Dense integer offsets belong only to one scene revision.
 public struct GeographicRecords {
     public let ids: [GeographicFeatureID]
+    public let revision: GeographicRevision
     private let offsets: [GeographicFeatureID:Int]
     private let canonical: GeographicAnchorCache
     public init(scene: AlbersScene, revision: GeographicRevision, key: ([String:String])->String?) throws {
@@ -75,8 +80,12 @@ public struct GeographicRecords {
             values.append(id)
         }
         canonical = scene.labelCache
+        self.revision = revision
         ids = values
         offsets = index
+    }
+    package func matches(_ scene: AlbersScene, revision: GeographicRevision) -> Bool {
+        self.revision == revision && scene.labelCache === canonical
     }
     public func index(of id: GeographicFeatureID) -> Int? { offsets[id] }
     public func hits(in scene: AlbersScene, at world: CGPoint, region: AlbersRegion? = nil) -> [GeographicFeatureID] {

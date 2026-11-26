@@ -64,6 +64,7 @@ case ${METAL_BENCHMARK_MODE:-comparison} in
         done
         ;;
     qualification)
+        read -r -a configurations <<< "${METAL_CONFIGS:-cg research thematic maplibre}"
         workloads=(election-counties census-counties states districts counties-1788 counties-2000 electoral-states)
         if [[ -n ${METAL_WORKLOAD:-} ]]; then workloads=("$METAL_WORKLOAD"); fi
         for trial in $(seq 1 "${METAL_TRIALS:-1}"); do
@@ -74,16 +75,19 @@ case ${METAL_BENCHMARK_MODE:-comparison} in
                     states|districts) args=(--dataset "$workload") ;;
                     counties-1788) args=(--historical-date 1788-01-01) ;;
                     counties-2000) args=(--historical-date 2000-01-01) ;;
+                    states-1788) args=(--election-year 1788) ;;
+                    states-2000) args=(--election-year 2000) ;;
                     electoral-states) args=(--election-year 2024) ;;
                     *) echo "Unknown workload: $workload" >&2; exit 2 ;;
                 esac
-                for config in cg research thematic maplibre; do
+                for config in "${configurations[@]}"; do
                     marker=albers_route_done
                     case "$config" in
                         cg) flags=(--albers --albers-route) ;;
                         research) flags=(--albers-metal --albers-route --equal-scale) ;;
                         thematic) flags=(--albers-metal --albers-route) ;;
                         maplibre) flags=(--election-maplibre --metal-matched-route); marker=navigation_benchmark_done ;;
+                        *) echo "Unknown configuration: $config" >&2; exit 2 ;;
                     esac
                     run "$workload-$config-$trial" "$marker" 120 "${args[@]}" "${flags[@]}"
                 done

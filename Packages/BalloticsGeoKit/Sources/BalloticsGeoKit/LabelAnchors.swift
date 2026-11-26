@@ -165,6 +165,7 @@ public struct GroupAnchors {
 
 /// The canonical projected scene and its presentation profiles share this cache. It stores no styles or views.
 public final class GeographicAnchorCache {
+    package let geometryID = UUID()
     private let lock = NSLock()
     private var groups: [[Int]: GroupAnchors] = [:]
     public init() {}
